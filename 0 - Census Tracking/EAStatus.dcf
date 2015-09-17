@@ -1,0 +1,357 @@
+﻿[Dictionary]
+Version=CSPro 6.1
+Label=EA Status File
+Name=EASTATUS_DICT
+RecordTypeStart=0
+RecordTypeLen=0
+Positions=Relative
+ZeroFill=Yes
+DecimalChar=Yes
+
+[Level]
+Label=EA Status Questionnaire
+Name=EASTATUS_QUEST
+
+[IdItems]
+
+[Item]
+Label=Province
+Name=EAPROV
+Start=1
+Len=2
+ZeroFill=Yes
+
+[Item]
+Label=District
+Name=EADIST
+Start=3
+Len=2
+ZeroFill=Yes
+
+[Item]
+Label=Locality
+Name=EALOC
+Start=5
+Len=3
+ZeroFill=Yes
+
+[Item]
+Label=EA
+Name=EAEA
+Start=8
+Len=3
+ZeroFill=Yes
+
+[Record]
+Label=EA Status Record
+Name=EASTATUS_REC
+RecordTypeValue=''
+RecordLen=98
+
+[Item]
+Label=Manual Household Count
+Name=EAMHH
+Start=11
+Len=4
+ZeroFill=Yes
+
+[ValueSet]
+Label=Manual Household Count
+Name=EAMHH_VS1
+Value=0:9999;Households
+
+[Item]
+Label=Manual Person Count
+Name=EAMPP
+Start=15
+Len=4
+ZeroFill=Yes
+
+[ValueSet]
+Label=Manual Person Count
+Name=EAMPP_VS1
+Value=0:9999;Persons
+
+[Item]
+Label=Manual Male Count
+Name=EAMMALE
+Start=19
+Len=4
+ZeroFill=Yes
+
+[ValueSet]
+Label=Manual Male Count
+Name=EAMMALE_VS1
+Value=0:9999;Male
+
+[Item]
+Label=Manual Female Count
+Name=EAMFEM
+Start=23
+Len=4
+ZeroFill=Yes
+
+[ValueSet]
+Label=Manual Female Count
+Name=EAMFEM_VS1
+Value=0:9999;Female
+
+[Item]
+Label=Computer Household Count
+Name=EACHH
+Start=27
+Len=4
+ZeroFill=Yes
+
+[ValueSet]
+Label=Computer Household Count
+Name=EACHH_VS1
+Value=0:9999;Households
+
+[Item]
+Label=Computer Person Count
+Name=EACPP
+Start=31
+Len=4
+ZeroFill=Yes
+
+[ValueSet]
+Label=Computer Person Count
+Name=EACPP_VS1
+Value=0:9999;Persons
+
+[Item]
+Label=Computer Male Count
+Name=EACMALE
+Start=35
+Len=4
+ZeroFill=Yes
+
+[ValueSet]
+Label=Computer Male Count
+Name=EACMALE_VS1
+Value=0:9999;Male
+
+[Item]
+Label=Computer Female Count
+Name=EACFEM
+Start=39
+Len=4
+ZeroFill=Yes
+
+[ValueSet]
+Label=Computer Female Count
+Name=EACFEM_VS1
+Value=0:9999;Female
+
+[Item]
+Label=Date of Check-in
+Name=EAP1DATE
+Start=43
+Len=11
+DataType=Alpha
+
+[Item]
+Label=Year of Check-in
+Name=EAP1YEAR
+Start=43
+Len=4
+ItemType=SubItem
+ZeroFill=Yes
+
+[ValueSet]
+Label=Year of Check-in
+Name=EAP1YEAR_VS1
+Value=2005:2014;Count
+Value='    ';Not
+Name=NOTAPPL,Special
+
+[Item]
+Label=Month of Check-in
+Name=EAP1MON
+Start=47
+Len=2
+ItemType=SubItem
+ZeroFill=Yes
+
+[Item]
+Label=Day of Check-in
+Name=EAP1DAY
+Start=49
+Len=2
+ItemType=SubItem
+ZeroFill=Yes
+
+[Item]
+Label=Week of Check-in
+Name=EAP1WEEK
+Start=51
+Len=3
+ItemType=SubItem
+ZeroFill=Yes
+
+[Item]
+Label=Initials Check-in
+Name=EAP1INIT
+Start=54
+Len=3
+DataType=Alpha
+
+[Item]
+Label=Date of Coding
+Name=EAP2DATE
+Start=57
+Len=11
+DataType=Alpha
+
+[Item]
+Label=Year of Coding
+Name=EAP2YEAR
+Start=57
+Len=4
+ItemType=SubItem
+ZeroFill=Yes
+
+[ValueSet]
+Label=Year of Coding
+Name=EAP2YEAR_VS1
+Value=2000:2020;Count
+Value='    ';Not
+Name=NOTAPPL,Special
+
+[Item]
+Label=Month of Coding
+Name=EAP2MON
+Start=61
+Len=2
+ItemType=SubItem
+ZeroFill=Yes
+
+[Item]
+Label=Day of Coding
+Name=EAP2DAY
+Start=63
+Len=2
+ItemType=SubItem
+ZeroFill=Yes
+
+[Item]
+Label=Week of Coding
+Name=EAP2WEEK
+Start=65
+Len=3
+ItemType=SubItem
+ZeroFill=Yes
+
+[Item]
+Label=Initials Coding
+Name=EAP2INIT
+Start=68
+Len=3
+DataType=Alpha
+
+[Item]
+Label=Date of Data Entry
+Name=EAP3DATE
+Start=71
+Len=11
+DataType=Alpha
+
+[Item]
+Label=Year of Data Entry
+Name=EAP3YEAR
+Start=71
+Len=4
+ItemType=SubItem
+ZeroFill=Yes
+
+[ValueSet]
+Label=Year of Data Entry
+Name=EAP3YEAR_VS1
+Value=2000:2020;Count
+Value='    ';Not
+Name=NOTAPPL,Special
+
+[Item]
+Label=Month of Data Entry
+Name=EAP3MON
+Start=75
+Len=2
+ItemType=SubItem
+ZeroFill=Yes
+
+[Item]
+Label=Day of Data Entry
+Name=EAP3DAY
+Start=77
+Len=2
+ItemType=SubItem
+ZeroFill=Yes
+
+[Item]
+Label=Week of Data Entry
+Name=EAP3WEEK
+Start=79
+Len=3
+ItemType=SubItem
+ZeroFill=Yes
+
+[Item]
+Label=Initials Data Entry
+Name=EAP3INIT
+Start=82
+Len=3
+DataType=Alpha
+
+[Item]
+Label=Date of Computer Counts
+Name=EAP4DATE
+Start=85
+Len=11
+DataType=Alpha
+
+[Item]
+Label=Year of Computer Counts
+Name=EAP4YEAR
+Start=85
+Len=4
+ItemType=SubItem
+ZeroFill=Yes
+
+[ValueSet]
+Label=Year of Computer Counts
+Name=EAP4YEAR_VS1
+Value=2000:2020;Count
+Value='    ';Not
+Name=NOTAPPL,Special
+
+[Item]
+Label=Month of Computer Counts
+Name=EAP4MON
+Start=89
+Len=2
+ItemType=SubItem
+ZeroFill=Yes
+
+[Item]
+Label=Day of Computer Counts
+Name=EAP4DAY
+Start=91
+Len=2
+ItemType=SubItem
+ZeroFill=Yes
+
+[Item]
+Label=Week of Computer Counts
+Name=EAP4WEEK
+Start=93
+Len=3
+ItemType=SubItem
+ZeroFill=Yes
+
+[Item]
+Label=Initials Computer Counts
+Name=EAP4INIT
+Start=96
+Len=3
+DataType=Alpha

@@ -1,0 +1,139 @@
+﻿[FormFile]
+Version=CSPro 6.1
+Name=OTHERS_FF
+Label=Others
+DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
+FieldEntryFont=0018 0000 0000 0000 0600 0000 0000 0000 0000 0000 0000 0000 0000 Courier New
+Type=OperatorControlled
+  
+[Dictionaries]
+File=.\Others.dcf
+  
+[Form]
+Name=FORM000
+Label=Others questionnaire
+Level=1
+Size=711,405
+  
+Item=OPROV
+Item=ODIST
+Item=OVILL
+Item=OEA
+Item=OHU
+Item=OTHER_ANSWER
+Item=QUESTNUM
+  
+Box=86,186,686,380,Etched
+Box=83,262,683,265,Etched
+[EndForm]
+  
+[Level]
+Name=OTHERS_QUEST
+Label=Others questionnaire
+  
+[Group]
+Required=Yes
+Name=OTHERS_QUEST_FORM
+Label=Others questionnaire
+Form=1
+LogicControl=No
+Max=1
+  
+[Field]
+Name=OPROV
+Position=126,229,155,249
+Item=OPROV,OTHERS_DICT
+UseEnterKey=Yes
+Protected=Yes
+Form=1
+  
+[Text]
+Position=117,199,159,213
+Text=Province
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Field]
+Name=ODIST
+Position=213,227,242,247
+Item=ODIST,OTHERS_DICT
+UseEnterKey=Yes
+Protected=Yes
+Form=1
+  
+[Text]
+Position=208,199,241,213
+Text=District
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Field]
+Name=OVILL
+Position=290,228,333,248
+Item=OVILL,OTHERS_DICT
+UseEnterKey=Yes
+Protected=Yes
+Form=1
+  
+[Text]
+Position=289,199,321,213
+Text=Village
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Field]
+Name=OEA
+Position=370,228,413,248
+Item=OEA,OTHERS_DICT
+UseEnterKey=Yes
+Protected=Yes
+Form=1
+  
+[Text]
+Position=378,199,392,213
+Text=EA
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Field]
+Name=OHU
+Position=455,228,498,248
+Item=OHU,OTHERS_DICT
+UseEnterKey=Yes
+Protected=Yes
+Form=1
+  
+[Text]
+Position=444,199,504,213
+Text=Housing Unit
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Field]
+Name=QUESTNUM
+Position=566,226,609,246
+Item=QUESTNUM,OTHERS_DICT
+UseEnterKey=Yes
+Protected=Yes
+Form=1
+  
+[Text]
+Position=544,199,627,213
+Text=Question Number
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Field]
+Name=OTHER_ANSWER
+Position=109,332,670,352
+Item=OTHER_ANSWER,OTHERS_DICT
+UseEnterKey=Yes
+Form=1
+  
+[Text]
+Position=338,299,406,313
+Text=Other answer
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+[EndGroup]
+  

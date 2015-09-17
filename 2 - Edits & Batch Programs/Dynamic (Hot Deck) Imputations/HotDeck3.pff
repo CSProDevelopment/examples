@@ -1,0 +1,19 @@
+﻿[Run Information]
+Version=CSPro 6.1
+AppType=Batch
+
+[Files]
+Application=.\HotDeck3.bch
+InputData=.\smallStan.dat
+OutputData=.\smallStan.out
+Listing=.\HotDeck3.lst
+ImputeFreqs=.\HotDeck3.freq.lst
+
+
+[Parameters]
+ViewListing=Always
+ViewResults=Yes
+ListingWidth=80
+MessageWrap=No
+ErrmsgOverride=No
+

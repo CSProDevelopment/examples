@@ -1,0 +1,66 @@
+[Dictionary]
+Version=CSPro 6.1
+Label=PostcalcExample - Working Storage Dictionary
+Name=WS_DICT
+RecordTypeStart=1
+RecordTypeLen=1
+Positions=Relative
+ZeroFill=No
+DecimalChar=Yes
+
+[Level]
+Label=Working Storage Level
+Name=WS_LEVEL
+
+[IdItems]
+
+[Item]
+Label=Dummy Id
+Name=DUMMY_ID
+Start=2
+Len=1
+
+[Record]
+Label=Working Storage Record
+Name=WS_REC
+RecordTypeValue='1'
+RecordLen=6
+
+[Item]
+Label=System Total
+Name=SYSTEM_TOTAL
+Start=3
+Len=1
+
+[Item]
+Label=Unmarried Men per 100 Women
+Name=UNMARRIED_MEN_PER_100_WOMEN
+Start=4
+Len=1
+
+[ValueSet]
+Label=Unmarried Men per 100 Women
+Name=UNMARRIED_MEN_PER_100_WOMEN_VS1
+Value=1;Unmarried Men per 100 Women
+
+[Item]
+Label=Dependency Ratio
+Name=DEPENDENCY_RATIO
+Start=5
+Len=1
+
+[ValueSet]
+Label=Dependency Ratio
+Name=DEPENDENCY_RATIO_VS1
+Value=1;Dependency Ratio
+
+[Item]
+Label=Total Fertility Rate
+Name=TOTAL_FERTILITY_RATE
+Start=6
+Len=1
+
+[ValueSet]
+Label=Total Fertility Rate
+Name=TOTAL_FERTILITY_RATE_VS1
+Value=1;Total Fertility Rate

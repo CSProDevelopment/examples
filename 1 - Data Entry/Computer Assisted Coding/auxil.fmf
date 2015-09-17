@@ -1,0 +1,137 @@
+﻿[FormFile]
+Version=CSPro 6.1
+Name=AUXIL_FF
+Label=auxil
+DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
+FieldEntryFont=0018 0000 0000 0000 0600 0000 0000 0000 0000 0000 0000 0000 0000 Courier New
+Type=OperatorControlled
+  
+[Dictionaries]
+File=.\auxil.dcf
+  
+[Form]
+Name=FORM000
+Label=(Id Items)
+Level=1
+Size=598,448
+  
+Item=AUXILTYPE
+Item=AUXILTXT
+Item=AUXILKEY
+Item=AUXILCODE
+  
+Box=146,106,571,292,Etched
+Box=150,193,573,195,Etched
+  
+[Text]
+Name=TEXT000
+Position=411,132,514,146
+Text=Occupation / Industry
+Form=1
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT001
+Position=181,216,378,230
+Text=Match Text (Enter minimum 3 characters)
+Form=1
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT002
+Position=460,214,514,228
+Text=Insert code
+Form=1
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT004
+Position=178,113,321,127
+Text=Enter 1 for Occupation Codes
+Form=1
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT005
+Position=178,133,305,147
+Text=Enter 2 for Industry Codes
+Form=1
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT003
+Position=131,365,213,379
+Text=For testing enter:
+Form=1
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT006
+Position=153,388,247,402
+Text=CLE for Occupation
+Form=1
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT007
+Position=155,409,237,423
+Text=MAN for Industry
+Form=1
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+[EndForm]
+  
+[Level]
+Name=AUXIL_QUEST
+Label=auxil questionnaire
+  
+[Group]
+Required=Yes
+Name=IDS0_FORM
+Label=(Id Items)
+Form=1
+LogicControl=No
+Max=1
+  
+[Field]
+Name=AUXILTYPE
+Position=236,155,251,175
+Item=AUXILTYPE,AUXIL_DICT
+UseEnterKey=Yes
+Form=1
+  
+  
+[Field]
+Name=AUXILTXT
+Position=397,155,538,175
+Item=AUXILTXT,AUXIL_DICT
+UseEnterKey=Yes
+Protected=Yes
+Form=1
+  
+  
+[Field]
+Name=AUXILKEY
+Position=182,239,379,259
+Item=AUXILKEY,AUXIL_DICT
+UseEnterKey=Yes
+UpperCase=Yes
+Form=1
+  
+  
+[Field]
+Name=AUXILCODE
+Position=470,239,513,259
+Item=AUXILCODE,AUXIL_DICT
+UseEnterKey=Yes
+Form=1
+  
+[EndGroup]
+  

@@ -1,0 +1,21 @@
+﻿[Run Information]
+Version=CSPro 6.1
+AppType=Entry
+
+[DataEntryInit]
+Interactive=Ask
+
+[Files]
+Application=.\SelCaseX.ent
+InputData=.\Test.dat
+
+[ExternalFiles]
+OCCUPATION_DICT=.\Occ.dat
+OCCINDSEC_DICT=.\OccIndSec.Dat
+ENUMERATOR_INFORMATION_DICT=.\Enumerator Information.dat
+
+[UserFiles]
+FILEENUMINFO=
+
+[Parameters]
+

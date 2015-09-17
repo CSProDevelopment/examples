@@ -1,0 +1,16 @@
+﻿[Run Information]
+Version=CSPro 6.1
+AppType=Tabulation
+Operation=All
+
+[Files]
+Application=.\TableTipsNTricks.xtb
+InputData=..\..\Popstan Census\Popstan Census.dat
+OutputTBW=.\TableTipsNTricks.xtb.tbw
+Listing=.\TableTipsNTricks.xtb.lst
+
+
+[Parameters]
+ViewListing=OnError
+ViewResults=No
+

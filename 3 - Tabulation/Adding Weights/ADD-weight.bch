@@ -1,0 +1,16 @@
+﻿[CSPro Application]
+Version=CSPro 6.1
+Label=ADD_WEIGHT
+Name=ADD_WEIGHT
+AppType=Batch
+[External Dictionaries]
+File=.\Weight file.dcf
+[AppCode]
+File=.\ADD-weight.bch.apc
+[Message]
+File=.\ADD-weight.bch.mgf
+[Order]
+File=.\ADD-weight.ord
+[Dictionary Types]
+Dict-Type=.\Weight file.dcf,External
+Dict-Type=.\popstan2.dcf,Input,.\ADD-weight.ord

@@ -1,0 +1,33 @@
+﻿[Dictionary]
+Version=CSPro 6.1
+Label=Census Prov-Dist Tabs
+Name=CENSUS_PROV_DIST_TA_DICT
+RecordTypeStart=1
+RecordTypeLen=1
+Positions=Relative
+ZeroFill=No
+DecimalChar=Yes
+
+[Level]
+Label=Census Prov-Dist Tabs questionnaire
+Name=CENSUS_PROV_DIST_TABS_QUEST
+
+[IdItems]
+
+[Item]
+Label=Census Prov-Dist Tabs identification
+Name=CENSUS_PROV_DIST_TABS_ID
+Start=2
+Len=1
+
+[Record]
+Label=System Record
+Name=SYSTEM_REC
+RecordTypeValue='1'
+RecordLen=3
+
+[Item]
+Label=System Total
+Name=SYSTEM_TOTAL
+Start=3
+Len=1

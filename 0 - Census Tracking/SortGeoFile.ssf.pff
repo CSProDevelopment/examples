@@ -1,0 +1,14 @@
+﻿[Run Information]
+Version=CSPro 6.1
+AppType=Sort
+
+[Files]
+Application=.\SortGeoFile.ssf
+InputData=.\Test Geo.dat
+OutputData=.\Test Geo.srt
+Listing=.\SortGeoFile.ssf.lst
+
+[Parameters]
+ViewListing=OnError
+ViewResults=No
+

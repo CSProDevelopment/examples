@@ -1,0 +1,20 @@
+﻿[Run Information]
+Version=CSPro 6.1
+AppType=Batch
+
+[Files]
+Application=.\Computer Counts.bch
+InputData=.\EA Test 1.dat
+Listing=.\Computer Counts.lst
+
+[ExternalFiles]
+EASTATUS_DICT=.\EAStatus.dat
+
+[Parameters]
+Parameter=bmd
+ViewListing=Always
+ViewResults=Yes
+ListingWidth=80
+MessageWrap=No
+ErrmsgOverride=No
+

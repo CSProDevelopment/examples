@@ -1,0 +1,63 @@
+﻿{ Setvalueset example program.
+  Uses the setvalueset command in conjuction with assisted mode
+  to show a dialog with the valid provinces and the valid districts
+  for the province that was entered.
+  When assisted mode is on, CSPro automatically shows the values in
+  the first value set for the item.  For province all we have to do
+  is turn on assisted mode which can be done once in the preproc of
+  the application.  District is more difficult since the value set to
+  show will differ based on the province chosen (each province has
+  a different set of districts).  For district, we set the value set
+  dynamically after the province code is entered.  We use a lookup
+  file that lists the codes and names for each district in each province.
+  This lookup file is easily created from the area names file
+  (by deleting all but the lines that have district names and codes,
+  removing the "=" signs and makeing sure the codes and names are fixed
+  width).  In the postproc of province we lookup the province that was
+  entered in this lookup file to get the list of district names and
+  codes which we then set as the value set for district.  This
+  value set then gets shown when the user reaches the district field. }
+
+
+
+PROC GLOBAL
+
+numeric i;
+array aDistrictCodes(99);
+array alpha(32) aDistrictNames(99);
+
+
+PROC CENSUS_DE
+
+preproc
+
+	{ turn on assisted mode for province and district
+	  to get dialog that shows value set entries }
+	set attributes(PROVINCE, DISTRICT) assisted on (responses);
+
+
+PROC PROVINCE
+
+	{ use lookup file to load all districts for province entered }
+	PROVINCE_CODE = PROVINCE;
+	if loadcase(AREA_DICT, PROVINCE_CODE) = 0 then
+		errmsg("Invalid province, please reenter");
+		reenter PROVINCE;
+	endif;
+
+	{ Copy the district codes and names for the selected province into arrays.
+	  Note that the AREA_REC record repeats (max occurences of 99) so when we
+	  load the case for a given province, we get one occurence of AREA_REC
+	  for each district in the given province.  }
+	do varying i = 1 until i > count(AREA_DICT.AREA_REC)
+		{ the arrays that we use for setvalueset start at 0 so we use i-1! }
+		aDistrictCodes(i-1) = DISTRICT_CODE(i);
+		aDistrictNames(i-1) = DISTRICT_NAME(i);
+	enddo;
+	aDistrictCodes(i-1) = notappl; { mark end of array with a code = notappl
+									 so that setvalueset knows how many elements
+									 in the array to use }
+
+	{ call setvalueset using the arrays that contain district codes and names }
+	setvalueset(DISTRICT, aDistrictCodes, aDistrictNames);
+

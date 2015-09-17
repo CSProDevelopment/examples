@@ -1,0 +1,20 @@
+﻿[Run Information]
+Version=CSPro 6.1
+AppType=Batch
+
+[Files]
+Application=.\ADD-weight.bch
+InputData=.\PopstanEx.dat
+OutputData=.\PopstanEx.out
+Listing=.\ADD-weight.lst
+
+[ExternalFiles]
+WEIGHT_FILE_DICT=.\WeightEx.dat
+
+[Parameters]
+ViewListing=Always
+ViewResults=Yes
+ListingWidth=80
+MessageWrap=No
+ErrmsgOverride=No
+

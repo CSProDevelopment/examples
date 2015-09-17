@@ -1,0 +1,93 @@
+﻿[FormFile]
+Version=CSPro 6.1
+Name=WEIGHT_FILE_FF
+Label=Create Weights
+DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
+FieldEntryFont=0018 0000 0000 0000 0600 0000 0000 0000 0000 0000 0000 0000 0000 Courier New
+Type=OperatorControlled
+  
+[Dictionaries]
+File=.\Weight file.dcf
+  
+[Form]
+Name=FORM000
+Label=Weight file questionnaire
+Level=1
+Size=455,304
+  
+Item=PROV
+Item=DISTRICT
+Item=WGT
+  
+Box=48,245,408,279,Thick
+Box=44,96,423,131,Thick
+  
+[Text]
+Name=TEXT000
+Position=52,105,415,121
+Text=Enter Province Code, District Code and Weight for District
+Form=1
+ 
+  
+[Text]
+Name=TEXT001
+Position=65,252,389,268
+Text=Use F12 to enter weight for next Province & Village
+Form=1
+ 
+  
+[Text]
+Name=TEXT002
+Position=52,40,361,62
+Text=Example: Create a File of Weights
+Form=1
+Font=-019 0000 0000 0000 0700 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+[EndForm]
+  
+[Level]
+Name=WEIGHT_FILE_QUEST
+Label=Weight file questionnaire
+  
+[Group]
+Required=Yes
+Name=WEIGHT_FILE_QUEST_FORM
+Label=Weight file questionnaire
+Form=1
+LogicControl=No
+Max=1
+  
+[Field]
+Name=PROV
+Position=83,194,112,214
+Item=PROV,WEIGHT_FILE_DICT
+Form=1
+  
+[Text]
+Position=65,153,121,169
+Text=Province
+ 
+  
+[Field]
+Name=DISTRICT
+Position=198,194,227,214
+Item=DISTRICT,WEIGHT_FILE_DICT
+Form=1
+  
+[Text]
+Position=195,153,238,169
+Text=District
+ 
+  
+[Field]
+Name=WGT
+Position=331,194,430,214
+Item=WGT,WEIGHT_FILE_DICT
+Form=1
+  
+[Text]
+Position=329,153,406,169
+Text=Area weight
+ 
+[EndGroup]
+  

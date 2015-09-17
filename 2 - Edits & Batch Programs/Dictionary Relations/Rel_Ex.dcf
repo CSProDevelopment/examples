@@ -1,0 +1,360 @@
+﻿[Dictionary]
+Version=CSPro 6.1
+Label=REL
+Name=REL
+RecordTypeStart=1
+RecordTypeLen=1
+Positions=Relative
+ZeroFill=Yes
+DecimalChar=No
+
+[Level]
+Label=Questionnaire
+Name=QUEST
+
+[IdItems]
+
+[Item]
+Label=Serial Number
+Name=SERIAL_NUMBER
+Start=2
+Len=4
+ZeroFill=Yes
+
+[ValueSet]
+Label=Serial Number
+Name=SERIAL_NUMBER_VS1
+Value=1:4400
+
+[Record]
+Label=Housing
+Name=HOUSING
+RecordTypeValue='1'
+RecordLen=8
+
+[Item]
+Label=Total Persons
+Name=TOTAL_PERSONS
+Start=6
+Len=2
+ZeroFill=Yes
+
+[ValueSet]
+Label=Total Persons
+Name=TOTAL_PERSONS_VS1
+Value=0:99
+
+[Item]
+Label=Eligible Women
+Name=ELIG_WOMEN
+Start=8
+Len=1
+ZeroFill=Yes
+
+[ValueSet]
+Label=Eligible Women
+Name=ELIG_WOMEN_VS1
+Value=0:5
+
+[Record]
+Label=Pop
+Name=POP
+RecordTypeValue='2'
+Required=No
+MaxRecords=10
+RecordLen=12
+
+[Item]
+Label=Line Number
+Name=LINE_NUMBER
+Start=6
+Len=2
+ZeroFill=Yes
+
+[ValueSet]
+Label=Line Number
+Name=LINE_NUMBER_VS1
+Value=1:50
+
+[Item]
+Label=Relationship
+Name=RELATIONSHIP
+Start=8
+Len=1
+ZeroFill=Yes
+
+[ValueSet]
+Label=Relationship
+Name=RELATIONSHIP_VS1
+Value=0;Head
+Value=1;Spouse
+Value=2;Child
+Value=3;Parent
+Value=4;Grandchild
+Value=5;Sibling
+Value=6;Other Relative
+Value=7;Maid
+Value=8;Other
+
+[Item]
+Label=Sex
+Name=SEX
+Start=9
+Len=1
+ZeroFill=Yes
+
+[ValueSet]
+Label=Sex
+Name=SEX_VS1
+Value=1;Male
+Value=2;Female
+Value=9;NR
+Name=MISSING,Special
+
+[Item]
+Label=Age
+Name=AGE
+Start=10
+Len=2
+ZeroFill=Yes
+
+[ValueSet]
+Label=Age
+Name=AGE_VS1
+Value=0 1:14 15:19 20:24 25:29 30:34 35:39 40:44 45:49 50:98
+Value=99;NR
+Name=MISSING,Special
+
+[Item]
+Label=Marital Status
+Name=MS
+Start=12
+Len=1
+ZeroFill=Yes
+
+[ValueSet]
+Label=Marital Status
+Name=MS_VS1
+Value=1;Never Married
+Value=2;Married
+Value=3;Divorced
+Value=4;Widowed
+Value=5;Separated
+Value=9;NR
+Name=MISSING,Special
+Value=' ';NA
+Name=NOTAPPL,Special
+
+[Record]
+Label=Fert
+Name=FERT
+RecordTypeValue='3'
+Required=No
+MaxRecords=10
+RecordLen=36
+
+[Item]
+Label=Woman Number
+Name=WOMAN_NUMBER
+Start=6
+Len=2
+ZeroFill=Yes
+
+[ValueSet]
+Label=Woman Number
+Name=WOMAN_NUMBER_VS1
+Value=1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21:35
+Value=99;NR
+Name=MISSING,Special
+
+[Item]
+Label=Woman MS
+Name=WOMAN_MS
+Start=8
+Len=1
+ZeroFill=Yes
+
+[ValueSet]
+Label=Woman MS
+Name=WOMAN_MS_VS1
+Value=2;Married
+Value=3;Divorced
+Value=4;Widowed
+Value=5;Separated
+Value=9;NR
+Name=MISSING,Special
+
+[Item]
+Label=Males Born
+Name=MALES_BORN
+Start=9
+Len=2
+ZeroFill=Yes
+
+[ValueSet]
+Label=Males Born
+Name=MALES_BORN_VS1
+Value=0 1 2 3 4 5 6 7 8 9 10
+Value='  ';NA
+Name=NOTAPPL,Special
+
+[Item]
+Label=Females Born
+Name=FEMALES_BORN
+Start=11
+Len=2
+ZeroFill=Yes
+
+[ValueSet]
+Label=Females Born
+Name=FEMALES_BORN_VS1
+Value=0 1 2 3 4 5 6 7 8 9 10
+Value='  ';NA
+Name=NOTAPPL,Special
+
+[Item]
+Label=Males Dead
+Name=MALES_DEAD
+Start=13
+Len=2
+ZeroFill=Yes
+
+[ValueSet]
+Label=Males Dead
+Name=MALES_DEAD_VS1
+Value=0 1 2 3 4 5 6 7 8 9 10
+Value='  ';NA
+Name=NOTAPPL,Special
+
+[Item]
+Label=Females Dead
+Name=FEMALES_DEAD
+Start=15
+Len=2
+ZeroFill=Yes
+
+[ValueSet]
+Label=Females Dead
+Name=FEMALES_DEAD_VS1
+Value=0 1 2 3 4 5 6 7 8 9 10
+Value='  ';NA
+Name=NOTAPPL,Special
+
+[Item]
+Label=Child 1
+Name=CHILD1
+Start=17
+Len=1
+ZeroFill=Yes
+
+[ValueSet]
+Label=Child 1
+Name=CHILD1_VS1
+Value=0:9
+Value=' ';NA
+Name=NOTAPPL,Special
+
+[Item]
+Label=Child YOB1
+Name=CHILD_YOB1
+Start=18
+Len=4
+ZeroFill=Yes
+
+[ValueSet]
+Label=Child YOB1
+Name=CHILD_YOB1_VS1
+Value=1900:2005
+Value='    ';NA
+Name=NOTAPPL,Special
+
+[Item]
+Label=Child2
+Name=CHILD2
+Start=22
+Len=1
+ZeroFill=Yes
+
+[ValueSet]
+Label=Child2
+Name=CHILD2_VS1
+Value=0:9
+Value=' ';NA
+Name=NOTAPPL,Special
+
+[Item]
+Label=Child YOB2
+Name=CHILD_YOB2
+Start=23
+Len=4
+ZeroFill=Yes
+
+[ValueSet]
+Label=Child YOB2
+Name=CHILD_YOB2_VS1
+Value=1900:2005
+Value='    ';NA
+Name=NOTAPPL,Special
+
+[Item]
+Label=Child3
+Name=CHILD3
+Start=27
+Len=1
+ZeroFill=Yes
+
+[ValueSet]
+Label=Child3
+Name=CHILD3_VS1
+Value=0:9
+Value=' ';NA
+Name=NOTAPPL,Special
+
+[Item]
+Label=Child YOB3
+Name=CHILD_YOB3
+Start=28
+Len=4
+ZeroFill=Yes
+
+[ValueSet]
+Label=Child YOB3
+Name=CHILD_YOB3_VS1
+Value=1900:2005
+Value='    ';NA
+Name=NOTAPPL,Special
+
+[Item]
+Label=Child4
+Name=CHILD4
+Start=32
+Len=1
+ZeroFill=Yes
+
+[ValueSet]
+Label=Child4
+Name=CHILD4_VS1
+Value=0:9
+Value=' ';NA
+Name=NOTAPPL,Special
+
+[Item]
+Label=Child YOB4
+Name=CHILD_YOB4
+Start=33
+Len=4
+ZeroFill=Yes
+
+[ValueSet]
+Label=Child YOB4
+Name=CHILD_YOB4_VS1
+Value=1900:2005
+Value='    ';NA
+Name=NOTAPPL,Special
+
+[Relation]
+Name=MOTHER_CHILD
+Primary=FERT
+PrimaryLink=WOMAN_NUMBER
+Secondary=POP
+SecondaryLink=LINE_NUMBER

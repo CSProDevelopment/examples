@@ -1,0 +1,21 @@
+﻿[Run Information]
+Version=CSPro 6.1
+AppType=Batch
+
+[Files]
+Application=.\HotDeck2.bch
+InputData=.\smallStan.dat
+OutputData=.\smallStan.out
+Listing=.\HotDeck2.lst
+ImputeFreqs=.\HotDeck2.freq.lst
+
+[ExternalFiles]
+AGEDECK_DICT=.\AgeDeck.dat
+
+[Parameters]
+ViewListing=Always
+ViewResults=Yes
+ListingWidth=80
+MessageWrap=No
+ErrmsgOverride=No
+

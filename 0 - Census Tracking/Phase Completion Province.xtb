@@ -1,0 +1,15 @@
+﻿[CSPro Application]
+Version=CSPro 6.1
+Label=PHASE_COMPLETION
+Name=PHASE_COMPLETION
+AppType=Tabulation
+[External Dictionaries]
+File=.\Phase Completion Province.xtb.wrk.dcf
+[AppCode]
+File=.\Phase Completion Province.xtb.apc
+[Message]
+File=.\Phase Completion Province.xtb.mgf
+[TabSpecs]
+File=.\Phase Completion Province.xts
+[Dictionary Types]
+Dict-Type=.\Phase Completion Province.xtb.wrk.dcf,Working

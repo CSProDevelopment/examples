@@ -1,0 +1,19 @@
+﻿[Run Information]
+Version=CSPro 6.1
+AppType=Batch
+
+[Files]
+Application=.\DeckArrays.bch
+InputData=.\testData.dat
+OutputData=.\testData.edited
+Listing=.\DeckArrays.lst
+ImputeFreqs=.\DeckArrays.freq.lst
+
+
+[Parameters]
+ViewListing=Always
+ViewResults=Yes
+ListingWidth=140
+MessageWrap=No
+ErrmsgOverride=No
+

@@ -1,0 +1,16 @@
+﻿[Run Information]
+Version=CSPro 6.1
+AppType=Tabulation
+Operation=All
+
+[Files]
+Application=.\Census National Tabs.xtb
+InputData=.\Popstan Census.dat
+OutputTBW=.\Census National Tabs.xtb.tbw
+Listing=.\Census National Tabs.xtb.lst
+
+
+[Parameters]
+ViewListing=OnError
+ViewResults=No
+

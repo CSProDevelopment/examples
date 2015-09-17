@@ -1,0 +1,1339 @@
+﻿[TabSpecs]
+Version=CSPro 6.1
+Label=Census Prov-Dist Tabs.xts
+Name=CENSUS_PROV_DIST_TABS
+GenerateLogic=Yes
+ 
+[Dictionaries]
+File=.\Census Dictionary.dcf
+ 
+[AreaStructure]
+Names=PROVINCE,DISTRICT
+Standard=Yes
+LowestLevel=DISTRICT
+ 
+[ConSpec]
+Name=TOTAL
+ 
+[ConSpec]
+Name=PROVINCE
+Level=PROVINCE
+ 
+[ConSpec]
+Name=DISTRICT
+Level=PROVINCE
+Level=DISTRICT
+ 
+[TabSetFormat]
+Name=TabSetFmt, default
+ThousandsSeparator=','
+DecimalSeparator='.'
+ZeroMask='-'
+ZeroRoundMask='*'
+Suppressed='SSS'
+DigitGrouping=Thousands
+ZeroBeforeDecimal=Yes
+ForeignKey='Frequency'
+ForeignKey='and'
+ForeignKey='to'
+ForeignKey='Total'
+ForeignKey='Standard Deviation'
+ForeignKey='by'
+ForeignKey='(Percents)'
+ForeignKey='Mean'
+ForeignKey='Maximum'
+ForeignKey='Table'
+ForeignKey='for'
+ForeignKey='Percentile'
+ForeignKey='Mode'
+ForeignKey='Minimum'
+ForeignKey='Proportion'
+ForeignKey='Median'
+ForeignKey='Variance'
+ForeignKey='Percent'
+ForeignKey='Undefined'
+ForeignKey='(Weighted)'
+ForeignKey='Cumulative'
+ForeignKey='<Value has no label>'
+ForeignKey='Number'
+TitleTemplate='Table %s.'
+Continuation=' (continued)'
+MeasurementSystem=USUnits
+
+[TableFormat]
+Name=TableFmt, default
+BorderLeft=None
+BorderTop=None
+BorderRight=None
+BorderBottom=None
+LeftLeadering=None
+RightLeadering=None
+ReaderBreak=None
+IncludeSubTitle=No
+IncludePageNote=No
+IncludeEndNote=No
+
+
+[TallyFormat]
+Name=RowTallyFmt, default
+IncludeUndefined=No
+DumpUndefined=No
+[TallyStatistic]
+Type=Total
+
+[TallyStatistic]
+Type=Counts
+
+
+[TallyFormat]
+Name=ColumnTallyFmt, default
+IncludeUndefined=No
+DumpUndefined=No
+[TallyStatistic]
+Type=Total
+
+[TallyStatistic]
+Type=Counts
+
+
+[TallyFormat]
+Name=RowTallyFmt, 61
+[TallyStatistic]
+Type=Total
+
+
+[TallyFormat]
+Name=RowTallyFmt, 62
+[TallyStatistic]
+Type=Total
+
+
+[TallyFormat]
+Name=RowTallyFmt, 63
+[TallyStatistic]
+Type=Total
+
+
+[TallyFormat]
+Name=RowTallyFmt, 64
+[TallyStatistic]
+Type=Total
+
+
+[TablePrintFormat]
+Name=TblPrintFmt, default
+TableLayout=LeftStandard
+PageBreakBeforeTable=Yes
+TblHorzCenter=No
+TblVertCenter=No
+PaperType=Letter
+PageOrientation=Portrait
+MarginTop=1.00
+MarginBottom=1.00
+MarginLeft=1.00
+MarginRight=1.00
+HeaderFrequency=TopOfPage
+
+[DataCellFormat]
+Name=SpannerFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Center
+VertAlign=Middle
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=Thin
+LineBottom=Thin
+LineLeft=Thin
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+ExtendLines=Yes
+NumDecimals=NotApplicable
+HideZeroRow=No
+
+[DataCellFormat]
+Name=ColumnHeadFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Right
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=Thin
+LineBottom=Thin
+LineLeft=Thin
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+ExtendIndentation=Yes
+NumDecimals=Zero
+HideZeroRow=No
+
+[DataCellFormat]
+Name=CaptionFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Left
+VertAlign=Middle
+TextColor=0
+FillColor=16777215
+IndentLeft=0.13
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=No
+NumDecimals=NotApplicable
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Left
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+NumDecimals=Zero
+HideZeroRow=No
+
+[DataCellFormat]
+Name=DataCellFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Right
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=NotApplicable
+LineBottom=NotApplicable
+LineLeft=NotApplicable
+LineRight=NotApplicable
+Hidden=NotApplicable
+SpanCells=NotApplicable
+NumDecimals=Zero
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 1
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Left
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=ColumnHeadFmt, 1
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Right
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=Thin
+LineBottom=Thin
+LineLeft=Thin
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+ExtendIndentation=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=ColumnHeadFmt, 2
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Right
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=Thin
+LineBottom=Thin
+LineLeft=Thin
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+ExtendIndentation=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=ColumnHeadFmt, 3
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Right
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=Thin
+LineBottom=Thin
+LineLeft=Thin
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+ExtendIndentation=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 2
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Left
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=ColumnHeadFmt, 4
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Right
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=Thin
+LineBottom=Thin
+LineLeft=Thin
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+ExtendIndentation=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=ColumnHeadFmt, 5
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Right
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=Thin
+LineBottom=Thin
+LineLeft=Thin
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+ExtendIndentation=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=ColumnHeadFmt, 6
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Right
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=Thin
+LineBottom=Thin
+LineLeft=Thin
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+ExtendIndentation=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=ColumnHeadFmt, 7
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Right
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=Thin
+LineBottom=Thin
+LineLeft=Thin
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+ExtendIndentation=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=ColumnHeadFmt, 8
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Right
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=Thin
+LineBottom=Thin
+LineLeft=Thin
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+ExtendIndentation=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 3
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Left
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=ColumnHeadFmt, 9
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Right
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=Thin
+LineBottom=Thin
+LineLeft=Thin
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+ExtendIndentation=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=ColumnHeadFmt, 10
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Right
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=Thin
+LineBottom=Thin
+LineLeft=Thin
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+ExtendIndentation=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=ColumnHeadFmt, 11
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Right
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=Thin
+LineBottom=Thin
+LineLeft=Thin
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+ExtendIndentation=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=ColumnHeadFmt, 12
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Right
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=Thin
+LineBottom=Thin
+LineLeft=Thin
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+ExtendIndentation=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=ColumnHeadFmt, 13
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Right
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=Thin
+LineBottom=Thin
+LineLeft=Thin
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+ExtendIndentation=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=ColumnHeadFmt, 14
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Right
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=Thin
+LineBottom=Thin
+LineLeft=Thin
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+ExtendIndentation=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=ColumnHeadFmt, 15
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Right
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=Thin
+LineBottom=Thin
+LineLeft=Thin
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+ExtendIndentation=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=ColumnHeadFmt, 16
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Right
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=Thin
+LineBottom=Thin
+LineLeft=Thin
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+ExtendIndentation=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=ColumnHeadFmt, 17
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Right
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=Thin
+LineBottom=Thin
+LineLeft=Thin
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+ExtendIndentation=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 4
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Left
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=ColumnHeadFmt, 18
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Right
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=Thin
+LineBottom=Thin
+LineLeft=Thin
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+ExtendIndentation=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=ColumnHeadFmt, 19
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Right
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=Thin
+LineBottom=Thin
+LineLeft=Thin
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+ExtendIndentation=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=ColumnHeadFmt, 20
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Right
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=Thin
+LineBottom=Thin
+LineLeft=Thin
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+ExtendIndentation=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=ColumnHeadFmt, 21
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Right
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=Thin
+LineBottom=Thin
+LineLeft=Thin
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+ExtendIndentation=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=ColumnHeadFmt, 22
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Right
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=Thin
+LineBottom=Thin
+LineLeft=Thin
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+ExtendIndentation=Yes
+HideZeroRow=No
+
+[Format]
+Name=TitleFmt, default
+Font=-016 0000 0000 0000 0700 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Left
+VertAlign=Top
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+
+[Format]
+Name=SubTitleFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Left
+VertAlign=Top
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+
+[Format]
+Name=StubHead, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Left
+VertAlign=Middle
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=Thin
+LineBottom=Thin
+LineLeft=None
+LineRight=Thin
+Hidden=No
+SpanCells=NotApplicable
+ExtendLines=Yes
+
+[Format]
+Name=SecondaryStubHead, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Right
+VertAlign=Middle
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=Thin
+LineBottom=Thin
+LineLeft=Thin
+LineRight=Thin
+Hidden=No
+SpanCells=NotApplicable
+ExtendLines=Yes
+
+[Format]
+Name=HeaderLeftFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Left
+VertAlign=Top
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+Custom=&F
+
+[Format]
+Name=HeaderCenterFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Center
+VertAlign=Top
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+Custom=
+
+[Format]
+Name=HeaderRightFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Right
+VertAlign=Top
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+Custom=&D
+
+[Format]
+Name=FooterLeftFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Left
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+Custom=
+
+[Format]
+Name=FooterCenterFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Center
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+Custom=- &P -
+
+[Format]
+Name=FooterRightFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Right
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+Custom=
+
+[Format]
+Name=PageNoteFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Left
+VertAlign=Top
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+
+[Format]
+Name=EndNoteFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Left
+VertAlign=Top
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+
+[Format]
+Name=AreaCaption, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Left
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=No
+
+ 
+[Table]
+Name=TABLE1
+Num=1
+ 
+[Title]
+Label='Table 1. Sex'
+ 
+[SubTitle]
+Label=''
+ 
+[PageNote]
+Label=''
+ 
+[EndNote]
+Label=''
+ 
+[HeaderLeft]
+Label=''
+ 
+[HeaderCenter]
+Label=''
+ 
+[HeaderRight]
+Label=''
+ 
+[FooterLeft]
+Label=''
+ 
+[FooterCenter]
+Label=''
+ 
+[FooterRight]
+Label=''
+ 
+[StubHead]
+Label=''
+ 
+[SecondaryStubHead]
+Label=''
+ 
+[AreaCaption]
+Label='%AreaName%'
+ 
+[OneRowColTotal]
+Label=''
+ 
+ 
+[Rows]
+ 
+[Variable]
+Name=SYSTEM_TOTAL
+Label=System Total
+VarType=Dict
+Format=RowTallyFmt, 61
+ 
+[Value]
+Label=Total
+TabValueType=Total
+TabValueStatIndex=0
+Format=StubFmt, 1
+ 
+[EndVar]
+ 
+[Cols]
+ 
+[Variable]
+Name=P03_SEX_VS1
+Label=Sex
+VarType=Dict
+ 
+[Value]
+Label=Total
+TabValueType=Total
+TabValueStatIndex=0
+Format=ColumnHeadFmt, 1
+ 
+[Value]
+Label=Male
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=ColumnHeadFmt, 2
+ 
+[Value]
+Label=Female
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=ColumnHeadFmt, 3
+ 
+[EndVar]
+ 
+[Table]
+Name=TABLE2
+Num=2
+ 
+[Title]
+Label='Table 2. Attending school'
+ 
+[SubTitle]
+Label=''
+ 
+[PageNote]
+Label=''
+ 
+[EndNote]
+Label=''
+ 
+[HeaderLeft]
+Label=''
+ 
+[HeaderCenter]
+Label=''
+ 
+[HeaderRight]
+Label=''
+ 
+[FooterLeft]
+Label=''
+ 
+[FooterCenter]
+Label=''
+ 
+[FooterRight]
+Label=''
+ 
+[StubHead]
+Label=''
+ 
+[SecondaryStubHead]
+Label=''
+ 
+[AreaCaption]
+Label='%AreaName%'
+ 
+[OneRowColTotal]
+Label=''
+ 
+ 
+[Rows]
+ 
+[Variable]
+Name=SYSTEM_TOTAL
+Label=System Total
+VarType=Dict
+Format=RowTallyFmt, 62
+ 
+[Value]
+Label=Total
+TabValueType=Total
+TabValueStatIndex=0
+Format=StubFmt, 2
+ 
+[EndVar]
+ 
+[Cols]
+ 
+[Variable]
+Name=P09_ATTEND_VS1
+Label=Attending school
+VarType=Dict
+ 
+[Value]
+Label=Total
+TabValueType=Total
+TabValueStatIndex=0
+Format=ColumnHeadFmt, 4
+ 
+[Value]
+Label=Yes
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=ColumnHeadFmt, 5
+ 
+[Value]
+Label=No
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=ColumnHeadFmt, 6
+ 
+[Value]
+Label=Not Reported
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=ColumnHeadFmt, 7
+ 
+[Value]
+Label=Not Applicable
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=ColumnHeadFmt, 8
+ 
+[EndVar]
+ 
+[Table]
+Name=TABLE3
+Num=3
+ 
+[Title]
+Label='Table 3. Highest grade completed'
+ 
+[SubTitle]
+Label=''
+ 
+[PageNote]
+Label=''
+ 
+[EndNote]
+Label=''
+ 
+[HeaderLeft]
+Label=''
+ 
+[HeaderCenter]
+Label=''
+ 
+[HeaderRight]
+Label=''
+ 
+[FooterLeft]
+Label=''
+ 
+[FooterCenter]
+Label=''
+ 
+[FooterRight]
+Label=''
+ 
+[StubHead]
+Label=''
+ 
+[SecondaryStubHead]
+Label=''
+ 
+[AreaCaption]
+Label='%AreaName%'
+ 
+[OneRowColTotal]
+Label=''
+ 
+ 
+[Rows]
+ 
+[Variable]
+Name=SYSTEM_TOTAL
+Label=System Total
+VarType=Dict
+Format=RowTallyFmt, 63
+ 
+[Value]
+Label=Total
+TabValueType=Total
+TabValueStatIndex=0
+Format=StubFmt, 3
+ 
+[EndVar]
+ 
+[Cols]
+ 
+[Variable]
+Name=P10_HIGH_GR_VS1
+Label=Highest grade completed
+VarType=Dict
+ 
+[Value]
+Label=Total
+TabValueType=Total
+TabValueStatIndex=0
+Format=ColumnHeadFmt, 9
+ 
+[Value]
+Label=None
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=ColumnHeadFmt, 10
+ 
+[Value]
+Label=Primary
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=ColumnHeadFmt, 11
+ 
+[Value]
+Label=Middle School
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=ColumnHeadFmt, 12
+ 
+[Value]
+Label=High School
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=ColumnHeadFmt, 13
+ 
+[Value]
+Label=University
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=ColumnHeadFmt, 14
+ 
+[Value]
+Label=Technical
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=ColumnHeadFmt, 15
+ 
+[Value]
+Label=Not Reported
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=ColumnHeadFmt, 16
+ 
+[Value]
+Label=Not Applicable
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=ColumnHeadFmt, 17
+ 
+[EndVar]
+ 
+[Table]
+Name=TABLE4
+Num=4
+ 
+[Title]
+Label='Table 4. Literacy'
+ 
+[SubTitle]
+Label=''
+ 
+[PageNote]
+Label=''
+ 
+[EndNote]
+Label=''
+ 
+[HeaderLeft]
+Label=''
+ 
+[HeaderCenter]
+Label=''
+ 
+[HeaderRight]
+Label=''
+ 
+[FooterLeft]
+Label=''
+ 
+[FooterCenter]
+Label=''
+ 
+[FooterRight]
+Label=''
+ 
+[StubHead]
+Label=''
+ 
+[SecondaryStubHead]
+Label=''
+ 
+[AreaCaption]
+Label='%AreaName%'
+ 
+[OneRowColTotal]
+Label=''
+ 
+ 
+[Rows]
+ 
+[Variable]
+Name=SYSTEM_TOTAL
+Label=System Total
+VarType=Dict
+Format=RowTallyFmt, 64
+ 
+[Value]
+Label=Total
+TabValueType=Total
+TabValueStatIndex=0
+Format=StubFmt, 4
+ 
+[EndVar]
+ 
+[Cols]
+ 
+[Variable]
+Name=P11_LITERACY_VS1
+Label=Literacy
+VarType=Dict
+ 
+[Value]
+Label=Total
+TabValueType=Total
+TabValueStatIndex=0
+Format=ColumnHeadFmt, 18
+ 
+[Value]
+Label=Literate
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=ColumnHeadFmt, 19
+ 
+[Value]
+Label=Illiterate
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=ColumnHeadFmt, 20
+ 
+[Value]
+Label=Not Reported
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=ColumnHeadFmt, 21
+ 
+[Value]
+Label=Not Applicable
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=ColumnHeadFmt, 22
+ 
+[EndVar]
+ 
+[Level]
+Table=TABLE1
+Table=TABLE2
+Table=TABLE3
+Table=TABLE4

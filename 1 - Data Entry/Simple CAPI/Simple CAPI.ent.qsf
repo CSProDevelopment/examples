@@ -1,0 +1,103 @@
+﻿[CAPI QUESTIONS]
+Version=CSPro 6.1
+
+[LANGUAGES]
+ENG=English
+
+[QUESTION]
+Field=SIMPLECAPI_DICT.AGE
+Occurrences=1:20
+ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+ENG={\colortbl ;\red0\green0\blue128;\red0\green0\blue0;\red255\green128\blue0;}
+ENG={\*\generator Riched20 6.3.9600}\viewkind4\uc1 
+ENG=\pard\cf1\b\fs24\lang1033 %NAME%:\cf2\b0  How old are you?\par
+ENG=\par
+ENG=\i If %NAME% does not know an exact age, record Don't Know.\cf3\b\i0\par
+ENG=}
+
+[QUESTION]
+Field=SIMPLECAPI_DICT.HOUSEHOLD_ID
+ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+ENG={\colortbl ;\red0\green0\blue0;}
+ENG={\*\generator Riched20 6.3.9600}\viewkind4\uc1 
+ENG=\pard\cf1\i\fs24\lang1033 Enter the household number.\i0\par
+ENG=}
+
+[QUESTION]
+Field=SIMPLECAPI_DICT.LANGUAGES_SPOKEN
+Occurrences=1:20
+ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+ENG={\colortbl ;\red0\green0\blue128;\red0\green0\blue0;}
+ENG={\*\generator Riched20 6.3.9600}\viewkind4\uc1 
+ENG=\pard\cf1\b\fs24 %NAME%:\cf2\b0  What languages do you speak?\par
+ENG=\par
+ENG=\i If %NAME% lists only one language, probe and ask if %NAME% speaks more than one language.\i0\par
+ENG=}
+
+[QUESTION]
+Field=SIMPLECAPI_DICT.LANGUAGES_SPOKEN_OTHER
+Occurrences=1:20
+ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+ENG={\colortbl ;\red0\green0\blue0;}
+ENG={\*\generator Riched20 6.3.9600}\viewkind4\uc1 
+ENG=\pard\cf1\i\fs24 Specify the other language that %NAME% listed. Enter only one language.\i0\par
+ENG=}
+
+[QUESTION]
+Field=SIMPLECAPI_DICT.LITERATE
+Occurrences=1:20
+ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+ENG={\colortbl ;\red0\green0\blue128;\red0\green0\blue0;}
+ENG={\*\generator Riched20 6.3.9600}\viewkind4\uc1
+ENG=\pard\cf1\b\fs24 %NAME%:\cf2\b0  Are you literate, meaning that you can read and write with understanding in at least one language?\par
+ENG=}
+
+[QUESTION]
+Field=SIMPLECAPI_DICT.MAIN_LANGUAGE
+Occurrences=1:20
+ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+ENG={\colortbl ;\red0\green0\blue128;\red0\green0\blue0;}
+ENG={\*\generator Riched20 6.3.9600}\viewkind4\uc1
+ENG=\pard\cf1\b\fs24 %NAME%:\cf2\b0  What is the language that you speak most frequently?\par
+ENG=}
+
+[QUESTION]
+Field=SIMPLECAPI_DICT.NAME
+Occurrences=1:20
+ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+ENG={\colortbl ;\red0\green0\blue0;}
+ENG={\*\generator Riched20 6.3.9600}\viewkind4\uc1 
+ENG=\pard\cf1\i\fs24\lang1033 Enter the name of the next person in the household. Include everyone living or staying in this household.\par
+ENG=\par
+ENG=Do not enter anything and press Next if all persons have been recorded.\par
+ENG=}
+
+[QUESTION]
+Field=SIMPLECAPI_DICT.RELATIONSHIP
+Condition=headKnown = 1
+Occurrences=1:20
+ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+ENG={\colortbl ;\red0\green0\blue128;\red0\green0\blue0;}
+ENG={\*\generator Riched20 6.3.9600}\viewkind4\uc1
+ENG=\pard\cf1\b\fs24\lang1033 %NAME%:\cf2\b0  What is your relationship to %headText%?\par
+ENG=}
+
+[QUESTION]
+Field=SIMPLECAPI_DICT.RELATIONSHIP
+Condition=headKnown = 0
+Occurrences=1:20
+ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+ENG={\colortbl ;\red0\green0\blue128;\red0\green0\blue0;}
+ENG={\*\generator Riched20 6.3.9600}\viewkind4\uc1 
+ENG=\pard\cf1\b\fs24 %NAME%:\cf2\b0  Are you the head of household? If not, what is your relationship to the head?\par
+ENG=}
+
+[QUESTION]
+Field=SIMPLECAPI_DICT.SEX
+Occurrences=1:20
+ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+ENG={\colortbl ;\red0\green0\blue128;\red0\green0\blue0;}
+ENG={\*\generator Riched20 6.3.9600}\viewkind4\uc1 
+ENG=\pard\cf1\b\fs24\lang1033 %NAME%:\cf2\b0  What is your sex?\fs20\par
+ENG=}
+

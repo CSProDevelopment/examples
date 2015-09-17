@@ -1,0 +1,17 @@
+﻿[CSPro Application]
+Version=CSPro 6.1
+Label=CREATE_WEIGHTS
+Name=CREATE_WEIGHTS
+AppType=DataEntry
+OperatorID=No
+ShowEndCaseDialog=No
+[AppCode]
+File=.\Create Weights.ent.apc
+[Message]
+File=.\Create Weights.ent.mgf
+[Help]
+File=.\Create Weights.ent.qsf
+[Forms]
+File=.\Create Weights.fmf
+[Dictionary Types]
+Dict-Type=.\Weight file.dcf,Input,.\Create Weights.fmf

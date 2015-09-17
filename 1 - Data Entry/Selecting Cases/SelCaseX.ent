@@ -1,0 +1,19 @@
+﻿[CSPro Application]
+Version=CSPro 6.1
+Label=SELCASEX
+Name=SELCASEX
+AppType=DataEntry
+OperatorID=No
+[External Dictionaries]
+File=.\Enumerator Information.dcf
+[AppCode]
+File=.\SelCaseX.ent.apc
+[Message]
+File=.\SelCaseX.ent.mgf
+[Help]
+File=.\SelCaseX.ent.qsf
+[Forms]
+File=.\SelCaseX.fmf
+[Dictionary Types]
+Dict-Type=.\Enumerator Information.dcf,External
+Dict-Type=.\SelCaseX.dcf,Input,.\SelCaseX.fmf

@@ -1,0 +1,61 @@
+﻿[Dictionary]
+Version=CSPro 6.1
+Label=Build EA and Geography Files
+Name=BUILDGEO_DICT
+RecordTypeStart=0
+RecordTypeLen=0
+Positions=Relative
+ZeroFill=No
+DecimalChar=Yes
+
+[Level]
+Label=Geography Questionnaire
+Name=BUILDGEO_QUEST
+
+[IdItems]
+
+[Item]
+Label=Province
+Name=BPROV
+Start=1
+Len=2
+ZeroFill=Yes
+
+[Item]
+Label=District
+Name=BDIST
+Start=3
+Len=2
+ZeroFill=Yes
+
+[Item]
+Label=Locality
+Name=BLOC
+Start=5
+Len=3
+ZeroFill=Yes
+
+[Record]
+Label=Build Geography Record
+Name=BUILDGEO_REC
+RecordTypeValue=''
+RecordLen=73
+
+[Item]
+Label=Lower EA number
+Name=BEALOW
+Start=8
+Len=3
+
+[Item]
+Label=Upper EA Number
+Name=BEAHI
+Start=11
+Len=3
+
+[Item]
+Label=Area Name
+Name=BNAME
+Start=14
+Len=60
+DataType=Alpha

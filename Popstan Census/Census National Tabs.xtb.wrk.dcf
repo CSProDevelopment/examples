@@ -1,0 +1,33 @@
+﻿[Dictionary]
+Version=CSPro 6.1
+Label=Census National Tabs_wrk
+Name=CENSUS_NATIONAL_TABS_DICT
+RecordTypeStart=1
+RecordTypeLen=1
+Positions=Relative
+ZeroFill=No
+DecimalChar=Yes
+
+[Level]
+Label=Census National Tabs_wrk questionnaire
+Name=CENSUS_NATIONAL_TABS_WRK_QUF
+
+[IdItems]
+
+[Item]
+Label=Census National Tabs_wrk identification
+Name=CENSUS_NATIONAL_TABS_WRK_ID
+Start=2
+Len=1
+
+[Record]
+Label=System Record
+Name=SYSTEM_REC
+RecordTypeValue='1'
+RecordLen=3
+
+[Item]
+Label=System Total
+Name=SYSTEM_TOTAL
+Start=3
+Len=1

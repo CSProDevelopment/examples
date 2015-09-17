@@ -1,0 +1,15 @@
+﻿[CSPro Application]
+Version=CSPro 6.1
+Label=TABLOGICEXAMPLE
+Name=TABLOGICEXAMPLE
+AppType=Tabulation
+[External Dictionaries]
+File=.\TablogicExample.xtb.wrk.dcf
+[AppCode]
+File=.\TablogicExample.xtb.apc
+[Message]
+File=.\TablogicExample.xtb.mgf
+[TabSpecs]
+File=.\TablogicExample.xts
+[Dictionary Types]
+Dict-Type=.\TablogicExample.xtb.wrk.dcf,Working

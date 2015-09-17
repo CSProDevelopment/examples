@@ -1,0 +1,16 @@
+﻿[CSPro Application]
+Version=CSPro 6.1
+Label=MISSING_EAS
+Name=MISSING_EAS
+AppType=Batch
+[External Dictionaries]
+File=.\GeoFile.dcf
+[AppCode]
+File=.\Missing EAs.bch.apc
+[Message]
+File=.\Missing EAs.bch.mgf
+[Order]
+File=.\Missing EAs.ord
+[Dictionary Types]
+Dict-Type=.\EAStatus.dcf,Input,.\Missing EAs.ord
+Dict-Type=.\GeoFile.dcf,External

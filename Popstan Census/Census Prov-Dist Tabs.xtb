@@ -1,0 +1,17 @@
+﻿[CSPro Application]
+Version=CSPro 6.1
+Label=CENSUS_PROV_DIST_TABS
+Name=CENSUS_PROV_DIST_TABS
+AppType=Tabulation
+[External Dictionaries]
+File=.\Census Prov-Dist Tabs.xtb.wrk.dcf
+[AppCode]
+File=.\Census Prov-Dist Tabs.xtb.apc
+[Message]
+File=.\Census Prov-Dist Tabs.xtb.mgf
+[Help]
+File=.\Census Prov-Dist Tabs.qsf
+[TabSpecs]
+File=.\Census Prov-Dist Tabs.xts
+[Dictionary Types]
+Dict-Type=.\Census Prov-Dist Tabs.xtb.wrk.dcf,Working

@@ -1,0 +1,16 @@
+﻿[CSPro Application]
+Version=CSPro 6.1
+Label=COMPUTER_COUNTS
+Name=COMPUTER_COUNTS
+AppType=Batch
+[External Dictionaries]
+File=.\EAStatus.dcf
+[AppCode]
+File=.\Computer Counts.bch.apc
+[Message]
+File=.\Computer Counts.bch.mgf
+[Order]
+File=.\Computer Counts.ord
+[Dictionary Types]
+Dict-Type=.\EAStatus.dcf,External
+Dict-Type=.\Census Dictionary.dcf,Input,.\Computer Counts.ord

@@ -1,0 +1,15 @@
+﻿[CSPro Application]
+Version=CSPro 6.1
+Label=MANUAL_COUNTS
+Name=MANUAL_COUNTS
+AppType=Tabulation
+[External Dictionaries]
+File=.\Manual Counts District.xtb.wrk.dcf
+[AppCode]
+File=.\Manual Counts District.xtb.apc
+[Message]
+File=.\Manual Counts District.xtb.mgf
+[TabSpecs]
+File=.\Manual Counts District.xts
+[Dictionary Types]
+Dict-Type=.\Manual Counts District.xtb.wrk.dcf,Working

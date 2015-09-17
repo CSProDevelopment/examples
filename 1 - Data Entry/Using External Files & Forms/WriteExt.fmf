@@ -1,0 +1,479 @@
+﻿[FormFile]
+Version=CSPro 6.1
+Name=CENSUS_DE
+Label=Census Data Entry
+DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0001 Arial
+FieldEntryFont=0018 0000 0000 0000 0600 0000 0000 0000 0000 0000 0000 0000 0001 Courier New
+Type=SystemControlled
+  
+[Dictionaries]
+File=.\WriteExt.dcf
+  
+[Form]
+Name=FORM000
+Label=Book
+Level=1
+Size=534,417
+  
+Item=PROVINCE
+Item=DISTRICT
+Item=VILLAGE
+Item=EA
+  
+Box=239,191,449,392,Etched
+  
+[Text]
+Name=TEXT002
+Position=308,202,388,224
+Text=EA Book
+Form=1
+Font=-019 0000 0000 0000 0700 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT000000
+Position=175,122,509,154
+Text=Popstan Housing Census
+Form=1
+Font=-027 0000 0000 0000 0700 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+[EndForm]
+  
+[Form]
+Name=FORM001
+Label=Questionnaire
+Level=1
+Size=704,478
+  
+Item=PROVINCE000
+Item=DISTRICT000
+Item=VILLAGE000
+Item=EA000
+Item=HU
+Item=HOUSING_TYPE
+Item=WALL_TYPE
+Item=ROOF_TYPE
+Item=FLOOR_TYPE
+  
+Box=256,161,454,197,Etched
+Box=152,101,578,147,Etched
+Box=93,221,678,453,Etched
+Box=231,222,233,453,Etched
+Box=381,224,383,452,Etched
+Box=94,279,676,280,Etched
+Box=95,401,679,402,Etched
+Box=535,225,537,449,Etched
+  
+[Text]
+Name=TEXT000
+Position=180,61,514,93
+Text=Popstan Housing Census
+Form=2
+Font=-027 0000 0000 0000 0700 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT003
+Position=269,297,307,309
+Text=1 - Stone
+Form=2
+Font=-009 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT004
+Position=269,312,305,324
+Text=2 - Metal
+Form=2
+Font=-009 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT005
+Position=269,329,307,341
+Text=3 - Wood
+Form=2
+Font=-009 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT006
+Position=411,297,449,309
+Text=1 - Stone
+Form=2
+Font=-009 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT007
+Position=411,312,447,324
+Text=2 - Metal
+Form=2
+Font=-009 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT008
+Position=411,329,449,341
+Text=3 - Wood
+Form=2
+Font=-009 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT009
+Position=269,346,317,358
+Text=4 - Bamboo
+Form=2
+Font=-009 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT010
+Position=269,362,359,374
+Text=5 - Other __________
+Form=2
+Font=-009 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT011
+Position=411,346,496,358
+Text=4 - Other _________
+Form=2
+Font=-009 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT012
+Position=575,297,613,309
+Text=1 - Stone
+Form=2
+Font=-009 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT013
+Position=575,312,603,324
+Text=2 - Tile
+Form=2
+Font=-009 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT014
+Position=575,329,613,341
+Text=3 - Wood
+Form=2
+Font=-009 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT015
+Position=575,346,604,358
+Text=4 - Dirt
+Form=2
+Font=-009 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT016
+Position=575,362,610,374
+Text=5 - Vinyl
+Form=2
+Font=-009 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT017
+Position=575,378,655,390
+Text=6 - Other ________
+Form=2
+Font=-009 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT018
+Position=121,297,190,309
+Text=1 - Single family
+Form=2
+Font=-009 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT019
+Position=121,312,184,324
+Text=2 - Multi-family
+Form=2
+Font=-009 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT020
+Position=121,329,182,341
+Text=3 - Improvised
+Form=2
+Font=-009 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT021
+Position=121,346,161,358
+Text=4 - Mobile
+Form=2
+Font=-009 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT022
+Position=121,362,177,374
+Text=5 - Collective
+Form=2
+Font=-009 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT023
+Position=121,378,177,390
+Text=6 - Homeless
+Form=2
+Font=-009 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT001
+Position=151,259,170,273
+Text=H01
+Form=2
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT024
+Position=296,260,315,274
+Text=H02
+Form=2
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT025
+Position=447,259,466,273
+Text=H03
+Form=2
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT026
+Position=599,259,618,273
+Text=H04
+Form=2
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+[EndForm]
+  
+[Level]
+Name=QUEST
+Label=Questionnaire
+  
+[Group]
+Required=Yes
+Name=BOOK
+Label=Book
+Form=1
+LogicControl=No
+Max=1
+  
+[Field]
+Name=PROVINCE
+Position=408,242,437,262
+Item=PROVINCE,CENSUS
+UseEnterKey=Yes
+Persistent=Yes
+ForceOutofRange=Yes
+Form=1
+  
+[Text]
+Position=263,243,305,257
+Text=Province
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Field]
+Name=DISTRICT
+Position=408,272,437,292
+Item=DISTRICT,CENSUS
+UseEnterKey=Yes
+Persistent=Yes
+ForceOutofRange=Yes
+Form=1
+  
+[Text]
+Position=263,273,296,287
+Text=District
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Field]
+Name=VILLAGE
+Position=393,300,436,320
+Item=VILLAGE,CENSUS
+UseEnterKey=Yes
+Persistent=Yes
+ForceOutofRange=Yes
+Form=1
+  
+[Text]
+Position=263,303,295,317
+Text=Village
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Field]
+Name=EA
+Position=393,330,436,350
+Item=EA,CENSUS
+UseEnterKey=Yes
+Persistent=Yes
+ForceOutofRange=Yes
+Form=1
+  
+[Text]
+Position=263,333,347,347
+Text=Enumeration area
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+[EndGroup]
+  
+[Group]
+Required=Yes
+Name=FQUEST
+Label=Questionnaire
+Form=2
+LogicControl=No
+Max=1
+  
+[Field]
+Name=PROVINCE000
+Position=230,114,259,134
+Item=PROVINCE,CENSUS
+Mirror=Yes
+Form=2
+  
+[Text]
+Position=173,116,215,130
+Text=Province
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Field]
+Name=DISTRICT000
+Position=331,114,360,134
+Item=DISTRICT,CENSUS
+Mirror=Yes
+Form=2
+  
+[Text]
+Position=283,116,316,130
+Text=District
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Field]
+Name=VILLAGE000
+Position=426,114,469,134
+Item=VILLAGE,CENSUS
+Mirror=Yes
+Form=2
+  
+[Text]
+Position=377,115,409,129
+Text=Village
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Field]
+Name=EA000
+Position=508,114,551,134
+Item=EA,CENSUS
+Mirror=Yes
+Form=2
+  
+[Text]
+Position=487,116,501,130
+Text=EA
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Field]
+Name=HU
+Position=375,167,418,187
+Item=HU,CENSUS
+UseEnterKey=Yes
+ForceOutofRange=Yes
+Form=2
+  
+[Text]
+Position=286,169,345,183
+Text=Housing unit
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Field]
+Name=HOUSING_TYPE
+Position=158,422,173,442
+Item=HOUSING_TYPE,CENSUS
+UseEnterKey=Yes
+ForceOutofRange=Yes
+Form=2
+  
+[Text]
+Position=130,236,208,250
+Text=Type of housing
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Field]
+Name=WALL_TYPE
+Position=302,422,317,442
+Item=WALL_TYPE,CENSUS
+UseEnterKey=Yes
+ForceOutofRange=Yes
+Form=2
+  
+[Text]
+Position=287,236,331,250
+Text=Wall type
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Field]
+Name=ROOF_TYPE
+Position=458,422,473,442
+Item=ROOF_TYPE,CENSUS
+UseEnterKey=Yes
+ForceOutofRange=Yes
+Form=2
+  
+[Text]
+Position=438,236,485,250
+Text=Roof type
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Field]
+Name=FLOOR_TYPE
+Position=608,422,623,442
+Item=FLOOR_TYPE,CENSUS
+UseEnterKey=Yes
+ForceOutofRange=Yes
+Form=2
+  
+[Text]
+Position=587,236,635,250
+Text=Floor type
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+[EndGroup]
+  

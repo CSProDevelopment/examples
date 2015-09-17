@@ -1,0 +1,18 @@
+﻿[Run Information]
+Version=CSPro 6.1
+AppType=Batch
+
+[Files]
+Application=.\List EA Status File.bch
+InputData=.\EAStatus.srt
+Listing=.\List EA Status File.lst
+WriteData=.\EA Status File Listing.txt
+
+
+[Parameters]
+ViewListing=OnError
+ViewResults=Yes
+ListingWidth=80
+MessageWrap=No
+ErrmsgOverride=No
+

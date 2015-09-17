@@ -1,0 +1,20 @@
+﻿[Run Information]
+Version=CSPro 6.1
+AppType=Batch
+
+[Files]
+Application=.\Make AreaNames File.bch
+InputData=.\EAStatus.dat
+Listing=.\Make AreaNames File.lst
+WriteData=.\AreaNames.anm
+
+[ExternalFiles]
+GEOFILE_DICT=.\GeoFile.dat
+
+[Parameters]
+ViewListing=OnError
+ViewResults=Yes
+ListingWidth=80
+MessageWrap=No
+ErrmsgOverride=No
+

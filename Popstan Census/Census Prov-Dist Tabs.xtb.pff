@@ -1,0 +1,17 @@
+﻿[Run Information]
+Version=CSPro 6.1
+AppType=Tabulation
+Operation=All
+
+[Files]
+Application=.\Census Prov-Dist Tabs.xtb
+InputData=.\Popstan Census.dat
+OutputTBW=.\Census Prov-Dist Tabs.xtb.tbw
+AreaNames=.\Popstan Census.anm
+Listing=.\Census Prov-Dist Tabs.xtb.lst
+
+
+[Parameters]
+ViewListing=OnError
+ViewResults=No
+

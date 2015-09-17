@@ -1,0 +1,124 @@
+﻿{Popstan Census Data Entry}
+
+{Program to enter automatic coding using the SELCASE command.  The operator enters text for
+occupation or industry in AUXIL_FF and the system displays windows from the occupation (OCC.DAT)
+or industry (IND.DAT) data file with records matching the selection.  Using a highlight
+bar, the operator can select one of the records and the application inserts the related code.
+If there's no match or the code is invalid, the application displays a message. }
+
+PROC GLOBAL
+
+numeric L      {length of key text}
+		S, OK; {flags for selcase and loadcase}
+
+
+PROC CEN2000_DE
+
+
+PROC LINE
+
+	if $ = missing then
+		endgroup;
+	endif;
+
+
+PROC P14_WORKING
+
+	if $ = 2 then
+		skip to next;
+	endif;
+
+
+PROC P15_OCC
+
+	occid = $;
+
+	if P14_WORKING = 1 then
+		if $ = missing then
+			{open secondary form file with blank fields}
+			clear(AUXIL_DICT);
+			enter AUXIL_FF;
+
+		else
+			ok = loadcase(occupation_dict,occid);
+			if ok = 1 then
+			else
+				reenter;
+			endif;
+		endif;
+	endif;
+
+
+PROC P16_IND
+
+	indid = $;
+	
+	if P14_WORKING = 1 then
+		if $ = missing then
+			{open secondary form file with blank fields}
+			clear(AUXIL_DICT);
+			enter AUXIL_FF;
+			
+		else
+			ok = loadcase(industry_dict,indid);
+			if ok = 1 then
+			else
+				reenter;
+			endif;
+		endif;
+	endif;
+
+
+PROC AUXILTXT
+
+preproc
+
+	{indicate type of listing}
+	if AUXILTYPE = 1 then
+		$ = "Occupation";
+	else
+		$ = "Industry";
+	endif;
+
+
+PROC AUXILKEY
+
+	{return length of string without blanks. If length >= 3 and occupation or industry text
+	is found on corresponding data file, the matching selection window is opened. }
+
+	L = length(strip(AUXILKEY));
+
+	if L >= 3 then
+		
+		if AUXILTYPE = 1 then
+			{if length >= 3 and text for occupation (AUXILKEY) matches text in OCC.DAT}
+				S = selcase(OCCUPATION_DICT,"")
+					include(OCCTXT) where pos(strip(AUXILKEY),OCCTXT);
+		endif;
+		
+		if AUXILTYPE = 2 then
+			{if length >= 3 and text for industry (AUXILKEY) matches text in IND.DAT}
+				S = selcase(INDUSTRY_DICT,"")
+					include(INDTXT) where pos(strip(AUXILKEY),INDTXT);
+		endif;
+		
+	endif;
+
+	{if selection is found, then assign code to occupation or industry field.}
+	if S then
+	
+		if AUXILTYPE = 1 then
+			AUXILCODE = OCCID;
+			P15_OCC(curocc(PERSON000)) = OCCID;
+		else
+			AUXILCODE = INDID;
+			P16_IND(curocc(PERSON000)) = INDID;
+		endif;
+	
+	else
+		errmsg("Invalid entry");
+		reenter;
+	
+	endif;
+
+

@@ -1,0 +1,108 @@
+﻿{
+Writing external files
+
+Introduction:
+	CSPro can write files in addition to the output file.
+	These files are referred to as "external".
+	They can have multiple uses such as creating a subset of the data set,
+	writing a list of invalid and/or undefined codes, etc.
+
+Purpose:
+	This example uses the external file to store a list of responses
+	for various household characteristics that have been indicated as "other"
+	on the census questionnaire.   This list can then be reviewed at any time
+	using the CSPro TextViewer tool, or spreadsheet. The list could then be used
+	to determine if any adjustments need to be made to the coding scheme.
+
+Task:
+	If an answer of "other" is specified, enter the write-in response from the form
+	and store the question number and write-in response in a data file.
+
+Files:
+	Application: WriteExt.ent
+	Type: data entry
+
+	Input dictionary: WriteExt.dcf
+	Input forms file: WriteExt.fmf
+	Input data file: User specified file name.  This example uses Test.dat
+
+	External dictionary: Others.dcf
+	External forms file: Others.fmf
+	External data file: User specified file name.  This example uses Others.dat
+
+CSPro commands/keywords:
+   concat, enter, function,  writecase
+
+Program:
+   After data are entered for a specific housing characteristic,
+   the program tests for the code for "other".  If other has been entered,
+   the program calls the user-defined function GETOTHER.
+
+   This functions assigns the geographic ID codes to the identification fields for the
+   external file.  It also concatenates the letter "H" with the question number and
+   assigns the concatenated string to the variable in the external file.
+
+   After returning from the function, the program uses the ENTER statement to display
+   a secondary form to enter the write-in text to the external data file. The
+   form-file-name (OTHERS_FF) is the name of the secondary form file you want to use.
+   The secondary form file must be part of your data entry application.
+
+   When the form is closed (that is,the data entry operation exits the form),
+   the writecase function is use to write the data from the secondary form to
+   the external data file.
+}
+
+PROC GLOBAL
+{---------------------------------------------------------------------------}
+
+
+function GETOTHER(QNUM);
+
+	OPROV = PROVINCE;
+	ODIST = DISTRICT;
+	OVILL = VILLAGE;
+	OEA   = EA;
+	OHU   = HU;
+	QUESTNUM = concat("H",edit("09", QNUM));
+
+end;
+{---------------------------------------------------------------------------}
+
+
+PROC CENSUS_DE
+{---------------------------------------------------------------------------}
+
+
+PROC WALL_TYPE
+
+	if WALL_TYPE = 5 then
+		GETOTHER(2);  {parameter = question number}
+		loadcase(OTHERS_DICT, OPROV, ODIST, OVILL, OEA, OHU, QUESTNUM);
+		enter OTHERS_FF;
+		writecase(OTHERS_DICT, OPROV, ODIST, OVILL, OEA, OHU, QUESTNUM);
+
+	endif;
+{---------------------------------------------------------------------------}
+
+
+PROC ROOF_TYPE
+
+	if ROOF_TYPE = 4 then
+		GETOTHER(3);
+		loadcase(OTHERS_DICT, OPROV, ODIST, OVILL, OEA, OHU, QUESTNUM);
+		enter OTHERS_FF;
+		writecase(OTHERS_DICT, OPROV, ODIST, OVILL, OEA, OHU, QUESTNUM);
+	endif;
+{---------------------------------------------------------------------------}
+
+
+PROC FLOOR_TYPE
+
+	if FLOOR_TYPE = 6 then
+		GETOTHER(4);
+		loadcase(OTHERS_DICT, OPROV, ODIST, OVILL, OEA, OHU, QUESTNUM);
+		enter OTHERS_FF;
+		writecase(OTHERS_DICT, OPROV, ODIST, OVILL, OEA, OHU, QUESTNUM);
+	endif;
+{---------------------------------------------------------------------------}
+

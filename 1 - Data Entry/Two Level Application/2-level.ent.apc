@@ -1,0 +1,51 @@
+﻿{Two-level application counts number of households in a building and ensures household ID is consecutive.}
+PROC GLOBAL
+
+numeric x,y,flag;
+
+
+PROC TWO_LEVEL_FF
+
+
+PROC TWO_LEVEL_QUEST
+
+preproc
+
+	x = 0;
+	y = 0;
+
+postproc
+
+	errmsg("Building %d has %d households",build,x);
+	
+	if number_of_hus <> x then
+		errmsg("Number of HU's in item (%d) <> number of HU records (%d)", number_of_hus,x);
+	else
+		errmsg("Number of HU's in item (%d) = number of HU records (%d)", number_of_hus,x);
+	endif;
+
+
+PROC HOUSEHOLD
+
+preproc
+
+	flag = 0;
+
+postproc
+
+	x = x + 1;
+	errmsg("Household %d has %d persons", house_number, totocc(POP_RECC000));
+
+
+PROC HOUSE_NUMBER
+
+	if flag = 0 then
+		y = y + 1;
+		flag = 1;
+	endif;
+
+	if house_number <> y then
+		errmsg ("House number %d is not consecutive %d",house_number,y);
+		reenter;
+	endif;
+

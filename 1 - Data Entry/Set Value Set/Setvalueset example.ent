@@ -1,0 +1,18 @@
+﻿[CSPro Application]
+Version=CSPro 6.1
+Label=CENSUS_DATA_ENTRY
+Name=CENSUS_DATA_ENTRY
+AppType=DataEntry
+[External Dictionaries]
+File=.\AreaLookup.dcf
+[AppCode]
+File=.\Setvalueset example.ent.apc
+[Message]
+File=.\Setvalueset example.ent.mgf
+[Help]
+File=.\Setvalueset example.ent.qsf
+[Forms]
+File=.\Setvalueset example.fmf
+[Dictionary Types]
+Dict-Type=.\AreaLookup.dcf,External
+Dict-Type=.\Census Dictionary.dcf,Input,.\Setvalueset example.fmf

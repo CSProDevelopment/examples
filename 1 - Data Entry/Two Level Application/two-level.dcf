@@ -1,0 +1,154 @@
+﻿[Dictionary]
+Version=CSPro 6.1
+Label=two-level
+Name=TWO_LEVEL_DICT
+RecordTypeStart=1
+RecordTypeLen=1
+Positions=Relative
+ZeroFill=Yes
+DecimalChar=Yes
+
+[Level]
+Label=two-level questionnaire
+Name=TWO_LEVEL_QUEST
+
+[IdItems]
+
+[Item]
+Label=province
+Name=PROV
+Start=2
+Len=2
+ZeroFill=Yes
+
+[Item]
+Label=district
+Name=DIST
+Start=4
+Len=2
+ZeroFill=Yes
+
+[Item]
+Label=village
+Name=VILLAGE
+Start=6
+Len=2
+ZeroFill=Yes
+
+[Item]
+Label=enumeration area
+Name=EA
+Start=8
+Len=3
+ZeroFill=Yes
+
+[Item]
+Label=building number
+Name=BUILD
+Start=11
+Len=3
+ZeroFill=Yes
+
+[Record]
+Label=Building record
+Name=BUILD_REC
+RecordTypeValue='1'
+RecordLen=21
+
+[Item]
+Label=Type of roof
+Name=ROOF
+Start=17
+Len=1
+ZeroFill=Yes
+
+[Item]
+Label=Type of water source
+Name=WATER
+Start=18
+Len=1
+ZeroFill=Yes
+
+[Item]
+Label=Number of HUs
+Name=NUMBER_OF_HUS
+Start=19
+Len=3
+ZeroFill=Yes
+
+[Level]
+Label=Household
+Name=HOUSEHOLD
+
+[IdItems]
+
+[Item]
+Label=House number
+Name=HOUSE_NUMBER
+Start=14
+Len=3
+ZeroFill=Yes
+
+[Record]
+Label=Housing record
+Name=HOUSE_REC
+RecordTypeValue='2'
+Required=No
+RecordLen=19
+
+[Item]
+Label=Telephone
+Name=TELEPHONE
+Start=17
+Len=1
+ZeroFill=Yes
+
+[Item]
+Label=Type of heat
+Name=HEAT
+Start=18
+Len=1
+ZeroFill=Yes
+
+[Item]
+Label=Personal computer
+Name=PC
+Start=19
+Len=1
+ZeroFill=Yes
+
+[Record]
+Label=Person record
+Name=POP_RECC
+RecordTypeValue='3'
+Required=No
+MaxRecords=35
+RecordLen=23
+
+[Item]
+Label=Line number
+Name=LINE
+Start=17
+Len=2
+ZeroFill=Yes
+
+[Item]
+Label=Sex
+Name=SEX
+Start=19
+Len=1
+ZeroFill=Yes
+
+[Item]
+Label=Age
+Name=AGE
+Start=20
+Len=3
+ZeroFill=Yes
+
+[Item]
+Label=Marital status
+Name=M_STATUS
+Start=23
+Len=1
+ZeroFill=Yes

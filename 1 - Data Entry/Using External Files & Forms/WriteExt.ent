@@ -1,0 +1,18 @@
+﻿[CSPro Application]
+Version=CSPro 6.1
+Label=Write External File
+Name=WRT_EXT
+AppType=DataEntry
+OperatorID=No
+[AppCode]
+File=.\WriteExt.ent.apc
+[Message]
+File=.\WriteExt.ent.mgf
+[Help]
+File=.\WriteExt.ent.qsf
+[Forms]
+File=.\WriteExt.fmf
+File=.\Others.fmf
+[Dictionary Types]
+Dict-Type=.\WriteExt.dcf,Input,.\WriteExt.fmf
+Dict-Type=.\Others.dcf,External,.\Others.fmf

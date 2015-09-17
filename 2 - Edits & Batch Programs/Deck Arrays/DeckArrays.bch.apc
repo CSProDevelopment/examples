@@ -1,0 +1,156 @@
+﻿PROC GLOBAL
+
+// DeckArrays Example
+
+// This program is an example of an edit program using DeckArrays. It is an overly simplified example of an edit program.
+// Refer to the CSPro helps for a detailed explantion of DeckArrays. Refer to the PutDeck or GetDeck functions.
+
+
+
+numeric imputeVal,cntPeople;
+
+numeric prevHeadSex = 1;
+
+array SexHD_Relationship_HeadSex(RELATIONSHIP_VS1,SEX_VS1) save; // two hotdecks for sex; they will
+array SexHD_HeadSex_Relationship(SEX_VS1,RELATIONSHIP_VS1) save; // be used to store the same values
+
+array AgeHD_Relationship_Education(RELATIONSHIP_VS1,EDUCATION_VS1(+)) save;  // see below for and explanation of the use of the "+"
+
+array EducationHD_Age(AGE_FOR_EDUCATION_VS) save;
+
+array MinimumEducationAges(EDUCATION_VS1) = 0	// None
+											2	// Preschool
+											5	// Elementary School
+											11	// Middle School
+											13	// High School
+											17	// College/University
+											21;	// Graduate School
+
+
+PROC DECKARRAYS_FF
+
+
+PROC RELATIONSHIP
+
+	inc(cntPeople);
+
+	if curocc() = 1 and RELATIONSHIP <> 1 then
+		errmsg("First person on form is not a head but instead is %d. Setting to head.",RELATIONSHIP) denom = cntPeople;
+		impute(RELATIONSHIP,1);
+
+	elseif curocc() <> 1 and RELATIONSHIP = 1 then
+		errmsg("Head can only be the first person on a form. Person #%d listed as head, changed to other relative.",curocc()) denom = cntPeople;
+		impute(RELATIONSHIP,4);
+
+	elseif RELATIONSHIP = 2 and seek(RELATIONSHIP = 2) < curocc() then
+		errmsg("More than one spouse listed in the household. Person #%d listed as a spouse, changed to other relative.",curocc()) denom = cntPeople;
+		impute(RELATIONSHIP,4);
+
+	elseif not invalueset(RELATIONSHIP) then
+		errmsg("Relationship invalid, was %d, changed to non-relative.",RELATIONSHIP) denom = cntPeople;
+		impute(RELATIONSHIP,5);
+
+	endif;
+
+
+PROC SEX
+
+	if RELATIONSHIP = 1 then
+
+		if SEX in 1:2 then // the sex of the head is valid so we store the value in prevHeadSex
+			prevHeadSex = SEX;
+
+		else
+			errmsg("Head of household's sex is invalid (%d). Imputed from sex of previous head of household to %d.",SEX,prevHeadSex) denom = cntPeople;
+			impute(SEX,prevHeadSex);
+
+		endif;
+
+
+	elseif RELATIONSHIP = 2 and ( 3 - SEX ) <> SEX(1) then  // check that the sex of the spouse is opposite to that of the head
+		imputeVal = 3 - SEX(1);
+		errmsg("Spouse's sex not the opposite sex from the head's sex. Imputing to opposite of head's sex, %d -> %d.",SEX,imputeVal) denom = cntPeople;
+		impute(SEX,imputeVal);
+
+	elseif not SEX in 1:2 then // all other bad cases
+
+		// here we will access the value in the hotdeck using the current person's relationship and the sex of the
+		// head of household; this shows how to specify a cell in the hotdeck using a value that does not refer
+		// to the current person; in this case we are referring to the sex of the head, not the current person
+
+		imputeVal = getdeck(SexHD_Relationship_HeadSex,RELATIONSHIP,SEX(1));  // SEX(1) refers to the sex of the the first person in the household, i.e. the head
+
+		// imputeVal will be the same in the above and below statements; in the below expression it is not
+		// necessary to specify the relationship because the getdeck function will automatically take the
+		// relationship of the current person
+		imputeVal = getdeck(SexHD_HeadSex_Relationship,SEX(1));
+
+		imputeVal = getdeck(SexHD_HeadSex_Relationship,SEX(1),RELATIONSHIP); // this is the same as the above statement, explicitly specifying the relationship
+
+		errmsg("Sex invalid for relationship %d. Imputed using hotdeck from %d -> %d.",RELATIONSHIP,SEX,imputeVal) denom = cntPeople;
+		impute(SEX,imputeVal);
+
+	else // good cases, so update the hotdeck
+
+		// all four of the following statements result in the same update to the two example hotdecks
+		putdeck(SexHD_Relationship_HeadSex,SEX,RELATIONSHIP,SEX(1));
+		putdeck(SexHD_Relationship_HeadSex,SEX,,SEX(1));
+
+		putdeck(SexHD_HeadSex_Relationship,SEX,SEX(1));
+		putdeck(SexHD_HeadSex_Relationship,SEX,SEX(1),RELATIONSHIP);
+
+	endif;
+
+
+PROC AGE
+
+	// this edit will show an example of using an unedited variable as a parameter in the hotdeck,
+	// which is why the AgeHD_Education hotdeck was declared with (+) after the EDUCATION_VS1 parameter
+
+	// if the education value is blank or invalid, then the hotdeck will drop that parameter and the
+	// hotdeck will be based on only relationship
+
+	// in this edit we will not check if the education code is valid, so we may at times update the hotdeck
+	// with a valid age that is actually invalid for the specified education level; in these cases, the
+	// education value will be modified in the education edit
+
+	if ( RELATIONSHIP in 1:2 and AGE >= 18 ) or ( RELATIONSHIP = 3 and AGE + 15 <= AGE(1) ) or ( RELATIONSHIP in 4:5 and AGE in 0:99 ) then
+		putdeck(AgeHD_Relationship_Education(+),AGE);
+
+	else
+		if RELATIONSHIP in 1:2 and AGE < 18 then
+			errmsg("A head or spouse must be at least 18-year-old.") denom = cntPeople;
+		endif;
+
+		if RELATIONSHIP = 3 and AGE + 15 > AGE(1) then
+			errmsg("A child must be 15 or more years younger than the head.") denom = cntPeople;
+		endif;
+
+		imputeVal = getdeck(AgeHD_Relationship_Education);
+
+		if RELATIONSHIP = 3 and imputeVal + 15 > AGE(1) then
+			errmsg("Imputed value for a child's age was not appropriate given head's age so manually set.") denom = cntPeople;
+			imputeVal = AGE(1) - 15;
+		endif;
+
+		errmsg("Age imputed using hotdeck on relationship and education level (when available) from %d to %d.",AGE,imputeVal) denom = cntPeople;
+		impute(AGE,imputeVal);
+
+	endif;
+
+
+PROC EDUCATION
+
+	// the MinimumEducationAges array will not be used as a hotdeck even though the size is declared as if it were a DeckArray
+	// we can use the getdeck function with the array name to access the minimum age for the person's education level
+
+	if AGE >= getdeck(MinimumEducationAges) then
+		putdeck(EducationHD_Age,EDUCATION); // the good case
+
+	else
+		imputeVal = getdeck(EducationHD_Age);
+		errmsg("Education level was either blank or too high a value for age %d. Imputed using a hotdeck from %d to %d.",AGE,EDUCATION,imputeVal) denom = cntPeople;
+		impute(EDUCATION,imputeVal);
+
+	endif;
+

@@ -1,0 +1,66 @@
+﻿[Dictionary]
+Version=CSPro 6.1
+Label=Weight file
+Name=WEIGHT_FILE_DICT
+RecordTypeStart=0
+RecordTypeLen=0
+Positions=Relative
+ZeroFill=No
+DecimalChar=Yes
+
+[Level]
+Label=Weight file questionnaire
+Name=WEIGHT_FILE_QUEST
+
+[IdItems]
+
+[Item]
+Label=Province
+Name=PROV
+Start=1
+Len=2
+ZeroFill=Yes
+
+[ValueSet]
+Label=Province
+Name=PROV_VS1
+Value=1;Artesia
+Value=2;Copal
+Value=3;Dari
+Value=4;Eris
+Value=5;Girda
+Value=6;Hali
+Value=7;Kerac
+Value=8;Lacuna
+Value=9;Laya
+Value=10;Lira
+Value=11;Matanga
+Value=12;Patan
+Value=13;Rift
+Value=14;Terra
+Value=15;Tumar
+
+[Item]
+Label=District
+Name=DISTRICT
+Start=3
+Len=2
+ZeroFill=Yes
+
+[ValueSet]
+Label=District
+Name=DISTRICT_VS1
+Value=1:18
+
+[Record]
+Label=Weight file record
+Name=WEIGHT_FILE_REC
+RecordTypeValue=''
+RecordLen=10
+
+[Item]
+Label=Area weight
+Name=WGT
+Start=5
+Len=6
+Decimal=4

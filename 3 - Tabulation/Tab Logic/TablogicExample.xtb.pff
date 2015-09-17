@@ -1,0 +1,16 @@
+﻿[Run Information]
+Version=CSPro 6.1
+AppType=Tabulation
+Operation=All
+
+[Files]
+Application=.\TablogicExample.xtb
+InputData=..\..\Popstan Census\Popstan Census.dat
+OutputTBW=.\TablogicExample.xtb.tbw
+Listing=.\TablogicExample.xtb.lst
+
+
+[Parameters]
+ViewListing=OnError
+ViewResults=No
+

@@ -1,0 +1,190 @@
+﻿PROC GLOBAL
+
+numeric	CaseFound
+		StringLength
+		nRegion;
+
+file FileEnumInfo;
+
+{-------------------------------------------------------------------------------------}
+
+
+function WRITE_INFO()
+
+	filewrite(FileEnumInfo, "%s,%s,%d,%d,%d,/,%d,-,%d",strip(FIRST_NAME), strip(LAST_NAME),
+	ENUMERATOR_ID, ENUMERATOR_REGION, PHONE_NUMBER_AREA_CODE,
+	PHONE_NUMBER_CITY_CODE, PHONE_NUMBER_LAST_4_DIGITS);
+
+end;
+
+{-------------------------------------------------------------------------------------}
+
+
+function OPTION1()
+
+	{search on enumerator's code: 1, 2, or 3 digits}
+
+	CaseFound = selcase (ENUMERATOR_INFORMATION_DICT, strip(Data_Search [1:3]))
+				include(LAST_NAME, FIRST_NAME, ENUMERATOR_REGION);
+
+	if NOT CaseFound then
+		errmsg(910, Data_Search [1:3]);
+	endif;
+
+end;
+
+{-------------------------------------------------------------------------------------}
+
+
+function OPTION2()
+
+	{search on enumerator's exact last name}
+
+	CaseFound = selcase (ENUMERATOR_INFORMATION_DICT, "") // blank string indicates all keys should be selected
+				where LAST_NAME = Data_Search
+				include(LAST_NAME, FIRST_NAME, ENUMERATOR_REGION);
+
+	if NOT CaseFound then
+		errmsg(920, strip(Data_Search));
+	endif;
+
+end;
+
+{-------------------------------------------------------------------------------------}
+
+
+function OPTION3()
+
+	CaseFound = selcase (ENUMERATOR_INFORMATION_DICT, "")
+				where FIRST_NAME = Data_Search
+				include(LAST_NAME, FIRST_NAME, ENUMERATOR_REGION);
+
+	if NOT CaseFound then
+		errmsg(930, strip(Data_Search));
+	endif;
+
+end;
+
+{-------------------------------------------------------------------------------------}
+
+
+function OPTION4()
+
+	{search on enumerator's last name string}
+
+	StringLength = length(strip(Data_Search));
+	CaseFound = selcase(ENUMERATOR_INFORMATION_DICT, "")
+				where LAST_NAME[1:StringLength] = strip(Data_Search[1:StringLength])
+				include(LAST_NAME, FIRST_NAME, ENUMERATOR_REGION);
+
+	if NOT CaseFound then
+		errmsg(940, strip(Data_Search));
+	endif;
+
+end;
+
+{-------------------------------------------------------------------------------------}
+
+
+function OPTION5()
+
+	{search on first letter of enumerator's last or first name}
+
+	CaseFound = selcase (ENUMERATOR_INFORMATION_DICT, "")
+				where pos(strip(Data_Search),LAST_NAME) =1 or pos(strip(Data_Search),FIRST_NAME) = 1
+				include(LAST_NAME, FIRST_NAME, ENUMERATOR_REGION);
+
+	if NOT CaseFound then
+		errmsg(950, strip(Data_Search));
+	endif;
+
+end;
+
+{-------------------------------------------------------------------------------------}
+
+
+function OPTION6()
+
+	nRegion = tonumber(DATA_SEARCH);
+
+	if nRegion = Default or length(strip(DATA_SEARCH)) = 2 then
+	else
+		errmsg("Selection data must be 2 digit numeric for this option, %s is not a valid numeric", strip(DATA_SEARCH));
+		reenter OPTION;
+
+	endif;
+
+	CaseFound = selcase (ENUMERATOR_INFORMATION_DICT, "")
+				include(LAST_NAME, FIRST_NAME, ENUMERATOR_REGION, HOURLY_WAGE)
+				where  ENUMERATOR_REGION = nRegion and (HOURLY_WAGE in 35.00 : 40.00);
+
+	if NOT CaseFound then
+		errmsg(960, strip(DATA_SEARCH));
+	endif;
+
+end;
+
+{-------------------------------------------------------------------------------------}
+
+
+function OPTION7()
+
+	CaseFound = selcase (ENUMERATOR_INFORMATION_DICT, "")
+				where pos(strip(Data_Search),LAST_NAME) = 1 or pos(strip(Data_Search),FIRST_NAME) = 1
+				include(LAST_NAME, FIRST_NAME, ENUMERATOR_REGION)
+				multiple;
+
+	if not CaseFound then
+		errmsg("No enumerator has been selected.");
+		exit;     {- - - - - - - - - - - - - - - - - - - - - - - > }
+	endif;
+
+	{nMembers (dictionary-name) returns the number of selections made from the selection window}
+
+	errmsg("You have selected %d enumerators from the selection window. The following listing will display their information.",nMembers(ENUMERATOR_INFORMATION_DICT));
+
+	setfile(FileEnumInfo,"info.wrt");
+
+	for ENUMERATOR_INFORMATION_DICT do
+		WRITE_INFO();
+	enddo;
+
+	close(FileEnumInfo);
+
+	Execsystem('textview "info.wrt"',maximized,wait);
+
+end;
+
+{-------------------------------------------------------------------------------------}
+
+
+PROC SELCASEX_FF
+
+
+PROC OPTION
+
+	if $ = 9 then
+		stop(1);
+	endif;
+
+
+PROC DATA_SEARCH
+
+
+	if     Option = 1 then OPTION1()
+	elseif Option = 2 then OPTION2()
+	elseif Option = 3 then OPTION3()
+	elseif Option = 4 then OPTION4()
+	elseif Option = 5 then OPTION5()
+	elseif Option = 6 then OPTION6()
+	elseif Option = 7 then OPTION7()
+	endif;
+
+	if CaseFound then
+		reenter OPTION; // keep testing different options
+		
+	else
+		reenter;
+		
+	endif;
+

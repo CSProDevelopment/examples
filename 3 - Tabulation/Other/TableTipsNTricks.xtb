@@ -1,0 +1,15 @@
+﻿[CSPro Application]
+Version=CSPro 6.1
+Label=TABLETIPSNTRICKS
+Name=TABLETIPSNTRICKS
+AppType=Tabulation
+[External Dictionaries]
+File=.\TableTipsNTricks.xtb.wrk.dcf
+[AppCode]
+File=.\TableTipsNTricks.xtb.apc
+[Message]
+File=.\TableTipsNTricks.xtb.mgf
+[TabSpecs]
+File=.\TableTipsNTricks.xts
+[Dictionary Types]
+Dict-Type=.\TableTipsNTricks.xtb.wrk.dcf,Working

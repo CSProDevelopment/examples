@@ -1,0 +1,14 @@
+﻿[Run Information]
+Version=CSPro 6.1
+AppType=Entry
+
+[DataEntryInit]
+Interactive=Ask
+
+[Files]
+Application=.\Census Data Entry.ent
+InputData=.\Popstan Census.dat
+
+
+[Parameters]
+

@@ -1,0 +1,20 @@
+﻿[Run Information]
+Version=CSPro 6.1
+AppType=Entry
+
+[DataEntryInit]
+Interactive=Ask
+
+[Files]
+Application=.\CheckCode.ent
+InputData=.\test.dat
+
+[ExternalFiles]
+OCCUPATION_DICT=.\Occ.dat
+ACTIVITY_DICT=.\industry.dat
+INDUSTRY_DICT=.\Ind.dat
+AUXIL_DICT=.\auxil.dat
+IND_DICT=.\Industry.dcf
+
+[Parameters]
+

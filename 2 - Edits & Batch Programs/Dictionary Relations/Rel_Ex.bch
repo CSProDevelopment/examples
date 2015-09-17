@@ -1,0 +1,13 @@
+﻿[CSPro Application]
+Version=CSPro 6.1
+Label=REL_EX
+Name=REL_EX
+AppType=Batch
+[AppCode]
+File=.\Rel_Ex.bch.apc
+[Message]
+File=.\Rel_Ex.bch.mgf
+[Order]
+File=.\Rel_Ex.ord
+[Dictionary Types]
+Dict-Type=.\Rel_Ex.dcf,Input,.\Rel_Ex.ord

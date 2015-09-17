@@ -1,0 +1,108 @@
+﻿[Dictionary]
+Version=CSPro 6.1
+Label=Enumerator Information
+Name=ENUMERATOR_INFORMATION_DICT
+RecordTypeStart=1
+RecordTypeLen=1
+Positions=Relative
+ZeroFill=Yes
+DecimalChar=Yes
+
+[Level]
+Label=Enumerator Information questionnaire
+Name=ENUMERATOR_INFORMATION_QUEST
+
+[IdItems]
+
+[Item]
+Label=Enumerator ID
+Name=ENUMERATOR_ID
+Start=2
+Len=3
+ZeroFill=Yes
+
+[Record]
+Label=Enumerator Information record
+Name=ENUMERATOR_INFORMATION_REC
+RecordTypeValue='1'
+RecordLen=45
+
+[Item]
+Label=Last Name
+Name=LAST_NAME
+Start=5
+Len=12
+DataType=Alpha
+
+[Item]
+Label=First Name
+Name=FIRST_NAME
+Start=17
+Len=12
+DataType=Alpha
+
+[Item]
+Label=Enumerator Region
+Name=ENUMERATOR_REGION
+Start=29
+Len=2
+
+[Item]
+Label=Phone Number
+Name=PHONE_NUMBER
+Start=31
+Len=10
+DataType=Alpha
+
+[Item]
+Label=Phone Number Area Code
+Name=PHONE_NUMBER_AREA_CODE
+Start=31
+Len=3
+ItemType=SubItem
+ZeroFill=Yes
+
+[ValueSet]
+Label=Phone Number Area Code
+Name=PHONE_NUMBER_AREA_CODE_VS1
+Value=1:999
+
+[Item]
+Label=Phone Number City Code
+Name=PHONE_NUMBER_CITY_CODE
+Start=34
+Len=3
+ItemType=SubItem
+ZeroFill=Yes
+
+[ValueSet]
+Label=Phone Number City Code
+Name=PHONE_NUMBER_CITY_CODE_VS1
+Value=1:999
+
+[Item]
+Label=Phone Number Last 4 Digits
+Name=PHONE_NUMBER_LAST_4_DIGITS
+Start=37
+Len=4
+ItemType=SubItem
+ZeroFill=Yes
+
+[ValueSet]
+Label=Phone Number Last 4 Digits
+Name=PHONE_NUMBER_LAST_4_DIGITS_VS1
+Value=1:9999
+
+[Item]
+Label=Hourly Wage
+Name=HOURLY_WAGE
+Start=41
+Len=5
+Decimal=2
+DecimalChar=Yes
+ZeroFill=Yes
+
+[ValueSet]
+Label=Hourly Wage
+Name=HOURLY_WAGE_VS1
+Value=1.00:99.00

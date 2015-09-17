@@ -1,0 +1,15 @@
+﻿[CSPro Application]
+Version=CSPro 6.1
+Label=POSTCALCEXAMPLE
+Name=POSTCALCEXAMPLE
+AppType=Tabulation
+[External Dictionaries]
+File=.\PostcalcExample.xtb.wrk.dcf
+[AppCode]
+File=.\PostcalcExample.xtb.apc
+[Message]
+File=.\PostcalcExample.xtb.mgf
+[TabSpecs]
+File=.\PostcalcExample.xts
+[Dictionary Types]
+Dict-Type=.\PostcalcExample.xtb.wrk.dcf,Working

@@ -1,0 +1,299 @@
+﻿[Dictionary]
+Version=CSPro 6.1
+Label=Census Tracking
+Name=CENSUS_TRACKING_DICT
+RecordTypeStart=1
+RecordTypeLen=2
+Positions=Relative
+ZeroFill=Yes
+DecimalChar=Yes
+
+[Level]
+Label=Census Tracking questionnaire
+Name=CENSUS_TRACKING_QUEST
+
+[IdItems]
+
+[Item]
+Label=Main Choice
+Name=CHOICE
+Start=3
+Len=1
+DataType=Alpha
+
+[Record]
+Label=Posting Record
+Name=P0REC
+RecordTypeValue='10'
+Required=No
+RecordLen=20
+
+[Item]
+Label=Posting Choice
+Name=PCHOICE
+Start=4
+Len=1
+DataType=Alpha
+
+[Item]
+Label=Posting Date
+Name=PDATE
+Start=5
+Len=8
+DataType=Alpha
+
+[Item]
+Label=Posting Year
+Name=PYEAR
+Start=5
+Len=4
+ItemType=SubItem
+ZeroFill=Yes
+
+[ValueSet]
+Label=Posting Year
+Name=PYEAR_VS1
+Value=2006:2015
+
+[Item]
+Label=Posting Month
+Name=PMONTH
+Start=9
+Len=2
+ItemType=SubItem
+ZeroFill=Yes
+
+[ValueSet]
+Label=Posting Month
+Name=PMONTH_VS1
+Value=1:12
+
+[Item]
+Label=Posting Day
+Name=PDAY
+Start=11
+Len=2
+ItemType=SubItem
+ZeroFill=Yes
+
+[ValueSet]
+Label=Posting Day
+Name=PDAY_VS1
+Value=1:31
+
+[Item]
+Label=Today's Date
+Name=TODAY
+Start=13
+Len=8
+DataType=Alpha
+
+[Record]
+Label=Check-In Record
+Name=P1REC
+RecordTypeValue='11'
+Required=No
+RecordLen=29
+
+[Item]
+Label=Check-in Province
+Name=P1PROV
+Start=4
+Len=2
+ZeroFill=Yes
+
+[Item]
+Label=Check-in District
+Name=P1DIST
+Start=6
+Len=2
+ZeroFill=Yes
+
+[Item]
+Label=Check-in Locality
+Name=P1LOC
+Start=8
+Len=3
+ZeroFill=Yes
+
+[Item]
+Label=Check-in EA
+Name=P1EA
+Start=11
+Len=3
+ZeroFill=Yes
+
+[Item]
+Label=Number of Households
+Name=P1HH
+Start=14
+Len=4
+ZeroFill=Yes
+
+[Item]
+Label=Number of Persons
+Name=P1PP
+Start=18
+Len=4
+ZeroFill=Yes
+
+[Item]
+Label=Number of Males
+Name=P1MALE
+Start=22
+Len=4
+ZeroFill=Yes
+
+[Item]
+Label=Number of Females
+Name=P1FEM
+Start=26
+Len=4
+ZeroFill=Yes
+
+[Record]
+Label=Coding Record
+Name=P2REC
+RecordTypeValue='12'
+Required=No
+RecordLen=13
+
+[Item]
+Label=Coding Province
+Name=P2PROV
+Start=4
+Len=2
+ZeroFill=Yes
+
+[Item]
+Label=Coding District
+Name=P2DIST
+Start=6
+Len=2
+ZeroFill=Yes
+
+[Item]
+Label=Coding Locality
+Name=P2LOC
+Start=8
+Len=3
+ZeroFill=Yes
+
+[Item]
+Label=Coding EA
+Name=P2EA
+Start=11
+Len=3
+ZeroFill=Yes
+
+[Record]
+Label=Data Entry Record
+Name=P3REC
+RecordTypeValue='13'
+Required=No
+RecordLen=13
+
+[Item]
+Label=Data Entry Province
+Name=P3PROV
+Start=4
+Len=2
+ZeroFill=Yes
+
+[Item]
+Label=Data Entry District
+Name=P3DIST
+Start=6
+Len=2
+ZeroFill=Yes
+
+[Item]
+Label=Data Entry Locality
+Name=P3LOC
+Start=8
+Len=3
+ZeroFill=Yes
+
+[Item]
+Label=Receipt EA
+Name=P3EA
+Start=11
+Len=3
+ZeroFill=Yes
+
+[Record]
+Label=Reports Record
+Name=R0REC
+RecordTypeValue='30'
+Required=No
+RecordLen=15
+
+[Item]
+Label=Report Choice
+Name=RCHOICE
+Start=4
+Len=1
+DataType=Alpha
+
+[Item]
+Label=Manual Counts Choice
+Name=MCCHOICE
+Start=5
+Len=1
+DataType=Alpha
+
+[Item]
+Label=Phase Completion Choice
+Name=FCCHOICE
+Start=6
+Len=1
+DataType=Alpha
+
+[Item]
+Label=Productivity Choice
+Name=PCCHOICE
+Start=7
+Len=1
+DataType=Alpha
+
+[Item]
+Label=Missing EAs Phase
+Name=MPHASE
+Start=8
+Len=1
+DataType=Alpha
+
+[Item]
+Label=Missing EAs Province
+Name=MPROV
+Start=9
+Len=2
+ZeroFill=Yes
+
+[Item]
+Label=Missing EAs District
+Name=MDIST
+Start=11
+Len=2
+ZeroFill=Yes
+
+[Item]
+Label=Missing EAs Locality
+Name=MLOC
+Start=13
+Len=3
+ZeroFill=Yes
+
+[Record]
+Label=Utilities Record
+Name=UTILITIES_RECORD
+RecordTypeValue='50'
+Required=No
+RecordLen=4
+
+[Item]
+Label=Utilities Choice
+Name=UCHOICE
+Start=4
+Len=1
+DataType=Alpha

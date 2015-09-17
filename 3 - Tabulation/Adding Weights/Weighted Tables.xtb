@@ -1,0 +1,15 @@
+﻿[CSPro Application]
+Version=CSPro 6.1
+Label=WEIGHTED_TABLES
+Name=WEIGHTED_TABLES
+AppType=Tabulation
+[External Dictionaries]
+File=.\Weighted Tables.xtb.wrk.dcf
+[AppCode]
+File=.\Weighted Tables.xtb.apc
+[Message]
+File=.\Weighted Tables.xtb.mgf
+[TabSpecs]
+File=.\Weighted Tables.xts
+[Dictionary Types]
+Dict-Type=.\Weighted Tables.xtb.wrk.dcf,Working

@@ -1,0 +1,15 @@
+﻿[CSPro Application]
+Version=CSPro 6.1
+Label=PRODUCTIVITY
+Name=PRODUCTIVITY
+AppType=Tabulation
+[External Dictionaries]
+File=.\Productivity Daily.xtb.wrk.dcf
+[AppCode]
+File=.\Productivity Daily.xtb.apc
+[Message]
+File=.\Productivity Daily.xtb.mgf
+[TabSpecs]
+File=.\Productivity Daily.xts
+[Dictionary Types]
+Dict-Type=.\Productivity Daily.xtb.wrk.dcf,Working

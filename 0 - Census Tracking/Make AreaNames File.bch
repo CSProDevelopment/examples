@@ -1,0 +1,16 @@
+﻿[CSPro Application]
+Version=CSPro 6.1
+Label=MAKEAN
+Name=MAKEAN
+AppType=Batch
+[External Dictionaries]
+File=.\GeoFile.dcf
+[AppCode]
+File=.\Make AreaNames File.bch.apc
+[Message]
+File=.\Make AreaNames File.bch.mgf
+[Order]
+File=.\Make AreaNames File.ord
+[Dictionary Types]
+Dict-Type=.\GeoFile.dcf,External
+Dict-Type=.\EAStatus.dcf,Input,.\Make AreaNames File.ord

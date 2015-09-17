@@ -1,0 +1,23 @@
+﻿[CSPro Application]
+Version=CSPro 6.1
+Label=Check Code Example
+Name=CENSUS_DATA_ENTRY
+AppType=DataEntry
+OperatorID=No
+[External Dictionaries]
+File=.\Occupation.dcf
+File=.\industry.dcf
+[AppCode]
+File=.\CheckCode.ent.apc
+[Message]
+File=.\CheckCode.ent.mgf
+[Help]
+File=.\CheckCode.ent.qsf
+[Forms]
+File=.\CheckCode.fmf
+File=.\auxil.fmf
+[Dictionary Types]
+Dict-Type=.\Occupation.dcf,External
+Dict-Type=.\industry.dcf,External
+Dict-Type=.\CheckCode.dcf,Input,.\CheckCode.fmf
+Dict-Type=.\auxil.dcf,External,.\auxil.fmf

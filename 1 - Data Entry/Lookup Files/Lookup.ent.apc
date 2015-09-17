@@ -1,0 +1,109 @@
+﻿{Using a Lookup File
+
+Introduction:
+	A lookup file (external file) is a text file that you can use in a Data Entry or
+	Batch application from which you retrieve data to display on a form or to use in a
+	calculation.
+
+	Possibilities include:
+
+	·	Geographic codes and names.  Your application could show the name corresponding to the
+		code the user keyed.
+	·	Industry and occupation codes.  Your application could make sure the user keys a
+		valid code. It could also display the names associated with the code.
+	·	Last year's data. Your application could look up a corresponding field from last
+		year's data and calculate a percentage change.
+	·	Generalized menu choices.  Your application could read a lookup file and show the
+		contents on the screen as a menu, then convert the user's choice to a code.
+
+Purpose:
+	This example uses a lookup file to check for valid province and district codes during
+	data entry. If they are, the operator may continue keying the rest of the variables;
+	otherwise the program displays error message and does not allow the operation to continue.
+
+Task:
+	User must first develop the ASCII lookup file listing the Province/District codes and
+	names and its corresponding dictionary.  A District code of "00" indicates this is the
+	code for a Province.
+
+Files:
+	Application: Lookup.ent
+	Type: data entry
+	Input dictionary: Popstan.dcf
+	Input data file: Popstan.dat (or enter your own)
+	External dictionary: Lookup.dcf
+	External file: Lookup.dat
+
+CSPro commands/keywords:
+	 loadcase, errmsg
+
+Program Description:
+	This program looks up the codes for Province and District entered in POPSTAN.DAT in an
+	external file named "LOOKUP.DAT".  If there is a record in this file with those codes, the
+	name of the province is shown.  If there is no such record, a message is given.
+
+	   The first step for the program is to move the data values for the code to the
+	   corresponding key values specified by the lookup files data dictionary (LF_DICT).
+
+			LF_PROVINCE = PROVINCE;
+			LF_DISTRICT = DISTRICT;
+
+	Once the key values are placed in the lookup file key items, the loadcase function is executed.
+
+		   flgFOUND = loadcase(LF_DICT, LF_PROVINCE, LF_DISTRICT);
+
+	The first parameter specifies the data dictionary for the file being checked. The key-values
+	identify the case to load from the external file. The loadcase function reads a case from
+	the external data file into memory. Once the case is loaded, the key-values are available
+	for use.
+
+	If the case is loaded successfully, then the variable flgFOUND will have the value 1 (true);
+	otherwise it will have the value 0 (false).
+
+Note: Valid Province and District codes in this example are:
+		01 01 to 01 13
+		02 01 to 02 18
+		03 01 to 03 15
+		04 01 to 04 09
+		05 01 to 05 12
+		06 01 to 06 08
+		07 01 to 07 13
+		08 01 to 08 10
+		09 01 to 09 11
+		10 01 to 10 16
+		11 01 to 11 12
+		12 01 to 12 18
+		13 01 to 13 11
+		14 01 to 14 15
+		15 01 to 15 15
+}
+
+{----------------------------------------------------------------------------}
+PROC GLOBAL
+
+numeric flgFOUND;  {flag to indicate if a match was found in the lookup file}
+
+
+PROC CENSUS_DE
+
+{----------------------------------------------------------------------------}
+
+
+PROC DISTRICT
+
+	{Move the fields that were entered by the keyer into the id fields of the lookup file}
+	LF_PROVINCE = PROVINCE;
+	LF_DISTRICT = DISTRICT;
+
+	flgFOUND = loadcase(LF_DICT, LF_PROVINCE, LF_DISTRICT);   {loads case}
+
+	if flgFOUND = 1 then 								      {return code 1 means a match was found}
+		errmsg("E10: Match found in lookup file: Province %d, District %d is %s ", PROVINCE, DISTRICT, LF_NAME);
+
+	else
+		errmsg("E20: Did not find a match in lookup file for Province %d, District %d", PROVINCE, DISTRICT);
+		reenter;
+
+	endif;
+
+

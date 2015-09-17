@@ -1,0 +1,62 @@
+﻿{ Purpose:			Demonstrate how to use DeckArrays. This program
+					corresponds to HotDeck3.bch in folder "Dynamic (Hot Deck) Imputations."
+					Both programs do the same edit but this one takes advantage of DeckArrays.
+
+  Keywords used:	array, deckarray, while, impute
+
+  Comments:			This program will edit the education variable (Highest Grade)
+					based on age group and level of education.
+					Compare this program to HotDeck3.bch in folder "Dynamic (Hot Deck) Imputations."
+}
+
+
+PROC GLOBAL
+
+numeric cntPop, cntAge_ge_5;
+
+array HD10_Grade_Age_Sex(P04_AGE_VS5_HIGHESTGRADE,P03_SEX_VS1(+));  // the values sets now do the work of the recode.
+												   // the "+" allows us to account for invalid sex.
+
+
+PROC POPSTAN_FF
+
+
+PROC LINE
+
+	inc(cntPop);
+
+
+PROC P03_SEX
+
+	if NOT $ in 1,2 then
+		errmsg(101, $) denom = cntPop;
+	endif;
+
+
+PROC P10_HIGH_GR
+
+	universe P04_AGE >= 5;  // this edit is done only for those age 5 and above.  Age is assumed edited.
+
+	inc(cntAge_ge_5);
+
+
+	// This edit does not include a check of the age against the highest grade completed.
+	// For the sake of simplicity we will leave that for another edit.
+
+	if $ in 0:36 then // highest grade completed is valid so we update the hot deck
+	
+		putdeck(HD10_Grade_Age_Sex,$);
+		putdeck(HD10_Grade_Age_Sex,$,,NotAppl);  // this will store a value for a valid age but an invalid sex.
+		
+		// putdeck(HD10_Grade_Age_Sex(+),$);  // two above two lines of code can be collapsed into one using the (+) syntax
+
+		errmsg(110,$) denom = cntAge_ge_5 summary;
+
+
+	else  // level of education is invalid so impute from the hot deck
+		errmsg(120,$,getdeck(HD10_Grade_Age_Sex)) denom = cntAge_ge_5;
+		impute($,getdeck(HD10_Grade_Age_Sex));
+
+	endif;
+
+

@@ -1,0 +1,1515 @@
+﻿[TabSpecs]
+Version=CSPro 6.1
+Label=TablogicExample
+Name=TABLOGICEXAMPLE
+GenerateLogic=Yes
+ 
+[Dictionaries]
+File=.\Census Dictionary.dcf
+[TabSetFormat]
+Name=TabSetFmt, default
+ThousandsSeparator=','
+DecimalSeparator='.'
+ZeroMask='-'
+ZeroRoundMask='*'
+Suppressed='SSS'
+DigitGrouping=Thousands
+ZeroBeforeDecimal=Yes
+ForeignKey='Frequency'
+ForeignKey='and'
+ForeignKey='to'
+ForeignKey='Total'
+ForeignKey='Standard Deviation'
+ForeignKey='by'
+ForeignKey='(Percents)'
+ForeignKey='Mean'
+ForeignKey='Maximum'
+ForeignKey='Table'
+ForeignKey='for'
+ForeignKey='Percentile'
+ForeignKey='Mode'
+ForeignKey='Minimum'
+ForeignKey='Proportion'
+ForeignKey='Median'
+ForeignKey='Variance'
+ForeignKey='Percent'
+ForeignKey='Undefined'
+ForeignKey='(Weighted)'
+ForeignKey='Cumulative'
+ForeignKey='<Value has no label>'
+ForeignKey='Number'
+TitleTemplate='Table %s.'
+Continuation=' (continued)'
+MeasurementSystem=USUnits
+
+[TableFormat]
+Name=TableFmt, default
+BorderLeft=None
+BorderTop=None
+BorderRight=None
+BorderBottom=None
+LeftLeadering=None
+RightLeadering=None
+ReaderBreak=None
+IncludeSubTitle=Yes
+IncludePageNote=No
+IncludeEndNote=No
+
+[TableFormat]
+Name=TableFmt, 1
+IncludeSubTitle=Yes
+IncludePageNote=No
+IncludeEndNote=Yes
+
+
+[TallyFormat]
+Name=RowTallyFmt, default
+IncludeUndefined=No
+DumpUndefined=No
+[TallyStatistic]
+Type=Total
+
+[TallyStatistic]
+Type=Counts
+
+
+[TallyFormat]
+Name=ColumnTallyFmt, default
+IncludeUndefined=No
+DumpUndefined=No
+[TallyStatistic]
+Type=Total
+
+[TallyStatistic]
+Type=Counts
+
+
+[TallyFormat]
+Name=RowTallyFmt, 3
+[TallyStatistic]
+Type=Total
+
+[TallyStatistic]
+Type=Counts
+
+[TallyStatistic]
+Type=Median
+MedianType=Continuous
+UseValueSet=Yes
+IntervalsMin=0.000000
+IntervalsMax=98.000000
+IntervalsStep=10.000000
+
+
+[TallyFormat]
+Name=RowTallyFmt, 6
+[TallyStatistic]
+Type=Total
+
+[TallyStatistic]
+Type=Counts
+
+[TallyStatistic]
+Type=Mean
+
+
+[TallyFormat]
+Name=RowTallyFmt, 7
+[TallyStatistic]
+Type=Total
+
+[TallyStatistic]
+Type=Counts
+
+[TallyStatistic]
+Type=Mean
+
+
+[TablePrintFormat]
+Name=TblPrintFmt, default
+TableLayout=LeftStandard
+PageBreakBeforeTable=Yes
+TblHorzCenter=No
+TblVertCenter=No
+PaperType=Letter
+PageOrientation=Portrait
+MarginTop=1.00
+MarginBottom=1.00
+MarginLeft=1.00
+MarginRight=1.00
+HeaderFrequency=TopOfPage
+
+[DataCellFormat]
+Name=SpannerFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Center
+VertAlign=Middle
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=Thin
+LineBottom=Thin
+LineLeft=Thin
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+ExtendLines=Yes
+NumDecimals=NotApplicable
+HideZeroRow=No
+
+[DataCellFormat]
+Name=ColumnHeadFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Right
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=Thin
+LineBottom=Thin
+LineLeft=Thin
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+ExtendIndentation=Yes
+NumDecimals=Zero
+HideZeroRow=No
+
+[DataCellFormat]
+Name=CaptionFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Left
+VertAlign=Middle
+TextColor=0
+FillColor=16777215
+IndentLeft=0.13
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=No
+NumDecimals=NotApplicable
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Left
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+NumDecimals=Zero
+HideZeroRow=No
+
+[DataCellFormat]
+Name=DataCellFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Right
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=NotApplicable
+LineBottom=NotApplicable
+LineLeft=NotApplicable
+LineRight=NotApplicable
+Hidden=NotApplicable
+SpanCells=NotApplicable
+NumDecimals=Zero
+HideZeroRow=No
+
+[DataCellFormat]
+Name=ColumnHeadFmt, 9
+Hidden=Yes
+SpanCells=NotApplicable
+ExtendIndentation=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 28
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+NumDecimals=One
+HideZeroRow=No
+
+[DataCellFormat]
+Name=DataCellFmt, 13
+LineTop=NotApplicable
+LineBottom=NotApplicable
+LineLeft=NotApplicable
+LineRight=NotApplicable
+Hidden=NotApplicable
+SpanCells=NotApplicable
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 31
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+NumDecimals=One
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 32
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+NumDecimals=One
+HideZeroRow=No
+
+[DataCellFormat]
+Name=ColumnHeadFmt, 10
+Hidden=Yes
+SpanCells=NotApplicable
+ExtendIndentation=Yes
+HideZeroRow=No
+
+[Format]
+Name=TitleFmt, default
+Font=-016 0000 0000 0000 0700 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Left
+VertAlign=Top
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+
+[Format]
+Name=SubTitleFmt, default
+Font=-013 0000 0000 0000 0400 0255 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Left
+VertAlign=Top
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+
+[Format]
+Name=StubHead, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Left
+VertAlign=Middle
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=Thin
+LineBottom=Thin
+LineLeft=None
+LineRight=Thin
+Hidden=No
+SpanCells=NotApplicable
+ExtendLines=Yes
+
+[Format]
+Name=SecondaryStubHead, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Right
+VertAlign=Middle
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=Thin
+LineBottom=Thin
+LineLeft=Thin
+LineRight=Thin
+Hidden=No
+SpanCells=NotApplicable
+ExtendLines=Yes
+
+[Format]
+Name=HeaderLeftFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Left
+VertAlign=Top
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+Custom=&F
+
+[Format]
+Name=HeaderCenterFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Center
+VertAlign=Top
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+Custom=
+
+[Format]
+Name=HeaderRightFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Right
+VertAlign=Top
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+Custom=&D
+
+[Format]
+Name=FooterLeftFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Left
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+Custom=
+
+[Format]
+Name=FooterCenterFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Center
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+Custom=- &P -
+
+[Format]
+Name=FooterRightFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Right
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+Custom=
+
+[Format]
+Name=PageNoteFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Left
+VertAlign=Top
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+
+[Format]
+Name=EndNoteFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Left
+VertAlign=Top
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+
+[Format]
+Name=AreaCaption, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Left
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=No
+ExtendLines=Yes
+
+[Format]
+Name=TitleFmt, 1
+IndentLeft=0.00
+IndentRight=0.00
+SpanCells=NotApplicable
+
+[Format]
+Name=EndNoteFmt, 1
+Font=-013 0000 0000 0000 0400 0255 0000 0000 0000 0003 0002 0001 0034 Arial
+IndentLeft=0.00
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+Custom=Complete plumbing is defined as having a private toilet, exclusive bathing facilities, and piped water inside the unit.  Some but not all is defined as having one but nota ll of the above.
+
+[Format]
+Name=TitleFmt, 5
+IndentLeft=0.00
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+Custom=Table 4. Number of Children per Household by Urban/Rural
+
+[Format]
+Name=SubTitleFmt, 1
+IndentLeft=0.00
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+Custom=Complete plumbing is a new variable created in the working storage dicitonary.  Its value is computed using tablogic.
+
+[Format]
+Name=SubTitleFmt, 2
+IndentLeft=0.00
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+Custom=Lifetime migration is computed using tablogic
+
+[Format]
+Name=SubTitleFmt, 3
+IndentLeft=0.00
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+Custom=Lifetime migration is computed tablogic.  In this table the unit of tabulation must explicitly be set to the person record since the defualt unit will be the questionnaire.  This was not the case in the previous table since they cross lifetime migration with variables from the person record (age and sex).
+
+[Format]
+Name=SubTitleFmt, 4
+IndentLeft=0.00
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+Custom=Children 0 to 5 and Children 6 to 17 are computed using tablogic.  Note that in this example the tablogic is in the individual subtables rather than for the entire table.
+
+ 
+[Table]
+Name=TABLE1
+Num=1
+ 
+Format=TableFmt, 1
+[Title]
+Label='Table 1. Complete Plumbing by Urban/Rural'
+PrintViewSize=9216,276,-144,-144,-144,-144,0,0,No,No
+GridViewSize=0,52,0,0,0,0
+ 
+[SubTitle]
+Label=''
+Format=SubTitleFmt, 1
+GridViewSize=0,39,0,0,0,0
+ 
+[PageNote]
+Label=''
+ 
+[EndNote]
+Label='<Type end note here>'
+Format=EndNoteFmt, 1
+PrintViewSize=9216,446,-144,-144,-144,-144,0,0,No,No
+GridViewSize=0,71,0,0,0,0
+ 
+[HeaderLeft]
+Label=''
+ 
+[HeaderCenter]
+Label=''
+ 
+[HeaderRight]
+Label=''
+ 
+[FooterLeft]
+Label=''
+ 
+[FooterCenter]
+Label=''
+ 
+[FooterRight]
+Label=''
+ 
+[StubHead]
+Label='Complete Plumbing'
+PrintViewSize=2014,586,854,442,1740,221,0,0,No,No
+GridViewSize=100,20,0,0,0,0
+GridViewSize=100,20,0,0,0,0
+ 
+[SecondaryStubHead]
+Label=''
+ 
+[AreaCaption]
+Label='%AreaName%'
+ 
+[OneRowColTotal]
+Label=''
+ 
+ 
+[Rows]
+ 
+[Variable]
+Name=COMPLETE_PLUMBING_VS1
+Label=Complete Plumbing
+VarType=Dict
+ 
+[Value]
+Label=Total
+TabValueType=Total
+TabValueStatIndex=0
+PrintViewSize=2014,221,444,221,444,221,0,0,No,No
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Complete
+TabValueType=VSetValue
+TabValueStatIndex=1
+PrintViewSize=2014,221,854,221,854,221,0,0,No,No
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Some but not all
+TabValueType=VSetValue
+TabValueStatIndex=1
+PrintViewSize=2014,221,523,884,1438,221,0,0,No,No
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=None
+TabValueType=VSetValue
+TabValueStatIndex=1
+PrintViewSize=2014,221,475,221,475,221,0,0,No,No
+GridViewSize=0,20,0,0,0,0
+ 
+[EndVar]
+ 
+[Cols]
+ 
+[Variable]
+Name=UR_VS1
+Label=Urban/Rural
+VarType=Dict
+ 
+[Value]
+Label=Total
+TabValueType=Total
+TabValueStatIndex=0
+PrintViewSize=2256,221,497,221,444,221,1812,0,No,No
+GridViewSize=75,0,0,0,0,0
+ 
+[Value]
+Label=Urban
+TabValueType=VSetValue
+TabValueStatIndex=1
+PrintViewSize=2256,221,542,221,542,221,1714,0,No,No
+GridViewSize=75,0,0,0,0,0
+ 
+[Value]
+Label=Rural
+TabValueType=VSetValue
+TabValueStatIndex=1
+PrintViewSize=2258,221,497,221,475,221,1783,0,No,No
+PrintViewSize=7058,221,1073,221,1073,221,5985,0,No,No
+GridViewSize=75,0,0,0,0,0
+ 
+[EndVar]
+[UnitSpecs]
+[Unit]
+SubTable=Entire Table
+LoopingVarName=
+Weight=
+Value=
+Universe=
+TabLogic=
+TabLogic={ Calculate COMPLETE_PLUMBING based on toilet, bath and water }
+TabLogic=if H08_TOILET = 1 and H09_BATH = 1 and H10_WATER = 1 then
+TabLogic=	COMPLETE_PLUMBING = 1; { All available inside unit - Complete }
+TabLogic=elseif H08_TOILET = 1 or H09_BATH = 1 or H10_WATER = 1 then
+TabLogic=	COMPLETE_PLUMBING = 2; { One or more available - Some but not all }
+TabLogic=else
+TabLogic=	COMPLETE_PLUMBING = 3; { None available - None }
+TabLogic=endif;
+TabLogic=
+[EndUnitSpecs]
+ 
+ 
+[Table]
+Name=TABLE2
+Num=2
+ 
+[Title]
+Label='Table 2. Age in 5 year groups, Sex by Lifetime Migration'
+Format=TitleFmt, 1
+PrintViewSize=9216,276,-144,-144,-144,-144,0,0,No,No
+GridViewSize=0,23,0,0,0,0
+ 
+[SubTitle]
+Label=''
+Format=SubTitleFmt, 2
+GridViewSize=0,24,0,0,0,0
+ 
+[PageNote]
+Label=''
+ 
+[EndNote]
+Label=''
+ 
+[HeaderLeft]
+Label=''
+ 
+[HeaderCenter]
+Label=''
+ 
+[HeaderRight]
+Label=''
+ 
+[FooterLeft]
+Label=''
+ 
+[FooterCenter]
+Label=''
+ 
+[FooterRight]
+Label=''
+ 
+[StubHead]
+Label=''
+ 
+[SecondaryStubHead]
+Label=''
+ 
+[AreaCaption]
+Label='%AreaName%'
+PrintViewSize=1258,221,0,0,-144,0,0,0,No,No
+PrintViewSize=1942,221,0,0,-144,0,0,0,No,No
+PrintViewSize=2702,221,0,0,-144,0,0,0,No,No
+PrintViewSize=1258,221,0,0,-144,0,0,0,No,No
+PrintViewSize=1942,221,0,0,-144,0,0,0,No,No
+PrintViewSize=2702,221,0,0,-144,0,0,0,No,No
+PrintViewSize=1258,221,0,0,-144,0,0,0,No,No
+PrintViewSize=1942,221,0,0,-144,0,0,0,No,No
+PrintViewSize=2702,221,0,0,-144,0,0,0,No,No
+PrintViewSize=1258,221,0,0,-144,0,0,0,No,No
+PrintViewSize=1942,221,0,0,-144,0,0,0,No,No
+PrintViewSize=2702,221,0,0,-144,0,0,0,No,No
+PrintViewSize=1258,221,0,0,-144,0,0,0,No,No
+PrintViewSize=1942,221,0,0,-144,0,0,0,No,No
+PrintViewSize=2702,221,0,0,-144,0,0,0,No,No
+PrintViewSize=6190,221,0,0,-144,0,0,0,No,No
+PrintViewSize=6190,221,0,0,-144,0,0,0,No,No
+PrintViewSize=6190,221,0,0,-144,0,0,0,No,No
+PrintViewSize=6190,221,0,0,-144,0,0,0,No,No
+PrintViewSize=6190,221,0,0,-144,0,0,0,No,No
+PrintViewSize=1258,221,0,0,-144,0,0,0,No,No
+PrintViewSize=1942,221,0,0,-144,0,0,0,No,No
+PrintViewSize=2702,221,0,0,-144,0,0,0,No,No
+PrintViewSize=1258,221,0,0,-144,0,0,0,No,No
+PrintViewSize=1942,221,0,0,-144,0,0,0,No,No
+PrintViewSize=2702,221,0,0,-144,0,0,0,No,No
+PrintViewSize=6190,221,0,0,-144,0,0,0,No,No
+PrintViewSize=6190,221,0,0,-144,0,0,0,No,No
+ 
+[OneRowColTotal]
+Label=''
+ 
+ 
+[Rows]
+ 
+[Variable]
+Name=P04_AGE_VS2
+Label=Age in 5 year groups
+VarType=Dict
+Format=RowTallyFmt, 3
+ 
+[Value]
+Label=Total
+TabValueType=Total
+TabValueStatIndex=0
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=0 to 4 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=5 to 9 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=10 to 14 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=15 to 19 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=20 to 24 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=25 to 29 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=30 to 34 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=35 to 39 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=40 to 44 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=45 to 49 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=50 to 54 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=55 to 59 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=60 to 64 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=65 to 69 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=70 to 74 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=75 to 79 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=80 to 84 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=85 to 89 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=90 to 94 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=95 years and over
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Median
+TabValueType=Median
+TabValueStatIndex=2
+Format=StubFmt, 28
+GridViewSize=0,20,0,0,0,0
+ 
+[Special]
+Panel=1
+OffsetCol=5
+Format=DataCellFmt, 13
+ 
+[EndVar]
+ 
+[Variable]
+Name=P03_SEX_VS1
+Label=Sex
+VarType=Dict
+ 
+[Value]
+Label=Total
+TabValueType=Total
+TabValueStatIndex=0
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Male
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Female
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[EndVar]
+ 
+[Cols]
+ 
+[Variable]
+Name=LIFETIME_MIGRATION_VS1
+Label=Lifetime Migration
+VarType=Dict
+ 
+[Value]
+Label=Total
+TabValueType=Total
+TabValueStatIndex=0
+PrintViewSize=1619,442,607,221,444,221,1012,0,No,No
+GridViewSize=75,0,0,0,0,0
+ 
+[Value]
+Label=Born This Province
+TabValueType=VSetValue
+TabValueStatIndex=1
+PrintViewSize=1619,442,773,663,1682,221,81,0,No,No
+GridViewSize=122,0,0,0,0,0
+ 
+[Value]
+Label=Born Other Province
+TabValueType=VSetValue
+TabValueStatIndex=1
+PrintViewSize=1619,442,773,663,1802,221,789,0,No,No
+GridViewSize=130,0,0,0,0,0
+ 
+[Value]
+Label=Born Outside Popstan
+TabValueType=VSetValue
+TabValueStatIndex=1
+PrintViewSize=1621,442,730,884,1946,221,603,0,No,No
+GridViewSize=142,0,0,0,0,0
+ 
+[Value]
+Label=Unknown
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=ColumnHeadFmt, 9
+PrintViewSize=6910,221,816,442,1572,221,6094,0,No,No
+GridViewSize=75,0,0,0,0,0
+ 
+[EndVar]
+[UnitSpecs]
+[Unit]
+SubTable=Entire Table
+LoopingVarName=
+Weight=
+Value=
+Universe=
+TabLogic= { Compute migrant status based on province and place of birth }
+TabLogic=  if P07_BIRTH in 1:15 then
+TabLogic=  	if PROVINCE = P07_BIRTH then
+TabLogic=  		LIFETIME_MIGRATION = 1; { live in province of birth }
+TabLogic=  	else
+TabLogic=  		LIFETIME_MIGRATION = 2; { live outside province birth, born in Popstan }
+TabLogic=  	endif;
+TabLogic=  elseif P07_BIRTH = 0 then
+TabLogic=  	LIFETIME_MIGRATION = 4; { place of birth unknown }
+TabLogic=  else
+TabLogic=  	LIFETIME_MIGRATION = 3; { born outside Popstan }
+TabLogic=  endif;
+TabLogic=
+[EndUnitSpecs]
+ 
+ 
+[Table]
+Name=TABLE3
+Num=3
+ 
+[Title]
+Label='Table 3. Province by Lifetime Migration'
+PrintViewSize=9216,276,-144,-144,-144,-144,0,0,No,No
+GridViewSize=0,19,0,0,0,0
+ 
+[SubTitle]
+Label=''
+Format=SubTitleFmt, 3
+GridViewSize=0,66,0,0,0,0
+ 
+[PageNote]
+Label=''
+ 
+[EndNote]
+Label=''
+ 
+[HeaderLeft]
+Label=''
+ 
+[HeaderCenter]
+Label=''
+ 
+[HeaderRight]
+Label=''
+ 
+[FooterLeft]
+Label=''
+ 
+[FooterCenter]
+Label=''
+ 
+[FooterRight]
+Label=''
+ 
+[StubHead]
+Label='Province'
+PrintViewSize=1349,807,773,221,773,221,0,0,No,No
+GridViewSize=100,20,0,0,0,0
+GridViewSize=100,20,0,0,0,0
+ 
+[SecondaryStubHead]
+Label=''
+ 
+[AreaCaption]
+Label='%AreaName%'
+ 
+[OneRowColTotal]
+Label=''
+ 
+ 
+[Rows]
+ 
+[Variable]
+Name=PROV_VS1
+Label=Province
+VarType=Dict
+ 
+[Value]
+Label=Total
+TabValueType=Total
+TabValueStatIndex=0
+PrintViewSize=1349,221,444,221,444,221,0,0,No,No
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Artesia
+TabValueType=VSetValue
+TabValueStatIndex=1
+PrintViewSize=1349,221,619,221,619,221,0,0,No,No
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Copal
+TabValueType=VSetValue
+TabValueStatIndex=1
+PrintViewSize=1349,221,518,221,518,221,0,0,No,No
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Dari
+TabValueType=VSetValue
+TabValueStatIndex=1
+PrintViewSize=1349,221,365,221,365,221,0,0,No,No
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Eris
+TabValueType=VSetValue
+TabValueStatIndex=1
+PrintViewSize=1349,221,343,221,343,221,0,0,No,No
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Girda
+TabValueType=VSetValue
+TabValueStatIndex=1
+PrintViewSize=1349,221,487,221,487,221,0,0,No,No
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Hali
+TabValueType=VSetValue
+TabValueStatIndex=1
+PrintViewSize=1349,221,341,221,341,221,0,0,No,No
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Kerac
+TabValueType=VSetValue
+TabValueStatIndex=1
+PrintViewSize=1349,221,521,221,521,221,0,0,No,No
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Lacuna
+TabValueType=VSetValue
+TabValueStatIndex=1
+PrintViewSize=1349,221,653,221,653,221,0,0,No,No
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Laya
+TabValueType=VSetValue
+TabValueStatIndex=1
+PrintViewSize=1349,221,425,221,425,221,0,0,No,No
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Lira
+TabValueType=VSetValue
+TabValueStatIndex=1
+PrintViewSize=1349,221,331,221,331,221,0,0,No,No
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Matanga
+TabValueType=VSetValue
+TabValueStatIndex=1
+PrintViewSize=1349,221,773,221,773,221,0,0,No,No
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Patan
+TabValueType=VSetValue
+TabValueStatIndex=1
+PrintViewSize=1349,221,518,221,518,221,0,0,No,No
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Rift
+TabValueType=VSetValue
+TabValueStatIndex=1
+PrintViewSize=1349,221,300,221,300,221,0,0,No,No
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Terra
+TabValueType=VSetValue
+TabValueStatIndex=1
+PrintViewSize=1349,221,480,221,480,221,0,0,No,No
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Tumar
+TabValueType=VSetValue
+TabValueStatIndex=1
+PrintViewSize=1349,221,583,221,583,221,0,0,No,No
+GridViewSize=0,20,0,0,0,0
+ 
+[EndVar]
+ 
+[Cols]
+ 
+[Variable]
+Name=LIFETIME_MIGRATION_VS1
+Label=Lifetime Migration
+VarType=Dict
+ 
+[Value]
+Label=Total
+TabValueType=Total
+TabValueStatIndex=0
+PrintViewSize=1822,442,607,221,444,221,1215,0,No,No
+GridViewSize=75,0,0,0,0,0
+ 
+[Value]
+Label=Born This Province
+TabValueType=VSetValue
+TabValueStatIndex=1
+PrintViewSize=1822,442,773,663,1682,221,284,0,No,No
+GridViewSize=122,0,0,0,0,0
+ 
+[Value]
+Label=Born Other Province
+TabValueType=VSetValue
+TabValueStatIndex=1
+PrintViewSize=1822,442,773,663,1802,221,992,0,No,No
+GridViewSize=130,0,0,0,0,0
+ 
+[Value]
+Label=Born Outside Popstan
+TabValueType=VSetValue
+TabValueStatIndex=1
+PrintViewSize=1825,442,730,884,1946,221,807,0,No,No
+GridViewSize=142,0,0,0,0,0
+ 
+[Value]
+Label=Unknown
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=ColumnHeadFmt, 10
+PrintViewSize=7723,221,816,442,1572,221,6907,0,No,No
+GridViewSize=0,0,0,0,0,0
+ 
+[EndVar]
+[UnitSpecs]
+[Unit]
+SubTable=Entire Table
+LoopingVarName=PERSON
+Weight=
+Value=
+Universe=
+TabLogic= { Note that the unit for this table must be explicitly set to PERSON,
+TabLogic=   the default unit (QUEST) will not give the correct results}
+TabLogic=   
+TabLogic= { Compute migrant status based on province and place of birth }
+TabLogic=  if P07_BIRTH in 1:15 then
+TabLogic=  	if PROVINCE = P07_BIRTH then
+TabLogic=  		LIFETIME_MIGRATION = 1; { live in province of birth }
+TabLogic=  	else
+TabLogic=  		LIFETIME_MIGRATION = 2; { live outside province birth, born in Popstan }
+TabLogic=  	endif;
+TabLogic=  elseif P07_BIRTH = 0 then
+TabLogic=  	LIFETIME_MIGRATION = 4; { place of birth unknown }
+TabLogic=  else
+TabLogic=  	LIFETIME_MIGRATION = 3; { born outside Popstan }
+TabLogic=  endif;
+TabLogic=
+[EndUnitSpecs]
+ 
+ 
+[Table]
+Name=TABLE4
+Num=4
+ 
+[Title]
+Label='Table 4. Children 0 to 5, Children 6 to 17 by Urban/Rural'
+Format=TitleFmt, 5
+PrintViewSize=9216,276,-144,-144,-144,-144,0,0,No,No
+GridViewSize=0,49,0,0,0,0
+ 
+[SubTitle]
+Label=''
+Format=SubTitleFmt, 4
+GridViewSize=0,54,0,0,0,0
+ 
+[PageNote]
+Label=''
+ 
+[EndNote]
+Label=''
+ 
+[HeaderLeft]
+Label=''
+ 
+[HeaderCenter]
+Label=''
+ 
+[HeaderRight]
+Label=''
+ 
+[FooterLeft]
+Label=''
+ 
+[FooterCenter]
+Label=''
+ 
+[FooterRight]
+Label=''
+ 
+[StubHead]
+Label=''
+ 
+[SecondaryStubHead]
+Label=''
+ 
+[AreaCaption]
+Label='%AreaName%'
+PrintViewSize=2323,221,0,0,-144,0,0,0,No,No
+PrintViewSize=2323,221,0,0,-144,0,0,0,No,No
+PrintViewSize=2324,221,0,0,-144,0,0,0,No,No
+PrintViewSize=2323,221,0,0,-144,0,0,0,No,No
+PrintViewSize=2323,221,0,0,-144,0,0,0,No,No
+PrintViewSize=2324,221,0,0,-144,0,0,0,No,No
+ 
+[OneRowColTotal]
+Label=''
+ 
+ 
+[Rows]
+ 
+[Variable]
+Name=CHILDREN_0_TO_5_VS1
+Label=Children 0 to 5
+VarType=Dict
+Format=RowTallyFmt, 6
+ 
+[Value]
+Label=Total
+TabValueType=Total
+TabValueStatIndex=0
+PrintViewSize=1814,221,444,221,444,221,0,0,No,No
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=0
+TabValueType=VSetValue
+TabValueStatIndex=1
+PrintViewSize=1814,221,110,221,110,221,0,0,No,No
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=1
+TabValueType=VSetValue
+TabValueStatIndex=1
+PrintViewSize=1814,221,110,221,110,221,0,0,No,No
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=2
+TabValueType=VSetValue
+TabValueStatIndex=1
+PrintViewSize=1814,221,110,221,110,221,0,0,No,No
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=3
+TabValueType=VSetValue
+TabValueStatIndex=1
+PrintViewSize=1814,221,110,221,110,221,0,0,No,No
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=4
+TabValueType=VSetValue
+TabValueStatIndex=1
+PrintViewSize=1814,221,110,221,110,221,0,0,No,No
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=5+
+TabValueType=VSetValue
+TabValueStatIndex=1
+PrintViewSize=1814,221,226,221,226,221,0,0,No,No
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Mean
+TabValueType=Mean
+TabValueStatIndex=2
+Format=StubFmt, 31
+PrintViewSize=1814,221,497,221,497,221,0,0,No,No
+PrintViewSize=1627,221,739,442,1291,221,0,0,No,No
+GridViewSize=0,20,0,0,0,0
+ 
+[EndVar]
+ 
+[Variable]
+Name=CHILDREN_6_TO_17_VS1
+Label=Children 6 to 17
+VarType=Dict
+Format=RowTallyFmt, 7
+ 
+[Value]
+Label=Total
+TabValueType=Total
+TabValueStatIndex=0
+PrintViewSize=1814,221,444,221,444,221,0,0,No,No
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=0
+TabValueType=VSetValue
+TabValueStatIndex=1
+PrintViewSize=1814,221,110,221,110,221,0,0,No,No
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=1
+TabValueType=VSetValue
+TabValueStatIndex=1
+PrintViewSize=1814,221,110,221,110,221,0,0,No,No
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=2
+TabValueType=VSetValue
+TabValueStatIndex=1
+PrintViewSize=1814,221,110,221,110,221,0,0,No,No
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=3
+TabValueType=VSetValue
+TabValueStatIndex=1
+PrintViewSize=1814,221,110,221,110,221,0,0,No,No
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=4
+TabValueType=VSetValue
+TabValueStatIndex=1
+PrintViewSize=1814,221,110,221,110,221,0,0,No,No
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=5+
+TabValueType=VSetValue
+TabValueStatIndex=1
+PrintViewSize=1814,221,226,221,226,221,0,0,No,No
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Mean
+TabValueType=Mean
+TabValueStatIndex=2
+Format=StubFmt, 32
+PrintViewSize=1814,221,497,221,497,221,0,0,No,No
+PrintViewSize=1627,221,739,442,1402,221,0,0,No,No
+GridViewSize=0,20,0,0,0,0
+ 
+[EndVar]
+ 
+[Cols]
+ 
+[Variable]
+Name=UR_VS1
+Label=Urban/Rural
+VarType=Dict
+ 
+[Value]
+Label=Total
+TabValueType=Total
+TabValueStatIndex=0
+PrintViewSize=2323,221,497,221,444,221,1826,0,No,No
+GridViewSize=75,0,0,0,0,0
+ 
+[Value]
+Label=Urban
+TabValueType=VSetValue
+TabValueStatIndex=1
+PrintViewSize=2323,221,542,221,542,221,1781,0,No,No
+GridViewSize=75,0,0,0,0,0
+ 
+[Value]
+Label=Rural
+TabValueType=VSetValue
+TabValueStatIndex=1
+PrintViewSize=2324,221,497,221,475,221,1827,0,No,No
+PrintViewSize=7258,221,1073,221,1073,221,6185,0,No,No
+GridViewSize=75,0,0,0,0,0
+ 
+[EndVar]
+ 
+[UnitSpecs]
+[Unit]
+SubTable=CHILDREN_0_TO_5_VS1 by UR_VS1
+LoopingVarName=
+Weight=
+Value=
+Universe=
+TabLogic= { count children of head age 0 to 5 }
+TabLogic= CHILDREN_0_TO_5 = count(PERSON where P02_REL = 3 and P04_AGE in 0:5);
+TabLogic=
+[Unit]
+SubTable=CHILDREN_6_TO_17_VS1 by UR_VS1
+LoopingVarName=
+Weight=
+Value=
+Universe=
+TabLogic= { count children of head age 6 to 17 }
+TabLogic= CHILDREN_6_TO_17 = count(PERSON where P02_REL = 3 and P04_AGE in 6:17);
+TabLogic=
+[EndUnitSpecs]
+ 
+ 
+[Level]
+Table=TABLE1
+Table=TABLE2
+Table=TABLE3
+Table=TABLE4

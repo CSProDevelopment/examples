@@ -1,0 +1,42 @@
+﻿[Dictionary]
+Version=CSPro 6.1
+Label=SelCaseX
+Name=SELCASEX_DICT
+RecordTypeStart=0
+RecordTypeLen=0
+Positions=Relative
+ZeroFill=Yes
+DecimalChar=Yes
+
+[Level]
+Label=SelCaseX questionnaire
+Name=SELCASEX_QUEST
+
+[IdItems]
+
+[Item]
+Label=Dummy ID
+Name=DUMMY_ID
+Start=1
+Len=1
+ZeroFill=Yes
+
+[Record]
+Label=Demo SelCase
+Name=DEMO_SELCASE
+RecordTypeValue=''
+RecordLen=22
+
+[Item]
+Label=Option
+Name=OPTION
+Start=2
+Len=1
+ZeroFill=Yes
+
+[Item]
+Label=Data_Search
+Name=DATA_SEARCH
+Start=3
+Len=20
+DataType=Alpha

@@ -1,0 +1,20 @@
+﻿[Run Information]
+Version=CSPro 6.1
+AppType=Batch
+
+[Files]
+Application=.\Build Tracking Files.bch
+InputData=.\Test Build.dat
+Listing=.\Build Tracking Files.lst
+
+[ExternalFiles]
+GEOFILE_DICT=.\Test Geo.dat
+EASTATUS_DICT=.\Test Status.dat
+
+[Parameters]
+ViewListing=Always
+ViewResults=Yes
+ListingWidth=80
+MessageWrap=No
+ErrmsgOverride=No
+

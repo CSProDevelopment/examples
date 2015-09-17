@@ -1,0 +1,13 @@
+﻿[CSPro Application]
+Version=CSPro 6.1
+Label=DECKARRAYS
+Name=DECKARRAYS
+AppType=Batch
+[AppCode]
+File=.\DeckArrays.bch.apc
+[Message]
+File=.\DeckArrays.bch.mgf
+[Order]
+File=.\DeckArrays.ord
+[Dictionary Types]
+Dict-Type=.\DeckArrays.dcf,Input,.\DeckArrays.ord

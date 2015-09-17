@@ -1,0 +1,13 @@
+﻿[CSPro Application]
+Version=CSPro 6.1
+Label=WRITING_CSV_FILE
+Name=WRITING_CSV_FILE
+AppType=Batch
+[AppCode]
+File=.\Writing CSV file.bch.apc
+[Message]
+File=.\Writing CSV file.bch.mgf
+[Order]
+File=.\Writing CSV file.ord
+[Dictionary Types]
+Dict-Type=.\Popstan2.dcf,Input,.\Writing CSV file.ord

@@ -1,0 +1,13 @@
+﻿[CSPro Application]
+Version=CSPro 6.1
+Label=DECKARRAYS3
+Name=DECKARRAYS3
+AppType=Batch
+[AppCode]
+File=.\PopstanDeckArray.bch.apc
+[Message]
+File=.\PopstanDeckArray.bch.mgf
+[Order]
+File=.\PopstanDeckArray.ord
+[Dictionary Types]
+Dict-Type=.\Popstan.dcf,Input,.\PopstanDeckArray.ord

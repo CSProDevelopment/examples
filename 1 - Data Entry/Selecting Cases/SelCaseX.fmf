@@ -1,0 +1,319 @@
+﻿[FormFile]
+Version=CSPro 6.1
+Name=SELCASEX_FF
+Label=SelCaseX
+DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
+FieldEntryFont=0018 0000 0000 0000 0600 0000 0000 0000 0000 0000 0000 0000 0000 Courier New
+Type=OperatorControlled
+  
+[Dictionaries]
+File=.\SelCaseX.dcf
+  
+[Form]
+Name=FORM000
+Label=(Id Items)
+Level=1
+Size=421,280
+  
+Item=DUMMY_ID
+  
+  
+[Text]
+Name=TEXT000
+Position=116,163,300,179
+Text=Enter any number from 0 to 9
+Form=1
+ 
+  
+[Text]
+Name=TEXT001
+Position=116,108,392,124
+Text=CSPro requires an entry here as an ID field.
+Form=1
+ 
+  
+[Text]
+Name=TEXT001000
+Position=116,134,396,150
+Text=It is not used by the demonstration program.
+Form=1
+ 
+  
+[Text]
+Name=TEXT002
+Position=116,193,338,209
+Text=to get to the SelCase demo screen.
+Form=1
+ 
+[EndForm]
+  
+[Form]
+Name=FORM001
+Label=Demo SelCase
+Level=1
+Size=701,633
+  
+Item=OPTION
+Item=DATA_SEARCH
+  
+Box=27,200,355,203,Etched
+  
+[Text]
+Name=TEXT005
+Position=244,210,250,224
+Text=1
+Form=2
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT006
+Position=244,229,250,243
+Text=2
+Form=2
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT005000
+Position=244,249,250,263
+Text=3
+Form=2
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT006000
+Position=244,270,250,284
+Text=4
+Form=2
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT005000000
+Position=244,290,250,304
+Text=5
+Form=2
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT005000000000
+Position=244,312,250,326
+Text=6
+Form=2
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT005000000000000
+Position=53,528,60,544
+Text=7
+Form=2
+ 
+  
+[Text]
+Name=TEXT013001000001000000
+Position=89,530,328,544
+Text=Demonstrates the use of the MULTIPLE parameter
+Form=2
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT015000000000000000
+Position=89,571,457,585
+Text=The multiple parameter allows mulitple selections from the selection window.
+Form=2
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT015000000000000000000
+Position=89,587,554,601
+Text=The first message shows the number of selections made by referencing the nMembers function.
+Form=2
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT015000000000000000001
+Position=89,604,659,618
+Text=If any selections are made in the selection window, the program uses a for do loop to display the selected information.
+Form=2
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT015000000000000000002
+Position=89,555,549,569
+Text=Uses SelCase to display a list of enumerators with the last name specified in the Selection data.
+Form=2
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT003
+Position=28,184,140,198
+Text=To search based on:
+Form=2
+Font=-011 0000 0000 0000 0700 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT004
+Position=28,210,118,224
+Text=Enumerator's code
+Form=2
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT007
+Position=216,184,291,198
+Text=Select option:
+Form=2
+Font=-011 0000 0000 0000 0700 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT008
+Position=28,270,78,284
+Text=Last name
+Form=2
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT009
+Position=28,249,79,263
+Text=First Name
+Form=2
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT010
+Position=265,229,332,243
+Text=(exact match)
+Form=2
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT010000
+Position=265,249,332,263
+Text=(exact match)
+Form=2
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT008000
+Position=28,229,78,243
+Text=Last name
+Form=2
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT011
+Position=265,270,314,284
+Text=(first digit)
+Form=2
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT012
+Position=28,290,174,304
+Text=Last , First Name, Partial Name
+Form=2
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT013
+Position=28,312,101,326
+Text=Region Number
+Form=2
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT1
+Position=163,51,309,67
+Text=Enter 9 to end program
+Form=2
+ 
+  
+[Text]
+Name=TEXT011000
+Position=265,312,461,326
+Text=(with hourly wages from 35.00 to 40.00)
+Form=2
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+  
+[Text]
+Name=TEXT011000000
+Position=265,290,638,304
+Text=(returns any enumerator whose name(s) start with the string in Data Search)
+Form=2
+Font=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+ 
+[EndForm]
+  
+[Level]
+Name=SELCASEX_QUEST
+Label=SelCaseX questionnaire
+  
+[Group]
+Required=Yes
+Name=IDS0_FORM
+Label=(Id Items)
+Form=1
+LogicControl=No
+Max=1
+  
+[Field]
+Name=DUMMY_ID
+Position=141,235,156,255
+Item=DUMMY_ID,SELCASEX_DICT
+Form=1
+  
+[EndGroup]
+  
+[Group]
+Required=Yes
+Name=DEMO_SELCASE_FORM
+Label=Demo SelCase
+Form=2
+LogicControl=No
+Max=1
+  
+[Field]
+Name=OPTION
+Position=139,47,154,67
+Item=OPTION,SELCASEX_DICT
+Form=2
+  
+[Text]
+Position=22,50,68,66
+Text=Option:
+ 
+  
+[Field]
+Name=DATA_SEARCH
+Position=137,91,418,111
+Item=DATA_SEARCH,SELCASEX_DICT
+UpperCase=Yes
+Form=2
+  
+[Text]
+Position=25,97,107,113
+Text=Data Search:
+ 
+[EndGroup]
+  

@@ -1,0 +1,16 @@
+﻿[CSPro Application]
+Version=CSPro 6.1
+Label=LEVEL_123
+Name=LEVEL_123
+AppType=DataEntry
+OperatorID=No
+[AppCode]
+File=.\2-level.ent.apc
+[Message]
+File=.\2-level.ent.mgf
+[Help]
+File=.\2-level.ent.qsf
+[Forms]
+File=.\2-level.fmf
+[Dictionary Types]
+Dict-Type=.\two-level.dcf,Input,.\2-level.fmf

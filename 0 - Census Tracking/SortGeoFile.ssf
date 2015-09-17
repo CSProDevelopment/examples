@@ -1,0 +1,13 @@
+[CSSort]
+Version=CSPro 6.1
+
+[Dictionaries]
+File=.\GeoFile.dcf
+
+[SortType]
+Type=Questionnaire
+
+[Keys]
+Key=Ascending,GPROV,"Province"
+Key=Ascending,GDIST,"District"
+Key=Ascending,GLOC,"Locality"

@@ -1,0 +1,13 @@
+﻿[CSPro Application]
+Version=CSPro 6.1
+Label=MAKE_DAYS
+Name=MAKE_DAYS
+AppType=Batch
+[AppCode]
+File=.\Make Days.bch.apc
+[Message]
+File=.\Make Days.bch.mgf
+[Order]
+File=.\Make Days.ord
+[Dictionary Types]
+Dict-Type=.\Census Tracking.dcf,Input,.\Make Days.ord

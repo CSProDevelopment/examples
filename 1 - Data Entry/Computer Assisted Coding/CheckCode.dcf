@@ -1,0 +1,235 @@
+﻿[Dictionary]
+Version=CSPro 6.1
+Label=Check Code Example
+Name=CEN2000
+RecordTypeStart=1
+RecordTypeLen=1
+Positions=Relative
+ZeroFill=Yes
+DecimalChar=No
+
+[Level]
+Label=Questionnaire
+Name=QUEST
+
+[IdItems]
+
+[Item]
+Label=Province
+Name=PROVINCE
+Start=2
+Len=2
+ZeroFill=Yes
+
+[ValueSet]
+Label=Province
+Name=PROV_VS1
+Value=1;Artesia
+Value=2;Copal
+Value=3;Dari
+Value=4;Eris
+Value=5;Girda
+Value=6;Hali
+Value=7;Kerac
+Value=8;Lacuna
+Value=9;Laya
+Value=10;Lira
+Value=11;Matanga
+Value=12;Patan
+Value=13;Rift
+Value=14;Terra
+Value=15;Tumar
+
+[Item]
+Label=District
+Name=DISTRICT
+Start=4
+Len=2
+ZeroFill=Yes
+
+[ValueSet]
+Label=District
+Name=DIST_VS1
+Value=1:18
+
+[Item]
+Label=Village
+Name=VILLAGE
+Start=6
+Len=3
+ZeroFill=Yes
+
+[ValueSet]
+Label=Village
+Name=VILLAGE_VS1
+Value=1:999
+
+[Item]
+Label=Enumeration area
+Name=EA
+Start=9
+Len=3
+ZeroFill=Yes
+
+[ValueSet]
+Label=Enumeration area
+Name=EA_VS1
+Value=1:999
+
+[Item]
+Label=Housing unit
+Name=HU
+Start=12
+Len=3
+ZeroFill=Yes
+
+[ValueSet]
+Label=Housing unit
+Name=HU_VS1
+Value=1:999
+
+[Record]
+Label=Person Record
+Name=PERSON
+RecordTypeValue='1'
+Required=No
+MaxRecords=10
+RecordLen=25
+
+[Item]
+Label=Line number
+Name=LINE
+Start=15
+Len=2
+ZeroFill=Yes
+
+[ValueSet]
+Label=Line number
+Name=LINE_VS1
+Value=1:30
+Value='  ';missing
+Name=MISSING,Special
+
+[Item]
+Label=Relationship
+Name=P02_REL
+Start=17
+Len=1
+ZeroFill=Yes
+
+[ValueSet]
+Label=Relationship
+Name=P02_REL_VS1
+Value=1;Head
+Value=2;Spouse
+Value=3;Child
+Value=4;Parent
+Value=5;Other relative
+Value=6;Nonrelative
+Value=9;Not Reported
+
+[Item]
+Label=Sex
+Name=P03_SEX
+Start=18
+Len=1
+ZeroFill=Yes
+
+[ValueSet]
+Label=Sex
+Name=P03_SEX_VS1
+Value=1;Male
+Value=2;Female
+
+[Item]
+Label=Working
+Name=P14_WORKING
+Start=19
+Len=1
+ZeroFill=Yes
+
+[ValueSet]
+Label=Working
+Name=P14_WORKING_VS1
+Value=1;Yes
+Value=2;No
+Value=' ';Not Applicable
+Name=NOTAPPL,Special
+
+[Item]
+Label=Occupation
+Name=P15_OCC
+Start=20
+Len=3
+ZeroFill=Yes
+
+[ValueSet]
+Label=Occupation
+Name=P15_OCC_VS1
+Value=0;None
+Value=1;Medical
+Value=2;Accountants
+Value=10:13;Artist Technical
+Value=20:21;Admin Managerial
+Value=30:34;Clerical Office
+Value=40:43;Sales Workers
+Value=50:54;Service Workers
+Value=60:65;Farmers, Fishers
+Value=70:79;Production Work
+Value=80:83;Transport Worker
+Value=90:92;Construction Trades
+Value=95;Other
+Value=999;Not Reported
+Value='   ';Missing
+Name=MISSING,Special
+
+[Item]
+Label=Industry
+Name=P16_IND
+Start=23
+Len=3
+ZeroFill=Yes
+
+[ValueSet]
+Label=Industry
+Name=P16_IND_VS1
+Value=0;None
+Value=10;Hunting
+Value=11;Agriculture
+Value=12;Forestry
+Value=13;Fishing
+Value=20;Mining Quarrying
+Value=30;Food manufacture
+Value=31;Beverage Tobacco
+Value=32;Machinery Mfg
+Value=33;Wood products
+Value=34;Paper products
+Value=35;Chemical Petrol
+Value=36;Non-metal Manufa
+Value=37;Metal Industries
+Value=39;Jewelry Mfg
+Value=40;Energy supplies
+Value=41;Waterworks
+Value=42;Natural Gas Supply
+Value=43;Sanitation Services
+Value=50;Construction
+Value=60;Wholesale Trade
+Value=61;Retail Trade
+Value=62;Hotels, Restaurants
+Value=70;Transport
+Value=71;Storage
+Value=72;Communication
+Value=80;Financial Banks
+Value=81;Insurance
+Value=82;Real Estate
+Value=83;Business Service
+Value=90;Public Admin
+Value=91;Education
+Value=92;Medical Dental
+Value=93;Social Community
+Value=94;Recrtn Cultural
+Value=95;Personal HHold
+Value=98;Other
+Value=999;Not Reported
+Value='   ';Missing
+Name=MISSING,Special

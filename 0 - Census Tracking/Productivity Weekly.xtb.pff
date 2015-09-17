@@ -1,0 +1,16 @@
+﻿[Run Information]
+Version=CSPro 6.1
+AppType=Tabulation
+Operation=All
+
+[Files]
+Application=.\Productivity Weekly.xtb
+InputData=.\EAStatus.dat
+OutputTBW=.\Productivity Weekly.xtb.tbw
+Listing=.\Productivity Weekly.xtb.lst
+
+
+[Parameters]
+ViewListing=OnError
+ViewResults=No
+

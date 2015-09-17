@@ -1,0 +1,15 @@
+﻿[CSPro Application]
+Version=CSPro 6.1
+Label=MANUAL_COUNTS
+Name=MANUAL_COUNTS
+AppType=Tabulation
+[External Dictionaries]
+File=.\Manual Counts Province.xtb.wrk.dcf
+[AppCode]
+File=.\Manual Counts Province.xtb.apc
+[Message]
+File=.\Manual Counts Province.xtb.mgf
+[TabSpecs]
+File=.\Manual Counts Province.xts
+[Dictionary Types]
+Dict-Type=.\Manual Counts Province.xtb.wrk.dcf,Working

@@ -1,0 +1,1918 @@
+﻿[TabSpecs]
+Version=CSPro 6.1
+Label=PostcalcExample
+Name=POSTCALCEXAMPLE
+GenerateLogic=Yes
+ 
+[Dictionaries]
+File=.\PostcalcExample.dcf
+[TabSetFormat]
+Name=TabSetFmt, default
+ThousandsSeparator=','
+DecimalSeparator='.'
+ZeroMask='-'
+ZeroRoundMask='*'
+Suppressed='SSS'
+DigitGrouping=Thousands
+ZeroBeforeDecimal=Yes
+ForeignKey='Proportion'
+ForeignKey='Mode'
+ForeignKey='Variance'
+ForeignKey='and'
+ForeignKey='for'
+ForeignKey='(Weighted)'
+ForeignKey='<Value has no label>'
+ForeignKey='Mean'
+ForeignKey='Minimum'
+ForeignKey='Percentile'
+ForeignKey='Maximum'
+ForeignKey='Cumulative'
+ForeignKey='by'
+ForeignKey='(Percents)'
+ForeignKey='Undefined'
+ForeignKey='Number'
+ForeignKey='Percent'
+ForeignKey='Median'
+ForeignKey='Table'
+ForeignKey='to'
+ForeignKey='Frequency'
+ForeignKey='Standard Deviation'
+ForeignKey='Total'
+TitleTemplate='Table %s.'
+Continuation=' (continued)'
+MeasurementSystem=USUnits
+
+[TableFormat]
+Name=TableFmt, default
+BorderLeft=None
+BorderTop=None
+BorderRight=None
+BorderBottom=None
+LeftLeadering=None
+RightLeadering=None
+ReaderBreak=None
+IncludeSubTitle=Yes
+IncludePageNote=No
+IncludeEndNote=No
+
+
+[TallyFormat]
+Name=RowTallyFmt, default
+IncludeUndefined=No
+DumpUndefined=No
+[TallyStatistic]
+Type=Total
+
+[TallyStatistic]
+Type=Counts
+
+
+[TallyFormat]
+Name=ColumnTallyFmt, default
+IncludeUndefined=No
+DumpUndefined=No
+[TallyStatistic]
+Type=Total
+
+[TallyStatistic]
+Type=Counts
+
+
+[TallyFormat]
+Name=RowTallyFmt, 1
+[TallyStatistic]
+Type=Counts
+
+
+[TallyFormat]
+Name=RowTallyFmt, 2
+[TallyStatistic]
+Type=Counts
+
+
+[TallyFormat]
+Name=RowTallyFmt, 3
+[TallyStatistic]
+Type=Counts
+
+
+[TallyFormat]
+Name=RowTallyFmt, 4
+[TallyStatistic]
+Type=Counts
+
+
+[TallyFormat]
+Name=RowTallyFmt, 5
+[TallyStatistic]
+Type=Counts
+
+
+[TallyFormat]
+Name=RowTallyFmt, 6
+[TallyStatistic]
+Type=Counts
+
+
+[TallyFormat]
+Name=RowTallyFmt, 7
+[TallyStatistic]
+Type=Counts
+
+
+[TallyFormat]
+Name=RowTallyFmt, 8
+[TallyStatistic]
+Type=Counts
+
+
+[TallyFormat]
+Name=RowTallyFmt, 9
+[TallyStatistic]
+Type=Counts
+
+
+[TablePrintFormat]
+Name=TblPrintFmt, default
+TableLayout=LeftStandard
+PageBreakBeforeTable=Yes
+TblHorzCenter=No
+TblVertCenter=No
+PaperType=Letter
+PageOrientation=Portrait
+MarginTop=1.00
+MarginBottom=1.00
+MarginLeft=1.00
+MarginRight=1.00
+HeaderFrequency=TopOfPage
+
+[DataCellFormat]
+Name=SpannerFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Center
+VertAlign=Middle
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=Thin
+LineBottom=Thin
+LineLeft=Thin
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+ExtendLines=Yes
+NumDecimals=NotApplicable
+HideZeroRow=No
+
+[DataCellFormat]
+Name=ColumnHeadFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Right
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=Thin
+LineBottom=Thin
+LineLeft=Thin
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+ExtendIndentation=Yes
+NumDecimals=Zero
+HideZeroRow=No
+
+[DataCellFormat]
+Name=CaptionFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Left
+VertAlign=Middle
+TextColor=0
+FillColor=16777215
+IndentLeft=0.13
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=No
+NumDecimals=NotApplicable
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Left
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+NumDecimals=Zero
+HideZeroRow=No
+
+[DataCellFormat]
+Name=DataCellFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Right
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=NotApplicable
+LineBottom=NotApplicable
+LineLeft=NotApplicable
+LineRight=NotApplicable
+Hidden=NotApplicable
+SpanCells=NotApplicable
+NumDecimals=Zero
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 1
+Hidden=Yes
+SpanCells=NotApplicable
+ExtendFont=Yes
+
+[DataCellFormat]
+Name=CaptionFmt, 1
+Hidden=Yes
+SpanCells=No
+NumDecimals=NotApplicable
+
+[DataCellFormat]
+Name=CaptionFmt, 2
+Hidden=Yes
+SpanCells=No
+NumDecimals=NotApplicable
+
+[DataCellFormat]
+Name=CaptionFmt, 3
+IndentLeft=0.13
+IndentRight=0.00
+Hidden=No
+SpanCells=No
+Custom=Entire Population
+
+[DataCellFormat]
+Name=CaptionFmt, 4
+Hidden=Yes
+SpanCells=No
+NumDecimals=NotApplicable
+
+[DataCellFormat]
+Name=CaptionFmt, 5
+Hidden=Yes
+SpanCells=No
+NumDecimals=NotApplicable
+
+[DataCellFormat]
+Name=CaptionFmt, 6
+Hidden=Yes
+SpanCells=No
+NumDecimals=NotApplicable
+
+[DataCellFormat]
+Name=CaptionFmt, 7
+IndentLeft=0.13
+IndentRight=0.00
+Hidden=No
+SpanCells=No
+Custom=Entire Population
+
+[DataCellFormat]
+Name=StubFmt, 2
+IndentLeft=0.00
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+
+[DataCellFormat]
+Name=CaptionFmt, 8
+Hidden=Yes
+SpanCells=No
+NumDecimals=NotApplicable
+
+[DataCellFormat]
+Name=CaptionFmt, 9
+IndentLeft=0.13
+IndentRight=0.00
+Hidden=No
+SpanCells=No
+Custom=
+
+[DataCellFormat]
+Name=CaptionFmt, 10
+Hidden=Yes
+SpanCells=No
+NumDecimals=NotApplicable
+
+[DataCellFormat]
+Name=CaptionFmt, 11
+Hidden=Yes
+SpanCells=No
+NumDecimals=NotApplicable
+
+[DataCellFormat]
+Name=StubFmt, 3
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+
+[DataCellFormat]
+Name=CaptionFmt, 12
+Hidden=Yes
+SpanCells=No
+NumDecimals=NotApplicable
+
+[DataCellFormat]
+Name=CaptionFmt, 13
+Hidden=Yes
+SpanCells=No
+NumDecimals=NotApplicable
+
+[DataCellFormat]
+Name=StubFmt, 4
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+NumDecimals=One
+
+[DataCellFormat]
+Name=ColumnHeadFmt, 1
+Hidden=No
+SpanCells=NotApplicable
+ExtendIndentation=Yes
+NumDecimals=Two
+
+[DataCellFormat]
+Name=StubFmt, 5
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+NumDecimals=One
+
+[DataCellFormat]
+Name=StubFmt, 6
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+
+[DataCellFormat]
+Name=CaptionFmt, 14
+Font=-013 0000 0000 0000 0700 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+Hidden=No
+SpanCells=No
+NumDecimals=NotApplicable
+
+[DataCellFormat]
+Name=CaptionFmt, 15
+Hidden=Yes
+SpanCells=No
+NumDecimals=NotApplicable
+
+[DataCellFormat]
+Name=StubFmt, 7
+IndentLeft=0.00
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+Custom=Total
+ExtendFont=Yes
+
+[DataCellFormat]
+Name=CaptionFmt, 16
+Font=-013 0000 0000 0000 0700 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+Hidden=No
+SpanCells=No
+NumDecimals=NotApplicable
+
+[DataCellFormat]
+Name=StubFmt, 8
+IndentLeft=0.30
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+
+[DataCellFormat]
+Name=StubFmt, 9
+IndentLeft=0.30
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+NumDecimals=One
+
+[DataCellFormat]
+Name=StubFmt, 10
+IndentLeft=0.30
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+
+[DataCellFormat]
+Name=CaptionFmt, 17
+Font=-013 0000 0000 0000 0700 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+Hidden=No
+SpanCells=No
+NumDecimals=NotApplicable
+
+[DataCellFormat]
+Name=CaptionFmt, 18
+Font=-013 0000 0000 0000 0700 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+Hidden=No
+SpanCells=No
+NumDecimals=NotApplicable
+
+[DataCellFormat]
+Name=CaptionFmt, 19
+Font=-013 0000 0000 0000 0700 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+Hidden=No
+SpanCells=No
+NumDecimals=NotApplicable
+
+[DataCellFormat]
+Name=CaptionFmt, 20
+Font=-013 0000 0000 0000 0700 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+Hidden=No
+SpanCells=No
+NumDecimals=NotApplicable
+
+[DataCellFormat]
+Name=CaptionFmt, 21
+Font=-013 0000 0000 0000 0700 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+Hidden=No
+SpanCells=No
+NumDecimals=NotApplicable
+
+[DataCellFormat]
+Name=CaptionFmt, 22
+IndentLeft=0.13
+IndentRight=0.00
+Hidden=No
+SpanCells=No
+Custom=
+
+[DataCellFormat]
+Name=StubFmt, 11
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+NumDecimals=Two
+
+[Format]
+Name=TitleFmt, default
+Font=-016 0000 0000 0000 0700 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Left
+VertAlign=Top
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+
+[Format]
+Name=SubTitleFmt, default
+Font=-013 0000 0000 0000 0400 0255 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Left
+VertAlign=Top
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+
+[Format]
+Name=StubHead, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Left
+VertAlign=Middle
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=Thin
+LineBottom=Thin
+LineLeft=None
+LineRight=Thin
+Hidden=No
+SpanCells=NotApplicable
+ExtendLines=Yes
+
+[Format]
+Name=SecondaryStubHead, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Right
+VertAlign=Middle
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=Thin
+LineBottom=Thin
+LineLeft=Thin
+LineRight=Thin
+Hidden=No
+SpanCells=NotApplicable
+ExtendLines=Yes
+
+[Format]
+Name=HeaderLeftFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Left
+VertAlign=Top
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+Custom=&F
+
+[Format]
+Name=HeaderCenterFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Center
+VertAlign=Top
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+Custom=
+
+[Format]
+Name=HeaderRightFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Right
+VertAlign=Top
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+Custom=&D
+
+[Format]
+Name=FooterLeftFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Left
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+Custom=
+
+[Format]
+Name=FooterCenterFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Center
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+Custom=- &P -
+
+[Format]
+Name=FooterRightFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Right
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+Custom=
+
+[Format]
+Name=PageNoteFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Left
+VertAlign=Top
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+
+[Format]
+Name=EndNoteFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Left
+VertAlign=Top
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+
+[Format]
+Name=AreaCaption, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Left
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=No
+ExtendLines=Yes
+
+[Format]
+Name=TitleFmt, 1
+IndentLeft=0.00
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+Custom=Table 2. Sex and Literacy by Urban/Rural for Age 15 and Above
+
+[Format]
+Name=TitleFmt, 2
+IndentLeft=0.00
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+Custom=Table 3. Sex and Marital status by Urban/Rural for Age 15 and Above
+
+[Format]
+Name=TitleFmt, 3
+IndentLeft=0.00
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+Custom=Table 5. Fertility by Urban/Rural for Women 15-49
+
+[Format]
+Name=TitleFmt, 4
+IndentLeft=0.00
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+Custom=Table 4. Age in 5 year groups by Urban/Rural
+
+[Format]
+Name=SubTitleFmt, 1
+IndentLeft=0.00
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+Custom=Illustrates use of postcalc logic to compute male/female ratio
+
+[Format]
+Name=SubTitleFmt, 2
+IndentLeft=0.00
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+Custom=Postcalc logic used to compute percent literate
+
+[Format]
+Name=SubTitleFmt, 3
+IndentLeft=0.00
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+Custom=Postcalc logic used to compute unmarried men per 100 women.  Unmarried men per 100 Women is a new variable created in the working storage dictionary.
+
+[Format]
+Name=SubTitleFmt, 4
+IndentLeft=0.00
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+Custom=Postcalc logic used to compute depdendency ratio.
+
+[Format]
+Name=SubTitleFmt, 5
+IndentLeft=0.00
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+Custom=Postcalc logic used to compute children ever born per 1000 women, percent children surviving, children born last year per 1000 women and total fertility rate.
+
+ 
+[Table]
+Name=TABLE1
+Num=1
+ 
+[Title]
+Label='Table 1. Age in 5 year groups by Sex'
+GridViewSize=0,19,0,0,0,0
+ 
+[SubTitle]
+Label=''
+Format=SubTitleFmt, 1
+GridViewSize=0,24,0,0,0,0
+ 
+[PageNote]
+Label=''
+ 
+[EndNote]
+Label=''
+ 
+[HeaderLeft]
+Label=''
+ 
+[HeaderCenter]
+Label=''
+ 
+[HeaderRight]
+Label=''
+ 
+[FooterLeft]
+Label=''
+ 
+[FooterCenter]
+Label=''
+ 
+[FooterRight]
+Label=''
+ 
+[StubHead]
+Label='Age in 5 year groups'
+GridViewSize=100,20,0,0,0,0
+GridViewSize=100,20,0,0,0,0
+ 
+[SecondaryStubHead]
+Label=''
+ 
+[AreaCaption]
+Label='%AreaName%'
+ 
+[OneRowColTotal]
+Label=''
+ 
+ 
+[Rows]
+ 
+[Variable]
+Name=P04_AGE_VS2
+Label=Age in 5 year groups
+VarType=Dict
+ 
+[Value]
+Label=Total
+TabValueType=Total
+TabValueStatIndex=0
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=0 to 4 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=5 to 9 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=10 to 14 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=15 to 19 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=20 to 24 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=25 to 29 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=30 to 34 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=35 to 39 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=40 to 44 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=45 to 49 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=50 to 54 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=55 to 59 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=60 to 64 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=65 to 69 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=70 to 74 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=75 to 79 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=80 to 84 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=85 to 89 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=90 to 94 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=95 years and over
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[EndVar]
+ 
+[Cols]
+ 
+[Variable]
+Name=P03_SEX_W_RATIO_VS2
+Label=Sex
+VarType=Dict
+ 
+[Value]
+Label=Total
+TabValueType=Total
+TabValueStatIndex=0
+GridViewSize=75,0,0,0,0,0
+ 
+[Value]
+Label=Male
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=75,0,0,0,0,0
+ 
+[Value]
+Label=Female
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=75,0,0,0,0,0
+ 
+[Value]
+Label=Male/Female Ratio
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=ColumnHeadFmt, 1
+GridViewSize=123,0,0,0,0,0
+ 
+[EndVar]
+[PostCalc]
+PostCalc={ Compute male/female ratio, divide males (col 1) by females (col 2)
+PostCalc=and put in male/female ratio (col 3) }
+PostCalc=TABLE1[*,3]=TABLE1[*,1]/TABLE1[*,2];
+ 
+[Table]
+Name=TABLE2
+Num=2
+ 
+[Title]
+Label='Table 2. Sex and Literacy by Urban/Rural'
+Format=TitleFmt, 1
+GridViewSize=0,53,0,0,0,0
+ 
+[SubTitle]
+Label=''
+Format=SubTitleFmt, 2
+GridViewSize=0,23,0,0,0,0
+ 
+[PageNote]
+Label=''
+ 
+[EndNote]
+Label=''
+ 
+[HeaderLeft]
+Label=''
+ 
+[HeaderCenter]
+Label=''
+ 
+[HeaderRight]
+Label=''
+ 
+[FooterLeft]
+Label=''
+ 
+[FooterCenter]
+Label=''
+ 
+[FooterRight]
+Label=''
+ 
+[StubHead]
+Label=''
+ 
+[SecondaryStubHead]
+Label=''
+ 
+[AreaCaption]
+Label='%AreaName%'
+ 
+[OneRowColTotal]
+Label=''
+ 
+ 
+[Rows]
+ 
+[Variable]
+Name=P03_SEX_VS1
+Label=Sex
+VarType=Dict
+Format=CaptionFmt, 2
+ 
+[Value]
+Label=Total
+TabValueType=Total
+TabValueStatIndex=0
+Format=CaptionFmt, 3
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Male
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Female
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Variable]
+Name=P11_LITERACY_W_PCT_VS2
+Label=Literacy
+VarType=Dict
+Format=CaptionFmt, 1
+ 
+[Value]
+Label=Total
+TabValueType=Total
+TabValueStatIndex=0
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Literate
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Illiterate
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=StubFmt, 1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Percent Literate
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=StubFmt, 5
+GridViewSize=0,20,0,0,0,0
+ 
+[EndVar]
+ 
+[EndVar]
+ 
+[Cols]
+ 
+[Variable]
+Name=UR_VS1
+Label=Urban/Rural
+VarType=Dict
+ 
+[Value]
+Label=Total
+TabValueType=Total
+TabValueStatIndex=0
+GridViewSize=75,0,0,0,0,0
+ 
+[Value]
+Label=Urban
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=75,0,0,0,0,0
+ 
+[Value]
+Label=Rural
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=75,0,0,0,0,0
+ 
+[EndVar]
+[PostCalc]
+PostCalc=TABLE2[3, *] = 100 * TABLE2[1,*]/TABLE2[0,*]; { % literate for Total }
+PostCalc=TABLE2[7, *] = 100 * TABLE2[5,*]/TABLE2[4,*]; { % literate for Male }
+PostCalc=TABLE2[11, *] = 100 * TABLE2[9,*]/TABLE2[8,*]; { % literate for Female }
+PostCalc=
+ 
+[Table]
+Name=TABLE3
+Num=3
+ 
+[Title]
+Label='Table 3. Sex and Marital status, Unmarried Men per 100 Women by Urban/Rural'
+Format=TitleFmt, 2
+GridViewSize=0,44,0,0,0,0
+ 
+[SubTitle]
+Label=''
+Format=SubTitleFmt, 3
+GridViewSize=0,53,0,0,0,0
+ 
+[PageNote]
+Label=''
+ 
+[EndNote]
+Label=''
+ 
+[HeaderLeft]
+Label=''
+ 
+[HeaderCenter]
+Label=''
+ 
+[HeaderRight]
+Label=''
+ 
+[FooterLeft]
+Label=''
+ 
+[FooterCenter]
+Label=''
+ 
+[FooterRight]
+Label=''
+ 
+[StubHead]
+Label=''
+ 
+[SecondaryStubHead]
+Label=''
+ 
+[AreaCaption]
+Label='%AreaName%'
+ 
+[OneRowColTotal]
+Label=''
+ 
+ 
+[Rows]
+ 
+[Variable]
+Name=P03_SEX_VS1
+Label=Sex
+VarType=Dict
+Format=CaptionFmt, 5
+ 
+[Value]
+Label=Total
+TabValueType=Total
+TabValueStatIndex=0
+Format=CaptionFmt, 7
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Male
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Female
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Variable]
+Name=P05_MS_VS1
+Label=Marital status
+VarType=Dict
+Format=CaptionFmt, 6
+ 
+[Value]
+Label=Total
+TabValueType=Total
+TabValueStatIndex=0
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Married
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Divorced
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Separated
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Widowed
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Never Married
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[EndVar]
+ 
+[EndVar]
+ 
+[Variable]
+Name=UNMARRIED_MEN_PER_100_WOMEN_VS1
+Label=Unmarried Men per 100 Women
+VarType=Dict
+Format=CaptionFmt, 9
+Format=RowTallyFmt, 3
+ 
+[Value]
+Label=Unmarried Men per 100 Women
+TabValueType=VSetValue
+TabValueStatIndex=0
+Format=StubFmt, 6
+GridViewSize=0,20,0,0,0,0
+ 
+[EndVar]
+ 
+[Cols]
+ 
+[Variable]
+Name=UR_VS1
+Label=Urban/Rural
+VarType=Dict
+ 
+[Value]
+Label=Total
+TabValueType=Total
+TabValueStatIndex=0
+GridViewSize=75,0,0,0,0,0
+ 
+[Value]
+Label=Urban
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=75,0,0,0,0,0
+ 
+[Value]
+Label=Rural
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=75,0,0,0,0,0
+ 
+[EndVar]
+ 
+[UnitSpecs]
+[Unit]
+SubTable=P03_SEX_VS1*P05_MS_VS1 by UR_VS1
+LoopingVarName=
+Weight=
+Value=
+Universe=P04_AGE > 15
+[EndUnitSpecs]
+ 
+[PostCalc]
+PostCalc={unmarried men per 100 unmarried women =
+PostCalc=100 * (divorced men + separated men + widowed men + never married men)/
+PostCalc=(divorced women + separated women + widowed women + never married women)
+PostCalc=}
+PostCalc=
+PostCalc=TABLE3[18,*] =
+PostCalc=100 * (TABLE3[8,*] + TABLE3[9,*] + TABLE3[10,*] + TABLE3[11,*])/
+PostCalc=(TABLE3[14,*] + TABLE3[15,*] + TABLE3[16,*] + TABLE3[17,*]);
+ 
+[Table]
+Name=TABLE4
+Num=4
+ 
+[Title]
+Label='Table 4. Age in 5 year groups, Dependency Ratio by Urban/Rural'
+Format=TitleFmt, 4
+GridViewSize=0,32,0,0,0,0
+ 
+[SubTitle]
+Label=''
+Format=SubTitleFmt, 4
+GridViewSize=0,24,0,0,0,0
+ 
+[PageNote]
+Label=''
+ 
+[EndNote]
+Label=''
+ 
+[HeaderLeft]
+Label=''
+ 
+[HeaderCenter]
+Label=''
+ 
+[HeaderRight]
+Label=''
+ 
+[FooterLeft]
+Label=''
+ 
+[FooterCenter]
+Label=''
+ 
+[FooterRight]
+Label=''
+ 
+[StubHead]
+Label=''
+ 
+[SecondaryStubHead]
+Label=''
+ 
+[AreaCaption]
+Label='%AreaName%'
+ 
+[OneRowColTotal]
+Label=''
+ 
+ 
+[Rows]
+ 
+[Variable]
+Name=P04_AGE_VS2
+Label=Age in 5 year groups
+VarType=Dict
+ 
+[Value]
+Label=Total
+TabValueType=Total
+TabValueStatIndex=0
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=0 to 4 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=5 to 9 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=10 to 14 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=15 to 19 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=20 to 24 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=25 to 29 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=30 to 34 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=35 to 39 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=40 to 44 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=45 to 49 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=50 to 54 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=55 to 59 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=60 to 64 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=65 to 69 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=70 to 74 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=75 to 79 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=80 to 84 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=85 to 89 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=90 to 94 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=95 years and over
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[EndVar]
+ 
+[Variable]
+Name=DEPENDENCY_RATIO_VS1
+Label=Dependency Ratio
+VarType=Dict
+Format=CaptionFmt, 8
+Format=RowTallyFmt, 2
+ 
+[Value]
+Label=Dependency Ratio
+TabValueType=VSetValue
+TabValueStatIndex=0
+Format=StubFmt, 4
+GridViewSize=0,20,0,0,0,0
+ 
+[EndVar]
+ 
+[Cols]
+ 
+[Variable]
+Name=UR_VS1
+Label=Urban/Rural
+VarType=Dict
+ 
+[Value]
+Label=Total
+TabValueType=Total
+TabValueStatIndex=0
+GridViewSize=75,0,0,0,0,0
+ 
+[Value]
+Label=Urban
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=75,0,0,0,0,0
+ 
+[Value]
+Label=Rural
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=75,0,0,0,0,0
+ 
+[EndVar]
+[PostCalc]
+PostCalc={ Dependency ratio = 100 *(under 15 + 65 and over)/(15 to 64) }
+PostCalc=
+PostCalc={ add up under 15 (0 to 4, 5 to 9, and 10 to 14)}
+PostCalc=TABLE4[21,*] = TABLE4[1,*] + TABLE4[2,*] + TABLE4[3,*];
+PostCalc=
+PostCalc={ add in over 65 }
+PostCalc=TABLE4[21,*] = TABLE4[21,*] +
+PostCalc=TABLE4[14,*] + TABLE4[15,*] + TABLE4[16,*] +
+PostCalc=TABLE4[17,*] + TABLE4[18,*] + TABLE4[19,*] +
+PostCalc=TABLE4[20,*];
+PostCalc=
+PostCalc={ divide by 15 to 64 }
+PostCalc=TABLE4[21,*] = TABLE4[21,*]/
+PostCalc=(TABLE4[4,*] + TABLE4[5,*] + TABLE4[6,*] +
+PostCalc=TABLE4[7,*] + TABLE4[8,*] + TABLE4[9,*] +
+PostCalc=TABLE4[10,*] + TABLE4[11,*] + TABLE4[12,*] +
+PostCalc=TABLE4[13,*]);
+PostCalc=
+PostCalc={ multiply by 100 }
+PostCalc=TABLE4[21,*] = TABLE4[21,*] * 100;
+PostCalc=
+PostCalc=
+ 
+[Table]
+Name=TABLE5
+Num=5
+ 
+[Title]
+Label='Table 5. Age and Line number, Children Ever Born, Children Surviving, Children Born Last Year by Urban/Rural'
+Format=TitleFmt, 3
+GridViewSize=0,28,0,0,0,0
+ 
+[SubTitle]
+Label=''
+Format=SubTitleFmt, 5
+GridViewSize=0,51,0,0,0,0
+ 
+[PageNote]
+Label=''
+ 
+[EndNote]
+Label=''
+ 
+[HeaderLeft]
+Label=''
+ 
+[HeaderCenter]
+Label=''
+ 
+[HeaderRight]
+Label=''
+ 
+[FooterLeft]
+Label=''
+ 
+[FooterCenter]
+Label=''
+ 
+[FooterRight]
+Label=''
+ 
+[StubHead]
+Label=''
+ 
+[SecondaryStubHead]
+Label=''
+ 
+[AreaCaption]
+Label='%AreaName%'
+ 
+[OneRowColTotal]
+Label=''
+ 
+ 
+[Rows]
+ 
+[Variable]
+Name=P04_AGE_FOR_FERTILITY_VS5
+Label=Age
+VarType=Dict
+Format=CaptionFmt, 10
+Format=RowTallyFmt, 4
+ 
+[Value]
+Label=Women 15 - 19
+TabValueType=VSetValue
+TabValueStatIndex=0
+Format=CaptionFmt, 14
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Women 20 - 24
+TabValueType=VSetValue
+TabValueStatIndex=0
+Format=CaptionFmt, 16
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Women 25 - 29
+TabValueType=VSetValue
+TabValueStatIndex=0
+Format=CaptionFmt, 17
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Women 30 - 34
+TabValueType=VSetValue
+TabValueStatIndex=0
+Format=CaptionFmt, 18
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Women 35 - 39
+TabValueType=VSetValue
+TabValueStatIndex=0
+Format=CaptionFmt, 21
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Women 40 - 44
+TabValueType=VSetValue
+TabValueStatIndex=0
+Format=CaptionFmt, 20
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Women 45 - 49
+TabValueType=VSetValue
+TabValueStatIndex=0
+Format=CaptionFmt, 19
+GridViewSize=0,20,0,0,0,0
+ 
+[Variable]
+Name=LINE_VS1
+Label=Line number
+VarType=Dict
+Format=CaptionFmt, 15
+Format=RowTallyFmt, 8
+ 
+[Value]
+Label=
+TabValueType=VSetValue
+TabValueStatIndex=0
+Format=StubFmt, 7
+GridViewSize=0,20,0,0,0,0
+ 
+[EndVar]
+ 
+[Variable]
+Name=P18_BORN_W_PER_VS2
+Label=Children Ever Born
+VarType=Dict
+Format=CaptionFmt, 11
+Format=RowTallyFmt, 5
+ 
+[Value]
+Label=Children Ever Born
+TabValueType=VSetValue
+TabValueStatIndex=0
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=per 1000 women
+TabValueType=VSetValue
+TabValueStatIndex=0
+Format=StubFmt, 8
+GridViewSize=0,20,0,0,0,0
+ 
+[EndVar]
+ 
+[Variable]
+Name=P19_LIVING_W_PCT_VS2
+Label=Children Surviving
+VarType=Dict
+Format=CaptionFmt, 13
+Format=RowTallyFmt, 6
+ 
+[Value]
+Label=Children Surviving
+TabValueType=VSetValue
+TabValueStatIndex=0
+Format=StubFmt, 3
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=percent surviving
+TabValueType=VSetValue
+TabValueStatIndex=0
+Format=StubFmt, 9
+GridViewSize=0,20,0,0,0,0
+ 
+[EndVar]
+ 
+[Variable]
+Name=P20_BORN12_W_PER1000_VS2
+Label=Children Born Last Year
+VarType=Dict
+Format=CaptionFmt, 12
+Format=RowTallyFmt, 7
+ 
+[Value]
+Label=Children Born Last Year
+TabValueType=VSetValue
+TabValueStatIndex=0
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=per 1000 women
+TabValueType=VSetValue
+TabValueStatIndex=0
+Format=StubFmt, 10
+GridViewSize=0,20,0,0,0,0
+ 
+[EndVar]
+ 
+[EndVar]
+ 
+[Variable]
+Name=TOTAL_FERTILITY_RATE_VS1
+Label=Total Fertility Rate
+VarType=Dict
+Format=CaptionFmt, 22
+Format=RowTallyFmt, 9
+ 
+[Value]
+Label=Total Fertility Rate
+TabValueType=VSetValue
+TabValueStatIndex=0
+Format=StubFmt, 11
+GridViewSize=0,20,0,0,0,0
+ 
+[EndVar]
+ 
+[Cols]
+ 
+[Variable]
+Name=UR_VS1
+Label=Urban/Rural
+VarType=Dict
+ 
+[Value]
+Label=Total
+TabValueType=Total
+TabValueStatIndex=0
+GridViewSize=75,0,0,0,0,0
+ 
+[Value]
+Label=Urban
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=75,0,0,0,0,0
+ 
+[Value]
+Label=Rural
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=75,0,0,0,0,0
+ 
+[EndVar]
+ 
+[UnitSpecs]
+[Unit]
+SubTable=P04_AGE_FOR_FERTILITY_VS5*P18_BORN_W_PER_VS2 by UR_VS1
+LoopingVarName=
+Weight=
+Value=P18_BORN
+Universe=P03_SEX = 2 and P04_AGE in 15:49 { only women 15-49}
+[Unit]
+SubTable=P04_AGE_FOR_FERTILITY_VS5*P19_LIVING_W_PCT_VS2 by UR_VS1
+LoopingVarName=
+Weight=
+Value=P19_LIVING
+Universe=P03_SEX = 2 and P04_AGE in 15:49 { only women 15-49}
+[Unit]
+SubTable=P04_AGE_FOR_FERTILITY_VS5*P20_BORN12_W_PER1000_VS2 by UR_VS1
+LoopingVarName=
+Weight=
+Value=P20_BORN12
+Universe=P03_SEX = 2 and P04_AGE in 15:49 { only women 15-49}
+[Unit]
+SubTable=P04_AGE_FOR_FERTILITY_VS5*LINE_VS1 by UR_VS1
+LoopingVarName=
+Weight=
+Value=
+Universe=P03_SEX = 2 and P04_AGE in 15:49 { only women 15-49}
+[EndUnitSpecs]
+ 
+[PostCalc]
+PostCalc={ women 15-19 }
+PostCalc=
+PostCalc={ children ever born per 1000 women }
+PostCalc=TABLE5[2,*] = 1000 * TABLE5[1,*]/TABLE5[0,*];
+PostCalc={ percent surviving }
+PostCalc=TABLE5[4,*] = 100 * TABLE5[3,*]/TABLE5[1,*];
+PostCalc={ children born last year per 1000 women }
+PostCalc=TABLE5[6,*] = 1000 * TABLE5[5,*]/TABLE5[0,*];
+PostCalc=
+PostCalc={ women 20-24 }
+PostCalc=
+PostCalc={ children ever born per 1000 women }
+PostCalc=TABLE5[9,*] = 1000 * TABLE5[8,*]/TABLE5[7,*];
+PostCalc={ percent surviving }
+PostCalc=TABLE5[11,*] = 100 * TABLE5[10,*]/TABLE5[8,*];
+PostCalc={ children born last year per 1000 women }
+PostCalc=TABLE5[13,*] = 1000 * TABLE5[12,*]/TABLE5[7,*];
+PostCalc=
+PostCalc={ women 25-29 }
+PostCalc=
+PostCalc={ children ever born per 1000 women }
+PostCalc=TABLE5[16,*] = 1000 * TABLE5[15,*]/TABLE5[14,*];
+PostCalc={ percent surviving }
+PostCalc=TABLE5[18,*] = 100 * TABLE5[17,*]/TABLE5[15,*];
+PostCalc={ children born last year per 1000 women }
+PostCalc=TABLE5[20,*] = 1000 * TABLE5[19,*]/TABLE5[14,*];
+PostCalc=
+PostCalc={ women 30-34 }
+PostCalc=
+PostCalc={ children ever born per 1000 women }
+PostCalc=TABLE5[23,*] = 1000 * TABLE5[22,*]/TABLE5[21,*];
+PostCalc={ percent surviving }
+PostCalc=TABLE5[25,*] = 100 * TABLE5[24,*]/TABLE5[22,*];
+PostCalc={ children born last year per 1000 women }
+PostCalc=TABLE5[27,*] = 1000 * TABLE5[26,*]/TABLE5[21,*];
+PostCalc=
+PostCalc={ women 35-39 }
+PostCalc=
+PostCalc={ children ever born per 1000 women }
+PostCalc=TABLE5[30,*] = 1000 * TABLE5[29,*]/TABLE5[28,*];
+PostCalc={ percent surviving }
+PostCalc=TABLE5[32,*] = 100 * TABLE5[31,*]/TABLE5[29,*];
+PostCalc={ children born last year per 1000 women }
+PostCalc=TABLE5[34,*] = 1000 * TABLE5[33,*]/TABLE5[28,*];
+PostCalc=
+PostCalc=
+PostCalc={ women 40-44 }
+PostCalc=
+PostCalc={ children ever born per 1000 women }
+PostCalc=TABLE5[37,*] = 1000 * TABLE5[36,*]/TABLE5[35,*];
+PostCalc={ percent surviving }
+PostCalc=TABLE5[39,*] = 100 * TABLE5[38,*]/TABLE5[36,*];
+PostCalc={ children born last year per 1000 women }
+PostCalc=TABLE5[41,*] = 1000 * TABLE5[40,*]/TABLE5[35,*];
+PostCalc=
+PostCalc=
+PostCalc={ women 45-49 }
+PostCalc=
+PostCalc={ children ever born per 1000 women }
+PostCalc=TABLE5[44,*] = 1000 * TABLE5[43,*]/TABLE5[42,*];
+PostCalc={ percent surviving }
+PostCalc=TABLE5[46,*] = 100 * TABLE5[45,*]/TABLE5[43,*];
+PostCalc={ children born last year per 1000 women }
+PostCalc=TABLE5[48,*] = 1000 * TABLE5[47,*]/TABLE5[42,*];
+PostCalc=
+PostCalc={ Total Fertility Rate - sum all the children born last year per 1000 women,
+PostCalc=divide 1000 to get children born last year per woman and multiply by 5 since
+PostCalc=we are using 5 year age groups }
+PostCalc=TABLE5[49,*] = 5 * (TABLE5[6,*] + TABLE5[13,*] + TABLE5[20,*] + TABLE5[27,*]
+PostCalc=+ TABLE5[34,*] + TABLE5[41,*] + TABLE5[48,*])/1000;
+PostCalc=
+ 
+[Level]
+Table=TABLE1
+Table=TABLE2
+Table=TABLE3
+Table=TABLE4
+Table=TABLE5

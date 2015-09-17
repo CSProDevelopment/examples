@@ -1,0 +1,3132 @@
+﻿[TabSpecs]
+Version=CSPro 6.1
+Label=TableTipsNTricks
+Name=TABLETIPSNTRICKS
+GenerateLogic=Yes
+ 
+[Dictionaries]
+File=.\TableTipsNTricks.dcf
+[TabSetFormat]
+Name=TabSetFmt, default
+ThousandsSeparator=','
+DecimalSeparator='.'
+ZeroMask='-'
+ZeroRoundMask='*'
+Suppressed='SSS'
+DigitGrouping=Thousands
+ZeroBeforeDecimal=Yes
+ForeignKey='Proportion'
+ForeignKey='Mode'
+ForeignKey='Variance'
+ForeignKey='and'
+ForeignKey='for'
+ForeignKey='(Weighted)'
+ForeignKey='<Value has no label>'
+ForeignKey='Mean'
+ForeignKey='Minimum'
+ForeignKey='Percentile'
+ForeignKey='Maximum'
+ForeignKey='Cumulative'
+ForeignKey='by'
+ForeignKey='(Percents)'
+ForeignKey='Undefined'
+ForeignKey='Number'
+ForeignKey='Percent'
+ForeignKey='Median'
+ForeignKey='Table'
+ForeignKey='to'
+ForeignKey='Frequency'
+ForeignKey='Standard Deviation'
+ForeignKey='Total'
+TitleTemplate='Table %s.'
+Continuation=' (continued)'
+MeasurementSystem=USUnits
+
+[TableFormat]
+Name=TableFmt, default
+BorderLeft=None
+BorderTop=None
+BorderRight=None
+BorderBottom=None
+LeftLeadering=None
+RightLeadering=None
+ReaderBreak=None
+IncludeSubTitle=Yes
+IncludePageNote=No
+IncludeEndNote=No
+
+[TableFormat]
+Name=TableFmt, 1
+IncludeSubTitle=Yes
+IncludePageNote=No
+IncludeEndNote=No
+
+[TableFormat]
+Name=TableFmt, 2
+IncludeSubTitle=Yes
+IncludePageNote=No
+IncludeEndNote=No
+
+
+[TallyFormat]
+Name=RowTallyFmt, default
+IncludeUndefined=No
+DumpUndefined=No
+[TallyStatistic]
+Type=Total
+
+[TallyStatistic]
+Type=Counts
+
+
+[TallyFormat]
+Name=ColumnTallyFmt, default
+IncludeUndefined=No
+DumpUndefined=No
+[TallyStatistic]
+Type=Total
+
+[TallyStatistic]
+Type=Counts
+
+
+[TallyFormat]
+Name=RowTallyFmt, 1
+[TallyStatistic]
+Type=Total
+
+[TallyStatistic]
+Type=Counts
+
+
+[TallyFormat]
+Name=RowTallyFmt, 2
+[TallyStatistic]
+Type=Counts
+
+
+[TallyFormat]
+Name=RowTallyFmt, 3
+[TallyStatistic]
+Type=Counts
+
+
+[TallyFormat]
+Name=RowTallyFmt, 4
+[TallyStatistic]
+Type=Counts
+
+
+[TallyFormat]
+Name=RowTallyFmt, 5
+[TallyStatistic]
+Type=Counts
+
+
+[TallyFormat]
+Name=RowTallyFmt, 6
+[TallyStatistic]
+Type=Counts
+
+
+[TablePrintFormat]
+Name=TblPrintFmt, default
+TableLayout=LeftStandard
+PageBreakBeforeTable=Yes
+TblHorzCenter=No
+TblVertCenter=No
+PaperType=Letter
+PageOrientation=Portrait
+MarginTop=1.00
+MarginBottom=1.00
+MarginLeft=1.00
+MarginRight=1.00
+HeaderFrequency=TopOfPage
+
+[DataCellFormat]
+Name=SpannerFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Center
+VertAlign=Middle
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=Thin
+LineBottom=Thin
+LineLeft=Thin
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+ExtendLines=Yes
+NumDecimals=NotApplicable
+HideZeroRow=No
+
+[DataCellFormat]
+Name=ColumnHeadFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Right
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=Thin
+LineBottom=Thin
+LineLeft=Thin
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+ExtendIndentation=Yes
+NumDecimals=Zero
+HideZeroRow=No
+
+[DataCellFormat]
+Name=CaptionFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Left
+VertAlign=Middle
+TextColor=0
+FillColor=16777215
+IndentLeft=0.13
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=No
+NumDecimals=NotApplicable
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Left
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+NumDecimals=Zero
+HideZeroRow=No
+
+[DataCellFormat]
+Name=DataCellFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Right
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=NotApplicable
+LineBottom=NotApplicable
+LineLeft=NotApplicable
+LineRight=NotApplicable
+Hidden=NotApplicable
+SpanCells=NotApplicable
+NumDecimals=Zero
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 1
+FillColor=16777215
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 2
+FillColor=16777215
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 3
+FillColor=16777215
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 4
+FillColor=16777215
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 5
+FillColor=16777215
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 6
+FillColor=16777215
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 7
+FillColor=16777215
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 8
+FillColor=16777215
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 9
+FillColor=16777215
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 10
+FillColor=16777215
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 11
+FillColor=16777215
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 12
+FillColor=16777215
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 13
+FillColor=16777215
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 14
+FillColor=16777215
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 15
+FillColor=16777215
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 16
+FillColor=16777215
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 17
+FillColor=16777215
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 18
+FillColor=16777215
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 19
+FillColor=16777215
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 20
+FillColor=16777215
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=CaptionFmt, 1
+IndentLeft=0.13
+IndentRight=0.00
+Hidden=No
+SpanCells=No
+Custom=Total
+HideZeroRow=No
+
+[DataCellFormat]
+Name=CaptionFmt, 2
+IndentLeft=0.13
+IndentRight=0.00
+Hidden=No
+SpanCells=No
+Custom=Female
+HideZeroRow=No
+
+[DataCellFormat]
+Name=CaptionFmt, 3
+IndentLeft=0.13
+IndentRight=0.00
+Hidden=No
+SpanCells=No
+Custom=Total
+HideZeroRow=No
+
+[DataCellFormat]
+Name=CaptionFmt, 4
+IndentLeft=0.13
+IndentRight=0.00
+Hidden=No
+SpanCells=No
+Custom=Male
+HideZeroRow=No
+
+[DataCellFormat]
+Name=CaptionFmt, 5
+IndentLeft=0.13
+IndentRight=0.00
+Hidden=No
+SpanCells=No
+Custom=Female
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 21
+Font=-013 0000 0000 0000 0700 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=CaptionFmt, 6
+FillColor=16777215
+IndentLeft=0.13
+IndentRight=0.00
+Hidden=Yes
+SpanCells=No
+HideZeroRow=No
+
+[DataCellFormat]
+Name=CaptionFmt, 7
+FillColor=16777215
+IndentLeft=0.13
+IndentRight=0.00
+Hidden=Yes
+SpanCells=No
+HideZeroRow=No
+
+[DataCellFormat]
+Name=CaptionFmt, 8
+FillColor=16777215
+IndentLeft=0.13
+IndentRight=0.00
+Hidden=Yes
+SpanCells=No
+HideZeroRow=No
+
+[DataCellFormat]
+Name=CaptionFmt, 9
+FillColor=16777215
+IndentLeft=0.13
+IndentRight=0.00
+Hidden=Yes
+SpanCells=No
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 22
+IndentLeft=0.00
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+Custom=Total
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 23
+IndentLeft=0.00
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+Custom=Complete
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 24
+IndentLeft=0.00
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+Custom=Some but not all
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 25
+IndentLeft=0.00
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+Custom=None
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 26
+FillColor=16777215
+Hidden=Yes
+SpanCells=NotApplicable
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 27
+FillColor=16777215
+Hidden=Yes
+SpanCells=NotApplicable
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 28
+FillColor=16777215
+Hidden=Yes
+SpanCells=NotApplicable
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 29
+FillColor=16777215
+IndentLeft=0.20
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 30
+FillColor=16777215
+IndentLeft=0.20
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 31
+FillColor=16777215
+IndentLeft=0.20
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 32
+FillColor=16777215
+IndentLeft=0.20
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 33
+FillColor=16777215
+IndentLeft=0.20
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 34
+FillColor=16777215
+IndentLeft=0.20
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 35
+FillColor=16777215
+IndentLeft=0.20
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 36
+FillColor=16777215
+IndentLeft=0.20
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 37
+FillColor=16777215
+IndentLeft=0.20
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 38
+FillColor=16777215
+IndentLeft=0.20
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 39
+FillColor=16777215
+IndentLeft=0.20
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 40
+FillColor=16777215
+IndentLeft=0.20
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 41
+FillColor=16777215
+IndentLeft=0.20
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 42
+FillColor=16777215
+IndentLeft=0.20
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 43
+FillColor=16777215
+IndentLeft=0.20
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 44
+FillColor=16777215
+IndentLeft=0.20
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 45
+FillColor=16777215
+IndentLeft=0.20
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 46
+FillColor=16777215
+IndentLeft=0.20
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 47
+FillColor=16777215
+IndentLeft=0.20
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 48
+FillColor=16777215
+IndentLeft=0.20
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+HideZeroRow=No
+
+[DataCellFormat]
+Name=StubFmt, 49
+IndentLeft=0.40
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+ExtendFont=Yes
+HideZeroRow=No
+
+[Format]
+Name=TitleFmt, default
+Font=-016 0000 0000 0000 0700 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Left
+VertAlign=Top
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+
+[Format]
+Name=SubTitleFmt, default
+Font=-013 0000 0000 0000 0400 0255 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Left
+VertAlign=Top
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+
+[Format]
+Name=StubHead, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Left
+VertAlign=Middle
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=Thin
+LineBottom=Thin
+LineLeft=None
+LineRight=Thin
+Hidden=No
+SpanCells=NotApplicable
+ExtendLines=Yes
+
+[Format]
+Name=SecondaryStubHead, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Right
+VertAlign=Middle
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=Thin
+LineBottom=Thin
+LineLeft=Thin
+LineRight=Thin
+Hidden=No
+SpanCells=NotApplicable
+ExtendLines=Yes
+
+[Format]
+Name=HeaderLeftFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Left
+VertAlign=Top
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+Custom=&F
+
+[Format]
+Name=HeaderCenterFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Center
+VertAlign=Top
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+Custom=
+
+[Format]
+Name=HeaderRightFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Right
+VertAlign=Top
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+Custom=&D
+
+[Format]
+Name=FooterLeftFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Left
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+Custom=
+
+[Format]
+Name=FooterCenterFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Center
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+Custom=- &P -
+
+[Format]
+Name=FooterRightFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Right
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+Custom=
+
+[Format]
+Name=PageNoteFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Left
+VertAlign=Top
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+
+[Format]
+Name=EndNoteFmt, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Left
+VertAlign=Top
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=NotApplicable
+
+[Format]
+Name=AreaCaption, default
+Font=-013 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+HorzAlign=Left
+VertAlign=Bottom
+TextColor=0
+FillColor=16777215
+IndentLeft=0.00
+IndentRight=0.00
+LineTop=None
+LineBottom=None
+LineLeft=None
+LineRight=None
+Hidden=No
+SpanCells=No
+ExtendLines=Yes
+
+[Format]
+Name=TitleFmt, 1
+IndentLeft=0.00
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+Custom=Table 3. Sex and Literacy by Urban/Rural for Age > 10
+
+[Format]
+Name=TitleFmt, 2
+IndentLeft=0.00
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+Custom=Table 4. Sex and Literacy by Urban/Rural for Age > 10\n
+
+[Format]
+Name=SubTitleFmt, 1
+IndentLeft=0.00
+IndentRight=0.00
+SpanCells=NotApplicable
+Custom=Note use of overlapping ranges in value set to compute subtotals for age
+
+[Format]
+Name=SubTitleFmt, 2
+IndentLeft=0.00
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+Custom=Note use of disjoint value range in value set for marital status
+
+[Format]
+Name=TitleFmt, 3
+IndentLeft=0.00
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+Custom=Table 1. Age by Sex
+
+[Format]
+Name=SubTitleFmt, 3
+IndentLeft=0.00
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+Custom="Hide" of Male subgrouping by modifying value set for sex
+
+[Format]
+Name=SubTitleFmt, 4
+IndentLeft=0.00
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+Custom="Hide" of subgrouping as in Table 3 but this time using multiple subtables with universes.
+
+[Format]
+Name=TitleFmt, 4
+IndentLeft=0.00
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+Custom=Table 5. Sex and Literacy by Urban/Rural for Age > 10
+
+[Format]
+Name=SubTitleFmt, 5
+IndentLeft=0.00
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+Custom=Modify format of an item in one subgrouping without modifying corresponding items in other subgroupings.  Implemented using multiple subtables rather than true subgroupings.
+
+[Format]
+Name=SubTitleFmt, 6
+IndentLeft=0.00
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+Custom=Single variable recode using value sets.  Recode from original 5 categories of marital status down to 2 categories.
+
+[Format]
+Name=SubTitleFmt, 7
+IndentLeft=0.00
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+Custom=Multiple variable recode using multiple subtables with universes.  Compute new recoded variable complete plumbing based on three existing variables (toilet, bathing, source of water).  Compare this approach to using tablogic (see tablogic examples).
+
+[Format]
+Name=TitleFmt, 5
+IndentLeft=0.00
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+Custom=Table 7. Complete plumbing by Urban/Rural
+
+[Format]
+Name=TitleFmt, 6
+IndentLeft=0.00
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+Custom=Table 2. Divorced by Urban/Rural and Sex for Age > 15
+
+[Format]
+Name=TitleFmt, 7
+IndentLeft=0.00
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+Custom=Table 6. Marital status by Urban/Rural for Age > 15
+
+[Format]
+Name=TitleFmt, 8
+IndentLeft=0.00
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+Custom=Table 8. Wall type, Roof type, Floor type by Urban/Rural for Housing Units with Children Born in Year Before Census
+
+[Format]
+Name=SubTitleFmt, 8
+IndentLeft=0.00
+IndentRight=0.00
+Hidden=No
+SpanCells=NotApplicable
+Custom=Table 7. Complete plumbing by Urban/Rural\nMultiple variable recode using multiple subtables with universes.  Compute new recoded variable complete plumbing based on three existing variables (toilet, bathing, source of water).  Compare this approach to using tablogic (see tablogic examples).\n
+
+ 
+[Table]
+Name=TABLE1
+Num=1
+ 
+Format=TableFmt, 1
+[Title]
+Label='Table 1. Age (Single Year) by Sex'
+Format=TitleFmt, 3
+GridViewSize=0,29,0,0,0,0
+ 
+[SubTitle]
+Label=''
+Format=SubTitleFmt, 1
+GridViewSize=0,37,0,0,0,0
+ 
+[PageNote]
+Label=''
+ 
+[EndNote]
+Label=''
+ 
+[HeaderLeft]
+Label=''
+ 
+[HeaderCenter]
+Label=''
+ 
+[HeaderRight]
+Label=''
+ 
+[FooterLeft]
+Label=''
+ 
+[FooterCenter]
+Label=''
+ 
+[FooterRight]
+Label=''
+ 
+[StubHead]
+Label='Age (Single Year)'
+GridViewSize=100,20,0,0,0,0
+GridViewSize=100,20,0,0,0,0
+ 
+[SecondaryStubHead]
+Label=''
+ 
+[AreaCaption]
+Label='%AreaName%'
+ 
+[OneRowColTotal]
+Label=''
+ 
+ 
+[Rows]
+ 
+[Variable]
+Name=P04_AGE_SINGLE_SUBTOTALS_VS5
+Label=Age (Single Year)
+VarType=Dict
+Format=RowTallyFmt, 1
+ 
+[Value]
+Label=Total
+TabValueType=Total
+TabValueStatIndex=0
+Format=StubFmt, 49
+ 
+[Value]
+Label=0 to 4 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=StubFmt, 29
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=0 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=StubFmt, 1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=1 year
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=2 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=3 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=4 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=5 to 9 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=StubFmt, 30
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=5 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=StubFmt, 2
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=6 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=7 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=8 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=9 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=10 to 14 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=StubFmt, 31
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=10 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=StubFmt, 3
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=11 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=12 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=13 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=14 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=15 to 19 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=StubFmt, 32
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=15 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=StubFmt, 4
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=16 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=17 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=18 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=19 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=20 to 24 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=StubFmt, 33
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=20 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=StubFmt, 5
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=21 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=22 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=23 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=24 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=25 to 29 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=StubFmt, 34
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=25 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=StubFmt, 6
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=26 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=27 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=28 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=29 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=30 to 34 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=StubFmt, 35
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=30 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=StubFmt, 7
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=31 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=32 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=33 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=34 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=35 to 39 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=StubFmt, 36
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=35 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=StubFmt, 8
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=36 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=37 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=38 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=39 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=40 to 44 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=StubFmt, 37
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=40 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=StubFmt, 9
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=41 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=42 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=43 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=44 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=45 to 49 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=StubFmt, 38
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=45 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=StubFmt, 10
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=46 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=47 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=48 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=49 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=50 to 54 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=StubFmt, 39
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=50 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=StubFmt, 11
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=51 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=52 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=53 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=54 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=55 to 59 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=StubFmt, 40
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=55 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=StubFmt, 12
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=56 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=57 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=58 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=59 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=60 to 64 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=StubFmt, 41
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=60 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=StubFmt, 13
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=61 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=62 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=63 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=64 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=65 to 69 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=StubFmt, 42
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=65 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=StubFmt, 14
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=66 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=67 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=68 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=69 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=70 to 74 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=StubFmt, 43
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=70 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=StubFmt, 15
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=71 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=72 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=73 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=74 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=75 to 79 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=StubFmt, 44
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=75 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=StubFmt, 16
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=76 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=77 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=78 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=79 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=80 to 84 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=StubFmt, 45
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=80 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=StubFmt, 17
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=81 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=82 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=83 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=84 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=85 to 89 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=StubFmt, 46
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=85 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=StubFmt, 18
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=86 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=87 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=88 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=89 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=90 to 94 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=StubFmt, 47
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=90 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=StubFmt, 19
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=91 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=92 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=93 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=94 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=95 to 99 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=StubFmt, 48
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=95 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=StubFmt, 20
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=96 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=97 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=98 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=99 years
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[EndVar]
+ 
+[Cols]
+ 
+[Variable]
+Name=P03_SEX_VS1
+Label=Sex
+VarType=Dict
+ 
+[Value]
+Label=Total
+TabValueType=Total
+TabValueStatIndex=0
+GridViewSize=75,0,0,0,0,0
+ 
+[Value]
+Label=Male
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=75,0,0,0,0,0
+ 
+[Value]
+Label=Female
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=75,0,0,0,0,0
+ 
+[EndVar]
+ 
+[Table]
+Name=TABLE2
+Num=2
+ 
+Format=TableFmt, 2
+[Title]
+Label='Table 2. Divorced by Urban/Rural and Sex'
+Format=TitleFmt, 6
+GridViewSize=0,22,0,0,0,0
+ 
+[SubTitle]
+Label=''
+Format=SubTitleFmt, 2
+GridViewSize=0,22,0,0,0,0
+ 
+[PageNote]
+Label=''
+ 
+[EndNote]
+Label=''
+ 
+[HeaderLeft]
+Label=''
+ 
+[HeaderCenter]
+Label=''
+ 
+[HeaderRight]
+Label=''
+ 
+[FooterLeft]
+Label=''
+ 
+[FooterCenter]
+Label=''
+ 
+[FooterRight]
+Label=''
+ 
+[StubHead]
+Label='Divorced'
+GridViewSize=100,20,0,0,0,0
+GridViewSize=100,20,0,0,0,0
+GridViewSize=100,20,0,0,0,0
+GridViewSize=100,20,0,0,0,0
+ 
+[SecondaryStubHead]
+Label=''
+ 
+[AreaCaption]
+Label='%AreaName%'
+ 
+[OneRowColTotal]
+Label=''
+ 
+ 
+[Rows]
+ 
+[Variable]
+Name=P05_MS_DIVORCED_VS2
+Label=Divorced
+VarType=Dict
+ 
+[Value]
+Label=Total
+TabValueType=Total
+TabValueStatIndex=0
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Divorced
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Not Divorced
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[EndVar]
+ 
+[Cols]
+ 
+[Variable]
+Name=UR_VS1
+Label=Urban/Rural
+VarType=Dict
+ 
+[Value]
+Label=Total
+TabValueType=Total
+TabValueStatIndex=0
+ 
+[Value]
+Label=Urban
+TabValueType=VSetValue
+TabValueStatIndex=1
+ 
+[Value]
+Label=Rural
+TabValueType=VSetValue
+TabValueStatIndex=1
+ 
+[Variable]
+Name=P03_SEX_VS1
+Label=Sex
+VarType=Dict
+ 
+[Value]
+Label=Total
+TabValueType=Total
+TabValueStatIndex=0
+GridViewSize=75,0,0,0,0,0
+ 
+[Value]
+Label=Male
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=75,0,0,0,0,0
+ 
+[Value]
+Label=Female
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=75,0,0,0,0,0
+ 
+[EndVar]
+ 
+[EndVar]
+[UnitSpecs]
+[Unit]
+SubTable=Entire Table
+LoopingVarName=
+Weight=
+Value=
+Universe=P04_AGE > 15
+[EndUnitSpecs]
+ 
+ 
+[Table]
+Name=TABLE3
+Num=3
+ 
+[Title]
+Label='Table 3. Sex and Literacy by Urban/Rural'
+Format=TitleFmt, 1
+GridViewSize=0,44,0,0,0,0
+ 
+[SubTitle]
+Label=''
+Format=SubTitleFmt, 3
+GridViewSize=0,42,0,0,0,0
+ 
+[PageNote]
+Label=''
+ 
+[EndNote]
+Label=''
+ 
+[HeaderLeft]
+Label=''
+ 
+[HeaderCenter]
+Label=''
+ 
+[HeaderRight]
+Label=''
+ 
+[FooterLeft]
+Label=''
+ 
+[FooterCenter]
+Label=''
+ 
+[FooterRight]
+Label=''
+ 
+[StubHead]
+Label=''
+ 
+[SecondaryStubHead]
+Label=''
+ 
+[AreaCaption]
+Label='%AreaName%'
+ 
+[OneRowColTotal]
+Label=''
+ 
+ 
+[Rows]
+ 
+[Variable]
+Name=P03_SEX_NO_MALE_VS2
+Label=Sex
+VarType=Dict
+Format=RowTallyFmt, 2
+ 
+[Value]
+Label=Total
+TabValueType=VSetValue
+TabValueStatIndex=0
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Female
+TabValueType=VSetValue
+TabValueStatIndex=0
+GridViewSize=0,20,0,0,0,0
+ 
+[Variable]
+Name=P11_LITERACY_NO_NR_NA_VS1
+Label=Literacy
+VarType=Dict
+ 
+[Value]
+Label=Total
+TabValueType=Total
+TabValueStatIndex=0
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Literate
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Illiterate
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[EndVar]
+ 
+[EndVar]
+ 
+[Cols]
+ 
+[Variable]
+Name=UR_VS1
+Label=Urban/Rural
+VarType=Dict
+ 
+[Value]
+Label=Total
+TabValueType=Total
+TabValueStatIndex=0
+GridViewSize=75,0,0,0,0,0
+ 
+[Value]
+Label=Urban
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=75,0,0,0,0,0
+ 
+[Value]
+Label=Rural
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=75,0,0,0,0,0
+ 
+[EndVar]
+[UnitSpecs]
+[Unit]
+SubTable=Entire Table
+LoopingVarName=
+Weight=
+Value=
+Universe=P04_AGE > 10
+[EndUnitSpecs]
+ 
+ 
+[Table]
+Name=TABLE4
+Num=4
+ 
+[Title]
+Label='Table 4. Literacy, Literacy by Urban/Rural'
+Format=TitleFmt, 2
+GridViewSize=0,46,0,0,0,0
+ 
+[SubTitle]
+Label=''
+Format=SubTitleFmt, 4
+GridViewSize=0,41,0,0,0,0
+ 
+[PageNote]
+Label=''
+ 
+[EndNote]
+Label=''
+ 
+[HeaderLeft]
+Label=''
+ 
+[HeaderCenter]
+Label=''
+ 
+[HeaderRight]
+Label=''
+ 
+[FooterLeft]
+Label=''
+ 
+[FooterCenter]
+Label=''
+ 
+[FooterRight]
+Label=''
+ 
+[StubHead]
+Label=''
+ 
+[SecondaryStubHead]
+Label=''
+ 
+[AreaCaption]
+Label='%AreaName%'
+ 
+[OneRowColTotal]
+Label=''
+ 
+ 
+[Rows]
+ 
+[Variable]
+Name=P11_LITERACY_NO_NR_NA_VS1
+Label=Literacy
+VarType=Dict
+Format=CaptionFmt, 1
+ 
+[Value]
+Label=Total
+TabValueType=Total
+TabValueStatIndex=0
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Literate
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Illiterate
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[EndVar]
+ 
+[Variable]
+Name=P11_LITERACY_NO_NR_NA_VS1
+Label=Literacy
+VarType=Dict
+Format=CaptionFmt, 2
+ 
+[Value]
+Label=Total
+TabValueType=Total
+TabValueStatIndex=0
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Literate
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Illiterate
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[EndVar]
+ 
+[Cols]
+ 
+[Variable]
+Name=UR_VS1
+Label=Urban/Rural
+VarType=Dict
+ 
+[Value]
+Label=Total
+TabValueType=Total
+TabValueStatIndex=0
+GridViewSize=75,0,0,0,0,0
+ 
+[Value]
+Label=Urban
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=75,0,0,0,0,0
+ 
+[Value]
+Label=Rural
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=75,0,0,0,0,0
+ 
+[EndVar]
+[UnitSpecs]
+[Unit]
+SubTable=Entire Table
+LoopingVarName=
+Weight=
+Value=
+Universe=P04_AGE > 10
+[Unit]
+SubTable=P11_LITERACY_NO_NR_NA_VS1(2) by UR_VS1
+LoopingVarName=
+Weight=
+Value=
+Universe=P03_SEX = 2
+[EndUnitSpecs]
+ 
+ 
+[Table]
+Name=TABLE5
+Num=5
+ 
+[Title]
+Label='Table 5. Literacy, Literacy, Literacy by Urban/Rural'
+Format=TitleFmt, 4
+GridViewSize=0,42,0,0,0,0
+ 
+[SubTitle]
+Label=''
+Format=SubTitleFmt, 5
+GridViewSize=0,69,0,0,0,0
+ 
+[PageNote]
+Label=''
+ 
+[EndNote]
+Label=''
+ 
+[HeaderLeft]
+Label=''
+ 
+[HeaderCenter]
+Label=''
+ 
+[HeaderRight]
+Label=''
+ 
+[FooterLeft]
+Label=''
+ 
+[FooterCenter]
+Label=''
+ 
+[FooterRight]
+Label=''
+ 
+[StubHead]
+Label=''
+ 
+[SecondaryStubHead]
+Label=''
+ 
+[AreaCaption]
+Label='%AreaName%'
+ 
+[OneRowColTotal]
+Label=''
+ 
+ 
+[Rows]
+ 
+[Variable]
+Name=P11_LITERACY_NO_NR_NA_VS1
+Label=Literacy
+VarType=Dict
+Format=CaptionFmt, 3
+ 
+[Value]
+Label=Total
+TabValueType=Total
+TabValueStatIndex=0
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Literate
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=StubFmt, 21
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Illiterate
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[EndVar]
+ 
+[Variable]
+Name=P11_LITERACY_NO_NR_NA_VS1
+Label=Literacy
+VarType=Dict
+Format=CaptionFmt, 4
+ 
+[Value]
+Label=Total
+TabValueType=Total
+TabValueStatIndex=0
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Literate
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Illiterate
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[EndVar]
+ 
+[Variable]
+Name=P11_LITERACY_NO_NR_NA_VS1
+Label=Literacy
+VarType=Dict
+Format=CaptionFmt, 5
+ 
+[Value]
+Label=Total
+TabValueType=Total
+TabValueStatIndex=0
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Literate
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Illiterate
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[EndVar]
+ 
+[Cols]
+ 
+[Variable]
+Name=UR_VS1
+Label=Urban/Rural
+VarType=Dict
+ 
+[Value]
+Label=Total
+TabValueType=Total
+TabValueStatIndex=0
+GridViewSize=75,0,0,0,0,0
+ 
+[Value]
+Label=Urban
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=75,0,0,0,0,0
+ 
+[Value]
+Label=Rural
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=75,0,0,0,0,0
+ 
+[EndVar]
+[UnitSpecs]
+[Unit]
+SubTable=Entire Table
+LoopingVarName=
+Weight=
+Value=
+Universe=P04_AGE > 10
+[Unit]
+SubTable=P11_LITERACY_NO_NR_NA_VS1(2) by UR_VS1
+LoopingVarName=
+Weight=
+Value=
+Universe=P03_SEX = 1
+[Unit]
+SubTable=P11_LITERACY_NO_NR_NA_VS1(3) by UR_VS1
+LoopingVarName=
+Weight=
+Value=
+Universe=P03_SEX = 2
+[EndUnitSpecs]
+ 
+ 
+[Table]
+Name=TABLE6
+Num=6
+ 
+[Title]
+Label='Table 6. Marital status by Urban/Rural'
+Format=TitleFmt, 7
+GridViewSize=0,45,0,0,0,0
+ 
+[SubTitle]
+Label=''
+Format=SubTitleFmt, 6
+GridViewSize=0,53,0,0,0,0
+ 
+[PageNote]
+Label=''
+ 
+[EndNote]
+Label=''
+ 
+[HeaderLeft]
+Label=''
+ 
+[HeaderCenter]
+Label=''
+ 
+[HeaderRight]
+Label=''
+ 
+[FooterLeft]
+Label=''
+ 
+[FooterCenter]
+Label=''
+ 
+[FooterRight]
+Label=''
+ 
+[StubHead]
+Label='Marital status'
+GridViewSize=100,20,0,0,0,0
+GridViewSize=100,20,0,0,0,0
+ 
+[SecondaryStubHead]
+Label=''
+ 
+[AreaCaption]
+Label='%AreaName%'
+ 
+[OneRowColTotal]
+Label=''
+ 
+ 
+[Rows]
+ 
+[Variable]
+Name=P05_MS_YESNO_VS3
+Label=Marital status
+VarType=Dict
+ 
+[Value]
+Label=Total
+TabValueType=Total
+TabValueStatIndex=0
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Married
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Not Married
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[EndVar]
+ 
+[Cols]
+ 
+[Variable]
+Name=UR_VS1
+Label=Urban/Rural
+VarType=Dict
+ 
+[Value]
+Label=Total
+TabValueType=Total
+TabValueStatIndex=0
+GridViewSize=75,0,0,0,0,0
+ 
+[Value]
+Label=Urban
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=75,0,0,0,0,0
+ 
+[Value]
+Label=Rural
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=75,0,0,0,0,0
+ 
+[EndVar]
+[UnitSpecs]
+[Unit]
+SubTable=Entire Table
+LoopingVarName=
+Weight=
+Value=
+Universe=P04_AGE > 15
+[EndUnitSpecs]
+ 
+ 
+[Table]
+Name=TABLE7
+Num=7
+ 
+[Title]
+Label='Table 7. Complete plumbing, Complete plumbing, Complete plumbing, Complete plumbing by Urban/Rural'
+Format=TitleFmt, 5
+GridViewSize=0,20,0,0,0,0
+ 
+[SubTitle]
+Label=''
+Format=SubTitleFmt, 7
+GridViewSize=0,88,0,0,0,0
+ 
+[PageNote]
+Label=''
+ 
+[EndNote]
+Label=''
+ 
+[HeaderLeft]
+Label=''
+ 
+[HeaderCenter]
+Label=''
+ 
+[HeaderRight]
+Label=''
+ 
+[FooterLeft]
+Label=''
+ 
+[FooterCenter]
+Label=''
+ 
+[FooterRight]
+Label=''
+ 
+[StubHead]
+Label=''
+ 
+[SecondaryStubHead]
+Label=''
+ 
+[AreaCaption]
+Label='%AreaName%'
+ 
+[OneRowColTotal]
+Label=''
+ 
+ 
+[Rows]
+ 
+[Variable]
+Name=COMPLETE_PLUMBING_VS2
+Label=Complete plumbing
+VarType=Dict
+Format=CaptionFmt, 6
+Format=RowTallyFmt, 3
+ 
+[Value]
+Label=single category
+TabValueType=VSetValue
+TabValueStatIndex=0
+Format=StubFmt, 22
+GridViewSize=0,20,0,0,0,0
+ 
+[EndVar]
+ 
+[Variable]
+Name=COMPLETE_PLUMBING_VS2
+Label=Complete plumbing
+VarType=Dict
+Format=CaptionFmt, 7
+Format=RowTallyFmt, 4
+ 
+[Value]
+Label=single category
+TabValueType=VSetValue
+TabValueStatIndex=0
+Format=StubFmt, 23
+GridViewSize=0,20,0,0,0,0
+ 
+[EndVar]
+ 
+[Variable]
+Name=COMPLETE_PLUMBING_VS2
+Label=Complete plumbing
+VarType=Dict
+Format=CaptionFmt, 8
+Format=RowTallyFmt, 5
+ 
+[Value]
+Label=single category
+TabValueType=VSetValue
+TabValueStatIndex=0
+Format=StubFmt, 24
+GridViewSize=0,20,0,0,0,0
+ 
+[EndVar]
+ 
+[Variable]
+Name=COMPLETE_PLUMBING_VS2
+Label=Complete plumbing
+VarType=Dict
+Format=CaptionFmt, 9
+Format=RowTallyFmt, 6
+ 
+[Value]
+Label=single category
+TabValueType=VSetValue
+TabValueStatIndex=0
+Format=StubFmt, 25
+GridViewSize=0,20,0,0,0,0
+ 
+[EndVar]
+ 
+[Cols]
+ 
+[Variable]
+Name=UR_VS1
+Label=Urban/Rural
+VarType=Dict
+ 
+[Value]
+Label=Total
+TabValueType=Total
+TabValueStatIndex=0
+GridViewSize=75,0,0,0,0,0
+ 
+[Value]
+Label=Urban
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=75,0,0,0,0,0
+ 
+[Value]
+Label=Rural
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=75,0,0,0,0,0
+ 
+[EndVar]
+ 
+[UnitSpecs]
+[Unit]
+SubTable=COMPLETE_PLUMBING_VS2(2) by UR_VS1
+LoopingVarName=
+Weight=
+Value=
+Universe=H10_WATER = 1 and H09_BATH = 1 and H08_TOILET = 1
+[Unit]
+SubTable=COMPLETE_PLUMBING_VS2(3) by UR_VS1
+LoopingVarName=
+Weight=
+Value=
+Universe=(H10_WATER = 1 or H09_BATH = 1 or H08_TOILET = 1) and not (H10_WATER = 1 and H09_BATH = 1 and H08_TOILET = 1)
+[Unit]
+SubTable=COMPLETE_PLUMBING_VS2(4) by UR_VS1
+LoopingVarName=
+Weight=
+Value=
+Universe=H10_WATER <> 1 and H09_BATH <> 1 and H08_TOILET <> 1
+[EndUnitSpecs]
+ 
+ 
+[Table]
+Name=TABLE8
+Num=8
+ 
+[Title]
+Label='Table 8. Wall type, Roof type, Floor type by Urban/Rural'
+Format=TitleFmt, 8
+GridViewSize=0,63,0,0,0,0
+ 
+[SubTitle]
+Label=''
+Format=SubTitleFmt, 8
+GridViewSize=0,288,0,0,0,0
+ 
+[PageNote]
+Label=''
+ 
+[EndNote]
+Label=''
+ 
+[HeaderLeft]
+Label=''
+ 
+[HeaderCenter]
+Label=''
+ 
+[HeaderRight]
+Label=''
+ 
+[FooterLeft]
+Label=''
+ 
+[FooterCenter]
+Label=''
+ 
+[FooterRight]
+Label=''
+ 
+[StubHead]
+Label=''
+GridViewSize=123,24,0,0,0,0
+GridViewSize=123,24,0,0,0,0
+ 
+[SecondaryStubHead]
+Label=''
+ 
+[AreaCaption]
+Label='%AreaName%'
+ 
+[OneRowColTotal]
+Label=''
+ 
+ 
+[Rows]
+ 
+[Variable]
+Name=H02_WALL_VS1
+Label=Wall type
+VarType=Dict
+ 
+[Value]
+Label=Total
+TabValueType=Total
+TabValueStatIndex=0
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Stone/Cement
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Metal
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Wood
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Bamboo/Mud/Reed
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Other
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=None
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Not Reported
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=StubFmt, 26
+GridViewSize=0,0,0,0,0,0
+ 
+[Value]
+Label=Not Applicable
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[EndVar]
+ 
+[Variable]
+Name=H03_ROOF_VS1
+Label=Roof type
+VarType=Dict
+ 
+[Value]
+Label=Total
+TabValueType=Total
+TabValueStatIndex=0
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Stone/Cement
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Metal
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Wood
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Bamboo/Mud/Reed
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Other
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=None
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Not Reported
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=StubFmt, 27
+GridViewSize=0,0,0,0,0,0
+ 
+[Value]
+Label=Not Applicable
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[EndVar]
+ 
+[Variable]
+Name=H04_FLOOR_VS1
+Label=Floor type
+VarType=Dict
+ 
+[Value]
+Label=Total
+TabValueType=Total
+TabValueStatIndex=0
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Stone/Cement
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Tile/Marble
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Wood
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Leaves/Reed
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Other
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=None
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[Value]
+Label=Not Reported
+TabValueType=VSetValue
+TabValueStatIndex=1
+Format=StubFmt, 28
+GridViewSize=0,0,0,0,0,0
+ 
+[Value]
+Label=Not Applicable
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=0,20,0,0,0,0
+ 
+[EndVar]
+ 
+[Cols]
+ 
+[Variable]
+Name=UR_VS1
+Label=Urban/Rural
+VarType=Dict
+ 
+[Value]
+Label=Total
+TabValueType=Total
+TabValueStatIndex=0
+GridViewSize=75,0,0,0,0,0
+ 
+[Value]
+Label=Urban
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=75,0,0,0,0,0
+ 
+[Value]
+Label=Rural
+TabValueType=VSetValue
+TabValueStatIndex=1
+GridViewSize=75,0,0,0,0,0
+ 
+[EndVar]
+[UnitSpecs]
+[Unit]
+SubTable=Entire Table
+LoopingVarName=
+Weight=
+Value=
+Universe=count(PERSON where P20_BORN12 > 0) > 0
+[EndUnitSpecs]
+ 
+ 
+[Level]
+Table=TABLE1
+Table=TABLE2
+Table=TABLE3
+Table=TABLE4
+Table=TABLE5
+Table=TABLE6
+Table=TABLE7
+Table=TABLE8

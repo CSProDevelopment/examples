@@ -1,0 +1,35 @@
+﻿[Dictionary]
+Version=CSPro 6.1
+Label=industry
+Name=INDUSTRY_DICT
+RecordTypeStart=0
+RecordTypeLen=0
+Positions=Relative
+ZeroFill=No
+DecimalChar=Yes
+
+[Level]
+Label=industry questionnaire
+Name=INDUSTRY_QUEST
+
+[IdItems]
+
+[Item]
+Label=industry identification
+Name=INDID
+Start=1
+Len=3
+ZeroFill=Yes
+
+[Record]
+Label=industry record
+Name=INDUSTRY_REC
+RecordTypeValue=''
+RecordLen=78
+
+[Item]
+Label=list of industries
+Name=INDTXT
+Start=4
+Len=75
+DataType=Alpha

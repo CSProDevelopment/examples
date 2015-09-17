@@ -1,0 +1,15 @@
+﻿[Run Information]
+Version=CSPro 6.1
+AppType=Entry
+
+[DataEntryInit]
+Interactive=Ask
+
+[Files]
+Application=.\capi.ent
+InputData=.\test.dat
+WriteData=.\audit.lst
+
+
+[Parameters]
+

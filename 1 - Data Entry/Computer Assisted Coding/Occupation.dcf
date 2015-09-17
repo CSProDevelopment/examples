@@ -1,0 +1,35 @@
+﻿[Dictionary]
+Version=CSPro 6.1
+Label=Occupation
+Name=OCCUPATION_DICT
+RecordTypeStart=0
+RecordTypeLen=0
+Positions=Relative
+ZeroFill=No
+DecimalChar=Yes
+
+[Level]
+Label=Occupation questionnaire
+Name=OCCUPATION_QUEST
+
+[IdItems]
+
+[Item]
+Label=Occupation identification
+Name=OCCID
+Start=1
+Len=3
+ZeroFill=Yes
+
+[Record]
+Label=Occupation record
+Name=OCCUPATION_REC
+RecordTypeValue=''
+RecordLen=78
+
+[Item]
+Label=Occupations
+Name=OCCTXT
+Start=4
+Len=75
+DataType=Alpha

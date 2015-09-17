@@ -1,0 +1,16 @@
+﻿[Run Information]
+Version=CSPro 6.1
+AppType=Entry
+
+[DataEntryInit]
+Interactive=Ask
+
+[Files]
+Application=.\Setvalueset example.ent
+InputData=.\test.dat
+
+[ExternalFiles]
+AREA_DICT=.\arealookup.dat
+
+[Parameters]
+

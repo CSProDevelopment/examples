@@ -1,0 +1,14 @@
+﻿[Run Information]
+Version=CSPro 6.1
+AppType=Entry
+
+[DataEntryInit]
+Interactive=Ask
+
+[Files]
+Application=.\DateCheck.ent
+InputData=.\DateCheck.dat
+
+
+[Parameters]
+

@@ -1,0 +1,17 @@
+﻿[Run Information]
+Version=CSPro 6.1
+AppType=Entry
+
+[DataEntryInit]
+Interactive=Ask
+
+[Files]
+Application=.\Lookup.ent
+InputData=.\popstan.dat
+
+[ExternalFiles]
+LOOKUP=.\Lookup.dat
+LF_DICT=.\Lookup.dat
+
+[Parameters]
+

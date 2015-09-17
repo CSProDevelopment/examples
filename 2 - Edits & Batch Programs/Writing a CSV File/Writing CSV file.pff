@@ -1,0 +1,20 @@
+﻿[Run Information]
+Version=CSPro 6.1
+AppType=Batch
+
+[Files]
+Application=.\Writing CSV file.bch
+InputData=.\PopstanEx.dat
+Listing=.\Writing CSV file.lst
+
+
+[UserFiles]
+CSVFILE=
+
+[Parameters]
+ViewListing=Always
+ViewResults=Yes
+ListingWidth=80
+MessageWrap=No
+ErrmsgOverride=No
+

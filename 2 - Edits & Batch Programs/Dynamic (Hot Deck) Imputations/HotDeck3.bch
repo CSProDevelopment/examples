@@ -1,0 +1,13 @@
+﻿[CSPro Application]
+Version=CSPro 6.1
+Label=Hotdeck with save
+Name=HOTDECK
+AppType=Batch
+[AppCode]
+File=.\HotDeck3.bch.apc
+[Message]
+File=.\HotDeck3.bch.mgf
+[Order]
+File=.\HotDeck3.ord
+[Dictionary Types]
+Dict-Type=.\Popstan.dcf,Input,.\HotDeck3.ord

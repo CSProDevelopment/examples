@@ -1,0 +1,49 @@
+﻿{ Purpose: How to control data entry by a variable.  In this example,
+  the dictionary's housing record contains a variable for the
+  number of people living in this household.  The Person Form would
+  normally loop up to the maximum number of people allowed in a house-
+  hold.  We have decided, however, that the Person Form will terminate
+  after the number of people, indicated as living in this household on
+  the Housing Form, Part I, has been entered.  Keying will then proceed
+  with the remainder of the housing items given on Housing Form, Part II.
+
+  Keywords Used:  totocc, endgroup
+
+  Notes:  The "endgroup" keyword terminates processing for the current
+  section, which in this case is the Person Form (PERSON_FORM).  Keying
+  then resumes with the subsequent section, which in our example is Part
+  II of the Housing Form (HOUSE002).  What do you think would happen if
+  the "endlevel" command had been used instead of the "endgroup" command?
+}
+
+PROC GLOBAL
+
+set explicit;
+
+
+PROC POPSTAN_ENT
+
+{ the next code functions as follows: suppose '2' is entered for the variable
+  H13_PERSONS.  The keyer enters information for two people. The third time the
+  LINE variable is visited (in the preproc code, before control is passed to the
+  keyer), the system checks how many occurrences exist for the current form. At this
+  point 3 exist, the endgroup command is executed and control is passed to the
+  next (HOUSE002) form.
+
+  Notice we chose to use the preproc of the FIRST variable found on the PERSON_FORM.
+  We could have likewise used the postproc of the LAST variable on the form, i.e.,
+  P05_MS, with the same results.
+
+  On execution of the endgroup command, control will be passed to the PERSON_FORM's
+  postproc.
+}
+
+
+PROC LINE
+
+preproc
+
+	if totocc(person_form) > h13_persons then
+		endgroup;
+	endif;
+

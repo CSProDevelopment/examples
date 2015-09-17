@@ -1,0 +1,103 @@
+[Dictionary]
+Version=CSPro 6.1
+Label=TablogicExample - Working Storage Dictionary
+Name=WS_DICT
+RecordTypeStart=1
+RecordTypeLen=1
+Positions=Relative
+ZeroFill=No
+DecimalChar=Yes
+
+[Level]
+Label=Working Storage Level
+Name=WS_LEVEL
+
+[IdItems]
+
+[Item]
+Label=Dummy Id
+Name=DUMMY_ID
+Start=2
+Len=1
+
+[Record]
+Label=Working Storage Record
+Name=WS_REC
+RecordTypeValue='1'
+RecordLen=9
+
+[Item]
+Label=System Total
+Name=SYSTEM_TOTAL
+Start=3
+Len=1
+
+[Item]
+Label=Complete Plumbing
+Name=COMPLETE_PLUMBING
+Start=4
+Len=1
+
+[ValueSet]
+Label=Complete Plumbing
+Name=COMPLETE_PLUMBING_VS1
+Value=1;Complete
+Value=2;Some but not all
+Value=3;None
+
+[Item]
+Label=Children 0 to 5
+Name=CHILDREN_0_TO_5
+Start=5
+Len=2
+
+[ValueSet]
+Label=Children 0 to 5
+Name=CHILDREN_0_TO_5_VS1
+Value=0;0
+Value=1;1
+Value=2;2
+Value=3;3
+Value=4;4
+Value=5:99;5+
+
+[Item]
+Label=Children 6 to 17
+Name=CHILDREN_6_TO_17
+Start=7
+Len=1
+
+[ValueSet]
+Label=Children 6 to 17
+Name=CHILDREN_6_TO_17_VS1
+Value=0;0
+Value=1;1
+Value=2;2
+Value=3;3
+Value=4;4
+Value=5:9;5+
+
+[Item]
+Label=Lifetime Migration
+Name=LIFETIME_MIGRATION
+Start=8
+Len=1
+
+[ValueSet]
+Label=Lifetime Migration
+Name=LIFETIME_MIGRATION_VS1
+Value=1;Born This Province
+Value=2;Born Other Province
+Value=3;Born Outside Popstan
+Value=4;Unknown
+
+[Item]
+Label=foo
+Name=FOO
+Start=9
+Len=1
+
+[ValueSet]
+Label=foo
+Name=FOO_VS1
+Value=0:9;foo

@@ -1,0 +1,88 @@
+﻿{ Purpose:  Demonstrate how to maintain a hot deck using saved arrays.
+			It is an extension of the HotDeck1.bch application.
+
+  Keywords used:  array, save, while, impute
+
+  Comments: This uses a saved array file to initialize the hot deck. This
+			  assumes that you will run the program twice: once to fill the
+			  hot deck with values and write it to the saved array file and
+			  a second time to load the values back in as the intial values
+			  for the array to use for the actual imputation. The output file
+			  for the first run of the program should be ignored and only
+			  the output file from the second run should be used. This is
+			  because during the first run, the hot deck has no initial values
+			  so invalid values may be imputed from the hot deck. The first run
+			  is only to fill in the initial values to be used in the second run.
+}
+
+
+PROC GLOBAL
+
+numeric loop, rowRel, cntPop;
+
+array AgeDeck (2,6) save;
+
+{ Use the save keyword following the array declaration so that
+  array values will be read from the saved array file at program
+  startup. If the program does not find a save array file it will
+  create one.
+
+  The values will then be used during processing when an age is
+  missing; if the age is present, we will "refresh" the age
+  for the person with the given sex and relationship codes.
+
+  When the program is finished, the current values of the array
+  are written to the saved array file.
+}
+
+
+PROC AGEDECK_EXAMPLE
+
+	{ the following code is not necessary, it is strictly for your info; let's
+	  display the final values; notice how they've changed from what we started
+	  with above! }
+
+	while loop < 3 do
+		display ("%d:", loop);
+		display ("AgeDeck[%d,1]=%d", loop, AgeDeck (loop,1));
+		display ("AgeDeck[%d,2]=%d", loop, AgeDeck (loop,2));
+		display ("AgeDeck[%d,3]=%d", loop, AgeDeck (loop,3));
+		display ("AgeDeck[%d,4]=%d", loop, AgeDeck (loop,4));
+		display ("AgeDeck[%d,5]=%d", loop, AgeDeck (loop,5));
+		display ("AgeDeck[%d,6]=%d", loop, AgeDeck (loop,6));
+		inc(loop);
+	enddo;
+
+
+PROC P04_AGE
+
+	// here, within the procedure for P04_AGE, is where the actual update of
+	// the hot deck values will take place
+
+	inc(cntPop);
+
+	if P02_REL in 1:6 then         // Initialize a local variable 'rowRel' that will be used as a subscript to the AgeDeck array.
+		rowRel = P02_REL;          // If the relationship is valid then set rowRel to the value of relationship.
+	else                           // If the relationship is not valid then default to 6; Ideally, we should randomly assign values, not always use 6,
+		rowRel = 6;                // but for simplicity sake, this is not done.
+	endif;
+
+	// This assumes that the sex variable has already been edited.
+	
+	if $ in 0:99 then // '$', when used within a procedure, means the current variable
+
+		errmsg ("Updating value for AgeDeck[%d,%d] with age=%d",P03_SEX,rowRel,$) denom = cntPop;
+		AgeDeck(P03_SEX,rowRel) = $;  // this updates the hot deck with the value contained in P04_AGE
+	
+	else  // age is not valid, so it needs to be imputed.
+
+		errmsg ("Age(=%d) is invalid. Age variable changing from %d to %d",$,$,AgeDeck(P03_SEX,rowRel)) denom = cntPop;
+		
+		//impute sets the value of P04_AGE to AgeDeck(P03_SEX,rowRel)
+		impute($,AgeDeck(P03_SEX,rowRel));
+		
+		// more testing of the P04_AGE variable should be done to ensure it is
+		// legitimate, but again, for simiplicity sake, this is not being done
+		
+	endif;
+

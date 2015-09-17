@@ -1,0 +1,14 @@
+﻿[Run Information]
+Version=CSPro 6.1
+AppType=Sort
+
+[Files]
+Application=.\SortEAStatus.ssf
+InputData=.\EAStatus.dat
+OutputData=.\EAStatus.srt
+Listing=.\SortEAStatus.ssf.lst
+
+[Parameters]
+ViewListing=OnError
+ViewResults=No
+

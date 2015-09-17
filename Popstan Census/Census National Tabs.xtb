@@ -1,0 +1,17 @@
+﻿[CSPro Application]
+Version=CSPro 6.1
+Label=CENSUS_NATIONAL_TABS
+Name=CENSUS_NATIONAL_TABS
+AppType=Tabulation
+[External Dictionaries]
+File=.\Census National Tabs.xtb.wrk.dcf
+[AppCode]
+File=.\Census National Tabs.xtb.apc
+[Message]
+File=.\Census National Tabs.xtb.mgf
+[Help]
+File=.\Census National Tabs.qsf
+[TabSpecs]
+File=.\Census National Tabs.xts
+[Dictionary Types]
+Dict-Type=.\Census National Tabs.xtb.wrk.dcf,Working

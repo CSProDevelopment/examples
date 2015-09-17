@@ -1,0 +1,14 @@
+[CSSort]
+Version=CSPro 6.1
+
+[Dictionaries]
+File=.\EAStatus.dcf
+
+[SortType]
+Type=Questionnaire
+
+[Keys]
+Key=Ascending,EAPROV,"Province"
+Key=Ascending,EADIST,"District"
+Key=Ascending,EALoc,"Locality"
+Key=Ascending,EAEA,"EA"

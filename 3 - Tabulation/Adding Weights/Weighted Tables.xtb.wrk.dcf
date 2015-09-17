@@ -1,0 +1,33 @@
+﻿[Dictionary]
+Version=CSPro 6.1
+Label=Weighted Tables_wrk
+Name=WEIGHTED_TABLES_WRK_DICT
+RecordTypeStart=1
+RecordTypeLen=1
+Positions=Relative
+ZeroFill=No
+DecimalChar=Yes
+
+[Level]
+Label=Weighted Tables_wrk questionnaire
+Name=WEIGHTED_TABLES_WRK_QUEST
+
+[IdItems]
+
+[Item]
+Label=Weighted Tables_wrk identification
+Name=WEIGHTED_TABLES_WRK_ID
+Start=2
+Len=1
+
+[Record]
+Label=System Record
+Name=SYSTEM_REC
+RecordTypeValue='1'
+RecordLen=3
+
+[Item]
+Label=System Total
+Name=SYSTEM_TOTAL
+Start=3
+Len=1

@@ -1,0 +1,18 @@
+﻿[CSPro Application]
+Version=CSPro 6.1
+Label=LOOKUP
+Name=LOOKUP
+AppType=DataEntry
+[External Dictionaries]
+File=.\Lookup.dcf
+[AppCode]
+File=.\Lookup.ENT.apc
+[Message]
+File=.\Lookup.ENT.mgf
+[Help]
+File=.\Lookup.ENT.qsf
+[Forms]
+File=.\Lookup.fmf
+[Dictionary Types]
+Dict-Type=.\Lookup.dcf,External
+Dict-Type=.\Popstan2.dcf,Input,.\Lookup.fmf

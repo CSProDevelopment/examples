@@ -1,0 +1,15 @@
+﻿[CSPro Application]
+Version=CSPro 6.1
+Label=ITEMDRIVENDE
+Name=ITEMDRIVENDE
+AppType=DataEntry
+[AppCode]
+File=.\ItemDrivenDE.ent.apc
+[Message]
+File=.\ItemDrivenDE.ent.mgf
+[Help]
+File=.\ItemDrivenDE.ent.qsf
+[Forms]
+File=.\ItemDrivenDE.fmf
+[Dictionary Types]
+Dict-Type=.\popstan.dcf,Input,.\ItemDrivenDE.fmf

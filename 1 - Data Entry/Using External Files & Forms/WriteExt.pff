@@ -1,0 +1,16 @@
+﻿[Run Information]
+Version=CSPro 6.1
+AppType=Entry
+
+[DataEntryInit]
+Interactive=Ask
+
+[Files]
+Application=.\WriteExt.ent
+InputData=.\Test.dat
+
+[ExternalFiles]
+OTHERS_DICT=.\Other.dat
+
+[Parameters]
+

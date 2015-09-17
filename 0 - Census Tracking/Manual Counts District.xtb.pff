@@ -1,0 +1,17 @@
+﻿[Run Information]
+Version=CSPro 6.1
+AppType=Tabulation
+Operation=All
+
+[Files]
+Application=.\Manual Counts District.xtb
+InputData=.\EAStatus.dat
+OutputTBW=.\Manual Counts District.xtb.tbw
+AreaNames=.\GeoFile.anm
+Listing=.\Manual Counts District.xtb.lst
+
+
+[Parameters]
+ViewListing=OnError
+ViewResults=No
+
