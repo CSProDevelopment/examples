@@ -130,7 +130,7 @@ function WRITE_LOOKUP_FILE_DATA();
 
 	{write PFF commands}
 	write("[Run Information]");
-	write("Version=CSPro 6.1");
+	write("Version=CSPro 6.2");
 	write("AppType=Entry");
 
 	write (" ");
