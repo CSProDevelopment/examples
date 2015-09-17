@@ -9,8 +9,6 @@ File=.\Census National Tabs.xtb.wrk.dcf
 File=.\Census National Tabs.xtb.apc
 [Message]
 File=.\Census National Tabs.xtb.mgf
-[Help]
-File=.\Census National Tabs.qsf
 [TabSpecs]
 File=.\Census National Tabs.xts
 [Dictionary Types]

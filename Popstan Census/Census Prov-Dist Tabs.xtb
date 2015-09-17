@@ -9,8 +9,6 @@ File=.\Census Prov-Dist Tabs.xtb.wrk.dcf
 File=.\Census Prov-Dist Tabs.xtb.apc
 [Message]
 File=.\Census Prov-Dist Tabs.xtb.mgf
-[Help]
-File=.\Census Prov-Dist Tabs.qsf
 [TabSpecs]
 File=.\Census Prov-Dist Tabs.xts
 [Dictionary Types]
