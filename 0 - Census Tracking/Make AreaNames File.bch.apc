@@ -5,7 +5,7 @@ numeric PR,DT,LOC;
 PROC EASTATUS_FF
 preproc
     write("[Area Names]");			
-    write("Version=CSPro 6.2");			
+    write("Version=CSPro 6.3");			
     write("");
     write("[Levels]");			
     write("Name=Province");   			
