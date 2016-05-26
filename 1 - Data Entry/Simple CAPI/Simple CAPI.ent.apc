@@ -68,46 +68,46 @@ PROC NAME
 
 	// a blank name indicates the end of the household
 	if NAME = "" then
-	
+
 		if curocc() = 1 then
 			errmsg("The household must consist of at least one person.");
 			reenter;
-		
+
 		elseif count(RELATIONSHIP = 1) = 0 then
 			errmsg("No head of household has been entered. You must add the head.");
 			reenter;
-		
+
 		endif;
 
 		// confirm that this is really the end of household and not an inadvertent blank
 		numeric numHouseholdMembers = curocc() - 1;
 
 		vsItr = 1;
-		
+
 		do ctr = 1 while ctr <= numHouseholdMembers
 			vsLabels(vsItr) = "Edit " + NAME(ctr);
 			inc(vsItr);
 		enddo;
-		
+
 		vsLabels(vsItr) = "Add Another Member";
 		inc(vsItr);
-		
+
 		vsLabels(vsItr) = "End Interview";
 		inc(vsItr);
-		
+
 		vsLabels(vsItr) = ""; // end the accept array
-		
+
 		numeric selection = accept("Are you finished entering household members?",vsLabels);
-		
+
 		if selection in 1:numHouseholdMembers then // the interviewer selected a person
 			reenter NAME(selection);
-		
+
 		elseif selection = ( vsItr - 1 ) then // finished with the household roster
 			endgroup;
-		
+
 		else
 			reenter;
-		
+
 		endif;
 
 	endif;
@@ -121,16 +121,16 @@ onfocus
 	headKnown = 0;
 
 	do ctr = 1 while ctr <= totocc(RELATIONSHIP)
-	
+
 		// when a field is located in the program at a point further than the the current field,
-		// we must use the visualvalue function to retrieve its value	
+		// we must use the visualvalue function to retrieve its value
 		if ctr <> curocc() and visualvalue(RELATIONSHIP(ctr)) = 1 then
 			headKnown = 1;
 			headText = NAME(ctr);
 		endif;
-	
+
 	enddo;
-	
+
 
 	// customize the value set based on whether the person is a male or female
 	if SEX = 1 then	setvalueset(RELATIONSHIP,RELATIONSHIP_MALE_VS);
@@ -146,72 +146,68 @@ postproc
 
 	// do some relationship checks on the already entered data
 	do ctr = 1 while ctr <= curocc()
-	
+
 		// ensure one head, of a minimum age
 		if RELATIONSHIP(ctr) = 1 then
-		
+
 			if ptrHead < ctr then
 				errmsg("%s was already marked as the head of household. You cannot have two heads.",strip(NAME(ptrHead)));
 				reenter;
-		
+
 			elseif AGE(ctr) < MinAgeHead then
 				errmsg("%s cannot be a head of household because a head must be at least %d-years-old.",strip(NAME(ctr)),MinAgeHead);
 				reenter;
-			
-			endif;
-			
-		endif;
-	
 
-		// ensure only one spouse, of the opposite sex of the head
+			endif;
+
+		endif;
+
+
+		// ensure only one spouse
 		if RELATIONSHIP(ctr) = 2 then
-		
+
 			if ptrSpouse < ctr then
 				errmsg("%s was already marked as the spouse. You cannot have two spouses.",strip(NAME(ptrSpouse)));
 				reenter;
-		
-			elseif ptrHead > 0 and SEX(ctr) = SEX(ptrHead) then
-				errmsg("%s cannot be the spouse of %s because they are both of the same sex.",strip(NAME(ctr)),strip(NAME(ptrHead)));
-				reenter;
-			
+
 			endif;
-		
+
 		endif;
-		
+
 
 		// - ensure a maximum of one father, one mother, two grandfathers, and two grandmothers
 		if RELATIONSHIP(ctr) = 5 then
-		
+
 			if SEX(ctr) = 1 and inc(cntFather) > 1 then
 				errmsg(10001,1,"father");
 				reenter;
-				
+
 			elseif SEX(ctr) = 2 and inc(cntMother) > 1 then
 				errmsg(10001,1,"mother");
 				reenter;
-			
+
 			endif;
-			
+
 		elseif RELATIONSHIP(ctr) = 6 then
-		
+
 			if SEX(ctr) = 1 and inc(cntGrandfather) > 2 then
 				errmsg(10001,2,"grandfathers");
 				reenter;
-				
+
 			elseif SEX(ctr) = 2 and inc(cntGrandmother) > 2 then
 				errmsg(10001,2,"grandmothers");
 				reenter;
-			
+
 			endif;
 
 		endif;
-		
+
 
 		// - ensure proper age differences for grandchildren, children, parents, and grandparents
 		string ageErrorMessage;
-		
+
 		if ptrHead > 0 then
-		
+
 			if RELATIONSHIP(ctr) = 3 then // child
 				if ( AGE(ptrHead) - AGE(ctr) ) < MinGenerationalDifference then
 					ageErrorMessage = maketext(10002,"child",MinGenerationalDifference,"younger",AGE(ptrHead));
@@ -226,21 +222,21 @@ postproc
 				if ( AGE(ctr) - AGE(ptrHead) ) < 2 * MinGenerationalDifference then
 					ageErrorMessage = maketext(10002,"grandparent",2 * MinGenerationalDifference,"older",AGE(ptrHead));
 				endif;
-				
+
 			elseif RELATIONSHIP(ctr) = 7 then // grandchild
 				if ( AGE(ptrHead) - AGE(ctr) ) < 2 * MinGenerationalDifference then
 					ageErrorMessage = maketext(10002,"grandchild",2 * MinGenerationalDifference,"younger",AGE(ptrHead));
 				endif;
 
 			endif;
-			
+
 			if length(ageErrorMessage) > 0 then
 				errmsg("%s",ageErrorMessage) select("Edit Age",AGE,"Edit Relationship",RELATIONSHIP);
 			endif;
-		
+
 		endif;
 
-	
+
 	enddo;
 
 
@@ -264,7 +260,7 @@ postproc
 PROC LANGUAGES_SPOKEN
 
 	VerifyCheckBoxCodesMustSelectOne(LANGUAGES_SPOKEN);
-	
+
 	if pos("1",LANGUAGES_SPOKEN) = 0 then // they have not selected "Other Language"
 		skip to MAIN_LANGUAGE;
 	endif;
@@ -281,25 +277,25 @@ onfocus
 
 	// set up the value set using languages that the person speaks; if only one, preselect the language
 	vsItr = 1;
-	
+
 	do ctr = 1 while ctr <= length(LANGUAGES_SPOKEN)
-	
+
 		string thisOption = LANGUAGES_SPOKEN[ctr:1];
 
 		if thisOption <> " " then
-		
+
 			vsCodes(vsItr) = pos(thisOption,alphabet);
-		
+
 			if thisOption = "1" then // the other field
 				vsLabels(vsItr) = LANGUAGES_SPOKEN_OTHER;
-			
+
 			else
 				vsLabels(vsItr) = getlabel(LANGUAGES_SPOKEN,thisOption);
-			
-			endif;	
-		
+
+			endif;
+
 			inc(vsItr);
-			
+
 		endif;
 
 	enddo;
@@ -313,7 +309,7 @@ onfocus
 	if vsItr = 2 then // they only listed one language for languages spoken so no need to ask the question
 		MAIN_LANGUAGE = vsCodes(1);
 		set attributes(MAIN_LANGUAGE) protect;
-	
+
 	else
 		set attributes(MAIN_LANGUAGE) native;
 
