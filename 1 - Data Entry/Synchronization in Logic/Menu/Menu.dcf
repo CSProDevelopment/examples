@@ -1,0 +1,66 @@
+﻿[Dictionary]
+Version=CSPro 7.0
+Label=Menu
+Name=MENU_DICT
+RecordTypeStart=1
+RecordTypeLen=1
+Positions=Relative
+ZeroFill=No
+DecimalChar=Yes
+
+[Level]
+Label=Menu questionnaire
+Name=MENU_QUEST
+
+[IdItems]
+
+[Item]
+Label=Menu identification
+Name=MENU_ID
+Start=2
+Len=1
+
+[Record]
+Label=Menu record
+Name=MENU_REC
+RecordTypeValue='1'
+RecordLen=5
+
+[Item]
+Label=Login
+Name=LOGIN
+Start=3
+Len=1
+
+[ValueSet]
+Label=Login
+Name=LOGIN_VS1
+Value=1;Interviewer
+Value=2;Supervisor
+
+[Item]
+Label=Interviewer menu
+Name=INTERVIEWER_MENU
+Start=4
+Len=1
+
+[ValueSet]
+Label=Interviewer menu
+Name=INTERVIEWER_MENU_VS1
+Value=1;Enter data
+Value=2;Sync with supervisor (Bluetooth)
+Value=9;Exit
+
+[Item]
+Label=Supervisor menu
+Name=SUPERVISOR_MENU
+Start=5
+Len=1
+
+[ValueSet]
+Label=Supervisor menu
+Name=SUPERVISOR_MENU_VS1
+Value=1;Enter data
+Value=2;Sync with interviewer (Bluetooth)
+Value=3;Sync with headquarters (Internet)
+Value=9;Exit

@@ -1,0 +1,21 @@
+﻿[CSPro Application]
+Version=CSPro 7.0
+Label=HOUSEHOLDQUESTIONNAIRE
+Name=HOUSEHOLDQUESTIONNAIRE
+AppType=DataEntry
+OperatorID=No
+CAPI=Yes
+CAPIFont1=-016 0000 0000 0000 0400 0000 0000 0000 0000 0000 0000 0000 0000 Arial
+CAPIFont2=-016 0000 0000 0000 0400 0000 0000 0000 0000 0000 0000 0000 0000 Arial
+CAPIFont1Color=0
+CAPIFont2Color=16711680
+[AppCode]
+File=.\HouseholdQuestionnaire.ent.apc
+[Message]
+File=.\HouseholdQuestionnaire.ent.mgf
+[Help]
+File=.\HouseholdQuestionnaire.ent.qsf
+[Forms]
+File=.\HouseholdQuestionnaire.fmf
+[Dictionary Types]
+Dict-Type=..\Dict\HouseholdQuestionnaire.dcf,Input,.\HouseholdQuestionnaire.fmf

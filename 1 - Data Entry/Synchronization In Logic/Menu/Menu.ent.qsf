@@ -1,0 +1,34 @@
+﻿[CAPI QUESTIONS]
+Version=CSPro 7.0
+
+[LANGUAGES]
+ENG=English
+
+[QUESTION]
+Field=MENU_DICT.INTERVIEWER_MENU
+ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+ENG={\colortbl ;\red0\green0\blue0;}
+ENG={\*\generator Riched20 10.0.14393}\viewkind4\uc1 
+ENG=\pard\cf1\fs19 You are logged in as an enumerator.\par
+ENG=\par
+ENG=Choose an option:\par
+ENG=}
+
+[QUESTION]
+Field=MENU_DICT.LOGIN
+ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+ENG={\colortbl ;\red0\green0\blue0;}
+ENG={\*\generator Riched20 10.0.14393}\viewkind4\uc1 
+ENG=\pard\cf1\fs19 Choose your role:\par
+ENG=}
+
+[QUESTION]
+Field=MENU_DICT.SUPERVISOR_MENU
+ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+ENG={\colortbl ;\red0\green0\blue0;}
+ENG={\*\generator Riched20 10.0.14393}\viewkind4\uc1 
+ENG=\pard\cf1\fs19 You are logged in as a supervisor.\par
+ENG=\par
+ENG=Choose an option.\par
+ENG=}
+

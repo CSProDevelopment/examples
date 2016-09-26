@@ -1,0 +1,15 @@
+﻿[Run Information]
+Version=CSPro 7.0
+AppType=Entry
+Description=
+
+[DataEntryInit]
+Interactive=Ask
+
+[Files]
+Application=.\HouseholdQuestionnaire.ent
+InputData=..\Data\HouseholdQuestionnaire.csdat|CSPRODB
+
+
+[Parameters]
+
