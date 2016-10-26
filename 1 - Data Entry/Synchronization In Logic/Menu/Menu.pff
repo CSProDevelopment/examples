@@ -12,7 +12,7 @@ Application=.\Menu.ent
 InputData=|NONE
 
 [ExternalFiles]
-HOUSEHOLDQUESTIONNAIRE_DICT=..\Data\HouseholdQuestionnaire.csdat|CSPRODB
+HOUSEHOLDQUESTIONNAIRE_DICT=..\Data\HouseholdQuestionnaire.csdb|CSPRODB
 
 [Parameters]
 
