@@ -1,10 +1,11 @@
 ﻿[Run Information]
 Version=CSPro 7.0
 AppType=Entry
-Description= 
+Description=Household Questionnaire
 
 [DataEntryInit]
 Interactive=Ask
+ShowInApplicationListing=No
 
 [Files]
 Application=.\HouseholdQuestionnaire.ent
@@ -12,4 +13,5 @@ InputData=..\Data\HouseholdQuestionnaire.csdb|CSPRODB
 
 
 [Parameters]
+OnExit=..\Menu\Menu.pff
 

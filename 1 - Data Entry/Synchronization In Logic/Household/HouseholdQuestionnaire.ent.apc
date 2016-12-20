@@ -12,6 +12,7 @@ if $ = 1 then
 	string caseLabel = maketext("%03d - %s", HOUSEHOLD_NUMBER, NAMES); 
 	setcaselabel(HOUSEHOLDQUESTIONNAIRE_DICT, caseLabel);
 endif;
+
 PROC MORE_PEOPLE
 
 // End household roster if interviewer

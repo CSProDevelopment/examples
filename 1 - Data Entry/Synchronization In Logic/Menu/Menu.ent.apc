@@ -30,7 +30,7 @@ function syncWithHeadquarters()
 				 "../Household/HouseholdQuestionnaire.pen");
 		syncfile(GET, "/Synchronization in Logic/Household/HouseholdQuestionnaire.pff", 
 				 "../Household/HouseholdQuestionnaire.pff");
-	
+			
 		syncdisconnect();
 		
 	endif;		
@@ -92,17 +92,8 @@ function launchDataEntry()
 	string pathToEntryApp = "../Household/HouseholdQuestionnaire.pff";
 	
 	// Start household data entry
-	if getos() in 10:19 then
-		// Windows: use wait to return to menu after data entry
-		if execpff(pathToEntryApp, wait) = notappl then
-			errmsg("Failed to launch data entry");
-		endif;
-	else
-		// Android: use stop since Android does not support two
-		// CSPro applications at once
-		if execpff(pathToEntryApp, stop) = notappl then
-			errmsg("Failed to launch data entry");
-		endif;
+	if execpff(pathToEntryApp, stop) = notappl then
+		errmsg("Failed to launch data entry");
 	endif;
 end;
 
