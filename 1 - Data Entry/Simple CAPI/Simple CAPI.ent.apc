@@ -64,6 +64,13 @@ end;
 PROC SIMPLECAPI_FF
 
 
+PROC SIMPLECAPI_LEVEL
+
+	// before finalizing the case, set a case label for a more descriptive label in the case listing
+	numeric ptrHead = seek(RELATIONSHIP = 1);
+	setcaselabel(SIMPLECAPI_DICT,maketext("Household #%d | Head: %s",HOUSEHOLD_ID,strip(NAME(ptrHead))));
+
+
 PROC NAME
 
 	// a blank name indicates the end of the household
@@ -111,6 +118,9 @@ PROC NAME
 		endif;
 
 	endif;
+
+	// set the occurrence label to the person's name
+	setocclabel(PERSON_REC000,strip(NAME));
 
 
 PROC RELATIONSHIP

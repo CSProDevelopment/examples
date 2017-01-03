@@ -5,4 +5,4 @@ Description=Simple CAPI (Sample Questionnaire)
 
 [Files]
 Application=.\Simple CAPI.ent
-InputData=.\Simple CAPI Data.dat
+InputData=.\Simple CAPI Data.csdb
