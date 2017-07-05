@@ -1,5 +1,5 @@
 ﻿[CSPro Application]
-Version=CSPro 7.0
+Version=CSPro 7.1
 Label=MENU
 Name=MENU
 AppType=DataEntry
@@ -10,6 +10,8 @@ CAPIFont2=-016 0000 0000 0000 0400 0000 0000 0000 0000 0000 0000 0000 0000 Arial
 CAPIFont1Color=0
 CAPIFont2Color=16711680
 CaseTree=Never
+CreateListing=No
+CreateLog=No
 [External Dictionaries]
 File=..\Dict\HouseholdQuestionnaire.dcf
 [AppCode]
