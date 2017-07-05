@@ -308,8 +308,10 @@ Text=Main Language
 Name=MAIN_LANGUAGE
 Position=35,0,64,20
 Item=MAIN_LANGUAGE,SIMPLECAPI_DICT
+DataCaptureType=DropDown
   
 [Text]
+Position=0,0,100,16
 Text=Main Language
  
 [EndColumn]

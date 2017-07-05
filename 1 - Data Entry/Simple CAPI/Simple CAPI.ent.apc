@@ -314,14 +314,12 @@ onfocus
 
 	setvalueset(MAIN_LANGUAGE,vsCodes,vsLabels);
 
-	setcapturetype(MAIN_LANGUAGE,3); // display the value set as a drop down
-
 	if vsItr = 2 then // they only listed one language for languages spoken so no need to ask the question
 		MAIN_LANGUAGE = vsCodes(1);
-		set attributes(MAIN_LANGUAGE) protect;
+		setproperty(MAIN_LANGUAGE,"Protected","Yes");
 
 	else
-		set attributes(MAIN_LANGUAGE) native;
+		setproperty(MAIN_LANGUAGE,"Protected","No");
 
 	endif;
 
