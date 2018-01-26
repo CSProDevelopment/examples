@@ -1,0 +1,34 @@
+{
+  "fileType": "Application Deployment Specification",
+  "version": "7.1",
+  "name": "Synchronization in Logic",
+  "description": "Example of using synchronization logic functions",
+  "files": [
+    {
+      "path": ".\\Household\\HouseholdQuestionnaire.ent"
+    },
+    {
+      "path": ".\\Household\\HouseholdQuestionnaire.pff"
+    },
+    {
+      "path": ".\\Menu\\Menu.ent"
+    },
+    {
+      "path": ".\\Menu\\Menu.pff"
+    }
+  ],
+  "dictionaries": [
+    {
+      "path": ".\\Dict\\HouseholdQuestionnaire.dcf"
+    },
+    {
+      "path": ".\\Menu\\Menu.dcf"
+    }
+  ],
+  "deployment": {
+    "type": "LocalFolder",
+    "cswebUrl": "http:\/\/csweb.teleyah.com\/api",
+    "ftpUrl": "ftp:\/\/ftp.teleyah.com",
+    "localFolderPath": ".\\Deployment"
+  }
+}

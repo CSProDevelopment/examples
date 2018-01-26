@@ -5,7 +5,7 @@ Description=Household Questionnaire
 
 [DataEntryInit]
 Interactive=Ask
-ShowInApplicationListing=No
+ShowInApplicationListing=Hidden
 
 [Files]
 Application=.\HouseholdQuestionnaire.ent
