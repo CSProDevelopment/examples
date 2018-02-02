@@ -27,8 +27,6 @@
   ],
   "deployment": {
     "type": "LocalFolder",
-    "cswebUrl": "http:\/\/csweb.teleyah.com\/api",
-    "ftpUrl": "ftp:\/\/ftp.teleyah.com",
     "localFolderPath": ".\\Deployment"
   }
 }
