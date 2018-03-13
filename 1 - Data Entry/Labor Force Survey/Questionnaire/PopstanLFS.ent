@@ -1,0 +1,29 @@
+﻿[CSPro Application]
+Version=CSPro 7.1
+Label=POPSTANLFS
+Name=POPSTANLFS
+AppType=DataEntry
+OperatorID=No
+PartialSave=Yes
+CAPI=Yes
+CAPIFont1=-016 0000 0000 0000 0400 0000 0000 0000 0000 0000 0000 0000 0000 Arial
+CAPIFont2=-016 0000 0000 0000 0400 0000 0000 0000 0000 0000 0000 0000 0000 Arial
+CAPIFont1Color=0
+CAPIFont2Color=16711680
+CaseTree=Desktop
+CreateListing=No
+CreateLog=No
+ShowErrorMessageNumbers=No
+[AppCode]
+File=.\PopstanLFS.ent.apc
+[Message]
+File=.\PopstanLFS.ent.mgf
+[Help]
+File=.\PopstanLFS.ent.qsf
+[Forms]
+File=.\PopstanLFS.fmf
+[Dictionary Types]
+Dict-Type=.\PopstanLFS.dcf,Input,.\PopstanLFS.fmf
+[Sync]
+Server=http://csweb.teleyah.com/api
+Direction=Put

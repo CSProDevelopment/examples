@@ -1,0 +1,11 @@
+﻿Excel=.\Staff.xlsx
+InputDict=.\Staff.dcf
+OutputData=.\Staff.csdb
+StartingRow=2
+CaseManagement=CreateNewFile
+RunOnlyIfNewer=No
+
+Mapping=STAFF_REC;@1;Sheet1
+Mapping=STAFF_REC.STAFF_CODE;@1
+Mapping=STAFF_NAME;@2
+Mapping=STAFF_ROLE;@3

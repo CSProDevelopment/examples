@@ -1,0 +1,9 @@
+﻿[Run Information]
+Version=CSPro 7.1
+AppType=Excel2CSPro
+
+[Files]
+Application=.\CreateSampleFromExcel.xl2cs
+
+[Parameters]
+

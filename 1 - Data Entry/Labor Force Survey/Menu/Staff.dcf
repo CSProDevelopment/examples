@@ -1,0 +1,42 @@
+﻿[Dictionary]
+Version=CSPro 7.1
+Label=Staff
+Name=STAFF_DICT
+RecordTypeStart=0
+RecordTypeLen=0
+Positions=Relative
+ZeroFill=Yes
+DecimalChar=Yes
+
+[Level]
+Label=Staff questionnaire
+Name=STAFF_QUEST
+
+[IdItems]
+
+[Item]
+Label=Staff code
+Name=STAFF_CODE
+Start=1
+Len=3
+ZeroFill=Yes
+
+[Record]
+Label=Staff record
+Name=STAFF_REC
+RecordTypeValue=''
+RecordLen=34
+
+[Item]
+Label=Staff name
+Name=STAFF_NAME
+Start=4
+Len=30
+DataType=Alpha
+
+[Item]
+Label=Staff role
+Name=STAFF_ROLE
+Start=34
+Len=1
+ZeroFill=Yes

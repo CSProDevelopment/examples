@@ -1,0 +1,116 @@
+﻿[Dictionary]
+Version=CSPro 7.1
+Label=SAMPLE Dictionary
+Name=SAMPLE_DICT
+RecordTypeStart=0
+RecordTypeLen=0
+Positions=Relative
+ZeroFill=Yes
+DecimalChar=Yes
+
+[Level]
+Label=SAMPLE Level
+Name=SAMPLE_LEVEL
+
+[IdItems]
+
+[Item]
+Label=Province
+Name=SAMPROV
+Start=1
+Len=1
+ZeroFill=Yes
+
+[Item]
+Label=District
+Name=SAMDIST
+Start=2
+Len=2
+ZeroFill=Yes
+
+[Item]
+Label=Dwelling unit number
+Name=SAMDWNO
+Start=4
+Len=3
+ZeroFill=Yes
+
+[Item]
+Label=Household number
+Name=SAMHHNO
+Start=7
+Len=3
+ZeroFill=Yes
+
+[Record]
+Label=SAMPLE Record
+Name=SAMPLE_REC
+RecordTypeValue=''
+RecordLen=116
+
+[Item]
+Label=Type of area
+Name=SAMAREA
+Start=10
+Len=1
+ZeroFill=Yes
+
+[Item]
+Label=Household replacement status
+Name=SAMRPL
+Start=11
+Len=1
+ZeroFill=Yes
+
+[Item]
+Label=Latitude
+Name=SAMGPSLAT
+Start=12
+Len=14
+Decimal=9
+DecimalChar=Yes
+ZeroFill=Yes
+
+[Item]
+Label=Longitude
+Name=SAMGPSLON
+Start=26
+Len=14
+Decimal=9
+DecimalChar=Yes
+ZeroFill=Yes
+
+[Item]
+Label=Household address
+Name=SAMHA
+Start=40
+Len=30
+DataType=Alpha
+
+[Item]
+Label=Household head name
+Name=SAMHNA
+Start=70
+Len=30
+DataType=Alpha
+
+[Item]
+Label=Household contact phone
+Name=SAMHCT
+Start=100
+Len=15
+DataType=Alpha
+
+[Item]
+Label=Assigned interviewer
+Name=SAMINT
+Start=115
+Len=1
+ZeroFill=Yes
+
+[Item]
+Label=Assigned supervisor
+Name=SAMSUP
+Start=116
+Len=1
+ZeroFill=Yes

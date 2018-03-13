@@ -1,0 +1,26 @@
+﻿[Run Information]
+Version=CSPro 7.1
+AppType=Entry
+Description=Labor Force Survey
+
+[DataEntryInit]
+StartMode=Add
+Lock=CaseListing
+Interactive=Ask
+
+[Files]
+Application=.\Menu.ent
+InputData=|NONE
+
+[ExternalFiles]
+POPSTANLFS_DICT=..\Questionnaire\PopstanLFS.csdb|CSPRODB
+SAMPLE_DICT=.\Sample.csdb|CSPRODB
+STAFF_DICT=.\Staff.csdb|CSPRODB
+STATUS_DICT=.\Status.csdb|CSPRODB
+
+[UserFiles]
+PFFFILE=
+REPORTFILE=
+
+[Parameters]
+

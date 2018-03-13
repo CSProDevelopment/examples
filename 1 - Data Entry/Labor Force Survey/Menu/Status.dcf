@@ -1,0 +1,71 @@
+﻿[Dictionary]
+Version=CSPro 7.1
+Label=Status
+Name=STATUS_DICT
+RecordTypeStart=0
+RecordTypeLen=0
+Positions=Relative
+ZeroFill=No
+DecimalChar=Yes
+
+[Level]
+Label=Status questionnaire
+Name=STATUS_QUEST
+
+[IdItems]
+
+[Item]
+Label=Province
+Name=STATPROV
+Start=1
+Len=1
+ZeroFill=Yes
+
+[Item]
+Label=District
+Name=STATDIST
+Start=2
+Len=2
+ZeroFill=Yes
+
+[Item]
+Label=Dwelling unit number
+Name=STATDWNO
+Start=4
+Len=3
+ZeroFill=Yes
+
+[Item]
+Label=Household number
+Name=STATHHNO
+Start=7
+Len=3
+ZeroFill=Yes
+
+[Record]
+Label=Status record
+Name=STATUS_REC
+RecordTypeValue=''
+RecordLen=11
+
+[Item]
+Label=Household final result
+Name=STATFIR
+Start=10
+Len=2
+ZeroFill=Yes
+
+[ValueSet]
+Label=Household final result
+Name=STATFIR_VS1
+Value=0;Not started
+Value=1;Completed
+Value=2;Partly Completed
+Value=3;Refused
+Value=4;Non-Contact
+Value=5;Temporarily Absent
+Value=6;Inadequate Informant
+Value=7;Seasonal, Temporary Resident
+Value=8;Under Construction, Vacant, Demolished
+Value=9;Not a Housing Unit
+Value=10;Other (specify)

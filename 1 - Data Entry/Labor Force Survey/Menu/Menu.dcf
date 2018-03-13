@@ -1,0 +1,121 @@
+﻿[Dictionary]
+Version=CSPro 7.1
+Label=Menu
+Name=MENU_DICT
+RecordTypeStart=1
+RecordTypeLen=1
+Positions=Relative
+ZeroFill=Yes
+DecimalChar=Yes
+
+[Level]
+Label=Menu questionnaire
+Name=MENU_QUEST
+
+[IdItems]
+
+[Item]
+Label=Menu identification
+Name=MENU_ID
+Start=2
+Len=1
+ZeroFill=Yes
+
+[Record]
+Label=Menu record
+Name=MENU_REC
+RecordTypeValue='1'
+RecordLen=20
+
+[Item]
+Label=Login
+Name=LOGIN
+Start=3
+Len=3
+ZeroFill=Yes
+
+[Item]
+Label=Interviewer Menu
+Name=INTERVIEWER_MENU
+Start=6
+Len=1
+ZeroFill=Yes
+
+[ValueSet]
+Label=Interviewer Menu
+Name=INTERVIEWER_MENU_VS1
+Value=1;Interview Households
+Value=2;Sync with Supervisor
+Value=9;Logout
+
+[Item]
+Label=Supervisor Menu
+Name=SUPERVISOR_MENU
+Start=7
+Len=1
+ZeroFill=Yes
+
+[ValueSet]
+Label=Supervisor Menu
+Name=SUPERVISOR_MENU_VS1
+Value=1;Reports
+Value=2;Sync HQ
+Value=3;Sync interviewer
+Value=4;Review completed interviews
+Value=9;Logout
+
+[Item]
+Label=Choose Household
+Name=CHOOSE_HOUSEHOLD
+Start=8
+Len=9
+DataType=Alpha
+
+[Item]
+Label=Household Action
+Name=HOUSEHOLD_ACTION
+Start=17
+Len=1
+ZeroFill=Yes
+
+[ValueSet]
+Label=Household Action
+Name=HOUSEHOLD_ACTION_VS1
+Value=1;Open Questionnaire
+Value=2;Set result
+Value=3;View on map
+
+[Item]
+Label=Household Final Result
+Name=HOUSEHOLD_FINAL_RESULT
+Start=18
+Len=2
+ZeroFill=Yes
+
+[ValueSet]
+Label=Household Final Result
+Name=HOUSEHOLD_FINAL_RESULT_VS1
+Value=0;Not started
+Value=1;Completed
+Value=2;Partly Completed
+Value=3;Refused
+Value=4;Non-Contact
+Value=5;Temporarily Absent
+Value=6;Inadequate Informant
+Value=7;Seasonal, Temporary Resident
+Value=8;Under Construction, Vacant, Demolished
+Value=9;Not a Housing Unit
+Value=10;Other (specify)
+
+[Item]
+Label=Reports
+Name=SUPERVISOR_REPORTS
+Start=20
+Len=1
+ZeroFill=Yes
+
+[ValueSet]
+Label=Reports
+Name=SUPERVISOR_REPORTS_VS1
+Value=1;Completion
+Value=2;Population
