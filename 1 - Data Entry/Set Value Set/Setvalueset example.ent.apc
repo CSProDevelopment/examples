@@ -24,7 +24,7 @@ PROC GLOBAL
 
 numeric i;
 array aDistrictCodes(99);
-array alpha(32) aDistrictNames(99);
+array string aDistrictNames(99);
 
 
 PROC CENSUS_DE

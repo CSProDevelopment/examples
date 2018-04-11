@@ -215,13 +215,13 @@ RecordTypeValue='4'
 RecordLen=15
 
 [Item]
-Label=computer entry
+Label=Computer entry
 Name=COMP_ENTRY
 Start=10
 Len=1
 
 [ValueSet]
-Label=computer entry
+Label=Computer entry
 Name=COMP_ENTRY_VS1
 Value=1;Desktop Personal Computer
 Value=2;Laptop Personal Computer

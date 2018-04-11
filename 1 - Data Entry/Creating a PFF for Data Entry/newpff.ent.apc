@@ -126,7 +126,7 @@ end;
 function WRITE_LOOKUP_FILE_DATA();
 
 	{write all the fields to the lookup file}
-	writecase(luf_dict,lPROVINCE,lDISTRICT,lVILLAGE,lEA);
+	writecase(LUF_DICT);
 
 	{write PFF commands}
 	write("[Run Information]");

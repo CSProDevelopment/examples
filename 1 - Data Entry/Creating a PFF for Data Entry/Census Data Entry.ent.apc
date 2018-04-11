@@ -1,7 +1,6 @@
 ﻿{Popstan Census Data Entry}
 PROC GLOBAL
 
-set explicit;
 numeric x, heads, empty, i;
 
 

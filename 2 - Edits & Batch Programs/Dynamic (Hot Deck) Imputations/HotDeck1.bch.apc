@@ -42,13 +42,13 @@ PROC HOTDECK01
 	loop = 1;
 	
 	while loop < 3 do
-		display ("%d:", loop);
-		display ("AgeDeck[%d,1]=%d", loop, AgeDeck (loop,1));
-		display ("AgeDeck[%d,2]=%d", loop, AgeDeck (loop,2));
-		display ("AgeDeck[%d,3]=%d", loop, AgeDeck (loop,3));
-		display ("AgeDeck[%d,4]=%d", loop, AgeDeck (loop,4));
-		display ("AgeDeck[%d,5]=%d", loop, AgeDeck (loop,5));
-		display ("AgeDeck[%d,6]=%d", loop, AgeDeck (loop,6));
+		errmsg("%d:", loop);
+		errmsg("AgeDeck[%d,1]=%d", loop, AgeDeck (loop,1));
+		errmsg("AgeDeck[%d,2]=%d", loop, AgeDeck (loop,2));
+		errmsg("AgeDeck[%d,3]=%d", loop, AgeDeck (loop,3));
+		errmsg("AgeDeck[%d,4]=%d", loop, AgeDeck (loop,4));
+		errmsg("AgeDeck[%d,5]=%d", loop, AgeDeck (loop,5));
+		errmsg("AgeDeck[%d,6]=%d", loop, AgeDeck (loop,6));
 		inc(loop);
 	enddo;
 
@@ -69,12 +69,12 @@ PROC P04_AGE
 	
 	if $ in 0:99 then // '$', when used within a procedure, means the current variable
 
-		errmsg ("Updating value for AgeDeck[%d,%d] with age=%d",P03_SEX,rowRel,$) denom = cntPop;
+		errmsg("Updating value for AgeDeck[%d,%d] with age=%d",P03_SEX,rowRel,$) denom = cntPop;
 		AgeDeck(P03_SEX,rowRel) = $;  // this updates the hot deck with the value contained in P04_AGE
 	
 	else  // age is not valid, so it needs to be imputed.
 
-		errmsg ("Age(=%d) is invalid. Age variable changing from %d to %d",$,$,AgeDeck(P03_SEX,rowRel)) denom = cntPop;
+		errmsg("Age(=%d) is invalid. Age variable changing from %d to %d",$,$,AgeDeck(P03_SEX,rowRel)) denom = cntPop;
 		
 		//impute sets the value of P04_AGE to AgeDeck(P03_SEX,rowRel)
 		impute($,AgeDeck(P03_SEX,rowRel));

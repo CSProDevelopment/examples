@@ -79,7 +79,7 @@ PROC WALL_TYPE
 		GETOTHER(2);  {parameter = question number}
 		loadcase(OTHERS_DICT, OPROV, ODIST, OVILL, OEA, OHU, QUESTNUM);
 		enter OTHERS_FF;
-		writecase(OTHERS_DICT, OPROV, ODIST, OVILL, OEA, OHU, QUESTNUM);
+		writecase(OTHERS_DICT);
 
 	endif;
 {---------------------------------------------------------------------------}
@@ -91,7 +91,7 @@ PROC ROOF_TYPE
 		GETOTHER(3);
 		loadcase(OTHERS_DICT, OPROV, ODIST, OVILL, OEA, OHU, QUESTNUM);
 		enter OTHERS_FF;
-		writecase(OTHERS_DICT, OPROV, ODIST, OVILL, OEA, OHU, QUESTNUM);
+		writecase(OTHERS_DICT);
 	endif;
 {---------------------------------------------------------------------------}
 
@@ -102,7 +102,7 @@ PROC FLOOR_TYPE
 		GETOTHER(4);
 		loadcase(OTHERS_DICT, OPROV, ODIST, OVILL, OEA, OHU, QUESTNUM);
 		enter OTHERS_FF;
-		writecase(OTHERS_DICT, OPROV, ODIST, OVILL, OEA, OHU, QUESTNUM);
+		writecase(OTHERS_DICT);
 	endif;
 {---------------------------------------------------------------------------}
 

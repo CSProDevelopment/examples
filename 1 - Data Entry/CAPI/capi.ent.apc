@@ -1,23 +1,19 @@
 ﻿PROC GLOBAL
 
-set explicit;
-
-
 numeric person_num;       { current person occ we are working on }
 numeric tot_pop;          { total number of person records }
 numeric max_day;
 
 {-- fill variables --}
-alpha(50) full_name_str;  { person's full name }
-alpha(20) month_name;     { month description (1-->January, 2-->February, etc.) }
+string full_name_str;  { person's full name }
+string month_name;     { month description (1-->January, 2-->February, etc.) }
 
 {-- navigation control variables --}
-alpha(32) faq_last_field, { for use in faq blk } 
-		  curr_field;     { name of current field in OnKey func }
+string faq_last_field, { for use in faq blk } 
+	   curr_field;     { name of current field in OnKey func }
 
 {-- misc variables --}
 numeric i;                { general calc, temp usage }
-alpha(100) s;             { general string operations, temp usage }
 
 
 
@@ -30,7 +26,7 @@ alpha(100) s;             { general string operations, temp usage }
   -      CAPI_LANG=3 for Arabic                      
   =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=  }
 function GetMonthStr(m);
-    if CAPI_LANG=1 then
+    if getlanguage()="EN" then
         { interviewer is using English }
     	if m=1 then
     		month_name="January";
@@ -60,7 +56,7 @@ function GetMonthStr(m);
     		errmsg ("Internal error; m=%d", m);
     	endif;
 
-    elseif CAPI_LANG=2 then
+    elseif getlanguage()="PT" then
         { interviewer is using Portuguese }
     	if m=1 then
     		month_name="janeiro";
@@ -90,7 +86,7 @@ function GetMonthStr(m);
     		errmsg ("Internal error; m=%d portuguese", m);
     	endif;
 
-    elseif CAPI_LANG=3 then
+    elseif getlanguage()="AR" then
         { interviewer is using Arabic }
     	if m=1 then
     		month_name="يناير";
@@ -148,7 +144,7 @@ function OnKey(x);
 
 	{ write all keystrokes except for Shift/Ctrl/Alt to audit trail }
 	if not (x % 1000) in 16, 17, 18 then
-	    write("%4d         %s",x,concat(strip(curr_field),maketext("(%d)",curocc())));
+	    write("%4d         %s",x,concat(curr_field,maketext("(%d)",curocc())));
 	endif;
 
     if x=4067 then  { Alt+C spawns the Windows Calculator (calc.exe) }
@@ -181,11 +177,11 @@ function OnStop();
     if curr_field[1:4]="X_CB" or strip(curr_field)="CASE_NOTES" then
         { user is already somewhere on the callback screen }
         errmsg ("Please complete all callback information before exiting.");
-    elseif strip(curr_field)="ALL_DONE" then
+    elseif curr_field="ALL_DONE" then
         { user is on the end interview screen ... }
         EndLevel;
         Stop(1);
-    elseif strip(curr_field)="CASEID" then
+    elseif curr_field="CASEID" then
         { user hasn't given IDs yet ... just quit }
         Stop(1);
     else
@@ -198,8 +194,7 @@ end;
 
 PROC POPSTAN_CENSUS_DICTIONARY_FF   { app-level proc }
 preproc
-    set attributes (POPSTAN_CENSUS) assisted on (question);      { show pop-up response categories }
-    set behavior() CanEnter(notappl) on (noconfirm);      { allow entry of NotAppl values }
+    setproperty(POPSTAN_CENSUS,"CanEnterNotAppl","NoConfirm");	{ allow entry of NotAppl values }
 
 
 { =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= }
@@ -232,7 +227,6 @@ PreProc
 
 PROC MORE_PEOPLE  { any more people? }
 PreProc
-	set attributes (MORE_PEOPLE) assisted on;   { show popup menu with valid values }
 	$ = " ";   { clear out previous response }
 
 OnFocus
@@ -290,21 +284,11 @@ PROC REL
   age.  You can see that with the View | CAPI Questions screen in the 
   forms designer.
 }
-PreProc
-	set attributes (REL) assisted on;   { show popup menu with valid values }
-
-{ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= }
-
-
-PROC SEX
-PreProc
-	set attributes (SEX) assisted on;   { show popup menu with valid values }
 
 { =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= }
 
 PROC EDUCATION_LEVEL { highest level of education }
 PreProc
-	set attributes (EDUCATION_LEVEL) assisted on;   { show popup menu with valid values }
 	if AGE<=5 then
 		$ = NotAppl;
 		errmsg ("Education level is not applicable for %s", FULLNAME);
@@ -482,12 +466,11 @@ PreProc
 	INTERVIEW_END_TIME = edit("99:99:99",systime());
 	
 	{ create a default notes string, and save it as the variable's note }
-	s = strip(maketext("Case %d: date: %s, started at: %s, ended at: %s", CASEID, INTERVIEW_DATE, INTERVIEW_START_TIME, INTERVIEW_END_TIME));
-	PutNote(s);
+	PutNote(strip(maketext("Case %d: date: %s, started at: %s, ended at: %s", CASEID, INTERVIEW_DATE, INTERVIEW_START_TIME, INTERVIEW_END_TIME)));
 
 PostProc
 	if $="N" then
-		s=EditNote();
+		EditNote();
 	endif;
 	SavePartial();      { save whatever we've got for this case }
 	Stop(0);

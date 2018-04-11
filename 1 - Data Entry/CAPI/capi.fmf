@@ -602,6 +602,7 @@ Name=MORE_PEOPLE
 Position=183,293,198,313
 Item=MORE_PEOPLE,POPSTAN_CENSUS
 UpperCase=Yes
+DataCaptureType=DropDown
 Form=2
   
 [Text]
@@ -647,6 +648,7 @@ Text=Age
 Name=REL
 Position=224,111,253,131
 Item=REL,POPSTAN_CENSUS
+DataCaptureType=DropDown
 Form=3
   
 [Text]
@@ -658,6 +660,7 @@ Text=Relationship
 Name=SEX
 Position=224,141,239,161
 Item=SEX,POPSTAN_CENSUS
+DataCaptureType=DropDown
 Form=3
   
 [Text]
@@ -669,6 +672,7 @@ Text=Sex
 Name=EDUCATION_LEVEL
 Position=224,170,239,190
 Item=EDUCATION_LEVEL,POPSTAN_CENSUS
+DataCaptureType=DropDown
 Form=3
   
 [Text]
@@ -749,7 +753,7 @@ Required=Yes
 Type=Item
 TypeName=COMPUTER
 Max=5
-DisplaySize=57,58,287,208
+DisplaySize=57,58,330,222
 Orientation=Horizontal
 FieldRowHeight=28
 HeadingRowHeight=8
@@ -790,10 +794,15 @@ Width=10
 [EndColumn]
   
 [Column]
-Width=23
+Width=70
+  
+[HeaderText]
+Position=0,0,70,24
+Text=Computer
+ 
 [Field]
 Name=COMPUTER
-Position=0,0,15,20
+Position=23,0,38,20
 Item=COMPUTER,POPSTAN_CENSUS
 Protected=Yes
   
