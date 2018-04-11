@@ -2,64 +2,61 @@
 Version=CSPro 7.1
 
 [LANGUAGES]
-ENG=English
+EN=English
 
 [QUESTION]
 Field=HOUSEHOLDQUESTIONNAIRE_DICT.AGE
 Occurrences=1:30
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.14393}\viewkind4\uc1 
-ENG=\pard\cf1\fs19 How old is %NAMES% in completed years?\par
-ENG=\par
-ENG=\i Enter 0 for children less than 1 year old.\par
-ENG=Enter 99 for anyone 99 years old and above.\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.14393}\viewkind4\uc1
+EN=\pard\cf1\fs19 How old is %NAMES% in completed years?\par
+EN=\par
+EN=\i Enter 0 for children less than 1 year old.\par
+EN=Enter 99 for anyone 99 years old and above.\par
+EN=}
 
 [QUESTION]
 Field=HOUSEHOLDQUESTIONNAIRE_DICT.HOUSEHOLD_NUMBER
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.14393}\viewkind4\uc1 
-ENG=\pard\cf1\fs19 Enter the serial number for this household.\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.14393}\viewkind4\uc1
+EN=\pard\cf1\fs19 Enter the serial number for this household.\par
+EN=}
 
 [QUESTION]
 Field=HOUSEHOLDQUESTIONNAIRE_DICT.MORE_PEOPLE
 Occurrences=1:30
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.14393}\viewkind4\uc1 
-ENG=\pard\cf1\fs19 Are there are other household members that have not yet been recorded?\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.14393}\viewkind4\uc1
+EN=\pard\cf1\fs19 Are there are other household members that have not yet been recorded?\par
+EN=}
 
 [QUESTION]
 Field=HOUSEHOLDQUESTIONNAIRE_DICT.NAMES
 Occurrences=1:30
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.14393}\viewkind4\uc1 
-ENG=\pard\cf1\fs19 Enter the full name of the next member of the household.\i\par
-ENG=}
-
-[QUESTION]
-Field=HOUSEHOLDQUESTIONNAIRE_DICT.PROVINCE
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.14393}\viewkind4\uc1
+EN=\pard\cf1\fs19 Enter the full name of the next member of the household.\i\par
+EN=}
 
 [QUESTION]
 Field=HOUSEHOLDQUESTIONNAIRE_DICT.RELATIONSHIP
 Occurrences=1:30
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.14393}\viewkind4\uc1 
-ENG=\pard\cf1\fs19 What is %NAMES%'s relationship to the head of household?\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.14393}\viewkind4\uc1
+EN=\pard\cf1\fs19 What is %NAMES%'s relationship to the head of household?\par
+EN=}
 
 [QUESTION]
 Field=HOUSEHOLDQUESTIONNAIRE_DICT.SEX
 Occurrences=1:30
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.14393}\viewkind4\uc1 
-ENG=\pard\cf1\fs19 Is %NAMES% male or female?\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.14393}\viewkind4\uc1
+EN=\pard\cf1\fs19 Is %NAMES% male or female?\par
+EN=}
 

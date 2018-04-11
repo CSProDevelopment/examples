@@ -2,33 +2,33 @@
 Version=CSPro 7.1
 
 [LANGUAGES]
-ENG=English
+EN=English
 
 [QUESTION]
 Field=MENU_DICT.INTERVIEWER_MENU
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.14393}\viewkind4\uc1 
-ENG=\pard\cf1\fs19 You are logged in as an interviewer.\par
-ENG=\par
-ENG=Choose an option:\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.14393}\viewkind4\uc1
+EN=\pard\cf1\fs19 You are logged in as an interviewer.\par
+EN=\par
+EN=Choose an option:\par
+EN=}
 
 [QUESTION]
 Field=MENU_DICT.LOGIN
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-ENG=\pard\cf1\fs19 Choose your role:\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.14393}\viewkind4\uc1
+EN=\pard\cf1\fs19 Choose your role:\par
+EN=}
 
 [QUESTION]
 Field=MENU_DICT.SUPERVISOR_MENU
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-ENG=\pard\cf1\fs19 You are logged in as a supervisor.\par
-ENG=\par
-ENG=Choose an option.\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.14393}\viewkind4\uc1
+EN=\pard\cf1\fs19 You are logged in as a supervisor.\par
+EN=\par
+EN=Choose an option.\par
+EN=}
 
