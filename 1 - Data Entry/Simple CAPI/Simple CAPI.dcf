@@ -45,6 +45,19 @@ ZeroFill=Yes
 
 [ValueSet]
 Label=Relationship
+Name=RELATIONSHIP_VS1
+Value=1;Head of Household
+Value=2;Spouse / Partner
+Value=3;Son / Daughter
+Value=4;Brother / Sister
+Value=5;Father / Mother
+Value=6;Grandfather / Grandmother
+Value=7;Grandson / Granddaughter
+Value=8;Other Relative
+Value=9;Non-Relative
+
+[ValueSet]
+Label=Relationship
 Name=RELATIONSHIP_MALE_VS
 Value=1;Head of Household
 Value=2;Spouse / Partner
