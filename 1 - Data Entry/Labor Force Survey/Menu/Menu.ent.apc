@@ -22,7 +22,7 @@ function launchHouseholdDataEntry()
 	filewrite(pffFile,"Description=Labor Force Survey");
 
 	filewrite(pffFile,"[DataEntryInit]");
-	filewrite(pffFile,"ShowInApplicationListing=Hidden");
+	filewrite(pffFile,"ShowInApplicationListing=Never");
 	filewrite(pffFile,"StartMode=add;%s", CHOOSE_HOUSEHOLD);
 	filewrite(pffFile,"Lock=CaseListing");
 	
@@ -31,9 +31,6 @@ function launchHouseholdDataEntry()
 	filewrite(pffFile,"InputData=%s","./PopstanLFS.csdb|CSPRODB");
 
 	filewrite(pffFile,"[ExternalFiles]");
-	filewrite(pffFile,"DISTRICT_DICT=%s","./resources/Districts.csdb|CSPRODB");
-	filewrite(pffFile,"ISCO_DICT=%s","./resources/ISCO.csdb|CSPRODB");
-	filewrite(pffFile,"ISCO_INDEX_DICT=%s","./resources/ISCO-Index.csdb|CSPRODB");
 
 	filewrite(pffFile,"[Parameters]");
 	filewrite(pffFile,"OnExit=%s","../Menu/Menu.pff");
@@ -198,6 +195,7 @@ else
 	errmsg("Invalid login. Try again.");
 	reenter;
 endif;
+
 PROC INTERVIEWER_MENU
 
 if INTERVIEWER_MENU = 1 then
@@ -232,6 +230,7 @@ endif;
 // Show menu again
 INTERVIEWER_MENU = notappl;
 reenter;
+
 PROC SUPERVISOR_MENU
 
 if SUPERVISOR_MENU = 1 then
@@ -259,7 +258,7 @@ elseif SUPERVISOR_MENU = 2 then
 	
 elseif SUPERVISOR_MENU = 3 then
 	// Sync interviewer
-	syncserver(Bluetooth, "..");
+	syncserver(Bluetooth);
 	
 elseif SUPERVISOR_MENU = 4 then
 	// Review questionnaires
@@ -272,6 +271,7 @@ endif;
 // Back to menu
 SUPERVISOR_MENU = notappl;
 reenter;
+
 PROC CHOOSE_HOUSEHOLD
 
 onfocus
@@ -301,6 +301,7 @@ setvalueset(CHOOSE_HOUSEHOLD, codesString, labels);
 
 postproc
 skip to HOUSEHOLD_ACTION;
+
 PROC HOUSEHOLD_ACTION
 onfocus
 
@@ -323,6 +324,7 @@ endif;
 // Show menu again
 HOUSEHOLD_ACTION = notappl;
 reenter;
+
 PROC HOUSEHOLD_FINAL_RESULT
 preproc
 // prefill with current value from status file
