@@ -2,7 +2,7 @@
 InputDict=.\Staff.dcf
 OutputData=.\Staff.csdb
 StartingRow=2
-CaseManagement=CreateNewFile
+CaseManagement=ModifyAddDeleteCases
 RunOnlyIfNewer=No
 
 Mapping=STAFF_REC;@1;Sheet1
