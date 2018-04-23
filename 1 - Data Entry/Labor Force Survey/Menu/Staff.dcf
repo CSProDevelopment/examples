@@ -40,3 +40,9 @@ Name=STAFF_ROLE
 Start=34
 Len=1
 ZeroFill=Yes
+
+[ValueSet]
+Label=Staff role
+Name=STAFF_ROLE_VS1
+Value=1;Interviewer
+Value=2;Supervisor
