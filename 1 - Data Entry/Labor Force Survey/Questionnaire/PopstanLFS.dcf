@@ -10,7 +10,6 @@ DecimalChar=Yes
 
 [Languages]
 ENG=English
-FRA=Francais
 
 [Level]
 Label=PopstanLFS questionnaire
@@ -95,8 +94,8 @@ ZeroFill=Yes
 Label=Household replacement status
 Name=GHHRPL_VS1
 Link=162766440
-Value=1;Yes|Oui
-Value=2;No|Non
+Value=1;Yes
+Value=2;No
 
 [Item]
 Label=Number of household members
@@ -141,17 +140,17 @@ Len=50
 DataType=Alpha
 
 [Item]
-Label=Sex|Sexe
+Label=Sex
 Name=DEMSEX
 Start=63
 Len=1
 ZeroFill=Yes
 
 [ValueSet]
-Label=Sex|Sexe
+Label=Sex
 Name=DEMSEX_VS1
-Value=1;Male|Masculin
-Value=2;Female|Feminin
+Value=1;Male
+Value=2;Female
 
 [Item]
 Label=Relationship to head of household/reference person
@@ -255,22 +254,22 @@ Value=1:31;Known
 Value=99;Unknown
 
 [Item]
-Label=Highest level of education|Plus haut niveau d'éducation
+Label=Highest level of education
 Name=DEMEDL
 Start=77
 Len=2
 ZeroFill=Yes
 
 [ValueSet]
-Label=Highest level of education|Plus haut niveau d'éducation
+Label=Highest level of education
 Name=DEMEDL_VS1
-Value=1;Never attended school|Jamais fréquenté l'école
+Value=1;Never attended school
 Value=2;Less than primary
-Value=3;Primary|Primaire
-Value=4;Lower secondary|Premier cycle du secondaire
-Value=5;Upper secondary|Deuxième cycle du secondaire
-Value=6;Post secondary|Post-secondaire
-Value=7;Tertiary|Tertiaire
+Value=3;Primary
+Value=4;Lower secondary
+Value=5;Upper secondary
+Value=6;Post secondary
+Value=7;Tertiary
 
 [Item]
 Label=Currently in education
@@ -1511,13 +1510,13 @@ Len=4
 Occurrences=7
 Decimal=1
 DecimalChar=Yes
-OccurrenceLabel=1,Monday|Lundi
-OccurrenceLabel=2,Tuesday|Mardi
-OccurrenceLabel=3,Wednesday|Mercredi
-OccurrenceLabel=4,Thursday|Jeudi
-OccurrenceLabel=5,Friday|Vendredi
-OccurrenceLabel=6,Saturday|Samedi
-OccurrenceLabel=7,Sunday|Dimanche
+OccurrenceLabel=1,Monday
+OccurrenceLabel=2,Tuesday
+OccurrenceLabel=3,Wednesday
+OccurrenceLabel=4,Thursday
+OccurrenceLabel=5,Friday
+OccurrenceLabel=6,Saturday
+OccurrenceLabel=7,Sunday
 
 [ValueSet]
 Label=Hours actually worked main job
@@ -1635,13 +1634,13 @@ Len=4
 Occurrences=7
 Decimal=1
 DecimalChar=Yes
-OccurrenceLabel=1,Monday|Lundi
-OccurrenceLabel=2,Tuesday|Mardi
-OccurrenceLabel=3,Wednesday|Mercredi
-OccurrenceLabel=4,Thursday|Jeudi
-OccurrenceLabel=5,Friday|Vendredi
-OccurrenceLabel=6,Saturday|Samedi
-OccurrenceLabel=7,Sunday|Dimanche
+OccurrenceLabel=1,Monday
+OccurrenceLabel=2,Tuesday
+OccurrenceLabel=3,Wednesday
+OccurrenceLabel=4,Thursday
+OccurrenceLabel=5,Friday
+OccurrenceLabel=6,Saturday
+OccurrenceLabel=7,Sunday
 
 [ValueSet]
 Label=Hours actually worked second job

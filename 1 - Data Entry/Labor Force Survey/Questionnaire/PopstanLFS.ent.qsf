@@ -3,7 +3,6 @@ Version=CSPro 7.1
 
 [LANGUAGES]
 ENG=English
-FRA=Francais
 
 [QUESTION]
 Field=POPSTANLFS_DICT.ABSDUR
@@ -663,11 +662,6 @@ ENG={\colortbl ;\red0\green0\blue0;}
 ENG={\*\generator Riched20 10.0.15063}\viewkind4\uc1
 ENG=\pard\cf1\fs19 What is the highest level of education that %NAME% has completed?\par
 ENG=}
-FRA={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-FRA={\colortbl ;\red0\green0\blue0;}
-FRA={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-FRA=\pard\cf1\fs19 Quel est le niveau d'\'e9ducation le plus \'e9lev\'e9 que %NAME% a compl\'e9t\'e9?\par
-FRA=}
 
 [QUESTION]
 Field=POPSTANLFS_DICT.DEMMORE
@@ -704,11 +698,6 @@ ENG={\colortbl ;\red0\green0\blue0;}
 ENG={\*\generator Riched20 10.0.15063}\viewkind4\uc1
 ENG=\pard\cf1\fs19 Is %NAME% male or female?\par
 ENG=}
-FRA={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-FRA={\colortbl ;\red0\green0\blue0;}
-FRA={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-FRA=\pard\cf1\fs19 Est-ce que %NAME% est masculin ou feminin?\par
-FRA=}
 
 [QUESTION]
 Field=POPSTANLFS_DICT.DMJSMO

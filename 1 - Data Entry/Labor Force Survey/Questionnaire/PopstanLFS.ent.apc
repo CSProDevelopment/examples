@@ -45,8 +45,6 @@ numeric ownBusinessProxy;
 // Recompute ownBusinessProxy variable.
 // Should be called in onfocus of any fields
 // that use the variable in question text conditions.
-
-
 function updateOwnBusinessProxy()
 	if MJBEST = 1 and PXYCHK = 1 then
 		ownBusinessProxy = 1;
@@ -67,23 +65,17 @@ numeric minAgeEligibleForLabor = 15;
 // is eligible for labor section.
 // Pass in the index (occurrence number) of the household
 // member in the demographics roster.
-
-
 function isEligibleForLabor(personNumber)
 	isEligibleForLabor = DEMAG1(personNumber) >= minAgeEligibleForLabor;
 end;
 
 // Determine if checkbox is empty (no options selected)
-
-
 function checkboxHasSelection(string checkbox)
 	checkboxHasSelection = length(strip(checkbox)) > 0;
 end;
 
 // Compute day of week from date
-// Returns 1 for Sunday, 2 for Monday...
-
-
+// Returns 1 for Sunday, 2 for Monday..
 function dayOfWeek(yyyymmdd)
 	numeric referenceDay = 20170827; // This was be a Sunday
 	numeric diff = datediff(referenceDay, yyyymmdd, "d");
@@ -93,8 +85,6 @@ end;
 
 // Convert a numeric month (1 for January, 2 for February...)
 // to a string representation in the currently selected language.
-
-
 function string dayOfWeekToString(dayNum)
 	string dayName;
 	recode dayNum => dayName;
@@ -111,8 +101,6 @@ end;
 
 // Convert a numeric month (1 for January, 2 for February...)
 // to a string representation in the currently selected language.
-
-
 function string monthToString(monthNum)
 	string monthName;
 	recode monthNum => monthName;
@@ -133,8 +121,6 @@ function string monthToString(monthNum)
 end;
 
 // Convert numeric date to month/day string e.g. "Friday October 6"
-
-
 function string dateToDayMonthString(yyyymmdd)
 	numeric month = int(yyyymmdd/100) % 100;
 	numeric day = yyyymmdd % 100;
@@ -146,9 +132,7 @@ array string householdMembersArray(20, 4);
 
 // Display list of household members from demographic roster
 // and have interviewer pick a member.
-// Return row number of member chosen.
-
-
+// Return row number of member chosen
 function pickFromHouseholdRoster()
 	//  Fill array from demographics roster
 	numeric personNumber;
@@ -188,8 +172,6 @@ array string enabledModules(7);
 
 // Display list of existing labor record occurrences in nice format (NAME, SEX, REL, AGE).
 // Return row number of member chosen.
-
-
 function pickFromLaborForms()
 	//  Fill array from labor form
 	numeric laborRowNumber;
@@ -214,9 +196,7 @@ function pickFromLaborForms()
 end;
 
 // Show list of enabled labor modules in accept menu for an occurrence in
-// repeating labor form. Returns row number chosen.
-
-
+// repeating labor form. Returns row number chosen
 function pickLaborModule(laborPersonNumber)
 
 	// Loop through module array and display accept box listing only
@@ -255,15 +235,11 @@ function pickLaborModule(laborPersonNumber)
 end;
 
 // Move to a field value based on field name in string variable and occurrence number.
-
-
 function moveToFieldWithOccurrence(string fieldName, occurrence)
 	move to maketext("%s(%d)", fieldName, occurrence) advance;
 end;
 
-// Display navigation aide
-
-
+// Display navigation aid
 function goto()
 	numeric section = accept(tr("Go To?"), tr("Identifiers"), tr("Demographics"), tr("Labor"));
 
@@ -287,8 +263,6 @@ function goto()
 end;
 
 // Display system calculator
-
-
 function showCalculator()
 	if getos() = 10 then
 		// Windows
@@ -303,8 +277,6 @@ function showCalculator()
 end;
 
 // Determine if individual is employed
-
-
 function isEmployed()
 
 	if EMPPAY = 1 then
@@ -357,10 +329,6 @@ preproc
 			setocclabel(LABOR_FORM(i), NAME(visualvalue(LBPPNO(i))));
 		endif;
 	enddo;
-
-
-PROC GH_FORM
-
 
 PROC PROVINCE
 
@@ -496,7 +464,6 @@ PROC NAME
 
 
 PROC DEMREL
-
 
 onfocus
 
