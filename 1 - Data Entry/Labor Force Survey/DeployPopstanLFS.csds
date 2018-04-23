@@ -46,9 +46,9 @@
     }
   ],
   "deployment": {
-    "type": "Dropbox",
+    "type": "LocalFolder",
     "cswebUrl": "",
     "ftpUrl": "",
-    "localFolderPath": ".\\Deployment"
+    "localFolderPath": ".\\DeployLaborForceSurvey"
   }
 }
