@@ -217,6 +217,7 @@ Label=Literacy
 Name=HH_LITERACY
 Start=79
 Len=1
+ZeroFill=Yes
 
 [ValueSet]
 Label=Literacy
