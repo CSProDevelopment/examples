@@ -1,0 +1,1518 @@
+﻿PROC GLOBAL
+
+
+// ------------------
+// ------------------ Global variables
+// ------------------
+
+
+numeric supervisor_password = 1234;
+string login_setting_key = "PSC Login";
+string assignment_setting_key = "PSC Assignment";
+string segment_alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+array string months(12) = "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec";
+
+
+// ------------------
+// ------------------ CAPI text variables
+// ------------------
+
+
+string capi_publish_date;
+string capi_staff_name;	// Name of the person who logged into the system
+string capi_staff_role;
+string capi_manage_staff_name; // Various names of interviewers used throughout the system
+string capi_province_name;
+string capi_district_name;
+string capi_ea_name;
+numeric capi_ea_assigned_count;
+numeric capi_household_complete_count;
+numeric capi_household_partial_count;
+
+
+// ------------------
+// ------------------ Function to override the back button on Android (and the stop button on Windows)
+// ------------------
+
+
+// The highlighted function determines whether the user has passed through the supervisor or interviewer menu.
+// If the menu has been passed through, the back button on Android (and the stop button on Windows) will reenter
+// the menu when pressed. Otherwise, the button will exit the application.
+function OnStop()
+	
+	if highlighted(SUPERVISOR_MENU) then
+		reenter SUPERVISOR_MENU;
+
+	elseif highlighted(INTERVIEWER_MENU) then
+		reenter INTERVIEWER_MENU;
+
+	else
+		// Quit the application. Main menu has not been entered
+		stop(1);
+
+	endif;
+
+end;
+
+
+// ------------------
+// ------------------ Functions to simplify looking up geographic names
+// ------------------
+
+
+function string LookupGeographyName(province, district)
+
+	GEOCODES_PROVINCE = province;
+	GEOCODES_DISTRICT = district;
+	GEOCODES_EA = notappl;
+
+	if loadcase(PSC_GEOCODES_DICT, GEOCODES_PROVINCE, GEOCODES_DISTRICT, GEOCODES_EA) then
+		LookupGeographyName = strip(GEOCODES_AREA_NAME);
+
+	else
+		LookupGeographyName = "<Invalid Geocode>";
+
+	endif;
+
+end;
+
+
+function string LookupProvinceName(province)
+
+	LookupProvinceName = LookupGeographyName(province, notappl);
+	
+end;
+
+
+function string LookupDistrictName(province, district)
+
+	LookupDistrictName = LookupGeographyName(province, district);
+	
+end;
+
+
+function string LookupEAName(ea)
+
+	LookupEAName = maketext("EA%03d", ea);
+	
+end;
+
+
+function string LookupDetailedHouseholdName()
+
+	string detailedName = maketext("%v%v", HH_SEGMENT, HH_NUMBER);
+
+	if count(HH_NAME) >= 1 and HH_NAME(1) <> "" then
+		detailedName = detailedName + maketext(" - %v", strip(HH_NAME(1)));
+	endif;
+
+	LookupDetailedHouseholdName = detailedName;
+
+end;
+
+
+function string LookupStaffName(string code)
+
+	// If staff member's information is already loaded, don't load again
+	if STAFF_CODE = code or loadcase(PSC_STAFF_DICT, code) then
+		LookupStaffName = strip(STAFF_NAME);
+
+	else
+		LookupStaffName = "<Invalid Staff>";
+
+	endif;
+
+end;
+
+
+// ------------------
+// ------------------ PFF functions
+// ------------------
+
+
+file pffFile;
+
+
+function LaunchHouseholdProgram()
+
+	string programName = "Household";
+	setfile(pffFile,maketext("../%s/%s.pff", programName, programName), create);
+
+	filewrite(pffFile, "[Run Information]");
+	filewrite(pffFile, "Version=CSPro 7.1");
+	filewrite(pffFile, "AppType=Entry");
+	filewrite(pffFile, "Description=Popstan Census %s Questionnaire", programName);
+
+	filewrite(pffFile, "[DataEntryInit]");
+	filewrite(pffFile, "FullScreen=Yes");
+	filewrite(pffFile, "StartMode=Add;%v%v%v%v%v", HH_PROVINCE, HH_DISTRICT, HH_EA, HH_SEGMENT, HH_NUMBER);
+	filewrite(pffFile, "Lock=CaseListing");
+	filewrite(pffFile, "ShowInApplicationListing=Never");
+
+	filewrite(pffFile,"[Files]");
+	filewrite(pffFile, "Application=%s.ent", programName);
+	filewrite(pffFile, "InputData=%s", filename(PSC_HOUSEHOLD_DICT));
+
+	filewrite(pffFile, "[Parameters]");
+	filewrite(pffFile, "OnExit=../Menu/Menu.pff");
+
+	// Geocodes
+	filewrite(pffFile, "Province=%v", HH_PROVINCE);
+	filewrite(pffFile, "District=%v", HH_DISTRICT);
+	filewrite(pffFile, "EA=%v", HH_EA);
+	filewrite(pffFile, "Segment=%v", HH_SEGMENT);
+	filewrite(pffFile, "HouseholdNumber=%v", HH_NUMBER);
+
+	// Other metadata
+	filewrite(pffFile, "ProvinceName=%s", LookupProvinceName(HH_PROVINCE));
+	filewrite(pffFile, "DistrictName=%s", LookupDistrictName(HH_PROVINCE,HH_DISTRICT));
+	filewrite(pffFile, "EAName=%s", LookupEAName(HH_EA));
+	filewrite(pffFile, "InterviewerCode=%v", LOGIN);
+	filewrite(pffFile, "SupervisorCode=%v", SUPERVISOR_STAFF_CODE);
+	filewrite(pffFile, "StaffName=%s", LookupStaffName(LOGIN));
+
+	close(pffFile);
+
+	execpff(filename(pffFile), stop);
+
+end;
+
+
+// ------------------
+// ------------------ Report functions
+// ------------------
+
+
+// Workload is a 2-dimensional array of interviewers and their assignments
+// INTERVIEWER   | ASSIGNMENT   | ASSIGNMENT
+// Interviewer01 | assignment01 | assignment02
+// Interviewer02 | assignment01 | assignment02
+array string workload(99, 99);
+file report_file;
+
+
+function string GetInterviewerName(string staffCode)
+	
+	if loadcase(PSC_STAFF_DICT, staffCode) then
+		GetInterviewerName = strip(STAFF_NAME);
+		
+	else
+		GetInterviewerName = "<Invalid Staff Code>";
+		
+	endif;
+
+end;
+
+
+function string formatHeader(string staffName)
+
+	string header = "-" + staffName;
+	numeric maxHeaderLength = 51; // Max length of "-" + STAFF_NAME (which has length of 50)
+	while (length(header) < maxHeaderLength) do
+		header = header + "-";
+	enddo;
+	
+	formatHeader = header;
+
+end;
+
+
+function string formatTimeStamp(ts)
+
+	if ts = 0 then
+		formatTimeStamp = "-";
+
+	else
+		numeric month = sysdate("MM", ts);
+		numeric day = sysdate("DD", ts);
+		numeric year = sysdate("YYYY", ts);
+		formatTimeStamp = maketext("%d %s %d", day, months(month), year);
+
+	endif;
+
+end;
+
+
+// Initialize first column of the workload array with the interviewer's staff code
+function InitInterviewers()
+	
+	numeric interviewer = 1;
+	// Loop through all interviewers that are supervised by the currently logged in supervisor
+	forcase PSC_STAFF_DICT where SUPERVISOR_STAFF_CODE = LOGIN do
+		
+		workload(interviewer, 1) = STAFF_CODE;
+		inc(interviewer);
+		
+	enddo;
+	
+	// Denote last row
+	workload(interviewer, 1) = "";
+		
+end;
+
+
+// Initialize columns left of interviewer's name with their assignments
+function InitAssignments()
+	
+	numeric interviewer = 1;
+	numeric assignment = 2;
+	// Loop through each interviewer
+	while workload(interviewer, 1) <> "" do
+		// Loop through each assignment that is assigned to interviewer
+		forcase PSC_ASSIGNMENTS_DICT where pos(workload(interviewer, 1), key(PSC_ASSIGNMENTS_DICT)) <> 0 do
+			
+			workload(interviewer, assignment) = maketext("%v%v%v%v", ASSIGNMENTS_PROVINCE
+				, ASSIGNMENTS_DISTRICT, ASSIGNMENTS_EA, ASSIGNMENTS_SEGMENT);
+			inc(assignment);
+				
+		enddo;
+		
+		// Denote last column in current row
+		workload(interviewer, assignment) = "";
+		inc(interviewer);
+		assignment = 2;  // Reset to 1st assignment
+	
+	enddo;
+	
+end;
+
+function ShowInterviewerStatusReport()
+	
+	// Write report to file
+	string dataDirectory = pathname(Application) + "../Data/";
+	dircreate(dataDirectory); // Make sure directory exists
+	setfile(report_file, dataDirectory + "Interviewer Status Report.txt");
+	
+	// Initialize the workload array
+	InitInterviewers();
+	InitAssignments();
+	
+	numeric interviewer = 1;
+	// Loop through each interviewer in workload
+	while workload(interviewer, 1) <> "" do	
+		
+		numeric partial = 0;
+		numeric complete = 0;
+		numeric male = 0;
+		numeric female = 0;
+		numeric lastInterview = 0;
+		
+		numeric assignment = 2;
+		// Loop through interviewer's assignments
+		while workload(interviewer, assignment) <> "" do
+
+			// Loop through households that are within the interviewer's assignment
+			forcase PSC_HOUSEHOLD_DICT where pos(workload(interviewer, assignment), key(PSC_HOUSEHOLD_DICT)) <> 0 do
+				
+				// Is the household case a partial or complete save?
+				if ispartial(PSC_HOUSEHOLD_DICT) then
+					inc(partial);
+					
+				else
+					inc(complete);
+					
+				endif;
+				
+				// How many males and females have been counted?
+				male = male + count(PSC_HOUSEHOLD_DICT.POPULATION_RECORD where HH_SEX = 1);
+				female = female + count(PSC_HOUSEHOLD_DICT.POPULATION_RECORD where HH_SEX = 2);
+				
+				// When was the last interview completed?
+				if lastInterview < HH_END_INTERVIEW_TIME then
+					lastInterview = HH_END_INTERVIEW_TIME;
+				endif;
+				
+			enddo;
+			
+			inc(assignment);
+			
+		enddo;
+		
+		filewrite(report_file, "%s", formatHeader(GetInterviewerName(workload(interviewer, 1))));
+		filewrite(report_file, "   Partial: %d", partial);
+		filewrite(report_file, "   Complete: %d", complete);
+		filewrite(report_file, "   Total Males: %d", male);
+		filewrite(report_file, "   Total Females: %d", female);
+		filewrite(report_file, "   Last Interview: %s", formatTimeStamp(lastInterview));
+		
+		inc(interviewer);
+		assignment = 2; // Reset to 1st assignment
+		
+	enddo;
+	
+	close(report_file);
+
+	// View report
+	if getos() = 10 then
+		// Windows	
+		execsystem(maketext("explorer.exe %s", filename(report_file)));
+		
+	elseif getos() = 20 then
+		// Android
+		execsystem(maketext("view:%s", filename(report_file)));
+		
+	else
+		// Windows Universal
+		errmsg("Reports not supported on this platform");
+	endif;
+	
+end;
+
+
+// ------------------
+// ------------------ Sync functions
+// ------------------
+
+
+string MenuPenMd5;
+string MenuPffMd5;
+
+
+function SaveApplicationSnapshot()
+
+	MenuPenMd5 = diagnostics("md5", "Menu.pen");
+	MenuPffMd5 = diagnostics("md5", "Menu.pff");
+	
+end;
+
+
+function RestartApplicationIfModified()
+
+	// Compare the saved MD5s against the new MD5s to see if the files have changed
+	if MenuPenMd5 <> diagnostics("md5", "Menu.pen") or MenuPffMd5 <> diagnostics("md5", "Menu.pff") then
+		errmsg("The application has been updated and will be restarted.");
+		execpff("Menu.pff", stop);
+	endif;
+
+end;
+
+
+function StartServer()
+
+	SaveApplicationSnapshot();
+
+	if not syncserver(Bluetooth) then
+		errmsg("Failed to start Bluetooth server.");
+	endif;
+
+	RestartApplicationIfModified();
+
+end;
+
+
+// Not a standalone sync function. Does not call syncconnect or syncdisconnect.
+function SyncDataWithInterviewer()
+	
+	numeric success = 1;
+	
+	forcase PSC_STAFF_DICT where STAFF_CODE = LOGIN or SUPERVISOR_STAFF_CODE = LOGIN do
+		
+		// Synchronize staff code for supervisor and their interviewers. Supervisor's staff code is sent, so supervisor
+		// is able to log onto their account using interviewer's device.
+		// Sync BOTH is used, because the supervisor and interview write to the staff data.
+		if success and not syncdata(BOTH, PSC_STAFF_DICT) then
+			errmsg("Failed to transfer interviewer's staff data. Transfer aborted.");
+			success = 0;
+			break;
+		endif;
+					
+	endfor;
+		
+	// Create universe for supervisory area.
+	string universeStr = maketext("%v%v", ASSIGNMENTS_PROVINCE, ASSIGNMENTS_DISTRICT);
+
+	// Synchronize assignments in supervisory area.
+	// Sync BOTH is used, because the supervisor and interview write to the assignments data.
+	if success and not syncdata(BOTH, PSC_ASSIGNMENTS_DICT, universeStr) then
+		errmsg("Failed to transfer assignment data. Transfer aborted.");
+		success = 0;
+	endif;
+	
+	// Synchronize households in supervisory area.
+	// Sync BOTH is used to distribute household data to all interviewers. This increases redundancy in case the
+	// supervisor's device is lost. Alternatively, a GET can be used, because only the interviewer writes to the
+	// household data.
+	if success and not syncdata(BOTH, PSC_HOUSEHOLD_DICT, universeStr) then
+		errmsg("Failed to transfer household data. Transfer aborted.");
+		success = 0;
+	endif;
+	
+	// Send all geocodes.
+	// Sync PUT is used, because the interviewer only reads the geocodes data.
+	if success and not syncdata(PUT, PSC_GEOCODES_DICT) then
+		errmsg("Failed to transfer geocode data.");
+		success = 0;
+	endif;
+	
+	SyncDataWithInterviewer = success;
+
+end;
+
+
+function SyncWithInterviewer()
+
+	numeric success = 1;
+
+	if syncconnect(Bluetooth) then
+		
+		success = SyncDataWithInterviewer();
+
+		if success and not syncfile(PUT, ".\Menu.pff", ".\Menu.pff") then
+			errmsg("Failed to transfer Menu.pff. Transfer aborted.");
+			success = 0;
+		endif;
+	
+		if success and not syncfile(PUT, ".\Menu.pen", ".\Menu.pen") then
+			errmsg("Failed to transfer Menu.pen. Transfer aborted.");
+			success = 0;
+		endif;
+	
+		if success and not syncfile(PUT, "..\Household\Household.pen", "..\Household\Household.pen") then
+			errmsg("Failed to transfer Household.pen. Transfer aborted.");
+			success = 0;
+		endif;
+
+		if not syncdisconnect() then
+			errmsg("Failed to disconnect from Bluetooth server.");
+			success = 0;
+		endif;
+
+	else
+		errmsg("Failed to connect to Bluetooth server.");
+		success = 0;
+
+	endif;
+
+	SyncWithInterviewer = success;
+
+end;
+
+// Not a standalone sync function. Does not call syncconnect or syncdisconnect.
+function SyncDataWithHQ()
+	
+	numeric success = 1;
+			
+	forcase PSC_STAFF_DICT where STAFF_CODE = LOGIN or SUPERVISOR_STAFF_CODE = LOGIN do
+		
+		// Synchronize staff code for supervisor and their interviewers. 
+		// Sync PUT is used, because HQ will only read the staff data.
+		if success and not syncdata(PUT, PSC_STAFF_DICT) then
+			errmsg("Failed to transfer interviewer's staff data. Transfer aborted.");
+			success = 0;
+			break;
+		endif;
+					
+	endfor;
+		
+	// Create universe for supervisory area.
+	string universeStr = maketext("%v%v", ASSIGNMENTS_PROVINCE, ASSIGNMENTS_DISTRICT);
+	
+	// Synchronize assignments in supervisory area.
+	// Sync PUT is used, because HQ will only read the assignments data.
+	if success and not syncdata(PUT, PSC_ASSIGNMENTS_DICT, universeStr) then
+		errmsg("Failed to transfer assignment data. Transfer aborted.");
+		success = 0;
+	endif;
+	
+	// Synchronize households in supervisory area.
+	// Sync PUT is used, because HQ will only read the household data.
+	if success and not syncdata(PUT, PSC_HOUSEHOLD_DICT, universeStr) then
+		errmsg("Failed to transfer household data. Transfer aborted.");
+		success = 0;
+	endif;
+		
+	SyncDataWithHQ = success;
+
+end;
+
+
+numeric full_sync = 1;
+numeric app_sync = 2;
+
+
+function SyncWithHQ(syncType)
+
+	numeric success = 1;
+
+	SaveApplicationSnapshot();
+
+	if syncconnect(Dropbox) then
+
+		if syncType = full_sync then
+			success = SyncDataWithHQ();
+		endif;
+
+		// Save the MD5 value before syncing
+		string menuPFF = diagnostics("md5", ".\Menu.pff");
+		string menuPEN = diagnostics("md5", ".\Menu.pen");
+
+		if success and not syncfile(GET, "/DeployPSC/Menu/Menu.pff", ".\Menu.pff") then
+			errmsg("Failed to receive Menu.pff. Transfer aborted.");
+			success = 0;
+		endif;
+
+		if success and not syncfile(GET, "/DeployPSC/Menu/Menu.pen", ".\Menu.pen") then
+			errmsg("Failed to receive Menu.pen. Transfer aborted.");
+			success = 0;
+		endif;
+
+		if success and not syncfile(GET, "/DeployPSC/Household/Household.pen", "..\Household\Household.pen") then
+			errmsg("Failed to receive Household.pen. Transfer aborted.");
+			success = 0;
+		endif;
+		
+		// Receive all geocodes. This is a lookup file, so update with applications.
+		// Sync GET is used, because only HQ writes to the geocodes data.
+		if success and not syncdata(GET, PSC_GEOCODES_DICT) then
+			errmsg("Failed to transfer geocode data.");
+			success = 0;
+		endif;
+
+		if not syncdisconnect() then
+			errmsg("Failed to disconnect from Dropbox.");
+			success = 0;
+		endif;
+
+	else
+		errmsg("Failed to connect to Dropbox.");
+		success = 0;
+
+	endif;
+
+	RestartApplicationIfModified();
+
+	SyncWithHQ = success;
+
+end;
+
+
+// ------------------
+// ------------------ Functions to simplify creating dynamic value sets
+// ------------------
+
+
+numeric vs_ctr;
+array vs_codes(500);
+array string vs_string_codes(500);
+array string vs_labels(500);
+
+// This function does not need to be called directly
+function EndVS()
+
+	vs_codes(vs_ctr) = notappl;
+	vs_string_codes(vs_ctr) = "";
+	
+end;
+
+
+function ResetVS()
+
+	vs_ctr = 1;
+	EndVS();
+	
+end;
+
+
+// This function does not need to be called directly
+function AddLabelToVS(string vsLabel)
+	
+	vs_labels(vs_ctr) = strip(vsLabel);
+	inc(vs_ctr);
+	EndVS();
+	
+end;
+
+
+function AddNumericVS(vsCode, string vsLabel)
+
+	vs_codes(vs_ctr) = vsCode;
+	AddLabelToVS(vsLabel);
+	
+end;
+
+
+// Value set codes (vsCode) are usually numerics. However, the key of the case (see key function) is useful,
+// because it is unique and can be used to load the case after it is selected. It is returned as a string,
+// so additional value set codes will need to stringified.
+function AddStringVS(string vsCode, string vsLabel)
+
+	vs_string_codes(vs_ctr) = vsCode;
+	AddLabelToVS(vsLabel);
+	
+end;
+
+
+// ------------------
+// ------------------ Miscellaneous functions
+// ------------------
+
+
+function SwitchUsers()
+
+	// Clear the saved login and assignment
+	savesetting(login_setting_key, "");
+	savesetting(assignment_setting_key, "");
+	reenter LOGIN_FORM;
+
+end;
+
+
+function SwitchAssignments()
+
+	// Clear the saved assignment
+	savesetting(assignment_setting_key, "");
+	reenter ASSIGNMENT_SELECTION_FORM;
+
+end;
+
+
+// Check that no person, other than someone with code ignoreStaffCode, has the name in staffName
+function VerifyStaffNameIsUnique(string staffName, string ignoreStaffCode)
+
+	numeric nameIsUsed = countcases(PSC_STAFF_DICT where STAFF_CODE <> ignoreStaffCode and STAFF_NAME = staffName);
+
+	if ignoreStaffCode <> "" then
+		// Load the staff entry that was in memory
+		loadcase(PSC_STAFF_DICT, ignoreStaffCode);
+	endif;
+
+	if nameIsUsed then
+		errmsg("The name %s is used by another staff member", strip(staffName));
+		reenter;
+	endif;
+
+end;
+
+
+function ValidatePINCode(code)
+
+	if code < 1000 then
+		errmsg("The PIN code must be four digits and cannot start with 0");
+		reenter;
+	endif;
+
+	if( errmsg("Confirm that %04d is the correct code", code)
+		select("Correct", continue,"Incorrect", continue) ) = 2 then
+		reenter;
+	endif;
+
+end;
+
+
+// ------------------
+// ------------------ Program code
+// ------------------
+
+
+PROC MENU_FF
+
+preproc
+
+	// For testing on Windows, make the value sets bigger
+	setfont(valuesets, "Calibri", 20);
+
+
+PROC LOGIN
+
+preproc
+
+	// This is the first field and preprocs are only executed when moving forward. Therefore, this is the first login
+	// after application startup. Try to log in automatically.
+	numeric automaticLoginOnStartup = 1;
+
+onfocus
+
+	if automaticLoginOnStartup then
+
+		// The application was just started. Retreive previous user.
+		STAFF_CODE = loadsetting(login_setting_key);
+
+		if loadcase(PSC_STAFF_DICT, STAFF_CODE) and PIN_CODE <> notappl then
+			// Previous user was found and PIN is defined, so login automatically for convenience
+			LOGIN = STAFF_CODE;
+			PIN_CODE_CONFIRMATION = PIN_CODE;
+			advance to ASSIGNMENT_SELECTION_FORM;
+		endif;
+
+	endif;
+
+	ResetVS();
+
+	forcase PSC_STAFF_DICT do
+		AddStringVS(key(PSC_STAFF_DICT), STAFF_NAME);
+	endfor;
+
+	AddStringVS("1", "Update programs from headquarters");
+	AddStringVS("2", "Update programs from supervisor");
+	AddStringVS("3", "Begin work as a supervisor");
+
+	setvalueset(LOGIN, vs_string_codes, vs_labels);
+
+	// Clear the login
+	LOGIN = "";
+	PIN_CODE_CONFIRMATION = notappl;
+
+	// Useful to see if the current application is being used
+	numeric publishYYYYMMDD = int(publishdate() / 1000000);
+	numeric publishDD = publishYYYYMMDD % 100; // % = remainder (extract the last two digits)
+	numeric publishMM = int(publishYYYYMMDD / 100) % 100;
+	numeric publishYYYY = int(publishYYYYMMDD / 10000);
+	capi_publish_date = maketext("%d %s %d", publishDD, months(publishMM), publishYYYY);
+
+postproc
+
+	// Do not automtically login on further attempts. If user tries to log in again, it is because they choose to
+	// switch users, so allow them to select their staff name.
+	automaticLoginOnStartup = 0;
+
+	if LOGIN = "1" then
+		SyncWithHQ(app_sync);
+		reenter;
+
+	elseif LOGIN = "2" then
+		StartServer();
+		reenter;
+
+	elseif LOGIN = "3" then
+		skip to SUPERVISOR_CREATION_FORM;
+
+	elseif loadcase(PSC_STAFF_DICT,LOGIN) then
+		capi_staff_name = LookupStaffName(LOGIN);
+
+	endif;
+
+
+PROC PIN_CODE_CONFIRMATION
+
+preproc
+
+	setproperty(PIN_CODE_CONFIRMATION, "Protected", "No");
+
+postproc
+
+	if PIN_CODE = notappl then
+		// Creating a new PIN code
+		ValidatePINCode(PIN_CODE_CONFIRMATION);
+
+		PIN_CODE = PIN_CODE_CONFIRMATION;
+		DEVICE_ID = getdeviceid();
+		writecase(PSC_STAFF_DICT);
+
+	elseif PIN_CODE_CONFIRMATION <> PIN_CODE then
+		// Validating an existing PIN code
+		errmsg("Invalid PIN code");
+		reenter;
+
+	endif;
+
+	savesetting(login_setting_key, STAFF_CODE);
+
+	setproperty(PIN_CODE_CONFIRMATION, "Protected", "Yes");
+
+	skip to ASSIGNMENT_SELECTION_FORM;
+
+
+PROC SUPERVISOR_CREATION_FORM
+
+preproc
+
+	setproperty(SUPERVISOR_CREATION_FORM, "Protected", "No");
+
+postproc
+
+	setproperty(SUPERVISOR_CREATION_FORM, "Protected", "Yes");
+
+
+PROC SUPERVISOR_ACCESS_PASSWORD
+
+preproc
+
+	// Clear the values in case multiple supervisors setup accounts
+	SUPERVISOR_ACCESS_PASSWORD = notappl;
+	SUPERVISOR_NAME = "";
+	SUPERVISOR_PIN_CODE = notappl;
+
+postproc
+
+	if SUPERVISOR_ACCESS_PASSWORD <> supervisor_password then
+		errmsg("Invalid password. You cannot proceed as a supervisor.");
+		reenter;
+	endif;
+
+
+PROC SUPERVISOR_NAME
+
+	if SUPERVISOR_NAME = "" then
+		errmsg("You cannot enter a blank name.");
+		reenter;
+	endif;
+
+	VerifyStaffNameIsUnique(SUPERVISOR_NAME, "");
+
+
+PROC SUPERVISOR_PIN_CODE
+
+postproc
+
+	ValidatePINCode(SUPERVISOR_PIN_CODE);
+
+	// Update the staff file (save the data about this supervisor)
+	clear(PSC_STAFF_DICT);
+	STAFF_CODE = uuid(); // Create unique identifier for supervisor 
+	STAFF_NAME = SUPERVISOR_NAME;
+	PIN_CODE = SUPERVISOR_PIN_CODE;;
+	DEVICE_ID = getdeviceid();
+	SUPERVISOR_STAFF_CODE = "";
+	TIME_CREATED_ACCOUNT = timestamp();
+	setcaselabel(PSC_STAFF_DICT, strip(STAFF_NAME));
+
+	writecase(PSC_STAFF_DICT);
+
+	// Set the login to the supervisor
+	LOGIN = STAFF_CODE;
+	savesetting(login_setting_key, LOGIN);
+
+	capi_staff_name = LookupStaffName(LOGIN);
+
+
+PROC ASSIGNMENT_SELECTION
+
+preproc
+	
+	// User is moving forward, this could be the first login after application startup. Try to log in automatically.
+	numeric automaticAssignmentSelectionOnStartup = 1;
+
+	// Save the login details
+	if STAFF_CODE <> LOGIN then
+		loadcase(PSC_STAFF_DICT,LOGIN);
+	endif;
+
+	if LOGIN_COUNT = notappl then
+		LOGIN_COUNT = 1;
+		
+	else
+		inc(LOGIN_COUNT);
+		
+	endif;
+	
+	LOGIN_TIMESTAMP = timestamp();
+	LOGIN_PUBLISH_DATE = publishdate();
+	
+	writecase(PSC_STAFF_DICT);
+
+onfocus
+
+	if automaticAssignmentSelectionOnStartup then
+		
+		// Retreive previous user. If user got here by selecting "Switch users" the assignment_setting_key will have
+		// been set to blank. The previous assignment will only be valid on first login after application startup.
+		string previousAssignment = loadsetting(assignment_setting_key);
+		
+		if loadcase(PSC_ASSIGNMENTS_DICT, previousAssignment) then
+
+			// Previous assignment was found, so automatically select assignment for convenience
+			if ASSIGNMENTS_STAFF_CODE = LOGIN then
+				ASSIGNMENT_SELECTION = key(PSC_ASSIGNMENTS_DICT);
+				advance to MAIN_MENU_FORM;
+			endif;
+			
+		endif;
+		
+	endif;
+
+	numeric numberInterviewerAssignments = 0;
+
+	ResetVS();
+
+	forcase PSC_ASSIGNMENTS_DICT where ASSIGNMENTS_STAFF_CODE = LOGIN do
+
+		string label = maketext("%s (%v) / %s (%v)",
+			LookupProvinceName(ASSIGNMENTS_PROVINCE), ASSIGNMENTS_PROVINCE,
+			LookupDistrictName(ASSIGNMENTS_PROVINCE, ASSIGNMENTS_DISTRICT), ASSIGNMENTS_DISTRICT);
+
+		if ASSIGNMENTS_EA = notappl then
+			label = maketext("Supervise: %s", label);
+
+		else
+			label = maketext("Interview: %s / %s", label, LookupEAName(ASSIGNMENTS_EA));
+
+		endif;
+
+		AddStringVS(key(PSC_ASSIGNMENTS_DICT), label);
+
+		if ASSIGNMENTS_ROLE = 1 then
+			inc(numberInterviewerAssignments);
+		endif;
+
+	endfor;
+
+	if SUPERVISOR_STAFF_CODE = "" then
+		AddStringVS("1", "Select census area to supervise");
+		capi_staff_role = "Supervisor";
+
+		AddStringVS("2", "Update programs from headquarters");
+
+	else
+		capi_staff_role = "Interviewer";
+
+		if numberInterviewerAssignments = 0 then
+			errmsg("Your supervisor has not yet assigned you any EAs. Transfer data with the supervisor once they have made an assignment");
+		endif;
+
+		AddStringVS("3","Update programs from supervisor");
+
+	endif;
+
+	AddStringVS("4","Switch users");
+
+	setvalueset(ASSIGNMENT_SELECTION,vs_string_codes,vs_labels);
+
+	ASSIGNMENT_SELECTION = "";
+
+postproc
+
+	// Do not automtically login on further attempts. If user tries to log in again, it is because they choose to
+	// switch users, so allow them to select their assignment.
+	automaticAssignmentSelectionOnStartup = 0;
+
+	if ASSIGNMENT_SELECTION = "1" then
+	
+		// Select census area to supervise
+		if countcases(PSC_GEOCODES_DICT) = 0 then
+			errmsg("You do not have a valid list of geocodes. Transfer data with headquarters to get this list.");
+			reenter;
+		endif;
+
+		skip to SUPERVISOR_PROVINCE;
+
+	elseif ASSIGNMENT_SELECTION = "2" then
+		SyncWithHQ(app_sync);
+		reenter;
+
+	elseif ASSIGNMENT_SELECTION = "3" then
+		StartServer();
+		reenter;
+
+	elseif ASSIGNMENT_SELECTION = "4" then
+		SwitchUsers();
+
+	elseif loadcase(PSC_ASSIGNMENTS_DICT, ASSIGNMENT_SELECTION) then
+
+		// Save the assignment for the next time the menu application is loaded
+		savesetting(assignment_setting_key, ASSIGNMENT_SELECTION);
+
+		CURRENT_PROVINCE = ASSIGNMENTS_PROVINCE;
+		CURRENT_DISTRICT = ASSIGNMENTS_DISTRICT;
+
+		capi_province_name = LookupProvinceName(CURRENT_PROVINCE);
+		capi_district_name = LookupDistrictName(CURRENT_PROVINCE, CURRENT_DISTRICT);
+		capi_ea_name = LookupEAName(ASSIGNMENTS_EA);
+
+		if ASSIGNMENTS_ROLE = 1 then
+			skip to INTERVIEWER_MENU;
+
+		else
+			skip to SUPERVISOR_MENU;
+
+		endif;
+
+	endif;
+
+
+PROC SUPERVISOR_PROVINCE
+
+preproc
+
+	ResetVS();
+
+	forcase PSC_GEOCODES_DICT where GEOCODES_AREA_LEVEL = 1 do
+		// Prepare value sets for provinces
+		AddNumericVS(GEOCODES_PROVINCE, GEOCODES_AREA_NAME);
+	endfor;
+
+	setvalueset(SUPERVISOR_PROVINCE, vs_codes, vs_labels);
+
+	SUPERVISOR_PROVINCE = notappl;
+
+
+PROC SUPERVISOR_DISTRICT
+
+preproc
+
+	capi_province_name = LookupProvinceName(SUPERVISOR_PROVINCE);
+
+	ResetVS();
+
+	forcase PSC_GEOCODES_DICT where GEOCODES_AREA_LEVEL = 2 and GEOCODES_PROVINCE = SUPERVISOR_PROVINCE do
+		// Prepare value sets for districts that are within the previously selected province
+		AddNumericVS(GEOCODES_DISTRICT, GEOCODES_AREA_NAME);
+	endfor;
+
+	setvalueset(SUPERVISOR_DISTRICT, vs_codes, vs_labels);
+
+	SUPERVISOR_DISTRICT = notappl;
+
+postproc
+
+	if countcases(PSC_ASSIGNMENTS_DICT where
+		ASSIGNMENTS_PROVINCE = SUPERVISOR_PROVINCE and
+		ASSIGNMENTS_DISTRICT = SUPERVISOR_DISTRICT and
+		ASSIGNMENTS_STAFF_CODE = LOGIN and
+		ASSIGNMENTS_ROLE = 2) <> 0 then
+
+		errmsg("You are already assigned to this district.");
+		reenter;
+
+	endif;
+
+	// Update the assignments file
+	clear(PSC_ASSIGNMENTS_DICT);
+
+	ASSIGNMENTS_PROVINCE = SUPERVISOR_PROVINCE;
+	ASSIGNMENTS_DISTRICT = SUPERVISOR_DISTRICT;
+	ASSIGNMENTS_STAFF_CODE = LOGIN;
+	ASSIGNMENTS_ROLE = 2;
+	ASSIGNMENTS_DATE_ASSIGNED = timestamp();
+
+	writecase(PSC_ASSIGNMENTS_DICT);
+
+	// Show the newly saved assignment along with any other assignments the user might have
+	reenter ASSIGNMENT_SELECTION;
+
+
+PROC SUPERVISOR_MENU
+
+onfocus
+
+	capi_ea_assigned_count = 0;
+	numeric previousEA = notappl;
+
+	forcase PSC_ASSIGNMENTS_DICT where
+		ASSIGNMENTS_PROVINCE = CURRENT_PROVINCE and
+		ASSIGNMENTS_DISTRICT = CURRENT_DISTRICT do
+
+		// Only count assigned EAs once
+		if previousEA <> ASSIGNMENTS_EA then
+			inc(capi_ea_assigned_count);
+			previousEA = ASSIGNMENTS_EA;
+		endif;
+
+	endfor;
+
+	SUPERVISOR_MENU = notappl;
+
+postproc
+
+	if SUPERVISOR_MENU = 1 then
+		skip to MANAGE_STAFF;
+
+	elseif SUPERVISOR_MENU = 2 then
+		skip to EA_ASSIGNMENT_FORM;
+		
+	elseif SUPERVISOR_MENU = 3 then
+		ShowInterviewerStatusReport();
+		reenter;
+
+	elseif SUPERVISOR_MENU = 4 then
+		SyncWithInterviewer();
+		reenter;
+
+	elseif SUPERVISOR_MENU = 5 then
+		SyncWithHQ(full_sync);
+		reenter;
+
+	elseif SUPERVISOR_MENU = 8 then
+		SwitchAssignments();
+
+	elseif SUPERVISOR_MENU = 9 then
+		SwitchUsers();
+
+	endif;
+
+
+PROC INTERVIEWER_MENU
+
+onfocus
+
+	ResetVS();
+
+	AddStringVS("1", "Add new household");
+
+	capi_household_complete_count = 0;
+	capi_household_partial_count = 0;
+
+	numeric totalHouseholds = 0;
+	numeric autoIncrementHouseholdNumber = 0;
+
+	forcase PSC_HOUSEHOLD_DICT where
+		HH_PROVINCE = ASSIGNMENTS_PROVINCE and
+		HH_DISTRICT = ASSIGNMENTS_DISTRICT and
+		HH_EA = ASSIGNMENTS_EA and
+		HH_SEGMENT = ASSIGNMENTS_SEGMENT do
+
+		inc(totalHouseholds);
+
+		if HH_NUMBER > autoIncrementHouseholdNumber then
+			autoIncrementHouseholdNumber = HH_NUMBER;
+		endif;
+
+		if ispartial(PSC_HOUSEHOLD_DICT) then
+			inc(capi_household_partial_count);
+			AddStringVS(key(PSC_HOUSEHOLD_DICT), "Continue working on household " + LookupDetailedHouseholdName());
+
+		else
+			inc(capi_household_complete_count);
+
+		endif;
+
+	endfor;
+
+	AddStringVS("2", maketext("View all %d households", totalHouseholds));
+	AddStringVS("7", "Transfer data with supervisor");
+	AddStringVS("8", "Change my assignment");
+	AddStringVS("9", "Switch users");
+
+	setvalueset(INTERVIEWER_MENU, vs_string_codes, vs_labels);
+
+	INTERVIEWER_MENU = "";
+
+postproc
+
+	if INTERVIEWER_MENU = "1" then
+		// Initialize the case IDs
+		HH_PROVINCE = ASSIGNMENTS_PROVINCE;
+		HH_DISTRICT = ASSIGNMENTS_DISTRICT;
+		HH_EA = ASSIGNMENTS_EA;
+		HH_SEGMENT = ASSIGNMENTS_SEGMENT;
+		HH_NUMBER = autoIncrementHouseholdNumber + 1;
+
+		errmsg("Are you sure that you want to add a household numbered %v%v?", HH_SEGMENT, HH_NUMBER)
+		select("Yes", continue, "No", INTERVIEWER_MENU);
+
+		LaunchHouseholdProgram();
+
+	elseif INTERVIEWER_MENU = "2" then
+
+		if totalHouseholds = 0 then
+			errmsg("There are no households to view");
+			reenter;
+		
+		else
+			skip to VIEW_ALL_HOUSEHOLDS;
+			
+		endif;
+
+	elseif INTERVIEWER_MENU = "7" then
+		StartServer();
+		reenter;
+
+	elseif INTERVIEWER_MENU = "8" then
+		SwitchAssignments();
+
+	elseif INTERVIEWER_MENU = "9" then
+		SwitchUsers();
+
+	else
+		loadcase(PSC_HOUSEHOLD_DICT, INTERVIEWER_MENU);
+		LaunchHouseholdProgram();
+
+	endif;
+
+
+PROC VIEW_ALL_HOUSEHOLDS
+
+onfocus
+
+	ResetVS();
+
+	forcase PSC_HOUSEHOLD_DICT where
+		HH_PROVINCE = ASSIGNMENTS_PROVINCE and
+		HH_DISTRICT = ASSIGNMENTS_DISTRICT and
+		HH_EA = ASSIGNMENTS_EA and
+		HH_SEGMENT = ASSIGNMENTS_SEGMENT do
+
+		AddStringVS(key(PSC_HOUSEHOLD_DICT), "Continue working on household " + LookupDetailedHouseholdName());
+
+	endfor;
+
+	setvalueset(VIEW_ALL_HOUSEHOLDS, vs_string_codes, vs_labels);
+	VIEW_ALL_HOUSEHOLDS = "";
+
+postproc
+
+	if loadcase(PSC_HOUSEHOLD_DICT, VIEW_ALL_HOUSEHOLDS) then
+		LaunchHouseholdProgram();
+	endif;
+
+
+PROC MANAGE_STAFF
+
+onfocus
+
+	ResetVS();
+
+	// First display the supervisor
+	AddStringVS(LOGIN, LookupStaffName(LOGIN) + " (Supervisor)");
+
+	// and then the interviewers
+	forcase PSC_STAFF_DICT do
+
+		if key(PSC_STAFF_DICT) <> LOGIN then
+			AddStringVS(key(PSC_STAFF_DICT), STAFF_NAME);
+		endif;
+
+	endfor;
+
+	AddStringVS("1", "Add new interviewer");
+
+	setvalueset(MANAGE_STAFF, vs_string_codes, vs_labels);
+
+	MANAGE_STAFF = "";
+
+postproc
+
+	if MANAGE_STAFF = "1" then
+		skip to MANAGE_STAFF_NAME;
+
+	elseif loadcase(PSC_STAFF_DICT, MANAGE_STAFF) then
+		skip to MANAGE_STAFF_MEMBER;
+
+	endif;
+
+
+PROC MANAGE_STAFF_MEMBER
+
+onfocus
+
+	capi_manage_staff_name = LookupStaffName(MANAGE_STAFF);
+
+	MANAGE_STAFF_MEMBER = notappl;
+
+postproc
+
+	if MANAGE_STAFF_MEMBER = 1 then
+	
+		// Prefill in the staff member's name
+		MANAGE_STAFF_NAME = STAFF_NAME;
+		skip to MANAGE_STAFF_NAME;
+
+	elseif MANAGE_STAFF_MEMBER = 2 then
+
+		if PIN_CODE = notappl then
+			errmsg("Staff PIN code of %s is not yet set", capi_manage_staff_name);
+
+		else
+			errmsg("Staff PIN code of %s is %v", capi_manage_staff_name, PIN_CODE);
+
+		endif;
+
+		reenter;
+
+	elseif MANAGE_STAFF_MEMBER = 3 then
+	
+		PIN_CODE = notappl;
+		writecase(PSC_STAFF_DICT);
+
+		errmsg("Staff PIN code of %s has been reset", capi_manage_staff_name);
+
+		if STAFF_CODE = LOGIN then
+			// Supervisor changed their code, log out so that they can log in and reset it
+			SwitchUsers();
+
+		else
+			reenter;
+
+		endif;
+
+	endif;
+
+
+PROC MANAGE_STAFF_NAME
+
+onfocus
+
+	if MANAGE_STAFF = "1" then
+		MANAGE_STAFF_NAME = "";
+	endif;
+
+postproc
+
+	if MANAGE_STAFF_NAME = "" then
+		errmsg("You cannot enter a blank name.");
+		reenter;
+
+	elseif MANAGE_STAFF = "1" then
+		VerifyStaffNameIsUnique(MANAGE_STAFF_NAME, "");
+
+		// Add a new interviewer
+		clear(PSC_STAFF_DICT);
+
+		STAFF_CODE = uuid(); // Create unique identifier for interviewer 
+		STAFF_NAME = MANAGE_STAFF_NAME;
+		SUPERVISOR_STAFF_CODE = LOGIN;
+		TIME_CREATED_ACCOUNT = timestamp();
+		setcaselabel(PSC_STAFF_DICT, strip(STAFF_NAME));
+
+		writecase(PSC_STAFF_DICT);
+
+		errmsg("%s successfully added as an interviewer", LookupStaffName(STAFF_CODE));
+
+		reenter MANAGE_STAFF;
+
+	else
+		// Modify the name
+		string oldName = LookupStaffName(STAFF_CODE);
+
+		if MANAGE_STAFF_NAME = oldName then
+			errmsg("The name is the same as before and has not been changed");
+
+		else
+			VerifyStaffNameIsUnique(MANAGE_STAFF_NAME, MANAGE_STAFF);
+
+			STAFF_NAME = MANAGE_STAFF_NAME;
+			setcaselabel(PSC_STAFF_DICT, strip(STAFF_NAME));
+			writecase(PSC_STAFF_DICT);
+
+			errmsg("%s successfully renamed to %s", oldName, LookupStaffName(STAFF_CODE));
+
+		endif;
+
+		reenter MANAGE_STAFF_MEMBER;
+
+	endif;
+
+
+PROC INTERVIEWER_CODE
+
+onfocus
+
+	ResetVS();
+
+	numeric eligbleInterviewers = 0;
+
+	forcase PSC_STAFF_DICT where LOGIN <> STAFF_CODE do
+		// Not supervisor
+		AddStringVS(key(PSC_STAFF_DICT), STAFF_NAME);
+		inc(eligbleInterviewers);
+	endfor;
+
+	if eligbleInterviewers = 0 then
+		errmsg("You must add interviewers before you can make any assignments");
+		reenter SUPERVISOR_MENU;
+	endif;
+
+	setvalueset(INTERVIEWER_CODE, vs_string_codes, vs_labels);
+
+	INTERVIEWER_CODE = "";
+
+postproc
+
+	loadcase(PSC_STAFF_DICT, INTERVIEWER_CODE);
+
+	capi_manage_staff_name = LookupStaffName(INTERVIEWER_CODE);
+
+	// Check if the interviewer already has an assignment
+	numeric numberAssignmentsForInterviewer = countcases(PSC_ASSIGNMENTS_DICT
+		where ASSIGNMENTS_STAFF_CODE = INTERVIEWER_CODE and ASSIGNMENTS_ROLE = 1);
+
+	if numberAssignmentsForInterviewer > 0 then
+		errmsg("%s already has %d assignment. Are you sure you want to add another?",
+			LookupStaffName(INTERVIEWER_CODE), numberAssignmentsForInterviewer)
+			select("Yes", continue, "No", INTERVIEWER_CODE);
+	endif;
+
+
+PROC INTERVIEWER_EA
+
+onfocus
+
+	ResetVS();
+
+	// Display all enumerations areas that are within the current province and district
+	forcase PSC_GEOCODES_DICT where GEOCODES_AREA_LEVEL = 3 and
+		GEOCODES_PROVINCE = CURRENT_PROVINCE and GEOCODES_DISTRICT = CURRENT_DISTRICT do
+
+		string eaAssignedNames;
+
+		string eaUniverse = maketext("%v%v%v", GEOCODES_PROVINCE, GEOCODES_DISTRICT, GEOCODES_EA);
+
+		// Forcase loops can't be nested, so iterate using locate/loadcase.
+		// Set position at smallest case that satifies condition.
+		if locate(PSC_ASSIGNMENTS_DICT, >=, eaUniverse) then
+
+			// Load all cases where eaUniverse is a substring of the key of the case
+			while loadcase(PSC_ASSIGNMENTS_DICT) and pos(eaUniverse, key(PSC_ASSIGNMENTS_DICT)) = 1 do
+
+				if ASSIGNMENTS_ROLE = 1 then
+					// Only interviewers
+					if length(eaAssignedNames) > 0 then
+						// Use a comma to separate multiple names
+						eaAssignedNames = eaAssignedNames + ", ";
+					endif;
+
+					eaAssignedNames = eaAssignedNames + LookupStaffName(ASSIGNMENTS_STAFF_CODE);
+
+				endif;
+
+			enddo;
+
+		endif;
+
+		if length(eaAssignedNames) > 0 then
+			eaAssignedNames = " (" + eaAssignedNames + ")";
+		endif;
+
+		// Display EA codes
+		AddNumericVS(GEOCODES_EA, LookupEAName(GEOCODES_EA) + eaAssignedNames);
+
+	endfor;
+
+	setvalueset(INTERVIEWER_EA,vs_codes,vs_labels);
+
+	// Clear EA assignment
+	INTERVIEWER_EA = notappl;
+
+postproc
+
+	numeric numberExistingAssignments = 0;
+
+	forcase PSC_ASSIGNMENTS_DICT where
+		ASSIGNMENTS_PROVINCE = CURRENT_PROVINCE and
+		ASSIGNMENTS_DISTRICT = CURRENT_DISTRICT and
+		ASSIGNMENTS_EA = INTERVIEWER_EA and
+		ASSIGNMENTS_ROLE = 1 do
+
+		inc(numberExistingAssignments);
+
+		if ASSIGNMENTS_STAFF_CODE = INTERVIEWER_CODE then
+			errmsg("%s has already been assigned to %s", LookupEAName(INTERVIEWER_EA), LookupStaffName(INTERVIEWER_CODE));
+			reenter;
+		endif;
+
+	endfor;
+
+	if numberExistingAssignments >= 1 then
+		errmsg("Are you sure you want to assign %s to more than one interviewer?", LookupEAName(INTERVIEWER_EA))
+		select("Yes", continue, "No", INTERVIEWER_EA);
+	endif;
+
+	errmsg("Are you sure you want to assign %s to %s?", LookupEAName(INTERVIEWER_EA), LookupStaffName(INTERVIEWER_CODE))
+	select("Yes", continue, "No", INTERVIEWER_EA);
+
+	clear(PSC_ASSIGNMENTS_DICT);
+
+	ASSIGNMENTS_PROVINCE = CURRENT_PROVINCE;
+	ASSIGNMENTS_DISTRICT = CURRENT_DISTRICT;
+	ASSIGNMENTS_EA = INTERVIEWER_EA;
+	ASSIGNMENTS_STAFF_CODE = INTERVIEWER_CODE;
+	ASSIGNMENTS_ROLE = 1;
+	ASSIGNMENTS_SEGMENT = segment_alphabet[( numberExistingAssignments + 1 ):1];
+
+	ASSIGNMENTS_DATE_ASSIGNED = timestamp();
+
+	writecase(PSC_ASSIGNMENTS_DICT);
+
+	errmsg("%s successfully assigned to %s", LookupEAName(ASSIGNMENTS_EA), LookupStaffName(INTERVIEWER_CODE));
+
+	reenter SUPERVISOR_MENU;
+

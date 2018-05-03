@@ -1,0 +1,172 @@
+﻿[Dictionary]
+Version=CSPro 7.1
+Label=Popstan Census Menu Dictionary
+Name=PSC_MENU_DICT
+RecordTypeStart=1
+RecordTypeLen=1
+Positions=Relative
+ZeroFill=Yes
+DecimalChar=Yes
+
+[Level]
+Label=Menu Level
+Name=MENU_LEVEL
+
+[IdItems]
+
+[Item]
+Label=Menu identification
+Name=MENU_ID
+Start=2
+Len=1
+ZeroFill=Yes
+
+[Record]
+Label=Menu Record
+Name=MENU_REC
+RecordTypeValue='1'
+RecordLen=304
+
+[Item]
+Label=Login
+Name=LOGIN
+Start=3
+Len=36
+DataType=Alpha
+
+[Item]
+Label=PIN Code Confirmation
+Name=PIN_CODE_CONFIRMATION
+Start=39
+Len=4
+ZeroFill=Yes
+
+[Item]
+Label=Supervisor Access Password
+Name=SUPERVISOR_ACCESS_PASSWORD
+Start=43
+Len=4
+ZeroFill=Yes
+
+[Item]
+Label=Supervisor Name
+Name=SUPERVISOR_NAME
+Start=47
+Len=50
+DataType=Alpha
+
+[Item]
+Label=Supervisor PIN Code
+Name=SUPERVISOR_PIN_CODE
+Start=97
+Len=4
+ZeroFill=Yes
+
+[Item]
+Label=Assignment Selection
+Name=ASSIGNMENT_SELECTION
+Start=101
+Len=44
+DataType=Alpha
+
+[Item]
+Label=Supervisor Province
+Name=SUPERVISOR_PROVINCE
+Start=145
+Len=2
+ZeroFill=Yes
+
+[Item]
+Label=Supervisor District
+Name=SUPERVISOR_DISTRICT
+Start=147
+Len=2
+ZeroFill=Yes
+
+[Item]
+Label=Supervisor Menu
+Name=SUPERVISOR_MENU
+Start=149
+Len=2
+ZeroFill=Yes
+
+[ValueSet]
+Label=Supervisor Menu
+Name=SUPERVISOR_MENU_VS1
+Value=1;Manage staff
+Value=2;Assign EA to interviewer
+Value=3;View interviewer status report
+Value=4;Transfer data with interviewer
+Value=5;Transfer data with headquarters
+Value=8;Change my assignment
+Value=9;Switch users
+
+[Item]
+Label=Interviewer Menu
+Name=INTERVIEWER_MENU
+Start=151
+Len=12
+DataType=Alpha
+
+[Item]
+Label=View All Households
+Name=VIEW_ALL_HOUSEHOLDS
+Start=163
+Len=12
+DataType=Alpha
+
+[Item]
+Label=Manage Staff
+Name=MANAGE_STAFF
+Start=175
+Len=36
+DataType=Alpha
+
+[Item]
+Label=Manage Staff Member
+Name=MANAGE_STAFF_MEMBER
+Start=211
+Len=1
+ZeroFill=Yes
+
+[ValueSet]
+Label=Manage Staff Member
+Name=MANAGE_STAFF_MEMBER_VS1
+Value=1;Rename staff
+Value=2;See staff PIN code
+Value=3;Reset staff PIN code
+
+[Item]
+Label=Manage Staff Name
+Name=MANAGE_STAFF_NAME
+Start=212
+Len=50
+DataType=Alpha
+
+[Item]
+Label=Interviewer EA
+Name=INTERVIEWER_EA
+Start=262
+Len=3
+ZeroFill=Yes
+
+[Item]
+Label=Interviewer Code
+Name=INTERVIEWER_CODE
+Start=265
+Len=36
+DataType=Alpha
+
+[Item]
+Label=Current Province
+Name=CURRENT_PROVINCE
+Start=301
+Len=2
+ZeroFill=Yes
+
+[Item]
+Label=Current District
+Name=CURRENT_DISTRICT
+Start=303
+Len=2
+ZeroFill=Yes

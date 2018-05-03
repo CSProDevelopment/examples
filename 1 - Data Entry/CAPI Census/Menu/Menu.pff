@@ -1,0 +1,28 @@
+﻿[Run Information]
+Version=CSPro 7.1
+AppType=Entry
+Description=Popstan Census
+
+[DataEntryInit]
+StartMode=Add
+Lock=CaseListing
+FullScreen=YES
+Interactive=Ask
+
+[Files]
+Application=.\Menu.ent
+InputData=|NONE
+
+[ExternalFiles]
+PSC_ASSIGNMENTS_DICT=..\Data\Assignments.csdb|CSPRODB
+PSC_GEOCODES_DICT=..\Data\Geocodes.csdb|CSPRODB
+PSC_HOUSEHOLD_DICT=..\Data\Household.csdb|CSPRODB
+PSC_STAFF_DICT=..\Data\Staff.csdb|CSPRODB
+
+[UserFiles]
+PFFFILE=
+REPORTFILE=
+REPORT_FILE=
+
+[Parameters]
+

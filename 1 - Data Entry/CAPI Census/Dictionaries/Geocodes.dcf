@@ -1,0 +1,55 @@
+﻿[Dictionary]
+Version=CSPro 7.1
+Label=Popstan Census Geocodes Dictionary
+Name=PSC_GEOCODES_DICT
+RecordTypeStart=0
+RecordTypeLen=0
+Positions=Relative
+ZeroFill=Yes
+DecimalChar=Yes
+
+[Level]
+Label=Geocodes Level
+Name=GEOCODES_LEVEL
+
+[IdItems]
+
+[Item]
+Label=Province
+Name=GEOCODES_PROVINCE
+Start=1
+Len=2
+ZeroFill=Yes
+
+[Item]
+Label=District
+Name=GEOCODES_DISTRICT
+Start=3
+Len=2
+ZeroFill=Yes
+
+[Item]
+Label=Enumeration Area
+Name=GEOCODES_EA
+Start=5
+Len=3
+ZeroFill=Yes
+
+[Record]
+Label=Geocodes Record
+Name=GEOCODES_RECORD
+RecordTypeValue=''
+RecordLen=58
+
+[Item]
+Label=Area Level
+Name=GEOCODES_AREA_LEVEL
+Start=8
+Len=1
+
+[Item]
+Label=Area Name
+Name=GEOCODES_AREA_NAME
+Start=9
+Len=50
+DataType=Alpha

@@ -1,0 +1,91 @@
+﻿[Dictionary]
+Version=CSPro 7.1
+Label=Popstan Census Staff Dictionary
+Name=PSC_STAFF_DICT
+RecordTypeStart=1
+RecordTypeLen=1
+Positions=Relative
+ZeroFill=Yes
+DecimalChar=Yes
+
+[Level]
+Label=Staff Level
+Name=STAFF_LEVEL
+
+[IdItems]
+
+[Item]
+Label=Staff Code
+Name=STAFF_CODE
+Start=2
+Len=36
+DataType=Alpha
+
+[Record]
+Label=Staff Record
+Name=STAFF_REC
+RecordTypeValue='1'
+RecordLen=157
+
+[Item]
+Label=Staff Name
+Name=STAFF_NAME
+Start=38
+Len=50
+DataType=Alpha
+
+[Item]
+Label=Pin Code
+Name=PIN_CODE
+Start=88
+Len=4
+ZeroFill=Yes
+
+[Item]
+Label=Device ID
+Name=DEVICE_ID
+Start=92
+Len=20
+DataType=Alpha
+
+[Item]
+Label=Supervisor Staff Code
+Name=SUPERVISOR_STAFF_CODE
+Start=112
+Len=36
+DataType=Alpha
+
+[Item]
+Label=Time Created Account
+Name=TIME_CREATED_ACCOUNT
+Start=148
+Len=10
+ZeroFill=Yes
+
+[Record]
+Label=Login Record
+Name=LOGIN_REC
+RecordTypeValue='2'
+Required=No
+RecordLen=65
+
+[Item]
+Label=Login Timestamp
+Name=LOGIN_TIMESTAMP
+Start=38
+Len=10
+ZeroFill=Yes
+
+[Item]
+Label=Login Count
+Name=LOGIN_COUNT
+Start=48
+Len=4
+ZeroFill=Yes
+
+[Item]
+Label=Publish Date at Login
+Name=LOGIN_PUBLISH_DATE
+Start=52
+Len=14
+ZeroFill=Yes

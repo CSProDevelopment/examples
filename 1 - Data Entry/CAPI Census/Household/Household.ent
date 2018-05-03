@@ -1,0 +1,27 @@
+﻿[CSPro Application]
+Version=CSPro 7.1
+Label=HOUSEHOLD
+Name=HOUSEHOLD
+AppType=DataEntry
+OperatorID=No
+ShowEndCaseDialog=No
+PartialSave=Yes
+CAPI=Yes
+CAPIFont1=-016 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
+CAPIFont2=-016 0000 0000 0000 0400 0000 0000 0000 0000 0000 0000 0000 0000 Arial
+CAPIFont1Color=0
+CAPIFont2Color=16711680
+CreateListing=No
+CreateLog=No
+ParadataCollection=AllEvents
+ParadataDeviceStateMinutes=10
+[AppCode]
+File=.\Household.ent.apc
+[Message]
+File=.\Household.ent.mgf
+[Help]
+File=.\Household.ent.qsf
+[Forms]
+File=.\Household.fmf
+[Dictionary Types]
+Dict-Type=..\Dictionaries\Household.dcf,Input,.\Household.fmf

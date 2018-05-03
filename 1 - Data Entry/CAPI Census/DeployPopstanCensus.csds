@@ -1,0 +1,52 @@
+{
+  "fileType": "Application Deployment Specification",
+  "version": "7.1",
+  "name": "Popstan Census",
+  "description": "Popstan Cenus Menu & Household Application",
+  "files": [
+    {
+      "path": ".\\Menu\\Menu.ent"
+    },
+    {
+      "path": ".\\Menu\\Menu.pff"
+    },
+    {
+      "path": ".\\Household\\Household.ent"
+    },
+    {
+      "path": ".\\Data\\Geocodes.csdb"
+    },
+    {
+      "path": ".\\Data\\Assignments.csdb"
+    },
+    {
+      "path": ".\\Data\\Household.csdb"
+    },
+    {
+      "path": ".\\Data\\Staff.csdb"
+    }
+  ],
+  "dictionaries": [
+    {
+      "path": ".\\Dictionaries\\Geocodes.dcf"
+    },
+    {
+      "path": ".\\Dictionaries\\Staff.dcf"
+    },
+    {
+      "path": ".\\Dictionaries\\Assignments.dcf"
+    },
+    {
+      "path": ".\\Dictionaries\\Menu.dcf"
+    },
+    {
+      "path": ".\\Dictionaries\\Household.dcf"
+    }
+  ],
+  "deployment": {
+    "type": "LocalFolder",
+    "cswebUrl": "",
+    "ftpUrl": "",
+    "localFolderPath": ".\\DeployPSC"
+  }
+}

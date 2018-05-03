@@ -1,0 +1,76 @@
+﻿[Dictionary]
+Version=CSPro 7.1
+Label=Popstan Census Assignments Dictionary
+Name=PSC_ASSIGNMENTS_DICT
+RecordTypeStart=1
+RecordTypeLen=1
+Positions=Relative
+ZeroFill=Yes
+DecimalChar=Yes
+
+[Level]
+Label=Assignments Level
+Name=ASSIGNMENTS_LEVEL
+
+[IdItems]
+
+[Item]
+Label=Province
+Name=ASSIGNMENTS_PROVINCE
+Start=2
+Len=2
+ZeroFill=Yes
+
+[Item]
+Label=District
+Name=ASSIGNMENTS_DISTRICT
+Start=4
+Len=2
+ZeroFill=Yes
+
+[Item]
+Label=EA
+Name=ASSIGNMENTS_EA
+Start=6
+Len=3
+ZeroFill=Yes
+
+[Item]
+Label=Staff Code
+Name=ASSIGNMENTS_STAFF_CODE
+Start=9
+Len=36
+DataType=Alpha
+
+[Item]
+Label=Role
+Name=ASSIGNMENTS_ROLE
+Start=45
+Len=1
+ZeroFill=Yes
+
+[ValueSet]
+Label=Role
+Name=ASSIGNMENTS_ROLE_VS1
+Value=1;INTERVIEWER
+Value=2;SUPERVISOR
+
+[Record]
+Label=Assignments Record
+Name=ASSIGNMENTS_REC
+RecordTypeValue='1'
+RecordLen=56
+
+[Item]
+Label=Segment
+Name=ASSIGNMENTS_SEGMENT
+Start=46
+Len=1
+DataType=Alpha
+
+[Item]
+Label=Date Assigned EA
+Name=ASSIGNMENTS_DATE_ASSIGNED
+Start=47
+Len=10
+ZeroFill=Yes

@@ -1,0 +1,660 @@
+﻿PROC GLOBAL
+
+
+// The household application does not include consistency checks. However, skips are included. The intention was to
+// strike a balance between creating an easy to understand application and the complexities of a real-world application.
+
+
+// ------------------
+// ------------------ Global variables
+// ------------------
+
+
+string partially_saved_field;
+numeric min_fertility_age = 12;
+numeric max_fertility_age = 48;
+
+
+// ------------------
+// ------------------ CAPI text variables
+// ------------------
+
+
+string capi_staff_name;
+string capi_province_name;
+string capi_district_name;
+string capi_ea_name;
+string capi_household_name;
+string capi_household_name_sex;
+numeric capi_number_of_persons;
+
+
+// ------------------
+// ------------------ Function to override the back button on Android (and the Stop button on Windows)
+// ------------------
+
+
+// Having an OnStop function will disable the question that CSEntry shows by default when opening a partially saved
+// case. In the Household program that will be handled in the HH_INTRODUCTION field.
+function OnStop()
+
+	numeric response = errmsg("Do you want to save the data before quitting?")
+		select("Yes", continue, "No", continue, "Cancel", continue);
+
+	if response = 3 then
+		// Cancel
+		reenter;
+
+	elseif response = 1 then 
+		// Save and quit
+		savepartial();
+
+	endif;
+
+	stop(1); // close the program
+
+end;
+
+
+// ------------------
+// ------------------ CAPI text functions
+// ------------------
+
+
+array string HeSheStrings(2) = "he", "she";
+array string HisHerStrings(2) = "his", "her";
+
+
+function string CapiPopulationHeShe()
+
+	CapiPopulationHeShe = HeSheStrings(HH_SEX);
+	
+end;
+
+
+function string CapiPopulationHisHer()
+
+	CapiPopulationHisHer = HisHerStrings(HH_SEX);
+	
+end;
+
+
+function string CapiHeadName()
+
+	CapiHeadName = strip(HH_NAME(1));
+	
+end;
+
+
+// ------------------
+// ------------------ Occurrence label and visibility functions
+// ------------------
+
+
+function ShowHidePopulation()
+
+	do numeric ctr = 1 while ctr <= maxocc(POPULATION_BASICS_ROSTER) and visualvalue(HH_KEEP_ROW(ctr)) <> notappl
+		
+		numeric showRow = 0;
+		if visualvalue(HH_KEEP_ROW(ctr)) = 1 then
+			showRow = 1;
+		endif;
+		
+		string populationLabel;
+
+		if showRow then
+			populationLabel = HH_NAME(ctr);
+			
+		else
+			populationLabel = "<Deleted>";
+			
+		endif;
+
+		showocc(POPULATION_BASICS_ROSTER(ctr), showRow);
+		showocc(POPULATION_DETAILS_ROSTER(ctr), showRow);
+		setocclabel(POPULATION_BASICS_ROSTER(ctr), populationLabel);
+		setocclabel(POPULATION_DETAILS_ROSTER(ctr), populationLabel);
+
+	enddo;
+
+end;
+
+
+// ------------------
+// ------------------ GPS
+// ------------------
+
+
+numeric max_time = 120;
+numeric desired_accuracy = 20;
+string capi_gps_reading = "Take GPS reading?";
+string capi_gps_data_status;
+string capi_gps_accuracy_status_label;
+string capi_gps_accuracy_status;
+
+
+// Verify whether all GPS data values exist
+function IsCompleteGPSData()
+
+	IsCompleteGPSData = 0;
+	if HH_GPS_LATITUDE <> notappl
+		and HH_GPS_LONGITUDE <> notappl
+		and HH_GPS_ALTITUDE <> notappl
+		and HH_GPS_ACCURACY <> notappl
+		and HH_GPS_SATELLITES <> notappl
+		and HH_GPS_READTIME <> notappl then
+		IsCompleteGPSData = 1;
+	endif;
+
+end;
+
+
+// Verify whether GPS accuracy is within defined range
+function IsDesiredAccuracy()
+
+	IsDesiredAccuracy = 0;
+	if 0 <= HH_GPS_ACCURACY and HH_GPS_ACCURACY <= desired_accuracy then
+		IsDesiredAccuracy = 1;
+	endif;
+
+end;
+
+
+// Assign result of GPS reading
+function AssignGPSValues()
+
+	AssignGPSValues = 0;
+	numeric input = 1;
+	if IsCompleteGPSData() then
+	
+		if gps(accuracy) > HH_GPS_ACCURACY then
+			// Prompt user before replacing GPS data with less accurate GPS data
+			input = warning("Previous GPS data (accuracy = %d) will be replaced with less "
+				"accurate GPS data (accuracy = %d).", HH_GPS_ACCURACY, gps(accuracy))
+				select("Confirm", continue, "Cancel", continue);
+
+		else
+			// Prompt user before replacing GPS data
+			input = warning("Previous GPS data will be replaced.")
+				select("Confirm", continue, "Cancel", continue);
+				
+		endif
+		
+	endif;
+
+	if input <> 2 then
+		HH_GPS_LATITUDE = gps(latitude);
+		HH_GPS_LONGITUDE = gps(longitude);
+		HH_GPS_ALTITUDE = gps(altitude);
+		HH_GPS_ACCURACY = gps(accuracy);
+		HH_GPS_SATELLITES = gps(satellites);
+		HH_GPS_READTIME = gps(readtime);
+		AssignGPSValues = 1;
+	endif;
+
+end;
+
+
+// Delete GPS data
+function DeleteGPSData()
+
+	HH_GPS_LATITUDE = notappl;
+	HH_GPS_LONGITUDE = notappl;
+	HH_GPS_ALTITUDE = notappl;
+	HH_GPS_ACCURACY = notappl;
+	HH_GPS_SATELLITES = notappl;
+	HH_GPS_READTIME = notappl;
+
+end;
+
+
+// Take GPS reading
+function TakeGPSReading()
+
+	if gps(open) then
+		
+		numeric result = gps(read, max_time, desired_accuracy);
+		if result = 1 then
+			
+			// Read was successful
+			if AssignGPSValues() then
+				capi_gps_reading = "Take GPS reading?";
+
+			else
+				capi_gps_reading = "You chose not to update GPS data. Retake GPS reading?";
+				reenter;
+				
+			endif;
+
+		elseif result = -1 then		
+			capi_gps_reading = "GPS reading cancelled by user. Retake GPS reading?";
+			reenter;
+
+		elseif result = 0 then			
+			capi_gps_reading = "GPS reading failed. Retake GPS reading?";
+			reenter;
+			
+		endif;
+
+		gps(close);
+
+	else
+		capi_gps_reading = "Failed to start GPS. Retake GPS reading?";
+		reenter;
+		
+	endif;
+
+end;
+
+
+// ------------------
+// ------------------ Program code
+// ------------------
+
+
+PROC HOUSEHOLD_FF
+
+
+PROC HOUSEHOLD_QUEST
+
+preproc
+
+	// In case we come back from partial save or modify mode, do this after loading the questionnaire
+	ShowHidePopulation();
+
+	partially_saved_field = getsymbol(savepartial);
+
+
+PROC GEOCODES_FORM
+
+
+PROC HH_PROVINCE
+
+preproc
+
+	HH_PROVINCE = tonumber(sysparm("Province"));
+	HH_DISTRICT = tonumber(sysparm("District"));
+	HH_EA = tonumber(sysparm("EA"));
+	HH_SEGMENT = sysparm("Segment");
+	HH_NUMBER = tonumber(sysparm("HouseholdNumber"));
+
+	capi_province_name = sysparm("ProvinceName");
+	capi_district_name = sysparm("DistrictName");
+	capi_ea_name = sysparm("EAName");
+	capi_household_name = maketext("%v%v", HH_SEGMENT, visualvalue(HH_NUMBER));
+
+	capi_staff_name = sysparm("StaffName");
+
+	// Store some metadata
+	HH_INTERVIEWER_CODE = sysparm("InterviewerCode");
+	HH_SUPERVISOR_CODE = sysparm("SupervisorCode");
+
+	if HH_START_INTERVIEW_TIME = notappl then
+		HH_START_INTERVIEW_TIME = timestamp();
+	endif;
+
+	// End interview time will be overwritten when the case is finalized
+	HH_END_INTERVIEW_TIME = timestamp();
+
+	HH_PROGRAM_PUBLISH_DATE = publishdate();
+
+
+PROC HH_INTRODUCTION
+
+preproc
+
+	// Prefill continue
+	HH_INTRODUCTION = 1;
+
+	if ispartial() and partially_saved_field <> getsymbol() then
+		setvalueset(HH_INTRODUCTION, HH_INTRODUCTION_PARTIAL_VS);
+		// Default to resume
+		HH_INTRODUCTION = 2;
+
+	elseif demode() <> add then
+		setvalueset(HH_INTRODUCTION, HH_INTRODUCTION_MODIFY_VS);
+
+	else
+		setvalueset(HH_INTRODUCTION, HH_INTRODUCTION_BEGIN_VS);
+
+	endif;
+
+postproc
+
+	if HH_INTRODUCTION = 2 then
+		// Resume from partial save
+		advance to partially_saved_field;
+	endif;
+
+
+PROC HH_GPS_READING
+
+onfocus
+
+	if IsCompleteGPSData() then
+	
+		// Update value set
+		if getos() = 10 then
+			setvalueset(HH_GPS_READING, HH_GPS_WINDOWS_EXISTING_DATA_VS);
+			
+		else
+			setvalueset(HH_GPS_READING, HH_GPS_MOBILE_EXISTING_DATA_VS);
+			
+		endif;
+		
+		// Update CAPI Text
+		capi_gps_data_status = "collected";
+		capi_gps_accuracy_status_label = "GPS accuracy: ";
+		if IsDesiredAccuracy() then
+			capi_gps_accuracy_status = "pass";
+
+		else
+			capi_gps_accuracy_status = "fail";
+			
+		endif;
+
+		// Prefill "keep data" so field can be advanced through when returning from partial save 
+		HH_GPS_READING = 2;
+
+	else
+	
+		// Update value set
+		if getos() = 10 then
+			setvalueset(HH_GPS_READING, HH_GPS_WINDOWS_NO_DATA_VS);
+			
+		else
+			setvalueset(HH_GPS_READING, HH_GPS_MOBILE_NO_DATA_VS);
+			
+		endif;
+
+		// Update CAPI Text
+		capi_gps_data_status = "not collected";
+		capi_gps_accuracy_status_label = "";
+		capi_gps_accuracy_status = "";
+		
+	endif;
+
+postproc
+
+	// Handle user input
+	if HH_GPS_READING = 1 then
+		TakeGPSReading();
+
+	elseif HH_GPS_READING = 2 then
+		capi_gps_reading = "Take GPS reading?";
+
+	elseif HH_GPS_READING = 3 then
+		if IsCompleteGPSData() then
+			warning("GPS data will be deleted.")
+				select("Confirm", continue, "Cancel", HH_GPS_READING);
+		endif;
+
+		DeleteGPSData();
+		capi_gps_reading = "Take GPS reading?";
+
+	else
+		warning("Unhandled value set option.");
+		reenter;
+		
+	endif;
+
+
+PROC HH_POPULATION_SECTION
+
+preproc
+
+	// Prefill continue
+	HH_POPULATION_SECTION = 1;
+
+
+PROC HH_KEEP_ROW
+
+preproc
+
+	// Initialize when entering row for 1st time
+	if visualvalue(HH_KEEP_ROW) = notappl or curocc() = 1 then
+		HH_KEEP_ROW = 1;
+		noinput;
+	endif;
+
+onfocus
+
+	// once a row is deleted, it can't be modified
+	if visualvalue(HH_KEEP_ROW) = 2 then
+		setproperty(HH_KEEP_ROW, "Protected", "Yes");
+		
+	else
+		setproperty(HH_KEEP_ROW, "Protected", "No");
+		
+	endif;
+
+postproc
+
+	ShowHidePopulation();
+
+	if HH_KEEP_ROW = 2 then
+	
+		// Row is deleted
+		if curocc() = 1 then
+			errmsg("Cannot delete first row.");
+			HH_KEEP_ROW = 1;
+			
+		else
+			skip to HH_MORE_ROWS;
+			
+		endif;
+
+	endif;
+
+
+PROC HH_NAME
+
+postproc
+
+	if HH_NAME = "" then
+		errmsg("Name cannot be blank");
+		reenter;
+
+	elseif curocc() = 1 then
+		warning("Confirm that %s is the head of household?", strip(HH_NAME))
+		select("Reenter name", HH_NAME,
+			   "Continue", continue);
+
+	endif;
+
+	ShowHidePopulation();
+
+
+PROC HH_RELATIONSHIP
+
+onfocus
+
+	if curocc() = 1 then
+		setproperty(HH_RELATIONSHIP, "Protected", "Yes");
+		setvalueset(HH_RELATIONSHIP, HH_RELATIONSHIP_WITH_HEAD_VS);
+		HH_RELATIONSHIP = 1;
+
+	else
+		setproperty(HH_RELATIONSHIP, "Protected", "No");
+		setvalueset(HH_RELATIONSHIP, HH_RELATIONSHIP_WITHOUT_HEAD_VS);
+
+	endif;
+
+
+PROC HH_MORE_ROWS
+
+preproc
+
+	savepartial();
+
+	// If there are already more rows defined, this value has to be 1
+	if curocc() < maxocc(POPULATION_BASICS_ROSTER) and HH_NAME(curocc() + 1) <> "" then
+		HH_MORE_ROWS = 1;
+		noinput;
+	endif;
+
+onfocus
+
+	// and then cannot be modified
+	if curocc() < maxocc(POPULATION_BASICS_ROSTER) and HH_NAME(curocc() + 1) <> "" then
+		setproperty(HH_MORE_ROWS, "Protected", "Yes");
+		
+	else
+		setproperty(HH_MORE_ROWS, "Protected", "No");
+		
+	endif;
+
+	capi_number_of_persons = 0;
+	capi_household_name_sex = "";
+
+	do numeric ctr = 1 while ctr <= curocc()
+
+		if HH_KEEP_ROW(ctr) = 1 then
+			capi_household_name_sex = capi_household_name_sex + maketext("%s, %s<br />", strip(HH_NAME(ctr)), getlabel(HH_SEX, HH_SEX(ctr)));
+			inc(capi_number_of_persons);
+		endif;
+
+	enddo;
+
+postproc
+
+	if HH_MORE_ROWS = 2 then
+		// No more household members
+		endgroup;
+	endif;
+
+
+PROC HH_MONTH_BORN
+
+preproc
+
+	if HH_KEEP_ROW = 2 then
+		skip to next;
+		
+	elseif curocc() > totocc(POPULATION_BASICS_ROSTER) then
+		// No more household members
+		endgroup;
+		
+	endif;
+
+
+PROC HH_RESIDENCE_SITUATION
+
+	if HH_RESIDENCE_SITUATION = 3 then
+
+		if HH_RELATIONSHIP = 1 then
+			errmsg("Head of household cannot be a visitor.");
+			reenter;
+
+		else
+			skip to next;
+
+		endif;
+
+	endif;
+
+
+PROC HH_LITERACY
+
+preproc
+
+	ask if HH_AGE >= 3;
+
+
+PROC HH_WORK_STATUS
+
+preproc
+
+	ask if HH_AGE >= 10;
+
+
+PROC HH_MARITAL_STATUS
+
+preproc
+
+	ask if HH_AGE >= 12;
+
+
+PROC HH_MARITAL_AGE
+
+preproc
+
+	ask if HH_AGE >= 12
+		and HH_MARITAL_STATUS <> 1;
+
+
+PROC HH_CHILDREN_EVER_BORN
+
+preproc
+
+	ask if HH_SEX = 2
+		and HH_AGE in min_fertility_age:max_fertility_age
+
+
+PROC HH_BOYS_EVER_BORN
+
+preproc
+
+	ask if HH_SEX = 2
+		and HH_AGE in min_fertility_age:max_fertility_age
+		and HH_CHILDREN_EVER_BORN > 0;
+
+
+PROC HH_BOYS_STILL_ALIVE
+
+preproc
+
+	ask if HH_SEX = 2
+		and HH_AGE in min_fertility_age:max_fertility_age
+		and HH_CHILDREN_EVER_BORN > 0;
+
+
+PROC HH_GIRLS_EVER_BORN
+
+preproc
+
+	ask if HH_SEX = 2
+		and HH_AGE in min_fertility_age:max_fertility_age
+		and HH_CHILDREN_EVER_BORN > 0;
+
+
+PROC HH_GIRLS_STILL_ALIVE
+
+preproc
+
+	ask if HH_SEX = 2
+		and HH_AGE in min_fertility_age:max_fertility_age
+		and HH_CHILDREN_EVER_BORN > 0;
+
+
+PROC HH_DWELLING_SECTION
+
+preproc
+
+	savepartial();
+
+	// Prefill continue
+	HH_DWELLING_SECTION = 1;
+
+PROC HH_CONCLUSION
+
+preproc
+
+	// Clear out any response so that they always have to manually accept the case
+	HH_CONCLUSION = notappl;
+
+postproc
+
+	if HH_CONCLUSION = 1 then
+		// Application will close after this field
+		HH_END_INTERVIEW_TIME = timestamp();
+
+	elseif HH_CONCLUSION = 2 then
+		reenter HH_POPULATION_SECTION;
+
+	elseif HH_CONCLUSION = 3 then
+		reenter HH_DWELLING_SECTION;
+
+	endif;
+
+

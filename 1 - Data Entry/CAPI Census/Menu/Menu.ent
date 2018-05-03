@@ -1,0 +1,35 @@
+﻿[CSPro Application]
+Version=CSPro 7.1
+Label=MENU
+Name=MENU
+AppType=DataEntry
+OperatorID=No
+ValidateAlphaFields=Yes
+CAPI=Yes
+CAPIFont1=-016 0000 0000 0000 0400 0000 0000 0000 0000 0000 0000 0000 0000 Arial
+CAPIFont2=-016 0000 0000 0000 0400 0000 0000 0000 0000 0000 0000 0000 0000 Arial
+CAPIFont1Color=0
+CAPIFont2Color=16711680
+CaseTree=Never
+CreateListing=No
+CreateLog=No
+ShowErrorMessageNumbers=No
+[External Dictionaries]
+File=..\Dictionaries\Geocodes.dcf
+File=..\Dictionaries\Staff.dcf
+File=..\Dictionaries\Assignments.dcf
+File=..\Dictionaries\Household.dcf
+[AppCode]
+File=.\Menu.ent.apc
+[Message]
+File=.\Menu.ent.mgf
+[Help]
+File=.\Menu.ent.qsf
+[Forms]
+File=.\Menu.fmf
+[Dictionary Types]
+Dict-Type=..\Dictionaries\Geocodes.dcf,External
+Dict-Type=..\Dictionaries\Staff.dcf,External
+Dict-Type=..\Dictionaries\Assignments.dcf,External
+Dict-Type=..\Dictionaries\Menu.dcf,Input,.\Menu.fmf
+Dict-Type=..\Dictionaries\Household.dcf,External
