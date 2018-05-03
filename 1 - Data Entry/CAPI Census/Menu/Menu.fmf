@@ -12,7 +12,7 @@ File=..\Dictionaries\Menu.dcf
 [Form]
 Name=FORM000
 Label=Login Form
-QuestionTextHeight=100
+QuestionTextHeight=148
 Level=1
 Size=757,126
 CapturePos=317,74
