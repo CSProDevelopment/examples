@@ -1,8 +1,9 @@
 ﻿PROC GLOBAL
 
 
-// The household application does not include consistency checks. However, skips are included. The intention was to
-// strike a balance between creating an easy to understand application and the complexities of a real-world application.
+// The household application does not include consistency checks. However, skips and range checks are included. The
+// intention was to strike a balance between creating an easy to understand application and the complexities of a
+// real-world application.
 
 
 // ------------------

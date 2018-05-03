@@ -47,7 +47,7 @@ Field=PSC_MENU_DICT.LOGIN
 ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 ENG={\colortbl ;\red0\green0\blue0;}
 ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\cf1\fs24 Welcome to Popstan Cenus (PSC) data collection application (version %capi_publish_date%).\par
+ENG=\pard\cf1\fs24 Welcome to Popstan Census data collection application (version %capi_publish_date%).\par
 ENG=}
 
 [QUESTION]
@@ -116,9 +116,9 @@ Field=PSC_MENU_DICT.SUPERVISOR_ACCESS_PASSWORD
 ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 ENG={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
 ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\cf1\fs24 Please, enter supervisor password you received from headquarters.\par
+ENG=\pard\cf1\fs24 Please enter supervisor password you received from headquarters.\par
 ENG=\par
-ENG=\cf2 For demonstration purposes the password is 1234.\cf1\par
+ENG=\cf2 For demonstration purposes use password 1234.\cf1\par
 ENG=}
 
 [QUESTION]
@@ -145,8 +145,8 @@ ENG=}
 Field=PSC_MENU_DICT.SUPERVISOR_NAME
 ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.10240}\viewkind4\uc1
-ENG=\pard\cf1\fs24 Please, enter your full name.\par
+ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+ENG=\pard\cf1\fs24 Please enter your full name.\par
 ENG=}
 
 [QUESTION]
@@ -154,9 +154,9 @@ Field=PSC_MENU_DICT.SUPERVISOR_PIN_CODE
 ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
 ENG={\colortbl ;\red0\green0\blue0;}
 ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\cf1\fs24 Please, create your pin code. \par
+ENG=\pard\cf1\fs24 Please create your pin code. \par
 ENG=\par
-ENG=A pin code is a four digit number that enables you to log into the Popstan Cenus (PSC) data collection application. It is recommended to choose a number which you can easly remember and the code should be kept secret.\par
+ENG=A pin code is a four digit number that enables you to log into the Popstan Census data collection application. It is recommended to choose a number which you can easly remember and the code should be kept secret.\par
 ENG=\par
 ENG=}
 
@@ -175,5 +175,4 @@ ENG={\colortbl ;\red0\green0\blue0;}
 ENG={\*\generator Riched20 10.0.15063}\viewkind4\uc1
 ENG=\pard\cf1\fs24 Select the household you want to work on.\par
 ENG=}
-
 
