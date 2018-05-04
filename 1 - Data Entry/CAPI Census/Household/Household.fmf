@@ -813,7 +813,6 @@ Text=Literacy
 Name=HH_LITERACY
 Position=28,0,43,20
 Item=HH_LITERACY,PSC_HOUSEHOLD_DICT
-HideInCaseTree=Yes
 UpperCase=Yes
 FieldLabelType=DictionaryLabel
 DataCaptureType=DropDown
@@ -855,7 +854,6 @@ Text=Work Status
 Name=HH_WORK_STATUS
 Position=19,0,34,20
 Item=HH_WORK_STATUS,PSC_HOUSEHOLD_DICT
-HideInCaseTree=Yes
 FieldLabelType=DictionaryLabel
 DataCaptureType=DropDown
   
@@ -901,7 +899,7 @@ FieldLabelType=DictionaryLabel
 DataCaptureType=ComboBox
   
 [Text]
-Position=0,0,73,16
+Position=0,0,164,20
 Text=Age at first marriage
  
 [EndColumn]
@@ -921,7 +919,7 @@ FieldLabelType=DictionaryLabel
 DataCaptureType=ComboBox
   
 [Text]
-Position=0,0,123,16
+Position=0,0,151,20
 Text=Children Ever Born
  
 [EndColumn]
@@ -937,11 +935,12 @@ Text=Boys Ever Born
 Name=HH_BOYS_EVER_BORN
 Position=13,0,42,20
 Item=HH_BOYS_EVER_BORN,PSC_HOUSEHOLD_DICT
+HideInCaseTree=Yes
 FieldLabelType=DictionaryLabel
 DataCaptureType=ComboBox
   
 [Text]
-Position=0,0,103,16
+Position=0,0,124,20
 Text=Boys Ever Born
  
 [EndColumn]
@@ -957,11 +956,12 @@ Text=Boys Still Alive
 Name=HH_BOYS_STILL_ALIVE
 Position=16,0,45,20
 Item=HH_BOYS_STILL_ALIVE,PSC_HOUSEHOLD_DICT
+HideInCaseTree=Yes
 FieldLabelType=DictionaryLabel
 DataCaptureType=ComboBox
   
 [Text]
-Position=0,0,99,16
+Position=0,0,116,20
 Text=Boys Still Alive
  
 [EndColumn]
@@ -982,7 +982,7 @@ FieldLabelType=DictionaryLabel
 DataCaptureType=ComboBox
   
 [Text]
-Position=0,0,100,16
+Position=0,0,121,20
 Text=Girls Ever Born
  
 [EndColumn]
@@ -998,11 +998,12 @@ Text=Girls Still Alive
 Name=HH_GIRLS_STILL_ALIVE
 Position=15,0,44,20
 Item=HH_GIRLS_STILL_ALIVE,PSC_HOUSEHOLD_DICT
+HideInCaseTree=Yes
 FieldLabelType=DictionaryLabel
 DataCaptureType=ComboBox
   
 [Text]
-Position=0,0,96,16
+Position=0,0,113,20
 Text=Girls Still Alive
  
 [EndColumn]
