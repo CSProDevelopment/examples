@@ -251,7 +251,7 @@ function InitInterviewers()
 end;
 
 
-// Initialize columns left of interviewer's name with their assignments
+// Initialize columns right of interviewer's name with their assignments
 function InitAssignments()
 	
 	numeric interviewer = 1;
