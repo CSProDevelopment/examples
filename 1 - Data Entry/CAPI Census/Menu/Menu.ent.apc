@@ -419,7 +419,7 @@ function SyncDataWithInterviewer()
 	endfor;
 		
 	// Create universe for supervisory area.
-	string universeStr = maketext("%v%v", ASSIGNMENTS_PROVINCE, ASSIGNMENTS_DISTRICT);
+	string universeStr = maketext("%v%v", CURRENT_PROVINCE, CURRENT_DISTRICT);
 
 	// Synchronize assignments in supervisory area.
 	// Sync BOTH is used, because the supervisor and interview write to the assignments data.
