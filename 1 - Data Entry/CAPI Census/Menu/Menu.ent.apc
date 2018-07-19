@@ -505,7 +505,7 @@ function SyncDataWithHQ()
 	endfor;
 		
 	// Create universe for supervisory area.
-	string universeStr = maketext("%v%v", ASSIGNMENTS_PROVINCE, ASSIGNMENTS_DISTRICT);
+	string universeStr = maketext("%v%v", CURRENT_PROVINCE, CURRENT_DISTRICT);
 	
 	// Synchronize assignments in supervisory area.
 	// Sync PUT is used, because HQ will only read the assignments data.
