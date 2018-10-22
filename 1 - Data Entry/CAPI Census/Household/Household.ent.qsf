@@ -1,5 +1,5 @@
 ﻿[CAPI QUESTIONS]
-Version=CSPro 7.1
+Version=CSPro 7.2
 
 [LANGUAGES]
 ENG=English
@@ -9,13 +9,12 @@ Field=PSC_HOUSEHOLD_DICT.HH_AGE
 Occurrences=1:35
 ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Arial;}}
 ENG={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+ENG={\*\generator Riched20 10.0.17134}\viewkind4\uc1
 ENG=\pard\cf1\fs24 How old was %HH_NAME% at %CapiPopulationHisHer% last birthday?\par
 ENG=\par
 ENG=\cf2 Ask and record the age of each household member in completed years (0 for children less than one year old).\par
 ENG=\par
-ENG=If age is not known enter 999.\cf1\par
-ENG=\f1\par
+ENG=If age is not known enter 999.\cf1\f1\par
 ENG=}
 
 [QUESTION]

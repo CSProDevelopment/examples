@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.1
+Version=CSPro 7.2
 Label=Popstan Census Household Dictionary
 Name=PSC_HOUSEHOLD_DICT
 RecordTypeStart=1
@@ -85,7 +85,7 @@ Len=2
 ZeroFill=Yes
 
 [ValueSet]
-Label=Relationship to Head of Houshold
+Label=Relationship to Head of Household
 Name=HH_RELATIONSHIP_WITH_HEAD_VS
 Value=1;Head
 Value=2;Spouse
@@ -99,7 +99,7 @@ Value=9;Other relative
 Value=10;Not related
 
 [ValueSet]
-Label=Relationship to Head of Houshold
+Label=Relationship to Head of Household
 Name=HH_RELATIONSHIP_WITHOUT_HEAD_VS
 Value=2;Spouse
 Value=3;Son/Daughter

@@ -1,5 +1,5 @@
 ﻿[FormFile]
-Version=CSPro 7.1
+Version=CSPro 7.2
 Name=HOUSEHOLD_FF
 Label=Household
 DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
@@ -715,7 +715,7 @@ FieldLabelType=DictionaryLabel
 DataCaptureType=DropDown
   
 [Text]
-Position=0,0,93,20
+Position=0,0,75,16
 Text=Month Born
  
 [EndColumn]
@@ -735,7 +735,7 @@ FieldLabelType=DictionaryLabel
 DataCaptureType=ComboBox
   
 [Text]
-Position=0,0,81,20
+Position=0,0,66,16
 Text=Year Born
  
 [EndColumn]
@@ -756,7 +756,7 @@ FieldLabelType=DictionaryLabel
 DataCaptureType=ComboBox
   
 [Text]
-Position=0,0,32,20
+Position=0,0,24,16
 Text=Age
  
 [EndColumn]
@@ -940,7 +940,7 @@ FieldLabelType=DictionaryLabel
 DataCaptureType=ComboBox
   
 [Text]
-Position=0,0,124,20
+Position=0,0,103,16
 Text=Boys Ever Born
  
 [EndColumn]
@@ -961,7 +961,7 @@ FieldLabelType=DictionaryLabel
 DataCaptureType=ComboBox
   
 [Text]
-Position=0,0,116,20
+Position=0,0,99,16
 Text=Boys Still Alive
  
 [EndColumn]
@@ -982,7 +982,7 @@ FieldLabelType=DictionaryLabel
 DataCaptureType=ComboBox
   
 [Text]
-Position=0,0,121,20
+Position=0,0,100,16
 Text=Girls Ever Born
  
 [EndColumn]
@@ -1003,10 +1003,31 @@ FieldLabelType=DictionaryLabel
 DataCaptureType=ComboBox
   
 [Text]
-Position=0,0,113,20
+Position=0,0,96,16
 Text=Girls Still Alive
  
 [EndColumn]
+  
+[Block]
+Name=AGE_BLOCK
+Label=Age
+DisplayTogether=Yes
+Position=0
+Length=3
+  
+[Block]
+Name=BOYS_BORN_BLOCK
+Label=Boys Born
+DisplayTogether=Yes
+Position=12
+Length=2
+  
+[Block]
+Name=GIRLS_BORN_BLOCK
+Label=Girls Block
+DisplayTogether=Yes
+Position=15
+Length=2
   
 [EndGrid]
  
