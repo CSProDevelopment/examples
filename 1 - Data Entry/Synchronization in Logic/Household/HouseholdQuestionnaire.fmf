@@ -1,7 +1,7 @@
 ﻿[FormFile]
 Version=CSPro 7.2
 Name=HOUSEHOLDQUESTIONNAIRE_FF
-Label=C:\Users\josh\Documents\GitHub\cspro-examples\1 - Data Entry\Synchronization in Logic\Household\HouseholdQuestionnaire.fmf
+Label=HouseholdQuestionnaire
 DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
 FieldEntryFont=0018 0000 0000 0000 0600 0000 0000 0000 0000 0000 0000 0000 0000 Courier New
 Type=SystemControlled
@@ -225,8 +225,8 @@ Text=Names
 Name=NAMES
 Position=0,0,701,20
 Item=NAMES,HOUSEHOLDQUESTIONNAIRE_DICT
-UseUnicodeTextBox=Yes
 FieldLabelType=DictionaryLabel
+UseUnicodeTextBox=Yes
   
 [Text]
 Text=Names

@@ -525,7 +525,7 @@ postproc
 	endif;
 
 
-PROC HH_MONTH_BORN
+PROC AGE_BLOCK
 
 preproc
 
@@ -592,7 +592,7 @@ preproc
 		and HH_AGE in min_fertility_age:max_fertility_age
 
 
-PROC HH_BOYS_EVER_BORN
+PROC BOYS_BORN_BLOCK
 
 preproc
 
@@ -601,25 +601,7 @@ preproc
 		and HH_CHILDREN_EVER_BORN > 0;
 
 
-PROC HH_BOYS_STILL_ALIVE
-
-preproc
-
-	ask if HH_SEX = 2
-		and HH_AGE in min_fertility_age:max_fertility_age
-		and HH_CHILDREN_EVER_BORN > 0;
-
-
-PROC HH_GIRLS_EVER_BORN
-
-preproc
-
-	ask if HH_SEX = 2
-		and HH_AGE in min_fertility_age:max_fertility_age
-		and HH_CHILDREN_EVER_BORN > 0;
-
-
-PROC HH_GIRLS_STILL_ALIVE
+PROC GIRLS_BORN_BLOCK
 
 preproc
 

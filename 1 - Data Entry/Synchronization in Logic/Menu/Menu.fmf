@@ -1,7 +1,7 @@
 ﻿[FormFile]
 Version=CSPro 7.2
 Name=MENU_FF
-Label=C:\Users\josh\Documents\GitHub\cspro-examples\1 - Data Entry\Synchronization in Logic\Menu\Menu.fmf
+Label=Menu
 DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
 FieldEntryFont=0018 0000 0000 0000 0600 0000 0000 0000 0000 0000 0000 0000 0000 Courier New
 Type=SystemControlled
