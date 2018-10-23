@@ -21,7 +21,7 @@ created must open up the data entry application and initialize the ID fields.
 Files:
 Input dictionary:       NEWPFF.DCF
 Input data file:        User specified file name.  You must create two data files: one for
-						adding and another one for verifying. CsPro does not allow to enter
+						adding and another one for verifying. CSPro does not allow to enter
 						duplicate ID codes.
 
 External dictionary:    LUF.DCF
@@ -130,7 +130,7 @@ function WRITE_LOOKUP_FILE_DATA();
 
 	{write PFF commands}
 	write("[Run Information]");
-	write("Version=CSPro 7.1");
+	write("Version=CSPro 7.2");
 	write("AppType=Entry");
 
 	write (" ");

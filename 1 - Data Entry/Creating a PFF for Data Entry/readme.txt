@@ -22,7 +22,7 @@ Introduction
 
    For example, if you name your PFF file "MySurvey.pff", then you can launch CSEntry by invoking:
 
-   C:\Program Files\CSPro 6.0\CSEntry.exe  MySurvey.pff
+   "C:\Program Files (x86)\CSPro 7.2\CSEntry.exe"  MySurvey.pff
 
    Using the PFF file you can determine the data entry mode (Add, Modify, or Verify), log the 
    operator identification code, enter the name of the data entry application, enter the name
@@ -119,14 +119,14 @@ Purpose
 
 	Input dictionary:	NEWPFF.DCF
 	Input data file:        User specified file name.  You must create two data files: one for adding and 
-				another one for verifying. CsPro does not allow to enter duplicate ID codes.                                 
+				another one for verifying. CSPro does not allow to enter duplicate ID codes.                                 
 
 	External dictionary:	LUF.DCF
 	External data file:	Name of data file created in Part 1. For this example use LUF.DAT
 
 	Write file: 		User specified file name but MUST have extension .PFF. 
 
-   Part 2. - CsPro Keywords
+   Part 2. - CSPro Keywords
 	
 	Function, Loadcase, Mode, Reenter, Concat, Edit, Write, Errmsg
 	

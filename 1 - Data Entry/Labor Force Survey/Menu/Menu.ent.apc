@@ -17,7 +17,7 @@ function launchHouseholdDataEntry()
 	setfile(pffFile,pffFilename,create);
 
 	filewrite(pffFile,"[Run Information]");
-	filewrite(pffFile,"Version=CSPro 7.1");
+	filewrite(pffFile,"Version=CSPro 7.2");
 	filewrite(pffFile,"AppType=Entry");
 	filewrite(pffFile,"Description=Labor Force Survey");
 
