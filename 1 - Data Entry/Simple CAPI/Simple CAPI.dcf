@@ -30,10 +30,17 @@ MaxRecords=20
 RecordLen=111
 
 [Item]
-Label=Name
-Name=NAME
+Label=First Name
+Name=FIRST_NAME
 Start=6
-Len=50
+Len=25
+DataType=Alpha
+
+[Item]
+Label=Last Name
+Name=LAST_NAME
+Start=31
+Len=25
 DataType=Alpha
 
 [Item]
@@ -159,7 +166,6 @@ Value='X                           ';Turkish (Türkçe)
 Value='Y                           ';Urdu (اُردُو)
 Value='Z                           ';Vietnamese (Tiếng Việt)
 Value='0                           ';Wu (吳語)
-Value='1                           ';Other Language
 
 [Item]
 Label=Languages Spoken (Other)

@@ -17,10 +17,6 @@ string headText;
 numeric headKnown;
 
 
-// a counter variable
-numeric ctr;
-
-
 // this variable is used for check box manipulation
 string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
@@ -28,10 +24,10 @@ function VerifyCheckBoxCodes(string checkBoxField)
 
 	string validOptions = " " + alphabet[1:length(checkBoxField)];
 
-	do ctr = 1 while ctr <= length(checkBoxField)
+	do numeric ctr = 1 while ctr <= length(checkBoxField)
 
 		if pos(checkBoxField[ctr:1],validOptions) = 0 then
-			errmsg("Option '%s' is invalid.",checkBoxField[ctr:1]);
+			errmsg("Option '%s' is invalid.", checkBoxField[ctr:1]);
 			reenter;
 		endif;
 
@@ -39,25 +35,14 @@ function VerifyCheckBoxCodes(string checkBoxField)
 
 end;
 
-function VerifyCheckBoxCodesMustSelectOne(string checkBoxField)
 
-	if length(strip(checkBoxField)) = 0 then
-		errmsg("You must select at least one option.");
-		reenter;
-	endif;
-
-	VerifyCheckBoxCodes(checkBoxField);
-
+function string ConstructPersonName(numeric rowNumber)
+	ConstructPersonName = maketext("%s %s", strip(FIRST_NAME(rowNumber)), strip(LAST_NAME(rowNumber)));
 end;
 
-
-function CheckOtherField(string otherField,string fieldName)
-
-	if length(strip(otherField)) = 0 then
-		errmsg("You must specify the other %s.",fieldName);
-		reenter;
-	endif;
-
+function string PersonName()
+	// this function is called in question text to get the full name of the current person
+	PersonName = ConstructPersonName(curocc());
 end;
 
 
@@ -68,13 +53,13 @@ PROC SIMPLECAPI_LEVEL
 
 	// before finalizing the case, set a case label for a more descriptive label in the case listing
 	numeric ptrHead = seek(RELATIONSHIP = 1);
-	setcaselabel(SIMPLECAPI_DICT,maketext("Household #%d | Head: %s",HOUSEHOLD_ID,strip(NAME(ptrHead))));
+	setcaselabel(SIMPLECAPI_DICT, maketext("Household #%d | Head: %s", HOUSEHOLD_ID, ConstructPersonName(ptrHead)));
 
 
-PROC NAME
+PROC NAME_BLOCK
 
 	// a blank name indicates the end of the household
-	if NAME = "" then
+	if FIRST_NAME = "" and LAST_NAME = "" then
 
 		if curocc() = 1 then
 			errmsg("The household must consist of at least one person.");
@@ -91,8 +76,8 @@ PROC NAME
 
 		vsItr = 1;
 
-		do ctr = 1 while ctr <= numHouseholdMembers
-			vsLabels(vsItr) = "Edit " + NAME(ctr);
+		do numeric ctr = 1 while ctr <= numHouseholdMembers
+			vsLabels(vsItr) = "Edit " + ConstructPersonName(ctr);
 			inc(vsItr);
 		enddo;
 
@@ -104,10 +89,10 @@ PROC NAME
 
 		vsLabels(vsItr) = ""; // end the accept array
 
-		numeric selection = accept("Are you finished entering household members?",vsLabels);
+		numeric selection = accept("Are you finished entering household members?", vsLabels);
 
 		if selection in 1:numHouseholdMembers then // the interviewer selected a person
-			reenter NAME(selection);
+			reenter NAME_BLOCK(selection);
 
 		elseif selection = ( vsItr - 1 ) then // finished with the household roster
 			endgroup;
@@ -117,10 +102,14 @@ PROC NAME
 
 		endif;
 
+	elseif FIRST_NAME = "" or LAST_NAME = "" then
+		errmsg("You must enter both a first and last name.");
+		reenter;
+
 	endif;
 
 	// set the occurrence label to the person's name
-	setocclabel(PERSON_REC000,strip(NAME));
+ 	setocclabel(PERSON_REC000, PersonName());
 
 
 PROC RELATIONSHIP
@@ -130,21 +119,21 @@ onfocus
 	// if the head has been specified, we will display that person's name in the CAPI text
 	headKnown = 0;
 
-	do ctr = 1 while ctr <= totocc(RELATIONSHIP)
+	do numeric ctr = 1 while ctr <= totocc(RELATIONSHIP)
 
 		// when a field is located in the program at a point further than the the current field,
 		// we must use the visualvalue function to retrieve its value
 		if ctr <> curocc() and visualvalue(RELATIONSHIP(ctr)) = 1 then
 			headKnown = 1;
-			headText = NAME(ctr);
+			headText = ConstructPersonName(ctr);
 		endif;
 
 	enddo;
 
 
 	// customize the value set based on whether the person is a male or female
-	if SEX = 1 then	setvalueset(RELATIONSHIP,RELATIONSHIP_MALE_VS);
-	else			setvalueset(RELATIONSHIP,RELATIONSHIP_FEMALE_VS);
+	if SEX = 1 then	setvalueset(RELATIONSHIP, RELATIONSHIP_MALE_VS);
+	else			setvalueset(RELATIONSHIP, RELATIONSHIP_FEMALE_VS);
 	endif;
 
 postproc
@@ -152,20 +141,23 @@ postproc
 	numeric ptrHead = seek(RELATIONSHIP = 1);
 	numeric ptrSpouse = seek(RELATIONSHIP = 2);
 
-	numeric cntFather,cntMother,cntGrandfather,cntGrandmother;
+	numeric cntFather,
+			cntMother,
+			cntGrandfather,
+			cntGrandmother;
 
 	// do some relationship checks on the already entered data
-	do ctr = 1 while ctr <= curocc()
+	do numeric ctr = 1 while ctr <= curocc()
 
 		// ensure one head, of a minimum age
 		if RELATIONSHIP(ctr) = 1 then
 
 			if ptrHead < ctr then
-				errmsg("%s was already marked as the head of household. You cannot have two heads.",strip(NAME(ptrHead)));
+				errmsg("%s was already marked as the head of household. You cannot have two heads.", ConstructPersonName(ptrHead));
 				reenter;
 
 			elseif AGE(ctr) < MinAgeHead then
-				errmsg("%s cannot be a head of household because a head must be at least %d-years-old.",strip(NAME(ctr)),MinAgeHead);
+				errmsg("%s cannot be a head of household because a head must be at least %d-years-old.", ConstructPersonName(ctr), MinAgeHead);
 				reenter;
 
 			endif;
@@ -177,7 +169,7 @@ postproc
 		if RELATIONSHIP(ctr) = 2 then
 
 			if ptrSpouse < ctr then
-				errmsg("%s was already marked as the spouse. You cannot have two spouses.",strip(NAME(ptrSpouse)));
+				errmsg("%s was already marked as the spouse. You cannot have two spouses.", ConstructPersonName(ptrSpouse));
 				reenter;
 
 			endif;
@@ -189,11 +181,11 @@ postproc
 		if RELATIONSHIP(ctr) = 5 then
 
 			if SEX(ctr) = 1 and inc(cntFather) > 1 then
-				errmsg(10001,1,"father");
+				errmsg(10001, 1, "father");
 				reenter;
 
 			elseif SEX(ctr) = 2 and inc(cntMother) > 1 then
-				errmsg(10001,1,"mother");
+				errmsg(10001, 1, "mother");
 				reenter;
 
 			endif;
@@ -201,11 +193,11 @@ postproc
 		elseif RELATIONSHIP(ctr) = 6 then
 
 			if SEX(ctr) = 1 and inc(cntGrandfather) > 2 then
-				errmsg(10001,2,"grandfathers");
+				errmsg(10001, 2, "grandfathers");
 				reenter;
 
 			elseif SEX(ctr) = 2 and inc(cntGrandmother) > 2 then
-				errmsg(10001,2,"grandmothers");
+				errmsg(10001, 2, "grandmothers");
 				reenter;
 
 			endif;
@@ -220,32 +212,31 @@ postproc
 
 			if RELATIONSHIP(ctr) = 3 then // child
 				if ( AGE(ptrHead) - AGE(ctr) ) < MinGenerationalDifference then
-					ageErrorMessage = maketext(10002,"child",MinGenerationalDifference,"younger",AGE(ptrHead));
+					ageErrorMessage = maketext(10002, "child", MinGenerationalDifference, "younger", AGE(ptrHead));
 				endif;
 
 			elseif RELATIONSHIP(ctr) = 5 then // parent
 				if ( AGE(ctr) - AGE(ptrHead) ) < MinGenerationalDifference then
-					ageErrorMessage = maketext(10002,"parent",MinGenerationalDifference,"older",AGE(ptrHead));
+					ageErrorMessage = maketext(10002, "parent", MinGenerationalDifference, "older", AGE(ptrHead));
 				endif;
 
 			elseif RELATIONSHIP(ctr) = 6 then // grandparent
 				if ( AGE(ctr) - AGE(ptrHead) ) < 2 * MinGenerationalDifference then
-					ageErrorMessage = maketext(10002,"grandparent",2 * MinGenerationalDifference,"older",AGE(ptrHead));
+					ageErrorMessage = maketext(10002, "grandparent", 2 * MinGenerationalDifference, "older",AGE(ptrHead));
 				endif;
 
 			elseif RELATIONSHIP(ctr) = 7 then // grandchild
 				if ( AGE(ptrHead) - AGE(ctr) ) < 2 * MinGenerationalDifference then
-					ageErrorMessage = maketext(10002,"grandchild",2 * MinGenerationalDifference,"younger",AGE(ptrHead));
+					ageErrorMessage = maketext(10002, "grandchild", 2 * MinGenerationalDifference, "younger", AGE(ptrHead));
 				endif;
 
 			endif;
 
 			if length(ageErrorMessage) > 0 then
-				errmsg("%s",ageErrorMessage) select("Edit Age",AGE,"Edit Relationship",RELATIONSHIP);
+				errmsg("%s", ageErrorMessage) select("Edit Age", AGE, "Edit Relationship", RELATIONSHIP);
 			endif;
 
 		endif;
-
 
 	enddo;
 
@@ -267,18 +258,14 @@ postproc
 	endif;
 
 
-PROC LANGUAGES_SPOKEN
+PROC LANGUAGES_BLOCK
 
-	VerifyCheckBoxCodesMustSelectOne(LANGUAGES_SPOKEN);
+	VerifyCheckBoxCodes(LANGUAGES_SPOKEN);
 
-	if pos("1",LANGUAGES_SPOKEN) = 0 then // they have not selected "Other Language"
-		skip to MAIN_LANGUAGE;
+	if LANGUAGES_SPOKEN = "" and LANGUAGES_SPOKEN_OTHER = "" then
+		errmsg("You must select at least one checkbox or enter an other option.");
+		reenter;
 	endif;
-
-
-PROC LANGUAGES_SPOKEN_OTHER
-
-	CheckOtherField(LANGUAGES_SPOKEN_OTHER,"language");
 
 
 PROC MAIN_LANGUAGE
@@ -288,38 +275,34 @@ onfocus
 	// set up the value set using languages that the person speaks; if only one, preselect the language
 	vsItr = 1;
 
-	do ctr = 1 while ctr <= length(LANGUAGES_SPOKEN)
+	do numeric ctr = 1 while ctr <= length(LANGUAGES_SPOKEN)
 
 		string thisOption = LANGUAGES_SPOKEN[ctr:1];
 
 		if thisOption <> " " then
-
-			vsCodes(vsItr) = pos(thisOption,alphabet);
-
-			if thisOption = "1" then // the other field
-				vsLabels(vsItr) = LANGUAGES_SPOKEN_OTHER;
-
-			else
-				vsLabels(vsItr) = getlabel(LANGUAGES_SPOKEN,thisOption);
-
-			endif;
-
+			vsCodes(vsItr) = pos(thisOption, alphabet);
+			vsLabels(vsItr) = getlabel(LANGUAGES_SPOKEN, thisOption);
 			inc(vsItr);
-
 		endif;
 
 	enddo;
 
+	if LANGUAGES_SPOKEN_OTHER <> "" then // add the other language
+		vsCodes(vsItr) = 99;
+		vsLabels(vsItr) = LANGUAGES_SPOKEN_OTHER;
+		inc(vsItr);
+	endif;
+
 	vsCodes(vsItr) = notappl; // end the dynamic value set
 
-	setvalueset(MAIN_LANGUAGE,vsCodes,vsLabels);
+	setvalueset(MAIN_LANGUAGE, vsCodes, vsLabels);
 
 	if vsItr = 2 then // they only listed one language for languages spoken so no need to ask the question
 		MAIN_LANGUAGE = vsCodes(1);
-		setproperty(MAIN_LANGUAGE,"Protected","Yes");
+		setproperty(MAIN_LANGUAGE, "Protected", "Yes");
 
 	else
-		setproperty(MAIN_LANGUAGE,"Protected","No");
+		setproperty(MAIN_LANGUAGE, "Protected", "No");
 
 	endif;
 
