@@ -93,6 +93,7 @@ Max=1
 Name=PROVINCE
 Position=192,27,221,47
 Item=PROVINCE,CENSUS_DICT
+DataCaptureType=RadioButton
 Form=1
   
 [Text]
@@ -104,6 +105,7 @@ Text=Province
 Name=DISTRICT
 Position=192,57,221,77
 Item=DISTRICT,CENSUS_DICT
+DataCaptureType=RadioButton
 Form=1
   
 [Text]

@@ -22,18 +22,8 @@
 
 PROC GLOBAL
 
-numeric i;
 array aDistrictCodes(99);
 array string aDistrictNames(99);
-
-
-PROC CENSUS_DE
-
-preproc
-
-	{ turn on assisted mode for province and district
-	  to get dialog that shows value set entries }
-	set attributes(PROVINCE, DISTRICT) assisted on (responses);
 
 
 PROC PROVINCE
@@ -49,6 +39,7 @@ PROC PROVINCE
 	  Note that the AREA_REC record repeats (max occurences of 99) so when we
 	  load the case for a given province, we get one occurence of AREA_REC
 	  for each district in the given province.  }
+	numeric i;
 	do varying i = 1 until i > count(AREA_DICT.AREA_REC)
 		{ the arrays that we use for setvalueset start at 0 so we use i-1! }
 		aDistrictCodes(i-1) = DISTRICT_CODE(i);
@@ -60,4 +51,3 @@ PROC PROVINCE
 
 	{ call setvalueset using the arrays that contain district codes and names }
 	setvalueset(DISTRICT, aDistrictCodes, aDistrictNames);
-

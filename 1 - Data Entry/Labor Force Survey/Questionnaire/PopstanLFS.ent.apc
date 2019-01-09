@@ -5,10 +5,10 @@ PROC GLOBAL
 string weekBeforeInterviewDate;
 
 // For fill in question text for date four weeks before interview
-string fourWeeksBeforeInterviewDate;;
+string fourWeeksBeforeInterviewDate;
 
 // For fill in question text for date one year before interview
-string oneYearBeforeInterviewDate;;
+string oneYearBeforeInterviewDate;
 
 // Arrays for setvalueset
 array codes(100);
@@ -329,6 +329,7 @@ preproc
 			setocclabel(LABOR_FORM(i), NAME(visualvalue(LBPPNO(i))));
 		endif;
 	enddo;
+
 
 PROC PROVINCE
 
@@ -937,10 +938,12 @@ onfocus
 	if PXYCHK = 1 then
 		setvalueset(MJBEST, MJBEST_VS_DIRECT);
 	elseif DEMSEX(LBPPNO) = 1 then
-		setvalueset(MJBEST, MJBEST_VS_PROXY_MALE);	
+		setvalueset(MJBEST, MJBEST_VS_PROXY_MALE);
 	else
 		setvalueset(MJBEST, MJBEST_VS_PROXY_FEMALE);
 	endif;
+
+
 PROC MJBPLC
 
 onfocus
@@ -1176,9 +1179,6 @@ onfocus
 	updateOwnBusinessProxy();
 
 
-PROC DMJSMO
-
-
 PROC DMJEND
 
 preproc
@@ -1256,16 +1256,13 @@ PROC ACDYSM
 	endif;
 
 
-
 PROC ACHRSM
-
 
 preproc
 
 	// Ask hours only for days worked in last week
 	// (options checked in previous question)
 	ask if pos( edit( "9" , curocc(ACHRSM_ROSTER) ) , ACDYSM ) > 0;
-
 
 
 PROC ACHRM1
@@ -1294,22 +1291,12 @@ preproc
 	ACHRSUMMJ = sum(ACHRSM);
 
 
-
-
 PROC ACHRCM
 
 	// If sum of hours is correct, skip correction
 	if ACHRCM = 1 then
 		skip to ACEQUM;
 	endif;
-
-
-PROC ACHRUM
-
-
-
-PROC ACEQUM
-
 
 
 PROC USHRSM
@@ -1500,7 +1487,7 @@ preproc
 		// No other jobs
 		actualHoursOtherJobs = 0;
 	endif;
-	
+
 	// Sum first, second and other to get total hours
 	if actualHoursMainJob = 998 or actualHoursSecondJob = 998 or actualHoursOtherJobs = 998 then
 		// One or more unknown so total is unknown
@@ -1546,6 +1533,7 @@ postproc
 	else
 		TOTUSH = usualHoursWorkedMainJob + usualHoursWorkedSecondJob + usualHoursWorkedOtherJobs;
 	endif;
+
 
 PROC WNTMRH
 
@@ -1697,26 +1685,36 @@ preproc
 
 	// Only for persons not employed who sought work or want to work
 	ask if SRHJOB = 1 OR SRHBUS = 1 OR SRHDES = 1 ;
+
+
 PROC SRHAVL
 preproc
 
 	// Only for persons not employed not available in reference week
-	ask if SRHFAN = 2 OR SRHAVN = 2 
+	ask if SRHFAN = 2 OR SRHAVN = 2
+
+
 PROC SRHNAR
 preproc
 
 	// Persons not employed not available to work
 	ask if SRHAVL = 2;
+
+
 PROC SRHMAC
 preproc
 
 	// Persons not employed who do not want to work
 	ask if SRHDES = 2;
+
+
 PROC SRHMAC_OTHER
 preproc
 
 	// Only ask those with a 'Other' reason for not seeking work
 	ask if SRHMAC = 8;
+
+
 PROC SRHEND
 
 preproc
@@ -1736,5 +1734,3 @@ postproc
 	if curocc() = GHNELIGIBLE then
 		endgroup;
 	endif;
-
-

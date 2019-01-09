@@ -18,7 +18,8 @@
 
 PROC GLOBAL
 
-numeric loop, rowRel, cntPop;
+numeric rowRel,
+		cntPop;
 
 array AgeDeck (2,6) save;
 
@@ -42,7 +43,7 @@ PROC AGEDECK_EXAMPLE
 	  display the final values; notice how they've changed from what we started
 	  with above! }
 
-	while loop < 3 do
+	do numeric loop = 1 while loop <= 2
 		errmsg("%d:", loop);
 		errmsg("AgeDeck[%d,1]=%d", loop, AgeDeck (loop,1));
 		errmsg("AgeDeck[%d,2]=%d", loop, AgeDeck (loop,2));
@@ -50,7 +51,6 @@ PROC AGEDECK_EXAMPLE
 		errmsg("AgeDeck[%d,4]=%d", loop, AgeDeck (loop,4));
 		errmsg("AgeDeck[%d,5]=%d", loop, AgeDeck (loop,5));
 		errmsg("AgeDeck[%d,6]=%d", loop, AgeDeck (loop,6));
-		inc(loop);
 	enddo;
 
 
@@ -68,21 +68,20 @@ PROC P04_AGE
 	endif;
 
 	// This assumes that the sex variable has already been edited.
-	
+
 	if $ in 0:99 then // '$', when used within a procedure, means the current variable
 
 		errmsg("Updating value for AgeDeck[%d,%d] with age=%d",P03_SEX,rowRel,$) denom = cntPop;
 		AgeDeck(P03_SEX,rowRel) = $;  // this updates the hot deck with the value contained in P04_AGE
-	
+
 	else  // age is not valid, so it needs to be imputed.
 
 		errmsg("Age(=%d) is invalid. Age variable changing from %d to %d",$,$,AgeDeck(P03_SEX,rowRel)) denom = cntPop;
-		
+
 		//impute sets the value of P04_AGE to AgeDeck(P03_SEX,rowRel)
 		impute($,AgeDeck(P03_SEX,rowRel));
-		
+
 		// more testing of the P04_AGE variable should be done to ensure it is
 		// legitimate, but again, for simiplicity sake, this is not being done
-		
-	endif;
 
+	endif;

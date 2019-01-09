@@ -12,10 +12,11 @@
 
 PROC GLOBAL
 
-numeric cntPop, cntAge_ge_5;
+numeric cntPop,
+		cntAge_ge_5;
 
 array HD10_Grade_Age_Sex(P04_AGE_VS5_HIGHESTGRADE,P03_SEX_VS1(+));  // the values sets now do the work of the recode.
-												   // the "+" allows us to account for invalid sex.
+												   					// the "+" allows us to account for invalid sex.
 
 
 PROC POPSTAN_FF
@@ -44,10 +45,10 @@ PROC P10_HIGH_GR
 	// For the sake of simplicity we will leave that for another edit.
 
 	if $ in 0:36 then // highest grade completed is valid so we update the hot deck
-	
+
 		putdeck(HD10_Grade_Age_Sex,$);
 		putdeck(HD10_Grade_Age_Sex,$,,NotAppl);  // this will store a value for a valid age but an invalid sex.
-		
+
 		// putdeck(HD10_Grade_Age_Sex(+),$);  // two above two lines of code can be collapsed into one using the (+) syntax
 
 		errmsg(110,$) denom = cntAge_ge_5 summary;
@@ -58,5 +59,3 @@ PROC P10_HIGH_GR
 		impute($,getdeck(HD10_Grade_Age_Sex));
 
 	endif;
-
-

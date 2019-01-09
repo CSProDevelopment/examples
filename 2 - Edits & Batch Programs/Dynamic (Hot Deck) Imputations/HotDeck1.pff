@@ -16,4 +16,5 @@ ViewResults=Yes
 ListingWidth=80
 MessageWrap=No
 ErrmsgOverride=No
+InputOrder=Sequential
 

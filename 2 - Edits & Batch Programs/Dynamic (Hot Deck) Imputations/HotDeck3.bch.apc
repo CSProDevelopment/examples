@@ -1,22 +1,23 @@
 ﻿{ Purpose:  Demonstrate how to maintain a hot deck using saved arrays
             and using recodes to define age groupings.
 
-  Keywords used:  array, save, while, impute    
-        
+  Keywords used:  array, save, while, impute
+
   Comments: This program will edit the education variable (Highest Grade)
             based on age group and level of education.
 }
 
 PROC GLOBAL
 
-numeric rowAge, cntAge_ge_5;
+numeric rowAge,
+		cntAge_ge_5;
 
 array HD10_Grade_Age_Sex (18,2) save =   // Hot deck to impute the highest grade completed (P10_HIGH_GR) based on age group and sex
 				                         //  <--- Sex --->
 				                         //  Male   Female      Age
 										 //  (1)     (2)
 										      0       0       //   0 to 5  - pre primary  ( 1)
-										      1       1       //   6                      ( 2) 
+										      1       1       //   6                      ( 2)
 										      2       2       //   7                      ( 3)
 										      3       3       //   8                      ( 4)
 										      4       4       //   9                      ( 5)
@@ -35,22 +36,22 @@ array HD10_Grade_Age_Sex (18,2) save =   // Hot deck to impute the highest grade
 										     12      12       //  50+                     (18)
 				                              ;
 
-	
+
 PROC AGEDECK_EXAMPLE
 
-	
+
 PROC P10_HIGH_GR  // Highest grade completed
 
 	universe P04_AGE >= 5;  // this edit is done only for those age 5 and above. Age & Sex are assumed edited.
-	
+
 	inc(cntAge_ge_5);
-	
+
 	recode P04_AGE => rowAge;  // recode the age into the appropriate group to match the hot deck array
 	           5   => 1;
 	           6   => 2;
 	           7   => 3;
 	           8   => 4;
-	           9   => 5; 
+	           9   => 5;
 	          10   => 6;
 	          11   => 7;
 	          12   => 8;
@@ -65,19 +66,17 @@ PROC P10_HIGH_GR  // Highest grade completed
 	        40-49  => 17;
 	        50-99  => 18;
 	               => 18;
-	endrecode; 
-	           
-	// This edit does not include check age against highest grade completed.   
+	endrecode;
+
+	// This edit does not include check age against highest grade completed.
 	// For the sake of simplicity we will leave that for another edit.
-	
+
 	if $ in 0:36 then // highest grade completed is valid so we update the hot deck
 		HD10_Grade_Age_Sex(rowAge, P03_SEX) = $;
 		errmsg(110, $) denom = cntAge_ge_5 summary;
-		
+
 	else  // level of education is invalid so impute from the hot deck.
 		errmsg(120, $, HD10_Grade_Age_Sex(rowAge, P03_SEX)) denom = cntAge_ge_5;
 		impute($, HD10_Grade_Age_Sex(rowAge, P03_SEX));
-		
-	endif;
-	
 
+	endif;

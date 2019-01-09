@@ -13,4 +13,5 @@ Listing=.\PostcalcExample.xtb.lst
 [Parameters]
 ViewListing=OnError
 ViewResults=No
+InputOrder=Sequential
 

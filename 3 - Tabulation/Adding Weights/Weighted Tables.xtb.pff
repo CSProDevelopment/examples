@@ -13,4 +13,5 @@ Listing=.\Weighted Tables.xtb.lst
 [Parameters]
 ViewListing=OnError
 ViewResults=No
+InputOrder=Sequential
 

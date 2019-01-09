@@ -2,23 +2,14 @@
 
 file age_mother, file_child;
 
-numeric idx  	{loop}
-		yob 	{mother's year of birth, calculated}
-		pagenum {recode serial number}
-		pg		{previous page number}
-		mage;	{mother's age}
-
-{******************************************************}
+numeric idx,  	 // loop
+		yob, 	 // mother's year of birth, calculated
+		pagenum, // recode serial number
+		pg,		 // previous page number
+		mage;	 // mother's age
 
 
 PROC REL_EX_FF
-
-preproc
-
-	pg = 0;			{initialize previous page number}
-
-
-{******************************************************}
 
 
 PROC QUEST
@@ -56,7 +47,7 @@ PROC FERT_EDT
 
 	{writes heading}
 	if pagenum <> pg then
-		filewrite(age_mother,"\fPage #:%d",pagenum); {write to new page}
+		filewrite(age_mother,"\fPage #:%d",pagenum); // write to new page
 		filewrite(age_mother,"             Age of mother at time of birth");
 		filewrite(age_mother,"             Serial Number starting at:%04d",serial_number);
 		filewrite(age_mother," ");
@@ -64,28 +55,27 @@ PROC FERT_EDT
 		pg = pagenum;
 	endif;
 
-	for idx in relation MOTHER_CHILD do	{loop through relation}
-	
+	for idx in relation MOTHER_CHILD do	// loop through relation
+
 		if woman_number = line_number then
 
-			yob = 2005 - age;			{mother's year of birth}
+			yob = 2005 - age;			// mother's year of birth
 
 			if child1 in 1:9 then
-				mage = child_YOB1-yob;	{age of mother at time of birth for child #1}
+				mage = child_YOB1-yob;	// age of mother at time of birth for child #1
 				filewrite(age_mother,"%04d         %02d            %d         %d            %d",serial_number,yob,child1,child_YOB1,mage);
 			endif;
 
-			if child2 in 1:9 then		{age of mother at time of birth for child #2}
+			if child2 in 1:9 then		// age of mother at time of birth for child #2
 				mage = child_YOB2-yob;
 				filewrite(age_mother,"%04d         %02d            %d         %d            %d",serial_number,yob,child2,child_YOB2,mage);
 			endif;
 
-			if child3 in 1:9 then		{age of mother at time of birth for child #3}
+			if child3 in 1:9 then		// age of mother at time of birth for child #3
 				mage = child_YOB3-yob;
 				filewrite(age_mother,"%04d         %02d            %d         %d            %d",serial_number,yob,child3,child_YOB3,mage);
 			endif;
 
 		endif;
-		
-	enddo;
 
+	enddo;

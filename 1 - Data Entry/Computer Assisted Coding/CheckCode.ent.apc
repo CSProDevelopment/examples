@@ -8,9 +8,6 @@ If there's no match or the code is invalid, the application displays a message. 
 
 PROC GLOBAL
 
-numeric L      {length of key text}
-		S, OK; {flags for selcase and loadcase}
-
 
 PROC CEN2000_DE
 
@@ -40,9 +37,7 @@ PROC P15_OCC
 			enter AUXIL_FF;
 
 		else
-			ok = loadcase(occupation_dict,occid);
-			if ok = 1 then
-			else
+			if loadcase(occupation_dict,occid) <> 1 then
 				reenter;
 			endif;
 		endif;
@@ -52,17 +47,15 @@ PROC P15_OCC
 PROC P16_IND
 
 	indid = $;
-	
+
 	if P14_WORKING = 1 then
 		if $ = missing then
 			{open secondary form file with blank fields}
 			clear(AUXIL_DICT);
 			enter AUXIL_FF;
-			
+
 		else
-			ok = loadcase(industry_dict,indid);
-			if ok = 1 then
-			else
+			if loadcase(industry_dict,indid) <> 1 then
 				reenter;
 			endif;
 		endif;
@@ -85,28 +78,27 @@ PROC AUXILKEY
 
 	{return length of string without blanks. If length >= 3 and occupation or industry text
 	is found on corresponding data file, the matching selection window is opened. }
+	numeric selection;
 
-	L = length(strip(AUXILKEY));
+	if length(strip(AUXILKEY)) >= 3 then
 
-	if L >= 3 then
-		
 		if AUXILTYPE = 1 then
 			{if length >= 3 and text for occupation (AUXILKEY) matches text in OCC.DAT}
-				S = selcase(OCCUPATION_DICT,"")
-					include(OCCTXT) where pos(strip(AUXILKEY),OCCTXT);
+			selection = selcase(OCCUPATION_DICT,"")
+						include(OCCTXT) where pos(strip(AUXILKEY),OCCTXT);
 		endif;
-		
+
 		if AUXILTYPE = 2 then
 			{if length >= 3 and text for industry (AUXILKEY) matches text in IND.DAT}
-				S = selcase(INDUSTRY_DICT,"")
-					include(INDTXT) where pos(strip(AUXILKEY),INDTXT);
+			selection = selcase(INDUSTRY_DICT,"")
+						include(INDTXT) where pos(strip(AUXILKEY),INDTXT);
 		endif;
-		
+
 	endif;
 
 	{if selection is found, then assign code to occupation or industry field.}
-	if S then
-	
+	if selection then
+
 		if AUXILTYPE = 1 then
 			AUXILCODE = OCCID;
 			P15_OCC(curocc(PERSON000)) = OCCID;
@@ -114,11 +106,9 @@ PROC AUXILKEY
 			AUXILCODE = INDID;
 			P16_IND(curocc(PERSON000)) = INDID;
 		endif;
-	
+
 	else
 		errmsg("Invalid entry");
 		reenter;
-	
+
 	endif;
-
-

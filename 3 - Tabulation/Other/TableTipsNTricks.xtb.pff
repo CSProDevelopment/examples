@@ -13,4 +13,5 @@ Listing=.\TableTipsNTricks.xtb.lst
 [Parameters]
 ViewListing=OnError
 ViewResults=No
+InputOrder=Sequential
 

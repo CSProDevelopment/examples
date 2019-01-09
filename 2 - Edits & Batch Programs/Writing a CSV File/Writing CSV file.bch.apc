@@ -6,8 +6,6 @@
   Commas are used as delimiters in this example.  You could use semi-colons or whatever delimeter you wish.
   The CSV file can then be easily read by Excel or other software that uses delimited files. }
 
-numeric ctr;
-
 file CSVfile;
 
 
@@ -17,7 +15,7 @@ preproc
 
 	// Set up the CSV file to write to
 	setfile(CSVFile, "CSVfile.csv", create);
-	
+
 	// Write out the header record with the list of itesm being written to the CSV file
 	FileWrite(CSVFile, "id1_prov,id2_dist,id3_village,id4_ea,id5_hu_num,p1_pnum,p3_rel,p4_sex,p5_age,h1_type,h2_occ");
 
@@ -25,12 +23,13 @@ preproc
 PROC QUEST
 
 	// Write records to CSV file for each person in the household
+	numeric ctr;
+
 	for ctr in PERSON_REC_EDT do
-	
+
 		FileWrite(CSVfile, "%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d",
 			ID1_PROV, ID2_DIST, ID3_VILLAGE, ID4_EA, ID5_HU_NUM,
 			P1_PNUM, P3_REL, P4_SEX, P5_AGE,
 			H1_TYPE, H2_OCC);
-			
-	enddo;
 
+	enddo;

@@ -7,7 +7,8 @@
 
 
 
-numeric imputeVal,cntPeople;
+numeric imputeVal,
+		cntPeople;
 
 numeric prevHeadSex = 1;
 
@@ -153,4 +154,3 @@ PROC EDUCATION
 		impute(EDUCATION,imputeVal);
 
 	endif;
-

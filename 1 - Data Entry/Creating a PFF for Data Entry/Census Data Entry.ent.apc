@@ -1,7 +1,7 @@
 ﻿{Popstan Census Data Entry}
 PROC GLOBAL
 
-numeric x, heads, empty, i;
+numeric heads, empty;
 
 
 PROC CEN_DE
@@ -10,7 +10,7 @@ PROC CEN_DE
 PROC FQUEST
 
 	if H01_TYPE = notappl then
-		x = errmsg("Housing record is blank");
+		errmsg("Housing record is blank");
 	endif;
 
 
@@ -19,11 +19,12 @@ PROC PERSON000
 	if totocc(PERSON) > 0 then
 		Heads = count(P02_REL = 1);
 		if Heads <> 1 then
-			x = errmsg("There are %d heads of household.", Heads);
+			errmsg("There are %d heads of household.", Heads);
 		endif;
 		Empty = count(P02_REL = notappl and P03_SEX = notappl and P04_AGE = notappl);
 		if Empty > 0 then
-			x = errmsg("There are %d empty person records.", Empty);
+			errmsg("There are %d empty person records.", Empty);
+			numeric i;
 			do varying i = 1 until P02_REL(i) = notappl
 			enddo;
 			reenter P02_REL(i);
@@ -100,12 +101,12 @@ postproc
 
 	if $ = 4 then
 		if totocc(PERSON000) > 0 then
-			x = errmsg("Household tenure is vacant, but there are %d person records.", soccurs(PERSON));
+			errmsg("Household tenure is vacant, but there are %d person records.", soccurs(PERSON));
 		endif;
 		skip to H13_PERSONS;
 	else
 		if totocc(PERSON000) = 0 then
-			x = errmsg("Household tenure is not vacant, but there are no persons records.");
+			errmsg("Household tenure is not vacant, but there are no persons records.");
 		endif;
 	endif;
 
@@ -121,7 +122,6 @@ preproc
 postproc
 
 	if $ <> totocc(PERSON000) then
-		x = errmsg("Number of persons is %d, number of person records is %d.", $, totocc(PERSON000));
+		errmsg("Number of persons is %d, number of person records is %d.", $, totocc(PERSON000));
 		reenter;
 	endif;
-

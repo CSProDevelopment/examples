@@ -30,8 +30,6 @@ Auxilary Files.
 }
 PROC GLOBAL
 
-numeric OK;
-
 
 PROC Popstan_FF
 
@@ -45,7 +43,7 @@ PROC WEIGHT
 	DISTRICT = ID2_DIST;
 
 	{match Province and District codes in external data file}
-	OK = loadcase(WEIGHT_FILE_DICT,PROV,DISTRICT);
+	numeric OK = loadcase(WEIGHT_FILE_DICT,PROV,DISTRICT);
 
 	{verify successful completion}
 	if OK = 1 then
@@ -54,4 +52,3 @@ PROC WEIGHT
 	else
 		errmsg ("ID not found - %d-%d",PROV,DISTRICT);
 	endif;
-
