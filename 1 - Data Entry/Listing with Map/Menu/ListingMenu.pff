@@ -1,0 +1,16 @@
+﻿[Run Information]
+Version=CSPro 7.3
+AppType=Entry
+Description=Listing with Maps
+
+[DataEntryInit]
+StartMode=Add
+Lock=CaseListing
+
+[Files]
+Application=.\ListingMenu.ent
+InputData=|NONE
+Paradata=.\ListingMenu.cslog
+
+[ExternalFiles]
+STRUCTURES_DICT=..\Data\Structures.csdb|CSPRODB
