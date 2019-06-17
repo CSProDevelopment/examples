@@ -61,31 +61,3 @@ Name=TIME_CREATED_ACCOUNT
 Start=148
 Len=10
 ZeroFill=Yes
-
-[Record]
-Label=Login Record
-Name=LOGIN_REC
-RecordTypeValue='2'
-Required=No
-RecordLen=65
-
-[Item]
-Label=Login Timestamp
-Name=LOGIN_TIMESTAMP
-Start=38
-Len=10
-ZeroFill=Yes
-
-[Item]
-Label=Login Count
-Name=LOGIN_COUNT
-Start=48
-Len=4
-ZeroFill=Yes
-
-[Item]
-Label=Publish Date at Login
-Name=LOGIN_PUBLISH_DATE
-Start=52
-Len=14
-ZeroFill=Yes

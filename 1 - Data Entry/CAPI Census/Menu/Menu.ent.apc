@@ -882,24 +882,6 @@ preproc
 	// User is moving forward, this could be the first login after application startup. Try to log in automatically.
 	numeric automaticAssignmentSelectionOnStartup = 1;
 
-	// Save the login details
-	if STAFF_CODE <> LOGIN then
-		loadcase(PSC_STAFF_DICT,LOGIN);
-	endif;
-
-	if LOGIN_COUNT = notappl then
-		LOGIN_COUNT = 1;
-		
-	else
-		inc(LOGIN_COUNT);
-		
-	endif;
-	
-	LOGIN_TIMESTAMP = timestamp();
-	LOGIN_PUBLISH_DATE = publishdate();
-	
-	writecase(PSC_STAFF_DICT);
-
 onfocus
 
 	if automaticAssignmentSelectionOnStartup then
