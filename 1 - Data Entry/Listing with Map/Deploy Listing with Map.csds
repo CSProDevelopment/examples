@@ -1,0 +1,32 @@
+{
+  "fileType": "Application Deployment Specification",
+  "version": "7.3",
+  "name": "Listing with Map",
+  "description": "Example of listing structures using integrated maps",
+  "files": [
+    {
+      "path": ".\\Listing\\Listing.ent"
+    },
+    {
+      "path": ".\\Menu\\ListingMenu.ent"
+    },
+    {
+      "path": ".\\Menu\\ListingMenu.pff"
+    }
+  ],
+  "dictionaries": [
+    {
+      "path": ".\\Dictionaries\\Structures.dcf",
+      "uploadForSync": true
+    },
+    {
+      "path": ".\\Dictionaries\\ListingMenu.dcf"
+    }
+  ],
+  "deployment": {
+    "type": "LocalFolder",
+    "cswebUrl": "http:\/\/",
+    "ftpUrl": "ftp:\/\/",
+    "localFolderPath": ".\\DeployListingWithMap"
+  }
+}
