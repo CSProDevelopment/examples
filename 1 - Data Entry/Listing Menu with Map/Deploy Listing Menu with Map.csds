@@ -1,7 +1,7 @@
 {
   "fileType": "Application Deployment Specification",
   "version": "7.3",
-  "name": "Listing with Map",
+  "name": "Listing Menu with Map",
   "description": "Example of listing structures using integrated maps",
   "files": [
     {
@@ -27,6 +27,6 @@
     "type": "LocalFolder",
     "cswebUrl": "http:\/\/",
     "ftpUrl": "ftp:\/\/",
-    "localFolderPath": ".\\DeployListingWithMap"
+    "localFolderPath": ".\\DeployListingMenuWithMap\\"
   }
 }

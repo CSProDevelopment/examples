@@ -1,0 +1,103 @@
+﻿[FormFile]
+Version=CSPro 7.3
+Name=STRUCTURES_FF
+Label=Listing
+DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
+FieldEntryFont=0018 0000 0000 0000 0600 0000 0000 0000 0000 0000 0000 0000 0000 Courier New
+Type=SystemControlled
+  
+[Dictionaries]
+File=.\Structures.dcf
+  
+[Form]
+Name=FORM000
+Label=Listing Form
+Level=1
+Size=830,201
+  
+Item=ST_NUMBER
+Item=ST_TYPE
+Item=ST_NAME
+Item=ST_NUM_MEMBERS
+Item=ST_LOCATION_PLACEHOLDER
+  
+[EndForm]
+  
+[Level]
+Name=STRUCTURES_LEVEL
+Label=structures Level
+  
+[Group]
+Required=Yes
+Name=LISTING_FORM
+Label=Listing Form
+Form=1
+LogicControl=No
+Max=1
+  
+[Field]
+Name=ST_NUMBER
+Position=344,11,387,31
+Item=ST_NUMBER,STRUCTURES_DICT
+Protected=Yes
+AutoIncrement=Yes
+FieldLabelType=DictionaryLabel
+Form=1
+  
+[Text]
+Position=13,13,125,29
+Text=Structure Number
+ 
+  
+[Field]
+Name=ST_TYPE
+Position=344,47,359,67
+Item=ST_TYPE,STRUCTURES_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=RadioButton
+Form=1
+  
+[Text]
+Position=13,50,44,66
+Text=Type
+ 
+  
+[Field]
+Name=ST_LOCATION_PLACEHOLDER
+Position=344,83,359,103
+Item=ST_LOCATION_PLACEHOLDER,STRUCTURES_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=RadioButton
+Form=1
+  
+[Text]
+Position=13,85,68,101
+Text=Location
+ 
+  
+[Field]
+Name=ST_NAME
+Position=344,119,804,139
+Item=ST_NAME,STRUCTURES_DICT
+FieldLabelType=DictionaryLabel
+UseUnicodeTextBox=Yes
+Form=1
+  
+[Text]
+Position=13,120,323,136
+Text=Name of enterprise, facility or head of household
+ 
+  
+[Field]
+Name=ST_NUM_MEMBERS
+Position=344,156,387,176
+Item=ST_NUM_MEMBERS,STRUCTURES_DICT
+FieldLabelType=DictionaryLabel
+Form=1
+  
+[Text]
+Position=13,159,180,175
+Text=Number of Usual Members
+ 
+[EndGroup]
+  

@@ -1,7 +1,7 @@
 ﻿[Run Information]
 Version=CSPro 7.3
 AppType=Entry
-Description=Listing with Maps
+Description=Listing Menu with Maps
 
 [DataEntryInit]
 StartMode=Add
