@@ -6,12 +6,6 @@ numeric MinAgeHead = 15;
 numeric MinGenerationalDifference = 12;
 
 
-// these variables are used to create dynamic value sets, and also in the accept function
-array vsCodes(100);
-array string vsLabels(100);
-numeric vsItr;
-
-
 // these variables are used to create dynamic question text for the RELATIONSHIP question
 string headText;
 numeric headKnown;
@@ -19,21 +13,6 @@ numeric headKnown;
 
 // this variable is used for check box manipulation
 string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-
-function VerifyCheckBoxCodes(string checkBoxField)
-
-	string validOptions = " " + alphabet[1:length(checkBoxField)];
-
-	do numeric ctr = 1 while ctr <= length(checkBoxField)
-
-		if pos(checkBoxField[ctr:1],validOptions) = 0 then
-			errmsg("Option '%s' is invalid.", checkBoxField[ctr:1]);
-			reenter;
-		endif;
-
-	enddo;
-
-end;
 
 
 function string ConstructPersonName(numeric rowNumber)
@@ -74,27 +53,21 @@ PROC NAME_BLOCK
 		// confirm that this is really the end of household and not an inadvertent blank
 		numeric numHouseholdMembers = curocc() - 1;
 
-		vsItr = 1;
+		list string endConfirmationOptions;
 
 		do numeric ctr = 1 while ctr <= numHouseholdMembers
-			vsLabels(vsItr) = "Edit " + ConstructPersonName(ctr);
-			inc(vsItr);
+			endConfirmationOptions.add("Edit " + ConstructPersonName(ctr));
 		enddo;
 
-		vsLabels(vsItr) = "Add Another Member";
-		inc(vsItr);
+		endConfirmationOptions.add("Add Another Member");
+		endConfirmationOptions.add("End Interview");
 
-		vsLabels(vsItr) = "End Interview";
-		inc(vsItr);
-
-		vsLabels(vsItr) = ""; // end the accept array
-
-		numeric selection = accept("Are you finished entering household members?", vsLabels);
+		numeric selection = endConfirmationOptions.show("Are you finished entering household members?");
 
 		if selection in 1:numHouseholdMembers then // the interviewer selected a person
 			reenter NAME_BLOCK(selection);
 
-		elseif selection = ( vsItr - 1 ) then // finished with the household roster
+		elseif selection = endConfirmationOptions.length() then // finished with the household roster
 			endgroup;
 
 		else
@@ -260,8 +233,6 @@ postproc
 
 PROC LANGUAGES_BLOCK
 
-	VerifyCheckBoxCodes(LANGUAGES_SPOKEN);
-
 	if LANGUAGES_SPOKEN = "" and LANGUAGES_SPOKEN_OTHER = "" then
 		errmsg("You must select at least one checkbox or enter an other option.");
 		reenter;
@@ -273,32 +244,27 @@ PROC MAIN_LANGUAGE
 onfocus
 
 	// set up the value set using languages that the person speaks; if only one, preselect the language
-	vsItr = 1;
+	valueset mainLanguageValueSet;
 
 	do numeric ctr = 1 while ctr <= length(LANGUAGES_SPOKEN)
 
 		string thisOption = LANGUAGES_SPOKEN[ctr:1];
 
 		if thisOption <> " " then
-			vsCodes(vsItr) = pos(thisOption, alphabet);
-			vsLabels(vsItr) = getlabel(LANGUAGES_SPOKEN, thisOption);
-			inc(vsItr);
+			mainLanguageValueSet.add(getlabel(LANGUAGES_SPOKEN, thisOption), pos(thisOption, alphabet));
 		endif;
 
 	enddo;
 
 	if LANGUAGES_SPOKEN_OTHER <> "" then // add the other language
-		vsCodes(vsItr) = 99;
-		vsLabels(vsItr) = LANGUAGES_SPOKEN_OTHER;
-		inc(vsItr);
+		mainLanguageValueSet.add(LANGUAGES_SPOKEN_OTHER, 99);
 	endif;
 
-	vsCodes(vsItr) = notappl; // end the dynamic value set
+	setvalueset(MAIN_LANGUAGE, mainLanguageValueSet);
 
-	setvalueset(MAIN_LANGUAGE, vsCodes, vsLabels);
-
-	if vsItr = 2 then // they only listed one language for languages spoken so no need to ask the question
-		MAIN_LANGUAGE = vsCodes(1);
+	// no need to ask the question if they only listed one language for languages spoken
+	if mainLanguageValueSet.codes.length() = 1 then
+		MAIN_LANGUAGE = mainLanguageValueSet.codes(1);
 		setproperty(MAIN_LANGUAGE, "Protected", "Yes");
 
 	else

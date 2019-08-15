@@ -1,0 +1,14 @@
+﻿[Run Information]
+Version=CSPro 7.3
+AppType=Entry
+
+[DataEntryInit]
+Lock=CaseListing
+ShowInApplicationListing=Never
+
+[Files]
+Application=.\Listing.ent
+InputData=..\Data\Structures.csdb|CSPRODB
+
+[Parameters]
+OnExit=..\Menu\ListingMenu.pff

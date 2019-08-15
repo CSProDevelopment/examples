@@ -1,0 +1,50 @@
+﻿[CAPI QUESTIONS]
+Version=CSPro 7.3
+
+[LANGUAGES]
+EN=English
+
+[QUESTION]
+Field=STRUCTURES_DICT.ST_LOCATION_PLACEHOLDER
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
+EN=\pard\cf1\fs19 You will now capture the coordinates of the structure by reading the GPS.\par
+EN=\par
+EN=\i Please move to a location with a clear view of the sky to ensure a fast and accurate reading.\i0\par
+EN=}
+
+[QUESTION]
+Field=STRUCTURES_DICT.ST_NAME
+Condition=ST_TYPE<>1
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
+EN=\pard\cf1\fs19 Enter the name of the %getvaluelabel(ST_TYPE)%\par
+EN=}
+
+[QUESTION]
+Field=STRUCTURES_DICT.ST_NAME
+Condition=ST_TYPE=1
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
+EN=\pard\cf1\fs19 Enter the name of the head of the household\par
+EN=}
+
+[QUESTION]
+Field=STRUCTURES_DICT.ST_NUM_MEMBERS
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
+EN=\pard\cf1\fs19 Enter the number of people that reside in this household\par
+EN=}
+
+[QUESTION]
+Field=STRUCTURES_DICT.ST_TYPE
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
+EN=\pard\cf1\fs19 Enter the structure type\par
+EN=}
+

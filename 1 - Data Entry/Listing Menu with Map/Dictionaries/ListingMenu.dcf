@@ -1,0 +1,35 @@
+﻿[Dictionary]
+Version=CSPro 7.3
+Label=ListingMenu
+Name=LISTINGMENU_DICT
+RecordTypeStart=1
+RecordTypeLen=1
+Positions=Relative
+ZeroFill=Yes
+DecimalChar=Yes
+
+[Level]
+Label=ListingMenu Level
+Name=LISTINGMENU_LEVEL
+
+[IdItems]
+
+[Item]
+Label=ListingMenu Identification
+Name=LISTINGMENU_ID
+Start=2
+Len=1
+ZeroFill=Yes
+
+[Record]
+Label=ListingMenu Record
+Name=LISTINGMENU_REC
+RecordTypeValue='1'
+RecordLen=3
+
+[Item]
+Label=Show Map
+Name=SHOW_MAP
+Start=3
+Len=1
+ZeroFill=Yes

@@ -1,25 +1,25 @@
 ﻿[CSPro Application]
 Version=CSPro 7.3
-Label=SIMPLECAPI
-Name=SIMPLECAPI
+Label=LISTING
+Name=LISTING
 AppType=DataEntry
 OperatorID=No
-ShowEndCaseDialog=No
 CAPI=Yes
 CAPIFont1=-016 0000 0000 0000 0400 0000 0000 0000 0000 0000 0000 0000 0000 Arial
 CAPIFont2=-016 0000 0000 0000 0400 0000 0000 0000 0000 0000 0000 0000 0000 Arial
 CAPIFont1Color=0
 CAPIFont2Color=16711680
-CreateListing=No
-CreateLog=No
 ShowErrorMessageNumbers=No
 [AppCode]
-File=.\Simple CAPI.ent.apc
+File=.\Listing.ent.apc
 [Message]
-File=.\Simple CAPI.ent.mgf
+File=.\Listing.ent.mgf
 [Help]
-File=.\Simple CAPI.ent.qsf
+File=.\Listing.ent.qsf
 [Forms]
-File=.\Simple CAPI.fmf
+File=.\Listing.fmf
 [Dictionary Types]
-Dict-Type=.\Simple CAPI.dcf,Input,.\Simple CAPI.fmf
+Dict-Type=.\Structures.dcf,Input,.\Listing.fmf
+[Mapping]
+LatitudeItem=ST_LATITUDE
+LongitudeItem=ST_LONGITUDE

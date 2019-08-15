@@ -1,0 +1,46 @@
+﻿[FormFile]
+Version=CSPro 7.3
+Name=LISTINGMENU_FF
+Label=ListingMenu
+DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
+FieldEntryFont=0018 0000 0000 0000 0600 0000 0000 0000 0000 0000 0000 0000 0000 Courier New
+Type=SystemControlled
+  
+[Dictionaries]
+File=..\Dictionaries\ListingMenu.dcf
+  
+[Form]
+Name=FORM000
+Label=ListingMenu Level
+Level=1
+Size=253,77
+  
+Item=SHOW_MAP
+  
+[EndForm]
+  
+[Level]
+Name=LISTINGMENU_LEVEL
+Label=ListingMenu Level
+  
+[Group]
+Required=Yes
+Name=LISTINGMENU_LEVEL_FORM
+Label=ListingMenu Level
+Form=1
+LogicControl=No
+Max=1
+  
+[Field]
+Name=SHOW_MAP
+Position=213,32,228,52
+Item=SHOW_MAP,LISTINGMENU_DICT
+FieldLabelType=DictionaryLabel
+Form=1
+  
+[Text]
+Position=32,35,99,51
+Text=Show Map
+ 
+[EndGroup]
+  

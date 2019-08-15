@@ -1,0 +1,98 @@
+﻿[Dictionary]
+Version=CSPro 7.3
+Label=Structures
+Name=STRUCTURES_DICT
+RecordTypeStart=1
+RecordTypeLen=1
+Positions=Relative
+ZeroFill=Yes
+DecimalChar=Yes
+
+[Level]
+Label=Structures Level
+Name=STRUCTURES_LEVEL
+
+[IdItems]
+
+[Item]
+Label=Structure Number
+Name=ST_NUMBER
+Start=2
+Len=3
+ZeroFill=Yes
+
+[ValueSet]
+Label=Structure Number
+Name=ST_NUMBER_VS1
+Value=1:999;1-999
+
+[Record]
+Label=Structures Record
+Name=STRUCTURES_REC
+RecordTypeValue='1'
+RecordLen=80
+
+[Item]
+Label=Type
+Name=ST_TYPE
+Start=5
+Len=1
+ZeroFill=Yes
+
+[ValueSet]
+Label=Type
+Name=ST_TYPE_VS1
+Value=1;Ordinary Household
+Value=2;Enterprise
+Value=3;School
+Value=4;Health Facility
+Value=5;Hotel
+Value=6;Other Government Facility
+
+[Item]
+Label=Location
+Name=ST_LOCATION_PLACEHOLDER
+Start=6
+Len=1
+
+[ValueSet]
+Label=Location
+Name=ST_LOCATION_PLACEHOLDER_VS1
+Value=1;Capture GPS
+
+[Item]
+Label=Latitude
+Name=ST_LATITUDE
+Start=7
+Len=10
+Decimal=6
+DecimalChar=Yes
+ZeroFill=Yes
+
+[Item]
+Label=Longitude
+Name=ST_LONGITUDE
+Start=17
+Len=11
+Decimal=6
+DecimalChar=Yes
+ZeroFill=Yes
+
+[Item]
+Label=Name of enterprise, facility or head of household
+Name=ST_NAME
+Start=28
+Len=50
+DataType=Alpha
+
+[Item]
+Label=Number of Usual Members
+Name=ST_NUM_MEMBERS
+Start=78
+Len=3
+ZeroFill=Yes
+
+[ValueSet]
+Label=Number of Usual Members
+Name=ST_NUM_MEMBERS_VS1
+Value=1:999;1-999
