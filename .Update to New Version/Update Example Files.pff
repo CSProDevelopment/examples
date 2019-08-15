@@ -1,0 +1,17 @@
+﻿[Run Information]
+Version=CSPro 7.3
+AppType=Batch
+
+[Files]
+Application=.\Update Example Files.bch
+InputData=|type=None
+OutputData=|type=None
+Listing=.\Update Example Files.lst
+
+[Parameters]
+ViewListing=Always
+ViewResults=Yes
+ListingWidth=160
+MessageWrap=No
+ErrmsgOverride=No
+InputOrder=Sequential

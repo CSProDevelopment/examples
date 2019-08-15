@@ -1,0 +1,33 @@
+﻿[Dictionary]
+Version=CSPro 7.3
+Label=Update Example Files
+Name=UPDATE_EXAMPLE_FILES_DICT
+RecordTypeStart=1
+RecordTypeLen=1
+Positions=Relative
+ZeroFill=No
+DecimalChar=Yes
+
+[Level]
+Label=Update Example Files Level
+Name=UPDATE_EXAMPLE_FILES_LEVEL
+
+[IdItems]
+
+[Item]
+Label=ID
+Name=ID
+Start=2
+Len=1
+
+[Record]
+Label=Update Example Files Record
+Name=UPDATE_EXAMPLE_FILES_REC
+RecordTypeValue='1'
+RecordLen=3
+
+[Item]
+Label=Value
+Name=VALUE
+Start=3
+Len=1

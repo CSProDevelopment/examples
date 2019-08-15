@@ -1,0 +1,94 @@
+﻿PROC GLOBAL
+
+
+function ProcessPff(string pff_filename)
+	
+	// the pff object will automatically update everything to the new version
+	pff this_pff;
+	this_pff.load(pff_filename);
+	this_pff.save(pff_filename);
+	
+	write("Processed PFF %s", pff_filename);
+
+end;
+
+
+function ProcessOtherFile(string other_filename)
+
+	// read all the lines and update the Version= lines
+	file this_file;
+	list string lines;
+
+	this_file.open(other_filename);
+	this_file.read(lines);
+	this_file.close();
+	
+	string new_version = "Version=CSPro 7.3 diagnostics("version");
+	
+	do numeric counter = 1 while counter <= lines.length()
+		
+		string line = lines(counter);
+		numeric version_pos = pos("Version=CSPro 7.3ine);
+		
+		if version_pos > 0 then
+			line[version_pos:length(new_version)] = new_version;
+			lines(counter) = line;
+		endif;
+
+	enddo;
+	
+	this_file.open(other_filename, create);
+	this_file.write(lines);
+	this_file.close();
+	
+	write("Processed other file %s", other_filename);
+
+end;
+
+
+PROC UPDATE_EXAMPLE_FILES_FF
+
+preproc
+
+	write("");
+	write("");
+	write("-------------------------------------------------------------------------------------------------------------");
+	write("Remember to search for CSPro <old version> in all the files, as there may be non-application file references.");
+	write("-------------------------------------------------------------------------------------------------------------");
+	write("");
+	write("");
+
+	list string files;
+	dirlist(files, "..", "*.*", recursive);
+	
+	do numeric counter = 1 while counter <= files.length()
+	
+		string this_filename = files(counter);
+		string extension;
+		
+		do numeric name_index = length(this_filename) while name_index >= 1 by -1
+			
+			if this_filename[name_index:1] = "." then
+				extension = tolower(this_filename[name_index + 1]);
+				break;
+			
+			elseif this_filename[name_index:1] = "\" then
+				break;
+			
+			endif;
+		
+		enddo;
+
+		if extension = "pff" then
+			ProcessPff(this_filename);
+		
+		elseif extension in "anm", "apc", "bch", "csds", "dcf", "ent", "fmf",
+							"ord", "qsf", "sva", "trs", "xtb", "xts" then
+			ProcessOtherFile(this_filename);
+		
+		else
+			next;
+		
+		endif;
+		
+	enddo;

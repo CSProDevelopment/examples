@@ -1,0 +1,67 @@
+﻿[FormFile]
+Version=CSPro 7.3
+Name=UPDATE_EXAMPLE_FILES_FF
+Label=Update Example Files
+DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
+FieldEntryFont=0018 0000 0000 0000 0600 0000 0000 0000 0000 0000 0000 0000 0000 Courier New
+Type=OperatorControlled
+  
+[Dictionaries]
+File=.\Update Example Files.dcf
+  
+[Form]
+Name=FORM000
+Label=(Id Items)
+Level=1
+Size=300,300
+  
+Item=ID
+  
+[EndForm]
+  
+[Form]
+Name=FORM001
+Label=Update Example Files Record
+Level=1
+Size=300,300
+  
+Item=VALUE
+  
+[EndForm]
+  
+[Level]
+Name=UPDATE_EXAMPLE_FILES_LEVEL
+Label=Update Example Files Level
+  
+[Group]
+Required=Yes
+Name=IDS0_EDT
+Label=(Id Items)
+Form=1
+LogicControl=No
+Max=1
+  
+[Field]
+Name=ID
+Item=ID,UPDATE_EXAMPLE_FILES_DICT
+Form=1
+  
+[EndGroup]
+  
+[Group]
+Required=Yes
+Name=UPDATE_EXAMPLE_FILES_REC_EDT
+Label=Update Example Files Record
+Form=2
+LogicControl=No
+Type=Record
+TypeName=UPDATE_EXAMPLE_FILES_REC
+Max=1
+  
+[Field]
+Name=VALUE
+Item=VALUE,UPDATE_EXAMPLE_FILES_DICT
+Form=2
+  
+[EndGroup]
+  

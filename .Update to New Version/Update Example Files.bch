@@ -1,0 +1,13 @@
+﻿[CSPro Application]
+Version=CSPro 7.3
+Label=UPDATE_EXAMPLE_FILES
+Name=UPDATE_EXAMPLE_FILES
+AppType=Batch
+[AppCode]
+File=.\Update Example Files.bch.apc
+[Message]
+File=.\Update Example Files.bch.mgf
+[Order]
+File=.\Update Example Files.ord
+[Dictionary Types]
+Dict-Type=.\Update Example Files.dcf,Input,.\Update Example Files.ord
