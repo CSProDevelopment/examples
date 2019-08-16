@@ -263,7 +263,7 @@ onfocus
 	setvalueset(MAIN_LANGUAGE, mainLanguageValueSet);
 
 	// no need to ask the question if they only listed one language for languages spoken
-	if mainLanguageValueSet.codes.length() = 1 then
+	if mainLanguageValueSet.length() = 1 then
 		MAIN_LANGUAGE = mainLanguageValueSet.codes(1);
 		setproperty(MAIN_LANGUAGE, "Protected", "Yes");
 

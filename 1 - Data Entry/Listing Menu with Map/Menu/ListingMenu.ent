@@ -15,8 +15,6 @@ CreateListing=No
 CreateLog=No
 ShowErrorMessageNumbers=No
 ComboBoxShowOnlyDiscreteValues=Yes
-ParadataCollection=AllEvents
-ParadataDeviceStateMinutes=5
 [External Dictionaries]
 File=..\Dictionaries\Structures.dcf
 [AppCode]

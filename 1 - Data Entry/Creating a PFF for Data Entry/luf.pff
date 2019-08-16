@@ -1,7 +1,0 @@
-﻿[Run Information]
-Version=CSPro 7.3
-AppType=Entry
-
-[Files]
-Application=.\luf.ent
-InputData=.\luf.dat

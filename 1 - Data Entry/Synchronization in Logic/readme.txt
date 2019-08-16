@@ -14,7 +14,7 @@ Keywords used:  syncconnect, syncdata, syncfile, syncdisconnect, syncserver, exe
 Files:          Menu/Menu.ent: menu program that launches household questionnaire program and performs synchronization
                 Household/HouseholdQuestionnaire.ent: household questionnaire data entry program
                 Dict/Household/HouseholdQuestionnaire.dcf: household questionnaire dictionary shared by both applications
-                Data/HouseholdQuestionnaire.csdat: data file for household questionnaire
+                Data/HouseholdQuestionnaire.csdb: data file for household questionnaire
                 Deployment: folder created by the CSPro Deploy Application Tool to copy to Android device/server
 
 

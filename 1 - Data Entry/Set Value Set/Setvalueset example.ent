@@ -3,6 +3,7 @@ Version=CSPro 7.3
 Label=CENSUS_DATA_ENTRY
 Name=CENSUS_DATA_ENTRY
 AppType=DataEntry
+OperatorID=No
 [External Dictionaries]
 File=.\AreaLookup.dcf
 [AppCode]
