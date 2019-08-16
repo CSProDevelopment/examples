@@ -1,9 +1,6 @@
 ﻿[Run Information]
-Version=CSPro 7.2
+Version=CSPro 7.3
 AppType=Deploy
 
 [Files]
 Application=.\DeployPopstanCensus.csds
-
-[Parameters]
-

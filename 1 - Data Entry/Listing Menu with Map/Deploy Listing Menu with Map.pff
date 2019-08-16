@@ -4,6 +4,3 @@ AppType=Deploy
 
 [Files]
 Application=.\Deploy Listing with Map.csds
-
-[Parameters]
-

@@ -1,5 +1,5 @@
 ﻿[Run Information]
-Version=CSPro 7.2
+Version=CSPro 7.3
 AppType=Tabulation
 Operation=All
 
@@ -9,9 +9,7 @@ InputData=..\..\Popstan Census\Popstan Census.dat
 OutputTBW=.\TablogicExample.xtb.tbw
 Listing=.\TablogicExample.xtb.lst
 
-
 [Parameters]
 ViewListing=OnError
 ViewResults=No
 InputOrder=Sequential
-

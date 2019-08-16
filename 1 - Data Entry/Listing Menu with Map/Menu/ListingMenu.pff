@@ -9,8 +9,8 @@ Lock=CaseListing
 
 [Files]
 Application=.\ListingMenu.ent
-InputData=|NONE
+InputData=|type=None
 Paradata=.\ListingMenu.cslog
 
 [ExternalFiles]
-STRUCTURES_DICT=..\Data\Structures.csdb|CSPRODB
+STRUCTURES_DICT=..\Data\Structures.csdb

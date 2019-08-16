@@ -1,13 +1,12 @@
 ﻿[Run Information]
-Version=CSPro 7.2
+Version=CSPro 7.3
 AppType=Batch
 
 [Files]
 Application=.\Writing CSV file.bch
 InputData=.\PopstanEx.dat
-OutputData=|NONE
+OutputData=|type=None
 Listing=.\Writing CSV file.lst
-
 
 [UserFiles]
 CSVFILE=
@@ -19,4 +18,3 @@ ListingWidth=80
 MessageWrap=No
 ErrmsgOverride=No
 InputOrder=Sequential
-

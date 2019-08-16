@@ -1,13 +1,12 @@
 ﻿[Run Information]
-Version=CSPro 7.2
+Version=CSPro 7.3
 AppType=Batch
 
 [Files]
 Application=.\Rel_Ex.bch
 InputData=.\Test.dat
-OutputData=|NONE
+OutputData=|type=None
 Listing=.\Rel_Ex.lst
-
 
 [UserFiles]
 AGE_MOTHER=.\age_mother.rep
@@ -20,4 +19,3 @@ ListingWidth=80
 MessageWrap=No
 ErrmsgOverride=No
 InputOrder=Sequential
-

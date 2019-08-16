@@ -1,5 +1,5 @@
 ﻿[Run Information]
-Version=CSPro 7.2
+Version=CSPro 7.3
 AppType=Tabulation
 Operation=All
 
@@ -10,9 +10,7 @@ OutputTBW=.\Census Prov-Dist Tabs.xtb.tbw
 AreaNames=.\Popstan Census.anm
 Listing=.\Census Prov-Dist Tabs.xtb.lst
 
-
 [Parameters]
 ViewListing=OnError
 ViewResults=No
 InputOrder=Sequential
-

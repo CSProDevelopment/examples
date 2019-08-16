@@ -8,7 +8,7 @@ ShowInApplicationListing=Never
 
 [Files]
 Application=.\Listing.ent
-InputData=..\Data\Structures.csdb|CSPRODB
+InputData=..\Data\Structures.csdb
 
 [Parameters]
 OnExit=..\Menu\ListingMenu.pff

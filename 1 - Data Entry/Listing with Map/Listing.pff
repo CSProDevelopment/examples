@@ -2,8 +2,7 @@
 Version=CSPro 7.3
 AppType=Entry
 Description=Listing with map
+
 [Files]
 Application=.\Listing.ent
-InputData=.\Structures.csdb|CSPRODB
-
-
+InputData=.\Structures.csdb

@@ -1,5 +1,5 @@
 ﻿[Run Information]
-Version=CSPro 7.2
+Version=CSPro 7.3
 AppType=Batch
 
 [Files]
@@ -9,7 +9,6 @@ OutputData=.\smallStan.out
 Listing=.\HotDeck3.lst
 ImputeFreqs=.\HotDeck3.freq.lst
 
-
 [Parameters]
 ViewListing=Always
 ViewResults=Yes
@@ -17,4 +16,3 @@ ListingWidth=80
 MessageWrap=No
 ErrmsgOverride=No
 InputOrder=Sequential
-

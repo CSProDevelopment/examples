@@ -22,7 +22,7 @@ Introduction
 
    For example, if you name your PFF file "MySurvey.pff", then you can launch CSEntry by invoking:
 
-   "C:\Program Files (x86)\CSPro 7.2\CSEntry.exe"  MySurvey.pff
+   "C:\Program Files (x86)\CSPro 7.3\CSEntry.exe" MySurvey.pff
 
    Using the PFF file you can determine the data entry mode (Add, Modify, or Verify), log the 
    operator identification code, enter the name of the data entry application, enter the name

@@ -1,5 +1,5 @@
-[Dictionary]
-Version=CSPro 7.2
+﻿[Dictionary]
+Version=CSPro 7.3
 Label=PostcalcExample - Working Storage Dictionary
 Name=WS_DICT
 RecordTypeStart=1

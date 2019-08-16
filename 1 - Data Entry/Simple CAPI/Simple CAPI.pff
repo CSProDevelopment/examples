@@ -3,13 +3,6 @@ Version=CSPro 7.3
 AppType=Entry
 Description=Simple CAPI (Sample Questionnaire)
 
-[DataEntryInit]
-Interactive=Ask
-
 [Files]
 Application=.\Simple CAPI.ent
-InputData=.\Simple CAPI Data.csdb|CSPRODB
-
-
-[Parameters]
-
+InputData=.\Simple CAPI Data.csdb

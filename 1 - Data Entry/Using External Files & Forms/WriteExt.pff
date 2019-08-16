@@ -1,9 +1,6 @@
 ﻿[Run Information]
-Version=CSPro 7.2
+Version=CSPro 7.3
 AppType=Entry
-
-[DataEntryInit]
-Interactive=Ask
 
 [Files]
 Application=.\WriteExt.ent
@@ -11,6 +8,3 @@ InputData=.\Test.dat
 
 [ExternalFiles]
 OTHERS_DICT=.\Other.dat
-
-[Parameters]
-

@@ -139,7 +139,7 @@ function LaunchHouseholdProgram()
 	setfile(pffFile,maketext("../%s/%s.pff", programName, programName), create);
 
 	filewrite(pffFile, "[Run Information]");
-	filewrite(pffFile, "Version=CSPro 7.2");
+	filewrite(pffFile, "Version=CSPro 7.3");
 	filewrite(pffFile, "AppType=Entry");
 	filewrite(pffFile, "Description=Popstan Census %s Questionnaire", programName);
 
