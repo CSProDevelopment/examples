@@ -4,7 +4,7 @@ Version=CSPro 7.3
 [Arrays]
  
 [Array]
-Name=SEXHD_RELATIONSHIP_HEADSEX
+Name=SexHD_Relationship_HeadSex
 Size=6, 3
 Type=numeric
 Runs=0
@@ -19,7 +19,7 @@ Cell=5, 1; 0, 0; 2
 Cell=5, 2; 0, 0; 2
  
 [Array]
-Name=SEXHD_HEADSEX_RELATIONSHIP
+Name=SexHD_HeadSex_Relationship
 Size=3, 6
 Type=numeric
 Runs=0
@@ -34,7 +34,7 @@ Cell=2, 4; 0, 0; 1
 Cell=2, 5; 0, 0; 2
  
 [Array]
-Name=AGEHD_RELATIONSHIP_EDUCATION
+Name=AgeHD_Relationship_Education
 Size=6, 9
 Type=numeric
 Runs=0
@@ -81,7 +81,7 @@ Cell=5, 7; 0, 0; 58
 Cell=5, 8; 0, 0; 67
  
 [Array]
-Name=EDUCATIONHD_AGE
+Name=EducationHD_Age
 Size=27
 Type=numeric
 Runs=0

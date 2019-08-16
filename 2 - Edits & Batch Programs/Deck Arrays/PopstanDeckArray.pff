@@ -1,0 +1,18 @@
+﻿[Run Information]
+Version=CSPro 7.3
+AppType=Batch
+
+[Files]
+Application=.\PopstanDeckArray.bch
+InputData=..\Dynamic (Hot Deck) Imputations\smallStan.dat
+OutputData=..\Dynamic (Hot Deck) Imputations\smallStan.out
+Listing=.\PopstanDeckArray.lst
+ImputeFreqs=.\PopstanDeckArray.freq.lst
+
+[Parameters]
+ViewListing=Always
+ViewResults=Yes
+ListingWidth=120
+MessageWrap=No
+ErrmsgOverride=No
+InputOrder=Sequential

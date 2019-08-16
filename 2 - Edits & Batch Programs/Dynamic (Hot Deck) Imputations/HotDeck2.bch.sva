@@ -4,7 +4,7 @@ Version=CSPro 7.3
 [Arrays]
  
 [Array]
-Name=AGEDECK
+Name=AgeDeck
 Size=3, 7
 Type=numeric
 Runs=0
