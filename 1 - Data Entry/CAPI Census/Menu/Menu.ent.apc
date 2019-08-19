@@ -10,7 +10,7 @@ numeric supervisor_password = 1234;
 string login_setting_key = "PSC Login";
 string assignment_setting_key = "PSC Assignment";
 string segment_alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-array string months(12) = "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec";
+list string months = "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec";
 
 
 // ------------------
@@ -39,7 +39,7 @@ numeric capi_household_partial_count;
 // If the menu has been passed through, the back button on Android (and the stop button on Windows) will reenter
 // the menu when pressed. Otherwise, the button will exit the application.
 function OnStop()
-	
+
 	if highlighted(SUPERVISOR_MENU) then
 		reenter SUPERVISOR_MENU;
 
@@ -80,21 +80,21 @@ end;
 function string LookupProvinceName(province)
 
 	LookupProvinceName = LookupGeographyName(province, notappl);
-	
+
 end;
 
 
 function string LookupDistrictName(province, district)
 
 	LookupDistrictName = LookupGeographyName(province, district);
-	
+
 end;
 
 
 function string LookupEAName(ea)
 
 	LookupEAName = maketext("EA%03d", ea);
-	
+
 end;
 
 
@@ -130,50 +130,26 @@ end;
 // ------------------
 
 
-file pffFile;
-
-
 function LaunchHouseholdProgram()
 
-	string programName = "Household";
-	setfile(pffFile,maketext("../%s/%s.pff", programName, programName), create);
+	// Load the default settings from the existing household PFF
+	pff household_pff;
+	household_pff.load("../Household/Household.pff");
 
-	filewrite(pffFile, "[Run Information]");
-	filewrite(pffFile, "Version=CSPro 7.3");
-	filewrite(pffFile, "AppType=Entry");
-	filewrite(pffFile, "Description=Popstan Census %s Questionnaire", programName);
+	// Set the Key to indicate what household to modify/add
+	household_pff.setproperty("Key",
+		maketext("%v%v%v%v%v", HH_PROVINCE, HH_DISTRICT, HH_EA, HH_SEGMENT, HH_NUMBER));
 
-	filewrite(pffFile, "[DataEntryInit]");
-	filewrite(pffFile, "FullScreen=Yes");
-	filewrite(pffFile, "StartMode=Add;%v%v%v%v%v", HH_PROVINCE, HH_DISTRICT, HH_EA, HH_SEGMENT, HH_NUMBER);
-	filewrite(pffFile, "Lock=CaseListing");
-	filewrite(pffFile, "ShowInApplicationListing=Never");
+	// Set some other metadata
+	household_pff.setproperty("ProvinceName", LookupProvinceName(HH_PROVINCE));
+	household_pff.setproperty("DistrictName", LookupDistrictName(HH_PROVINCE,HH_DISTRICT));
+	household_pff.setproperty("EAName", LookupEAName(HH_EA));
+	household_pff.setproperty("InterviewerCode", LOGIN);
+	household_pff.setproperty("SupervisorCode", SUPERVISOR_STAFF_CODE);
+	household_pff.setproperty("StaffName", LookupStaffName(LOGIN));
 
-	filewrite(pffFile,"[Files]");
-	filewrite(pffFile, "Application=%s.ent", programName);
-	filewrite(pffFile, "InputData=%s", filename(PSC_HOUSEHOLD_DICT));
-
-	filewrite(pffFile, "[Parameters]");
-	filewrite(pffFile, "OnExit=../Menu/Menu.pff");
-
-	// Geocodes
-	filewrite(pffFile, "Province=%v", HH_PROVINCE);
-	filewrite(pffFile, "District=%v", HH_DISTRICT);
-	filewrite(pffFile, "EA=%v", HH_EA);
-	filewrite(pffFile, "Segment=%v", HH_SEGMENT);
-	filewrite(pffFile, "HouseholdNumber=%v", HH_NUMBER);
-
-	// Other metadata
-	filewrite(pffFile, "ProvinceName=%s", LookupProvinceName(HH_PROVINCE));
-	filewrite(pffFile, "DistrictName=%s", LookupDistrictName(HH_PROVINCE,HH_DISTRICT));
-	filewrite(pffFile, "EAName=%s", LookupEAName(HH_EA));
-	filewrite(pffFile, "InterviewerCode=%v", LOGIN);
-	filewrite(pffFile, "SupervisorCode=%v", SUPERVISOR_STAFF_CODE);
-	filewrite(pffFile, "StaffName=%s", LookupStaffName(LOGIN));
-
-	close(pffFile);
-
-	execpff(filename(pffFile), stop);
+	// Run the household application
+	household_pff.exec();
 
 end;
 
@@ -188,17 +164,16 @@ end;
 // Interviewer01 | assignment01 | assignment02
 // Interviewer02 | assignment01 | assignment02
 array string workload(99, 99);
-file report_file;
 
 
 function string GetInterviewerName(string staffCode)
-	
+
 	if loadcase(PSC_STAFF_DICT, staffCode) then
 		GetInterviewerName = strip(STAFF_NAME);
-		
+
 	else
 		GetInterviewerName = "<Invalid Staff Code>";
-		
+
 	endif;
 
 end;
@@ -211,7 +186,7 @@ function string formatHeader(string staffName)
 	while (length(header) < maxHeaderLength) do
 		header = header + "-";
 	enddo;
-	
+
 	formatHeader = header;
 
 end;
@@ -235,127 +210,119 @@ end;
 
 // Initialize first column of the workload array with the interviewer's staff code
 function InitInterviewers()
-	
+
 	numeric interviewer = 1;
 	// Loop through all interviewers that are supervised by the currently logged in supervisor
 	forcase PSC_STAFF_DICT where SUPERVISOR_STAFF_CODE = LOGIN do
-		
+
 		workload(interviewer, 1) = STAFF_CODE;
 		inc(interviewer);
-		
+
 	enddo;
-	
+
 	// Denote last row
 	workload(interviewer, 1) = "";
-		
+
 end;
 
 
 // Initialize columns right of interviewer's name with their assignments
 function InitAssignments()
-	
+
 	numeric interviewer = 1;
 	numeric assignment = 2;
 	// Loop through each interviewer
 	while workload(interviewer, 1) <> "" do
 		// Loop through each assignment that is assigned to interviewer
 		forcase PSC_ASSIGNMENTS_DICT where pos(workload(interviewer, 1), key(PSC_ASSIGNMENTS_DICT)) <> 0 do
-			
+
 			workload(interviewer, assignment) = maketext("%v%v%v%v", ASSIGNMENTS_PROVINCE
 				, ASSIGNMENTS_DISTRICT, ASSIGNMENTS_EA, ASSIGNMENTS_SEGMENT);
 			inc(assignment);
-				
+
 		enddo;
-		
+
 		// Denote last column in current row
 		workload(interviewer, assignment) = "";
 		inc(interviewer);
 		assignment = 2;  // Reset to 1st assignment
-	
+
 	enddo;
-	
+
 end;
 
+
 function ShowInterviewerStatusReport()
-	
+
 	// Write report to file
-	string dataDirectory = pathname(Application) + "../Data/";
+	string dataDirectory = pathconcat(Application, "../Data/");
 	dircreate(dataDirectory); // Make sure directory exists
-	setfile(report_file, dataDirectory + "Interviewer Status Report.txt");
-	
+
+	file report_file;
+	report_file.open(pathconcat(dataDirectory, "Interviewer Status Report.txt"), create);
+
 	// Initialize the workload array
 	InitInterviewers();
 	InitAssignments();
-	
+
 	numeric interviewer = 1;
 	// Loop through each interviewer in workload
-	while workload(interviewer, 1) <> "" do	
-		
+	while workload(interviewer, 1) <> "" do
+
 		numeric partial = 0;
 		numeric complete = 0;
 		numeric male = 0;
 		numeric female = 0;
 		numeric lastInterview = 0;
-		
+
 		numeric assignment = 2;
 		// Loop through interviewer's assignments
 		while workload(interviewer, assignment) <> "" do
 
 			// Loop through households that are within the interviewer's assignment
 			forcase PSC_HOUSEHOLD_DICT where pos(workload(interviewer, assignment), key(PSC_HOUSEHOLD_DICT)) <> 0 do
-				
+
 				// Is the household case a partial or complete save?
 				if ispartial(PSC_HOUSEHOLD_DICT) then
 					inc(partial);
-					
+
 				else
 					inc(complete);
-					
+
 				endif;
-				
+
 				// How many males and females have been counted?
 				male = male + count(PSC_HOUSEHOLD_DICT.POPULATION_RECORD where HH_SEX = 1);
 				female = female + count(PSC_HOUSEHOLD_DICT.POPULATION_RECORD where HH_SEX = 2);
-				
+
 				// When was the last interview completed?
 				if lastInterview < HH_END_INTERVIEW_TIME then
 					lastInterview = HH_END_INTERVIEW_TIME;
 				endif;
-				
+
 			enddo;
-			
+
 			inc(assignment);
-			
+
 		enddo;
-		
-		filewrite(report_file, "%s", formatHeader(GetInterviewerName(workload(interviewer, 1))));
-		filewrite(report_file, "   Partial: %d", partial);
-		filewrite(report_file, "   Complete: %d", complete);
-		filewrite(report_file, "   Total Males: %d", male);
-		filewrite(report_file, "   Total Females: %d", female);
-		filewrite(report_file, "   Last Interview: %s", formatTimeStamp(lastInterview));
-		
+
+		report_file.write("%s", formatHeader(GetInterviewerName(workload(interviewer, 1))));
+		report_file.write("   Partial: %d", partial);
+		report_file.write("   Complete: %d", complete);
+		report_file.write("   Total Males: %d", male);
+		report_file.write("   Total Females: %d", female);
+		report_file.write("   Last Interview: %s", formatTimeStamp(lastInterview));
+
 		inc(interviewer);
 		assignment = 2; // Reset to 1st assignment
-		
+
 	enddo;
-	
-	close(report_file);
+
+	report_file.close();
 
 	// View report
-	if getos() = 10 then
-		// Windows	
-		execsystem(maketext("explorer.exe %s", filename(report_file)));
-		
-	elseif getos() = 20 then
-		// Android
-		execsystem(maketext("view:%s", filename(report_file)));
-		
-	else
-		// Windows Universal
-		errmsg("Reports not supported on this platform");
-	endif;
-	
+	view(filename(report_file));
+
 end;
 
 
@@ -372,7 +339,7 @@ function SaveApplicationSnapshot()
 
 	MenuPenMd5 = diagnostics("md5", "Menu.pen");
 	MenuPffMd5 = diagnostics("md5", "Menu.pff");
-	
+
 end;
 
 
@@ -402,11 +369,11 @@ end;
 
 // Not a standalone sync function. Does not call syncconnect or syncdisconnect.
 function SyncDataWithInterviewer()
-	
+
 	numeric success = 1;
-	
+
 	forcase PSC_STAFF_DICT where STAFF_CODE = LOGIN or SUPERVISOR_STAFF_CODE = LOGIN do
-		
+
 		// Synchronize staff code for supervisor and their interviewers. Supervisor's staff code is sent, so supervisor
 		// is able to log onto their account using interviewer's device.
 		// Sync BOTH is used, because the supervisor and interview write to the staff data.
@@ -415,9 +382,9 @@ function SyncDataWithInterviewer()
 			success = 0;
 			break;
 		endif;
-					
+
 	endfor;
-		
+
 	// Create universe for supervisory area.
 	string universeStr = maketext("%v%v", CURRENT_PROVINCE, CURRENT_DISTRICT);
 
@@ -427,7 +394,7 @@ function SyncDataWithInterviewer()
 		errmsg("Failed to transfer assignment data. Transfer aborted.");
 		success = 0;
 	endif;
-	
+
 	// Synchronize households in supervisory area.
 	// Sync BOTH is used to distribute household data to all interviewers. This increases redundancy in case the
 	// supervisor's device is lost. Alternatively, a GET can be used, because only the interviewer writes to the
@@ -436,14 +403,14 @@ function SyncDataWithInterviewer()
 		errmsg("Failed to transfer household data. Transfer aborted.");
 		success = 0;
 	endif;
-	
+
 	// Send all geocodes.
 	// Sync PUT is used, because the interviewer only reads the geocodes data.
 	if success and not syncdata(PUT, PSC_GEOCODES_DICT) then
 		errmsg("Failed to transfer geocode data.");
 		success = 0;
 	endif;
-	
+
 	SyncDataWithInterviewer = success;
 
 end;
@@ -454,19 +421,19 @@ function SyncWithInterviewer()
 	numeric success = 1;
 
 	if syncconnect(Bluetooth) then
-		
+
 		success = SyncDataWithInterviewer();
 
 		if success and not syncfile(PUT, ".\Menu.pff", ".\Menu.pff") then
 			errmsg("Failed to transfer Menu.pff. Transfer aborted.");
 			success = 0;
 		endif;
-	
+
 		if success and not syncfile(PUT, ".\Menu.pen", ".\Menu.pen") then
 			errmsg("Failed to transfer Menu.pen. Transfer aborted.");
 			success = 0;
 		endif;
-	
+
 		if success and not syncfile(PUT, "..\Household\Household.pen", "..\Household\Household.pen") then
 			errmsg("Failed to transfer Household.pen. Transfer aborted.");
 			success = 0;
@@ -487,40 +454,41 @@ function SyncWithInterviewer()
 
 end;
 
+
 // Not a standalone sync function. Does not call syncconnect or syncdisconnect.
 function SyncDataWithHQ()
-	
+
 	numeric success = 1;
-			
+
 	forcase PSC_STAFF_DICT where STAFF_CODE = LOGIN or SUPERVISOR_STAFF_CODE = LOGIN do
-		
-		// Synchronize staff code for supervisor and their interviewers. 
+
+		// Synchronize staff code for supervisor and their interviewers.
 		// Sync PUT is used, because HQ will only read the staff data.
 		if success and not syncdata(PUT, PSC_STAFF_DICT) then
 			errmsg("Failed to transfer interviewer's staff data. Transfer aborted.");
 			success = 0;
 			break;
 		endif;
-					
+
 	endfor;
-		
+
 	// Create universe for supervisory area.
 	string universeStr = maketext("%v%v", CURRENT_PROVINCE, CURRENT_DISTRICT);
-	
+
 	// Synchronize assignments in supervisory area.
 	// Sync PUT is used, because HQ will only read the assignments data.
 	if success and not syncdata(PUT, PSC_ASSIGNMENTS_DICT, universeStr) then
 		errmsg("Failed to transfer assignment data. Transfer aborted.");
 		success = 0;
 	endif;
-	
+
 	// Synchronize households in supervisory area.
 	// Sync PUT is used, because HQ will only read the household data.
 	if success and not syncdata(PUT, PSC_HOUSEHOLD_DICT, universeStr) then
 		errmsg("Failed to transfer household data. Transfer aborted.");
 		success = 0;
 	endif;
-		
+
 	SyncDataWithHQ = success;
 
 end;
@@ -560,7 +528,7 @@ function SyncWithHQ(syncType)
 			errmsg("Failed to receive Household.pen. Transfer aborted.");
 			success = 0;
 		endif;
-		
+
 		// Receive all geocodes. This is a lookup file, so update with applications.
 		// Sync GET is used, because only HQ writes to the geocodes data.
 		if success and not syncdata(GET, PSC_GEOCODES_DICT) then
@@ -583,62 +551,6 @@ function SyncWithHQ(syncType)
 
 	SyncWithHQ = success;
 
-end;
-
-
-// ------------------
-// ------------------ Functions to simplify creating dynamic value sets
-// ------------------
-
-
-numeric vs_ctr;
-array vs_codes(500);
-array string vs_string_codes(500);
-array string vs_labels(500);
-
-// This function does not need to be called directly
-function EndVS()
-
-	vs_codes(vs_ctr) = notappl;
-	vs_string_codes(vs_ctr) = "";
-	
-end;
-
-
-function ResetVS()
-
-	vs_ctr = 1;
-	EndVS();
-	
-end;
-
-
-// This function does not need to be called directly
-function AddLabelToVS(string vsLabel)
-	
-	vs_labels(vs_ctr) = strip(vsLabel);
-	inc(vs_ctr);
-	EndVS();
-	
-end;
-
-
-function AddNumericVS(vsCode, string vsLabel)
-
-	vs_codes(vs_ctr) = vsCode;
-	AddLabelToVS(vsLabel);
-	
-end;
-
-
-// Value set codes (vsCode) are usually numerics. However, the key of the case (see key function) is useful,
-// because it is unique and can be used to load the case after it is selected. It is returned as a string,
-// so additional value set codes will need to stringified.
-function AddStringVS(string vsCode, string vsLabel)
-
-	vs_string_codes(vs_ctr) = vsCode;
-	AddLabelToVS(vsLabel);
-	
 end;
 
 
@@ -736,17 +648,17 @@ onfocus
 
 	endif;
 
-	ResetVS();
+	valueset string login_vs;
 
 	forcase PSC_STAFF_DICT do
-		AddStringVS(key(PSC_STAFF_DICT), STAFF_NAME);
+		login_vs.add(STAFF_NAME, key(PSC_STAFF_DICT));
 	endfor;
 
-	AddStringVS("1", "Update programs from headquarters");
-	AddStringVS("2", "Update programs from supervisor");
-	AddStringVS("3", "Begin work as a supervisor");
+	login_vs.add("Update programs from headquarters", "1");
+	login_vs.add("Update programs from supervisor", "2");
+	login_vs.add("Begin work as a supervisor", "3");
 
-	setvalueset(LOGIN, vs_string_codes, vs_labels);
+	setvalueset(LOGIN, login_vs);
 
 	// Clear the login
 	LOGIN = "";
@@ -858,7 +770,7 @@ postproc
 
 	// Update the staff file (save the data about this supervisor)
 	clear(PSC_STAFF_DICT);
-	STAFF_CODE = uuid(); // Create unique identifier for supervisor 
+	STAFF_CODE = uuid(); // Create unique identifier for supervisor
 	STAFF_NAME = SUPERVISOR_NAME;
 	PIN_CODE = SUPERVISOR_PIN_CODE;;
 	DEVICE_ID = getdeviceid();
@@ -878,18 +790,18 @@ postproc
 PROC ASSIGNMENT_SELECTION
 
 preproc
-	
+
 	// User is moving forward, this could be the first login after application startup. Try to log in automatically.
 	numeric automaticAssignmentSelectionOnStartup = 1;
 
 onfocus
 
 	if automaticAssignmentSelectionOnStartup then
-		
+
 		// Retreive previous user. If user got here by selecting "Switch users" the assignment_setting_key will have
 		// been set to blank. The previous assignment will only be valid on first login after application startup.
 		string previousAssignment = loadsetting(assignment_setting_key);
-		
+
 		if loadcase(PSC_ASSIGNMENTS_DICT, previousAssignment) then
 
 			// Previous assignment was found, so automatically select assignment for convenience
@@ -897,14 +809,14 @@ onfocus
 				ASSIGNMENT_SELECTION = key(PSC_ASSIGNMENTS_DICT);
 				advance to MAIN_MENU_FORM;
 			endif;
-			
+
 		endif;
-		
+
 	endif;
 
 	numeric numberInterviewerAssignments = 0;
 
-	ResetVS();
+	valueset string assignments_vs;
 
 	forcase PSC_ASSIGNMENTS_DICT where ASSIGNMENTS_STAFF_CODE = LOGIN do
 
@@ -920,7 +832,7 @@ onfocus
 
 		endif;
 
-		AddStringVS(key(PSC_ASSIGNMENTS_DICT), label);
+		assignments_vs.add(label, key(PSC_ASSIGNMENTS_DICT));
 
 		if ASSIGNMENTS_ROLE = 1 then
 			inc(numberInterviewerAssignments);
@@ -929,10 +841,10 @@ onfocus
 	endfor;
 
 	if SUPERVISOR_STAFF_CODE = "" then
-		AddStringVS("1", "Select census area to supervise");
+		assignments_vs.add("Select census area to supervise", "1");
 		capi_staff_role = "Supervisor";
 
-		AddStringVS("2", "Update programs from headquarters");
+		assignments_vs.add("Update programs from headquarters", "2");
 
 	else
 		capi_staff_role = "Interviewer";
@@ -941,13 +853,13 @@ onfocus
 			errmsg("Your supervisor has not yet assigned you any EAs. Transfer data with the supervisor once they have made an assignment");
 		endif;
 
-		AddStringVS("3","Update programs from supervisor");
+		assignments_vs.add("Update programs from supervisor", "3");
 
 	endif;
 
-	AddStringVS("4","Switch users");
+	assignments_vs.add("Switch users", "4");
 
-	setvalueset(ASSIGNMENT_SELECTION,vs_string_codes,vs_labels);
+	setvalueset(ASSIGNMENT_SELECTION, assignments_vs);
 
 	ASSIGNMENT_SELECTION = "";
 
@@ -958,7 +870,7 @@ postproc
 	automaticAssignmentSelectionOnStartup = 0;
 
 	if ASSIGNMENT_SELECTION = "1" then
-	
+
 		// Select census area to supervise
 		if countcases(PSC_GEOCODES_DICT) = 0 then
 			errmsg("You do not have a valid list of geocodes. Transfer data with headquarters to get this list.");
@@ -1005,14 +917,14 @@ PROC SUPERVISOR_PROVINCE
 
 preproc
 
-	ResetVS();
+	valueset province_vs;
 
 	forcase PSC_GEOCODES_DICT where GEOCODES_AREA_LEVEL = 1 do
 		// Prepare value sets for provinces
-		AddNumericVS(GEOCODES_PROVINCE, GEOCODES_AREA_NAME);
+		province_vs.add(GEOCODES_AREA_NAME, GEOCODES_PROVINCE);
 	endfor;
 
-	setvalueset(SUPERVISOR_PROVINCE, vs_codes, vs_labels);
+	setvalueset(SUPERVISOR_PROVINCE, province_vs);
 
 	SUPERVISOR_PROVINCE = notappl;
 
@@ -1023,14 +935,14 @@ preproc
 
 	capi_province_name = LookupProvinceName(SUPERVISOR_PROVINCE);
 
-	ResetVS();
+	valueset district_vs;
 
 	forcase PSC_GEOCODES_DICT where GEOCODES_AREA_LEVEL = 2 and GEOCODES_PROVINCE = SUPERVISOR_PROVINCE do
 		// Prepare value sets for districts that are within the previously selected province
-		AddNumericVS(GEOCODES_DISTRICT, GEOCODES_AREA_NAME);
+		district_vs.add(GEOCODES_AREA_NAME, GEOCODES_DISTRICT);
 	endfor;
 
-	setvalueset(SUPERVISOR_DISTRICT, vs_codes, vs_labels);
+	setvalueset(SUPERVISOR_DISTRICT, district_vs);
 
 	SUPERVISOR_DISTRICT = notappl;
 
@@ -1090,7 +1002,7 @@ postproc
 
 	elseif SUPERVISOR_MENU = 2 then
 		skip to EA_ASSIGNMENT_FORM;
-		
+
 	elseif SUPERVISOR_MENU = 3 then
 		ShowInterviewerStatusReport();
 		reenter;
@@ -1116,9 +1028,9 @@ PROC INTERVIEWER_MENU
 
 onfocus
 
-	ResetVS();
+	valueset string interviewer_menu_vs;
 
-	AddStringVS("1", "Add new household");
+	interviewer_menu_vs.add("Add new household", "1");
 
 	capi_household_complete_count = 0;
 	capi_household_partial_count = 0;
@@ -1140,7 +1052,7 @@ onfocus
 
 		if ispartial(PSC_HOUSEHOLD_DICT) then
 			inc(capi_household_partial_count);
-			AddStringVS(key(PSC_HOUSEHOLD_DICT), "Continue working on household " + LookupDetailedHouseholdName());
+			interviewer_menu_vs.add("Continue working on household " + LookupDetailedHouseholdName(), key(PSC_HOUSEHOLD_DICT));
 
 		else
 			inc(capi_household_complete_count);
@@ -1149,12 +1061,12 @@ onfocus
 
 	endfor;
 
-	AddStringVS("2", maketext("View all %d households", totalHouseholds));
-	AddStringVS("7", "Transfer data with supervisor");
-	AddStringVS("8", "Change my assignment");
-	AddStringVS("9", "Switch users");
+	interviewer_menu_vs.add(maketext("View all %d households", totalHouseholds), "2");
+	interviewer_menu_vs.add("Transfer data with supervisor", "7");
+	interviewer_menu_vs.add("Change my assignment", "8");
+	interviewer_menu_vs.add("Switch users", "9");
 
-	setvalueset(INTERVIEWER_MENU, vs_string_codes, vs_labels);
+	setvalueset(INTERVIEWER_MENU, interviewer_menu_vs);
 
 	INTERVIEWER_MENU = "";
 
@@ -1178,10 +1090,10 @@ postproc
 		if totalHouseholds = 0 then
 			errmsg("There are no households to view");
 			reenter;
-		
+
 		else
 			skip to VIEW_ALL_HOUSEHOLDS;
-			
+
 		endif;
 
 	elseif INTERVIEWER_MENU = "7" then
@@ -1205,7 +1117,7 @@ PROC VIEW_ALL_HOUSEHOLDS
 
 onfocus
 
-	ResetVS();
+	valueset string households_vs;
 
 	forcase PSC_HOUSEHOLD_DICT where
 		HH_PROVINCE = ASSIGNMENTS_PROVINCE and
@@ -1213,11 +1125,11 @@ onfocus
 		HH_EA = ASSIGNMENTS_EA and
 		HH_SEGMENT = ASSIGNMENTS_SEGMENT do
 
-		AddStringVS(key(PSC_HOUSEHOLD_DICT), "Continue working on household " + LookupDetailedHouseholdName());
+		households_vs.add("Continue working on household " + LookupDetailedHouseholdName(), key(PSC_HOUSEHOLD_DICT));
 
 	endfor;
 
-	setvalueset(VIEW_ALL_HOUSEHOLDS, vs_string_codes, vs_labels);
+	setvalueset(VIEW_ALL_HOUSEHOLDS, households_vs);
 	VIEW_ALL_HOUSEHOLDS = "";
 
 postproc
@@ -1231,23 +1143,23 @@ PROC MANAGE_STAFF
 
 onfocus
 
-	ResetVS();
+	valueset string staff_vs;
 
 	// First display the supervisor
-	AddStringVS(LOGIN, LookupStaffName(LOGIN) + " (Supervisor)");
+	staff_vs.add(LookupStaffName(LOGIN) + " (Supervisor)", LOGIN);
 
 	// and then the interviewers
 	forcase PSC_STAFF_DICT do
 
 		if key(PSC_STAFF_DICT) <> LOGIN then
-			AddStringVS(key(PSC_STAFF_DICT), STAFF_NAME);
+			staff_vs.add(STAFF_NAME, key(PSC_STAFF_DICT));
 		endif;
 
 	endfor;
 
-	AddStringVS("1", "Add new interviewer");
+	staff_vs.add("Add new interviewer", "1");
 
-	setvalueset(MANAGE_STAFF, vs_string_codes, vs_labels);
+	setvalueset(MANAGE_STAFF, staff_vs);
 
 	MANAGE_STAFF = "";
 
@@ -1273,7 +1185,7 @@ onfocus
 postproc
 
 	if MANAGE_STAFF_MEMBER = 1 then
-	
+
 		// Prefill in the staff member's name
 		MANAGE_STAFF_NAME = STAFF_NAME;
 		skip to MANAGE_STAFF_NAME;
@@ -1291,7 +1203,7 @@ postproc
 		reenter;
 
 	elseif MANAGE_STAFF_MEMBER = 3 then
-	
+
 		PIN_CODE = notappl;
 		writecase(PSC_STAFF_DICT);
 
@@ -1329,7 +1241,7 @@ postproc
 		// Add a new interviewer
 		clear(PSC_STAFF_DICT);
 
-		STAFF_CODE = uuid(); // Create unique identifier for interviewer 
+		STAFF_CODE = uuid(); // Create unique identifier for interviewer
 		STAFF_NAME = MANAGE_STAFF_NAME;
 		SUPERVISOR_STAFF_CODE = LOGIN;
 		TIME_CREATED_ACCOUNT = timestamp();
@@ -1368,22 +1280,19 @@ PROC INTERVIEWER_CODE
 
 onfocus
 
-	ResetVS();
-
-	numeric eligbleInterviewers = 0;
+	valueset string interviewer_code_vs;
 
 	forcase PSC_STAFF_DICT where LOGIN <> STAFF_CODE do
 		// Not supervisor
-		AddStringVS(key(PSC_STAFF_DICT), STAFF_NAME);
-		inc(eligbleInterviewers);
+		interviewer_code_vs.add(STAFF_NAME, key(PSC_STAFF_DICT));
 	endfor;
 
-	if eligbleInterviewers = 0 then
+	if interviewer_code_vs.length() = 0 then
 		errmsg("You must add interviewers before you can make any assignments");
 		reenter SUPERVISOR_MENU;
 	endif;
 
-	setvalueset(INTERVIEWER_CODE, vs_string_codes, vs_labels);
+	setvalueset(INTERVIEWER_CODE, interviewer_code_vs);
 
 	INTERVIEWER_CODE = "";
 
@@ -1408,7 +1317,7 @@ PROC INTERVIEWER_EA
 
 onfocus
 
-	ResetVS();
+	valueset interviewer_ea_vs;
 
 	// Display all enumerations areas that are within the current province and district
 	forcase PSC_GEOCODES_DICT where GEOCODES_AREA_LEVEL = 3 and
@@ -1445,11 +1354,11 @@ onfocus
 		endif;
 
 		// Display EA codes
-		AddNumericVS(GEOCODES_EA, LookupEAName(GEOCODES_EA) + eaAssignedNames);
+		interviewer_ea_vs.add(LookupEAName(GEOCODES_EA) + eaAssignedNames, GEOCODES_EA);
 
 	endfor;
 
-	setvalueset(INTERVIEWER_EA,vs_codes,vs_labels);
+	setvalueset(INTERVIEWER_EA, interviewer_ea_vs);
 
 	// Clear EA assignment
 	INTERVIEWER_EA = notappl;
@@ -1497,4 +1406,3 @@ postproc
 	errmsg("%s successfully assigned to %s", LookupEAName(ASSIGNMENTS_EA), LookupStaffName(INTERVIEWER_CODE));
 
 	reenter SUPERVISOR_MENU;
-

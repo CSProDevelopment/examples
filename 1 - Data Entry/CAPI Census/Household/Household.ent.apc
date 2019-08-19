@@ -13,7 +13,7 @@
 
 string partially_saved_field;
 numeric min_fertility_age = 12;
-numeric max_fertility_age = 48;
+numeric max_fertility_age = 49;
 
 
 // ------------------
@@ -46,7 +46,7 @@ function OnStop()
 		// Cancel
 		reenter;
 
-	elseif response = 1 then 
+	elseif response = 1 then
 		// Save and quit
 		savepartial();
 
@@ -62,28 +62,28 @@ end;
 // ------------------
 
 
-array string HeSheStrings(2) = "he", "she";
-array string HisHerStrings(2) = "his", "her";
+list string HeSheStrings = "he", "she";
+list string HisHerStrings = "his", "her";
 
 
 function string CapiPopulationHeShe()
 
 	CapiPopulationHeShe = HeSheStrings(HH_SEX);
-	
+
 end;
 
 
 function string CapiPopulationHisHer()
 
 	CapiPopulationHisHer = HisHerStrings(HH_SEX);
-	
+
 end;
 
 
 function string CapiHeadName()
 
 	CapiHeadName = strip(HH_NAME(1));
-	
+
 end;
 
 
@@ -95,20 +95,20 @@ end;
 function ShowHidePopulation()
 
 	do numeric ctr = 1 while ctr <= maxocc(POPULATION_BASICS_ROSTER) and visualvalue(HH_KEEP_ROW(ctr)) <> notappl
-		
+
 		numeric showRow = 0;
 		if visualvalue(HH_KEEP_ROW(ctr)) = 1 then
 			showRow = 1;
 		endif;
-		
+
 		string populationLabel;
 
 		if showRow then
 			populationLabel = HH_NAME(ctr);
-			
+
 		else
 			populationLabel = "<Deleted>";
-			
+
 		endif;
 
 		showocc(POPULATION_BASICS_ROSTER(ctr), showRow);
@@ -167,7 +167,7 @@ function AssignGPSValues()
 	AssignGPSValues = 0;
 	numeric input = 1;
 	if IsCompleteGPSData() then
-	
+
 		if gps(accuracy) > HH_GPS_ACCURACY then
 			// Prompt user before replacing GPS data with less accurate GPS data
 			input = warning("Previous GPS data (accuracy = %d) will be replaced with less "
@@ -178,9 +178,9 @@ function AssignGPSValues()
 			// Prompt user before replacing GPS data
 			input = warning("Previous GPS data will be replaced.")
 				select("Confirm", continue, "Cancel", continue);
-				
+
 		endif
-		
+
 	endif;
 
 	if input <> 2 then
@@ -213,10 +213,10 @@ end;
 function TakeGPSReading()
 
 	if gps(open) then
-		
+
 		numeric result = gps(read, max_time, desired_accuracy);
 		if result = 1 then
-			
+
 			// Read was successful
 			if AssignGPSValues() then
 				capi_gps_reading = "Take GPS reading?";
@@ -224,17 +224,17 @@ function TakeGPSReading()
 			else
 				capi_gps_reading = "You chose not to update GPS data. Retake GPS reading?";
 				reenter;
-				
+
 			endif;
 
-		elseif result = -1 then		
+		elseif result = -1 then
 			capi_gps_reading = "GPS reading cancelled by user. Retake GPS reading?";
 			reenter;
 
-		elseif result = 0 then			
+		elseif result = 0 then
 			capi_gps_reading = "GPS reading failed. Retake GPS reading?";
 			reenter;
-			
+
 		endif;
 
 		gps(close);
@@ -242,7 +242,7 @@ function TakeGPSReading()
 	else
 		capi_gps_reading = "Failed to start GPS. Retake GPS reading?";
 		reenter;
-		
+
 	endif;
 
 end;
@@ -272,12 +272,6 @@ PROC GEOCODES_FORM
 PROC HH_PROVINCE
 
 preproc
-
-	HH_PROVINCE = tonumber(sysparm("Province"));
-	HH_DISTRICT = tonumber(sysparm("District"));
-	HH_EA = tonumber(sysparm("EA"));
-	HH_SEGMENT = sysparm("Segment");
-	HH_NUMBER = tonumber(sysparm("HouseholdNumber"));
 
 	capi_province_name = sysparm("ProvinceName");
 	capi_district_name = sysparm("DistrictName");
@@ -333,16 +327,16 @@ PROC HH_GPS_READING
 onfocus
 
 	if IsCompleteGPSData() then
-	
+
 		// Update value set
 		if getos() = 10 then
 			setvalueset(HH_GPS_READING, HH_GPS_WINDOWS_EXISTING_DATA_VS);
-			
+
 		else
 			setvalueset(HH_GPS_READING, HH_GPS_MOBILE_EXISTING_DATA_VS);
-			
+
 		endif;
-		
+
 		// Update CAPI Text
 		capi_gps_data_status = "collected";
 		capi_gps_accuracy_status_label = "GPS accuracy: ";
@@ -351,28 +345,28 @@ onfocus
 
 		else
 			capi_gps_accuracy_status = "fail";
-			
+
 		endif;
 
-		// Prefill "keep data" so field can be advanced through when returning from partial save 
+		// Prefill "keep data" so field can be advanced through when returning from partial save
 		HH_GPS_READING = 2;
 
 	else
-	
+
 		// Update value set
 		if getos() = 10 then
 			setvalueset(HH_GPS_READING, HH_GPS_WINDOWS_NO_DATA_VS);
-			
+
 		else
 			setvalueset(HH_GPS_READING, HH_GPS_MOBILE_NO_DATA_VS);
-			
+
 		endif;
 
 		// Update CAPI Text
 		capi_gps_data_status = "not collected";
 		capi_gps_accuracy_status_label = "";
 		capi_gps_accuracy_status = "";
-		
+
 	endif;
 
 postproc
@@ -396,7 +390,7 @@ postproc
 	else
 		warning("Unhandled value set option.");
 		reenter;
-		
+
 	endif;
 
 
@@ -423,10 +417,10 @@ onfocus
 	// once a row is deleted, it can't be modified
 	if visualvalue(HH_KEEP_ROW) = 2 then
 		setproperty(HH_KEEP_ROW, "Protected", "Yes");
-		
+
 	else
 		setproperty(HH_KEEP_ROW, "Protected", "No");
-		
+
 	endif;
 
 postproc
@@ -434,15 +428,15 @@ postproc
 	ShowHidePopulation();
 
 	if HH_KEEP_ROW = 2 then
-	
+
 		// Row is deleted
 		if curocc() = 1 then
 			errmsg("Cannot delete first row.");
 			HH_KEEP_ROW = 1;
-			
+
 		else
 			skip to HH_MORE_ROWS;
-			
+
 		endif;
 
 	endif;
@@ -499,10 +493,10 @@ onfocus
 	// and then cannot be modified
 	if curocc() < maxocc(POPULATION_BASICS_ROSTER) and HH_NAME(curocc() + 1) <> "" then
 		setproperty(HH_MORE_ROWS, "Protected", "Yes");
-		
+
 	else
 		setproperty(HH_MORE_ROWS, "Protected", "No");
-		
+
 	endif;
 
 	capi_number_of_persons = 0;
@@ -531,11 +525,11 @@ preproc
 
 	if HH_KEEP_ROW = 2 then
 		skip to next;
-		
+
 	elseif curocc() > totocc(POPULATION_BASICS_ROSTER) then
 		// No more household members
 		endgroup;
-		
+
 	endif;
 
 
@@ -619,6 +613,7 @@ preproc
 	// Prefill continue
 	HH_DWELLING_SECTION = 1;
 
+
 PROC HH_CONCLUSION
 
 preproc
@@ -639,5 +634,3 @@ postproc
 		reenter HH_DWELLING_SECTION;
 
 	endif;
-
-
