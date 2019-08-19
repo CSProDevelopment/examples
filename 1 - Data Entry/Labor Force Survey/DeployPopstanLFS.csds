@@ -1,4 +1,4 @@
-﻿{
+{
   "fileType": "Application Deployment Specification",
   "version": "7.3",
   "name": "Popstan Labor Force Survey",
@@ -25,8 +25,7 @@
   ],
   "dictionaries": [
     {
-      "path": ".\\Menu\\Menu.dcf",
-      "uploadForSync": true
+      "path": ".\\Menu\\Menu.dcf"
     },
     {
       "path": ".\\Questionnaire\\PopstanLFS.dcf",
@@ -47,8 +46,6 @@
   ],
   "deployment": {
     "type": "LocalFolder",
-    "cswebUrl": "",
-    "ftpUrl": "",
     "localFolderPath": ".\\DeployLaborForceSurvey"
   }
 }

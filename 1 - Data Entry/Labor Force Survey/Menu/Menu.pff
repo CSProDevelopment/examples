@@ -16,7 +16,3 @@ POPSTANLFS_DICT=..\Questionnaire\PopstanLFS.csdb
 SAMPLE_DICT=.\Sample.csdb
 STAFF_DICT=.\Staff.csdb
 STATUS_DICT=.\Status.csdb
-
-[UserFiles]
-PFFFILE=
-REPORTFILE=

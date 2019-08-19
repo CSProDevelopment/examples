@@ -8,9 +8,6 @@ Positions=Relative
 ZeroFill=Yes
 DecimalChar=Yes
 
-[Languages]
-ENG=English
-
 [Level]
 Label=PopstanLFS questionnaire
 Name=POPSTANLFS_QUEST

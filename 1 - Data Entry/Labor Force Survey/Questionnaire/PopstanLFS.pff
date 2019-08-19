@@ -1,0 +1,14 @@
+﻿[Run Information]
+Version=CSPro 7.3
+AppType=Entry
+Description=Labor Force Survey
+
+[DataEntryInit]
+ShowInApplicationListing=Never
+
+[Files]
+Application=.\PopstanLFS.ent
+InputData=.\PopstanLFS.csdb
+
+[Parameters]
+OnExit=..\Menu\Menu.pff
