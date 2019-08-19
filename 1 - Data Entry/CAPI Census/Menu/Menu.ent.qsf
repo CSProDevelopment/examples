@@ -2,177 +2,177 @@
 Version=CSPro 7.3
 
 [LANGUAGES]
-ENG=English
+EN=English
 
 [QUESTION]
 Field=PSC_MENU_DICT.ASSIGNMENT_SELECTION
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\cf1\fs24 You are logged in as %capi_staff_role% \b %capi_staff_name%\b0 .\par
-ENG=\par
-ENG=Select the area you want to work in now.\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\fs24 You are logged in as %capi_staff_role% \b %capi_staff_name%\b0 .\par
+EN=\par
+EN=Select the area you want to work in now.\par
+EN=}
 
 [QUESTION]
 Field=PSC_MENU_DICT.INTERVIEWER_CODE
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-ENG=\pard\cf1\fs24 Select the interviewer to assign an EA to.\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.14393}\viewkind4\uc1
+EN=\pard\cf1\fs24 Select the interviewer to assign an EA to.\par
+EN=}
 
 [QUESTION]
 Field=PSC_MENU_DICT.INTERVIEWER_EA
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\cf1\fs24 Select EA to assign to \b %capi_manage_staff_name%\b0 .\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\fs24 Select EA to assign to \b %capi_manage_staff_name%\b0 .\par
+EN=}
 
 [QUESTION]
 Field=PSC_MENU_DICT.INTERVIEWER_MENU
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\cf1\fs24 You are logged in as Interviewer \b %capi_staff_name%\b0 . You are working in \b %capi_province_name%\b0  province / \b %capi_district_name%\b0  district / \b %capi_ea_name%\b0 . \par
-ENG=\par
-ENG=\b Household Status: %capi_household_complete_count%\b0  completed households. \b %capi_household_partial_count%\b0  partially completed households.\par
-ENG=\par
-ENG=Select applicable option.\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\fs24 You are logged in as Interviewer \b %capi_staff_name%\b0 . You are working in \b %capi_province_name%\b0  province / \b %capi_district_name%\b0  district / \b %capi_ea_name%\b0 . \par
+EN=\par
+EN=\b Household Status: %capi_household_complete_count%\b0  completed households. \b %capi_household_partial_count%\b0  partially completed households.\par
+EN=\par
+EN=Select applicable option.\par
+EN=}
 
 [QUESTION]
 Field=PSC_MENU_DICT.LOGIN
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\cf1\fs24 Welcome to Popstan Census data collection application (version %capi_publish_date%).\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\fs24 Welcome to Popstan Census data collection application (version %capi_publish_date%).\par
+EN=}
 
 [QUESTION]
 Field=PSC_MENU_DICT.MANAGE_STAFF
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.10240}\viewkind4\uc1
-ENG=\pard\cf1\fs24 Select staff to manage or add new interviewer.\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.10240}\viewkind4\uc1
+EN=\pard\cf1\fs24 Select staff to manage or add new interviewer.\par
+EN=}
 
 [QUESTION]
 Field=PSC_MENU_DICT.MANAGE_STAFF_MEMBER
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\cf1\fs24 You are managing information about \b %capi_manage_staff_name%\b0 .\par
-ENG=\par
-ENG=Select applicable option.\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\fs24 You are managing information about \b %capi_manage_staff_name%\b0 .\par
+EN=\par
+EN=Select applicable option.\par
+EN=}
 
 [QUESTION]
 Field=PSC_MENU_DICT.MANAGE_STAFF_NAME
 Condition=MANAGE_STAFF_NAME <> ""
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\cf1\fs24 Edit the name of \b %capi_manage_staff_name%\b0 .\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\fs24 Edit the name of \b %capi_manage_staff_name%\b0 .\par
+EN=}
 
 [QUESTION]
 Field=PSC_MENU_DICT.MANAGE_STAFF_NAME
 Condition=MANAGE_STAFF_NAME = ""
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.10240}\viewkind4\uc1
-ENG=\pard\cf1\fs24 Enter name of a new interviewer.\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.10240}\viewkind4\uc1
+EN=\pard\cf1\fs24 Enter name of a new interviewer.\par
+EN=}
 
 [QUESTION]
 Field=PSC_MENU_DICT.PIN_CODE_CONFIRMATION
 Condition=PIN_CODE <> notappl
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\cf1\fs24 You are logged in as \b %capi_staff_name%\b0 .\par
-ENG=\par
-ENG=Please enter your pin code.\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\fs24 You are logged in as \b %capi_staff_name%\b0 .\par
+EN=\par
+EN=Please enter your pin code.\par
+EN=}
 
 [QUESTION]
 Field=PSC_MENU_DICT.PIN_CODE_CONFIRMATION
 Condition=PIN_CODE = notappl
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\cf1\fs24 You are logged in as \b %capi_staff_name%\b0 .\par
-ENG=\par
-ENG=Please create your pin code. \par
-ENG=\par
-ENG=A pin code is a four digit number that enables you to log into the Popstan Census data collection application. It is recommended to choose a number which you can easily remember and the code should be kept secret.\par
-ENG=\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\fs24 You are logged in as \b %capi_staff_name%\b0 .\par
+EN=\par
+EN=Please create your pin code. \par
+EN=\par
+EN=A pin code is a four digit number that enables you to log into the Popstan Census data collection application. It is recommended to choose a number which you can easily remember and the code should be kept secret.\par
+EN=\par
+EN=}
 
 [QUESTION]
 Field=PSC_MENU_DICT.SUPERVISOR_ACCESS_PASSWORD
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\cf1\fs24 Please enter supervisor password you received from headquarters.\par
-ENG=\par
-ENG=\cf2 For demonstration purposes use password 1234.\cf1\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\fs24 Please enter supervisor password you received from headquarters.\par
+EN=\par
+EN=\cf2 For demonstration purposes use password 1234.\cf1\par
+EN=}
 
 [QUESTION]
 Field=PSC_MENU_DICT.SUPERVISOR_DISTRICT
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\cf1\fs24 Select district of your assignment in \b %capi_province_name%\b0  province.\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\fs24 Select district of your assignment in \b %capi_province_name%\b0  province.\par
+EN=}
 
 [QUESTION]
 Field=PSC_MENU_DICT.SUPERVISOR_MENU
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\cf1\fs24 You are logged in as Supervisor \b %capi_staff_name%\b0 . You are working in \b %capi_province_name%\b0  province / \b %capi_district_name%\b0  district.\par
-ENG=\par
-ENG=\b EA Status:\b0  \b %capi_ea_assigned_count%\b0  assigned EAs.\par
-ENG=\par
-ENG=Select applicable option.\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\fs24 You are logged in as Supervisor \b %capi_staff_name%\b0 . You are working in \b %capi_province_name%\b0  province / \b %capi_district_name%\b0  district.\par
+EN=\par
+EN=\b EA Status:\b0  \b %capi_ea_assigned_count%\b0  assigned EAs.\par
+EN=\par
+EN=Select applicable option.\par
+EN=}
 
 [QUESTION]
 Field=PSC_MENU_DICT.SUPERVISOR_NAME
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\cf1\fs24 Please enter your full name.\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\fs24 Please enter your full name.\par
+EN=}
 
 [QUESTION]
 Field=PSC_MENU_DICT.SUPERVISOR_PIN_CODE
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\cf1\fs24 Please create your pin code. \par
-ENG=\par
-ENG=A pin code is a four digit number that enables you to log into the Popstan Census data collection application. It is recommended to choose a number which you can easily remember and the code should be kept secret.\par
-ENG=\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\fs24 Please create your pin code. \par
+EN=\par
+EN=A pin code is a four digit number that enables you to log into the Popstan Census data collection application. It is recommended to choose a number which you can easily remember and the code should be kept secret.\par
+EN=\par
+EN=}
 
 [QUESTION]
 Field=PSC_MENU_DICT.SUPERVISOR_PROVINCE
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\cf1\fs24 Select province of your assignment.\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\fs24 Select province of your assignment.\par
+EN=}
 
 [QUESTION]
 Field=PSC_MENU_DICT.VIEW_ALL_HOUSEHOLDS
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-ENG=\pard\cf1\fs24 Select the household you want to work on.\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
+EN=\pard\cf1\fs24 Select the household you want to work on.\par
+EN=}
 

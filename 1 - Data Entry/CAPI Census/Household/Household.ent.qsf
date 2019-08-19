@@ -2,347 +2,347 @@
 Version=CSPro 7.3
 
 [LANGUAGES]
-ENG=English
+EN=English
 
 [QUESTION]
 Field=PSC_HOUSEHOLD_DICT.HH_AGE
 Occurrences=1:35
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-ENG={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-ENG=\pard\cf1\fs24 How old was %HH_NAME% at %CapiPopulationHisHer% last birthday?\par
-ENG=\par
-ENG=\cf2 Ask and record the age of each household member in completed years (0 for children less than one year old).\par
-ENG=\par
-ENG=If age is not known enter 999.\cf1\f1\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
+EN=\pard\cf1\fs24 How old was %HH_NAME% at %CapiPopulationHisHer% last birthday?\par
+EN=\par
+EN=\cf2 Ask and record the age of each household member in completed years (0 for children less than one year old).\par
+EN=\par
+EN=If age is not known enter 999.\cf1\f1\par
+EN=}
 
 [QUESTION]
 Field=PSC_HOUSEHOLD_DICT.HH_BOYS_EVER_BORN
 Occurrences=1:35
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\cf1\fs24 How many boys were born alive to %HH_NAME%?\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\fs24 How many boys were born alive to %HH_NAME%?\par
+EN=}
 
 [QUESTION]
 Field=PSC_HOUSEHOLD_DICT.HH_BOYS_STILL_ALIVE
 Occurrences=1:35
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\cf1\fs24 Among these, how many boys are still alive?\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\fs24 Among these, how many boys are still alive?\par
+EN=}
 
 [QUESTION]
 Field=PSC_HOUSEHOLD_DICT.HH_CHILDREN_EVER_BORN
 Occurrences=1:35
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\cf1\fs24 How many children were born alive to %HH_NAME%?\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\fs24 How many children were born alive to %HH_NAME%?\par
+EN=}
 
 [QUESTION]
 Field=PSC_HOUSEHOLD_DICT.HH_CITIZENSHIP
 Occurrences=1:35
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\cf1\fs24 Is %HH_NAME% a citizen of Popstan?\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\fs24 Is %HH_NAME% a citizen of Popstan?\par
+EN=}
 
 [QUESTION]
 Field=PSC_HOUSEHOLD_DICT.HH_CONCLUSION
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\cf1\f0\fs24 You have reached the end of the interview. You can conclude the interview or review previous sections.\cf2\f1\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\f0\fs24 You have reached the end of the interview. You can conclude the interview or review previous sections.\cf2\f1\par
+EN=}
 
 [QUESTION]
 Field=PSC_HOUSEHOLD_DICT.HH_COOKING_SOURCE
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\cf1\fs24 What is the source of energy the household mainly uses for cooking?\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\fs24 What is the source of energy the household mainly uses for cooking?\par
+EN=}
 
 [QUESTION]
 Field=PSC_HOUSEHOLD_DICT.HH_DWELLING_SECTION
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\cf1\b\f0\fs23 DWELLING CHARACTERISTICS SECTION\b0\par
-ENG=The dwelling characteristics section will be about the characteristcs of this dwelling unit.\par
-ENG=\f1\fs24\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\b\f0\fs23 DWELLING CHARACTERISTICS SECTION\b0\par
+EN=The dwelling characteristics section will be about the characteristcs of this dwelling unit.\par
+EN=\f1\fs24\par
+EN=}
 
 [QUESTION]
 Field=PSC_HOUSEHOLD_DICT.HH_EDUCATION
 Occurrences=1:35
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\cf1\fs24 What is the highest level of education %HH_NAME% has completed?\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\fs24 What is the highest level of education %HH_NAME% has completed?\par
+EN=}
 
 [QUESTION]
 Field=PSC_HOUSEHOLD_DICT.HH_FLOOR
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\cf1\fs24 What is the primary material used for the floor?\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\fs24 What is the primary material used for the floor?\par
+EN=}
 
 [QUESTION]
 Field=PSC_HOUSEHOLD_DICT.HH_GIRLS_EVER_BORN
 Occurrences=1:35
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\cf1\fs24 How many girls were born alive to %HH_NAME%?\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\fs24 How many girls were born alive to %HH_NAME%?\par
+EN=}
 
 [QUESTION]
 Field=PSC_HOUSEHOLD_DICT.HH_GIRLS_STILL_ALIVE
 Occurrences=1:35
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\cf1\fs24 Among these, how many girls are still alive?\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\fs24 Among these, how many girls are still alive?\par
+EN=}
 
 [QUESTION]
 Field=PSC_HOUSEHOLD_DICT.HH_GPS_READING
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\cf1\fs24 %capi_gps_reading%\par
-ENG=\par
-ENG=GPS data: \b %capi_gps_data_status%\par
-ENG=\b0 %capi_gps_accuracy_status_label% \b %capi_gps_accuracy_status%\f1\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\fs24 %capi_gps_reading%\par
+EN=\par
+EN=GPS data: \b %capi_gps_data_status%\par
+EN=\b0 %capi_gps_accuracy_status_label% \b %capi_gps_accuracy_status%\f1\par
+EN=}
 
 [QUESTION]
 Field=PSC_HOUSEHOLD_DICT.HH_INTERNET
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\cf1\fs24 Does this household have regular access to the Internet?\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\fs24 Does this household have regular access to the Internet?\par
+EN=}
 
 [QUESTION]
 Field=PSC_HOUSEHOLD_DICT.HH_INTRODUCTION
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\widctlpar\sl276\slmult1\cf1\b\f0\fs24 %capi_province_name% / %capi_district_name% / %capi_ea_name% / %capi_household_name%\par
-ENG=\b0\par
-ENG=Hello, my name is %capi_staff_name%. I am working with Popstan Statistics and we are conducting the Popstan Census.\par
-ENG=\par
-ENG=All the answers you give will be confidential and will not be shared with anyone other than members of the technical team for the Popstan Census. Taking part in the census is the responsibility of every citizen and we will be glad if you agree to answer the questions.\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\widctlpar\sl276\slmult1\cf1\b\f0\fs24 %capi_province_name% / %capi_district_name% / %capi_ea_name% / %capi_household_name%\par
+EN=\b0\par
+EN=Hello, my name is %capi_staff_name%. I am working with Popstan Statistics and we are conducting the Popstan Census.\par
+EN=\par
+EN=All the answers you give will be confidential and will not be shared with anyone other than members of the technical team for the Popstan Census. Taking part in the census is the responsibility of every citizen and we will be glad if you agree to answer the questions.\par
+EN=}
 
 [QUESTION]
 Field=PSC_HOUSEHOLD_DICT.HH_KEEP_ROW
 Occurrences=1:35
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\cf1\f0\fs24 Do you want to keep or delete this row of population information?\cf2\b\fs23\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\f0\fs24 Do you want to keep or delete this row of population information?\cf2\b\fs23\par
+EN=}
 
 [QUESTION]
 Field=PSC_HOUSEHOLD_DICT.HH_LIGHTING_SOURCE
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\cf1\fs24 What is the source of energy the household mainly uses for lighting?\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\fs24 What is the source of energy the household mainly uses for lighting?\par
+EN=}
 
 [QUESTION]
 Field=PSC_HOUSEHOLD_DICT.HH_LITERACY
 Occurrences=1:35
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\cf1\f0\fs24 Can %HH_NAME% read and write a simple sentence in any language?\f1\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\f0\fs24 Can %HH_NAME% read and write a simple sentence in any language?\f1\par
+EN=}
 
 [QUESTION]
 Field=PSC_HOUSEHOLD_DICT.HH_MARITAL_AGE
 Occurrences=1:35
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\cf1\fs24 How old was %HH_NAME% when %CapiPopulationHeShe% first got married?\par
-ENG=\par
-ENG=\cf2 If age at first marriage is not known enter 999.\cf1\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\fs24 How old was %HH_NAME% when %CapiPopulationHeShe% first got married?\par
+EN=\par
+EN=\cf2 If age at first marriage is not known enter 999.\cf1\par
+EN=}
 
 [QUESTION]
 Field=PSC_HOUSEHOLD_DICT.HH_MARITAL_STATUS
 Occurrences=1:35
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;\red51\green51\blue51;}
-ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\cf1\fs24 What is %HH_NAME%'s marital status?\cf2\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;\red51\green51\blue51;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\fs24 What is %HH_NAME%'s marital status?\cf2\par
+EN=}
 
 [QUESTION]
 Field=PSC_HOUSEHOLD_DICT.HH_MONTH_BORN
 Occurrences=1:35
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\cf1\fs24 In what month was %HH_NAME% born?\par
-ENG=\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\fs24 In what month was %HH_NAME% born?\par
+EN=\par
+EN=}
 
 [QUESTION]
 Field=PSC_HOUSEHOLD_DICT.HH_MORE_ROWS
 Occurrences=1:35
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\cf1\fs24 You have listed %capi_number_of_persons% person(s):\par
-ENG=\par
-ENG=\b Name, Sex\b0\par
-ENG=\b %capi_household_name_sex%\b0\par
-ENG=Is there anyone else in this household?\par
-ENG=\par
-ENG=Any (other) children? Relatives? Anyone not related to you? Or any visitors who spent the night?\par
-ENG=\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\fs24 You have listed %capi_number_of_persons% person(s):\par
+EN=\par
+EN=\b Name, Sex\b0\par
+EN=\b %capi_household_name_sex%\b0\par
+EN=Is there anyone else in this household?\par
+EN=\par
+EN=Any (other) children? Relatives? Anyone not related to you? Or any visitors who spent the night?\par
+EN=\par
+EN=}
 
 [QUESTION]
 Field=PSC_HOUSEHOLD_DICT.HH_NAME
 Occurrences=1:1
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\widctlpar\cf1\f0\fs24 Can you please give the names of the persons who usually live in this household and visitors of the household who stayed here last night, starting with the head of the household. \par
-ENG=\par
-ENG=Who is the head of household?\par
-ENG=\par
-ENG=\cf2\f1 Enter first name then last name.\cf1\f0\par
-ENG=
-ENG=\pard\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\widctlpar\cf1\f0\fs24 Can you please give the names of the persons who usually live in this household and visitors of the household who stayed here last night, starting with the head of the household. \par
+EN=\par
+EN=Who is the head of household?\par
+EN=\par
+EN=\cf2\f1 Enter first name then last name.\cf1\f0\par
+EN=
+EN=\pard\par
+EN=}
 
 [QUESTION]
 Field=PSC_HOUSEHOLD_DICT.HH_NAME
 Occurrences=2:35
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\cf1\fs24 Enter the name of the person.\par
-ENG=\par
-ENG=\cf2 Enter first name then last name.\i\par
-ENG=\cf1\i0\f1\fs22\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\fs24 Enter the name of the person.\par
+EN=\par
+EN=\cf2 Enter first name then last name.\i\par
+EN=\cf1\i0\f1\fs22\par
+EN=}
 
 [QUESTION]
 Field=PSC_HOUSEHOLD_DICT.HH_POPULATION_SECTION
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\cf1\b\f0\fs24 POPULATION SECTION\b0\par
-ENG=The population section will be about the people that usually spend their time in this household as well as visitors.\f1\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\b\f0\fs24 POPULATION SECTION\b0\par
+EN=The population section will be about the people that usually spend their time in this household as well as visitors.\f1\par
+EN=}
 
 [QUESTION]
 Field=PSC_HOUSEHOLD_DICT.HH_RELATIONSHIP
 Occurrences=1:35
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;\red128\green0\blue255;}
-ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\cf1\fs24 What is %HH_NAME%'s relationship to the head of the household, %CapiHeadName%?\par
-ENG=\par
-ENG=\cf2 Refer the relationship of any member of the household to the HEAD of that household.\cf3\i\par
-ENG=\cf1\i0\fs22\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;\red128\green0\blue255;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\fs24 What is %HH_NAME%'s relationship to the head of the household, %CapiHeadName%?\par
+EN=\par
+EN=\cf2 Refer the relationship of any member of the household to the HEAD of that household.\cf3\i\par
+EN=\cf1\i0\fs22\par
+EN=}
 
 [QUESTION]
 Field=PSC_HOUSEHOLD_DICT.HH_RESIDENCE_SITUATION
 Occurrences=1:35
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\cf1\fs24 Is %HH_NAME% a present resident, absent resident, or visitor?\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\fs24 Is %HH_NAME% a present resident, absent resident, or visitor?\par
+EN=}
 
 [QUESTION]
 Field=PSC_HOUSEHOLD_DICT.HH_ROOF
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\cf1\fs24 What is the primary material used for the roof?\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\fs24 What is the primary material used for the roof?\par
+EN=}
 
 [QUESTION]
 Field=PSC_HOUSEHOLD_DICT.HH_SEX
 Occurrences=1:35
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;\red128\green0\blue255;}
-ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\cf1\fs24 Is %HH_NAME% male or female?\par
-ENG=\par
-ENG=\cf2 Be careful to get the sex of young children right - ask, do not guess. Always confirm or verify the sex of a person against their name.\cf3\par
-ENG=\cf1\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;\red128\green0\blue255;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\fs24 Is %HH_NAME% male or female?\par
+EN=\par
+EN=\cf2 Be careful to get the sex of young children right - ask, do not guess. Always confirm or verify the sex of a person against their name.\cf3\par
+EN=\cf1\par
+EN=}
 
 [QUESTION]
 Field=PSC_HOUSEHOLD_DICT.HH_TENURE
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\cf1\fs24 Is this dwelling unit owned, rented, or is there another arrangement?\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\fs24 Is this dwelling unit owned, rented, or is there another arrangement?\par
+EN=}
 
 [QUESTION]
 Field=PSC_HOUSEHOLD_DICT.HH_TOILET
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\cf1\fs24 What kind of toilet facility do members of your household usually use?\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\fs24 What kind of toilet facility do members of your household usually use?\par
+EN=}
 
 [QUESTION]
 Field=PSC_HOUSEHOLD_DICT.HH_WALL
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\cf1\fs24 What is the primary material used for the wall?\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\fs24 What is the primary material used for the wall?\par
+EN=}
 
 [QUESTION]
 Field=PSC_HOUSEHOLD_DICT.HH_WATER_SOURCE
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\cf1\fs24 What is the main source of drinking water for members of the household?\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\fs24 What is the main source of drinking water for members of the household?\par
+EN=}
 
 [QUESTION]
 Field=PSC_HOUSEHOLD_DICT.HH_WORK_STATUS
 Occurrences=1:35
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red51\green51\blue51;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\cf1\fs24 Aside from %CapiPopulationHisHer% own housework, did \cf2 %HH_NAME%\cf1  work for at least an hour for pay or gain during the last 7 days?\cf2\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red51\green51\blue51;\red0\green0\blue0;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\fs24 Aside from %CapiPopulationHisHer% own housework, did \cf2 %HH_NAME%\cf1  work for at least an hour for pay or gain during the last 7 days?\cf2\par
+EN=}
 
 [QUESTION]
 Field=PSC_HOUSEHOLD_DICT.HH_YEAR_BORN
 Occurrences=1:35
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-ENG={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-ENG=\pard\cf1\fs24 In what year was %HH_NAME% born?\par
-ENG=\par
-ENG=\cf2 If year is not known enter 9999.\cf1\fs22\par
-ENG=}
+EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
+EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
+EN=\pard\cf1\fs24 In what year was %HH_NAME% born?\par
+EN=\par
+EN=\cf2 If year is not known enter 9999.\cf1\fs22\par
+EN=}
 
