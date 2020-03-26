@@ -1,11 +1,11 @@
-﻿[Area Names]			
-Version=CSPro 7.3			
+﻿[Area Names]
+Version=CSPro 7.4
 
-[Levels]			
-Name=Province			
-Name=District			
+[Levels]
+Name=Province
+Name=District
 
-[Areas]			
+[Areas]
 X	X	=	Popstan
 1	X	=	Artesia
 1	1	=	Dongo
