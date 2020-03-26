@@ -7,6 +7,7 @@ RecordTypeLen=0
 Positions=Relative
 ZeroFill=No
 DecimalChar=Yes
+SecurityOptions=59923825320A0EAF170101346D10DDDCDD2793C5CB8580363C8E0CB851FB6A7E
 
 [Level]
 Label=industry questionnaire

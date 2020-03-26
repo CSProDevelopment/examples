@@ -7,6 +7,7 @@ RecordTypeLen=0
 Positions=Relative
 ZeroFill=No
 DecimalChar=Yes
+SecurityOptions=ECEE78D7A06EA8B42F044264C529397202FCDB2E3C6A6155E7BBAEE3408D583D
 
 [Level]
 Label=Status questionnaire

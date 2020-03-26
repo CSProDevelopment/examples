@@ -7,6 +7,7 @@ RecordTypeLen=1
 Positions=Relative
 ZeroFill=No
 DecimalChar=Yes
+SecurityOptions=54647135B66715572E86A621824245DFC2B63F40346CD67027A14CA9C22EBB24F0D2940CF1DFB297082B19FE295A381C
 
 [Level]
 Label=Update Example Files Level

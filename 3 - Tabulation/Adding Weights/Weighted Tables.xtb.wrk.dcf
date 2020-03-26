@@ -7,6 +7,7 @@ RecordTypeLen=1
 Positions=Relative
 ZeroFill=No
 DecimalChar=Yes
+SecurityOptions=1B9801CA33C30E6021F1E9DD3769D36C1391E68D823FEA3F7BE004C03DCBC10460001072E8B077C6C9A41E5FF442A6FD
 
 [Level]
 Label=Weighted Tables_wrk questionnaire

@@ -7,6 +7,7 @@ RecordTypeLen=1
 Positions=Relative
 ZeroFill=Yes
 DecimalChar=Yes
+SecurityOptions=8F029E977C6DBFE6BC28DCD74FB6109CBB946E478B1789F4ADCC4DEAB160DFE6
 
 [Level]
 Label=Staff Level

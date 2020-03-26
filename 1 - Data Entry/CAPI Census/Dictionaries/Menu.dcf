@@ -7,6 +7,7 @@ RecordTypeLen=1
 Positions=Relative
 ZeroFill=Yes
 DecimalChar=Yes
+SecurityOptions=3612C11AF3D8F375AE4F943A823C79E7F85C568FEE4AC0745DA8947D0A0BF2EC
 
 [Level]
 Label=Menu Level

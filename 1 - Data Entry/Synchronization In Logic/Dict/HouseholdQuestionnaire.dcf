@@ -7,6 +7,7 @@ RecordTypeLen=1
 Positions=Relative
 ZeroFill=No
 DecimalChar=Yes
+SecurityOptions=4EE521943AD34196F084F3BB4962A56B9D1E199FCA2A4D490221CC69431AF8AB63FF6A70F5B15500B155B4156B0DDBF7
 
 [Level]
 Label=HouseholdQuestionnaire questionnaire
@@ -28,22 +29,22 @@ MaxRecords=30
 RecordLen=60
 
 [Item]
-Label=Names|ስም
+Label=Names
 Name=NAMES
 Start=5
 Len=50
 DataType=Alpha
 
 [Item]
-Label=Relationship|ግንኙነት
+Label=Relationship
 Name=RELATIONSHIP
 Start=55
 Len=2
 
 [ValueSet]
-Label=Relationship|ግንኙነት
+Label=Relationship
 Name=RELATIONSHIP_VS1
-Value=1;Head|ኃላፊ
+Value=1;Head
 Value=2;Spouse
 Value=3;Son/daugher
 Value=4;Parent/in-law
@@ -54,37 +55,37 @@ Value=8;Other relative
 Value=9;Non-relative
 
 [Item]
-Label=Sex|ፆታ
+Label=Sex
 Name=SEX
 Start=57
 Len=1
 
 [ValueSet]
-Label=Sex|ፆታ
+Label=Sex
 Name=SEX_VS1
-Value=1;Male|ወንድ
-Value=2;Female|ሴት
+Value=1;Male
+Value=2;Female
 
 [Item]
-Label=Age|ዕድሜ
+Label=Age
 Name=AGE
 Start=58
 Len=2
 
 [ValueSet]
-Label=Age|ዕድሜ
+Label=Age
 Name=AGE_VS1
 Value=0:98;0-98
 Value=99;99+
 
 [Item]
-Label=More people|ተጨማሪ ሰዎች
+Label=More people
 Name=MORE_PEOPLE
 Start=60
 Len=1
 
 [ValueSet]
-Label=More people|ተጨማሪ ሰዎች
+Label=More people
 Name=MORE_PEOPLE_VS1
 Value=1;Yes
 Value=2;No

@@ -7,6 +7,7 @@ RecordTypeLen=1
 Positions=Relative
 ZeroFill=Yes
 DecimalChar=Yes
+SecurityOptions=1BDC092E86AA0E9ECD4778FEE48A5532A3C6EA0EEB1401F47165726C81FC88CB
 
 [Level]
 Label=Household Questionnaire

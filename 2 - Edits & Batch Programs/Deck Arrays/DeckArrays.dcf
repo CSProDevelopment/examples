@@ -7,6 +7,7 @@ RecordTypeLen=1
 Positions=Relative
 ZeroFill=Yes
 DecimalChar=Yes
+SecurityOptions=C609A2A748CABD32D8D00EDAE4186E85B5BB02E155B83C474DEDE6355C22C298
 
 [Level]
 Label=DeckArrays Example

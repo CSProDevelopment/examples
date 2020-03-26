@@ -7,6 +7,7 @@ RecordTypeLen=0
 Positions=Absolute
 ZeroFill=No
 DecimalChar=Yes
+SecurityOptions=024335E5344844FB70B6A81437A5B5028E9F6F8D840C38767F5D2F250572F53A
 
 [Level]
 Label=Area questionnaire

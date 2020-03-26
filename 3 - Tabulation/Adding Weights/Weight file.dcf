@@ -7,6 +7,7 @@ RecordTypeLen=0
 Positions=Relative
 ZeroFill=No
 DecimalChar=Yes
+SecurityOptions=883DB7E54F934375B0C8FDB9FC0AC5D825672D0ADEDF577AA465DEE5850B976C
 
 [Level]
 Label=Weight file questionnaire

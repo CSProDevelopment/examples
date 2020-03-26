@@ -7,6 +7,7 @@ RecordTypeLen=1
 Positions=Relative
 ZeroFill=Yes
 DecimalChar=Yes
+SecurityOptions=355063393FC89406FFD3773DF8F6C6A8C9E732B93962BF0A15A54B3B60FDD5C2
 
 [Level]
 Label=Assignments Level

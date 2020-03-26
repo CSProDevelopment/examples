@@ -7,6 +7,7 @@ RecordTypeLen=1
 Positions=Relative
 ZeroFill=Yes
 DecimalChar=No
+SecurityOptions=650B7EC9F68293613A02B565F7EA11BBA9CF23A715AAFB637C90BE33FEBBE4ED
 
 [Level]
 Label=Questionnaire

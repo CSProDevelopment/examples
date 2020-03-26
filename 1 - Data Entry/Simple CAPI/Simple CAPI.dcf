@@ -7,6 +7,7 @@ RecordTypeLen=1
 Positions=Relative
 ZeroFill=Yes
 DecimalChar=Yes
+SecurityOptions=1A00824829263FF09EA2030C618CEBD69ED8D98D06815DC548A177EC610CCADC
 
 [Level]
 Label=Simple CAPI Level
