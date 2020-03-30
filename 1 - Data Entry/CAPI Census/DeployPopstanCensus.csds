@@ -17,15 +17,19 @@
       "path": ".\\Household\\Household.pff"
     },
     {
+      "onlyOnFirstInstall": true,
       "path": ".\\Data\\Geocodes.csdb"
     },
     {
+      "onlyOnFirstInstall": true,
       "path": ".\\Data\\Assignments.csdb"
     },
     {
+      "onlyOnFirstInstall": true,
       "path": ".\\Data\\Household.csdb"
     },
     {
+      "onlyOnFirstInstall": true,
       "path": ".\\Data\\Staff.csdb"
     }
   ],
