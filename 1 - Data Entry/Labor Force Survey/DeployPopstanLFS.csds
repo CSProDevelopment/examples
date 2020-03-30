@@ -17,9 +17,11 @@
       "path": ".\\Questionnaire\\PopstanLFS.pff"
     },
     {
+      "onlyOnFirstInstall": true,
       "path": ".\\Menu\\Sample.csdb"
     },
     {
+      "onlyOnFirstInstall": true,
       "path": ".\\Menu\\Staff.csdb"
     }
   ],
