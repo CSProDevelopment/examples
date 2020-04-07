@@ -683,7 +683,7 @@ Label=Children Born Last Year
 Name=P20_BORN12_W_PER1000_VS2
 Value=0:9;Children Born Last Year
 Value=' ';per 1000 women
-Name=DEFAULT,Special
+Name=NOTAPPL,Special
 
 [Record]
 Label=Housing Record

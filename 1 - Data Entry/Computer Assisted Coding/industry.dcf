@@ -1,6 +1,6 @@
 ﻿[Dictionary]
 Version=CSPro 7.4
-Label=industry
+Label=Industry
 Name=INDUSTRY_DICT
 RecordTypeStart=0
 RecordTypeLen=0
@@ -10,26 +10,26 @@ DecimalChar=Yes
 SecurityOptions=59923825320A0EAF170101346D10DDDCDD2793C5CB8580363C8E0CB851FB6A7E
 
 [Level]
-Label=industry questionnaire
+Label=Industry questionnaire
 Name=INDUSTRY_QUEST
 
 [IdItems]
 
 [Item]
-Label=industry identification
+Label=Industry identification
 Name=INDID
 Start=1
 Len=3
 ZeroFill=Yes
 
 [Record]
-Label=industry record
+Label=Industry record
 Name=INDUSTRY_REC
 RecordTypeValue=''
 RecordLen=78
 
 [Item]
-Label=list of industries
+Label=List of industries
 Name=INDTXT
 Start=4
 Len=75

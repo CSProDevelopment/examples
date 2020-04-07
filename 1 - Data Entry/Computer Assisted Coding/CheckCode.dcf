@@ -108,8 +108,8 @@ ZeroFill=Yes
 Label=Line number
 Name=LINE_VS1
 Value=1:30
-Value='  ';missing
-Name=MISSING,Special
+Value='  ';Missing
+Name=NOTAPPL,Special
 
 [Item]
 Label=Relationship
@@ -182,7 +182,7 @@ Value=90:92;Construction Trades
 Value=95;Other
 Value=999;Not Reported
 Value='   ';Missing
-Name=MISSING,Special
+Name=NOTAPPL,Special
 
 [Item]
 Label=Industry
@@ -233,4 +233,4 @@ Value=95;Personal HHold
 Value=98;Other
 Value=999;Not Reported
 Value='   ';Missing
-Name=MISSING,Special
+Name=NOTAPPL,Special
