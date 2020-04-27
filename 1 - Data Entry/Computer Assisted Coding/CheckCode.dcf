@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.3
+Version=CSPro 7.4
 Label=Check Code Example
 Name=CEN2000
 RecordTypeStart=1
@@ -7,6 +7,7 @@ RecordTypeLen=1
 Positions=Relative
 ZeroFill=Yes
 DecimalChar=No
+SecurityOptions=6C39B9D7FE18D85550901E311AAE96393625477B901A3278476A4041A6BD408B
 
 [Level]
 Label=Questionnaire
@@ -107,8 +108,8 @@ ZeroFill=Yes
 Label=Line number
 Name=LINE_VS1
 Value=1:30
-Value='  ';missing
-Name=MISSING,Special
+Value='  ';Missing
+Name=NOTAPPL,Special
 
 [Item]
 Label=Relationship
@@ -181,7 +182,7 @@ Value=90:92;Construction Trades
 Value=95;Other
 Value=999;Not Reported
 Value='   ';Missing
-Name=MISSING,Special
+Name=NOTAPPL,Special
 
 [Item]
 Label=Industry
@@ -232,4 +233,4 @@ Value=95;Personal HHold
 Value=98;Other
 Value=999;Not Reported
 Value='   ';Missing
-Name=MISSING,Special
+Name=NOTAPPL,Special

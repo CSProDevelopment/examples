@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.3
+Version=CSPro 7.4
 Label=PostcalcExample - Working Storage Dictionary
 Name=WS_DICT
 RecordTypeStart=1
@@ -7,6 +7,7 @@ RecordTypeLen=1
 Positions=Relative
 ZeroFill=No
 DecimalChar=Yes
+SecurityOptions=3ECC60F56C442DE7547B22E511BD2CE9BC5C955E888B4943713B141063A4C8CD
 
 [Level]
 Label=Working Storage Level

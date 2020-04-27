@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.3
+Version=CSPro 7.4
 Label=LogFile
 Name=LOGFILE_DICT
 RecordTypeStart=0
@@ -7,6 +7,7 @@ RecordTypeLen=0
 Positions=Absolute
 ZeroFill=No
 DecimalChar=Yes
+SecurityOptions=934FD83835ABC2F717FAD4431B09CC05C18E7D73F5609B7DD3723D5A20F32831
 
 [Level]
 Label=Log

@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.3
+Version=CSPro 7.4
 Label=DeckArrays
 Name=DECKARRAYS_DICT
 RecordTypeStart=1
@@ -7,6 +7,7 @@ RecordTypeLen=1
 Positions=Relative
 ZeroFill=Yes
 DecimalChar=Yes
+SecurityOptions=C609A2A748CABD32D8D00EDAE4186E85B5BB02E155B83C474DEDE6355C22C298
 
 [Level]
 Label=DeckArrays Example

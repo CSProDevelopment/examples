@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.3
+Version=CSPro 7.4
 Label=Popstan Census
 Name=CEN2000
 RecordTypeStart=1
@@ -7,6 +7,7 @@ RecordTypeLen=1
 Positions=Relative
 ZeroFill=Yes
 DecimalChar=No
+SecurityOptions=6C39B9D7FE18D85550901E311AAE96393625477B901A3278476A4041A6BD408B
 
 [Level]
 Label=Questionnaire

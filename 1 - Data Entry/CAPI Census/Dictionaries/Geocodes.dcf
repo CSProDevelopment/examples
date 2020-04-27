@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.3
+Version=CSPro 7.4
 Label=Popstan Census Geocodes Dictionary
 Name=PSC_GEOCODES_DICT
 RecordTypeStart=0
@@ -7,6 +7,7 @@ RecordTypeLen=0
 Positions=Relative
 ZeroFill=Yes
 DecimalChar=Yes
+SecurityOptions=3861C55595CADADD3427B2220A56A34E4F81FE1CC4518B7EE95BC7915C4FFBF1
 
 [Level]
 Label=Geocodes Level

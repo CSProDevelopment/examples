@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.3
+Version=CSPro 7.4
 Label=SAMPLE Dictionary
 Name=SAMPLE_DICT
 RecordTypeStart=0
@@ -7,6 +7,7 @@ RecordTypeLen=0
 Positions=Relative
 ZeroFill=Yes
 DecimalChar=Yes
+SecurityOptions=6524F4EC205A2B0FFF4718247BA4E6280C83E70463411F72BD6D9CCDD547B219
 
 [Level]
 Label=SAMPLE Level

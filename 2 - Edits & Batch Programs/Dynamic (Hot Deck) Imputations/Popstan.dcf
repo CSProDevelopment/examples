@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.3
+Version=CSPro 7.4
 Label=Popstan 2000 Census
 Name=CEN2000
 RecordTypeStart=1
@@ -7,6 +7,7 @@ RecordTypeLen=1
 Positions=Relative
 ZeroFill=Yes
 DecimalChar=No
+SecurityOptions=6C39B9D7FE18D85550901E311AAE96393625477B901A3278476A4041A6BD408B
 
 [Level]
 Label=Questionnaire
@@ -19,12 +20,25 @@ Label=Province
 Name=PROVINCE
 Start=2
 Len=2
-DataType=Alpha
 
 [ValueSet]
 Label=Province
 Name=PROV_VS1
-Value='1 ' 'Va' '2 ' 'Va' '3 ' 'Va' '4 ' 'Va' '5 ' 'Va' '6 ' 'Va' '7 ' 'Va' '8 ' 'Va' '9 ' 'Va' 10 'Va' 11 'Va' 12 'Va' 13 'Va' 14 'Va' 15;Tumar
+Value=1;Artesia
+Value=2;Copal
+Value=3;Dari
+Value=4;Eris
+Value=5;Girda
+Value=6;Hali
+Value=7;Kerac
+Value=8;Lacuna
+Value=9;Laya
+Value=10;Lira
+Value=11;Matanga
+Value=12;Patan
+Value=13;Rift
+Value=14;Terra
+Value=15;Tumar
 
 [Item]
 Label=District
@@ -150,7 +164,7 @@ Value=5;Other relative
 Value=6;Nonrelative
 Value=9;Not Reported
 Value=' ';Missing
-Name=MISSING,Special
+Name=NOTAPPL,Special
 
 [Item]
 Label=Sex
@@ -164,8 +178,6 @@ Label=Sex
 Name=P03_SEX_VS1
 Value=1;Male
 Value=2;Female
-Value=' ';Not Applicable
-Name=NOTAPPL,Special
 
 [Item]
 Label=Age
@@ -245,8 +257,6 @@ Value=2;Divorced
 Value=3;Separated
 Value=4;Widowed
 Value=5;Never Married
-Value=' ';Default
-Name=DEFAULT,Special
 
 [Item]
 Label=Mother living
@@ -302,7 +312,7 @@ Value=70:74;Europe
 Value=80:84;Americas
 Value=0;Unknown
 Value='  ';Not Applicable
-Name=MISSING,Special
+Name=NOTAPPL,Special
 
 [Item]
 Label=Attending school
@@ -318,7 +328,7 @@ Value=1;Yes
 Value=2;No
 Value=9;Not Reported
 Value=' ';Not Applicable
-Name=MISSING,Special
+Name=NOTAPPL,Special
 
 [Item]
 Label=Highest grade completed
@@ -338,7 +348,7 @@ Value=13:30;University
 Value=31:36;Technical
 Value=99;Not Reported
 Value='  ';Not Applicable
-Name=MISSING,Special
+Name=NOTAPPL,Special
 
 [Item]
 Label=Literacy
@@ -354,7 +364,7 @@ Value=1;Literate
 Value=2;Illerate
 Value=9;Not Reported
 Value=' ';Not Applicable
-Name=MISSING,Special
+Name=NOTAPPL,Special
 
 [Item]
 Label=Working
@@ -370,7 +380,7 @@ Value=1;Yes
 Value=2;No
 Value=9;Not Reported
 Value=' ';Not Applicable
-Name=MISSING,Special
+Name=NOTAPPL,Special
 
 [Item]
 Label=Looking for work
@@ -386,7 +396,7 @@ Value=1;Yes
 Value=2;No
 Value=9;Not Reported
 Value=' ';Not Applicable
-Name=MISSING,Special
+Name=NOTAPPL,Special
 
 [Item]
 Label=Why not looking for work
@@ -406,7 +416,7 @@ Value=5;Going to school
 Value=6;Other
 Value=9;Not Reported
 Value=' ';Not Applicable
-Name=MISSING,Special
+Name=NOTAPPL,Special
 
 [Item]
 Label=Occupation
@@ -432,7 +442,7 @@ Value=90:92;Construction Trades
 Value=95;Other
 Value=99;Not Reported
 Value='  ';Not Applicable
-Name=MISSING,Special
+Name=NOTAPPL,Special
 
 [Item]
 Label=Occupation (major groups)
@@ -456,7 +466,7 @@ Value=7;Tradesmen/Craftsmen
 Value=8;Transportation
 Value=9;Construction, other, not reported
 Value=' ';Not Applicable
-Name=MISSING,Special
+Name=NOTAPPL,Special
 
 [Item]
 Label=Industry
@@ -506,7 +516,7 @@ Value=95;Personal HHold
 Value=98;Other
 Value=99;Not Reported
 Value='  ';Not Applicable
-Name=MISSING,Special
+Name=NOTAPPL,Special
 
 [Item]
 Label=Industry (major groups)
@@ -530,7 +540,7 @@ Value=7;Transport, Storage, Communication
 Value=8;Financing, Business Services
 Value=9;Public Administration and not reported
 Value=' ';Not Applicable
-Name=MISSING,Special
+Name=NOTAPPL,Special
 
 [Item]
 Label=Work Status
@@ -549,7 +559,7 @@ Value=4;Unpaid family worker
 Value=5;Other
 Value=9;Not Reported
 Value=' ';Not Applicable
-Name=MISSING,Special
+Name=NOTAPPL,Special
 
 [Item]
 Label=Economically active
@@ -565,7 +575,7 @@ Value=1;Yes
 Value=2;No
 Value=9;Not Reported
 Value=' ';Not Applicable
-Name=MISSING,Special
+Name=NOTAPPL,Special
 
 [Item]
 Label=Number of children born alive
@@ -590,7 +600,7 @@ Value=9;9
 Value=10:20;10+
 Value=99;Not Reported
 Value='  ';Not Applicable
-Name=MISSING,Special
+Name=NOTAPPL,Special
 
 [Item]
 Label=Number of children still living
@@ -615,7 +625,7 @@ Value=9;9
 Value=10:20;10+
 Value=99;Not Reported
 Value='  ';Not Applicable
-Name=MISSING,Special
+Name=NOTAPPL,Special
 
 [Item]
 Label=Number of children born in last 12 months
@@ -630,7 +640,7 @@ Name=P20_BORN12_VS1
 Value=0:3
 Value=9;Not Reported
 Value=' ';Not Applicable
-Name=MISSING,Special
+Name=NOTAPPL,Special
 
 [Record]
 Label=Housing Record
@@ -674,7 +684,7 @@ Value=5;Other
 Value=6;None
 Value=9;Not Reported
 Value=' ';Not Applicable
-Name=MISSING,Special
+Name=NOTAPPL,Special
 
 [Item]
 Label=Roof type
@@ -694,7 +704,7 @@ Value=5;Other
 Value=6;None
 Value=9;Not Reported
 Value=' ';Not Applicable
-Name=MISSING,Special
+Name=NOTAPPL,Special
 
 [Item]
 Label=Floor type
@@ -714,7 +724,7 @@ Value=5;Other
 Value=6;None
 Value=9;Not Reported
 Value=' ';Not Applicable
-Name=MISSING,Special
+Name=NOTAPPL,Special
 
 [Item]
 Label=Number of rooms
@@ -748,7 +758,7 @@ Value=19;19
 Value=20;20
 Value=99;Not reported
 Value='  ';Not applicable
-Name=MISSING,Special
+Name=NOTAPPL,Special
 
 [Item]
 Label=Tenure
@@ -766,7 +776,7 @@ Value=3;Rent free
 Value=4;Vacant
 Value=9;Not reported
 Value=' ';Not applicable
-Name=MISSING,Special
+Name=NOTAPPL,Special
 
 [Item]
 Label=Amount of rent paid
@@ -781,7 +791,7 @@ Name=H07_RENT_VS1
 Value=0:998
 Value=999;Not reported
 Value='   ';Not applicable
-Name=MISSING,Special
+Name=NOTAPPL,Special
 
 [Item]
 Label=Type of toilet facilities
@@ -801,7 +811,7 @@ Value=5;Other
 Value=6;None
 Value=9;Not reported
 Value=' ';Not applicable
-Name=MISSING,Special
+Name=NOTAPPL,Special
 
 [Item]
 Label=Type of bathing facilities
@@ -821,7 +831,7 @@ Value=5;Other
 Value=6;None
 Value=9;Not reported
 Value=' ';Not applicable
-Name=MISSING,Special
+Name=NOTAPPL,Special
 
 [Item]
 Label=Source of water
@@ -841,7 +851,7 @@ Value=5;Open well or spring
 Value=6;River/Stream/Other
 Value=9;Not reported
 Value=' ';Not applicable
-Name=MISSING,Special
+Name=NOTAPPL,Special
 
 [Item]
 Label=Fuel for lighting
@@ -861,7 +871,7 @@ Value=5;Other
 Value=6;None
 Value=9;Not reported
 Value=' ';Not applicable
-Name=MISSING,Special
+Name=NOTAPPL,Special
 
 [Item]
 Label=Fuel for cooking
@@ -882,7 +892,7 @@ Value=6;Other
 Value=7;None
 Value=9;Not reported
 Value=' ';Not applicable
-Name=MISSING,Special
+Name=NOTAPPL,Special
 
 [Item]
 Label=Number of persons in the household

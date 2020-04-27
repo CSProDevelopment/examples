@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.3
+Version=CSPro 7.4
 Label=PopstanLFS
 Name=POPSTANLFS_DICT
 RecordTypeStart=1
@@ -7,6 +7,7 @@ RecordTypeLen=1
 Positions=Relative
 ZeroFill=Yes
 DecimalChar=Yes
+SecurityOptions=8E8446434AC00A0E18BBBDA47C8F1ED3152FE762821E60CF3C3461C10F7DC6DE
 
 [Level]
 Label=PopstanLFS questionnaire

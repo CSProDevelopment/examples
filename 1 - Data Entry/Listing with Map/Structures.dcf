@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.3
+Version=CSPro 7.4
 Label=Structures
 Name=STRUCTURES_DICT
 RecordTypeStart=1
@@ -7,6 +7,7 @@ RecordTypeLen=1
 Positions=Relative
 ZeroFill=Yes
 DecimalChar=Yes
+SecurityOptions=A0488702868D20670A47F94D1A8DDD265748571F84F77573CB95992DE4B73198
 
 [Level]
 Label=Structures Level

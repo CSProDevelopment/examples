@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.3
+Version=CSPro 7.4
 Label=auxil
 Name=AUXIL_DICT
 RecordTypeStart=0
@@ -7,6 +7,7 @@ RecordTypeLen=0
 Positions=Relative
 ZeroFill=No
 DecimalChar=Yes
+SecurityOptions=C3ED33B4F8FA28756AB52ACA356939CFC23E6C33D154B72BA423B18BBE5528B1
 
 [Level]
 Label=auxil questionnaire

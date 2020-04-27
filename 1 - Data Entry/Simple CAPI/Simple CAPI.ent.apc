@@ -11,10 +11,6 @@ string headText;
 numeric headKnown;
 
 
-// this variable is used for check box manipulation
-string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-
-
 function string ConstructPersonName(numeric rowNumber)
 	ConstructPersonName = maketext("%s %s", strip(FIRST_NAME(rowNumber)), strip(LAST_NAME(rowNumber)));
 end;
@@ -234,7 +230,7 @@ postproc
 PROC LANGUAGES_BLOCK
 
 	if LANGUAGES_SPOKEN = "" and LANGUAGES_SPOKEN_OTHER = "" then
-		errmsg("You must select at least one checkbox or enter an other option.");
+		errmsg("You must select at least one check box or enter an other option.");
 		reenter;
 	endif;
 
@@ -244,20 +240,18 @@ PROC MAIN_LANGUAGE
 onfocus
 
 	// set up the value set using languages that the person speaks; if only one, preselect the language
-	valueset mainLanguageValueSet;
+	valueset string mainLanguageValueSet;
 
-	do numeric ctr = 1 while ctr <= length(LANGUAGES_SPOKEN)
+	do numeric ctr = 1 while ctr <= MAIN_LANGUAGE_VS1.length()
 
-		string thisOption = LANGUAGES_SPOKEN[ctr:1];
-
-		if thisOption <> " " then
-			mainLanguageValueSet.add(getlabel(LANGUAGES_SPOKEN, thisOption), pos(thisOption, alphabet));
+		if ischecked(MAIN_LANGUAGE_VS1.codes(ctr), LANGUAGES_SPOKEN) then
+			mainLanguageValueSet.add(MAIN_LANGUAGE_VS1.labels(ctr), MAIN_LANGUAGE_VS1.codes(ctr));
 		endif;
 
 	enddo;
 
 	if LANGUAGES_SPOKEN_OTHER <> "" then // add the other language
-		mainLanguageValueSet.add(LANGUAGES_SPOKEN_OTHER, 99);
+		mainLanguageValueSet.add(LANGUAGES_SPOKEN_OTHER, "99");
 	endif;
 
 	setvalueset(MAIN_LANGUAGE, mainLanguageValueSet);

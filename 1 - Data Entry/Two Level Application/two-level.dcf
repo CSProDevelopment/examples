@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.3
+Version=CSPro 7.4
 Label=two-level
 Name=TWO_LEVEL_DICT
 RecordTypeStart=1
@@ -7,6 +7,7 @@ RecordTypeLen=1
 Positions=Relative
 ZeroFill=Yes
 DecimalChar=Yes
+SecurityOptions=6167418ED326C2A650476C6428535348AF6F4ECF416B694B531FFBD230686352
 
 [Level]
 Label=two-level questionnaire

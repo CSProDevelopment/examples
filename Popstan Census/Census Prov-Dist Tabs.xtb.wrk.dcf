@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.3
+Version=CSPro 7.4
 Label=Census Prov-Dist Tabs
 Name=CENSUS_PROV_DIST_TA_DICT
 RecordTypeStart=1
@@ -7,6 +7,7 @@ RecordTypeLen=1
 Positions=Relative
 ZeroFill=No
 DecimalChar=Yes
+SecurityOptions=89BB38ECB037048B13A62BA7BF69020D7F3EC3A5C11E1AFD54AC4384892868AB520CDBBFF83633430843F20BD28D2A70
 
 [Level]
 Label=Census Prov-Dist Tabs questionnaire

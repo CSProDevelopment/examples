@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.3
+Version=CSPro 7.4
 Label=Others
 Name=OTHERS_DICT
 RecordTypeStart=0
@@ -7,6 +7,7 @@ RecordTypeLen=0
 Positions=Relative
 ZeroFill=Yes
 DecimalChar=Yes
+SecurityOptions=03B90E2094F5F338BEC949EA7E03DEC219E4BA71E65707057431CABCCC658C0C
 
 [Level]
 Label=Others questionnaire

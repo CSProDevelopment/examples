@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.3
+Version=CSPro 7.4
 Label=TipsNTricks Dictionary
 Name=TIPSNTRICKS
 RecordTypeStart=1
@@ -7,6 +7,7 @@ RecordTypeLen=1
 Positions=Relative
 ZeroFill=Yes
 DecimalChar=No
+SecurityOptions=3D7A78D76FA73D8732889FE91A1A10E07C60691C72F675B232BF1E4E39DD5DA5
 
 [Level]
 Label=Questionnaire

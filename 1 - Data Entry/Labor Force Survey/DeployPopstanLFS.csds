@@ -1,6 +1,6 @@
 {
   "fileType": "Application Deployment Specification",
-  "version": "7.3",
+  "version": "7.4",
   "name": "Popstan Labor Force Survey",
   "description": "Sample Labor Force Survey Menu & Data Entry Application",
   "files": [
@@ -17,9 +17,11 @@
       "path": ".\\Questionnaire\\PopstanLFS.pff"
     },
     {
+      "onlyOnFirstInstall": true,
       "path": ".\\Menu\\Sample.csdb"
     },
     {
+      "onlyOnFirstInstall": true,
       "path": ".\\Menu\\Staff.csdb"
     }
   ],

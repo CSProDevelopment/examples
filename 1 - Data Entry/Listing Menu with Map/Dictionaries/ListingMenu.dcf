@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.3
+Version=CSPro 7.4
 Label=ListingMenu
 Name=LISTINGMENU_DICT
 RecordTypeStart=1
@@ -7,6 +7,7 @@ RecordTypeLen=1
 Positions=Relative
 ZeroFill=Yes
 DecimalChar=Yes
+SecurityOptions=FB38AE7822B3EECB82A73AFD9C3C3285C0A13BCACBA320BAA23CBF9640B4FA56
 
 [Level]
 Label=ListingMenu Level

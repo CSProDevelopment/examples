@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.3
+Version=CSPro 7.4
 Label=Write External File
 Name=CENSUS
 RecordTypeStart=1
@@ -7,6 +7,7 @@ RecordTypeLen=1
 Positions=Relative
 ZeroFill=Yes
 DecimalChar=No
+SecurityOptions=B6846A25E1CC18DC5E030138BF4E37AE
 
 [Level]
 Label=Questionnaire
@@ -128,7 +129,7 @@ Value=3;Wood
 Value=4;Bamboo/Mud/Reed
 Value=5;Other
 Value=' ';Missing
-Name=MISSING,Special
+Name=NOTAPPL,Special
 
 [Item]
 Label=Roof type
@@ -145,7 +146,7 @@ Value=2;Metal
 Value=3;Wood
 Value=4;Other
 Value=' ';Missing
-Name=MISSING,Special
+Name=NOTAPPL,Special
 
 [Item]
 Label=Floor type
@@ -164,4 +165,4 @@ Value=4;Leaves/Reed
 Value=5;Vinyl
 Value=6;Other
 Value=' ';Missing
-Name=MISSING,Special
+Name=NOTAPPL,Special

@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.3
+Version=CSPro 7.4
 Label=PostCalc Example Dictionary
 Name=POSTCALCEX
 RecordTypeStart=1
@@ -7,6 +7,7 @@ RecordTypeLen=1
 Positions=Relative
 ZeroFill=Yes
 DecimalChar=No
+SecurityOptions=650B7EC9F68293613A02B565F7EA11BBA9CF23A715AAFB637C90BE33FEBBE4ED
 
 [Level]
 Label=Questionnaire
@@ -682,7 +683,7 @@ Label=Children Born Last Year
 Name=P20_BORN12_W_PER1000_VS2
 Value=0:9;Children Born Last Year
 Value=' ';per 1000 women
-Name=DEFAULT,Special
+Name=NOTAPPL,Special
 
 [Record]
 Label=Housing Record
