@@ -10,8 +10,8 @@ DecimalChar=Yes
 SecurityOptions=BB4D579B7EE6EA2289936E71971EE8D0F168E43C42F3EE3E8E8DA12C1075D4C3A3BDA379138CA7AEDDAD7EE5D6BC96BC
 
 [Level]
-Label=Enumerator Information questionnaire
-Name=ENUMERATOR_INFORMATION_QUEST
+Label=Enumerator Information Level
+Name=ENUMERATOR_INFORMATION_LEVEL
 
 [IdItems]
 
@@ -47,6 +47,7 @@ Label=Enumerator Region
 Name=ENUMERATOR_REGION
 Start=29
 Len=2
+ZeroFill=Yes
 
 [Item]
 Label=Phone Number

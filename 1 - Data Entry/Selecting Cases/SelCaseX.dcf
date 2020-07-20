@@ -10,8 +10,8 @@ DecimalChar=Yes
 SecurityOptions=4DD967FBFF671646E7696688A3FCA239CDB757DB1D9DDF3C52EED58B72668FB3
 
 [Level]
-Label=SelCaseX questionnaire
-Name=SELCASEX_QUEST
+Label=SelCaseX Level
+Name=SELCASEX_LEVEL
 
 [IdItems]
 
@@ -36,7 +36,7 @@ Len=1
 ZeroFill=Yes
 
 [Item]
-Label=Data_Search
+Label=Data Search
 Name=DATA_SEARCH
 Start=3
 Len=20

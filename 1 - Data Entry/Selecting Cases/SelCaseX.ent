@@ -4,6 +4,8 @@ Label=SELCASEX
 Name=SELCASEX
 AppType=DataEntry
 OperatorID=No
+CreateListing=No
+CreateLog=No
 [External Dictionaries]
 File=.\Enumerator Information.dcf
 [AppCode]

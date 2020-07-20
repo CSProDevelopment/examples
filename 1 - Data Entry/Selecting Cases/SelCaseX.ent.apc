@@ -9,9 +9,9 @@ file FileEnumInfo;
 
 function WRITE_INFO()
 
-	filewrite(FileEnumInfo, "%s,%s,%d,%d,%d,/,%d,-,%d",strip(FIRST_NAME), strip(LAST_NAME),
-	ENUMERATOR_ID, ENUMERATOR_REGION, PHONE_NUMBER_AREA_CODE,
-	PHONE_NUMBER_CITY_CODE, PHONE_NUMBER_LAST_4_DIGITS);
+	filewrite(FileEnumInfo, "%s,%s,%d,%d,%d,/,%d,-,%d", strip(FIRST_NAME), strip(LAST_NAME),
+		ENUMERATOR_ID, ENUMERATOR_REGION, PHONE_NUMBER_AREA_CODE,
+		PHONE_NUMBER_CITY_CODE, PHONE_NUMBER_LAST_4_DIGITS);
 
 end;
 
@@ -20,13 +20,13 @@ end;
 
 function OPTION1()
 
-	{search on enumerator's code: 1, 2, or 3 digits}
+	// search on enumerator's code: 1, 2, or 3 digits
 
-	CaseFound = selcase (ENUMERATOR_INFORMATION_DICT, strip(Data_Search [1:3]))
+	CaseFound = selcase(ENUMERATOR_INFORMATION_DICT, strip(DATA_SEARCH[1:3]))
 				include(LAST_NAME, FIRST_NAME, ENUMERATOR_REGION);
 
 	if NOT CaseFound then
-		errmsg(910, Data_Search [1:3]);
+		errmsg(910, DATA_SEARCH[1:3]);
 	endif;
 
 end;
@@ -36,14 +36,14 @@ end;
 
 function OPTION2()
 
-	{search on enumerator's exact last name}
+	// search on enumerator's exact last name
 
-	CaseFound = selcase (ENUMERATOR_INFORMATION_DICT, "") // blank string indicates all keys should be selected
-				where LAST_NAME = Data_Search
+	CaseFound = selcase(ENUMERATOR_INFORMATION_DICT, "") // blank string indicates all keys should be selected
+				where LAST_NAME = DATA_SEARCH
 				include(LAST_NAME, FIRST_NAME, ENUMERATOR_REGION);
 
 	if NOT CaseFound then
-		errmsg(920, strip(Data_Search));
+		errmsg(920, strip(DATA_SEARCH));
 	endif;
 
 end;
@@ -53,12 +53,14 @@ end;
 
 function OPTION3()
 
-	CaseFound = selcase (ENUMERATOR_INFORMATION_DICT, "")
-				where FIRST_NAME = Data_Search
+	// search on enumerator's exact first name
+
+	CaseFound = selcase(ENUMERATOR_INFORMATION_DICT, "")
+				where FIRST_NAME = DATA_SEARCH
 				include(LAST_NAME, FIRST_NAME, ENUMERATOR_REGION);
 
 	if NOT CaseFound then
-		errmsg(930, strip(Data_Search));
+		errmsg(930, strip(DATA_SEARCH));
 	endif;
 
 end;
@@ -68,15 +70,15 @@ end;
 
 function OPTION4()
 
-	{search on enumerator's last name string}
+	// search on the first character of the enumerator's last name
 
-	numeric StringLength = length(strip(Data_Search));
+	numeric StringLength = length(strip(DATA_SEARCH));
 	CaseFound = selcase(ENUMERATOR_INFORMATION_DICT, "")
-				where LAST_NAME[1:StringLength] = strip(Data_Search[1:StringLength])
+				where LAST_NAME[1:1] = strip(DATA_SEARCH[1:1])
 				include(LAST_NAME, FIRST_NAME, ENUMERATOR_REGION);
 
 	if NOT CaseFound then
-		errmsg(940, strip(Data_Search));
+		errmsg(940, strip(DATA_SEARCH));
 	endif;
 
 end;
@@ -86,14 +88,14 @@ end;
 
 function OPTION5()
 
-	{search on first letter of enumerator's last or first name}
+	// search on the beginning of the enumerator's last or first name
 
-	CaseFound = selcase (ENUMERATOR_INFORMATION_DICT, "")
-				where pos(strip(Data_Search),LAST_NAME) =1 or pos(strip(Data_Search),FIRST_NAME) = 1
+	CaseFound = selcase(ENUMERATOR_INFORMATION_DICT, "")
+				where pos(strip(DATA_SEARCH), LAST_NAME) = 1 or pos(strip(DATA_SEARCH), FIRST_NAME) = 1
 				include(LAST_NAME, FIRST_NAME, ENUMERATOR_REGION);
 
 	if NOT CaseFound then
-		errmsg(950, strip(Data_Search));
+		errmsg(950, strip(DATA_SEARCH));
 	endif;
 
 end;
@@ -112,9 +114,9 @@ function OPTION6()
 
 	endif;
 
-	CaseFound = selcase (ENUMERATOR_INFORMATION_DICT, "")
+	CaseFound = selcase(ENUMERATOR_INFORMATION_DICT, "")
 				include(LAST_NAME, FIRST_NAME, ENUMERATOR_REGION, HOURLY_WAGE)
-				where  ENUMERATOR_REGION = nRegion and (HOURLY_WAGE in 35.00 : 40.00);
+				where ENUMERATOR_REGION = nRegion and HOURLY_WAGE in 35.00:40.00;
 
 	if NOT CaseFound then
 		errmsg(960, strip(DATA_SEARCH));
@@ -127,8 +129,8 @@ end;
 
 function OPTION7()
 
-	CaseFound = selcase (ENUMERATOR_INFORMATION_DICT, "")
-				where pos(strip(Data_Search),LAST_NAME) = 1 or pos(strip(Data_Search),FIRST_NAME) = 1
+	CaseFound = selcase(ENUMERATOR_INFORMATION_DICT, "")
+				where pos(strip(DATA_SEARCH), LAST_NAME) = 1 or pos(strip(DATA_SEARCH), FIRST_NAME) = 1
 				include(LAST_NAME, FIRST_NAME, ENUMERATOR_REGION)
 				multiple;
 
@@ -137,11 +139,11 @@ function OPTION7()
 		exit;     {- - - - - - - - - - - - - - - - - - - - - - - > }
 	endif;
 
-	{nMembers (dictionary-name) returns the number of selections made from the selection window}
+	// nMembers(dictionary-name) returns the number of selections made from the selection window
 
-	errmsg("You have selected %d enumerators from the selection window. The following listing will display their information.",nMembers(ENUMERATOR_INFORMATION_DICT));
+	errmsg("You have selected %d enumerators from the selection window. The following listing will display their information.", nMembers(ENUMERATOR_INFORMATION_DICT));
 
-	setfile(FileEnumInfo,"info.wrt");
+	setfile(FileEnumInfo, "info.wrt", create);
 
 	for ENUMERATOR_INFORMATION_DICT do
 		WRITE_INFO();
@@ -149,7 +151,7 @@ function OPTION7()
 
 	close(FileEnumInfo);
 
-	Execsystem('textview "info.wrt"',maximized,wait);
+	Execsystem(maketext('"%s" "info.wrt"', pathconcat(CSPro, "TextView.exe")), maximized, wait);
 
 end;
 
@@ -161,7 +163,7 @@ PROC SELCASEX_FF
 
 PROC OPTION
 
-	if $ = 9 then
+	if OPTION = 9 then
 		stop(1);
 	endif;
 
