@@ -81,14 +81,14 @@ end;
 // to a string representation in the currently selected language.
 function string dayOfWeekToString(dayNum)
 	string dayName;
-	recode dayNum => dayName;
-	  1  => tr("Sunday");
-	  2  => tr("Monday");
-	  3  => tr("Tuesday");
-	  4  => tr("Wednesday");
-	  5  => tr("Thursday");
-	  6  => tr("Friday");
-	  7  => tr("Saturday");
+	recode dayNum -> dayName;
+	  1  -> tr("Sunday");
+	  2  -> tr("Monday");
+	  3  -> tr("Tuesday");
+	  4  -> tr("Wednesday");
+	  5  -> tr("Thursday");
+	  6  -> tr("Friday");
+	  7  -> tr("Saturday");
 	endrecode;
 	dayOfWeekToString = dayName;
 end;
@@ -97,19 +97,19 @@ end;
 // to a string representation in the currently selected language.
 function string monthToString(monthNum)
 	string monthName;
-	recode monthNum => monthName;
-	  1  => tr("January");
-	  2  => tr("February");
-	  3  => tr("March");
-	  4  => tr("April");
-	  5  => tr("May");
-	  6  => tr("June");
-	  7  => tr("July");
-	  8  => tr("August");
-	  9  => tr("September");
-	  10  => tr("October");
-	  11  => tr("November");
-	  12  => tr("December");
+	recode monthNum -> monthName;
+	  1  -> tr("January");
+	  2  -> tr("February");
+	  3  -> tr("March");
+	  4  -> tr("April");
+	  5  -> tr("May");
+	  6  -> tr("June");
+	  7  -> tr("July");
+	  8  -> tr("August");
+	  9  -> tr("September");
+	  10  -> tr("October");
+	  11  -> tr("November");
+	  12  -> tr("December");
 	endrecode;
 	monthToString = monthName;
 end;
@@ -258,12 +258,13 @@ end;
 
 // Display system calculator
 function showCalculator()
+	SystemApp calculator;
 	if getos() = 10 then
 		// Windows
-		execsystem("calc.exe");
+		calculator.exec("calc.exe");
 	elseif getos() = 20 then
 		// Android
-		execsystem("app:com.google.android.calculator");
+		calculator.exec("app:com.google.android.calculator");
 	endif;
 end;
 
@@ -273,7 +274,7 @@ function isEmployed()
 	if EMPPAY = 1 then
 		// Did work for pay last week
 		isEmployed = 1;
-	elseif pos(AGFCHK, "3") > 0 then
+	elseif ischecked("3", AGFCHK) then
 		// Other job or business
 		isEmployed = 1;
 	elseif AGFMKT=1 then
@@ -659,12 +660,12 @@ preproc
 
 	// Prefill with relationship from demographic roster for head of household
 	if LBPPNO = 1 then
-		recode DEMREL(PXYPPN) => PXYREL;
-			2 => 1; // spouse
-			3 => 2; // son/daughter
-			4 => 3; // mother/father
-			5 => 4; // other relative
-			6,7 => 5; // not related
+		recode DEMREL(PXYPPN) -> PXYREL;
+			2 -> 1; // spouse
+			3 -> 2; // son/daughter
+			4 -> 3; // mother/father
+			5 -> 4; // other relative
+			6,7 -> 5; // not related
 		endrecode;
 		noinput;
 	endif;
@@ -815,7 +816,7 @@ preproc
 
 	// Ask question only if option 1 or 2 is selected and option 3 is not selected or
 	// didn't previously report work but worked in farming/fishing last week
-	ask if ((pos("1", AGFCHK) > 0 or pos("2", AGFCHK) >0) and pos("3", AGFCHK) = 0) or AGFANY = 1;
+	ask if ((ischecked("1", AGFCHK) or ischecked("2", AGFCHK)) and not ischecked("3", AGFCHK)) or AGFANY = 1;
 
 
 PROC AGFMAI
@@ -1221,7 +1222,7 @@ PROC ACDYSM
 
 	// Make sure they didn't chose both absent and one or more days
 	numeric choseAtLeastOneDay = poschar("1234567", ACDYSM) > 0;
-	numeric choseAbsent = pos("8", ACDYSM);
+	numeric choseAbsent = ischecked("8", ACDYSM);
 	if choseAtLeastOneDay and choseAbsent then
 		errmsg("'Absent' can only be used for persons who were absent the whole week."  );
 		reenter;
@@ -1240,7 +1241,7 @@ preproc
 
 	// Ask hours only for days worked in last week
 	// (options checked in previous question)
-	ask if pos( edit( "9" , curocc(ACHRSM_ROSTER) ) , ACDYSM ) > 0;
+	ask if ischecked(edit( "9" , curocc(ACHRSM_ROSTER)) , ACDYSM );
 
 
 PROC ACHRM1
@@ -1313,7 +1314,7 @@ PROC ACDYSS
 
 	// Make sure they didn't chose both absent and one or more days
 	numeric choseAtLeastOneDay = poschar("1234567", ACDYSS) > 0;
-	numeric choseAbsent = pos("8", ACDYSS);
+	numeric choseAbsent = ischecked("8", ACDYSS);
 	if choseAtLeastOneDay and choseAbsent then
 		errmsg("'Absent' can only be used for persons who were absent the whole week."  );
 		reenter;
@@ -1332,7 +1333,7 @@ preproc
 
 	// Ask hours only for days worked in last week
 	// (options checked in previous question)
-	ask if pos( edit( "9" , curocc(ACHRSS_ROSTER) ) , ACDYSS ) > 0;
+	ask if ischecked(edit("9" , curocc(ACHRSS_ROSTER)) , ACDYSS);
 
 
 PROC ACHRS1
@@ -1410,7 +1411,7 @@ preproc
 
 	// First job
 	numeric actualHoursMainJob;
-	if pos("8", ACDYSM) > 0 then
+	if ischecked("8", ACDYSM) then
 		// Absent last week
 		actualHoursMainJob = 0;
 	elseif ACHRSM has 98 then
@@ -1433,7 +1434,7 @@ preproc
 	// Second job
 	numeric actualHoursSecondJob;
 	if NUMJBS in 2,3 then
-		if pos("8", ACDYSS) > 0 then
+		if ischecked("8", ACDYSS) then
 			// Absent last week
 			actualHoursSecondJob = 0;
 		elseif ACHRSS has 98 then
