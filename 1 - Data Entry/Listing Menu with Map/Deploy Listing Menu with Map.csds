@@ -1,6 +1,6 @@
 {
   "fileType": "Application Deployment Specification",
-  "version": "7.4",
+  "version": "7.5",
   "name": "Listing Menu with Map",
   "description": "Example of listing structures using integrated maps",
   "files": [
@@ -8,22 +8,22 @@
       "path": ".\\Listing\\Listing.ent"
     },
     {
+      "path": ".\\Listing\\Listing.pff"
+    },
+    {
       "path": ".\\Menu\\ListingMenu.ent"
     },
     {
       "path": ".\\Menu\\ListingMenu.pff"
-    },
-    {
-      "path": ".\\Listing\\Listing.pff"
     }
   ],
   "dictionaries": [
     {
-      "path": ".\\Dictionaries\\Structures.dcf",
-      "uploadForSync": true
+      "path": ".\\Dictionaries\\ListingMenu.dcf"
     },
     {
-      "path": ".\\Dictionaries\\ListingMenu.dcf"
+      "path": ".\\Dictionaries\\Structures.dcf",
+      "uploadForSync": true
     }
   ],
   "deployment": {

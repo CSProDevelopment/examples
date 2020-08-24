@@ -1,6 +1,6 @@
 {
   "fileType": "Application Deployment Specification",
-  "version": "7.4",
+  "version": "7.5",
   "name": "Popstan Labor Force Survey",
   "description": "Sample Labor Force Survey Menu & Data Entry Application",
   "files": [
@@ -11,18 +11,18 @@
       "path": ".\\Menu\\Menu.pff"
     },
     {
-      "path": ".\\Questionnaire\\PopstanLFS.ent"
-    },
-    {
-      "path": ".\\Questionnaire\\PopstanLFS.pff"
-    },
-    {
       "onlyOnFirstInstall": true,
       "path": ".\\Menu\\Sample.csdb"
     },
     {
       "onlyOnFirstInstall": true,
       "path": ".\\Menu\\Staff.csdb"
+    },
+    {
+      "path": ".\\Questionnaire\\PopstanLFS.ent"
+    },
+    {
+      "path": ".\\Questionnaire\\PopstanLFS.pff"
     }
   ],
   "dictionaries": [
@@ -30,7 +30,7 @@
       "path": ".\\Menu\\Menu.dcf"
     },
     {
-      "path": ".\\Questionnaire\\PopstanLFS.dcf",
+      "path": ".\\Menu\\Sample.dcf",
       "uploadForSync": true
     },
     {
@@ -38,11 +38,11 @@
       "uploadForSync": true
     },
     {
-      "path": ".\\Menu\\Sample.dcf",
+      "path": ".\\Menu\\Status.dcf",
       "uploadForSync": true
     },
     {
-      "path": ".\\Menu\\Status.dcf",
+      "path": ".\\Questionnaire\\PopstanLFS.dcf",
       "uploadForSync": true
     }
   ],

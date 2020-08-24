@@ -80,26 +80,13 @@ preproc
 		endif;
 
 		// calculate the extension
-		string extension;
+		string extension = tolower(path.getExtension(this_filename));
 
-		do numeric name_index = length(this_filename) while name_index >= 1 by -1
-
-			if this_filename[name_index:1] = "." then
-				extension = tolower(this_filename[name_index + 1]);
-				break;
-
-			elseif this_filename[name_index:1] = "\" then
-				break;
-
-			endif;
-
-		enddo;
-
-		if extension = "pff" then
+		if extension = ".pff" then
 			ProcessPff(this_filename);
 
-		elseif extension in "anm", "apc", "bch", "csds", "dcf", "ent",
-							"fmf", "ord", "qsf", "sva", "trs", "xtb", "xts" then
+		elseif extension in ".anm", ".apc", ".bch", ".csds", ".dcf", ".ent",
+							".fmf", ".ord", ".qsf", ".sva",  ".trs", ".xtb", ".xts" then
 			ProcessOtherFile(this_filename);
 
 		else
