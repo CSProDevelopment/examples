@@ -1,348 +1,375 @@
-﻿[CAPI QUESTIONS]
-Version=CSPro 7.5
-
-[LANGUAGES]
-EN=English
-
-[QUESTION]
-Field=PSC_HOUSEHOLD_DICT.HH_AGE
-Occurrences=1:35
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\cf1\fs24 How old was %HH_NAME% at %CapiPopulationHisHer% last birthday?\par
-EN=\par
-EN=\cf2 Ask and record the age of each household member in completed years (0 for children less than one year old).\par
-EN=\par
-EN=If age is not known enter 999.\cf1\f1\par
-EN=}
-
-[QUESTION]
-Field=PSC_HOUSEHOLD_DICT.HH_BOYS_EVER_BORN
-Occurrences=1:35
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\cf1\fs24 How many boys were born alive to %HH_NAME%?\par
-EN=}
-
-[QUESTION]
-Field=PSC_HOUSEHOLD_DICT.HH_BOYS_STILL_ALIVE
-Occurrences=1:35
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\cf1\fs24 Among these, how many boys are still alive?\par
-EN=}
-
-[QUESTION]
-Field=PSC_HOUSEHOLD_DICT.HH_CHILDREN_EVER_BORN
-Occurrences=1:35
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\cf1\fs24 How many children were born alive to %HH_NAME%?\par
-EN=}
-
-[QUESTION]
-Field=PSC_HOUSEHOLD_DICT.HH_CITIZENSHIP
-Occurrences=1:35
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\cf1\fs24 Is %HH_NAME% a citizen of Popstan?\par
-EN=}
-
-[QUESTION]
-Field=PSC_HOUSEHOLD_DICT.HH_CONCLUSION
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 You have reached the end of the interview. You can conclude the interview or review previous sections.\cf2\f1\par
-EN=}
-
-[QUESTION]
-Field=PSC_HOUSEHOLD_DICT.HH_COOKING_SOURCE
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\cf1\fs24 What is the source of energy the household mainly uses for cooking?\par
-EN=}
-
-[QUESTION]
-Field=PSC_HOUSEHOLD_DICT.HH_DWELLING_SECTION
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\cf1\b\f0\fs23 DWELLING CHARACTERISTICS SECTION\b0\par
-EN=The dwelling characteristics section will be about the characteristcs of this dwelling unit.\par
-EN=\f1\fs24\par
-EN=}
-
-[QUESTION]
-Field=PSC_HOUSEHOLD_DICT.HH_EDUCATION
-Occurrences=1:35
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\cf1\fs24 What is the highest level of education %HH_NAME% has completed?\par
-EN=}
-
-[QUESTION]
-Field=PSC_HOUSEHOLD_DICT.HH_FLOOR
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\cf1\fs24 What is the primary material used for the floor?\par
-EN=}
-
-[QUESTION]
-Field=PSC_HOUSEHOLD_DICT.HH_GIRLS_EVER_BORN
-Occurrences=1:35
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\cf1\fs24 How many girls were born alive to %HH_NAME%?\par
-EN=}
-
-[QUESTION]
-Field=PSC_HOUSEHOLD_DICT.HH_GIRLS_STILL_ALIVE
-Occurrences=1:35
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\cf1\fs24 Among these, how many girls are still alive?\par
-EN=}
-
-[QUESTION]
-Field=PSC_HOUSEHOLD_DICT.HH_GPS_READING
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\cf1\fs24 %capi_gps_reading%\par
-EN=\par
-EN=GPS data: \b %capi_gps_data_status%\par
-EN=\b0 %capi_gps_accuracy_status_label% \b %capi_gps_accuracy_status%\f1\par
-EN=}
-
-[QUESTION]
-Field=PSC_HOUSEHOLD_DICT.HH_INTERNET
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\cf1\fs24 Does this household have regular access to the Internet?\par
-EN=}
-
-[QUESTION]
-Field=PSC_HOUSEHOLD_DICT.HH_INTRODUCTION
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\widctlpar\sl276\slmult1\cf1\b\f0\fs24 %capi_province_name% / %capi_district_name% / %capi_ea_name% / %capi_household_name%\par
-EN=\b0\par
-EN=Hello, my name is %capi_staff_name%. I am working with Popstan Statistics and we are conducting the Popstan Census.\par
-EN=\par
-EN=All the answers you give will be confidential and will not be shared with anyone other than members of the technical team for the Popstan Census. Taking part in the census is the responsibility of every citizen and we will be glad if you agree to answer the questions.\par
-EN=}
-
-[QUESTION]
-Field=PSC_HOUSEHOLD_DICT.HH_KEEP_ROW
-Occurrences=1:35
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 Do you want to keep or delete this row of population information?\cf2\b\fs23\par
-EN=}
-
-[QUESTION]
-Field=PSC_HOUSEHOLD_DICT.HH_LIGHTING_SOURCE
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\cf1\fs24 What is the source of energy the household mainly uses for lighting?\par
-EN=}
-
-[QUESTION]
-Field=PSC_HOUSEHOLD_DICT.HH_LITERACY
-Occurrences=1:35
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\cf1\f0\fs24 Can %HH_NAME% read and write a simple sentence in any language?\f1\par
-EN=}
-
-[QUESTION]
-Field=PSC_HOUSEHOLD_DICT.HH_MARITAL_AGE
-Occurrences=1:35
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\cf1\fs24 How old was %HH_NAME% when %CapiPopulationHeShe% first got married?\par
-EN=\par
-EN=\cf2 If age at first marriage is not known enter 999.\cf1\par
-EN=}
-
-[QUESTION]
-Field=PSC_HOUSEHOLD_DICT.HH_MARITAL_STATUS
-Occurrences=1:35
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red51\green51\blue51;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\cf1\fs24 What is %HH_NAME%'s marital status?\cf2\par
-EN=}
-
-[QUESTION]
-Field=PSC_HOUSEHOLD_DICT.HH_MONTH_BORN
-Occurrences=1:35
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\cf1\fs24 In what month was %HH_NAME% born?\par
-EN=\par
-EN=}
-
-[QUESTION]
-Field=PSC_HOUSEHOLD_DICT.HH_MORE_ROWS
-Occurrences=1:35
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\cf1\fs24 You have listed %capi_number_of_persons% person(s):\par
-EN=\par
-EN=\b Name, Sex\b0\par
-EN=\b %capi_household_name_sex%\b0\par
-EN=Is there anyone else in this household?\par
-EN=\par
-EN=Any (other) children? Relatives? Anyone not related to you? Or any visitors who spent the night?\par
-EN=\par
-EN=}
-
-[QUESTION]
-Field=PSC_HOUSEHOLD_DICT.HH_NAME
-Occurrences=1:1
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\widctlpar\cf1\f0\fs24 Can you please give the names of the persons who usually live in this household and visitors of the household who stayed here last night, starting with the head of the household. \par
-EN=\par
-EN=Who is the head of household?\par
-EN=\par
-EN=\cf2\f1 Enter first name then last name.\cf1\f0\par
-EN=
-EN=\pard\par
-EN=}
-
-[QUESTION]
-Field=PSC_HOUSEHOLD_DICT.HH_NAME
-Occurrences=2:35
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\cf1\fs24 Enter the name of the person.\par
-EN=\par
-EN=\cf2 Enter first name then last name.\i\par
-EN=\cf1\i0\f1\fs22\par
-EN=}
-
-[QUESTION]
-Field=PSC_HOUSEHOLD_DICT.HH_POPULATION_SECTION
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\cf1\b\f0\fs24 POPULATION SECTION\b0\par
-EN=The population section will be about the people that usually spend their time in this household as well as visitors.\f1\par
-EN=}
-
-[QUESTION]
-Field=PSC_HOUSEHOLD_DICT.HH_RELATIONSHIP
-Occurrences=1:35
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;\red128\green0\blue255;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\cf1\fs24 What is %HH_NAME%'s relationship to the head of the household, %CapiHeadName%?\par
-EN=\par
-EN=\cf2 Refer the relationship of any member of the household to the HEAD of that household.\cf3\i\par
-EN=\cf1\i0\fs22\par
-EN=}
-
-[QUESTION]
-Field=PSC_HOUSEHOLD_DICT.HH_RESIDENCE_SITUATION
-Occurrences=1:35
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\cf1\fs24 Is %HH_NAME% a present resident, absent resident, or visitor?\par
-EN=}
-
-[QUESTION]
-Field=PSC_HOUSEHOLD_DICT.HH_ROOF
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\cf1\fs24 What is the primary material used for the roof?\par
-EN=}
-
-[QUESTION]
-Field=PSC_HOUSEHOLD_DICT.HH_SEX
-Occurrences=1:35
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;\red128\green0\blue255;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\cf1\fs24 Is %HH_NAME% male or female?\par
-EN=\par
-EN=\cf2 Be careful to get the sex of young children right - ask, do not guess. Always confirm or verify the sex of a person against their name.\cf3\par
-EN=\cf1\par
-EN=}
-
-[QUESTION]
-Field=PSC_HOUSEHOLD_DICT.HH_TENURE
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\cf1\fs24 Is this dwelling unit owned, rented, or is there another arrangement?\par
-EN=}
-
-[QUESTION]
-Field=PSC_HOUSEHOLD_DICT.HH_TOILET
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\cf1\fs24 What kind of toilet facility do members of your household usually use?\par
-EN=}
-
-[QUESTION]
-Field=PSC_HOUSEHOLD_DICT.HH_WALL
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\cf1\fs24 What is the primary material used for the wall?\par
-EN=}
-
-[QUESTION]
-Field=PSC_HOUSEHOLD_DICT.HH_WATER_SOURCE
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\cf1\fs24 What is the main source of drinking water for members of the household?\par
-EN=}
-
-[QUESTION]
-Field=PSC_HOUSEHOLD_DICT.HH_WORK_STATUS
-Occurrences=1:35
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red51\green51\blue51;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\cf1\fs24 Aside from %CapiPopulationHisHer% own housework, did \cf2 %HH_NAME%\cf1  work for at least an hour for pay or gain during the last 7 days?\cf2\par
-EN=}
-
-[QUESTION]
-Field=PSC_HOUSEHOLD_DICT.HH_YEAR_BORN
-Occurrences=1:35
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\cf1\fs24 In what year was %HH_NAME% born?\par
-EN=\par
-EN=\cf2 If year is not known enter 9999.\cf1\fs22\par
-EN=}
-
+﻿---
+fileType: Question Text
+version: CSPro 7.5
+languages:
+  - name: EN
+    label: English
+styles:
+  - name: Normal
+    className: normal
+    css: |
+      font-family: Arial;font-size: 16px;color: #000000;
+      
+  - name: Instruction
+    className: instruction
+    css: |
+      font-family: Arial;font-size: 16px;color: #0000ff;
+      
+  - name: Heading 1
+    className: heading1
+    css: |
+      font-family: Arial;font-size: 36px;
+      
+  - name: Heading 2
+    className: heading2
+    css: |
+      font-family: Arial;font-size: 24px;
+      
+  - name: Heading 3
+    className: heading3
+    css: |
+      font-family: Arial;font-size: 18px;
+      
+questions:
+  - name: PSC_HOUSEHOLD_DICT.HH_AGE
+    conditions:
+      - questionText:
+          EN: |
+            <p>How old was ~~HH_NAME~~ at ~~CapiPopulationHisHer()~~ last birthday?</p><p><br></p>
+            
+            <p><span class="instruction">Ask and record the age of each household member in completed years (0 for children less than one year old).</span></p><p><br></p><span class="instruction">
+            
+            </span><p><span class="instruction">If age is not known enter 999.</span></p>
+            
+        helpText:
+          EN: |
+            
+  - name: PSC_HOUSEHOLD_DICT.HH_BOYS_EVER_BORN
+    conditions:
+      - questionText:
+          EN: |
+            <p>How many boys were born alive to ~~HH_NAME~~?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: PSC_HOUSEHOLD_DICT.HH_BOYS_STILL_ALIVE
+    conditions:
+      - questionText:
+          EN: |
+            <p>Among these, how many boys are still alive?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: PSC_HOUSEHOLD_DICT.HH_CHILDREN_EVER_BORN
+    conditions:
+      - questionText:
+          EN: |
+            <p>How many children were born alive to ~~HH_NAME~~?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: PSC_HOUSEHOLD_DICT.HH_CITIZENSHIP
+    conditions:
+      - questionText:
+          EN: |
+            <p>Is ~~HH_NAME~~ a citizen of Popstan?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: PSC_HOUSEHOLD_DICT.HH_CONCLUSION
+    conditions:
+      - questionText:
+          EN: |
+            <p><span class="instruction">You have reached the end of the interview. You can conclude the interview or review previous sections.</span></p>
+            
+        helpText:
+          EN: |
+            
+  - name: PSC_HOUSEHOLD_DICT.HH_COOKING_SOURCE
+    conditions:
+      - questionText:
+          EN: |
+            <p>What is the source of energy the household mainly uses for cooking?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: PSC_HOUSEHOLD_DICT.HH_DWELLING_SECTION
+    conditions:
+      - questionText:
+          EN: |
+            <p><b>DWELLING CHARACTERISTICS SECTION</b></p>
+            <p>The dwelling characteristics section will be about the characteristcs of this dwelling unit.</p>
+            
+            
+        helpText:
+          EN: |
+            
+  - name: PSC_HOUSEHOLD_DICT.HH_EDUCATION
+    conditions:
+      - questionText:
+          EN: |
+            <p>What is the highest level of education ~~HH_NAME~~ has completed?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: PSC_HOUSEHOLD_DICT.HH_FLOOR
+    conditions:
+      - questionText:
+          EN: |
+            <p>What is the primary material used for the floor?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: PSC_HOUSEHOLD_DICT.HH_GIRLS_EVER_BORN
+    conditions:
+      - questionText:
+          EN: |
+            <p>How many girls were born alive to ~~HH_NAME~~?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: PSC_HOUSEHOLD_DICT.HH_GIRLS_STILL_ALIVE
+    conditions:
+      - questionText:
+          EN: |
+            <p>Among these, how many girls are still alive?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: PSC_HOUSEHOLD_DICT.HH_GPS_READING
+    conditions:
+      - questionText:
+          EN: |
+            <p>~~capi_gps_reading~~</p>
+            <p><br></p><table><tbody><tr><td>GPS data:<br></td><td><b>~~capi_gps_data_status~~</b></td></tr><tr><td>~~capi_gps_accuracy_status_label~~</td><td><b>~~capi_gps_accuracy_status~~</b><br></td></tr></tbody></table>
+            
+        helpText:
+          EN: |
+            
+  - name: PSC_HOUSEHOLD_DICT.HH_INTERNET
+    conditions:
+      - questionText:
+          EN: |
+            <p>Does this household have regular access to the Internet?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: PSC_HOUSEHOLD_DICT.HH_INTRODUCTION
+    conditions:
+      - questionText:
+          EN: |
+            <table style="font-weight:bold;"><tbody><tr><td>~~capi_province_name~~</td><td>~~capi_district_name~~<br></td><td>~~capi_ea_name~~</td><td>~~capi_household_name~~</td></tr></tbody></table>
+            <p><br></p><p>Hello, my name is ~~capi_staff_name~~. I am working with Popstan Statistics and we are conducting the Popstan Census.</p><p><br></p>
+            <p>All the answers you give will be confidential and will not be shared with anyone other than members of the technical team for the Popstan Census. Taking part in the census is the responsibility of every citizen and we will be glad if you agree to answer the questions.</p>
+            
+  - name: PSC_HOUSEHOLD_DICT.HH_KEEP_ROW
+    conditions:
+      - questionText:
+          EN: |
+            <p><span class="instruction">Do you want to keep or delete this row of population information?</span></p>
+            
+        helpText:
+          EN: |
+            
+  - name: PSC_HOUSEHOLD_DICT.HH_LIGHTING_SOURCE
+    conditions:
+      - questionText:
+          EN: |
+            <p>What is the source of energy the household mainly uses for lighting?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: PSC_HOUSEHOLD_DICT.HH_LITERACY
+    conditions:
+      - questionText:
+          EN: |
+            <p>Can ~~HH_NAME~~ read and write a simple sentence in any language?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: PSC_HOUSEHOLD_DICT.HH_MARITAL_AGE
+    conditions:
+      - questionText:
+          EN: |
+            <p>How old was ~~HH_NAME~~ when ~~CapiPopulationHeShe()~~ first got married?</p>
+            <p><br></p>
+            <p><span class="instruction">If age at first marriage is not known enter 999.</span></p>
+            
+        helpText:
+          EN: |
+            
+  - name: PSC_HOUSEHOLD_DICT.HH_MARITAL_STATUS
+    conditions:
+      - questionText:
+          EN: |
+            <p>What is ~~HH_NAME~~'s marital status?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: PSC_HOUSEHOLD_DICT.HH_MONTH_BORN
+    conditions:
+      - questionText:
+          EN: |
+            <p>In what month was ~~HH_NAME~~ born?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: PSC_HOUSEHOLD_DICT.HH_MORE_ROWS
+    conditions:
+      - questionText:
+          EN: |
+            <p></p><p>You have listed ~~capi_number_of_persons~~ person(s):</p>
+            <p><br></p>
+            
+            <p>~~~capi_household_name_sex~~~</p><p><br></p><p>
+            </p><p>Is there anyone else in this household?</p>
+            <p><br></p>
+            <p>Any (other) children? Relatives? Anyone not related to you? Or any visitors who spent the night?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: PSC_HOUSEHOLD_DICT.HH_NAME
+    conditions:
+      - logic: curocc() = 1
+        questionText:
+          EN: |
+            <p>Can you please give the names of the persons who usually live in this household and visitors of the household who stayed here last night, starting with the head of the household.</p><p><br></p>
+            
+            <p>Who is the head of household?</p><p><br></p>
+            
+            <p><span class="instruction">Enter first name then last name.</span></p>
+            
+        helpText:
+          EN: |
+            
+      - logic: curocc() > 1
+        questionText:
+          EN: |
+            <p>Enter the name of the person.</p><p><br></p>
+            <p><span class="instruction">Enter first name then last name.</span></p>
+            
+        helpText:
+          EN: |
+            
+  - name: PSC_HOUSEHOLD_DICT.HH_POPULATION_SECTION
+    conditions:
+      - questionText:
+          EN: |
+            <p><b>POPULATION SECTION</b></p>
+            <p>The population section will be about the people that usually spend their time in this household as well as visitors.</p>
+            
+        helpText:
+          EN: |
+            
+  - name: PSC_HOUSEHOLD_DICT.HH_RELATIONSHIP
+    conditions:
+      - questionText:
+          EN: |
+            <p>What is ~~HH_NAME~~'s relationship to the head of the household, ~~CapiHeadName()~~?</p><p><br></p>
+            
+            <p><span class="instruction">Refer the relationship of any member of the household to the HEAD of that household.</span></p>
+            
+        helpText:
+          EN: |
+            
+  - name: PSC_HOUSEHOLD_DICT.HH_RESIDENCE_SITUATION
+    conditions:
+      - questionText:
+          EN: |
+            <p>Is ~~HH_NAME~~ a present resident, absent resident, or visitor?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: PSC_HOUSEHOLD_DICT.HH_ROOF
+    conditions:
+      - questionText:
+          EN: |
+            <p>What is the primary material used for the roof?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: PSC_HOUSEHOLD_DICT.HH_SEX
+    conditions:
+      - questionText:
+          EN: |
+            <p>Is ~~HH_NAME~~ male or female?</p><p><br></p>
+            
+            <p><span class="instruction">Be careful to get the sex of young children right - ask, do not guess. Always confirm or verify the sex of a person against their name.</span></p>
+            
+        helpText:
+          EN: |
+            
+  - name: PSC_HOUSEHOLD_DICT.HH_TENURE
+    conditions:
+      - questionText:
+          EN: |
+            <p>Is this dwelling unit owned, rented, or is there another arrangement?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: PSC_HOUSEHOLD_DICT.HH_TOILET
+    conditions:
+      - questionText:
+          EN: |
+            <p>What kind of toilet facility do members of your household usually use?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: PSC_HOUSEHOLD_DICT.HH_WALL
+    conditions:
+      - questionText:
+          EN: |
+            <p>What is the primary material used for the wall?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: PSC_HOUSEHOLD_DICT.HH_WATER_SOURCE
+    conditions:
+      - questionText:
+          EN: |
+            <p>What is the main source of drinking water for members of the household?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: PSC_HOUSEHOLD_DICT.HH_WORK_STATUS
+    conditions:
+      - questionText:
+          EN: |
+            <p>Aside from ~~CapiPopulationHisHer()~~ own housework, did ~~HH_NAME~~ work for at least an hour for pay or gain during the last 7 days?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: PSC_HOUSEHOLD_DICT.HH_YEAR_BORN
+    conditions:
+      - questionText:
+          EN: |
+            <p>In what year was ~~HH_NAME~~ born?</p><p><br></p>
+            
+            <p><span class="instruction">If year is not known enter 9999.</span></p>
+            
+        helpText:
+          EN: |
+            
+...

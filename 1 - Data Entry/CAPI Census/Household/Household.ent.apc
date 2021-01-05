@@ -500,16 +500,18 @@ onfocus
 	endif;
 
 	capi_number_of_persons = 0;
-	capi_household_name_sex = "";
+	capi_household_name_sex = "<table><tbody><tr><th>Name</th><th>Sex</th></tr>";
 
 	do numeric ctr = 1 while ctr <= curocc()
 
 		if HH_KEEP_ROW(ctr) = 1 then
-			capi_household_name_sex = capi_household_name_sex + maketext("%s, %s<br />", strip(HH_NAME(ctr)), getlabel(HH_SEX, HH_SEX(ctr)));
+			capi_household_name_sex = capi_household_name_sex + maketext("<tr><td>%s</td><td>%s</td></tr>", strip(HH_NAME(ctr)), getlabel(HH_SEX, HH_SEX(ctr)));
 			inc(capi_number_of_persons);
 		endif;
 
 	enddo;
+
+	capi_household_name_sex = capi_household_name_sex + "</tbody></table>";
 
 postproc
 

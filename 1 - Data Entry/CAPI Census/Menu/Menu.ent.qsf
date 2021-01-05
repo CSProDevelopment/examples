@@ -1,178 +1,212 @@
-﻿[CAPI QUESTIONS]
-Version=CSPro 7.5
-
-[LANGUAGES]
-EN=English
-
-[QUESTION]
-Field=PSC_MENU_DICT.ASSIGNMENT_SELECTION
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\cf1\fs24 You are logged in as %capi_staff_role% \b %capi_staff_name%\b0 .\par
-EN=\par
-EN=Select the area you want to work in now.\par
-EN=}
-
-[QUESTION]
-Field=PSC_MENU_DICT.INTERVIEWER_CODE
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-EN=\pard\cf1\fs24 Select the interviewer to assign an EA to.\par
-EN=}
-
-[QUESTION]
-Field=PSC_MENU_DICT.INTERVIEWER_EA
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\cf1\fs24 Select EA to assign to \b %capi_manage_staff_name%\b0 .\par
-EN=}
-
-[QUESTION]
-Field=PSC_MENU_DICT.INTERVIEWER_MENU
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\cf1\fs24 You are logged in as Interviewer \b %capi_staff_name%\b0 . You are working in \b %capi_province_name%\b0  province / \b %capi_district_name%\b0  district / \b %capi_ea_name%\b0 . \par
-EN=\par
-EN=\b Household Status: %capi_household_complete_count%\b0  completed households. \b %capi_household_partial_count%\b0  partially completed households.\par
-EN=\par
-EN=Select applicable option.\par
-EN=}
-
-[QUESTION]
-Field=PSC_MENU_DICT.LOGIN
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\cf1\fs24 Welcome to Popstan Census data collection application (version %capi_publish_date%).\par
-EN=}
-
-[QUESTION]
-Field=PSC_MENU_DICT.MANAGE_STAFF
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.10240}\viewkind4\uc1
-EN=\pard\cf1\fs24 Select staff to manage or add new interviewer.\par
-EN=}
-
-[QUESTION]
-Field=PSC_MENU_DICT.MANAGE_STAFF_MEMBER
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\cf1\fs24 You are managing information about \b %capi_manage_staff_name%\b0 .\par
-EN=\par
-EN=Select applicable option.\par
-EN=}
-
-[QUESTION]
-Field=PSC_MENU_DICT.MANAGE_STAFF_NAME
-Condition=MANAGE_STAFF_NAME <> ""
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\cf1\fs24 Edit the name of \b %capi_manage_staff_name%\b0 .\par
-EN=}
-
-[QUESTION]
-Field=PSC_MENU_DICT.MANAGE_STAFF_NAME
-Condition=MANAGE_STAFF_NAME = ""
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.10240}\viewkind4\uc1
-EN=\pard\cf1\fs24 Enter name of a new interviewer.\par
-EN=}
-
-[QUESTION]
-Field=PSC_MENU_DICT.PIN_CODE_CONFIRMATION
-Condition=PIN_CODE <> notappl
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\cf1\fs24 You are logged in as \b %capi_staff_name%\b0 .\par
-EN=\par
-EN=Please enter your pin code.\par
-EN=}
-
-[QUESTION]
-Field=PSC_MENU_DICT.PIN_CODE_CONFIRMATION
-Condition=PIN_CODE = notappl
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\cf1\fs24 You are logged in as \b %capi_staff_name%\b0 .\par
-EN=\par
-EN=Please create your pin code. \par
-EN=\par
-EN=A pin code is a four digit number that enables you to log into the Popstan Census data collection application. It is recommended to choose a number which you can easily remember and the code should be kept secret.\par
-EN=\par
-EN=}
-
-[QUESTION]
-Field=PSC_MENU_DICT.SUPERVISOR_ACCESS_PASSWORD
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green0\blue255;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\cf1\fs24 Please enter supervisor password you received from headquarters.\par
-EN=\par
-EN=\cf2 For demonstration purposes use password 1234.\cf1\par
-EN=}
-
-[QUESTION]
-Field=PSC_MENU_DICT.SUPERVISOR_DISTRICT
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\cf1\fs24 Select district of your assignment in \b %capi_province_name%\b0  province.\par
-EN=}
-
-[QUESTION]
-Field=PSC_MENU_DICT.SUPERVISOR_MENU
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\cf1\fs24 You are logged in as Supervisor \b %capi_staff_name%\b0 . You are working in \b %capi_province_name%\b0  province / \b %capi_district_name%\b0  district.\par
-EN=\par
-EN=\b EA Status:\b0  \b %capi_ea_assigned_count%\b0  assigned EAs.\par
-EN=\par
-EN=Select applicable option.\par
-EN=}
-
-[QUESTION]
-Field=PSC_MENU_DICT.SUPERVISOR_NAME
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\cf1\fs24 Please enter your full name.\par
-EN=}
-
-[QUESTION]
-Field=PSC_MENU_DICT.SUPERVISOR_PIN_CODE
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\cf1\fs24 Please create your pin code. \par
-EN=\par
-EN=A pin code is a four digit number that enables you to log into the Popstan Census data collection application. It is recommended to choose a number which you can easily remember and the code should be kept secret.\par
-EN=\par
-EN=}
-
-[QUESTION]
-Field=PSC_MENU_DICT.SUPERVISOR_PROVINCE
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\cf1\fs24 Select province of your assignment.\par
-EN=}
-
-[QUESTION]
-Field=PSC_MENU_DICT.VIEW_ALL_HOUSEHOLDS
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs24 Select the household you want to work on.\par
-EN=}
-
+---
+fileType: Question Text
+version: CSPro 7.5
+languages:
+  - name: EN
+    label: English
+styles:
+  - name: Normal
+    className: normal
+    css: |
+      font-family: Arial;font-size: 16px;color: #000000;
+  - name: Instruction
+    className: instruction
+    css: |
+      font-family: Arial;font-size: 16px;color: #0000ff;
+  - name: Heading 1
+    className: heading1
+    css: |
+      font-family: Arial;font-size: 36px;
+  - name: Heading 2
+    className: heading2
+    css: |
+      font-family: Arial;font-size: 24px;
+  - name: Heading 3
+    className: heading3
+    css: |
+      font-family: Arial;font-size: 18px;
+questions:
+  - name: PSC_MENU_DICT.ASSIGNMENT_SELECTION
+    conditions:
+      - questionText:
+          EN: |
+            <p>You are logged in as ~~capi_staff_role~~ <span style="font-weight:bold;">~~capi_staff_name~~</span>.</p>
+            <p><br></p>
+            <p>Select the area you want to work in now.</p>
+            
+        helpText:
+          EN: |
+            
+  - name: PSC_MENU_DICT.INTERVIEWER_CODE
+    conditions:
+      - questionText:
+          EN: |
+            <p>Select the interviewer to assign an EA to.</p>
+            
+        helpText:
+          EN: |
+            
+  - name: PSC_MENU_DICT.INTERVIEWER_EA
+    conditions:
+      - questionText:
+          EN: |
+            <p>Select EA to assign to <b>~~capi_manage_staff_name~~</b></p>
+            
+        helpText:
+          EN: |
+            
+  - name: PSC_MENU_DICT.INTERVIEWER_MENU
+    conditions:
+      - questionText:
+          EN: |
+            <p>You are logged in as Interviewer <b>~~capi_staff_name~~</b>. You are working in <b>~~capi_province_name~~</b> province / <b>~~capi_district_name~~</b> district / <b>~~capi_ea_name~~</b>.</p>
+            <p><br></p>
+            <p><b>Household Status: ~~capi_household_complete_count~~</b> completed households. <b>~~capi_household_partial_count~~</b> partially completed households.</p>
+            <p><br></p>
+            <p>Select applicable option.</p>
+            
+        helpText:
+          EN: |
+            
+  - name: PSC_MENU_DICT.LOGIN
+    conditions:
+      - questionText:
+          EN: |
+            <p>Welcome to Popstan Census data collection application (version ~~capi_publish_date~~).</p>
+            
+        helpText:
+          EN: |
+            
+  - name: PSC_MENU_DICT.MANAGE_STAFF
+    conditions:
+      - questionText:
+          EN: |
+            <p>Select staff to manage or add new interviewer.</p>
+            
+        helpText:
+          EN: |
+            
+  - name: PSC_MENU_DICT.MANAGE_STAFF_MEMBER
+    conditions:
+      - questionText:
+          EN: |
+            <p>You are managing information about <b>~~capi_manage_staff_name~~</b></p>
+            <p>Select applicable option.</p>
+            
+        helpText:
+          EN: |
+            
+  - name: PSC_MENU_DICT.MANAGE_STAFF_NAME
+    conditions:
+      - logic: MANAGE_STAFF_NAME <> ""
+        questionText:
+          EN: |
+            <p>Edit the name of <b>~~capi_manage_staff_name~~</b></p>
+            
+        helpText:
+          EN: |
+            
+      - logic: MANAGE_STAFF_NAME = ""
+        questionText:
+          EN: |
+            <p>Enter name of a new interviewer.</p>
+            
+        helpText:
+          EN: |
+            
+  - name: PSC_MENU_DICT.PIN_CODE_CONFIRMATION
+    conditions:
+      - logic: PIN_CODE <> notappl
+        questionText:
+          EN: |
+            <p>You are logged in as <b>~~capi_staff_name~~</b>.</p>
+            <p><br></p>
+            <p>Please enter your pin code.</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PIN_CODE = notappl
+        questionText:
+          EN: |
+            <p>You are logged in as <b>~~capi_staff_name~~</b>.</p>
+            <p><br></p>
+            <p>Please create your pin code.</p>
+            <p><br></p>
+            <p>A pin code is a four digit number that enables you to log into the Popstan Census data collection application. It is recommended to choose a number which you can easily remember and the code should be kept secret.</p>
+            
+            
+        helpText:
+          EN: |
+            
+  - name: PSC_MENU_DICT.SUPERVISOR_ACCESS_PASSWORD
+    conditions:
+      - questionText:
+          EN: |
+            <p>Please enter supervisor password you received from headquarters.</p><p><br></p>
+            <p><span class="instruction">For demonstration purposes use password 1234.</span></p>
+            
+        helpText:
+          EN: |
+            
+  - name: PSC_MENU_DICT.SUPERVISOR_DISTRICT
+    conditions:
+      - questionText:
+          EN: |
+            <p>Select district of your assignment in <span style="font-weight:bold;">~~capi_province_name~~</span> province.</p>
+            
+        helpText:
+          EN: |
+            
+  - name: PSC_MENU_DICT.SUPERVISOR_MENU
+    conditions:
+      - questionText:
+          EN: |
+            <p>You are logged in as Supervisor <b>~~capi_staff_name~~</b>. You are working in <b>~~capi_province_name~~</b> province / <b>~~capi_district_name~~</b> district.</p>
+            <p><br></p>
+            <p><b>EA Status: ~~capi_ea_assigned_count~~</b> assigned EAs.</p>
+            <p><br></p>
+            <p>Select applicable option.</p>
+            
+        helpText:
+          EN: |
+            
+  - name: PSC_MENU_DICT.SUPERVISOR_NAME
+    conditions:
+      - questionText:
+          EN: |
+            <p>Please enter your full name.</p>
+            
+        helpText:
+          EN: |
+            
+  - name: PSC_MENU_DICT.SUPERVISOR_PIN_CODE
+    conditions:
+      - questionText:
+          EN: |
+            <p>Please create your pin code.</p><p><br></p>
+            <p>A pin code is a four digit number that enables you to log into the Popstan Census data collection application. It is recommended to choose a number which you can easily remember and the code should be kept secret.</p>
+            
+            
+        helpText:
+          EN: |
+            
+  - name: PSC_MENU_DICT.SUPERVISOR_PROVINCE
+    conditions:
+      - questionText:
+          EN: |
+            <p>Select province of your assignment.</p>
+            
+        helpText:
+          EN: |
+            
+  - name: PSC_MENU_DICT.VIEW_ALL_HOUSEHOLDS
+    conditions:
+      - questionText:
+          EN: |
+            <p>Select the household you want to work on.</p>
+            
+        helpText:
+          EN: |
+            
+...
