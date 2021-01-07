@@ -12,7 +12,7 @@ File=..\Dictionaries\Household.dcf
 [Form]
 Name=FORM000
 Label=Geocodes
-QuestionTextHeight=186
+QuestionTextHeight=331
 Level=1
 Size=845,396
 CapturePos=320,25
@@ -30,7 +30,7 @@ Item=HH_GPS_READING
 [Form]
 Name=FORM004
 Label=Population Basic
-QuestionTextHeight=264
+QuestionTextHeight=546
 Level=1
 Size=826,471
 CapturePos=835,65
@@ -43,7 +43,7 @@ Item=HH_POPULATION_SECTION
 [Form]
 Name=FORM005
 Label=Population Details
-QuestionTextHeight=148
+QuestionTextHeight=378
 Level=1
 Size=2838,447
 CapturePos=48,440
@@ -55,7 +55,7 @@ Item=POPULATION_DETAILS_ROSTER
 [Form]
 Name=FORM001
 Label=Dwelling Characteristics
-QuestionTextHeight=77
+QuestionTextHeight=148
 Level=1
 Size=1238,691
 CapturePos=330,25

@@ -220,7 +220,7 @@ ZeroFill=Yes
 [ValueSet]
 Label=Year of birth
 Name=DEMBTH_YEAR_VS1
-Value=1896:2017;Known
+Value=1896:2020;Known
 Value=9999;Unknown
 
 [Item]
@@ -966,7 +966,7 @@ ZeroFill=Yes
 [ValueSet]
 Label=Which year started working
 Name=DMJSYR_VS1
-Value=1900:2017;1900-2017
+Value=1900:2021;1900-2021
 
 [Item]
 Label=Which month started working

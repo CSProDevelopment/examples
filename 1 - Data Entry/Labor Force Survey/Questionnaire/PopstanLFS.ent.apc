@@ -9,48 +9,6 @@ string fourWeeksBeforeInterviewDate;
 // For fill in question text for date one year before interview
 string oneYearBeforeInterviewDate;
 
-// Combined multi job and proxy code used in question text condition
-// to workaround fact that question text conditions don't support
-// and/or. Coded as follows:
-//   1 - multiple job holder, direct response
-//   2 - multiple job holder, proxy
-//   3 - single job holder, direct
-//   4 - single job holder, proxy
-numeric multiJobProxy;
-
-// Combined salary and proxy code used in question text condition
-// to workaround fact that question text conditions don't support
-// and/or. Coded as follows:
-//   1 - wage/salary, direct response
-//   2 - wage/salary, proxy
-//   3 - no wage/salary, direct
-//   4 - no wage/salary, proxy
-numeric salaryProxy;
-
-// Combined main job in own business and proxy code used in question text condition
-// to workaround fact that question text conditions don't support
-// and/or. Coded as follows:
-//   1 - own business, direct response
-//   2 - own business, proxy
-//   3 - not own business, direct
-//   4 - not own business, proxy
-numeric ownBusinessProxy;
-
-// Recompute ownBusinessProxy variable.
-// Should be called in onfocus of any fields
-// that use the variable in question text conditions.
-function updateOwnBusinessProxy()
-	if MJBEST = 1 and PXYCHK = 1 then
-		ownBusinessProxy = 1;
-	elseif MJBEST = 1 and PXYCHK = 2 then
-		ownBusinessProxy = 2;
-	elseif MJBEST <> 1 and PXYCHK = 1 then
-		ownBusinessProxy = 3;
-	elseif MJBEST <> 1 and PXYCHK = 2 then
-		ownBusinessProxy = 4;
-	endif;
-end;
-
 // Only individuals with age greater than or equal this
 // age are asked labor questions
 numeric minAgeEligibleForLabor = 15;
@@ -75,7 +33,6 @@ function dayOfWeek(yyyymmdd)
 	numeric diff = datediff(referenceDay, yyyymmdd, "d");
 	dayOfWeek = diff % 7 + 1;
 end;
-
 
 // Convert a numeric month (1 for January, 2 for February...)
 // to a string representation in the currently selected language.
@@ -906,19 +863,6 @@ PROC MJBEST
 
 onfocus
 
-	// Set combined multi job and proxy code used in question text condition
-	// to workaround fact that question text conditions don't support
-	// and/or.
-	if MULTJB = 1 and PXYCHK = 1 then
-		multiJobProxy = 1;
-	elseif MULTJB = 1 and PXYCHK = 2 then
-		multiJobProxy = 2;
-	elseif MULTJB = 2 and PXYCHK = 1 then
-		multiJobProxy = 3;
-	elseif MULTJB = 2 and PXYCHK = 2 then
-		multiJobProxy = 4;
-	endif;
-
 	// Set appropriate value set based on proxy status
 	// and gender of respondent
 	if PXYCHK = 1 then
@@ -968,21 +912,6 @@ preproc
 
 	// For employed persons not working in their own business
 	ask if MJBEST in 2:5;
-
-onfocus
-
-	// Set combined salary and proxy code used in question text condition
-	// to workaround fact that question text conditions don't support
-	// and/or.
-	if MJBSAL = 1 and PXYCHK = 1 then
-		salaryProxy = 1;
-	elseif MJBSAL = 1 and PXYCHK = 2 then
-		salaryProxy = 2;
-	elseif MJBSAL = 2 and PXYCHK = 1 then
-		salaryProxy = 3;
-	elseif MJBSAL = 2 and PXYCHK = 2 then
-		salaryProxy = 4;
-	endif;
 
 
 PROC MJBTRI
@@ -1103,10 +1032,6 @@ preproc
 	// Only ask for non-domestic workers
 	ask if DMWCHK <> 1;
 
-onfocus
-
-	updateOwnBusinessProxy();
-
 
 PROC IMJNAM
 
@@ -1115,10 +1040,6 @@ preproc
 	// Only ask if business has name
 	ask if IMJREF = 1;
 
-onfocus
-
-	updateOwnBusinessProxy();
-
 
 PROC IMJMAC
 
@@ -1126,10 +1047,6 @@ preproc
 
 	// Only ask for non-domestic workers
 	ask if DMWCHK <> 1;
-
-onfocus
-
-	updateOwnBusinessProxy();
 
 
 PROC IMJEND
@@ -1149,14 +1066,6 @@ preproc
 	else
 		DMJSTART  = 1;
 	endif;
-
-
-PROC DMJSYR
-
-onfocus
-
-	updateOwnBusinessProxy();
-
 
 PROC DMJEND
 

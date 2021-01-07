@@ -1,1800 +1,1706 @@
-﻿[CAPI QUESTIONS]
-Version=CSPro 7.5
-
-[LANGUAGES]
-EN=English
-
-[QUESTION]
-Field=POPSTANLFS_DICT.ABSDUR
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 Including the time that you have been absent, will you return to that same job or business in 3 months or less?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.ABSDUR
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 Including the time that %NAME(LBPPNO)% has been absent, will %NAME(LBPPNO)% return to that same job or business in 3 months or less?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.ABSJOB
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 Even though you did not work, in the last week did you have a paid job or a business?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.ABSJOB
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 Even though %NAME(LBPPNO)% did not work, in the last week did %NAME(LBPPNO)% have a paid job or a business?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.ABSPAY
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 Do you continue to receive an income from your job or business during this absence?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.ABSPAY
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 Does %NAME(LBPPNO)% continue to receive an income from his/her job or business during this absence?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.ABSSEA
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 During the off-season, do you continue to do some work for that job or business?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.ABSSEA
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 During the off-season, does %NAME(LBPPNO)% continue to do some work for that job or business?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.ABSWHY
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 Why did you not work during the last week?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.ABSWHY
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 Why did %NAME(LBPPNO)% not work during the last week?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.ABSWHY_OTHER
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\i\fs19 Specify the other reason for not working during the last week.\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.ACDYSM
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 In the last week, that is from %weekBeforeInterviewDate% up to yesterday, on which days did you work in your main job?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.ACDYSM
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 In the last week, that is from %weekBeforeInterviewDate% up to yesterday, on which days did %NAME(LBPPNO)% work in his/her main job?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.ACDYSS
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 In the last week, that is from %weekBeforeInterviewDate% up to yesterday, on which days did you work in your second job?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.ACDYSS
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 In the last week, that is from %weekBeforeInterviewDate% up to yesterday, on which days did %NAME(LBPPNO)% work in his/her second job?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.ACEQUM
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 Is that the number of hours you usually work per week in your main job?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.ACEQUM
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 Is that the number of hours %NAME(LBPPNO)% usually works per week in his/her main job?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.ACEQUO
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 Is that the number of hours you usually work per week in your other jobs?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.ACEQUO
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 Is that the number of hours %NAME(LBPPNO)% usually works per week in his/her other jobs?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.ACEQUS
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 Is that the number of hours you usually work per week in your second job?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.ACEQUS
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 Is that the number of hours %NAME(LBPPNO)% usually works per week in his/her second job?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.ACHRCM
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 This means that you worked \b %ACHRSUMMJ%\b0  hours in total in your main job in the last week, is this correct?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.ACHRCM
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 This means that %NAME(LBPPNO)% worked \b %ACHRSUMMJ%\b0  hours in total in his/her main job in the last week, is this correct?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.ACHRCS
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 This means that you worked \b %ACHRSUMSJ% \b0 hours in total in your second job in the last week, is this correct?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.ACHRCS
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 This means that %NAME(LBPPNO)% worked \b %ACHRSUMSJ% \b0 hours in total in his/her second job in the last week, is this correct?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.ACHRM1
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 On average how many hours per day did you work in your main job in the last week?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.ACHRM1
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 On average how many hours per day did %NAME(LBPPNO)% work in his/her main job in the last week?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.ACHRS1
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 On average how many hours per day did you work in your second job in the last week?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.ACHRS1
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 On average how many hours per day did %NAME(LBPPNO)% work in his/her second job in the last week?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.ACHRSM
-Condition=PXYCHK = 1
-Occurrences=1:7
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 And how many hours did you work in your main job on %getocclabel%?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.ACHRSM
-Condition=PXYCHK = 2
-Occurrences=1:7
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 And how many hours did %NAME(LBPPNO)% work in his/her main job on %getocclabel%?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.ACHRSO
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 How many hours in total did you work in your other jobs in the last week?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.ACHRSO
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 How many hours in total did %NAME(LBPPNO)% work in his/her other jobs in the last week?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.ACHRSS
-Condition=PXYCHK = 1
-Occurrences=1:7
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 And how many hours did you work in your second job on %getocclabel%?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.ACHRSS
-Condition=PXYCHK = 2
-Occurrences=1:7
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 And how many hours did %NAME(LBPPNO)% work in his/her second job on %getocclabel%?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.ACHRUM
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 How many hours did you work in your main job in total in the last week?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.ACHRUM
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 How many hours did %NAME(LBPPNO)% work in his/her main job in total in the last week?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.ACHRUS
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 How many hours did you work in your second job in total in the last week?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.ACHRUS
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 How many hours did %NAME(LBPPNO)% work in his/her second job in total in the last week?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.AGFANY
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 In the last week did you do any work in farming, rearing animals, fishing or fish farming?\i\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.AGFANY
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 In the last week did %NAME(LBPPNO)% do any work in farming, rearing animals, fishing or fish farming?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.AGFCHK
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 Was this work that you mentioned in\'85?\par
-EN=\par
-EN=\i READ EACH RESPONSE CATEGORY AND MARK ALL THAT APPLY\i0\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.AGFDYS
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 During the last week, on how many days did you do this work?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.AGFDYS
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 During the last week, on how many days did %NAME(LBPPNO)% do this work?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.AGFGDS
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 What are the main products from farming or fishing that you were working on?\par
-EN=\i  \i0 (for example: citrus fruits,  vegetables, freshwater fish, cattle, chicken, rice)\par
-EN=\i\par
-EN=Interviewer: If multiple are listed ask the respondent to indicate which was the main ones as self identified (see explanatory notes for more guidance).\i0\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.AGFGDS
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 What are the main products from farming or fishing that %NAME(LBPPNO)% was working on?\par
-EN=\i  \i0 (for example: citrus fruits,  vegetables, freshwater fish, cattle, chicken, rice)\par
-EN=\i\par
-EN=Interviewer: If multiple are listed ask the respondent to indicate which was the main ones as self identified (see explanatory notes for more guidance).\i0\par
-EN=\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.AGFHIR
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 Were you hired by someone else to do this work?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.AGFHIR
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 Was %NAME(LBPPNO)% hired by someone else to do this work?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.AGFHIS
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 In general, in the past have these products been mainly sold or mainly kept for family use?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.AGFHRS
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 How many hours per day did you spend doing this in the last week?\par
-EN=\par
-EN=\i Number to be entered should be the average for those days the respondent actually worked.\i0\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.AGFHRS
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 How many hours per day did %NAME(LBPPNO)% spend doing this in the last week?\par
-EN=\par
-EN=\i Number to be entered should be the average for those days the respondent actually worked.\i0\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.AGFMAI
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 Does the household intend to sell\'85..?\par
-EN=\par
-EN=\i READ THE CATEGORIES AND MARK ONLY ONE. IF THE RESPONDENT CANNOT SAY THEN MARK '03 CANNOT SAY' BUT DO NOT READ OUT THAT CATEGORY\i0\par
-EN=\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.AGFMKT
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 Thinking about the products you worked on, are they intended\'85\'85?\par
-EN=\par
-EN=\i READ CATEGORIES AND MARK ONE\i0\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.AGFMKT
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 Thinking about the products %NAME(LBPPNO)% worked on, are they intended\'85\'85 ?\par
-EN=\par
-EN=\i READ CATEGORIES AND MARK ONE\i0\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.AGFOCC
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 What are the main tasks that you do in this activity?\par
-EN=\par
-EN=\i Record the main tasks undertaken by the respondent in their farming or fishing work\i0\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.AGFOCC
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 What are the main tasks that %NAME(LBPPNO)% does in this activity?\par
-EN=\par
-EN=\i Record the main tasks undertaken by the respondent in their farming or fishing work\i0\par
-EN=\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.AVLMRH
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 Could you start working more hours within the next two weeks?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.AVLMRH
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 Could %NAME(LBPPNO)% start working more hours within the next two weeks?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.DEMAG1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 How old is %NAME%?\par
-EN=\par
-EN=\i Enter '00' if less than 1 year.\i0\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.DEMBTH_DAY
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 What is %NAME%'s date of birth?\par
-EN=\par
-EN=\i Enter the day of birth. If it is unknown enter '99'.\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.DEMBTH_MONTH
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\i\fs19 Enter the month of birth. If it is unknown enter '99'.\i0\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.DEMBTH_YEAR
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\i\fs19 Enter the year of birth. If it is unknown enter '99'.\i0\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.DEMEDC
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 Is %NAME% currently attending school?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.DEMEDL
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 What is the highest level of education that %NAME% has completed?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.DEMMORE
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 Are there additional household members?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.DEMREL
-Occurrences=1:1
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\i\fs19 Please verify that %NAME% is the head of the household/reference person\i0\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.DEMREL
-Occurrences=2:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 What is %NAME%'s relationship to %NAME(1)%?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.DEMSEX
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 Is %NAME% male or female?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.DMJSMO
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Calibri;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18\lang4108 And which month?\f1\fs20\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.DMJSYR
-Condition=ownBusinessProxy = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18\lang4108 Which year did you start your business?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.DMJSYR
-Condition=ownBusinessProxy = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Calibri;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18\lang4108 Which year did %NAME(LBPPNO)% start his/her business?\f1\fs20\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.DMJSYR
-Condition=ownBusinessProxy = 3
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18\lang4108 Which year did you begin working for %IMJNAM%?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.DMJSYR
-Condition=ownBusinessProxy = 4
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18\lang4108 Which year did %NAME(LBPPNO)% begin working for %IMJNAM%?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.DMWCHK
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Calibri;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18 Do you provide domestic services for the household (e.g. cleaning, cooking or taking care of children)?\f1\fs20\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.DMWCHK
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18\lang2057 Does %NAME(LBPPNO)% provide domestic services for the household (e.g. cleaning, cooking or taking care of children)?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.DMWHBE
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Calibri;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18 Is your main work in the household business? \f1\fs20\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.DMWHBE
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18\lang2057 Is %NAME(LBPPNO)%'s main work in the household business? \par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.DMWHHB
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Calibri;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18 Is the household you work for operating a business?  (e.g. making goods or providing serivces for sale)\f1\fs20\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.DMWHHB
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18\lang2057 Is the household %NAME(LBPPNO)% works for operating a business?  (e.g. making goods or providing serivces for sale)\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.DMWOCC
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Calibri;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18 What are your main tasks and duties?\f1\fs20\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.DMWOCC
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18\lang2057 What are %NAME(LBPPNO)%'s main tasks and duties?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.EMPFAM
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 In the last week, did you help with the paid job or business of a household or family member?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.EMPFAM
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 In the last week, did %NAME(LBPPNO)% help with the paid job or business of a household or family member?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.EMPPAY
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 In the last week, that is from %weekBeforeInterviewDate% up to yesterday did you do any work for a wage, salary or any other pay, even if only for one hour?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.EMPPAY
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 In the last week, that is from %weekBeforeInterviewDate% up to yesterday did %NAME(LBPPNO)% do any work for a wage, salary or any other pay, even if only for one hour?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.EMPPFT
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 In the last week, did you run or do any kind of business, farming or other activity to generate income, even if only for one hour?\par
-EN=\par
-EN=\i READ ONLY IF NEEDED:\par
-EN=For example: making things for sale, growing produce for sale, buying and reselling things, provided services for pay, raising or catching animals or fish for sale\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.EMPPFT
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 In the last week, did %NAME(LBPPNO)% run or do any kind of business, farming or other activity to generate income, even if only for one hour?\par
-EN=\par
-EN=\i READ ONLY IF NEEDED:\par
-EN=For example: making things for sale, growing produce for sale, buying and reselling things, provided services for pay, raising or catching animals or fish for sale\par
-EN=\i0\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.IMJISIC
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\deflang2057{\fonttbl{\f0\fswiss\fprq2\fcharset0 Calibri;}}
-EN={\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\lang4108\f0\fs20 Please write the main activity code from ISIC revision 4\lang2057\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.IMJMAC
-Condition=ownBusinessProxy = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Calibri;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18 What is the main activity of your business?\par
-EN=\par
-EN=\i Interviewer: WRITE:\par
-EN= -MAIN ACTIVITY, GOODS OR DOMESTIC SERVICES\par
-EN=(e.g.: Police Department - public safety; Restaurant - preparing and serving meals; Transport Company - long distance transport of goods) \f1\fs20\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.IMJMAC
-Condition=ownBusinessProxy = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Calibri;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18 What is the main activity of %NAME(LBPPNO)%'s business?\par
-EN=\i\par
-EN=Interviewer: WRITE:\par
-EN= -MAIN ACTIVITY, GOODS OR DOMESTIC SERVICES\par
-EN=(e.g.: Police Department - public safety; Restaurant - preparing and serving meals; Transport Company - long distance transport of goods) \f1\fs20\par
-EN=\i0\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.IMJMAC
-Condition=ownBusinessProxy = 3
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Calibri;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18\lang2057 What is the main activity of the organization/business where you work?\par
-EN=\i\par
-EN=Interviewer: WRITE:\par
-EN= -MAIN ACTIVITY, GOODS OR DOMESTIC SERVICES\par
-EN=(e.g.: Police Department - public safety; Restaurant - preparing and serving meals; Transport Company - long distance transport of goods) \f1\fs20\par
-EN=\i0\par
-EN=\f0\fs18\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.IMJMAC
-Condition=ownBusinessProxy = 4
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18\lang2057 What is the main activity of the organization/business where %NAME(LBPPNO)% works?\par
-EN=\i\par
-EN=Interviewer: WRITE:\par
-EN= -MAIN ACTIVITY, GOODS OR DOMESTIC SERVICES\par
-EN=(e.g.: Police Department - public safety; Restaurant - preparing and serving meals; Transport Company - long distance transport of goods) \i0\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.IMJNAM
-Condition=ownBusinessProxy = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Calibri;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18 What is the name of your business?\f1\fs20\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.IMJNAM
-Condition=ownBusinessProxy = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Calibri;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18 What is the name of %NAME(LBPPNO)%'s business?\f1\fs20\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.IMJNAM
-Condition=ownBusinessProxy = 3
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18\lang2057 What is the name of the organization / business where you work?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.IMJNAM
-Condition=ownBusinessProxy = 4
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18\lang2057 What is the name of the organization / business where %NAME(LBPPNO)% works?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.IMJREF
-Condition=ownBusinessProxy = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Calibri;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs20 Does your business have a name?\f1\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.IMJREF
-Condition=ownBusinessProxy = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Calibri;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs20 Does %NAME(LBPPNO)%'s business have a name?\f1\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.IMJREF
-Condition=ownBusinessProxy = 3
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Calibri;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18 Does the organisation/business where you work have a name?\f1\fs20\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.IMJREF
-Condition=ownBusinessProxy = 4
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18\lang2057 Does the organisation/business where %NAME(LBPPNO)% works have a name?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.LBPPNO
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\i\fs19 Please choose the next household member to interview. For the first interview choose the head of household. However, if not available, the first interview should be with the person who provided the household demographic information. Then proceed in the same order as in the demographics section.\i0\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.MJBDEE
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Calibri;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18 Is your employer responsible for deducting any taxes on your income or is that your responsibility? \f1\fs20\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.MJBDEE
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18\lang2057 Is %NAME(LBPPNO)%'s employer responsible for deducting any taxes on your income or is that %NAME(LBPPNO)%'s responsibility? \par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.MJBEST
-Condition=multiJobProxy = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19\lang1033 I am now going to ask you some questions about your main job. The main job is the one where you usually work the highest number of hours even if you were temporarily absent in the last (week/7days).\par
-EN=\par
-EN=In your main job, do you work\'85? \par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.MJBEST
-Condition=multiJobProxy = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\brdrb\brdrs\brdrw30\brsp20 \sl276\slmult1\f0\fs18 I am now going to ask you some questions about %NAME(LBPPNO)%\rquote s main job.  The main job is the one where %NAME(LBPPNO)% usually works the highest number of hours even if %NAME(LBPPNO)% was temporarily absent in the last (week/7days).\par
-EN=\par
-EN=In %NAME(LBPPNO)%'s main job, does %NAME(LBPPNO)% work\'85? \par
-EN=
-EN=\pard\cf1\f1\fs19\lang1033\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.MJBEST
-Condition=multiJobProxy = 3
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\brdrb\brdrs\brdrw30\brsp20 \sl276\slmult1\f0\fs18\lang2057 In your main job, do you work\'85? \par
-EN=
-EN=\pard\cf1\f1\fs24\lang1033\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.MJBEST
-Condition=multiJobProxy = 4
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\brdrb\brdrs\brdrw30\brsp20 \sl276\slmult1\f0\fs18\lang2057 In %NAME(LBPPNO)%'s main job, does %NAME(LBPPNO)% work\'85? \par
-EN=
-EN=\pard\cf1\f1\fs24\lang1033\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.MJBINS
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Calibri;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18 Are you employed by\'85.\f1\fs20\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.MJBINS
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18\lang2057 Is %NAME(LBPPNO)% employed by\'85.\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.MJBPLC
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Calibri;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18 Is your work typically carried out at\'85..\f1\fs20\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.MJBPLC
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18\lang2057 Is %NAME(LBPPNO)%'s work typically carried out at\'85..\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.MJBREM
-Condition=salaryProxy = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Calibri;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18  Do you receive any other form of payment? \f1\fs20\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.MJBREM
-Condition=salaryProxy = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Calibri;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18  Does %NAME(LBPPNO)% receive any other form of payment? \f1\fs20\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.MJBREM
-Condition=salaryProxy = 3
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18\lang2057 Do you receive any additional form of payment?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.MJBREM
-Condition=salaryProxy = 4
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18\lang2057 Does %NAME(LBPPNO)% receive any additional form of payment?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.MJBSAL
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Calibri;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18 Are you paid a wage or salary for this work?  \f1\fs20\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.MJBSAL
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18\lang2057 Is %NAME(LBPPNO)% paid a wage or salary for this work?  \par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.MJBSIZ
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Calibri;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18 How many persons including you work at your place of work?\f1\fs20\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.MJBSIZ
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18\lang2057 How many persons including %NAME(LBPPNO)% work at %NAME(LBPPNO)%'s place of work?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.MJBTRI
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Calibri;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18 Were you being paid for that work...\f1\fs20\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.MJBTRI
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18\lang2057 Was %NAME(LBPPNO)% being paid for that work...\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.MULTJB
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs18 During the last (week/7 days) did you have more than one job/business?\fs24\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.MULTJB
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs18\lang2057 During the last (week/7 days) did %NAME(LBPPNO)% have more than one job/business?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.NAME
-Occurrences=1:1
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 What is name of the head or reference person?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.NAME
-Occurrences=2:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 What is the name of the next member of the household?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.NMMRHR
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 How many additional hours per week could you work?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.NMMRHR
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 How many additional hours per week could %NAME(LBPPNO)% work?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.NUMJBS
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 You said previously that you had more than one job in the reference week. How many jobs did you have?\par
-EN=
-EN=\pard\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.NUMJBS
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 You said previously that %NAME(LBPPNO)% had more than one job in the reference week. How many jobs did he/she have?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.OMJMTD
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Calibri;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18\lang4108 What are your main tasks and duties?\f1\fs20\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.OMJMTD
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18\lang4108 What are %NAME(LBPPNO)%'s main tasks and duties?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.OMJTLE
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Calibri;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18\lang4108 What is your position/job title?\f1\fs20\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.OMJTLE
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18\lang4108 What is %NAME(LBPPNO)%'s position/job title?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.PXYCHK
-Condition=DEMSEX(LBPPNO)=1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\i\fs19 Interviewer: Is %NAME(LBPPNO)% himself responding to the questions?\i0\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.PXYCHK
-Condition=DEMSEX(LBPPNO)=2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\i\fs19 Interviewer: is %NAME(LBPPNO)% herself responding to the questions?\i0\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.PXYPPN
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\i\fs19 Interviewer: select the person responding to the questions.\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.PXYREL
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 Can you let me know what is your relationship to %NAME(LBPPNO)%?\i\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.PXYRSP
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 Now I would like to talk to %NAME(LBPPNO)%. Is %NAME(LBPPNO)% available?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.SRHACT
-Condition=PXYCHK=1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Calibri;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\brdrb\brdrs\brdrw30\brsp20 \sl276\slmult1\f0\fs18 In addition to reading job advertisements, did you do anything else in the last four weeks to find a paid job or to start a business?\i\f1\fs22\lang4108\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.SRHACT
-Condition=PXYCHK=2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Calibri;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\brdrb\brdrs\brdrw30\brsp20 \sl276\slmult1\f0\fs18 In addition to reading job advertisements, did %NAME(LBPPNO)% do anything else in the last four weeks to find a paid job or to start a business?\b\f1\fs20\par
-EN=
-EN=\pard\b0\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.SRHAVL
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18\lang4108 Or, could you start working within the next two weeks?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.SRHAVL
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18\lang4108 Or, could %NAME(LBPPNO)% start working within the next two weeks?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.SRHAVN
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18\lang4108 If a job or business opportunity had been available, could you have started working last  week?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.SRHAVN
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18\lang4108 If a job or business opportunity had been available, could %NAME(LBPPNO)% have started working last  week?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.SRHBUS
-Condition=PXYCHK=1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs18\lang4108 Or did you try to start a business?\fs24\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.SRHBUS
-Condition=PXYCHK=2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs18\lang4108 Or did %NAME(LBPPNO)% try to start a business?\fs24\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.SRHDES
-Condition=PXYCHK=1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Calibri;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18\lang4108 At present, do you want to work?\f1\fs22\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.SRHDES
-Condition=PXYCHK=2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Calibri;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18\lang4108 At present, does %NAME(LBPPNO)% want to work?\f1\fs22\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.SRHDUR
-Condition=PXYCHK=1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Calibri;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\sa160\sl252\slmult1\f0\fs18 For how long have you been without work and trying to find a paid job or start a business?\f1\fs22\par
-EN=
-EN=\pard\i\fs20\lang4108\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.SRHDUR
-Condition=PXYCHK=2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Calibri;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\sa160\sl252\slmult1\f0\fs18 For how long has %NAME(LBPPNO)% been without work and trying to find a paid job or start a business?\f1\fs22\par
-EN=
-EN=\pard\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.SRHDWY
-Condition=PXYCHK=1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Calibri;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\sa160\sl252\slmult1\f0\fs18 What is the main reason why you did not try to find a paid job or start a business in the last four weeks?\f1\fs22\par
-EN=
-EN=\pard\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.SRHDWY
-Condition=PXYCHK=2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Calibri;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\sa160\sl252\slmult1\f0\fs18 What is the main reason why %NAME(LBPPNO)% did not try to find a paid job or start a business in the last four weeks?\f1\fs22\par
-EN=
-EN=\pard\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.SRHDWY_OTHER
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\deflang2057{\fonttbl{\f0\fswiss\fprq2\fcharset0 Calibri;}}
-EN={\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\lang4108\i\f0\fs22 INTERVIEWER: ENTER THE OTHER REASON GIVEN BY THE RESPONDENT\lang2057\i0\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.SRHFAN
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18\lang4108 If it depended on you, could you have started working last week in this new job or business?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.SRHFAN
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18\lang4108 If it depended on %NAME(LBPPNO)%, could %NAME(LBPPNO)% have started working last week in this new job or business?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.SRHFTR
-Condition=PXYCHK=1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Calibri;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18\lang4108 How soon do you expect to start working in this new job or business?\i\f1\fs22\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.SRHFTR
-Condition=PXYCHK=2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Calibri;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18\lang4108 How soon does %NAME(LBPPNO)% expect to start working in this new job or business?\f1\fs22\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.SRHJOB
-Condition=PXYCHK=1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs18\lang4108 During the last four weeks, that is from \fs19\lang1033 %fourWeeksBeforeInterviewDate%\fs18\lang4108  up to yesterday did you do anything to find a paid  job?\fs24\lang2057\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.SRHJOB
-Condition=PXYCHK=2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs18\lang4108 During the last four weeks, that is from \fs19\lang1033 %fourWeeksBeforeInterviewDate%\fs18\lang4108  up to yesterday did %NAME(LBPPNO)% do anything to find a paid  job?\fs24\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.SRHMAC
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18\lang4108 Which of the following best describes what you are mainly doing at present?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.SRHMAC
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18\lang4108 Which of the following best describes what %NAME(LBPPNO)% is mainly doing at present?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.SRHMAC_OTHER
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\i\f0\fs18\lang4108 INTERVIEWER: ENTER OTHER MAIN ACTIVITY GIVEN BY RESPONDENT\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.SRHMTD
-Condition=PXYCHK=1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs18\lang4108 What did you mainly do in the last four weeks to find a paid job or start a business?\fs24\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.SRHMTD
-Condition=PXYCHK=2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18 What did %NAME(LBPPNO)% mainly do in the last four weeks to find a paid job or to start a business?\cf1\f1\fs24\lang4108\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.SRHMTD_OTHER
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Calibri;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\i\f0\fs18\lang4108 INTERVIEWER: ENTER THE OTHER METHOD USED\i0\f1\fs22\lang2057\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.SRHNAR
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18\lang4108 Why is that?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.SRHOTH
-Condition=PXYCHK=1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Calibri;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18\lang4108 What else did you do?\f1\fs20\lang2057\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.SRHOTH
-Condition=PXYCHK=2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Calibri;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18\lang4108 What else did %NAME% do?\f1\fs20\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.SRHOTH_OTHER
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Calibri;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\i\f0\fs18\lang4108 INTERVIEWER: ENTER OTHER SEARCH METHOD USED\i0\f1\fs20\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.SRHYER
-Condition=PXYCHK=1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Calibri;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18\lang4108 At any time in the last 12 months, that is since %oneYearBeforeInterviewDate%, did you look for a paid job or try to start  a business?\f1\fs22\lang2057\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.SRHYER
-Condition=PXYCHK=2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fswiss\fprq2\fcharset0 Calibri;}}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\f0\fs18\lang4108 At any time in the last 12 months, that is since %oneYearBeforeInterviewDate%, did %NAME(LBPPNO)% look for a paid job or try to start  a business?\f1\fs22\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.SROTJB
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 During the last four weeks, that is from %fourWeeksBeforeInterviewDate% up to yesterday did you look for additional or other paid work?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.SROTJB
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 During the last four weeks, that is from %fourWeeksBeforeInterviewDate% up to yesterday did %NAME(LBPPNO)% look for additional or other paid work?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.USHRSM
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 How many hours do you usually work per week in your main job?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.USHRSM
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 How many hours does %NAME(LBPPNO)% usually work per week in his/her main job?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.USHRSO
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 How many hours do you usually work per week in your other jobs?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.USHRSO
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 How many hours does %NAME(LBPPNO)% usually work per week in his/her other jobs?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.USHRSS
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 How many hours do you usually work per week in your second job?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.USHRSS
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 How many hours does %NAME(LBPPNO)% usually work per week in his/her second job?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.WNTMRH
-Condition=PXYCHK = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 Would you want to work more hers per week than usually worked, provided the extra hours are paid?\par
-EN=}
-
-[QUESTION]
-Field=POPSTANLFS_DICT.WNTMRH
-Condition=PXYCHK = 2
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 Would %NAME(LBPPNO)% want to work more hers per week than usually worked, provided the extra hours are paid?\par
-EN=}
-
-[HELP]
-Field=POPSTANLFS_DICT.NAME
-Occurrences=2:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 Include all persons living in this house who have common arrangements for cooking and dining.\par
-EN=}
-
+﻿---
+fileType: Question Text
+version: CSPro 7.5
+languages:
+  - name: EN
+    label: English
+styles:
+  - name: Normal
+    className: normal
+    css: |
+      font-family: Arial;font-size: 16px;
+      
+  - name: Instruction
+    className: instruction
+    css: |
+      font-family: Arial;font-style: italic;font-size: 14px;color: #000000;
+      
+  - name: Heading 1
+    className: heading1
+    css: |
+      font-family: Arial;font-size: 36px;
+      
+  - name: Heading 2
+    className: heading2
+    css: |
+      font-family: Arial;font-size: 24px;
+      
+  - name: Heading 3
+    className: heading3
+    css: |
+      font-family: Arial;font-size: 18px;
+      
+questions:
+  - name: DEMBTH_BLOCK
+    conditions:
+      - questionText:
+          EN: |
+            <p>What is ~~NAME~~'s date of birth?</p>
+            
+  - name: POPSTANLFS_DICT.ABSDUR
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>Including the time that you have been absent, will you return to that same job or business in 3 months or less?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>Including the time that ~~NAME(LBPPNO)~~ has been absent, will ~~NAME(LBPPNO)~~ return to that same job or business in 3 months or less?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.ABSJOB
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>Even though you did not work, in the last week did you have a paid job or a business?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>Even though ~~NAME(LBPPNO)~~ did not work, in the last week did ~~NAME(LBPPNO)~~ have a paid job or a business?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.ABSPAY
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>Do you continue to receive an income from your job or business during this absence?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>Does ~~NAME(LBPPNO)~~ continue to receive an income from his/her job or business during this absence?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.ABSSEA
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>During the off-season, do you continue to do some work for that job or business?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>During the off-season, does ~~NAME(LBPPNO)~~ continue to do some work for that job or business?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.ABSWHY
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>Why did you not work during the last week?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>Why did ~~NAME(LBPPNO)~~ not work during the last week?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.ABSWHY_OTHER
+    conditions:
+      - questionText:
+          EN: |
+            <p><span class="instruction">Specify the other reason for not working during the last week.</span></p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.ACDYSM
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>In the last week, that is from ~~weekBeforeInterviewDate~~ up to yesterday, on which days did you work in your main job?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>In the last week, that is from ~~weekBeforeInterviewDate~~ up to yesterday, on which days did ~~NAME(LBPPNO)~~ work in his/her main job?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.ACDYSS
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>In the last week, that is from ~~weekBeforeInterviewDate~~ up to yesterday, on which days did you work in your second job?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>In the last week, that is from ~~weekBeforeInterviewDate~~ up to yesterday, on which days did ~~NAME(LBPPNO)~~ work in his/her second job?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.ACEQUM
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>Is that the number of hours you usually work per week in your main job?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>Is that the number of hours ~~NAME(LBPPNO)~~ usually works per week in his/her main job?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.ACEQUO
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>Is that the number of hours you usually work per week in your other jobs?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>Is that the number of hours ~~NAME(LBPPNO)~~ usually works per week in his/her other jobs?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.ACEQUS
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>Is that the number of hours you usually work per week in your second job?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>Is that the number of hours ~~NAME(LBPPNO)~~ usually works per week in his/her second job?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.ACHRCM
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>This means that you worked <b>~~ACHRSUMMJ~~</b> hours in total in your main job in the last week, is this correct?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>This means that ~~NAME(LBPPNO)~~ worked <b>~~ACHRSUMMJ~~</b> hours in total in his/her main job in the last week, is this correct?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.ACHRCS
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>This means that you worked <b>~~ACHRSUMSJ~~</b> hours in total in your second job in the last week, is this correct?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>This means that ~~NAME(LBPPNO)~~ worked <b>~~ACHRSUMSJ~~</b> hours in total in his/her second job in the last week, is this correct?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.ACHRM1
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>On average how many hours per day did you work in your main job in the last week?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>On average how many hours per day did ~~NAME(LBPPNO)~~ work in his/her main job in the last week?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.ACHRS1
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>On average how many hours per day did you work in your second job in the last week?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>On average how many hours per day did ~~NAME(LBPPNO)~~ work in his/her second job in the last week?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.ACHRSM
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>And how many hours did you work in your main job on ~~getocclabel()~~?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>And how many hours did ~~NAME(LBPPNO)~~ work in his/her main job on ~~getocclabel()~~?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.ACHRSO
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>How many hours in total did you work in your other jobs in the last week?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>How many hours in total did ~~NAME(LBPPNO)~~ work in his/her other jobs in the last week?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.ACHRSS
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>And how many hours did you work in your second job on ~~getocclabel()~~?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>And how many hours did ~~NAME(LBPPNO)~~ work in his/her second job on ~~getocclabel()~~?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.ACHRUM
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>How many hours did you work in your main job in total in the last week?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>How many hours did ~~NAME(LBPPNO)~~ work in his/her main job in total in the last week?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.ACHRUS
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>How many hours did you work in your second job in total in the last week?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>How many hours did ~~NAME(LBPPNO)~~ work in his/her second job in total in the last week?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.AGFANY
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>In the last week did you do any work in farming, rearing animals, fishing or fish farming?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>In the last week did ~~NAME(LBPPNO)~~ do any work in farming, rearing animals, fishing or fish farming?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.AGFCHK
+    conditions:
+      - questionText:
+          EN: |
+            <p>Was this work that you mentioned in…?</p>
+            <p><br></p>
+            <p><span class="instruction">READ EACH RESPONSE CATEGORY AND MARK ALL THAT APPLY</span></p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.AGFDYS
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>During the last week, on how many days did you do this work?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>During the last week, on how many days did ~~NAME(LBPPNO)~~ do this work?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.AGFGDS
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>What are the main products from farming or fishing that you were working on?</p>
+            <p>(for example: citrus fruits,  vegetables, freshwater fish, cattle, chicken, rice)</p>
+            <p><br></p>
+            <p><span class="instruction">Interviewer: If multiple are listed ask the respondent to indicate which was the main ones as self identified (see explanatory notes for more guidance).</span></p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>What are the main products from farming or fishing that ~~NAME(LBPPNO)~~ was working on?</p>
+            <p>(for example: citrus fruits,  vegetables, freshwater fish, cattle, chicken, rice)</p>
+            <p><br></p>
+            <p><span class="instruction">Interviewer: If multiple are listed ask the respondent to indicate which was the main ones as self identified (see explanatory notes for more guidance).</span></p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.AGFHIR
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>Were you hired by someone else to do this work?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>Was ~~NAME(LBPPNO)~~ hired by someone else to do this work?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.AGFHIS
+    conditions:
+      - questionText:
+          EN: |
+            <p>In general, in the past have these products been mainly sold or mainly kept for family use?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.AGFHRS
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>How many hours per day did you spend doing this in the last week?</p><p><br></p>
+            <p><span class="instruction">Number to be entered should be the average for those days the respondent actually worked.</span></p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>How many hours per day did ~~NAME(LBPPNO)~~ spend doing this in the last week?</p>
+            <p><br></p>
+            <p><span class="instruction">Number to be entered should be the average for those days the respondent actually worked.</span></p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.AGFMAI
+    conditions:
+      - questionText:
+          EN: |
+            <p>Does the household intend to sell…..?</p>
+            <p><br></p>
+            <p><span class="instruction">READ THE CATEGORIES AND MARK ONLY ONE. IF THE RESPONDENT CANNOT SAY THEN MARK '03 CANNOT SAY' BUT DO NOT READ OUT THAT CATEGORY</span></p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.AGFMKT
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>Thinking about the products you worked on, are they intended……?</p>
+            <p><br></p>
+            <p><span class="instruction">READ CATEGORIES AND MARK ONE</span></p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>Thinking about the products ~~NAME(LBPPNO)~~ worked on, are they intended…… ?</p>
+            <p><br></p>
+            <p><span class="instruction">READ CATEGORIES AND MARK ONE</span></p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.AGFOCC
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>What are the main tasks that you do in this activity?</p>
+            <p><br></p>
+            <p><span class="instruction">Record the main tasks undertaken by the respondent in their farming or fishing work</span></p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>What are the main tasks that ~~NAME(LBPPNO)~~ does in this activity?</p>
+            <p><br></p>
+            <p><span class="instruction">Record the main tasks undertaken by the respondent in their farming or fishing work</span></p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.AVLMRH
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>Could you start working more hours within the next two weeks?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>Could ~~NAME(LBPPNO)~~ start working more hours within the next two weeks?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.DEMAG1
+    conditions:
+      - questionText:
+          EN: |
+            <p>How old is ~~NAME~~?</p>
+            <p><br></p>
+            <p><span class="instruction">Enter '00' if less than 1 year.</span></p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.DEMBTH_DAY
+    conditions:
+      - questionText:
+          EN: |
+            <p><span class="instruction">Enter the day of birth. If it is unknown enter '99'.</span></p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.DEMBTH_MONTH
+    conditions:
+      - questionText:
+          EN: |
+            <p><span class="instruction">Enter the month of birth. If it is unknown enter '99'.</span></p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.DEMBTH_YEAR
+    conditions:
+      - questionText:
+          EN: |
+            <p><span class="instruction">Enter the year of birth. If it is unknown enter '99'.</span></p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.DEMEDC
+    conditions:
+      - questionText:
+          EN: |
+            <p>Is ~~NAME~~ currently attending school?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.DEMEDL
+    conditions:
+      - questionText:
+          EN: |
+            <p>What is the highest level of education that ~~NAME~~ has completed?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.DEMMORE
+    conditions:
+      - questionText:
+          EN: |
+            <p>Are there additional household members?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.DEMREL
+    conditions:
+      - logic: curocc() = 1
+        questionText:
+          EN: |
+            <p><span class="instruction">Please verify that ~~NAME~~ is the head of the household/reference person</span></p>
+            
+        helpText:
+          EN: |
+            
+      - logic: curocc() > 1
+        questionText:
+          EN: |
+            <p>What is ~~NAME~~'s relationship to ~~NAME(1)~~?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.DEMSEX
+    conditions:
+      - questionText:
+          EN: |
+            <p>Is ~~NAME~~ male or female?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.DMJSMO
+    conditions:
+      - questionText:
+          EN: |
+            <p>And which month?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.DMJSYR
+    conditions:
+      - logic: MJBEST = 1 and PXYCHK = 1
+        questionText:
+          EN: |
+            <p>Which year did you start your business?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: MJBEST = 1 and PXYCHK = 2
+        questionText:
+          EN: |
+            <p>Which year did ~~NAME(LBPPNO)~~ start his/her business?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: MJBEST <> 1 and PXYCHK = 1
+        questionText:
+          EN: |
+            <p>Which year did you begin working for ~~IMJNAM~~?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: MJBEST <> 1 and PXYCHK = 2
+        questionText:
+          EN: |
+            <p>Which year did ~~NAME(LBPPNO)~~ begin working for ~~IMJNAM~~?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.DMWCHK
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>Do you provide domestic services for the household (e.g. cleaning, cooking or taking care of children)?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>Does ~~NAME(LBPPNO)~~ provide domestic services for the household (e.g. cleaning, cooking or taking care of children)?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.DMWHBE
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>Is your main work in the household business?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>Is ~~NAME(LBPPNO)~~'s main work in the household business?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.DMWHHB
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>Is the household you work for operating a business?  (e.g. making goods or providing serivces for sale)</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>Is the household ~~NAME(LBPPNO)~~ works for operating a business?  (e.g. making goods or providing serivces for sale)</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.DMWOCC
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>What are your main tasks and duties?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>What are ~~NAME(LBPPNO)~~'s main tasks and duties?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.EMPFAM
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>In the last week, did you help with the paid job or business of a household or family member?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>In the last week, did ~~NAME(LBPPNO)~~ help with the paid job or business of a household or family member?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.EMPPAY
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>In the last week, that is from ~~weekBeforeInterviewDate~~ up to yesterday did you do any work for a wage, salary or any other pay, even if only for one hour?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>In the last week, that is from ~~weekBeforeInterviewDate~~ up to yesterday did ~~NAME(LBPPNO)~~ do any work for a wage, salary or any other pay, even if only for one hour?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.EMPPFT
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>In the last week, did you run or do any kind of business, farming or other activity to generate income, even if only for one hour?</p>
+            <p><br></p>
+            <p><span class="instruction">READ ONLY IF NEEDED:</span></p>
+            <p><span class="instruction">For example: making things for sale, growing produce for sale, buying and reselling things, provided services for pay, raising or catching animals or fish for sale</span></p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>In the last week, did ~~NAME(LBPPNO)~~ run or do any kind of business, farming or other activity to generate income, even if only for one hour?</p>
+            <p><br></p>
+            <p><span class="instruction">READ ONLY IF NEEDED:</span></p><p><span class="instruction">For example: making things for sale, growing produce for sale, buying and reselling things, provided services for pay, raising or catching animals or fish for sale</span></p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.IMJISIC
+    conditions:
+      - logic: curocc() in 1:20
+        questionText:
+          EN: |
+            <p><span style="font-size:13px;font-family:'Calibri', sans-serif;">Please write the main activity code from ISIC revision 4</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.IMJMAC
+    conditions:
+      - logic: MJBEST = 1 and PXYCHK = 1
+        questionText:
+          EN: |
+            <p>What is the main activity of your business?</p>
+            <p><br></p>
+            <p><span class="instruction">Interviewer: WRITE:</span></p>
+            <p><span class="instruction"> -MAIN ACTIVITY, GOODS OR DOMESTIC SERVICES</span></p>
+            <p><span class="instruction">(e.g.: Police Department - public safety; Restaurant - preparing and serving meals; Transport Company - long distance transport of goods)</span></p>
+            
+        helpText:
+          EN: |
+            
+      - logic: MJBEST = 1 and PXYCHK = 2
+        questionText:
+          EN: |
+            <p>What is the main activity of ~~NAME(LBPPNO)~~'s business?</p>
+            <p><br></p>
+            <p><span class="instruction">Interviewer: WRITE:</span></p>
+            <p><span class="instruction"> -MAIN ACTIVITY, GOODS OR DOMESTIC SERVICES</span></p>
+            <p><span class="instruction">(e.g.: Police Department - public safety; Restaurant - preparing and serving meals; Transport Company - long distance transport of goods)</span></p>
+            
+        helpText:
+          EN: |
+            
+      - logic: MJBEST <> 1 and PXYCHK = 1
+        questionText:
+          EN: |
+            <p>What is the main activity of the organization/business where you work?</p>
+            <p><br></p>
+            <p><span class="instruction">Interviewer: WRITE:</span></p>
+            <p><span class="instruction"> -MAIN ACTIVITY, GOODS OR DOMESTIC SERVICES</span></p>
+            <p><span class="instruction">(e.g.: Police Department - public safety; Restaurant - preparing and serving meals; Transport Company - long distance transport of goods)</span></p>
+            
+        helpText:
+          EN: |
+            
+      - logic: MJBEST <> 1 and PXYCHK = 2
+        questionText:
+          EN: |
+            <p>What is the main activity of the organization/business where ~~NAME(LBPPNO)~~ works?</p>
+            <p><br></p>
+            <p><span class="instruction">Interviewer: WRITE:</span></p>
+            <p><span class="instruction"> -MAIN ACTIVITY, GOODS OR DOMESTIC SERVICES</span></p>
+            <p><span class="instruction">(e.g.: Police Department - public safety; Restaurant - preparing and serving meals; Transport Company - long distance transport of goods)</span></p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.IMJNAM
+    conditions:
+      - logic: MJBEST = 1 and PXYCHK = 1
+        questionText:
+          EN: |
+            <p>What is the name of your business?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: MJBEST = 1 and PXYCHK = 2
+        questionText:
+          EN: |
+            <p>What is the name of ~~NAME(LBPPNO)~~'s business?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: MJBEST <> 1 and PXYCHK = 1
+        questionText:
+          EN: |
+            <p>What is the name of the organization / business where you work?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: MJBEST <> 1 and PXYCHK = 2
+        questionText:
+          EN: |
+            <p>What is the name of the organization / business where ~~NAME(LBPPNO)~~ works?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.IMJREF
+    conditions:
+      - logic: MJBEST = 1 and PXYCHK = 1
+        questionText:
+          EN: |
+            <p>Does your business have a name?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: MJBEST = 1 and PXYCHK = 2
+        questionText:
+          EN: |
+            <p>Does ~~NAME(LBPPNO)~~'s business have a name?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: MJBEST <> 1 and PXYCHK = 1
+        questionText:
+          EN: |
+            <p>Does the organisation/business where you work have a name?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: MJBEST <> 1 and PXYCHK = 2
+        questionText:
+          EN: |
+            <p>Does the organisation/business where ~~NAME(LBPPNO)~~ works have a name?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.LBPPNO
+    conditions:
+      - questionText:
+          EN: |
+            <p><span class="instruction">Please choose the next household member to interview. For the first interview choose the head of household. However, if not available, the first interview should be with the person who provided the household demographic information. Then proceed in the same order as in the demographics section.</span></p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.MJBDEE
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>Is your employer responsible for deducting any taxes on your income or is that your responsibility?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>Is ~~NAME(LBPPNO)~~'s employer responsible for deducting any taxes on your income or is that ~~NAME(LBPPNO)~~'s responsibility?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.MJBEST
+    conditions:
+      - logic: MULTJB = 1 and PXYCHK = 1
+        questionText:
+          EN: |
+            <p>I am now going to ask you some questions about your main job. The main job is the one where you usually work the highest number of hours even if you were temporarily absent in the last (week/7days).</p><p><br></p>
+            
+            <p>In your main job, do you work…? </p>
+            
+        helpText:
+          EN: |
+            
+      - logic: MULTJB = 1 and PXYCHK = 2
+        questionText:
+          EN: |
+            <p>I am now going to ask you some questions about ~~NAME(LBPPNO)~~’s main job.  The main job is the one where ~~NAME(LBPPNO)~~ usually works the highest number of hours even if ~~NAME(LBPPNO)~~ was temporarily absent in the last (week/7days).</p><p><br></p>
+            <p>In ~~NAME(LBPPNO)~~'s main job, does ~~NAME(LBPPNO)~~ work…? </p>
+            
+        helpText:
+          EN: |
+            
+      - logic: MULTJB = 2 and PXYCHK = 1
+        questionText:
+          EN: |
+            <p>In your main job, do you work…?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: MULTJB = 2 and PXYCHK = 2
+        questionText:
+          EN: |
+            <p>In ~~NAME(LBPPNO)~~'s main job, does ~~NAME(LBPPNO)~~ work…?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.MJBINS
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>Are you employed by…</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>Is ~~NAME(LBPPNO)~~ employed by…</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.MJBPLC
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>Is your work typically carried out at…</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>Is ~~NAME(LBPPNO)~~'s work typically carried out at…</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.MJBREM
+    conditions:
+      - logic: MJBSAL = 1 and PXYCHK = 1
+        questionText:
+          EN: |
+            <p>Do you receive any other form of payment?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: MJBSAL = 1 and PXYCHK = 2
+        questionText:
+          EN: |
+            <p>Does ~~NAME(LBPPNO)~~ receive any other form of payment?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: MJBSAL = 2 and PXYCHK = 1
+        questionText:
+          EN: |
+            <p>Do you receive any additional form of payment?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: MJBSAL = 2 and PXYCHK = 2
+        questionText:
+          EN: |
+            <p>Does ~~NAME(LBPPNO)~~ receive any additional form of payment?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.MJBSAL
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>Are you paid a wage or salary for this work?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>Is ~~NAME(LBPPNO)~~ paid a wage or salary for this work?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.MJBSIZ
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>How many persons including you work at your place of work?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>How many persons including ~~NAME(LBPPNO)~~ work at ~~NAME(LBPPNO)~~'s place of work?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.MJBTRI
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>Were you being paid for that work...</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>Was ~~NAME(LBPPNO)~~ being paid for that work...</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.MULTJB
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>During the last (week/7 days) did you have more than one job/business?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>During the last (week/7 days) did ~~NAME(LBPPNO)~~ have more than one job/business?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.NAME
+    conditions:
+      - logic: curocc()  = 1
+        questionText:
+          EN: |
+            <p>What is name of the head or reference person?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: curocc() > 1
+        questionText:
+          EN: |
+            <p>What is the name of the next member of the household?</p>
+            
+        helpText:
+          EN: |
+            <p>Include all persons living in this house who have common arrangements for cooking and dining.</p>
+            
+  - name: POPSTANLFS_DICT.NMMRHR
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>How many additional hours per week could you work?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>How many additional hours per week could ~~NAME(LBPPNO)~~ work?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.NUMJBS
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>You said previously that you had more than one job in the reference week. How many jobs did you have?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>You said previously that ~~NAME(LBPPNO)~~ had more than one job in the reference week. How many jobs did he/she have?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.OMJMTD
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>What are your main tasks and duties?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>What are ~~NAME(LBPPNO)~~'s main tasks and duties?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.OMJTLE
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>What is your position/job title?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>What is ~~NAME(LBPPNO)~~'s position/job title?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.PXYCHK
+    conditions:
+      - logic: DEMSEX(LBPPNO)=1
+        questionText:
+          EN: |
+            <p><span class="instruction">Interviewer: Is ~~NAME(LBPPNO)~~ himself responding to the questions?</span></p>
+            
+        helpText:
+          EN: |
+            
+      - logic: DEMSEX(LBPPNO)=2
+        questionText:
+          EN: |
+            <p><span class="instruction">Interviewer: is ~~NAME(LBPPNO)~~ herself responding to the questions?</span></p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.PXYPPN
+    conditions:
+      - questionText:
+          EN: |
+            <p><span class="instruction">Interviewer: select the person responding to the questions.</span></p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.PXYREL
+    conditions:
+      - questionText:
+          EN: |
+            <p>Can you let me know what is your relationship to ~~NAME(LBPPNO)~~?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.PXYRSP
+    conditions:
+      - questionText:
+          EN: |
+            <p>Now I would like to talk to ~~NAME(LBPPNO)~~. Is ~~NAME(LBPPNO)~~ available?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.SRHACT
+    conditions:
+      - logic: PXYCHK=1
+        questionText:
+          EN: |
+            <p>In addition to reading job advertisements, did you do anything else in the last four weeks to find a paid job or to start a business?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK=2
+        questionText:
+          EN: |
+            <p>In addition to reading job advertisements, did ~~NAME(LBPPNO)~~ do anything else in the last four weeks to find a paid job or to start a business?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.SRHAVL
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>Or, could you start working within the next two weeks?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>Or, could ~~NAME(LBPPNO)~~ start working within the next two weeks?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.SRHAVN
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>If a job or business opportunity had been available, could you have started working last week?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>If a job or business opportunity had been available, could ~~NAME(LBPPNO)~~ have started working last week?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.SRHBUS
+    conditions:
+      - logic: PXYCHK=1
+        questionText:
+          EN: |
+            <p>Or did you try to start a business?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK=2
+        questionText:
+          EN: |
+            <p>Or did ~~NAME(LBPPNO)~~ try to start a business?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.SRHDES
+    conditions:
+      - logic: PXYCHK=1
+        questionText:
+          EN: |
+            <p>At present, do you want to work?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK=2
+        questionText:
+          EN: |
+            <p>At present, does ~~NAME(LBPPNO)~~ want to work?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.SRHDUR
+    conditions:
+      - logic: PXYCHK=1
+        questionText:
+          EN: |
+            <p>For how long have you been without work and trying to find a paid job or start a business?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK=2
+        questionText:
+          EN: |
+            <p>For how long has ~~NAME(LBPPNO)~~ been without work and trying to find a paid job or start a business?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.SRHDWY
+    conditions:
+      - logic: PXYCHK=1
+        questionText:
+          EN: |
+            <p>What is the main reason why you did not try to find a paid job or start a business in the last four weeks?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK=2
+        questionText:
+          EN: |
+            <p>What is the main reason why ~~NAME(LBPPNO)~~ did not try to find a paid job or start a business in the last four weeks?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.SRHDWY_OTHER
+    conditions:
+      - questionText:
+          EN: |
+            <p><span class="instruction">INTERVIEWER: ENTER THE OTHER REASON GIVEN BY THE RESPONDENT</span></p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.SRHFAN
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>If it depended on you, could you have started working last week in this new job or business?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>If it depended on ~~NAME(LBPPNO)~~, could ~~NAME(LBPPNO)~~ have started working last week in this new job or business?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.SRHFTR
+    conditions:
+      - logic: PXYCHK=1
+        questionText:
+          EN: |
+            <p>How soon do you expect to start working in this new job or business?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK=2
+        questionText:
+          EN: |
+            <p>How soon does ~~NAME(LBPPNO)~~ expect to start working in this new job or business?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.SRHJOB
+    conditions:
+      - logic: PXYCHK=1
+        questionText:
+          EN: |
+            <p>During the last four weeks, that is from ~~fourWeeksBeforeInterviewDate~~ up to yesterday did you do anything to find a paid job?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK=2
+        questionText:
+          EN: |
+            <p>During the last four weeks, that is from ~~fourWeeksBeforeInterviewDate~~ up to yesterday did ~~NAME(LBPPNO)~~ do anything to find a paid job?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.SRHMAC
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>Which of the following best describes what you are mainly doing at present?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>Which of the following best describes what ~~NAME(LBPPNO)~~ is mainly doing at present?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.SRHMAC_OTHER
+    conditions:
+      - questionText:
+          EN: |
+            <p><span class="instruction">INTERVIEWER: ENTER OTHER MAIN ACTIVITY GIVEN BY RESPONDENT</span></p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.SRHMTD
+    conditions:
+      - logic: PXYCHK=1
+        questionText:
+          EN: |
+            <p>What did you mainly do in the last four weeks to find a paid job or start a business?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK=2
+        questionText:
+          EN: |
+            <p>What did ~~NAME(LBPPNO)~~ mainly do in the last four weeks to find a paid job or to start a business?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.SRHMTD_OTHER
+    conditions:
+      - questionText:
+          EN: |
+            <p><span class="instruction">INTERVIEWER: ENTER THE OTHER METHOD USED</span></p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.SRHNAR
+    conditions:
+      - questionText:
+          EN: |
+            <p>Why is that?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.SRHOTH
+    conditions:
+      - logic: PXYCHK=1
+        questionText:
+          EN: |
+            <p>What else did you do?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK=2
+        questionText:
+          EN: |
+            <p>What else did ~~NAME(LBPPNO)~~ do?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.SRHOTH_OTHER
+    conditions:
+      - questionText:
+          EN: |
+            <p><span class="instruction">INTERVIEWER: ENTER OTHER SEARCH METHOD USED</span></p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.SRHYER
+    conditions:
+      - logic: PXYCHK=1
+        questionText:
+          EN: |
+            <p>At any time in the last 12 months, that is since ~~oneYearBeforeInterviewDate~~, did you look for a paid job or try to start  a business?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK=2
+        questionText:
+          EN: |
+            <p>At any time in the last 12 months, that is since ~~oneYearBeforeInterviewDate~~, did ~~NAME(LBPPNO)~~ look for a paid job or try to start  a business?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.SROTJB
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>During the last four weeks, that is from ~~fourWeeksBeforeInterviewDate~~ up to yesterday did you look for additional or other paid work?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>During the last four weeks, that is from ~~fourWeeksBeforeInterviewDate~~ up to yesterday did ~~NAME(LBPPNO)~~ look for additional or other paid work?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.USHRSM
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>How many hours do you usually work per week in your main job?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>How many hours does ~~NAME(LBPPNO)~~ usually work per week in his/her main job?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.USHRSO
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>How many hours do you usually work per week in your other jobs?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>How many hours does ~~NAME(LBPPNO)~~ usually work per week in his/her other jobs?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.USHRSS
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>How many hours do you usually work per week in your second job?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>How many hours does ~~NAME(LBPPNO)~~ usually work per week in his/her second job?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: POPSTANLFS_DICT.WNTMRH
+    conditions:
+      - logic: PXYCHK = 1
+        questionText:
+          EN: |
+            <p>Would you want to work more hers per week than usually worked, provided the extra hours are paid?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: PXYCHK = 2
+        questionText:
+          EN: |
+            <p>Would ~~NAME(LBPPNO)~~ want to work more hers per week than usually worked, provided the extra hours are paid?</p>
+            
+        helpText:
+          EN: |
+            
+...
