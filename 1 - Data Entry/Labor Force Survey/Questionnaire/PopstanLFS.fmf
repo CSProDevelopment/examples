@@ -29,6 +29,7 @@ Item=GHINTID
 [Form]
 Name=FORM001
 Label=Demographics
+QuestionTextHeight=226
 Level=1
 Size=1470,458
   
@@ -41,6 +42,7 @@ Item=GHNELIGIBLE
 [Form]
 Name=FORM002
 Label=Labor
+QuestionTextHeight=264
 Level=1
 Repeat=LABOR_REC
 Size=991,6885
@@ -169,7 +171,6 @@ Required=Yes
 Name=GH_FORM
 Label=Geographic and Household Identifiers
 Form=1
-LogicControl=No
 Max=1
   
 [Field]
@@ -279,7 +280,6 @@ Required=Yes
 Name=DEM_FORM
 Label=Demographics
 Form=2
-LogicControl=No
 Max=1
   
 [Grid]
@@ -616,6 +616,13 @@ Text=Additional household members
  
 [EndColumn]
   
+[Block]
+Name=DEMBTH_BLOCK
+Label=Date of Birth
+DisplayTogether=Yes
+Position=4
+Length=3
+  
 [EndGrid]
  
   
@@ -651,7 +658,6 @@ Required=Yes
 Name=LABOR_FORM
 Label=Labor
 Form=3
-LogicControl=No
 Type=Record
 TypeName=LABOR_REC
 Max=20

@@ -1,62 +1,86 @@
-﻿[CAPI QUESTIONS]
-Version=CSPro 7.5
-
-[LANGUAGES]
-EN=English
-
-[QUESTION]
-Field=HOUSEHOLDQUESTIONNAIRE_DICT.AGE
-Occurrences=1:30
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-EN=\pard\cf1\fs19 How old is %NAMES% in completed years?\par
-EN=\par
-EN=\i Enter 0 for children less than 1 year old.\par
-EN=Enter 99 for anyone 99 years old and above.\par
-EN=}
-
-[QUESTION]
-Field=HOUSEHOLDQUESTIONNAIRE_DICT.HOUSEHOLD_NUMBER
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-EN=\pard\cf1\fs19 Enter the serial number for this household.\par
-EN=}
-
-[QUESTION]
-Field=HOUSEHOLDQUESTIONNAIRE_DICT.MORE_PEOPLE
-Occurrences=1:30
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-EN=\pard\cf1\fs19 Are there are other household members that have not yet been recorded?\par
-EN=}
-
-[QUESTION]
-Field=HOUSEHOLDQUESTIONNAIRE_DICT.NAMES
-Occurrences=1:30
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-EN=\pard\cf1\fs19 Enter the full name of the next member of the household.\i\par
-EN=}
-
-[QUESTION]
-Field=HOUSEHOLDQUESTIONNAIRE_DICT.RELATIONSHIP
-Occurrences=1:30
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-EN=\pard\cf1\fs19 What is %NAMES%'s relationship to the head of household?\par
-EN=}
-
-[QUESTION]
-Field=HOUSEHOLDQUESTIONNAIRE_DICT.SEX
-Occurrences=1:30
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-EN=\pard\cf1\fs19 Is %NAMES% male or female?\par
-EN=}
-
+﻿---
+fileType: Question Text
+version: CSPro 7.5
+languages:
+  - name: EN
+    label: English
+styles:
+  - name: Normal
+    className: normal
+    css: |
+      font-family: Arial;font-size: 16px;
+  - name: Instruction
+    className: instruction
+    css: |
+      font-family: Arial;font-size: 14px;color: #0000FF;
+  - name: Heading 1
+    className: heading1
+    css: |
+      font-family: Arial;font-size: 36px;
+  - name: Heading 2
+    className: heading2
+    css: |
+      font-family: Arial;font-size: 24px;
+  - name: Heading 3
+    className: heading3
+    css: |
+      font-family: Arial;font-size: 18px;
+questions:
+  - name: HOUSEHOLDQUESTIONNAIRE_DICT.AGE
+    conditions:
+      - questionText:
+          EN: |
+            <p>How old is ~~NAMES~~ in completed years?</p>
+            <p><br></p>
+            <p><span class="instruction">Enter 0 for children less than 1 year old.</span></p><span class="instruction">
+            </span><p><span class="instruction">Enter 99 for anyone 99 years old and above.</span></p>
+            
+        helpText:
+          EN: |
+            
+  - name: HOUSEHOLDQUESTIONNAIRE_DICT.HOUSEHOLD_NUMBER
+    conditions:
+      - questionText:
+          EN: |
+            <p>Enter the serial number for this household.</span></p>
+            
+        helpText:
+          EN: |
+            
+  - name: HOUSEHOLDQUESTIONNAIRE_DICT.MORE_PEOPLE
+    conditions:
+      - questionText:
+          EN: |
+            <p>Are there are other household members that have not yet been recorded?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: HOUSEHOLDQUESTIONNAIRE_DICT.NAMES
+    conditions:
+      - questionText:
+          EN: |
+            <p>Enter the full name of the next member of the household.</p>
+            
+        helpText:
+          EN: |
+            
+  - name: HOUSEHOLDQUESTIONNAIRE_DICT.RELATIONSHIP
+    conditions:
+      - questionText:
+          EN: |
+            <p>What is ~~NAMES~~'s relationship to the head of household?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: HOUSEHOLDQUESTIONNAIRE_DICT.SEX
+    conditions:
+      - questionText:
+          EN: |
+            <p>Is ~~NAMES~~ male or female?</p>
+            
+        helpText:
+          EN: |
+            
+...

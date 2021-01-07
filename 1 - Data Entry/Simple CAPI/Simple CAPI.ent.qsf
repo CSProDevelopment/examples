@@ -1,103 +1,135 @@
-﻿[CAPI QUESTIONS]
-Version=CSPro 7.5
-
-[LANGUAGES]
-EN=English
-
-[QUESTION]
-Field=LANGUAGES_BLOCK
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue128;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\cf1\b\fs24 %PersonName%:\cf2\b0  What languages do you speak?\par
-EN=\par
-EN=\i If %PersonName% lists only one language, probe and ask if %PersonName% speaks more than one language.\i0\par
-EN=}
-
-[QUESTION]
-Field=NAME_BLOCK
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\cf1\i\fs24 Enter the name of the next person in the household. Include everyone living or staying in this household.\par
-EN=\par
-EN=Do not enter anything and press Next if all persons have been recorded.\i0\par
-EN=}
-
-[QUESTION]
-Field=SIMPLECAPI_DICT.AGE
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue128;\red0\green0\blue0;\red255\green128\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\cf1\b\fs24\lang1033 %PersonName%:\cf2\b0  How old are you?\par
-EN=\par
-EN=\i If %PersonName% does not know an exact age, record Don't Know.\cf3\b\i0\par
-EN=}
-
-[QUESTION]
-Field=SIMPLECAPI_DICT.HOUSEHOLD_ID
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 6.3.9600}\viewkind4\uc1
-EN=\pard\cf1\i\fs24\lang1033 Enter the household number.\i0\par
-EN=}
-
-[QUESTION]
-Field=SIMPLECAPI_DICT.LANGUAGES_SPOKEN_OTHER
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\cf1\i\fs24 Specify any other language that %PersonName% listed that was not in the above list. Enter only one language.\i0\par
-EN=}
-
-[QUESTION]
-Field=SIMPLECAPI_DICT.LITERATE
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue128;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\cf1\b\fs24 %PersonName%:\cf2\b0  Are you literate, meaning that you can read and write with understanding in at least one language?\par
-EN=}
-
-[QUESTION]
-Field=SIMPLECAPI_DICT.MAIN_LANGUAGE
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue128;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\cf1\b\fs24 %PersonName%:\cf2\b0  What is the language that you speak most frequently?\par
-EN=}
-
-[QUESTION]
-Field=SIMPLECAPI_DICT.RELATIONSHIP
-Condition=headKnown = 0
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue128;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\cf1\b\fs24 %PersonName%:\cf2\b0  Are you the head of household? If not, what is your relationship to the head?\par
-EN=}
-
-[QUESTION]
-Field=SIMPLECAPI_DICT.RELATIONSHIP
-Condition=headKnown = 1
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue128;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\cf1\b\fs24\lang1033 %PersonName%:\cf2\b0  What is your relationship to %headText%?\par
-EN=}
-
-[QUESTION]
-Field=SIMPLECAPI_DICT.SEX
-Occurrences=1:20
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue128;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.17134}\viewkind4\uc1
-EN=\pard\cf1\b\fs24\lang1033 %PersonName%:\cf2\b0  What is your sex?\fs20\par
-EN=}
-
+﻿---
+fileType: Question Text
+version: CSPro 7.5
+languages:
+  - name: EN
+    label: English
+styles:
+  - name: Normal
+    className: normal
+    css: |
+      font-family: Arial;font-size: 16px;color: #000000;
+      
+  - name: Instruction
+    className: instruction
+    css: |
+      font-family: Arial;font-style: italic;font-size: 16px;color: #000000;
+      
+  - name: Heading 1
+    className: heading1
+    css: |
+      font-family: Arial;font-size: 36px;
+      
+  - name: Heading 2
+    className: heading2
+    css: |
+      font-family: Arial;font-size: 24px;
+      
+  - name: Heading 3
+    className: heading3
+    css: |
+      font-family: Arial;font-size: 18px;
+      
+  - name: Name
+    className: name
+    css: |
+      font-family: Arial;font-weight: bold;font-size: 16px;color: #000080;
+      
+questions:
+  - name: LANGUAGES_BLOCK
+    conditions:
+      - questionText:
+          EN: |
+            <p><span class="name">~~PersonName()~~:</span> What languages do you speak?</p>
+            <p><br></p>
+            <p><span class="instruction">If ~~PersonName()~~ lists only one language, probe and ask if ~~PersonName()~~ speaks more than one language.</span></p>
+            
+        helpText:
+          EN: |
+            
+  - name: NAME_BLOCK
+    conditions:
+      - questionText:
+          EN: |
+            <p><i>Enter the name of the next person in the household. Include everyone living or staying in this household.</i></p>
+            <p><br></p>
+            <p><i>Do not enter anything and press Next if all persons have been recorded.</i></p>
+            
+        helpText:
+          EN: |
+            
+  - name: SIMPLECAPI_DICT.AGE
+    conditions:
+      - questionText:
+          EN: |
+            <p><span class="name">~~PersonName()~~:</span> How old are you?</p>
+            <p><br></p>
+            <p><span class="instruction">If ~~PersonName()~~ does not know an exact age, record Don't Know.</span></p>
+            
+        helpText:
+          EN: |
+            
+  - name: SIMPLECAPI_DICT.HOUSEHOLD_ID
+    conditions:
+      - questionText:
+          EN: |
+            <p><span class="instruction">Enter the household number.</span></p>
+            
+        helpText:
+          EN: |
+            
+  - name: SIMPLECAPI_DICT.LANGUAGES_SPOKEN_OTHER
+    conditions:
+      - questionText:
+          EN: |
+            <p><span class="instruction">Specify any other language that ~~PersonName()~~ listed that was not in the above list. Enter only one language.</span></p>
+            
+        helpText:
+          EN: |
+            
+  - name: SIMPLECAPI_DICT.LITERATE
+    conditions:
+      - questionText:
+          EN: |
+            <p><span class="name">~~PersonName()~~:</span> Are you literate, meaning that you can read and write with understanding in at least one language?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: SIMPLECAPI_DICT.MAIN_LANGUAGE
+    conditions:
+      - questionText:
+          EN: |
+            <p><span class="name">~~PersonName()~~:</span> What is the language that you speak most frequently?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: SIMPLECAPI_DICT.RELATIONSHIP
+    conditions:
+      - logic: headKnown = 0
+        questionText:
+          EN: |
+            <p><span class="name">~~PersonName()~~:</span> Are you the head of household? If not, what is your relationship to the head?</p>
+            
+        helpText:
+          EN: |
+            
+      - logic: headKnown = 1
+        questionText:
+          EN: |
+            <p><span class="name">~~PersonName()~~:</span> What is your relationship to ~~headText~~?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: SIMPLECAPI_DICT.SEX
+    conditions:
+      - questionText:
+          EN: |
+            <p><span class="name">~~PersonName()~~:</span> What is your sex?</p>
+            
+        helpText:
+          EN: |
+            
+...

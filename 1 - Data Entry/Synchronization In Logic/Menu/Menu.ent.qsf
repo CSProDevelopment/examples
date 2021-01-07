@@ -1,34 +1,60 @@
-﻿[CAPI QUESTIONS]
-Version=CSPro 7.5
-
-[LANGUAGES]
-EN=English
-
-[QUESTION]
-Field=MENU_DICT.INTERVIEWER_MENU
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-EN=\pard\cf1\fs19 You are logged in as an interviewer.\par
-EN=\par
-EN=Choose an option:\par
-EN=}
-
-[QUESTION]
-Field=MENU_DICT.LOGIN
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-EN=\pard\cf1\fs19 Choose your role:\par
-EN=}
-
-[QUESTION]
-Field=MENU_DICT.SUPERVISOR_MENU
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-EN=\pard\cf1\fs19 You are logged in as a supervisor.\par
-EN=\par
-EN=Choose an option.\par
-EN=}
-
+﻿---
+fileType: Question Text
+version: CSPro 7.5
+languages:
+  - name: EN
+    label: English
+styles:
+  - name: Normal
+    className: normal
+    css: |
+      font-family: Arial;font-size: 16px;
+  - name: Instruction
+    className: instruction
+    css: |
+      font-family: Arial;font-size: 14px;color: #0000FF;
+  - name: Heading 1
+    className: heading1
+    css: |
+      font-family: Arial;font-size: 36px;
+  - name: Heading 2
+    className: heading2
+    css: |
+      font-family: Arial;font-size: 24px;
+  - name: Heading 3
+    className: heading3
+    css: |
+      font-family: Arial;font-size: 18px;
+questions:
+  - name: MENU_DICT.INTERVIEWER_MENU
+    conditions:
+      - questionText:
+          EN: |
+            <p>You are logged in as an interviewer.</p>
+            <p><br></p>
+            <p>Choose an option:</p>
+            
+        helpText:
+          EN: |
+            
+  - name: MENU_DICT.LOGIN
+    conditions:
+      - questionText:
+          EN: |
+            <p>Choose your role:</p>
+            
+        helpText:
+          EN: |
+            
+  - name: MENU_DICT.SUPERVISOR_MENU
+    conditions:
+      - questionText:
+          EN: |
+            <p>You are logged in as a supervisor.</p>
+            <p><br></p>
+            <p>Choose an option.</p>
+            
+        helpText:
+          EN: |
+            
+...

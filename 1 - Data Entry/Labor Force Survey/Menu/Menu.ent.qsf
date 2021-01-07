@@ -1,79 +1,105 @@
-﻿[CAPI QUESTIONS]
-Version=CSPro 7.5
-
-[LANGUAGES]
-EN=English
-
-[QUESTION]
-Field=MENU_DICT.CHOOSE_HOUSEHOLD
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 Choose a household:\par
-EN=}
-
-[QUESTION]
-Field=MENU_DICT.HOUSEHOLD_ACTION
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 Household: %SAMPROV%-%SAMDIST%-%SAMDWNO%-%SAMHHNO%\par
-EN=Head: %SAMHNA%\par
-EN=Address: %SAMHA%\par
-EN=Phone: %SAMHCT%\par
-EN=}
-
-[QUESTION]
-Field=MENU_DICT.HOUSEHOLD_FINAL_RESULT
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 Household: %SAMPROV%-%SAMDIST%-%SAMDWNO%-%SAMHHNO%\par
-EN=Head: %SAMHNA%\par
-EN=Address: %SAMHA%\par
-EN=Phone: %SAMHCT%\par
-EN=\par
-EN=Current final result code: %currentFinalResultCode%\par
-EN=\par
-EN=Choose the new final result code:\par
-EN=\par
-EN=}
-
-[QUESTION]
-Field=MENU_DICT.INTERVIEWER_MENU
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 You are logged in as interviewer %STAFF_NAME%.\par
-EN=\par
-EN=Please select an option:\par
-EN=}
-
-[QUESTION]
-Field=MENU_DICT.LOGIN
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 Enter staff code to login:\par
-EN=\par
-EN=\i Use 001 for supervisor or 002-005 for interviewer\i0\par
-EN=}
-
-[QUESTION]
-Field=MENU_DICT.SUPERVISOR_MENU
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 You are logged in as supervisor %STAFF_NAME%.\par
-EN=\par
-EN=Please select an option:\par
-EN=}
-
-[QUESTION]
-Field=MENU_DICT.SUPERVISOR_REPORTS
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs19 Choose a report to display:\par
-EN=}
-
+﻿---
+fileType: Question Text
+version: CSPro 7.5
+languages:
+  - name: EN
+    label: English
+styles:
+  - name: Normal
+    className: normal
+    css: |
+      font-family: Arial;font-size: 16px;
+      
+  - name: Instruction
+    className: instruction
+    css: |
+      font-family: Arial;font-size: 14px;color: #0000FF;
+      
+  - name: Heading 1
+    className: heading1
+    css: |
+      font-family: Arial;font-size: 36px;
+      
+  - name: Heading 2
+    className: heading2
+    css: |
+      font-family: Arial;font-size: 24px;
+      
+  - name: Heading 3
+    className: heading3
+    css: |
+      font-family: Arial;font-size: 18px;
+      
+questions:
+  - name: MENU_DICT.CHOOSE_HOUSEHOLD
+    conditions:
+      - questionText:
+          EN: |
+            <p>Choose a household:</p>
+            
+        helpText:
+          EN: |
+            
+  - name: MENU_DICT.HOUSEHOLD_ACTION
+    conditions:
+      - questionText:
+          EN: |
+            <table class="table table-bordered"><tbody><tr><td>Household:</td><td>~~SAMPROV~~-~~SAMDIST~~-~~SAMDWNO~~-~~SAMHHNO~~<br></td></tr><tr><td>Head:</td><td>~~SAMHNA~~<br></td></tr><tr><td>Address:</td><td>~~SAMHA~~</td></tr><tr><td>Phone:</td><td>~~SAMHCT~~<br></td></tr></tbody></table>
+            
+        helpText:
+          EN: |
+            
+  - name: MENU_DICT.HOUSEHOLD_FINAL_RESULT
+    conditions:
+      - questionText:
+          EN: |
+            <table class="table table-bordered"><tbody><tr><td>Household:</td><td>~~SAMPROV~~-~~SAMDIST~~-~~SAMDWNO~~-~~SAMHHNO~~<br></td></tr><tr><td>Head:</td><td>~~SAMHNA~~<br></td></tr><tr><td>Address:</td><td>~~SAMHA~~</td></tr><tr><td>Phone:</td><td>~~SAMHCT~~<br></td></tr></tbody></table>
+            <p><br></p><p>Current final result code: ~~currentFinalResultCode~~</p>
+            <p><br></p>
+            <p>Choose the new final result code:</p>
+            
+        helpText:
+          EN: |
+            
+  - name: MENU_DICT.INTERVIEWER_MENU
+    conditions:
+      - questionText:
+          EN: |
+            <p>You are logged in as interviewer ~~STAFF_NAME~~.</p>
+            <p><br></p>
+            <p>Please select an option:</p>
+            
+        helpText:
+          EN: |
+            
+  - name: MENU_DICT.LOGIN
+    conditions:
+      - questionText:
+          EN: |
+            <p>Enter staff code to login:</p><p><br></p>
+            <p><span class="instruction">Use 001 for supervisor or 002-005 for interviewer</span></p>
+            
+        helpText:
+          EN: |
+            
+  - name: MENU_DICT.SUPERVISOR_MENU
+    conditions:
+      - questionText:
+          EN: |
+            <p>You are logged in as supervisor ~~STAFF_NAME~~.</p>
+            <p><br></p>
+            <p>Please select an option:</p>
+            
+        helpText:
+          EN: |
+            
+  - name: MENU_DICT.SUPERVISOR_REPORTS
+    conditions:
+      - questionText:
+          EN: |
+            <p>Choose a report to display:</p>
+            
+        helpText:
+          EN: |
+            
+...

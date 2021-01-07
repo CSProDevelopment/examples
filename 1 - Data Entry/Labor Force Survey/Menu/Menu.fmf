@@ -12,7 +12,7 @@ File=.\Menu.dcf
 [Form]
 Name=FORM000
 Label=Menu questionnaire
-QuestionTextHeight=163
+QuestionTextHeight=390
 Level=1
 Size=363,266
   
@@ -35,7 +35,6 @@ Required=Yes
 Name=MENU_QUEST_FORM
 Label=Menu questionnaire
 Form=1
-LogicControl=No
 Max=1
   
 [Field]
