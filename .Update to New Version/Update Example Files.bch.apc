@@ -23,7 +23,7 @@ function ProcessOtherFile(string other_filename)
 	this_file.read(lines);
 	this_file.close();
 
-	list string version_strings = "Version=CSPro ", '"version": "';
+	list string version_strings = "Version=CSPro ", '"version": "', "version: CSPro ";
 
 	do numeric counter = 1 while counter <= lines.length()
 
