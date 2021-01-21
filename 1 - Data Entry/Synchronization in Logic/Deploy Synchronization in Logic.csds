@@ -1,6 +1,6 @@
 {
   "fileType": "Application Deployment Specification",
-  "version": "7.5",
+  "version": "7.6",
   "name": "Synchronization in Logic",
   "description": "Example of using synchronization logic functions",
   "files": [

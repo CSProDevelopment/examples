@@ -1,5 +1,5 @@
 ﻿[FormFile]
-Version=CSPro 7.5
+Version=CSPro 7.6
 Name=UPDATE_EXAMPLE_FILES_FF
 Label=Update Example Files
 DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
@@ -38,7 +38,6 @@ Required=Yes
 Name=IDS0_EDT
 Label=(Id Items)
 Form=1
-LogicControl=No
 Max=1
   
 [Field]
@@ -53,7 +52,6 @@ Required=Yes
 Name=UPDATE_EXAMPLE_FILES_REC_EDT
 Label=Update Example Files Record
 Form=2
-LogicControl=No
 Type=Record
 TypeName=UPDATE_EXAMPLE_FILES_REC
 Max=1

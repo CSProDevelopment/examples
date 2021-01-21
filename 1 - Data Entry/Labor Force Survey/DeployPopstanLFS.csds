@@ -1,6 +1,6 @@
 {
   "fileType": "Application Deployment Specification",
-  "version": "7.5",
+  "version": "7.6",
   "name": "Popstan Labor Force Survey",
   "description": "Sample Labor Force Survey Menu & Data Entry Application",
   "files": [

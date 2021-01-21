@@ -1,10 +1,10 @@
 ﻿[Run Information]
-Version=CSPro 7.5
+Version=CSPro 7.6
 AppType=Entry
 Description=Popstan Census Household Questionnaire
+ShowInApplicationListing=Never
 
 [DataEntryInit]
-ShowInApplicationListing=Never
 FullScreen=Yes
 
 [Files]
