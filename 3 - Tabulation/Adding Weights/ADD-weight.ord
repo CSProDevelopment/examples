@@ -43,7 +43,7 @@ Item=H8_LIGHTS
 Item=H9_HEAT
 Item=H10_WASTE
 Item=H11_DEATHS
-Item=WEIGHT
+Item=CASE_WEIGHT
   
 [EndForm]
   
@@ -86,7 +86,6 @@ Required=Yes
 Name=IDS0_EDT
 Label=(Id Items)
 Form=1
-LogicControl=No
 Max=1
   
 [Field]
@@ -125,7 +124,6 @@ Required=Yes
 Name=HOUSE_REC_EDT
 Label=Housing Record
 Form=2
-LogicControl=No
 Type=Record
 TypeName=HOUSE_REC
 Max=1
@@ -215,8 +213,8 @@ Form=2
   
   
 [Field]
-Name=WEIGHT
-Item=WEIGHT,POP_DICT
+Name=CASE_WEIGHT
+Item=CASE_WEIGHT,POP_DICT
 Form=2
   
 [EndGroup]
@@ -226,7 +224,6 @@ Required=No
 Name=PERSON_REC_EDT
 Label=Person Record
 Form=3
-LogicControl=No
 Type=Record
 TypeName=PERSON_REC
 Max=35

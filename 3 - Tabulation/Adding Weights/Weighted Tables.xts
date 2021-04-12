@@ -601,7 +601,7 @@ TabValueStatIndex=1
 [Unit]
 SubTable=Entire Table
 LoopingVarName=PERSON_REC
-Weight=WEIGHT
+Weight=CASE_WEIGHT
 Value=
 Universe=
 [EndUnitSpecs]

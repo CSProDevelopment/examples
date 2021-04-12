@@ -361,7 +361,7 @@ Value=6:20;6+
 
 [Item]
 Label=Case Weight
-Name=WEIGHT
+Name=CASE_WEIGHT
 Start=33
 Len=6
 Decimal=4

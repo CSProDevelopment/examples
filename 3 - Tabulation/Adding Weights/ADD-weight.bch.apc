@@ -34,7 +34,7 @@ PROC GLOBAL
 PROC Popstan_FF
 
 
-PROC WEIGHT
+PROC CASE_WEIGHT
 
 	{Since PROV & DISTRICT are IDs in external dictionary we will move the codes
 	from the case to the ID to be matched using loadcase.
@@ -47,7 +47,7 @@ PROC WEIGHT
 
 	{verify successful completion}
 	if OK = 1 then
-		WEIGHT = WGT;   {move weight to record}
+		CASE_WEIGHT = WGT;   {move weight to record}
 		errmsg ("Weight added to House record") summary;
 	else
 		errmsg ("ID not found - %d-%d",PROV,DISTRICT);
