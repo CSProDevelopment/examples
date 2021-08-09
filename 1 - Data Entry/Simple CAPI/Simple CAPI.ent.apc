@@ -6,18 +6,62 @@ numeric MinAgeHead = 15;
 numeric MinGenerationalDifference = 12;
 
 
-// these variables are used to create dynamic question text for the RELATIONSHIP question
-string headText;
-numeric headKnown;
+// this variable is used to create dynamic question text for the RELATIONSHIP question
+numeric headOcc;
 
 
-function string ConstructPersonName(numeric rowNumber)
-	ConstructPersonName = maketext("%s %s", strip(FIRST_NAME(rowNumber)), strip(LAST_NAME(rowNumber)));
+// this function creates a single string consisting of a person's first and last name
+function string PersonName(numeric personOcc = notappl)
+
+	// when this function is called via question text, the person occurrence will
+	// generally not be specified; in those cases, use the current one
+	if personOcc = notappl then
+		personOcc = curocc(PERSON_ROSTER);
+	endif;
+
+	PersonName = maketext("%s %s", strip(FIRST_NAME(personOcc)), strip(LAST_NAME(personOcc)));
+
 end;
 
-function string PersonName()
-	// this function is called in question text to get the full name of the current person
-	PersonName = ConstructPersonName(curocc());
+
+// this function is triggered via a link in the NAME_BLOCK question text
+function EndPersonRoster()
+
+	if curocc() = 1 then
+		errmsg("The household must consist of at least one person.");
+		reenter;
+
+	elseif count(RELATIONSHIP = 1) = 0 then
+		errmsg("No head of household has been entered. You must add the head.");
+		reenter;
+
+	endif;
+
+	// confirm that this is really the end of household and not an inadvertent blank
+	numeric numHouseholdMembers = curocc() - 1;
+
+	list string endConfirmationOptions;
+
+	do numeric ctr = 1 while ctr <= numHouseholdMembers
+		endConfirmationOptions.add("Edit " + PersonName(ctr));
+	enddo;
+
+	endConfirmationOptions.add("Add Another Member");
+	endConfirmationOptions.add("End Interview");
+
+	numeric selection = accept("Are you finished entering household members?", endConfirmationOptions);
+
+	if selection in 1:numHouseholdMembers then // the interviewer selected a person
+		reenter NAME_BLOCK(selection);
+
+	elseif selection = endConfirmationOptions.length() then // finished with the household roster
+		endgroup;
+
+	else
+		reenter;
+
+	endif;
+
 end;
 
 
@@ -28,57 +72,18 @@ PROC SIMPLECAPI_LEVEL
 
 	// before finalizing the case, set a case label for a more descriptive label in the case listing
 	numeric ptrHead = seek(RELATIONSHIP = 1);
-	setcaselabel(SIMPLECAPI_DICT, maketext("Household #%d | Head: %s", HOUSEHOLD_ID, ConstructPersonName(ptrHead)));
+	setcaselabel(SIMPLECAPI_DICT, maketext("Household #%d | Head: %s", HOUSEHOLD_ID, PersonName(ptrHead)));
 
 
 PROC NAME_BLOCK
 
-	// a blank name indicates the end of the household
-	if FIRST_NAME = "" and LAST_NAME = "" then
-
-		if curocc() = 1 then
-			errmsg("The household must consist of at least one person.");
-			reenter;
-
-		elseif count(RELATIONSHIP = 1) = 0 then
-			errmsg("No head of household has been entered. You must add the head.");
-			reenter;
-
-		endif;
-
-		// confirm that this is really the end of household and not an inadvertent blank
-		numeric numHouseholdMembers = curocc() - 1;
-
-		list string endConfirmationOptions;
-
-		do numeric ctr = 1 while ctr <= numHouseholdMembers
-			endConfirmationOptions.add("Edit " + ConstructPersonName(ctr));
-		enddo;
-
-		endConfirmationOptions.add("Add Another Member");
-		endConfirmationOptions.add("End Interview");
-
-		numeric selection = endConfirmationOptions.show("Are you finished entering household members?");
-
-		if selection in 1:numHouseholdMembers then // the interviewer selected a person
-			reenter NAME_BLOCK(selection);
-
-		elseif selection = endConfirmationOptions.length() then // finished with the household roster
-			endgroup;
-
-		else
-			reenter;
-
-		endif;
-
-	elseif FIRST_NAME = "" or LAST_NAME = "" then
+	if FIRST_NAME = "" or LAST_NAME = "" then
 		errmsg("You must enter both a first and last name.");
 		reenter;
-
 	endif;
 
 	// set the occurrence label to the person's name
- 	setocclabel(PERSON_REC000, PersonName());
+ 	setocclabel(PERSON_ROSTER, PersonName());
 
 
 PROC RELATIONSHIP
@@ -86,15 +91,15 @@ PROC RELATIONSHIP
 onfocus
 
 	// if the head has been specified, we will display that person's name in the CAPI text
-	headKnown = 0;
+	headOcc = 0;
 
 	do numeric ctr = 1 while ctr <= totocc(RELATIONSHIP)
 
 		// when a field is located in the program at a point further than the the current field,
 		// we must use the visualvalue function to retrieve its value
-		if ctr <> curocc() and visualvalue(RELATIONSHIP(ctr)) = 1 then
-			headKnown = 1;
-			headText = ConstructPersonName(ctr);
+		if visualvalue(RELATIONSHIP(ctr)) = 1 then
+			headOcc = ctr;
+			break;
 		endif;
 
 	enddo;
@@ -122,11 +127,11 @@ postproc
 		if RELATIONSHIP(ctr) = 1 then
 
 			if ptrHead < ctr then
-				errmsg("%s was already marked as the head of household. You cannot have two heads.", ConstructPersonName(ptrHead));
+				errmsg("%s was already marked as the head of household. You cannot have two heads.", PersonName(ptrHead));
 				reenter;
 
 			elseif AGE(ctr) < MinAgeHead then
-				errmsg("%s cannot be a head of household because a head must be at least %d-years-old.", ConstructPersonName(ctr), MinAgeHead);
+				errmsg("%s cannot be a head of household because a head must be at least %d-years-old.", PersonName(ctr), MinAgeHead);
 				reenter;
 
 			endif;
@@ -138,7 +143,7 @@ postproc
 		if RELATIONSHIP(ctr) = 2 then
 
 			if ptrSpouse < ctr then
-				errmsg("%s was already marked as the spouse. You cannot have two spouses.", ConstructPersonName(ptrSpouse));
+				errmsg("%s was already marked as the spouse. You cannot have two spouses.", PersonName(ptrSpouse));
 				reenter;
 
 			endif;

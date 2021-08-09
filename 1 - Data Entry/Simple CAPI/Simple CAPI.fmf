@@ -11,14 +11,14 @@ File=.\Simple CAPI.dcf
   
 [Form]
 Name=FORM000
-Label=Roster Form
-QuestionTextHeight=70
+Label=Simple CAPI Form
+QuestionTextHeight=147
 Level=1
 Size=1668,414
 CapturePos=43,407
   
 Item=HOUSEHOLD_ID
-Item=PERSON_REC000
+Item=PERSON_ROSTER
   
 [EndForm]
   
@@ -28,10 +28,9 @@ Label=SimpleCAPI questionnaire
   
 [Group]
 Required=Yes
-Name=ROSTER_FORM
-Label=Roster Form
+Name=SIMPLE_CAPI_FORM
+Label=Simple CAPI Form
 Form=1
-LogicControl=No
 Max=1
   
 [Field]
@@ -46,8 +45,8 @@ Text=Household ID
  
   
 [Grid]
-Name=PERSON_REC000
-Label=Person Record
+Name=PERSON_ROSTER
+Label=Person Roster
 Form=1
 Required=No
 Type=Record

@@ -41,7 +41,7 @@ questions:
       - questionText:
           EN: |
             <p><span class="name">~~PersonName()~~:</span> What languages do you speak?</p>
-            <p><br></p>
+            <p></p>
             <p><span class="instruction">If ~~PersonName()~~ lists only one language, probe and ask if ~~PersonName()~~ speaks more than one language.</span></p>
             
         helpText:
@@ -52,8 +52,8 @@ questions:
       - questionText:
           EN: |
             <p><i>Enter the name of the next person in the household. Include everyone living or staying in this household.</i></p>
-            <p><br></p>
-            <p><i>Do not enter anything and press Next if all persons have been recorded.</i></p>
+            <p></p>
+            <p><i>You are entering person ~~curocc()~~. If all persons have been recorded, <a href="javascript:CSPro.logic('EndPersonRoster();')">end the roster (with a household size of ~~curocc() - 1~~)</a>.</i></p>
             
         helpText:
           EN: |
@@ -63,7 +63,7 @@ questions:
       - questionText:
           EN: |
             <p><span class="name">~~PersonName()~~:</span> How old are you?</p>
-            <p><br></p>
+            <p></p>
             <p><span class="instruction">If ~~PersonName()~~ does not know an exact age, record Don't Know.</span></p>
             
         helpText:
@@ -107,7 +107,7 @@ questions:
             
   - name: SIMPLECAPI_DICT.RELATIONSHIP
     conditions:
-      - logic: headKnown = 0
+      - logic: headOcc in 0, curocc()
         questionText:
           EN: |
             <p><span class="name">~~PersonName()~~:</span> Are you the head of household? If not, what is your relationship to the head?</p>
@@ -115,10 +115,10 @@ questions:
         helpText:
           EN: |
             
-      - logic: headKnown = 1
+      - logic: not ( headOcc in 0, curocc() )
         questionText:
           EN: |
-            <p><span class="name">~~PersonName()~~:</span> What is your relationship to ~~headText~~?</p>
+            <p><span class="name">~~PersonName()~~:</span> What is your relationship to ~~PersonName(headOcc)~~?</p>
             
         helpText:
           EN: |
