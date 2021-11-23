@@ -36,13 +36,11 @@ styles:
       font-family: Arial;font-weight: bold;font-size: 16px;color: #000080;
       
 questions:
-  - name: LANGUAGES_BLOCK
+  - name: SIMPLECAPI_DICT.HOUSEHOLD_ID
     conditions:
       - questionText:
           EN: |
-            <p><span class="name">~~PersonName()~~:</span> What languages do you speak?</p>
-            <p></p>
-            <p><span class="instruction">If ~~PersonName()~~ lists only one language, probe and ask if ~~PersonName()~~ speaks more than one language.</span></p>
+            <p><span class="instruction">Enter the household number.</span></p>
             
         helpText:
           EN: |
@@ -53,7 +51,16 @@ questions:
           EN: |
             <p><i>Enter the name of the next person in the household. Include everyone living or staying in this household.</i></p>
             <p></p>
-            <p><i>You are entering person ~~curocc()~~. If all persons have been recorded, <a href="javascript:CSPro.logic('EndPersonRoster();')">end the roster (with a household size of ~~curocc() - 1~~)</a>.</i></p>
+            <p><i>You are entering person ~~curocc()~~. If all persons have been recorded, <a href="javascript:CSPro.runLogicAsync('EndPersonRoster();')">end the roster (with a household size of ~~curocc() - 1~~)</a>.</i></p>
+            
+        helpText:
+          EN: |
+            
+  - name: SIMPLECAPI_DICT.SEX
+    conditions:
+      - questionText:
+          EN: |
+            <p><span class="name">~~PersonName()~~:</span> What is your sex?</p>
             
         helpText:
           EN: |
@@ -65,42 +72,6 @@ questions:
             <p><span class="name">~~PersonName()~~:</span> How old are you?</p>
             <p></p>
             <p><span class="instruction">If ~~PersonName()~~ does not know an exact age, record Don't Know.</span></p>
-            
-        helpText:
-          EN: |
-            
-  - name: SIMPLECAPI_DICT.HOUSEHOLD_ID
-    conditions:
-      - questionText:
-          EN: |
-            <p><span class="instruction">Enter the household number.</span></p>
-            
-        helpText:
-          EN: |
-            
-  - name: SIMPLECAPI_DICT.LANGUAGES_SPOKEN_OTHER
-    conditions:
-      - questionText:
-          EN: |
-            <p><span class="instruction">Specify any other language that ~~PersonName()~~ listed that was not in the above list. Enter only one language.</span></p>
-            
-        helpText:
-          EN: |
-            
-  - name: SIMPLECAPI_DICT.LITERATE
-    conditions:
-      - questionText:
-          EN: |
-            <p><span class="name">~~PersonName()~~:</span> Are you literate, meaning that you can read and write with understanding in at least one language?</p>
-            
-        helpText:
-          EN: |
-            
-  - name: SIMPLECAPI_DICT.MAIN_LANGUAGE
-    conditions:
-      - questionText:
-          EN: |
-            <p><span class="name">~~PersonName()~~:</span> What is the language that you speak most frequently?</p>
             
         helpText:
           EN: |
@@ -123,11 +94,40 @@ questions:
         helpText:
           EN: |
             
-  - name: SIMPLECAPI_DICT.SEX
+  - name: SIMPLECAPI_DICT.LITERATE
     conditions:
       - questionText:
           EN: |
-            <p><span class="name">~~PersonName()~~:</span> What is your sex?</p>
+            <p><span class="name">~~PersonName()~~:</span> Are you literate, meaning that you can read and write with understanding in at least one language?</p>
+            
+        helpText:
+          EN: |
+            
+  - name: LANGUAGES_BLOCK
+    conditions:
+      - questionText:
+          EN: |
+            <p><span class="name">~~PersonName()~~:</span> What languages do you speak?</p>
+            <p></p>
+            <p><span class="instruction">If ~~PersonName()~~ lists only one language, probe and ask if ~~PersonName()~~ speaks more than one language.</span></p>
+            
+        helpText:
+          EN: |
+            
+  - name: SIMPLECAPI_DICT.LANGUAGES_SPOKEN_OTHER
+    conditions:
+      - questionText:
+          EN: |
+            <p><span class="instruction">Specify any other language that ~~PersonName()~~ listed that was not in the above list. Enter only one language.</span></p>
+            
+        helpText:
+          EN: |
+            
+  - name: SIMPLECAPI_DICT.MAIN_LANGUAGE
+    conditions:
+      - questionText:
+          EN: |
+            <p><span class="name">~~PersonName()~~:</span> What is the language that you speak most frequently?</p>
             
         helpText:
           EN: |
