@@ -1,5 +1,5 @@
 ﻿[FormFile]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Name=CEN2000_DE
 Label=Check Code
 DefaultTextFont=-011 0000 0000 0000 0400 0000 0000 0000 0000 0003 0002 0001 0034 Arial
@@ -79,7 +79,6 @@ Required=Yes
 Name=ID
 Label=Identification
 Form=1
-LogicControl=No
 Max=1
   
 [Field]
@@ -88,7 +87,8 @@ Position=408,242,437,262
 Item=PROVINCE,CEN2000
 UseEnterKey=Yes
 Persistent=Yes
-ForceOutofRange=Yes
+ValidationMethod=Confirm
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -103,7 +103,8 @@ Position=408,272,437,292
 Item=DISTRICT,CEN2000
 UseEnterKey=Yes
 Persistent=Yes
-ForceOutofRange=Yes
+ValidationMethod=Confirm
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -118,7 +119,8 @@ Position=393,300,436,320
 Item=VILLAGE,CEN2000
 UseEnterKey=Yes
 Persistent=Yes
-ForceOutofRange=Yes
+ValidationMethod=Confirm
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -133,7 +135,8 @@ Position=393,330,436,350
 Item=EA,CEN2000
 UseEnterKey=Yes
 Persistent=Yes
-ForceOutofRange=Yes
+ValidationMethod=Confirm
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -148,7 +151,6 @@ Required=Yes
 Name=FQUEST
 Label=Questionnaire
 Form=2
-LogicControl=No
 Max=1
 MaxField=ERROR
   
@@ -157,6 +159,7 @@ Name=PROVINCE000
 Position=155,45,184,65
 Item=PROVINCE,CEN2000
 Mirror=Yes
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -170,6 +173,7 @@ Name=DISTRICT000
 Position=256,45,285,65
 Item=DISTRICT,CEN2000
 Mirror=Yes
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -183,6 +187,7 @@ Name=VILLAGE000
 Position=351,45,394,65
 Item=VILLAGE,CEN2000
 Mirror=Yes
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -196,6 +201,7 @@ Name=EA000
 Position=433,45,476,65
 Item=EA,CEN2000
 Mirror=Yes
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -209,7 +215,8 @@ Name=HU
 Position=581,45,624,65
 Item=HU,CEN2000
 UseEnterKey=Yes
-ForceOutofRange=Yes
+ValidationMethod=Confirm
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -309,7 +316,8 @@ Name=LINE
 Position=50,0,79,20
 Item=LINE,CEN2000
 UseEnterKey=Yes
-ForceOutofRange=Yes
+ValidationMethod=Confirm
+DataCaptureType=TextBox
   
 [Text]
 Position=0,0,81,16
@@ -330,7 +338,8 @@ Name=P02_REL
 Position=63,0,78,20
 Item=P02_REL,CEN2000
 UseEnterKey=Yes
-ForceOutofRange=Yes
+ValidationMethod=Confirm
+DataCaptureType=TextBox
   
 [Text]
 Text=Relationship
@@ -350,7 +359,8 @@ Name=P03_SEX
 Position=9,0,24,20
 Item=P03_SEX,CEN2000
 UseEnterKey=Yes
-ForceOutofRange=Yes
+ValidationMethod=Confirm
+DataCaptureType=TextBox
   
 [Text]
 Text=Sex
@@ -372,7 +382,8 @@ Name=P14_WORKING
 Position=37,0,52,20
 Item=P14_WORKING,CEN2000
 UseEnterKey=Yes
-ForceOutofRange=Yes
+ValidationMethod=Confirm
+DataCaptureType=TextBox
   
 [Text]
 Text=Working
@@ -392,6 +403,7 @@ Name=P15_OCC
 Position=41,0,84,20
 Item=P15_OCC,CEN2000
 UseEnterKey=Yes
+DataCaptureType=TextBox
   
 [Text]
 Position=0,0,72,16
@@ -412,6 +424,7 @@ Name=P16_IND
 Position=19,0,62,20
 Item=P16_IND,CEN2000
 UseEnterKey=Yes
+DataCaptureType=TextBox
   
 [Text]
 Position=0,0,53,16

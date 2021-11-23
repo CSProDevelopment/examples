@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Label=Popstan Census Assignments Dictionary
 Name=PSC_ASSIGNMENTS_DICT
 RecordTypeStart=1
@@ -20,6 +20,7 @@ Label=Province
 Name=ASSIGNMENTS_PROVINCE
 Start=2
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -27,6 +28,7 @@ Label=District
 Name=ASSIGNMENTS_DISTRICT
 Start=4
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -34,6 +36,7 @@ Label=EA
 Name=ASSIGNMENTS_EA
 Start=6
 Len=3
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -48,6 +51,7 @@ Label=Role
 Name=ASSIGNMENTS_ROLE
 Start=45
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -74,4 +78,5 @@ Label=Date Assigned EA
 Name=ASSIGNMENTS_DATE_ASSIGNED
 Start=47
 Len=10
+DataType=Numeric
 ZeroFill=Yes

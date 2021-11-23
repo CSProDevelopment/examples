@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Label=Staff
 Name=STAFF_DICT
 RecordTypeStart=0
@@ -20,6 +20,7 @@ Label=Staff code
 Name=STAFF_CODE
 Start=1
 Len=3
+DataType=Numeric
 ZeroFill=Yes
 
 [Record]
@@ -40,6 +41,7 @@ Label=Staff role
 Name=STAFF_ROLE
 Start=34
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]

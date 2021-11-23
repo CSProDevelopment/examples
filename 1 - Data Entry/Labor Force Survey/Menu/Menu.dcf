@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Label=Menu
 Name=MENU_DICT
 RecordTypeStart=1
@@ -20,6 +20,7 @@ Label=Menu identification
 Name=MENU_ID
 Start=2
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [Record]
@@ -33,6 +34,7 @@ Label=Login
 Name=LOGIN
 Start=3
 Len=3
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -40,6 +42,7 @@ Label=Interviewer Menu
 Name=INTERVIEWER_MENU
 Start=6
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -54,6 +57,7 @@ Label=Supervisor Menu
 Name=SUPERVISOR_MENU
 Start=7
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -77,6 +81,7 @@ Label=Household Action
 Name=HOUSEHOLD_ACTION
 Start=17
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -91,6 +96,7 @@ Label=Household Final Result
 Name=HOUSEHOLD_FINAL_RESULT
 Start=18
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -113,6 +119,7 @@ Label=Reports
 Name=SUPERVISOR_REPORTS
 Start=20
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]

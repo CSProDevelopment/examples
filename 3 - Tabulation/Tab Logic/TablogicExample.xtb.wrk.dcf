@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Label=TablogicExample - Working Storage Dictionary
 Name=WS_DICT
 RecordTypeStart=1
@@ -20,6 +20,7 @@ Label=Dummy Id
 Name=DUMMY_ID
 Start=2
 Len=1
+DataType=Numeric
 
 [Record]
 Label=Working Storage Record
@@ -32,12 +33,14 @@ Label=System Total
 Name=SYSTEM_TOTAL
 Start=3
 Len=1
+DataType=Numeric
 
 [Item]
 Label=Complete Plumbing
 Name=COMPLETE_PLUMBING
 Start=4
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Complete Plumbing
@@ -51,6 +54,7 @@ Label=Children 0 to 5
 Name=CHILDREN_0_TO_5
 Start=5
 Len=2
+DataType=Numeric
 
 [ValueSet]
 Label=Children 0 to 5
@@ -67,6 +71,7 @@ Label=Children 6 to 17
 Name=CHILDREN_6_TO_17
 Start=7
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Children 6 to 17
@@ -83,6 +88,7 @@ Label=Lifetime Migration
 Name=LIFETIME_MIGRATION
 Start=8
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Lifetime Migration
@@ -97,6 +103,7 @@ Label=foo
 Name=FOO
 Start=9
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=foo

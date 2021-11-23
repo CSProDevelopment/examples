@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Label=REL
 Name=REL
 RecordTypeStart=1
@@ -20,6 +20,7 @@ Label=Serial Number
 Name=SERIAL_NUMBER
 Start=2
 Len=4
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -38,6 +39,7 @@ Label=Total Persons
 Name=TOTAL_PERSONS
 Start=6
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -50,6 +52,7 @@ Label=Eligible Women
 Name=ELIG_WOMEN
 Start=8
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -70,6 +73,7 @@ Label=Line Number
 Name=LINE_NUMBER
 Start=6
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -82,6 +86,7 @@ Label=Relationship
 Name=RELATIONSHIP
 Start=8
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -102,6 +107,7 @@ Label=Sex
 Name=SEX
 Start=9
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -117,6 +123,7 @@ Label=Age
 Name=AGE
 Start=10
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -131,6 +138,7 @@ Label=Marital Status
 Name=MS
 Start=12
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -159,6 +167,7 @@ Label=Woman Number
 Name=WOMAN_NUMBER
 Start=6
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -173,6 +182,7 @@ Label=Woman MS
 Name=WOMAN_MS
 Start=8
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -190,6 +200,7 @@ Label=Males Born
 Name=MALES_BORN
 Start=9
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -204,6 +215,7 @@ Label=Females Born
 Name=FEMALES_BORN
 Start=11
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -218,6 +230,7 @@ Label=Males Dead
 Name=MALES_DEAD
 Start=13
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -232,6 +245,7 @@ Label=Females Dead
 Name=FEMALES_DEAD
 Start=15
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -246,6 +260,7 @@ Label=Child 1
 Name=CHILD1
 Start=17
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -260,6 +275,7 @@ Label=Child YOB1
 Name=CHILD_YOB1
 Start=18
 Len=4
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -274,6 +290,7 @@ Label=Child2
 Name=CHILD2
 Start=22
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -288,6 +305,7 @@ Label=Child YOB2
 Name=CHILD_YOB2
 Start=23
 Len=4
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -302,6 +320,7 @@ Label=Child3
 Name=CHILD3
 Start=27
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -316,6 +335,7 @@ Label=Child YOB3
 Name=CHILD_YOB3
 Start=28
 Len=4
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -330,6 +350,7 @@ Label=Child4
 Name=CHILD4
 Start=32
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -344,6 +365,7 @@ Label=Child YOB4
 Name=CHILD_YOB4
 Start=33
 Len=4
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]

@@ -1,5 +1,5 @@
 ﻿[FormFile]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Name=MENU_FF
 Label=Menu
 DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
@@ -42,6 +42,7 @@ Name=LOGIN
 Position=207,32,250,52
 Item=LOGIN,MENU_DICT
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=1
   
 [Text]

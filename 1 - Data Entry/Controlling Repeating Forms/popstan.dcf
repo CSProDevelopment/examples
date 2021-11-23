@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Label=Popstan 2000 Census
 Name=CEN2000
 RecordTypeStart=1
@@ -20,6 +20,7 @@ Label=Province
 Name=PROVINCE
 Start=2
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -46,6 +47,7 @@ Label=District
 Name=DISTRICT
 Start=4
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -58,6 +60,7 @@ Label=Village
 Name=VILLAGE
 Start=6
 Len=3
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -70,6 +73,7 @@ Label=Enumeration area
 Name=EA
 Start=9
 Len=3
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -82,6 +86,7 @@ Label=Urban/Rural
 Name=UR
 Start=12
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -95,6 +100,7 @@ Label=Building number
 Name=BUILDING
 Start=13
 Len=3
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -108,6 +114,7 @@ Label=Housing unit
 Name=HU
 Start=16
 Len=3
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -120,6 +127,7 @@ Label=Household number
 Name=HH
 Start=19
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -140,6 +148,7 @@ Label=Line number
 Name=LINE
 Start=20
 Len=2
+DataType=Numeric
 
 [ValueSet]
 Label=Line number
@@ -151,6 +160,7 @@ Label=Relationship
 Name=P02_REL
 Start=22
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Relationship
@@ -170,6 +180,7 @@ Label=Sex
 Name=P03_SEX
 Start=23
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Sex
@@ -184,6 +195,7 @@ Label=Age
 Name=P04_AGE
 Start=24
 Len=2
+DataType=Numeric
 
 [ValueSet]
 Label=Age
@@ -246,6 +258,7 @@ Label=Marital status
 Name=P05_MS
 Start=26
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Marital status
@@ -261,6 +274,7 @@ Label=Mother living
 Name=P06_MOTHER
 Start=27
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Mother living
@@ -274,6 +288,7 @@ Label=Place of birth
 Name=P07_BIRTH
 Start=28
 Len=2
+DataType=Numeric
 
 [ValueSet]
 Label=Place of birth
@@ -293,6 +308,7 @@ Label=Residence in 1995
 Name=P08_RES95
 Start=30
 Len=2
+DataType=Numeric
 
 [ValueSet]
 Label=Residence in 1995
@@ -314,6 +330,7 @@ Label=Attending school
 Name=P09_ATTEND
 Start=32
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Attending school
@@ -329,6 +346,7 @@ Label=Highest grade completed
 Name=P10_HIGH_GR
 Start=33
 Len=2
+DataType=Numeric
 
 [ValueSet]
 Label=Highest grade completed
@@ -348,6 +366,7 @@ Label=Literacy
 Name=P11_LITERACY
 Start=35
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Literacy
@@ -363,6 +382,7 @@ Label=Working
 Name=P12_WORKING
 Start=36
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Working
@@ -378,6 +398,7 @@ Label=Looking for work
 Name=P13_LOOKING
 Start=37
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Looking for work
@@ -393,6 +414,7 @@ Label=Why not looking for work
 Name=P14_WHY_NOT
 Start=38
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Why not looking for work
@@ -412,6 +434,7 @@ Label=Occupation
 Name=P15_OCC
 Start=39
 Len=2
+DataType=Numeric
 
 [ValueSet]
 Label=Occupation
@@ -438,6 +461,7 @@ Name=P15A_OCC
 Start=39
 Len=1
 ItemType=SubItem
+DataType=Numeric
 
 [ValueSet]
 Label=Occupation (major groups)
@@ -460,6 +484,7 @@ Label=Industry
 Name=P16_IND
 Start=41
 Len=2
+DataType=Numeric
 
 [ValueSet]
 Label=Industry
@@ -510,6 +535,7 @@ Name=P16A_IND
 Start=41
 Len=1
 ItemType=SubItem
+DataType=Numeric
 
 [ValueSet]
 Label=Industry (major groups)
@@ -532,6 +558,7 @@ Label=Work Status
 Name=P17_WK_STATUS
 Start=43
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Work Status
@@ -550,6 +577,7 @@ Label=Economically active
 Name=ECON_ACTIVE
 Start=44
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Economically active
@@ -565,6 +593,7 @@ Label=Number of children born alive
 Name=P18_BORN
 Start=45
 Len=2
+DataType=Numeric
 
 [ValueSet]
 Label=Number of children born alive
@@ -589,6 +618,7 @@ Label=Number of children still living
 Name=P19_LIVING
 Start=47
 Len=2
+DataType=Numeric
 
 [ValueSet]
 Label=Number of children still living
@@ -613,6 +643,7 @@ Label=Number of children born in last 12 months
 Name=P20_BORN12
 Start=49
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Number of children born in last 12 months
@@ -633,6 +664,7 @@ Label=Type of housing
 Name=H01_TYPE
 Start=20
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Type of housing
@@ -650,6 +682,7 @@ Label=Wall type
 Name=H02_WALL
 Start=21
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Wall type
@@ -669,6 +702,7 @@ Label=Roof type
 Name=H03_ROOF
 Start=22
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Roof type
@@ -688,6 +722,7 @@ Label=Floor type
 Name=H04_FLOOR
 Start=23
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Floor type
@@ -707,6 +742,7 @@ Label=Number of rooms
 Name=H05_ROOMS
 Start=24
 Len=2
+DataType=Numeric
 
 [ValueSet]
 Label=Number of rooms
@@ -740,6 +776,7 @@ Label=Tenure
 Name=H06_TENURE
 Start=26
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Tenure
@@ -757,6 +794,7 @@ Label=Amount of rent paid
 Name=H07_RENT
 Start=27
 Len=3
+DataType=Numeric
 
 [ValueSet]
 Label=Amount of rent paid
@@ -771,6 +809,7 @@ Label=Type of toilet facilities
 Name=H08_TOILET
 Start=30
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Type of toilet facilities
@@ -790,6 +829,7 @@ Label=Type of bathing facilities
 Name=H09_BATH
 Start=31
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Type of bathing facilities
@@ -809,6 +849,7 @@ Label=Source of water
 Name=H10_WATER
 Start=32
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Source of water
@@ -828,6 +869,7 @@ Label=Fuel for lighting
 Name=H11_LIGHT
 Start=33
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Fuel for lighting
@@ -847,6 +889,7 @@ Label=Fuel for cooking
 Name=H12_FUEL
 Start=34
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Fuel for cooking
@@ -867,6 +910,7 @@ Label=Number of persons in the household
 Name=H13_PERSONS
 Start=35
 Len=4
+DataType=Numeric
 
 [ValueSet]
 Label=Number of persons in the household

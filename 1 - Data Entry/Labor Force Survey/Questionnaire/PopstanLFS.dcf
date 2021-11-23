@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Label=PopstanLFS
 Name=POPSTANLFS_DICT
 RecordTypeStart=1
@@ -20,6 +20,7 @@ Label=Province
 Name=PROVINCE
 Start=2
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -38,6 +39,7 @@ Label=District
 Name=DISTRICT
 Start=3
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -45,6 +47,7 @@ Label=Dwelling unit number
 Name=GHDWNO
 Start=5
 Len=3
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -52,6 +55,7 @@ Label=Household number
 Name=GHHHNO
 Start=8
 Len=3
+DataType=Numeric
 ZeroFill=Yes
 
 [Record]
@@ -65,6 +69,7 @@ Label=Type of area
 Name=GHAREA
 Start=11
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -79,6 +84,7 @@ Label=Interview date
 Name=GHVFDT
 Start=12
 Len=8
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -86,6 +92,7 @@ Label=Household replacement status
 Name=GHHRPL
 Start=20
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -100,6 +107,7 @@ Label=Number of household members
 Name=GHHHSIZE
 Start=21
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -107,6 +115,7 @@ Label=Number of elibible household members
 Name=GHNELIGIBLE
 Start=23
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -114,6 +123,7 @@ Label=Interviewer ID
 Name=GHINTID
 Start=25
 Len=3
+DataType=Numeric
 ZeroFill=Yes
 
 [Record]
@@ -128,6 +138,7 @@ Label=Person number
 Name=PPNO
 Start=11
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -142,6 +153,7 @@ Label=Sex
 Name=DEMSEX
 Start=63
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -155,6 +167,7 @@ Label=Relationship to head of household/reference person
 Name=DEMREL
 Start=64
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -195,6 +208,7 @@ Label=Age
 Name=DEMAG1
 Start=66
 Len=3
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -207,6 +221,7 @@ Label=Date of birth
 Name=DEMBTH
 Start=69
 Len=8
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -215,6 +230,7 @@ Name=DEMBTH_YEAR
 Start=69
 Len=4
 ItemType=SubItem
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -229,6 +245,7 @@ Name=DEMBTH_MONTH
 Start=73
 Len=2
 ItemType=SubItem
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -243,6 +260,7 @@ Name=DEMBTH_DAY
 Start=75
 Len=2
 ItemType=SubItem
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -256,6 +274,7 @@ Label=Highest level of education
 Name=DEMEDL
 Start=77
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -274,6 +293,7 @@ Label=Currently in education
 Name=DEMEDC
 Start=79
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -286,6 +306,7 @@ Label=Additional household members
 Name=DEMMORE
 Start=80
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -305,6 +326,7 @@ Label=Labor module person number
 Name=LBPPNO
 Start=11
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -312,6 +334,7 @@ Label=Module start: Proxy
 Name=PXYSTART
 Start=13
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -319,6 +342,7 @@ Label=Respondent present at interview
 Name=PXYRSP
 Start=14
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -331,6 +355,7 @@ Label=Proxy status
 Name=PXYCHK
 Start=15
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -343,6 +368,7 @@ Label=Proxy respondent
 Name=PXYPPN
 Start=16
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -355,6 +381,7 @@ Label=Relationship of proxy respondent
 Name=PXYREL
 Start=18
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -371,6 +398,7 @@ Label=Module end: Proxy
 Name=PXYEND
 Start=19
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -378,6 +406,7 @@ Label=Module start: Employed at work
 Name=EMPSTART
 Start=20
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -385,6 +414,7 @@ Label=Did work for pay
 Name=EMPPAY
 Start=21
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -397,6 +427,7 @@ Label=Did work for profit
 Name=EMPPFT
 Start=22
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -409,6 +440,7 @@ Label=Did work in a family business
 Name=EMPFAM
 Start=23
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -421,6 +453,7 @@ Label=Module end: Employed at work
 Name=EMPEND
 Start=24
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -428,6 +461,7 @@ Label=Module start: Temporary absence
 Name=ABSSTART
 Start=25
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -435,6 +469,7 @@ Label=Absence from job
 Name=ABSJOB
 Start=26
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -447,6 +482,7 @@ Label=Reason for absence
 Name=ABSWHY
 Start=27
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -478,6 +514,7 @@ Label=Continued work during off season
 Name=ABSSEA
 Start=79
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -490,6 +527,7 @@ Label=Duration of absence
 Name=ABSDUR
 Start=80
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -505,6 +543,7 @@ Label=Continued pay during absence
 Name=ABSPAY
 Start=82
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -517,6 +556,7 @@ Label=Module end: Temporary absence
 Name=ABSEND
 Start=84
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -524,6 +564,7 @@ Label=Module start: Agriculture and Fishing
 Name=AGFSTART
 Start=85
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -545,6 +586,7 @@ Label=Did any work in farming or fishing
 Name=AGFANY
 Start=89
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -557,6 +599,7 @@ Label=Intended for sale or family use
 Name=AGFMKT
 Start=90
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -571,6 +614,7 @@ Label=Main intended destination of products
 Name=AGFMAI
 Start=91
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -585,6 +629,7 @@ Label=Sale of products in the past
 Name=AGFHIS
 Start=92
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -598,6 +643,7 @@ Label=Hired by some one else
 Name=AGFHIR
 Start=93
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -624,6 +670,7 @@ Label=Number of days in the last week working in farming or fishing
 Name=AGFDYS
 Start=194
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -642,6 +689,7 @@ Label=Number of hours per day doing work in agriculture and fishing
 Name=AGFHRS
 Start=195
 Len=4
+DataType=Numeric
 Decimal=1
 ZeroFill=Yes
 
@@ -655,6 +703,7 @@ Label=Module end: Agriculture and Fishing
 Name=AGFEND
 Start=199
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -662,6 +711,7 @@ Label=Module start: Main job
 Name=MJBSTART
 Start=200
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -669,6 +719,7 @@ Label=Multiple job holder status
 Name=MULTJB
 Start=201
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -681,6 +732,7 @@ Label=Status in employment
 Name=MJBEST
 Start=202
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -724,6 +776,7 @@ Label=Workplace size
 Name=MJBSIZ
 Start=203
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -741,6 +794,7 @@ Label=Type of workplace
 Name=MJBPLC
 Start=204
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -770,6 +824,7 @@ Label=Receipt of wage or salary
 Name=MJBSAL
 Start=206
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -797,6 +852,7 @@ Label=Multiparty employment status
 Name=MJBTRI
 Start=211
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -810,6 +866,7 @@ Label=Responsible for tax deduction
 Name=MJBDEE
 Start=212
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -823,6 +880,7 @@ Label=Institutional sector
 Name=MJBINS
 Start=213
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -840,6 +898,7 @@ Label=Module end: Main job
 Name=MJBEND
 Start=214
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -847,6 +906,7 @@ Label=Module start: Domestic work
 Name=DMWSTART
 Start=215
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -854,6 +914,7 @@ Label=Household sector check
 Name=DMWHHB
 Start=216
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -869,6 +930,7 @@ Label=Employment in household business
 Name=DMWHBE
 Start=217
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -881,6 +943,7 @@ Label=Main task within household
 Name=DMWCHK
 Start=218
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -900,6 +963,7 @@ Label=Module end: Domestic work
 Name=DMWEND
 Start=269
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -907,6 +971,7 @@ Label=Module start: Industry of main job
 Name=IMJSTART
 Start=270
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -914,6 +979,7 @@ Label=Is there name of the organization or business
 Name=IMJREF
 Start=271
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -947,6 +1013,7 @@ Label=Module end: Industry of main job
 Name=IMJEND
 Start=336
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -954,6 +1021,7 @@ Label=Module start: Duration of main job
 Name=DMJSTART
 Start=337
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -961,6 +1029,7 @@ Label=Which year started working
 Name=DMJSYR
 Start=338
 Len=4
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -973,6 +1042,7 @@ Label=Which month started working
 Name=DMJSMO
 Start=342
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -996,6 +1066,7 @@ Label=Module end: Duration of main job
 Name=DMJEND
 Start=344
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -1003,6 +1074,7 @@ Label=Module start: Occupation of main job
 Name=OMJSTART
 Start=345
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -1471,6 +1543,7 @@ Label=Module end: Occupation of main job
 Name=OMJEND
 Start=410
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -1478,6 +1551,7 @@ Label=Module start: Working time
 Name=WTSTART
 Start=411
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -1505,6 +1579,7 @@ Label=Hours actually worked main job
 Name=ACHRSM
 Start=420
 Len=4
+DataType=Numeric
 Occurrences=7
 Decimal=1
 DecimalChar=Yes
@@ -1528,6 +1603,7 @@ Label=Hours actually worked estimate
 Name=ACHRM1
 Start=448
 Len=4
+DataType=Numeric
 Decimal=1
 DecimalChar=Yes
 
@@ -1541,6 +1617,7 @@ Label=Sum total hours actually worked main job
 Name=ACHRSUMMJ
 Start=452
 Len=5
+DataType=Numeric
 Decimal=1
 DecimalChar=Yes
 
@@ -1555,6 +1632,7 @@ Label=Sum hours actually worked main job check
 Name=ACHRCM
 Start=457
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Sum hours actually worked main job check
@@ -1566,6 +1644,7 @@ Label=Total hours actually worked main job corrected
 Name=ACHRUM
 Start=458
 Len=5
+DataType=Numeric
 Decimal=1
 DecimalChar=Yes
 
@@ -1580,6 +1659,7 @@ Label=Usual hours equal actual hours main job
 Name=ACEQUM
 Start=463
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Usual hours equal actual hours main job
@@ -1591,6 +1671,7 @@ Label=Usual hours worked main job
 Name=USHRSM
 Start=464
 Len=5
+DataType=Numeric
 Decimal=1
 DecimalChar=Yes
 
@@ -1604,6 +1685,7 @@ Label=Number of jobs
 Name=NUMJBS
 Start=469
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Number of jobs
@@ -1629,6 +1711,7 @@ Label=Hours actually worked second job
 Name=ACHRSS
 Start=478
 Len=4
+DataType=Numeric
 Occurrences=7
 Decimal=1
 DecimalChar=Yes
@@ -1650,6 +1733,7 @@ Label=Hours actually worked estimate
 Name=ACHRS1
 Start=506
 Len=4
+DataType=Numeric
 Decimal=1
 DecimalChar=Yes
 
@@ -1664,6 +1748,7 @@ Label=Sum total hours actually worked second job
 Name=ACHRSUMSJ
 Start=510
 Len=5
+DataType=Numeric
 Decimal=1
 DecimalChar=Yes
 
@@ -1677,6 +1762,7 @@ Label=Sum hours actually worked second job check
 Name=ACHRCS
 Start=515
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Sum hours actually worked second job check
@@ -1688,6 +1774,7 @@ Label=Total hours actually worked second job corrected
 Name=ACHRUS
 Start=516
 Len=5
+DataType=Numeric
 Decimal=1
 DecimalChar=Yes
 
@@ -1701,6 +1788,7 @@ Label=Usual hours equal actual hours second job
 Name=ACEQUS
 Start=521
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Usual hours equal actual hours second job
@@ -1712,6 +1800,7 @@ Label=Number of hours usually worked in second job
 Name=USHRSS
 Start=522
 Len=5
+DataType=Numeric
 Decimal=1
 DecimalChar=Yes
 
@@ -1725,6 +1814,7 @@ Label=Number of hours actually worked in other jobs
 Name=ACHRSO
 Start=527
 Len=5
+DataType=Numeric
 Decimal=1
 DecimalChar=Yes
 ZeroFill=Yes
@@ -1739,6 +1829,7 @@ Label=Usual hours equal actual hours other jobs
 Name=ACEQUO
 Start=532
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -1751,6 +1842,7 @@ Label=Number of hours usually worked in other jobs
 Name=USHRSO
 Start=533
 Len=5
+DataType=Numeric
 Decimal=1
 DecimalChar=Yes
 
@@ -1764,6 +1856,7 @@ Label=Total actual hours all jobs
 Name=TOTACH
 Start=538
 Len=5
+DataType=Numeric
 Decimal=1
 DecimalChar=Yes
 ZeroFill=Yes
@@ -1780,6 +1873,7 @@ Label=Total usual hours all jobs
 Name=TOTUSH
 Start=543
 Len=5
+DataType=Numeric
 Decimal=1
 DecimalChar=Yes
 ZeroFill=Yes
@@ -1794,6 +1888,7 @@ Label=Desire to work more hours
 Name=WNTMRH
 Start=548
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -1806,6 +1901,7 @@ Label=Availability to work more hours
 Name=AVLMRH
 Start=549
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -1818,6 +1914,7 @@ Label=Number of additional hours
 Name=NMMRHR
 Start=550
 Len=5
+DataType=Numeric
 Decimal=1
 DecimalChar=Yes
 ZeroFill=Yes
@@ -1832,6 +1929,7 @@ Label=Search for other job
 Name=SROTJB
 Start=555
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -1844,6 +1942,7 @@ Label=Module end: Working time
 Name=WTEND
 Start=556
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -1851,6 +1950,7 @@ Label=Module start: Job Search
 Name=SRHSTART
 Start=557
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -1858,6 +1958,7 @@ Label=Job search activity
 Name=SRHJOB
 Start=558
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Job search activity
@@ -1869,6 +1970,7 @@ Label=Tried to start a business
 Name=SRHBUS
 Start=559
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Tried to start a business
@@ -1880,6 +1982,7 @@ Label=Main search Method
 Name=SRHMTD
 Start=560
 Len=2
+DataType=Numeric
 
 [ValueSet]
 Label=Main search Method
@@ -1910,6 +2013,7 @@ Label=Did additional search activity
 Name=SRHACT
 Start=612
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Did additional search activity
@@ -1921,6 +2025,7 @@ Label=Additional search method
 Name=SRHOTH
 Start=613
 Len=2
+DataType=Numeric
 
 [ValueSet]
 Label=Additional search method
@@ -1951,6 +2056,7 @@ Label=Duration of search
 Name=SRHDUR
 Start=665
 Len=2
+DataType=Numeric
 
 [ValueSet]
 Label=Duration of search
@@ -1967,6 +2073,7 @@ Label=Search in last 12 months
 Name=SRHYER
 Start=667
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Search in last 12 months
@@ -1978,6 +2085,7 @@ Label=Desire to work
 Name=SRHDES
 Start=668
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Desire to work
@@ -1989,6 +2097,7 @@ Label=Reason for not seeking work
 Name=SRHDWY
 Start=669
 Len=2
+DataType=Numeric
 
 [ValueSet]
 Label=Reason for not seeking work
@@ -2019,6 +2128,7 @@ Label=Date of future start
 Name=SRHFTR
 Start=721
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Date of future start
@@ -2032,6 +2142,7 @@ Label=Availability for future start
 Name=SRHFAN
 Start=722
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Availability for future start
@@ -2043,6 +2154,7 @@ Label=Availability to start last week
 Name=SRHAVN
 Start=723
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Availability to start last week
@@ -2054,6 +2166,7 @@ Label=Availability to start in next two weeks
 Name=SRHAVL
 Start=724
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Availability to start in next two weeks
@@ -2065,6 +2178,7 @@ Label=Reason for not being available
 Name=SRHNAR
 Start=725
 Len=2
+DataType=Numeric
 
 [ValueSet]
 Label=Reason for not being available
@@ -2082,6 +2196,7 @@ Label=Main current activity
 Name=SRHMAC
 Start=727
 Len=2
+DataType=Numeric
 
 [ValueSet]
 Label=Main current activity
@@ -2107,6 +2222,7 @@ Label=Module end: Job search
 Name=SRHEND
 Start=779
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -2114,4 +2230,5 @@ Label=End Individual Interview
 Name=INDIVEND
 Start=780
 Len=1
+DataType=Numeric
 ZeroFill=Yes

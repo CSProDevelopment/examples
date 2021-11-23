@@ -1,5 +1,5 @@
 ﻿[FormFile]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Name=DECKARRAYS_FF
 Label=DeckArrays
 DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
@@ -45,7 +45,6 @@ Required=Yes
 Name=IDS0_EDT
 Label=(Id Items)
 Form=1
-LogicControl=No
 Max=1
   
 [Field]
@@ -78,7 +77,6 @@ Required=No
 Name=POPULATION_EDT
 Label=Population
 Form=2
-LogicControl=No
 Type=Record
 TypeName=POPULATION
 Max=10

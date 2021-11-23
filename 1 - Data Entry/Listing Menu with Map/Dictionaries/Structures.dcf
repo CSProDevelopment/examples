@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Label=Structures
 Name=STRUCTURES_DICT
 RecordTypeStart=1
@@ -20,6 +20,7 @@ Label=Structure Number
 Name=ST_NUMBER
 Start=2
 Len=3
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -38,6 +39,7 @@ Label=Type
 Name=ST_TYPE
 Start=5
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -62,6 +64,7 @@ Label=Latitude
 Name=ST_LATITUDE
 Start=7
 Len=10
+DataType=Numeric
 Decimal=6
 DecimalChar=Yes
 ZeroFill=Yes
@@ -71,6 +74,7 @@ Label=Longitude
 Name=ST_LONGITUDE
 Start=17
 Len=11
+DataType=Numeric
 Decimal=6
 DecimalChar=Yes
 ZeroFill=Yes
@@ -87,6 +91,7 @@ Label=Number of Usual Members
 Name=ST_NUM_MEMBERS
 Start=78
 Len=3
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]

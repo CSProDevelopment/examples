@@ -1,5 +1,5 @@
 ﻿[FormFile]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Name=MENU_FF
 Label=Menu
 DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
@@ -100,7 +100,6 @@ Required=Yes
 Name=LOGIN_FORM
 Label=Login Form
 Form=1
-LogicControl=No
 Max=1
   
 [Field]
@@ -122,6 +121,7 @@ Position=218,72,275,92
 Item=PIN_CODE_CONFIRMATION,PSC_MENU_DICT
 HideInCaseTree=Yes
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -135,7 +135,6 @@ Required=Yes
 Name=SUPERVISOR_CREATION_FORM
 Label=Supervisor Creation Form
 Form=2
-LogicControl=No
 Max=1
   
 [Field]
@@ -144,6 +143,7 @@ Position=218,20,275,40
 Item=SUPERVISOR_ACCESS_PASSWORD,PSC_MENU_DICT
 HideInCaseTree=Yes
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -158,6 +158,7 @@ Position=218,63,919,83
 Item=SUPERVISOR_NAME,PSC_MENU_DICT
 UpperCase=Yes
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -172,6 +173,7 @@ Position=218,108,275,128
 Item=SUPERVISOR_PIN_CODE,PSC_MENU_DICT
 HideInCaseTree=Yes
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -186,7 +188,6 @@ Required=Yes
 Name=ASSIGNMENT_SELECTION_FORM
 Label=Assignment Selection Form
 Form=3
-LogicControl=No
 Max=1
   
 [Field]
@@ -234,7 +235,6 @@ Required=Yes
 Name=MAIN_MENU_FORM
 Label=Main Menu Form
 Form=4
-LogicControl=No
 Max=1
   
 [Field]
@@ -282,7 +282,6 @@ Required=Yes
 Name=STAFF_MANAGEMENT_FORM
 Label=Staff Management Form
 Form=5
-LogicControl=No
 Max=1
   
 [Field]
@@ -320,6 +319,7 @@ Item=MANAGE_STAFF_NAME,PSC_MENU_DICT
 HideInCaseTree=Yes
 UpperCase=Yes
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=5
   
 [Text]
@@ -333,7 +333,6 @@ Required=Yes
 Name=EA_ASSIGNMENT_FORM
 Label=EA Assignment Form
 Form=6
-LogicControl=No
 Max=1
   
 [Field]

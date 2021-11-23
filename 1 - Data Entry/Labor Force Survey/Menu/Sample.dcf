@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Label=SAMPLE Dictionary
 Name=SAMPLE_DICT
 RecordTypeStart=0
@@ -20,6 +20,7 @@ Label=Province
 Name=SAMPROV
 Start=1
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -27,6 +28,7 @@ Label=District
 Name=SAMDIST
 Start=2
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -34,6 +36,7 @@ Label=Dwelling unit number
 Name=SAMDWNO
 Start=4
 Len=3
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -41,6 +44,7 @@ Label=Household number
 Name=SAMHHNO
 Start=7
 Len=3
+DataType=Numeric
 ZeroFill=Yes
 
 [Record]
@@ -54,6 +58,7 @@ Label=Type of area
 Name=SAMAREA
 Start=10
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -61,6 +66,7 @@ Label=Household replacement status
 Name=SAMRPL
 Start=11
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -68,6 +74,7 @@ Label=Latitude
 Name=SAMGPSLAT
 Start=12
 Len=14
+DataType=Numeric
 Decimal=9
 DecimalChar=Yes
 ZeroFill=Yes
@@ -77,6 +84,7 @@ Label=Longitude
 Name=SAMGPSLON
 Start=26
 Len=14
+DataType=Numeric
 Decimal=9
 DecimalChar=Yes
 ZeroFill=Yes
@@ -107,6 +115,7 @@ Label=Assigned interviewer
 Name=SAMINT
 Start=115
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -114,4 +123,5 @@ Label=Assigned supervisor
 Name=SAMSUP
 Start=116
 Len=1
+DataType=Numeric
 ZeroFill=Yes

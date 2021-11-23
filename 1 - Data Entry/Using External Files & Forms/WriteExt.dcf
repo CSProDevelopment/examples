@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Label=Write External File
 Name=CENSUS
 RecordTypeStart=1
@@ -20,6 +20,7 @@ Label=Province
 Name=PROVINCE
 Start=2
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -46,6 +47,7 @@ Label=District
 Name=DISTRICT
 Start=4
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -58,6 +60,7 @@ Label=Village
 Name=VILLAGE
 Start=6
 Len=3
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -70,6 +73,7 @@ Label=Enumeration area
 Name=EA
 Start=9
 Len=3
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -82,6 +86,7 @@ Label=Housing unit
 Name=HU
 Start=12
 Len=3
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -100,6 +105,7 @@ Label=Type of housing
 Name=HOUSING_TYPE
 Start=15
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -118,6 +124,7 @@ Label=Wall type
 Name=WALL_TYPE
 Start=16
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -136,6 +143,7 @@ Label=Roof type
 Name=ROOF_TYPE
 Start=17
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -153,6 +161,7 @@ Label=Floor type
 Name=FLOOR_TYPE
 Start=18
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]

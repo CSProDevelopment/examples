@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Label=PostcalcExample - Working Storage Dictionary
 Name=WS_DICT
 RecordTypeStart=1
@@ -20,6 +20,7 @@ Label=Dummy Id
 Name=DUMMY_ID
 Start=2
 Len=1
+DataType=Numeric
 
 [Record]
 Label=Working Storage Record
@@ -32,12 +33,14 @@ Label=System Total
 Name=SYSTEM_TOTAL
 Start=3
 Len=1
+DataType=Numeric
 
 [Item]
 Label=Unmarried Men per 100 Women
 Name=UNMARRIED_MEN_PER_100_WOMEN
 Start=4
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Unmarried Men per 100 Women
@@ -49,6 +52,7 @@ Label=Dependency Ratio
 Name=DEPENDENCY_RATIO
 Start=5
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Dependency Ratio
@@ -60,6 +64,7 @@ Label=Total Fertility Rate
 Name=TOTAL_FERTILITY_RATE
 Start=6
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Total Fertility Rate

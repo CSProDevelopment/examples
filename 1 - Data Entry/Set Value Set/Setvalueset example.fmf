@@ -1,5 +1,5 @@
 ﻿[FormFile]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Name=CENSUS_DE
 Label=Census Data Entry
 DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0001 Arial
@@ -86,7 +86,6 @@ Required=Yes
 Name=IDS0_FORM
 Label=(Id Items)
 Form=1
-LogicControl=No
 Max=1
   
 [Field]
@@ -117,6 +116,7 @@ Text=District
 Name=VILLAGE
 Position=192,87,235,107
 Item=VILLAGE,CENSUS_DICT
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -128,6 +128,7 @@ Text=Village
 Name=EA
 Position=192,117,235,137
 Item=EA,CENSUS_DICT
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -139,6 +140,7 @@ Text=Enumeration area
 Name=UR
 Position=192,147,207,167
 Item=UR,CENSUS_DICT
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -150,6 +152,7 @@ Text=Urban/Rural
 Name=BUILDING
 Position=192,177,235,197
 Item=BUILDING,CENSUS_DICT
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -161,6 +164,7 @@ Text=Building number
 Name=HU
 Position=192,207,235,227
 Item=HU,CENSUS_DICT
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -172,6 +176,7 @@ Text=Housing unit
 Name=HH
 Position=192,237,207,257
 Item=HH,CENSUS_DICT
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -185,7 +190,6 @@ Required=No
 Name=PERSON_FORM
 Label=Person Record
 Form=2
-LogicControl=No
 Type=Record
 TypeName=PERSON
 Max=30
@@ -194,6 +198,7 @@ Max=30
 Name=LINE
 Position=337,27,366,47
 Item=LINE,CENSUS_DICT
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -205,6 +210,7 @@ Text=Line number
 Name=P02_REL
 Position=337,57,352,77
 Item=P02_REL,CENSUS_DICT
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -216,6 +222,7 @@ Text=Relationship
 Name=P03_SEX
 Position=337,87,352,107
 Item=P03_SEX,CENSUS_DICT
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -227,6 +234,7 @@ Text=Sex
 Name=P04_AGE
 Position=337,117,366,137
 Item=P04_AGE,CENSUS_DICT
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -238,6 +246,7 @@ Text=Age
 Name=P05_MS
 Position=337,147,352,167
 Item=P05_MS,CENSUS_DICT
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -249,6 +258,7 @@ Text=Marital status
 Name=P06_MOTHER
 Position=337,177,352,197
 Item=P06_MOTHER,CENSUS_DICT
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -260,6 +270,7 @@ Text=Mother living
 Name=P07_BIRTH
 Position=337,207,366,227
 Item=P07_BIRTH,CENSUS_DICT
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -271,6 +282,7 @@ Text=Place of birth
 Name=P08_RES95
 Position=337,237,366,257
 Item=P08_RES95,CENSUS_DICT
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -282,6 +294,7 @@ Text=Residence in 1995
 Name=P09_ATTEND
 Position=337,267,352,287
 Item=P09_ATTEND,CENSUS_DICT
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -293,6 +306,7 @@ Text=Attending school
 Name=P10_HIGH_GR
 Position=337,297,366,317
 Item=P10_HIGH_GR,CENSUS_DICT
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -304,6 +318,7 @@ Text=Highest grade completed
 Name=P11_LITERACY
 Position=337,327,352,347
 Item=P11_LITERACY,CENSUS_DICT
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -315,6 +330,7 @@ Text=Literacy
 Name=P13_LOOKING
 Position=337,407,352,427
 Item=P13_LOOKING,CENSUS_DICT
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -327,6 +343,7 @@ Form=2
 Name=P14_WHY_NOT
 Position=337,437,352,457
 Item=P14_WHY_NOT,CENSUS_DICT
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -339,6 +356,7 @@ Form=2
 Name=P16_IND
 Position=337,497,366,517
 Item=P16_IND,CENSUS_DICT
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -351,6 +369,7 @@ Form=2
 Name=P17_WK_STATUS
 Position=337,527,352,547
 Item=P17_WK_STATUS,CENSUS_DICT
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -363,6 +382,7 @@ Form=2
 Name=ECON_ACTIVE
 Position=337,557,352,577
 Item=ECON_ACTIVE,CENSUS_DICT
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -375,6 +395,7 @@ Form=2
 Name=P18_BORN
 Position=337,587,366,607
 Item=P18_BORN,CENSUS_DICT
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -387,6 +408,7 @@ Form=2
 Name=P19_LIVING
 Position=337,617,366,637
 Item=P19_LIVING,CENSUS_DICT
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -399,6 +421,7 @@ Form=2
 Name=P20_BORN12
 Position=337,647,352,667
 Item=P20_BORN12,CENSUS_DICT
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -413,13 +436,13 @@ Required=Yes
 Name=HOUSING_FORM
 Label=Housing Record
 Form=3
-LogicControl=No
 Max=1
   
 [Field]
 Name=H01_TYPE
 Position=301,27,316,47
 Item=H01_TYPE,CENSUS_DICT
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -431,6 +454,7 @@ Text=Type of housing
 Name=H02_WALL
 Position=301,57,316,77
 Item=H02_WALL,CENSUS_DICT
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -442,6 +466,7 @@ Text=Wall type
 Name=H03_ROOF
 Position=301,87,316,107
 Item=H03_ROOF,CENSUS_DICT
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -453,6 +478,7 @@ Text=Roof type
 Name=H04_FLOOR
 Position=301,117,316,137
 Item=H04_FLOOR,CENSUS_DICT
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -464,6 +490,7 @@ Text=Floor type
 Name=H05_ROOMS
 Position=301,147,330,167
 Item=H05_ROOMS,CENSUS_DICT
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -475,6 +502,7 @@ Text=Number of rooms
 Name=H06_TENURE
 Position=301,177,316,197
 Item=H06_TENURE,CENSUS_DICT
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -486,6 +514,7 @@ Text=Tenure
 Name=H07_RENT
 Position=301,207,344,227
 Item=H07_RENT,CENSUS_DICT
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -497,6 +526,7 @@ Text=Amount of rent paid
 Name=H08_TOILET
 Position=301,237,316,257
 Item=H08_TOILET,CENSUS_DICT
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -508,6 +538,7 @@ Text=Type of toilet facilities
 Name=H09_BATH
 Position=301,267,316,287
 Item=H09_BATH,CENSUS_DICT
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -519,6 +550,7 @@ Text=Type of bathing facilities
 Name=H10_WATER
 Position=301,297,316,317
 Item=H10_WATER,CENSUS_DICT
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -530,6 +562,7 @@ Text=Source of water
 Name=H11_LIGHT
 Position=301,327,316,347
 Item=H11_LIGHT,CENSUS_DICT
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -541,6 +574,7 @@ Text=Fuel for lighting
 Name=H12_FUEL
 Position=301,357,316,377
 Item=H12_FUEL,CENSUS_DICT
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -552,6 +586,7 @@ Text=Fuel for cooking
 Name=H13_PERSONS
 Position=301,387,358,407
 Item=H13_PERSONS,CENSUS_DICT
+DataCaptureType=TextBox
 Form=3
   
 [Text]

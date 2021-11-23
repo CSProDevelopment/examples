@@ -1,6 +1,6 @@
 ﻿---
 fileType: Question Text
-version: CSPro 7.6
+version: CSPro 7.7
 languages:
   - name: EN
     label: English
@@ -9,35 +9,37 @@ styles:
     className: normal
     css: |
       font-family: Arial;font-size: 16px;
-      
   - name: Instruction
     className: instruction
     css: |
       font-family: Arial;font-size: 14px;color: #0000FF;
-      
   - name: Heading 1
     className: heading1
     css: |
       font-family: Arial;font-size: 36px;
-      
   - name: Heading 2
     className: heading2
     css: |
       font-family: Arial;font-size: 24px;
-      
   - name: Heading 3
     className: heading3
     css: |
       font-family: Arial;font-size: 18px;
-      
 questions:
+  - name: STRUCTURES_DICT.ST_TYPE
+    conditions:
+      - questionText:
+          EN: |
+            <p>Enter the structure type</p>
+        helpText:
+          EN: |
+            
   - name: STRUCTURES_DICT.ST_NAME
     conditions:
       - logic: ST_TYPE<>1
         questionText:
           EN: |
             <p>Enter the name of the ~~getvaluelabel(ST_TYPE)~~</p>
-            
         helpText:
           EN: |
             
@@ -45,7 +47,6 @@ questions:
         questionText:
           EN: |
             <p>Enter the name of the head of the household</p>
-            
         helpText:
           EN: |
             
@@ -54,16 +55,6 @@ questions:
       - questionText:
           EN: |
             <p>Enter the number of people that reside in this household</p>
-            
-        helpText:
-          EN: |
-            
-  - name: STRUCTURES_DICT.ST_TYPE
-    conditions:
-      - questionText:
-          EN: |
-            <p>Enter the structure type</p>
-            
         helpText:
           EN: |
             

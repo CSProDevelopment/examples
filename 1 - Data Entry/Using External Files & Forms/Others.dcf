@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Label=Others
 Name=OTHERS_DICT
 RecordTypeStart=0
@@ -20,6 +20,7 @@ Label=Province
 Name=OPROV
 Start=1
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -27,6 +28,7 @@ Label=District
 Name=ODIST
 Start=3
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -34,6 +36,7 @@ Label=Village
 Name=OVILL
 Start=5
 Len=3
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -41,6 +44,7 @@ Label=EA
 Name=OEA
 Start=8
 Len=3
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -48,6 +52,7 @@ Label=Housing Unit
 Name=OHU
 Start=11
 Len=3
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]

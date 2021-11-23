@@ -1,5 +1,5 @@
 ﻿[FormFile]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Name=POPSTAN_ENT
 Label=ItemDrivenDE
 DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0001 Arial
@@ -82,7 +82,6 @@ Required=Yes
 Name=IDS0_FORM
 Label=Form One, Geo Codes
 Form=1
-LogicControl=No
 Max=1
   
 [Field]
@@ -90,6 +89,7 @@ Name=PROVINCE
 Position=194,27,223,47
 Item=PROVINCE,CEN2000
 UseEnterKey=Yes
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -102,6 +102,7 @@ Name=DISTRICT
 Position=194,57,223,77
 Item=DISTRICT,CEN2000
 UseEnterKey=Yes
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -114,6 +115,7 @@ Name=VILLAGE
 Position=194,87,237,107
 Item=VILLAGE,CEN2000
 UseEnterKey=Yes
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -126,6 +128,7 @@ Name=EA
 Position=194,117,237,137
 Item=EA,CEN2000
 UseEnterKey=Yes
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -138,6 +141,7 @@ Name=UR
 Position=194,147,209,167
 Item=UR,CEN2000
 UseEnterKey=Yes
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -150,6 +154,7 @@ Name=BUILDING
 Position=194,177,237,197
 Item=BUILDING,CEN2000
 UseEnterKey=Yes
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -162,6 +167,7 @@ Name=HU
 Position=194,207,237,227
 Item=HU,CEN2000
 UseEnterKey=Yes
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -174,6 +180,7 @@ Name=HH
 Position=194,237,209,257
 Item=HH,CEN2000
 UseEnterKey=Yes
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -187,7 +194,6 @@ Required=Yes
 Name=HOUSE001
 Label=Form Two, Housing Form, Part I
 Form=2
-LogicControl=No
 Type=Record
 TypeName=HOUSING
 Max=1
@@ -197,6 +203,7 @@ Name=H01_TYPE
 Position=303,27,318,47
 Item=H01_TYPE,CEN2000
 UseEnterKey=Yes
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -209,6 +216,7 @@ Name=H02_WALL
 Position=303,57,318,77
 Item=H02_WALL,CEN2000
 UseEnterKey=Yes
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -221,6 +229,7 @@ Name=H03_ROOF
 Position=303,87,318,107
 Item=H03_ROOF,CEN2000
 UseEnterKey=Yes
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -233,6 +242,7 @@ Name=H04_FLOOR
 Position=303,117,318,137
 Item=H04_FLOOR,CEN2000
 UseEnterKey=Yes
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -245,6 +255,7 @@ Name=H05_ROOMS
 Position=303,147,332,167
 Item=H05_ROOMS,CEN2000
 UseEnterKey=Yes
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -257,6 +268,7 @@ Name=H06_TENURE
 Position=303,177,318,197
 Item=H06_TENURE,CEN2000
 UseEnterKey=Yes
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -269,6 +281,7 @@ Name=H13_PERSONS
 Position=303,212,360,232
 Item=H13_PERSONS,CEN2000
 UseEnterKey=Yes
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -282,7 +295,6 @@ Required=No
 Name=PERSON_FORM
 Label=Form Three, Person Form
 Form=3
-LogicControl=No
 Type=Record
 TypeName=PERSON
 Max=30
@@ -292,6 +304,7 @@ Name=LINE
 Position=339,27,368,47
 Item=LINE,CEN2000
 UseEnterKey=Yes
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -304,6 +317,7 @@ Name=P02_REL
 Position=354,57,369,77
 Item=P02_REL,CEN2000
 UseEnterKey=Yes
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -316,6 +330,7 @@ Name=P03_SEX
 Position=354,87,369,107
 Item=P03_SEX,CEN2000
 UseEnterKey=Yes
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -328,6 +343,7 @@ Name=P04_AGE
 Position=339,117,368,137
 Item=P04_AGE,CEN2000
 UseEnterKey=Yes
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -340,6 +356,7 @@ Name=P05_MS
 Position=354,147,369,167
 Item=P05_MS,CEN2000
 UseEnterKey=Yes
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -353,7 +370,6 @@ Required=Yes
 Name=HOUSE002
 Label=Form Four, Housing Form, Part II
 Form=4
-LogicControl=No
 Max=1
   
 [Field]
@@ -361,6 +377,7 @@ Name=H07_RENT
 Position=253,65,296,85
 Item=H07_RENT,CEN2000
 UseEnterKey=Yes
+DataCaptureType=TextBox
 Form=4
   
 [Text]
@@ -373,6 +390,7 @@ Name=H08_TOILET
 Position=253,95,268,115
 Item=H08_TOILET,CEN2000
 UseEnterKey=Yes
+DataCaptureType=TextBox
 Form=4
   
 [Text]
@@ -385,6 +403,7 @@ Name=H09_BATH
 Position=253,125,268,145
 Item=H09_BATH,CEN2000
 UseEnterKey=Yes
+DataCaptureType=TextBox
 Form=4
   
 [Text]
@@ -397,6 +416,7 @@ Name=H10_WATER
 Position=253,155,268,175
 Item=H10_WATER,CEN2000
 UseEnterKey=Yes
+DataCaptureType=TextBox
 Form=4
   
 [Text]
@@ -409,6 +429,7 @@ Name=H11_LIGHT
 Position=253,185,268,205
 Item=H11_LIGHT,CEN2000
 UseEnterKey=Yes
+DataCaptureType=TextBox
 Form=4
   
 [Text]
@@ -421,6 +442,7 @@ Name=H12_FUEL
 Position=253,215,268,235
 Item=H12_FUEL,CEN2000
 UseEnterKey=Yes
+DataCaptureType=TextBox
 Form=4
   
 [Text]

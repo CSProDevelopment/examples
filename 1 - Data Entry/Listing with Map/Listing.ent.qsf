@@ -1,6 +1,6 @@
 ﻿---
 fileType: Question Text
-version: CSPro 7.6
+version: CSPro 7.7
 languages:
   - name: EN
     label: English
@@ -26,6 +26,14 @@ styles:
     css: |
       font-family: Arial;font-size: 18px;
 questions:
+  - name: STRUCTURES_DICT.ST_TYPE
+    conditions:
+      - questionText:
+          EN: |
+            <p>Enter the structure type</p>
+        helpText:
+          EN: |
+            
   - name: STRUCTURES_DICT.ST_LOCATION_PLACEHOLDER
     conditions:
       - questionText:
@@ -33,7 +41,6 @@ questions:
             <p>You will now capture the coordinates of the structure by reading the GPS.</p>
             <p><br></p>
             <p><i>Please move to a location with a clear view of the sky to ensure a fast and accurate reading.</i></p>
-            
         helpText:
           EN: |
             
@@ -43,7 +50,6 @@ questions:
         questionText:
           EN: |
             <p>Enter the name of the ~~getvaluelabel(ST_TYPE)~~</p>
-            
         helpText:
           EN: |
             
@@ -51,7 +57,6 @@ questions:
         questionText:
           EN: |
             <p>Enter the name of the head of the household</p>
-            
         helpText:
           EN: |
             
@@ -60,16 +65,6 @@ questions:
       - questionText:
           EN: |
             <p>Enter the number of people that reside in this household</p>
-            
-        helpText:
-          EN: |
-            
-  - name: STRUCTURES_DICT.ST_TYPE
-    conditions:
-      - questionText:
-          EN: |
-            <p>Enter the structure type</p>
-            
         helpText:
           EN: |
             

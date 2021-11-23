@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Label=Weight file
 Name=WEIGHT_FILE_DICT
 RecordTypeStart=0
@@ -20,6 +20,7 @@ Label=Province
 Name=PROV
 Start=1
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -46,6 +47,7 @@ Label=District
 Name=DISTRICT
 Start=3
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -64,4 +66,5 @@ Label=Area weight
 Name=WGT
 Start=5
 Len=6
+DataType=Numeric
 Decimal=4

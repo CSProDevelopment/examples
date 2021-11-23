@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Label=Popstan Census Staff Dictionary
 Name=PSC_STAFF_DICT
 RecordTypeStart=1
@@ -40,6 +40,7 @@ Label=Pin Code
 Name=PIN_CODE
 Start=88
 Len=4
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -61,4 +62,5 @@ Label=Time Created Account
 Name=TIME_CREATED_ACCOUNT
 Start=148
 Len=10
+DataType=Numeric
 ZeroFill=Yes

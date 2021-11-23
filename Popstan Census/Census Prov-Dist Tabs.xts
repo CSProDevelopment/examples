@@ -1,5 +1,5 @@
 ﻿[TabSpecs]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Label=Census Prov-Dist Tabs.xts
 Name=CENSUS_PROV_DIST_TABS
 GenerateLogic=Yes
@@ -97,25 +97,25 @@ Type=Counts
 
 
 [TallyFormat]
-Name=RowTallyFmt, 61
+Name=RowTallyFmt, 65
 [TallyStatistic]
 Type=Total
 
 
 [TallyFormat]
-Name=RowTallyFmt, 62
+Name=RowTallyFmt, 66
 [TallyStatistic]
 Type=Total
 
 
 [TallyFormat]
-Name=RowTallyFmt, 63
+Name=RowTallyFmt, 67
 [TallyStatistic]
 Type=Total
 
 
 [TallyFormat]
-Name=RowTallyFmt, 64
+Name=RowTallyFmt, 68
 [TallyStatistic]
 Type=Total
 
@@ -965,7 +965,7 @@ Label=''
 Name=SYSTEM_TOTAL
 Label=System Total
 VarType=Dict
-Format=RowTallyFmt, 61
+Format=RowTallyFmt, 65
  
 [Value]
 Label=Total
@@ -1055,7 +1055,7 @@ Label=''
 Name=SYSTEM_TOTAL
 Label=System Total
 VarType=Dict
-Format=RowTallyFmt, 62
+Format=RowTallyFmt, 66
  
 [Value]
 Label=Total
@@ -1157,7 +1157,7 @@ Label=''
 Name=SYSTEM_TOTAL
 Label=System Total
 VarType=Dict
-Format=RowTallyFmt, 63
+Format=RowTallyFmt, 67
  
 [Value]
 Label=Total
@@ -1283,7 +1283,7 @@ Label=''
 Name=SYSTEM_TOTAL
 Label=System Total
 VarType=Dict
-Format=RowTallyFmt, 64
+Format=RowTallyFmt, 68
  
 [Value]
 Label=Total

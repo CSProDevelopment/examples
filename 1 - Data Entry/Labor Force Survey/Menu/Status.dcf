@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Label=Status
 Name=STATUS_DICT
 RecordTypeStart=0
@@ -20,6 +20,7 @@ Label=Province
 Name=STATPROV
 Start=1
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -27,6 +28,7 @@ Label=District
 Name=STATDIST
 Start=2
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -34,6 +36,7 @@ Label=Dwelling unit number
 Name=STATDWNO
 Start=4
 Len=3
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -41,6 +44,7 @@ Label=Household number
 Name=STATHHNO
 Start=7
 Len=3
+DataType=Numeric
 ZeroFill=Yes
 
 [Record]
@@ -54,6 +58,7 @@ Label=Household final result
 Name=STATFIR
 Start=10
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]

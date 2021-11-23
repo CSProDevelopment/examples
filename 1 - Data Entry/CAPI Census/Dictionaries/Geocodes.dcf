@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Label=Popstan Census Geocodes Dictionary
 Name=PSC_GEOCODES_DICT
 RecordTypeStart=0
@@ -20,6 +20,7 @@ Label=Province
 Name=GEOCODES_PROVINCE
 Start=1
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -27,6 +28,7 @@ Label=District
 Name=GEOCODES_DISTRICT
 Start=3
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -34,6 +36,7 @@ Label=Enumeration Area
 Name=GEOCODES_EA
 Start=5
 Len=3
+DataType=Numeric
 ZeroFill=Yes
 
 [Record]
@@ -47,6 +50,7 @@ Label=Area Level
 Name=GEOCODES_AREA_LEVEL
 Start=8
 Len=1
+DataType=Numeric
 
 [Item]
 Label=Area Name

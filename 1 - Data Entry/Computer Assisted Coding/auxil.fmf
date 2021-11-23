@@ -1,5 +1,5 @@
 ﻿[FormFile]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Name=AUXIL_FF
 Label=auxil
 DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
@@ -97,7 +97,6 @@ Required=Yes
 Name=IDS0_FORM
 Label=(Id Items)
 Form=1
-LogicControl=No
 Max=1
   
 [Field]
@@ -105,6 +104,7 @@ Name=AUXILTYPE
 Position=236,155,251,175
 Item=AUXILTYPE,AUXIL_DICT
 UseEnterKey=Yes
+DataCaptureType=TextBox
 Form=1
   
   
@@ -114,6 +114,7 @@ Position=397,155,538,175
 Item=AUXILTXT,AUXIL_DICT
 UseEnterKey=Yes
 Protected=Yes
+DataCaptureType=TextBox
 Form=1
   
   
@@ -123,6 +124,7 @@ Position=182,239,379,259
 Item=AUXILKEY,AUXIL_DICT
 UseEnterKey=Yes
 UpperCase=Yes
+DataCaptureType=TextBox
 Form=1
   
   
@@ -131,6 +133,7 @@ Name=AUXILCODE
 Position=470,239,513,259
 Item=AUXILCODE,AUXIL_DICT
 UseEnterKey=Yes
+DataCaptureType=TextBox
 Form=1
   
 [EndGroup]

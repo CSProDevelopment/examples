@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Label=Popstan Census Household Dictionary
 Name=PSC_HOUSEHOLD_DICT
 RecordTypeStart=1
@@ -20,6 +20,7 @@ Label=Province
 Name=HH_PROVINCE
 Start=2
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -27,6 +28,7 @@ Label=District
 Name=HH_DISTRICT
 Start=4
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -34,6 +36,7 @@ Label=Enumeration Area
 Name=HH_EA
 Start=6
 Len=3
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -48,6 +51,7 @@ Label=Household Number
 Name=HH_NUMBER
 Start=10
 Len=4
+DataType=Numeric
 ZeroFill=Yes
 
 [Record]
@@ -62,6 +66,7 @@ Label=Population Section: Keep Row?
 Name=HH_KEEP_ROW
 Start=14
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -83,6 +88,7 @@ Label=Relationship to Head of Houshold
 Name=HH_RELATIONSHIP
 Start=65
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -117,6 +123,7 @@ Label=Sex
 Name=HH_SEX
 Start=67
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -138,6 +145,7 @@ Name=HH_MONTH_BORN
 Start=68
 Len=2
 ItemType=SubItem
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -163,6 +171,7 @@ Name=HH_YEAR_BORN
 Start=70
 Len=4
 ItemType=SubItem
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -176,6 +185,7 @@ Label=Age
 Name=HH_AGE
 Start=74
 Len=3
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -190,6 +200,7 @@ Label=Citizenship
 Name=HH_CITIZENSHIP
 Start=77
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -204,6 +215,7 @@ Label=Residence Situation
 Name=HH_RESIDENCE_SITUATION
 Start=78
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -218,6 +230,7 @@ Label=Literacy
 Name=HH_LITERACY
 Start=79
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -230,6 +243,7 @@ Label=Education
 Name=HH_EDUCATION
 Start=80
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -247,6 +261,7 @@ Label=Work Status
 Name=HH_WORK_STATUS
 Start=81
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -259,6 +274,7 @@ Label=Marital Status
 Name=HH_MARITAL_STATUS
 Start=82
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -274,6 +290,7 @@ Label=Age at first marriage
 Name=HH_MARITAL_AGE
 Start=83
 Len=3
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -288,6 +305,7 @@ Label=Children Ever Born
 Name=HH_CHILDREN_EVER_BORN
 Start=86
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -301,6 +319,7 @@ Label=Boys Ever Born
 Name=HH_BOYS_EVER_BORN
 Start=88
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -313,6 +332,7 @@ Label=Boys Still Alive
 Name=HH_BOYS_STILL_ALIVE
 Start=90
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -325,6 +345,7 @@ Label=Girls Ever Born
 Name=HH_GIRLS_EVER_BORN
 Start=92
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -337,6 +358,7 @@ Label=Girls Still Alive
 Name=HH_GIRLS_STILL_ALIVE
 Start=94
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -349,6 +371,7 @@ Label=Population Section: Roster Confirmation
 Name=HH_MORE_ROWS
 Start=96
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -369,6 +392,7 @@ Label=Tenure
 Name=HH_TENURE
 Start=14
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -383,6 +407,7 @@ Label=Roof
 Name=HH_ROOF
 Start=15
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -399,6 +424,7 @@ Label=Wall
 Name=HH_WALL
 Start=16
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -415,6 +441,7 @@ Label=Floor
 Name=HH_FLOOR
 Start=17
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -431,6 +458,7 @@ Label=Water Source
 Name=HH_WATER_SOURCE
 Start=18
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -451,6 +479,7 @@ Label=Toilet
 Name=HH_TOILET
 Start=19
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -467,6 +496,7 @@ Label=Lighting Source
 Name=HH_LIGHTING_SOURCE
 Start=20
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -484,6 +514,7 @@ Label=Cooking Source
 Name=HH_COOKING_SOURCE
 Start=21
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -501,6 +532,7 @@ Label=Internet Access
 Name=HH_INTERNET
 Start=22
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -533,6 +565,7 @@ Label=Start Interview Time
 Name=HH_START_INTERVIEW_TIME
 Start=86
 Len=10
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -540,6 +573,7 @@ Label=End Interview Time
 Name=HH_END_INTERVIEW_TIME
 Start=96
 Len=10
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -547,6 +581,7 @@ Label=Program Publish Date
 Name=HH_PROGRAM_PUBLISH_DATE
 Start=106
 Len=14
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -554,6 +589,7 @@ Label=GPS Reading
 Name=HH_GPS_READING
 Start=120
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -585,6 +621,7 @@ Label=GPS Latitude
 Name=HH_GPS_LATITUDE
 Start=121
 Len=10
+DataType=Numeric
 Decimal=6
 DecimalChar=Yes
 ZeroFill=Yes
@@ -594,6 +631,7 @@ Label=GPS Longitude
 Name=HH_GPS_LONGITUDE
 Start=131
 Len=11
+DataType=Numeric
 Decimal=6
 DecimalChar=Yes
 ZeroFill=Yes
@@ -603,6 +641,7 @@ Label=GPS Altitude
 Name=HH_GPS_ALTITUDE
 Start=142
 Len=7
+DataType=Numeric
 Decimal=1
 DecimalChar=Yes
 ZeroFill=Yes
@@ -612,6 +651,7 @@ Label=GPS Accuracy
 Name=HH_GPS_ACCURACY
 Start=149
 Len=6
+DataType=Numeric
 Decimal=1
 DecimalChar=Yes
 ZeroFill=Yes
@@ -621,6 +661,7 @@ Label=GPS Satellites
 Name=HH_GPS_SATELLITES
 Start=155
 Len=3
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -628,6 +669,7 @@ Label=GPS Readtime
 Name=HH_GPS_READTIME
 Start=158
 Len=6
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -635,6 +677,7 @@ Label=Interview Introduction
 Name=HH_INTRODUCTION
 Start=164
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -658,6 +701,7 @@ Label=Population Section
 Name=HH_POPULATION_SECTION
 Start=165
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -671,6 +715,7 @@ Label=Dwelling Characteristics Section
 Name=HH_DWELLING_SECTION
 Start=166
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -683,6 +728,7 @@ Label=Interview Conclusion
 Name=HH_CONCLUSION
 Start=167
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]

@@ -1,5 +1,5 @@
 ﻿[FormFile]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Name=TWO_LEVEL_FF
 Label=2-level
 DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
@@ -70,7 +70,6 @@ Required=Yes
 Name=IDS0_FORM
 Label=(Id Items)
 Form=1
-LogicControl=No
 Max=1
   
 [Field]
@@ -79,7 +78,8 @@ Position=186,27,215,47
 Item=PROV,TWO_LEVEL_DICT
 UseEnterKey=Yes
 Persistent=Yes
-ForceOutofRange=Yes
+ValidationMethod=Confirm
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -93,7 +93,8 @@ Position=186,57,215,77
 Item=DIST,TWO_LEVEL_DICT
 UseEnterKey=Yes
 Persistent=Yes
-ForceOutofRange=Yes
+ValidationMethod=Confirm
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -107,7 +108,8 @@ Position=186,87,215,107
 Item=VILLAGE,TWO_LEVEL_DICT
 UseEnterKey=Yes
 Persistent=Yes
-ForceOutofRange=Yes
+ValidationMethod=Confirm
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -121,7 +123,8 @@ Position=186,117,229,137
 Item=EA,TWO_LEVEL_DICT
 UseEnterKey=Yes
 Persistent=Yes
-ForceOutofRange=Yes
+ValidationMethod=Confirm
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -134,7 +137,8 @@ Name=BUILD
 Position=186,147,229,167
 Item=BUILD,TWO_LEVEL_DICT
 UseEnterKey=Yes
-ForceOutofRange=Yes
+ValidationMethod=Confirm
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -147,7 +151,8 @@ Name=ROOF
 Position=294,249,309,269
 Item=ROOF,TWO_LEVEL_DICT
 UseEnterKey=Yes
-ForceOutofRange=Yes
+ValidationMethod=Confirm
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -160,7 +165,8 @@ Name=WATER
 Position=294,279,309,299
 Item=WATER,TWO_LEVEL_DICT
 UseEnterKey=Yes
-ForceOutofRange=Yes
+ValidationMethod=Confirm
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -173,7 +179,8 @@ Name=NUMBER_OF_HUS
 Position=278,309,321,329
 Item=NUMBER_OF_HUS,TWO_LEVEL_DICT
 UseEnterKey=Yes
-ForceOutofRange=Yes
+ValidationMethod=Confirm
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -191,7 +198,6 @@ Required=Yes
 Name=IDS1_FORM
 Label=(Id Items)
 Form=2
-LogicControl=No
 Max=1
   
 [Field]
@@ -199,6 +205,7 @@ Name=PROV000
 Position=186,27,215,47
 Item=PROV,TWO_LEVEL_DICT
 Mirror=Yes
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -211,6 +218,7 @@ Name=DIST000
 Position=186,57,215,77
 Item=DIST,TWO_LEVEL_DICT
 Mirror=Yes
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -223,6 +231,7 @@ Name=VILLAGE000
 Position=186,87,215,107
 Item=VILLAGE,TWO_LEVEL_DICT
 Mirror=Yes
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -235,6 +244,7 @@ Name=EA000
 Position=186,117,229,137
 Item=EA,TWO_LEVEL_DICT
 Mirror=Yes
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -247,6 +257,7 @@ Name=BUILD000
 Position=186,147,229,167
 Item=BUILD,TWO_LEVEL_DICT
 Mirror=Yes
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -259,7 +270,8 @@ Name=HOUSE_NUMBER
 Position=186,174,229,194
 Item=HOUSE_NUMBER,TWO_LEVEL_DICT
 UseEnterKey=Yes
-ForceOutofRange=Yes
+ValidationMethod=Confirm
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -272,7 +284,8 @@ Name=TELEPHONE
 Position=432,60,447,80
 Item=TELEPHONE,TWO_LEVEL_DICT
 UseEnterKey=Yes
-ForceOutofRange=Yes
+ValidationMethod=Confirm
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -285,7 +298,8 @@ Name=HEAT
 Position=432,90,447,110
 Item=HEAT,TWO_LEVEL_DICT
 UseEnterKey=Yes
-ForceOutofRange=Yes
+ValidationMethod=Confirm
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -298,7 +312,8 @@ Name=PC
 Position=432,120,447,140
 Item=PC,TWO_LEVEL_DICT
 UseEnterKey=Yes
-ForceOutofRange=Yes
+ValidationMethod=Confirm
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -511,7 +526,8 @@ Name=LINE
 Position=52,0,81,20
 Item=LINE,TWO_LEVEL_DICT
 UseEnterKey=Yes
-ForceOutofRange=Yes
+ValidationMethod=Confirm
+DataCaptureType=TextBox
   
 [Text]
 Text=Line number
@@ -530,7 +546,8 @@ Name=SEX
 Position=10,0,25,20
 Item=SEX,TWO_LEVEL_DICT
 UseEnterKey=Yes
-ForceOutofRange=Yes
+ValidationMethod=Confirm
+DataCaptureType=TextBox
   
 [Text]
 Text=Sex
@@ -549,7 +566,8 @@ Name=AGE
 Position=0,0,43,20
 Item=AGE,TWO_LEVEL_DICT
 UseEnterKey=Yes
-ForceOutofRange=Yes
+ValidationMethod=Confirm
+DataCaptureType=TextBox
   
 [Text]
 Text=Age
@@ -568,7 +586,8 @@ Name=M_STATUS
 Position=69,0,84,20
 Item=M_STATUS,TWO_LEVEL_DICT
 UseEnterKey=Yes
-ForceOutofRange=Yes
+ValidationMethod=Confirm
+DataCaptureType=TextBox
   
 [Text]
 Text=Marital status

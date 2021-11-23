@@ -1,5 +1,5 @@
 ﻿[FormFile]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Name=MENU_FF
 Label=Menu
 DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
@@ -30,7 +30,6 @@ Required=Yes
 Name=MENU_QUEST_FORM
 Label=Menu questionnaire
 Form=1
-LogicControl=No
 Max=1
   
 [Field]

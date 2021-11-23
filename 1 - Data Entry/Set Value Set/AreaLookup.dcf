@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Label=Area
 Name=AREA_DICT
 RecordTypeStart=0
@@ -20,6 +20,7 @@ Label=Province
 Name=PROVINCE_CODE
 Start=1
 Len=2
+DataType=Numeric
 
 [ValueSet]
 Label=Province
@@ -52,6 +53,7 @@ Label=District
 Name=DISTRICT_CODE
 Start=4
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]

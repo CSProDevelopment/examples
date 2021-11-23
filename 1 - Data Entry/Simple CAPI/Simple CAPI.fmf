@@ -1,5 +1,5 @@
 ﻿[FormFile]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Name=SIMPLECAPI_FF
 Label=Simple CAPI Demonstration Program
 DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
@@ -37,6 +37,7 @@ Max=1
 Name=HOUSEHOLD_ID
 Position=126,20,183,40
 Item=HOUSEHOLD_ID,SIMPLECAPI_DICT
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -176,6 +177,7 @@ Position=0,0,233,20
 Item=FIRST_NAME,SIMPLECAPI_DICT
 FieldLabelType=DictionaryLabel
 UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
   
 [Text]
 Position=0,0,71,16
@@ -197,6 +199,7 @@ Position=0,0,220,20
 Item=LAST_NAME,SIMPLECAPI_DICT
 FieldLabelType=DictionaryLabel
 UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
   
 [Text]
 Position=0,0,70,16
@@ -318,6 +321,7 @@ Name=LANGUAGES_SPOKEN_OTHER
 Position=0,0,122,20
 Item=LANGUAGES_SPOKEN_OTHER,SIMPLECAPI_DICT
 UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
   
 [Text]
 Text=Languages Spoken (Other)

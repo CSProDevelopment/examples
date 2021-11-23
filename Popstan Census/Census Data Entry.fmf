@@ -1,5 +1,5 @@
 ﻿[FormFile]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Name=CEN_DE
 Label=Census Data Entry
 DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0001 Arial
@@ -92,7 +92,6 @@ Required=Yes
 Name=BOOK
 Label=Book
 Form=1
-LogicControl=No
 Max=1
   
 [Field]
@@ -100,6 +99,7 @@ Name=PROVINCE
 Position=408,242,437,262
 Item=PROVINCE,CEN2000
 Persistent=Yes
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -112,6 +112,7 @@ Name=DISTRICT
 Position=408,272,437,292
 Item=DISTRICT,CEN2000
 Persistent=Yes
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -124,6 +125,7 @@ Name=VILLAGE
 Position=393,300,436,320
 Item=VILLAGE,CEN2000
 Persistent=Yes
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -136,6 +138,7 @@ Name=EA
 Position=393,330,436,350
 Item=EA,CEN2000
 Persistent=Yes
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -148,6 +151,7 @@ Name=UR
 Position=423,360,438,380
 Item=UR,CEN2000
 Persistent=Yes
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -161,7 +165,6 @@ Required=Yes
 Name=FQUEST
 Label=Questionnaire
 Form=2
-LogicControl=No
 Max=1
   
 [Field]
@@ -169,6 +172,7 @@ Name=PROVINCE000
 Position=159,68,188,88
 Item=PROVINCE,CEN2000
 Mirror=Yes
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -181,6 +185,7 @@ Name=DISTRICT000
 Position=260,68,289,88
 Item=DISTRICT,CEN2000
 Mirror=Yes
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -193,6 +198,7 @@ Name=VILLAGE000
 Position=355,68,398,88
 Item=VILLAGE,CEN2000
 Mirror=Yes
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -205,6 +211,7 @@ Name=EA000
 Position=437,68,480,88
 Item=EA,CEN2000
 Mirror=Yes
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -217,6 +224,7 @@ Name=UR000
 Position=581,68,596,88
 Item=UR,CEN2000
 Mirror=Yes
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -228,6 +236,7 @@ Text=Urban/Rural
 Name=BUILDING
 Position=213,114,256,134
 Item=BUILDING,CEN2000
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -239,6 +248,7 @@ Text=Building number
 Name=HU
 Position=373,113,416,133
 Item=HU,CEN2000
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -250,6 +260,7 @@ Text=Housing unit
 Name=HH
 Position=580,114,595,134
 Item=HH,CEN2000
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -437,6 +448,7 @@ Name=LINE
 Position=50,0,79,20
 Item=LINE,CEN2000
 Sequential=Yes
+DataCaptureType=TextBox
   
 [Text]
 Position=0,0,81,16
@@ -455,6 +467,7 @@ Text=Relationship
 Name=P02_REL
 Position=63,0,78,20
 Item=P02_REL,CEN2000
+DataCaptureType=TextBox
   
 [Text]
 Text=Relationship
@@ -472,6 +485,7 @@ Text=Sex
 Name=P03_SEX
 Position=9,0,24,20
 Item=P03_SEX,CEN2000
+DataCaptureType=TextBox
   
 [Text]
 Text=Sex
@@ -489,6 +503,7 @@ Text=Age
 Name=P04_AGE
 Position=0,0,29,20
 Item=P04_AGE,CEN2000
+DataCaptureType=TextBox
   
 [Text]
 Text=Age
@@ -506,6 +521,7 @@ Text=Marital status
 Name=P05_MS
 Position=68,0,83,20
 Item=P05_MS,CEN2000
+DataCaptureType=TextBox
   
 [Text]
 Text=Marital status
@@ -523,6 +539,7 @@ Text=Mother living
 Name=P06_MOTHER
 Position=67,0,82,20
 Item=P06_MOTHER,CEN2000
+DataCaptureType=TextBox
   
 [Text]
 Text=Mother living
@@ -540,6 +557,7 @@ Text=Place of birth
 Name=P07_BIRTH
 Position=54,0,83,20
 Item=P07_BIRTH,CEN2000
+DataCaptureType=TextBox
   
 [Text]
 Text=Place of birth
@@ -557,6 +575,7 @@ Text=Residence in 1995
 Name=P08_RES95
 Position=55,0,84,20
 Item=P08_RES95,CEN2000
+DataCaptureType=TextBox
   
 [Text]
 Text=Residence in 1995
@@ -574,6 +593,7 @@ Text=Attending school
 Name=P09_ATTEND
 Position=49,0,64,20
 Item=P09_ATTEND,CEN2000
+DataCaptureType=TextBox
   
 [Text]
 Text=Attending school
@@ -591,6 +611,7 @@ Text=Highest grade completed
 Name=P10_HIGH_GR
 Position=61,0,90,20
 Item=P10_HIGH_GR,CEN2000
+DataCaptureType=TextBox
   
 [Text]
 Text=Highest grade completed
@@ -608,6 +629,7 @@ Text=Literacy
 Name=P11_LITERACY
 Position=35,0,50,20
 Item=P11_LITERACY,CEN2000
+DataCaptureType=TextBox
   
 [Text]
 Text=Literacy
@@ -625,6 +647,7 @@ Text=Working
 Name=P12_WORKING
 Position=37,0,52,20
 Item=P12_WORKING,CEN2000
+DataCaptureType=TextBox
   
 [Text]
 Text=Working
@@ -642,6 +665,7 @@ Text=Looking for work
 Name=P13_LOOKING
 Position=60,0,75,20
 Item=P13_LOOKING,CEN2000
+DataCaptureType=TextBox
   
 [Text]
 Text=Looking for work
@@ -659,6 +683,7 @@ Text=Why not looking for work
 Name=P14_WHY_NOT
 Position=56,0,71,20
 Item=P14_WHY_NOT,CEN2000
+DataCaptureType=TextBox
   
 [Text]
 Text=Why not looking for work
@@ -676,6 +701,7 @@ Text=Occupation
 Name=P15_OCC
 Position=41,0,70,20
 Item=P15_OCC,CEN2000
+DataCaptureType=TextBox
   
 [Text]
 Text=Occupation
@@ -693,6 +719,7 @@ Text=Industry
 Name=P16_IND
 Position=19,0,48,20
 Item=P16_IND,CEN2000
+DataCaptureType=TextBox
   
 [Text]
 Text=Industry
@@ -710,6 +737,7 @@ Text=Work Status
 Name=P17_WK_STATUS
 Position=60,0,75,20
 Item=P17_WK_STATUS,CEN2000
+DataCaptureType=TextBox
   
 [Text]
 Text=Work Status
@@ -727,6 +755,7 @@ Text=Number of children born alive
 Name=P18_BORN
 Position=58,0,87,20
 Item=P18_BORN,CEN2000
+DataCaptureType=TextBox
   
 [Text]
 Text=Number of children born alive
@@ -744,6 +773,7 @@ Text=Number of children still living
 Name=P19_LIVING
 Position=51,0,80,20
 Item=P19_LIVING,CEN2000
+DataCaptureType=TextBox
   
 [Text]
 Text=Number of children still living
@@ -761,6 +791,7 @@ Text=Number of children born in last 12 months
 Name=P20_BORN12
 Position=73,0,88,20
 Item=P20_BORN12,CEN2000
+DataCaptureType=TextBox
   
 [Text]
 Text=Number of children born in last 12 months
@@ -774,6 +805,7 @@ Text=Number of children born in last 12 months
 Name=H01_TYPE
 Position=160,534,175,554
 Item=H01_TYPE,CEN2000
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -785,6 +817,7 @@ Text=Type of housing
 Name=H02_WALL
 Position=160,564,175,584
 Item=H02_WALL,CEN2000
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -796,6 +829,7 @@ Text=Wall type
 Name=H03_ROOF
 Position=384,534,399,554
 Item=H03_ROOF,CEN2000
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -807,6 +841,7 @@ Text=Roof type
 Name=H04_FLOOR
 Position=384,563,399,583
 Item=H04_FLOOR,CEN2000
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -818,6 +853,7 @@ Text=Floor type
 Name=H05_ROOMS
 Position=655,534,684,554
 Item=H05_ROOMS,CEN2000
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -829,6 +865,7 @@ Text=Number of rooms
 Name=H06_TENURE
 Position=663,564,678,584
 Item=H06_TENURE,CEN2000
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -840,6 +877,7 @@ Text=Tenure
 Name=H07_RENT
 Position=182,611,225,631
 Item=H07_RENT,CEN2000
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -851,6 +889,7 @@ Text=Amount of rent paid
 Name=H08_TOILET
 Position=198,641,213,661
 Item=H08_TOILET,CEN2000
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -862,6 +901,7 @@ Text=Type of toilet facilities
 Name=H09_BATH
 Position=441,611,456,631
 Item=H09_BATH,CEN2000
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -873,6 +913,7 @@ Text=Type of bathing facilities
 Name=H10_WATER
 Position=441,641,456,661
 Item=H10_WATER,CEN2000
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -884,6 +925,7 @@ Text=Source of water
 Name=H11_LIGHT
 Position=662,611,677,631
 Item=H11_LIGHT,CEN2000
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -895,6 +937,7 @@ Text=Fuel for lighting
 Name=H12_FUEL
 Position=662,641,677,661
 Item=H12_FUEL,CEN2000
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -906,6 +949,7 @@ Text=Fuel for heating
 Name=H13_PERSONS
 Position=441,674,498,694
 Item=H13_PERSONS,CEN2000
+DataCaptureType=TextBox
 Form=2
   
 [Text]

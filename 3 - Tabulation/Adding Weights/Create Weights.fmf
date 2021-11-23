@@ -1,5 +1,5 @@
 ﻿[FormFile]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Name=WEIGHT_FILE_FF
 Label=Create Weights
 DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
@@ -54,13 +54,13 @@ Required=Yes
 Name=WEIGHT_FILE_QUEST_FORM
 Label=Weight file questionnaire
 Form=1
-LogicControl=No
 Max=1
   
 [Field]
 Name=PROV
 Position=83,194,112,214
 Item=PROV,WEIGHT_FILE_DICT
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -72,6 +72,7 @@ Text=Province
 Name=DISTRICT
 Position=198,194,227,214
 Item=DISTRICT,WEIGHT_FILE_DICT
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -83,6 +84,7 @@ Text=District
 Name=WGT
 Position=331,194,430,214
 Item=WGT,WEIGHT_FILE_DICT
+DataCaptureType=TextBox
 Form=1
   
 [Text]

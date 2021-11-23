@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Label=LogFile
 Name=LOGFILE_DICT
 RecordTypeStart=0
@@ -20,6 +20,7 @@ Label=Entry Month
 Name=ENTRY_MONTH
 Start=38
 Len=2
+DataType=Numeric
 
 [ValueSet]
 Label=Entry Month
@@ -31,6 +32,7 @@ Label=Entry Day
 Name=ENTRY_DAY
 Start=41
 Len=2
+DataType=Numeric
 
 [ValueSet]
 Label=Entry Day
@@ -42,6 +44,7 @@ Label=Entry Year
 Name=ENTRY_YEAR
 Start=44
 Len=4
+DataType=Numeric
 
 [ValueSet]
 Label=Entry Year
@@ -53,6 +56,7 @@ Label=Entry Start Hour
 Name=ENTRY_START_HOUR
 Start=49
 Len=2
+DataType=Numeric
 
 [ValueSet]
 Label=Entry Start Hour
@@ -64,6 +68,7 @@ Label=Entry Start Minutes
 Name=ENTRY_START_MINUTES
 Start=52
 Len=2
+DataType=Numeric
 
 [ValueSet]
 Label=Entry Start Minutes
@@ -75,6 +80,7 @@ Label=Entry Start Seconds
 Name=ENTRY_START_SECONDS
 Start=55
 Len=2
+DataType=Numeric
 
 [ValueSet]
 Label=Entry Start Seconds
@@ -115,6 +121,7 @@ Label=Entry End Hour
 Name=ENTRY_END_HOUR
 Start=58
 Len=2
+DataType=Numeric
 
 [ValueSet]
 Label=Entry End Hour
@@ -126,6 +133,7 @@ Label=Entry End Minutes
 Name=ENTRY_END_MINUTES
 Start=61
 Len=2
+DataType=Numeric
 
 [ValueSet]
 Label=Entry End Minutes
@@ -137,6 +145,7 @@ Label=Entry End Seconds
 Name=ENTRY_END_SECONDS
 Start=64
 Len=2
+DataType=Numeric
 
 [ValueSet]
 Label=Entry End Seconds
@@ -148,6 +157,7 @@ Label=Entry Time (seconds)
 Name=ENTRY_TIME
 Start=67
 Len=8
+DataType=Numeric
 
 [ValueSet]
 Label=Entry Time (seconds)
@@ -163,6 +173,7 @@ Label=Entry Pause Time (seconds)
 Name=ENTRY_PAUSE_TIME
 Start=76
 Len=8
+DataType=Numeric
 
 [ValueSet]
 Label=Entry Pause Time (seconds)
@@ -179,39 +190,46 @@ Label=Entry Cases
 Name=ENTRY_CASES
 Start=85
 Len=8
+DataType=Numeric
 
 [Item]
 Label=Entry Records
 Name=ENTRY_RECORDS
 Start=94
 Len=8
+DataType=Numeric
 
 [Item]
 Label=Entry Keystrokes
 Name=ENTRY_KEYSTROKES
 Start=103
 Len=8
+DataType=Numeric
 
 [Item]
 Label=Entry Errors
 Name=ENTRY_ERRORS
 Start=112
 Len=8
+DataType=Numeric
 
 [Item]
 Label=Verify Errors (keyer)
 Name=VERIFY_ERRORS_KEYER
 Start=121
 Len=8
+DataType=Numeric
 
 [Item]
 Label=Verify Errors (verifier)
 Name=VERIFY_ERRORS_VERIFIER
 Start=130
 Len=8
+DataType=Numeric
 
 [Item]
 Label=Verify Fields
 Name=VERIFY_FIELDS
 Start=139
 Len=8
+DataType=Numeric

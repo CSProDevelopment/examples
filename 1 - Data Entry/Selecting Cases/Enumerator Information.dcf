@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Label=Enumerator Information
 Name=ENUMERATOR_INFORMATION_DICT
 RecordTypeStart=1
@@ -20,6 +20,7 @@ Label=Enumerator ID
 Name=ENUMERATOR_ID
 Start=2
 Len=3
+DataType=Numeric
 ZeroFill=Yes
 
 [Record]
@@ -47,6 +48,7 @@ Label=Enumerator Region
 Name=ENUMERATOR_REGION
 Start=29
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -62,6 +64,7 @@ Name=PHONE_NUMBER_AREA_CODE
 Start=31
 Len=3
 ItemType=SubItem
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -75,6 +78,7 @@ Name=PHONE_NUMBER_CITY_CODE
 Start=34
 Len=3
 ItemType=SubItem
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -88,6 +92,7 @@ Name=PHONE_NUMBER_LAST_4_DIGITS
 Start=37
 Len=4
 ItemType=SubItem
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -100,6 +105,7 @@ Label=Hourly Wage
 Name=HOURLY_WAGE
 Start=41
 Len=5
+DataType=Numeric
 Decimal=2
 DecimalChar=Yes
 ZeroFill=Yes

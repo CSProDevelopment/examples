@@ -1,5 +1,5 @@
 ﻿[FormFile]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Name=CENSUS_DE
 Label=Census Data Entry
 DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0001 Arial
@@ -282,7 +282,6 @@ Required=Yes
 Name=BOOK
 Label=Book
 Form=1
-LogicControl=No
 Max=1
   
 [Field]
@@ -291,7 +290,8 @@ Position=408,242,437,262
 Item=PROVINCE,CENSUS
 UseEnterKey=Yes
 Persistent=Yes
-ForceOutofRange=Yes
+ValidationMethod=Confirm
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -306,7 +306,8 @@ Position=408,272,437,292
 Item=DISTRICT,CENSUS
 UseEnterKey=Yes
 Persistent=Yes
-ForceOutofRange=Yes
+ValidationMethod=Confirm
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -321,7 +322,8 @@ Position=393,300,436,320
 Item=VILLAGE,CENSUS
 UseEnterKey=Yes
 Persistent=Yes
-ForceOutofRange=Yes
+ValidationMethod=Confirm
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -336,7 +338,8 @@ Position=393,330,436,350
 Item=EA,CENSUS
 UseEnterKey=Yes
 Persistent=Yes
-ForceOutofRange=Yes
+ValidationMethod=Confirm
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -351,7 +354,6 @@ Required=Yes
 Name=FQUEST
 Label=Questionnaire
 Form=2
-LogicControl=No
 Max=1
   
 [Field]
@@ -359,6 +361,7 @@ Name=PROVINCE000
 Position=230,114,259,134
 Item=PROVINCE,CENSUS
 Mirror=Yes
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -372,6 +375,7 @@ Name=DISTRICT000
 Position=331,114,360,134
 Item=DISTRICT,CENSUS
 Mirror=Yes
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -385,6 +389,7 @@ Name=VILLAGE000
 Position=426,114,469,134
 Item=VILLAGE,CENSUS
 Mirror=Yes
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -398,6 +403,7 @@ Name=EA000
 Position=508,114,551,134
 Item=EA,CENSUS
 Mirror=Yes
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -411,7 +417,8 @@ Name=HU
 Position=375,167,418,187
 Item=HU,CENSUS
 UseEnterKey=Yes
-ForceOutofRange=Yes
+ValidationMethod=Confirm
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -425,7 +432,8 @@ Name=HOUSING_TYPE
 Position=158,422,173,442
 Item=HOUSING_TYPE,CENSUS
 UseEnterKey=Yes
-ForceOutofRange=Yes
+ValidationMethod=Confirm
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -439,7 +447,8 @@ Name=WALL_TYPE
 Position=302,422,317,442
 Item=WALL_TYPE,CENSUS
 UseEnterKey=Yes
-ForceOutofRange=Yes
+ValidationMethod=Confirm
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -453,7 +462,8 @@ Name=ROOF_TYPE
 Position=458,422,473,442
 Item=ROOF_TYPE,CENSUS
 UseEnterKey=Yes
-ForceOutofRange=Yes
+ValidationMethod=Confirm
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -467,7 +477,8 @@ Name=FLOOR_TYPE
 Position=608,422,623,442
 Item=FLOOR_TYPE,CENSUS
 UseEnterKey=Yes
-ForceOutofRange=Yes
+ValidationMethod=Confirm
+DataCaptureType=TextBox
 Form=2
   
 [Text]

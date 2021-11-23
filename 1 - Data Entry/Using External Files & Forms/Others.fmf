@@ -1,5 +1,5 @@
 ﻿[FormFile]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Name=OTHERS_FF
 Label=Others
 DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
@@ -36,7 +36,6 @@ Required=Yes
 Name=OTHERS_QUEST_FORM
 Label=Others questionnaire
 Form=1
-LogicControl=No
 Max=1
   
 [Field]
@@ -45,6 +44,7 @@ Position=126,229,155,249
 Item=OPROV,OTHERS_DICT
 UseEnterKey=Yes
 Protected=Yes
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -59,6 +59,7 @@ Position=213,227,242,247
 Item=ODIST,OTHERS_DICT
 UseEnterKey=Yes
 Protected=Yes
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -73,6 +74,7 @@ Position=290,228,333,248
 Item=OVILL,OTHERS_DICT
 UseEnterKey=Yes
 Protected=Yes
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -87,6 +89,7 @@ Position=370,228,413,248
 Item=OEA,OTHERS_DICT
 UseEnterKey=Yes
 Protected=Yes
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -101,6 +104,7 @@ Position=455,228,498,248
 Item=OHU,OTHERS_DICT
 UseEnterKey=Yes
 Protected=Yes
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -115,6 +119,7 @@ Position=566,226,609,246
 Item=QUESTNUM,OTHERS_DICT
 UseEnterKey=Yes
 Protected=Yes
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -128,6 +133,7 @@ Name=OTHER_ANSWER
 Position=109,332,670,352
 Item=OTHER_ANSWER,OTHERS_DICT
 UseEnterKey=Yes
+DataCaptureType=TextBox
 Form=1
   
 [Text]

@@ -1,5 +1,5 @@
 ﻿[FormFile]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Name=HOUSEHOLDQUESTIONNAIRE_FF
 Label=HouseholdQuestionnaire
 DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
@@ -30,7 +30,6 @@ Required=Yes
 Name=POPULATION_FORM
 Label=Population
 Form=1
-LogicControl=No
 Max=1
   
 [Field]
@@ -38,6 +37,7 @@ Name=HOUSEHOLD_NUMBER
 Position=201,37,244,57
 Item=HOUSEHOLD_NUMBER,HOUSEHOLDQUESTIONNAIRE_DICT
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -227,6 +227,7 @@ Position=0,0,701,20
 Item=NAMES,HOUSEHOLDQUESTIONNAIRE_DICT
 FieldLabelType=DictionaryLabel
 UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
   
 [Text]
 Text=Names

@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Label=SelCaseX
 Name=SELCASEX_DICT
 RecordTypeStart=0
@@ -20,6 +20,7 @@ Label=Dummy ID
 Name=DUMMY_ID
 Start=1
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [Record]
@@ -33,6 +34,7 @@ Label=Option
 Name=OPTION
 Start=2
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]

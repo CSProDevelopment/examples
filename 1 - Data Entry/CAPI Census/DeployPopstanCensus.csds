@@ -1,6 +1,6 @@
 {
   "fileType": "Application Deployment Specification",
-  "version": "7.6",
+  "version": "7.7",
   "name": "Popstan Census",
   "description": "Popstan Cenus Menu & Household Application",
   "files": [

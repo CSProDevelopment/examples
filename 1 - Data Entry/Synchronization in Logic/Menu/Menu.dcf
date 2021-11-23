@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Label=Menu
 Name=MENU_DICT
 RecordTypeStart=1
@@ -20,6 +20,7 @@ Label=Menu identification
 Name=MENU_ID
 Start=2
 Len=1
+DataType=Numeric
 
 [Record]
 Label=Menu record
@@ -32,6 +33,7 @@ Label=Login
 Name=LOGIN
 Start=3
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Login
@@ -44,6 +46,7 @@ Label=Interviewer menu
 Name=INTERVIEWER_MENU
 Start=4
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Interviewer menu
@@ -57,6 +60,7 @@ Label=Supervisor menu
 Name=SUPERVISOR_MENU
 Start=5
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Supervisor menu

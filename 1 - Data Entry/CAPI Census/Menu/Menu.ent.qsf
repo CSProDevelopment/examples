@@ -1,6 +1,6 @@
 ﻿---
 fileType: Question Text
-version: CSPro 7.6
+version: CSPro 7.7
 languages:
   - name: EN
     label: English
@@ -26,91 +26,11 @@ styles:
     css: |
       font-family: Arial;font-size: 18px;
 questions:
-  - name: PSC_MENU_DICT.ASSIGNMENT_SELECTION
-    conditions:
-      - questionText:
-          EN: |
-            <p>You are logged in as ~~capi_staff_role~~ <span style="font-weight:bold;">~~capi_staff_name~~</span>.</p>
-            <p><br></p>
-            <p>Select the area you want to work in now.</p>
-            
-        helpText:
-          EN: |
-            
-  - name: PSC_MENU_DICT.INTERVIEWER_CODE
-    conditions:
-      - questionText:
-          EN: |
-            <p>Select the interviewer to assign an EA to.</p>
-            
-        helpText:
-          EN: |
-            
-  - name: PSC_MENU_DICT.INTERVIEWER_EA
-    conditions:
-      - questionText:
-          EN: |
-            <p>Select EA to assign to <b>~~capi_manage_staff_name~~</b></p>
-            
-        helpText:
-          EN: |
-            
-  - name: PSC_MENU_DICT.INTERVIEWER_MENU
-    conditions:
-      - questionText:
-          EN: |
-            <p>You are logged in as Interviewer <b>~~capi_staff_name~~</b>. You are working in <b>~~capi_province_name~~</b> province / <b>~~capi_district_name~~</b> district / <b>~~capi_ea_name~~</b>.</p>
-            <p><br></p>
-            <p><b>Household Status: ~~capi_household_complete_count~~</b> completed households. <b>~~capi_household_partial_count~~</b> partially completed households.</p>
-            <p><br></p>
-            <p>Select applicable option.</p>
-            
-        helpText:
-          EN: |
-            
   - name: PSC_MENU_DICT.LOGIN
     conditions:
       - questionText:
           EN: |
             <p>Welcome to Popstan Census data collection application (version ~~capi_publish_date~~).</p>
-            
-        helpText:
-          EN: |
-            
-  - name: PSC_MENU_DICT.MANAGE_STAFF
-    conditions:
-      - questionText:
-          EN: |
-            <p>Select staff to manage or add new interviewer.</p>
-            
-        helpText:
-          EN: |
-            
-  - name: PSC_MENU_DICT.MANAGE_STAFF_MEMBER
-    conditions:
-      - questionText:
-          EN: |
-            <p>You are managing information about <b>~~capi_manage_staff_name~~</b></p>
-            <p>Select applicable option.</p>
-            
-        helpText:
-          EN: |
-            
-  - name: PSC_MENU_DICT.MANAGE_STAFF_NAME
-    conditions:
-      - logic: MANAGE_STAFF_NAME <> ""
-        questionText:
-          EN: |
-            <p>Edit the name of <b>~~capi_manage_staff_name~~</b></p>
-            
-        helpText:
-          EN: |
-            
-      - logic: MANAGE_STAFF_NAME = ""
-        questionText:
-          EN: |
-            <p>Enter name of a new interviewer.</p>
-            
         helpText:
           EN: |
             
@@ -122,7 +42,6 @@ questions:
             <p>You are logged in as <b>~~capi_staff_name~~</b>.</p>
             <p><br></p>
             <p>Please enter your pin code.</p>
-            
         helpText:
           EN: |
             
@@ -134,8 +53,6 @@ questions:
             <p>Please create your pin code.</p>
             <p><br></p>
             <p>A pin code is a four digit number that enables you to log into the Popstan Census data collection application. It is recommended to choose a number which you can easily remember and the code should be kept secret.</p>
-            
-            
         helpText:
           EN: |
             
@@ -145,7 +62,41 @@ questions:
           EN: |
             <p>Please enter supervisor password you received from headquarters.</p><p><br></p>
             <p><span class="instruction">For demonstration purposes use password 1234.</span></p>
+        helpText:
+          EN: |
             
+  - name: PSC_MENU_DICT.SUPERVISOR_NAME
+    conditions:
+      - questionText:
+          EN: |
+            <p>Please enter your full name.</p>
+        helpText:
+          EN: |
+            
+  - name: PSC_MENU_DICT.SUPERVISOR_PIN_CODE
+    conditions:
+      - questionText:
+          EN: |
+            <p>Please create your pin code.</p><p><br></p>
+            <p>A pin code is a four digit number that enables you to log into the Popstan Census data collection application. It is recommended to choose a number which you can easily remember and the code should be kept secret.</p>
+        helpText:
+          EN: |
+            
+  - name: PSC_MENU_DICT.ASSIGNMENT_SELECTION
+    conditions:
+      - questionText:
+          EN: |
+            <p>You are logged in as ~~capi_staff_role~~ <span style="font-weight:bold;">~~capi_staff_name~~</span>.</p>
+            <p><br></p>
+            <p>Select the area you want to work in now.</p>
+        helpText:
+          EN: |
+            
+  - name: PSC_MENU_DICT.SUPERVISOR_PROVINCE
+    conditions:
+      - questionText:
+          EN: |
+            <p>Select province of your assignment.</p>
         helpText:
           EN: |
             
@@ -154,7 +105,6 @@ questions:
       - questionText:
           EN: |
             <p>Select district of your assignment in <span style="font-weight:bold;">~~capi_province_name~~</span> province.</p>
-            
         helpText:
           EN: |
             
@@ -167,36 +117,18 @@ questions:
             <p><b>EA Status: ~~capi_ea_assigned_count~~</b> assigned EAs.</p>
             <p><br></p>
             <p>Select applicable option.</p>
-            
         helpText:
           EN: |
             
-  - name: PSC_MENU_DICT.SUPERVISOR_NAME
+  - name: PSC_MENU_DICT.INTERVIEWER_MENU
     conditions:
       - questionText:
           EN: |
-            <p>Please enter your full name.</p>
-            
-        helpText:
-          EN: |
-            
-  - name: PSC_MENU_DICT.SUPERVISOR_PIN_CODE
-    conditions:
-      - questionText:
-          EN: |
-            <p>Please create your pin code.</p><p><br></p>
-            <p>A pin code is a four digit number that enables you to log into the Popstan Census data collection application. It is recommended to choose a number which you can easily remember and the code should be kept secret.</p>
-            
-            
-        helpText:
-          EN: |
-            
-  - name: PSC_MENU_DICT.SUPERVISOR_PROVINCE
-    conditions:
-      - questionText:
-          EN: |
-            <p>Select province of your assignment.</p>
-            
+            <p>You are logged in as Interviewer <b>~~capi_staff_name~~</b>. You are working in <b>~~capi_province_name~~</b> province / <b>~~capi_district_name~~</b> district / <b>~~capi_ea_name~~</b>.</p>
+            <p><br></p>
+            <p><b>Household Status: ~~capi_household_complete_count~~</b> completed households. <b>~~capi_household_partial_count~~</b> partially completed households.</p>
+            <p><br></p>
+            <p>Select applicable option.</p>
         helpText:
           EN: |
             
@@ -205,7 +137,55 @@ questions:
       - questionText:
           EN: |
             <p>Select the household you want to work on.</p>
+        helpText:
+          EN: |
             
+  - name: PSC_MENU_DICT.MANAGE_STAFF
+    conditions:
+      - questionText:
+          EN: |
+            <p>Select staff to manage or add new interviewer.</p>
+        helpText:
+          EN: |
+            
+  - name: PSC_MENU_DICT.MANAGE_STAFF_MEMBER
+    conditions:
+      - questionText:
+          EN: |
+            <p>You are managing information about <b>~~capi_manage_staff_name~~</b></p>
+            <p>Select applicable option.</p>
+        helpText:
+          EN: |
+            
+  - name: PSC_MENU_DICT.MANAGE_STAFF_NAME
+    conditions:
+      - logic: MANAGE_STAFF_NAME <> ""
+        questionText:
+          EN: |
+            <p>Edit the name of <b>~~capi_manage_staff_name~~</b></p>
+        helpText:
+          EN: |
+            
+      - logic: MANAGE_STAFF_NAME = ""
+        questionText:
+          EN: |
+            <p>Enter name of a new interviewer.</p>
+        helpText:
+          EN: |
+            
+  - name: PSC_MENU_DICT.INTERVIEWER_CODE
+    conditions:
+      - questionText:
+          EN: |
+            <p>Select the interviewer to assign an EA to.</p>
+        helpText:
+          EN: |
+            
+  - name: PSC_MENU_DICT.INTERVIEWER_EA
+    conditions:
+      - questionText:
+          EN: |
+            <p>Select EA to assign to <b>~~capi_manage_staff_name~~</b></p>
         helpText:
           EN: |
             

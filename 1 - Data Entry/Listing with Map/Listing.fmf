@@ -1,5 +1,5 @@
 ﻿[FormFile]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Name=STRUCTURES_FF
 Label=Listing
 DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
@@ -32,7 +32,6 @@ Required=Yes
 Name=LISTING_FORM
 Label=Listing Form
 Form=1
-LogicControl=No
 Max=1
   
 [Field]
@@ -42,6 +41,7 @@ Item=ST_NUMBER,STRUCTURES_DICT
 Protected=Yes
 AutoIncrement=Yes
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -81,6 +81,7 @@ Position=344,119,804,139
 Item=ST_NAME,STRUCTURES_DICT
 FieldLabelType=DictionaryLabel
 UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -93,6 +94,7 @@ Name=ST_NUM_MEMBERS
 Position=344,156,387,176
 Item=ST_NUM_MEMBERS,STRUCTURES_DICT
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=1
   
 [Text]

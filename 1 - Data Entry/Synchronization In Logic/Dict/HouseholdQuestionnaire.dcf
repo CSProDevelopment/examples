@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Label=HouseholdQuestionnaire
 Name=HOUSEHOLDQUESTIONNAIRE_DICT
 RecordTypeStart=1
@@ -20,6 +20,7 @@ Label=Household number
 Name=HOUSEHOLD_NUMBER
 Start=2
 Len=3
+DataType=Numeric
 
 [Record]
 Label=Population
@@ -40,6 +41,7 @@ Label=Relationship
 Name=RELATIONSHIP
 Start=55
 Len=2
+DataType=Numeric
 
 [ValueSet]
 Label=Relationship
@@ -59,6 +61,7 @@ Label=Sex
 Name=SEX
 Start=57
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=Sex
@@ -71,6 +74,7 @@ Label=Age
 Name=AGE
 Start=58
 Len=2
+DataType=Numeric
 
 [ValueSet]
 Label=Age
@@ -83,6 +87,7 @@ Label=More people
 Name=MORE_PEOPLE
 Start=60
 Len=1
+DataType=Numeric
 
 [ValueSet]
 Label=More people

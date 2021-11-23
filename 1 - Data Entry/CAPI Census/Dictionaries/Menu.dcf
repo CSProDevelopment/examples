@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Label=Popstan Census Menu Dictionary
 Name=PSC_MENU_DICT
 RecordTypeStart=1
@@ -20,6 +20,7 @@ Label=Menu identification
 Name=MENU_ID
 Start=2
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [Record]
@@ -40,6 +41,7 @@ Label=PIN Code Confirmation
 Name=PIN_CODE_CONFIRMATION
 Start=39
 Len=4
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -47,6 +49,7 @@ Label=Supervisor Access Password
 Name=SUPERVISOR_ACCESS_PASSWORD
 Start=43
 Len=4
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -61,6 +64,7 @@ Label=Supervisor PIN Code
 Name=SUPERVISOR_PIN_CODE
 Start=97
 Len=4
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -75,6 +79,7 @@ Label=Supervisor Province
 Name=SUPERVISOR_PROVINCE
 Start=145
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -82,6 +87,7 @@ Label=Supervisor District
 Name=SUPERVISOR_DISTRICT
 Start=147
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -89,6 +95,7 @@ Label=Supervisor Menu
 Name=SUPERVISOR_MENU
 Start=149
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -128,6 +135,7 @@ Label=Manage Staff Member
 Name=MANAGE_STAFF_MEMBER
 Start=211
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [ValueSet]
@@ -149,6 +157,7 @@ Label=Interviewer EA
 Name=INTERVIEWER_EA
 Start=262
 Len=3
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -163,6 +172,7 @@ Label=Current Province
 Name=CURRENT_PROVINCE
 Start=301
 Len=2
+DataType=Numeric
 ZeroFill=Yes
 
 [Item]
@@ -170,4 +180,5 @@ Label=Current District
 Name=CURRENT_DISTRICT
 Start=303
 Len=2
+DataType=Numeric
 ZeroFill=Yes

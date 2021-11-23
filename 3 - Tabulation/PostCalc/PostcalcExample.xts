@@ -1,5 +1,5 @@
 ﻿[TabSpecs]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Label=PostcalcExample
 Name=POSTCALCEXAMPLE
 GenerateLogic=Yes
@@ -15,29 +15,29 @@ ZeroRoundMask='*'
 Suppressed='SSS'
 DigitGrouping=Thousands
 ZeroBeforeDecimal=Yes
-ForeignKey='Proportion'
-ForeignKey='Mode'
-ForeignKey='Variance'
+ForeignKey='Frequency'
 ForeignKey='and'
-ForeignKey='for'
-ForeignKey='(Weighted)'
-ForeignKey='<Value has no label>'
-ForeignKey='Mean'
-ForeignKey='Minimum'
-ForeignKey='Percentile'
-ForeignKey='Maximum'
-ForeignKey='Cumulative'
+ForeignKey='to'
+ForeignKey='Total'
+ForeignKey='Standard Deviation'
 ForeignKey='by'
 ForeignKey='(Percents)'
-ForeignKey='Undefined'
-ForeignKey='Number'
-ForeignKey='Percent'
-ForeignKey='Median'
+ForeignKey='Mean'
+ForeignKey='Maximum'
 ForeignKey='Table'
-ForeignKey='to'
-ForeignKey='Frequency'
-ForeignKey='Standard Deviation'
-ForeignKey='Total'
+ForeignKey='for'
+ForeignKey='Percentile'
+ForeignKey='Mode'
+ForeignKey='Minimum'
+ForeignKey='Proportion'
+ForeignKey='Median'
+ForeignKey='Variance'
+ForeignKey='Percent'
+ForeignKey='Undefined'
+ForeignKey='(Weighted)'
+ForeignKey='Cumulative'
+ForeignKey='<Value has no label>'
+ForeignKey='Number'
 TitleTemplate='Table %s.'
 Continuation=' (continued)'
 MeasurementSystem=USUnits
@@ -74,12 +74,6 @@ DumpUndefined=No
 [TallyStatistic]
 Type=Total
 
-[TallyStatistic]
-Type=Counts
-
-
-[TallyFormat]
-Name=RowTallyFmt, 1
 [TallyStatistic]
 Type=Counts
 
@@ -244,18 +238,21 @@ Name=StubFmt, 1
 Hidden=Yes
 SpanCells=NotApplicable
 ExtendFont=Yes
+HideZeroRow=No
 
 [DataCellFormat]
 Name=CaptionFmt, 1
 Hidden=Yes
 SpanCells=No
 NumDecimals=NotApplicable
+HideZeroRow=No
 
 [DataCellFormat]
 Name=CaptionFmt, 2
 Hidden=Yes
 SpanCells=No
 NumDecimals=NotApplicable
+HideZeroRow=No
 
 [DataCellFormat]
 Name=CaptionFmt, 3
@@ -264,24 +261,21 @@ IndentRight=0.00
 Hidden=No
 SpanCells=No
 Custom=Entire Population
-
-[DataCellFormat]
-Name=CaptionFmt, 4
-Hidden=Yes
-SpanCells=No
-NumDecimals=NotApplicable
+HideZeroRow=No
 
 [DataCellFormat]
 Name=CaptionFmt, 5
 Hidden=Yes
 SpanCells=No
 NumDecimals=NotApplicable
+HideZeroRow=No
 
 [DataCellFormat]
 Name=CaptionFmt, 6
 Hidden=Yes
 SpanCells=No
 NumDecimals=NotApplicable
+HideZeroRow=No
 
 [DataCellFormat]
 Name=CaptionFmt, 7
@@ -290,20 +284,14 @@ IndentRight=0.00
 Hidden=No
 SpanCells=No
 Custom=Entire Population
-
-[DataCellFormat]
-Name=StubFmt, 2
-IndentLeft=0.00
-IndentRight=0.00
-Hidden=No
-SpanCells=NotApplicable
-ExtendFont=Yes
+HideZeroRow=No
 
 [DataCellFormat]
 Name=CaptionFmt, 8
 Hidden=Yes
 SpanCells=No
 NumDecimals=NotApplicable
+HideZeroRow=No
 
 [DataCellFormat]
 Name=CaptionFmt, 9
@@ -312,36 +300,42 @@ IndentRight=0.00
 Hidden=No
 SpanCells=No
 Custom=
+HideZeroRow=No
 
 [DataCellFormat]
 Name=CaptionFmt, 10
 Hidden=Yes
 SpanCells=No
 NumDecimals=NotApplicable
+HideZeroRow=No
 
 [DataCellFormat]
 Name=CaptionFmt, 11
 Hidden=Yes
 SpanCells=No
 NumDecimals=NotApplicable
+HideZeroRow=No
 
 [DataCellFormat]
 Name=StubFmt, 3
 Hidden=No
 SpanCells=NotApplicable
 ExtendFont=Yes
+HideZeroRow=No
 
 [DataCellFormat]
 Name=CaptionFmt, 12
 Hidden=Yes
 SpanCells=No
 NumDecimals=NotApplicable
+HideZeroRow=No
 
 [DataCellFormat]
 Name=CaptionFmt, 13
 Hidden=Yes
 SpanCells=No
 NumDecimals=NotApplicable
+HideZeroRow=No
 
 [DataCellFormat]
 Name=StubFmt, 4
@@ -349,6 +343,7 @@ Hidden=No
 SpanCells=NotApplicable
 ExtendFont=Yes
 NumDecimals=One
+HideZeroRow=No
 
 [DataCellFormat]
 Name=ColumnHeadFmt, 1
@@ -356,6 +351,7 @@ Hidden=No
 SpanCells=NotApplicable
 ExtendIndentation=Yes
 NumDecimals=Two
+HideZeroRow=No
 
 [DataCellFormat]
 Name=StubFmt, 5
@@ -363,12 +359,14 @@ Hidden=No
 SpanCells=NotApplicable
 ExtendFont=Yes
 NumDecimals=One
+HideZeroRow=No
 
 [DataCellFormat]
 Name=StubFmt, 6
 Hidden=No
 SpanCells=NotApplicable
 ExtendFont=Yes
+HideZeroRow=No
 
 [DataCellFormat]
 Name=CaptionFmt, 14
@@ -376,12 +374,14 @@ Font=-013 0000 0000 0000 0700 0000 0000 0000 0000 0003 0002 0001 0034 Arial
 Hidden=No
 SpanCells=No
 NumDecimals=NotApplicable
+HideZeroRow=No
 
 [DataCellFormat]
 Name=CaptionFmt, 15
 Hidden=Yes
 SpanCells=No
 NumDecimals=NotApplicable
+HideZeroRow=No
 
 [DataCellFormat]
 Name=StubFmt, 7
@@ -391,6 +391,7 @@ Hidden=No
 SpanCells=NotApplicable
 Custom=Total
 ExtendFont=Yes
+HideZeroRow=No
 
 [DataCellFormat]
 Name=CaptionFmt, 16
@@ -398,6 +399,7 @@ Font=-013 0000 0000 0000 0700 0000 0000 0000 0000 0003 0002 0001 0034 Arial
 Hidden=No
 SpanCells=No
 NumDecimals=NotApplicable
+HideZeroRow=No
 
 [DataCellFormat]
 Name=StubFmt, 8
@@ -406,6 +408,7 @@ IndentRight=0.00
 Hidden=No
 SpanCells=NotApplicable
 ExtendFont=Yes
+HideZeroRow=No
 
 [DataCellFormat]
 Name=StubFmt, 9
@@ -415,6 +418,7 @@ Hidden=No
 SpanCells=NotApplicable
 ExtendFont=Yes
 NumDecimals=One
+HideZeroRow=No
 
 [DataCellFormat]
 Name=StubFmt, 10
@@ -423,6 +427,7 @@ IndentRight=0.00
 Hidden=No
 SpanCells=NotApplicable
 ExtendFont=Yes
+HideZeroRow=No
 
 [DataCellFormat]
 Name=CaptionFmt, 17
@@ -430,6 +435,7 @@ Font=-013 0000 0000 0000 0700 0000 0000 0000 0000 0003 0002 0001 0034 Arial
 Hidden=No
 SpanCells=No
 NumDecimals=NotApplicable
+HideZeroRow=No
 
 [DataCellFormat]
 Name=CaptionFmt, 18
@@ -437,6 +443,7 @@ Font=-013 0000 0000 0000 0700 0000 0000 0000 0000 0003 0002 0001 0034 Arial
 Hidden=No
 SpanCells=No
 NumDecimals=NotApplicable
+HideZeroRow=No
 
 [DataCellFormat]
 Name=CaptionFmt, 19
@@ -444,6 +451,7 @@ Font=-013 0000 0000 0000 0700 0000 0000 0000 0000 0003 0002 0001 0034 Arial
 Hidden=No
 SpanCells=No
 NumDecimals=NotApplicable
+HideZeroRow=No
 
 [DataCellFormat]
 Name=CaptionFmt, 20
@@ -451,6 +459,7 @@ Font=-013 0000 0000 0000 0700 0000 0000 0000 0000 0003 0002 0001 0034 Arial
 Hidden=No
 SpanCells=No
 NumDecimals=NotApplicable
+HideZeroRow=No
 
 [DataCellFormat]
 Name=CaptionFmt, 21
@@ -458,6 +467,7 @@ Font=-013 0000 0000 0000 0700 0000 0000 0000 0000 0003 0002 0001 0034 Arial
 Hidden=No
 SpanCells=No
 NumDecimals=NotApplicable
+HideZeroRow=No
 
 [DataCellFormat]
 Name=CaptionFmt, 22
@@ -466,6 +476,7 @@ IndentRight=0.00
 Hidden=No
 SpanCells=No
 Custom=
+HideZeroRow=No
 
 [DataCellFormat]
 Name=StubFmt, 11
@@ -473,6 +484,7 @@ Hidden=No
 SpanCells=NotApplicable
 ExtendFont=Yes
 NumDecimals=Two
+HideZeroRow=No
 
 [Format]
 Name=TitleFmt, default

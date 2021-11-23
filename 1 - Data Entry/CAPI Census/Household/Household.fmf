@@ -1,5 +1,5 @@
 ﻿[FormFile]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Name=HOUSEHOLD_FF
 Label=Household
 DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
@@ -83,7 +83,6 @@ Required=Yes
 Name=GEOCODES_FORM
 Label=Geocodes
 Form=1
-LogicControl=No
 Max=1
   
 [Field]
@@ -92,6 +91,7 @@ Position=221,27,250,47
 Item=HH_PROVINCE,PSC_HOUSEHOLD_DICT
 Protected=Yes
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -105,6 +105,7 @@ Position=221,62,250,82
 Item=HH_DISTRICT,PSC_HOUSEHOLD_DICT
 Protected=Yes
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -118,6 +119,7 @@ Position=221,98,264,118
 Item=HH_EA,PSC_HOUSEHOLD_DICT
 Protected=Yes
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -131,6 +133,7 @@ Position=221,135,236,155
 Item=HH_SEGMENT,PSC_HOUSEHOLD_DICT
 Protected=Yes
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -144,6 +147,7 @@ Position=221,172,278,192
 Item=HH_NUMBER,PSC_HOUSEHOLD_DICT
 Protected=Yes
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -183,7 +187,6 @@ Required=Yes
 Name=POPULATION_BASIC_FORM
 Label=Population Basic
 Form=2
-LogicControl=No
 Max=1
   
 [Field]
@@ -427,6 +430,7 @@ Item=HH_NAME,PSC_HOUSEHOLD_DICT
 UpperCase=Yes
 FieldLabelType=DictionaryLabel
 UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
   
 [Text]
 Position=0,0,121,16
@@ -503,7 +507,6 @@ Required=Yes
 Name=POPULATION_DETAILS_FORM
 Label=Population Details
 Form=3
-LogicControl=No
 Max=1
   
 [Grid]
@@ -1038,7 +1041,6 @@ Required=Yes
 Name=DWELLING_CHARACTERISTICS_FORM
 Label=Dwelling Characteristics
 Form=4
-LogicControl=No
 Max=1
   
 [Field]

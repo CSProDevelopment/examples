@@ -1,5 +1,5 @@
 ﻿[FormFile]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Name=REL_EX_FF
 Label=Rel_Ex
 DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
@@ -78,7 +78,6 @@ Required=Yes
 Name=IDS0_EDT
 Label=(Id Items)
 Form=1
-LogicControl=No
 Max=1
   
 [Field]
@@ -93,7 +92,6 @@ Required=Yes
 Name=HOUSING_EDT
 Label=Housing
 Form=2
-LogicControl=No
 Type=Record
 TypeName=HOUSING
 Max=1
@@ -116,7 +114,6 @@ Required=No
 Name=POP_EDT
 Label=Pop
 Form=3
-LogicControl=No
 Type=Record
 TypeName=POP
 Max=10
@@ -157,7 +154,6 @@ Required=No
 Name=FERT_EDT
 Label=Fert
 Form=4
-LogicControl=No
 Type=Record
 TypeName=FERT
 Max=10

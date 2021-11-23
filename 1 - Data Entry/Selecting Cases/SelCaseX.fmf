@@ -1,5 +1,5 @@
 ﻿[FormFile]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Name=SELCASEX_FF
 Label=SelCaseX
 DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
@@ -236,13 +236,13 @@ Required=Yes
 Name=DEMO_SELCASE_FORM
 Label=Demo SelCase
 Form=1
-LogicControl=No
 Max=1
   
 [Field]
 Name=OPTION
 Position=139,47,154,67
 Item=OPTION,SELCASEX_DICT
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -255,6 +255,7 @@ Name=DATA_SEARCH
 Position=137,91,418,111
 Item=DATA_SEARCH,SELCASEX_DICT
 UpperCase=Yes
+DataCaptureType=TextBox
 Form=1
   
 [Text]

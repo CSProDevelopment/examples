@@ -1,5 +1,5 @@
 ﻿[FormFile]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Name=POPSTANLFS_FF
 Label=PopstanLFS
 DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
@@ -191,6 +191,7 @@ Name=DISTRICT
 Position=250,57,279,77
 Item=DISTRICT,POPSTANLFS_DICT
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -203,6 +204,7 @@ Name=GHDWNO
 Position=250,87,293,107
 Item=GHDWNO,POPSTANLFS_DICT
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -215,6 +217,7 @@ Name=GHHHNO
 Position=250,117,293,137
 Item=GHHHNO,POPSTANLFS_DICT
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -241,6 +244,7 @@ Position=250,178,363,198
 Item=GHVFDT,POPSTANLFS_DICT
 Protected=Yes
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -267,6 +271,7 @@ Position=250,238,293,258
 Item=GHINTID,POPSTANLFS_DICT
 Protected=Yes
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -415,6 +420,7 @@ Item=PPNO,POPSTANLFS_DICT
 Protected=Yes
 Sequential=Yes
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
   
 [Text]
 Position=0,0,122,20
@@ -436,6 +442,7 @@ Item=NAME,POPSTANLFS_DICT
 UpperCase=Yes
 FieldLabelType=DictionaryLabel
 UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
   
 [Text]
 Position=0,0,202,20
@@ -553,6 +560,7 @@ Name=DEMAG1
 Position=0,0,43,20
 Item=DEMAG1,POPSTANLFS_DICT
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
   
 [Text]
 Text=Age
@@ -632,6 +640,7 @@ Position=285,29,314,49
 Item=GHHHSIZE,POPSTANLFS_DICT
 Protected=Yes
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -645,6 +654,7 @@ Position=709,33,738,53
 Item=GHNELIGIBLE,POPSTANLFS_DICT
 Protected=Yes
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=2
   
 [Text]
@@ -681,6 +691,7 @@ Position=432,42,447,62
 Item=PXYSTART,POPSTANLFS_DICT
 Protected=Yes
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -747,6 +758,7 @@ Item=PXYEND,POPSTANLFS_DICT
 Protected=Yes
 HideInCaseTree=Yes
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -760,6 +772,7 @@ Position=432,222,447,242
 Item=EMPSTART,POPSTANLFS_DICT
 Protected=Yes
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -812,6 +825,7 @@ Position=432,342,447,362
 Item=EMPEND,POPSTANLFS_DICT
 Protected=Yes
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -826,6 +840,7 @@ Item=ABSSTART,POPSTANLFS_DICT
 Protected=Yes
 HideInCaseTree=Yes
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -865,6 +880,7 @@ Position=432,462,892,482
 Item=ABSWHY_OTHER,POPSTANLFS_DICT
 FieldLabelType=DictionaryLabel
 UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -918,6 +934,7 @@ Item=ABSEND,POPSTANLFS_DICT
 Protected=Yes
 HideInCaseTree=Yes
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -931,6 +948,7 @@ Position=432,612,447,632
 Item=AGFSTART,POPSTANLFS_DICT
 Protected=Yes
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -1022,6 +1040,7 @@ Position=432,822,892,842
 Item=AGFGDS,POPSTANLFS_DICT
 FieldLabelType=DictionaryLabel
 UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -1035,6 +1054,7 @@ Position=432,852,892,872
 Item=AGFOCC,POPSTANLFS_DICT
 FieldLabelType=DictionaryLabel
 UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -1060,6 +1080,7 @@ Name=AGFHRS
 Position=432,912,503,932
 Item=AGFHRS,POPSTANLFS_DICT
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -1074,6 +1095,7 @@ Item=AGFEND,POPSTANLFS_DICT
 Protected=Yes
 HideInCaseTree=Yes
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -1087,6 +1109,7 @@ Position=432,972,447,992
 Item=MJBSTART,POPSTANLFS_DICT
 Protected=Yes
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -1218,6 +1241,7 @@ Item=MJBEND,POPSTANLFS_DICT
 Protected=Yes
 HideInCaseTree=Yes
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -1231,6 +1255,7 @@ Position=432,1302,447,1322
 Item=DMWSTART,POPSTANLFS_DICT
 Protected=Yes
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -1283,6 +1308,7 @@ Position=432,1422,892,1442
 Item=DMWOCC,POPSTANLFS_DICT
 FieldLabelType=DictionaryLabel
 UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -1297,6 +1323,7 @@ Item=DMWEND,POPSTANLFS_DICT
 Protected=Yes
 HideInCaseTree=Yes
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -1310,6 +1337,7 @@ Position=432,1482,447,1502
 Item=IMJSTART,POPSTANLFS_DICT
 Protected=Yes
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -1336,6 +1364,7 @@ Position=432,1542,712,1562
 Item=IMJNAM,POPSTANLFS_DICT
 FieldLabelType=DictionaryLabel
 UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -1349,6 +1378,7 @@ Position=432,1572,712,1592
 Item=IMJMAC,POPSTANLFS_DICT
 FieldLabelType=DictionaryLabel
 UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -1363,6 +1393,7 @@ Item=IMJEND,POPSTANLFS_DICT
 Protected=Yes
 HideInCaseTree=Yes
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -1376,6 +1407,7 @@ Position=432,1662,447,1682
 Item=DMJSTART,POPSTANLFS_DICT
 Protected=Yes
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -1388,6 +1420,7 @@ Name=DMJSYR
 Position=432,1692,489,1712
 Item=DMJSYR,POPSTANLFS_DICT
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -1415,6 +1448,7 @@ Item=DMJEND,POPSTANLFS_DICT
 Protected=Yes
 HideInCaseTree=Yes
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -1428,6 +1462,7 @@ Position=432,1782,447,1802
 Item=OMJSTART,POPSTANLFS_DICT
 Protected=Yes
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -1441,6 +1476,7 @@ Position=432,1812,712,1832
 Item=OMJMTD,POPSTANLFS_DICT
 FieldLabelType=DictionaryLabel
 UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -1454,6 +1490,7 @@ Position=432,1842,712,1862
 Item=OMJTLE,POPSTANLFS_DICT
 FieldLabelType=DictionaryLabel
 UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -1468,6 +1505,7 @@ Item=OMJEND,POPSTANLFS_DICT
 Protected=Yes
 HideInCaseTree=Yes
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -1481,6 +1519,7 @@ Position=432,1932,447,1952
 Item=WTSTART,POPSTANLFS_DICT
 Protected=Yes
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -1597,6 +1636,7 @@ Item=ACHRSUMMJ,POPSTANLFS_DICT
 Protected=Yes
 HideInCaseTree=Yes
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -1622,6 +1662,7 @@ Name=ACHRUM
 Position=432,2384,503,2404
 Item=ACHRUM,POPSTANLFS_DICT
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -1647,6 +1688,7 @@ Name=USHRSM
 Position=432,2444,503,2464
 Item=USHRSM,POPSTANLFS_DICT
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -1776,6 +1818,7 @@ Item=ACHRSUMSJ,POPSTANLFS_DICT
 Protected=Yes
 HideInCaseTree=Yes
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -1801,6 +1844,7 @@ Name=ACHRUS
 Position=432,2926,503,2946
 Item=ACHRUS,POPSTANLFS_DICT
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -1826,6 +1870,7 @@ Name=USHRSS
 Position=432,2986,503,3006
 Item=USHRSS,POPSTANLFS_DICT
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -1838,6 +1883,7 @@ Name=ACHRSO
 Position=432,3016,503,3036
 Item=ACHRSO,POPSTANLFS_DICT
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -1863,6 +1909,7 @@ Name=USHRSO
 Position=432,3076,503,3096
 Item=USHRSO,POPSTANLFS_DICT
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -1877,6 +1924,7 @@ Item=TOTACH,POPSTANLFS_DICT
 Protected=Yes
 HideInCaseTree=Yes
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -1891,6 +1939,7 @@ Item=TOTUSH,POPSTANLFS_DICT
 Protected=Yes
 HideInCaseTree=Yes
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -1929,6 +1978,7 @@ Name=NMMRHR
 Position=432,3226,503,3246
 Item=NMMRHR,POPSTANLFS_DICT
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -1956,6 +2006,7 @@ Item=WTEND,POPSTANLFS_DICT
 Protected=Yes
 HideInCaseTree=Yes
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -1969,6 +2020,7 @@ Position=432,3316,447,3336
 Item=SRHSTART,POPSTANLFS_DICT
 Protected=Yes
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -2021,6 +2073,7 @@ Position=432,3436,892,3456
 Item=SRHMTD_OTHER,POPSTANLFS_DICT
 FieldLabelType=DictionaryLabel
 UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -2060,6 +2113,7 @@ Position=432,3526,892,3546
 Item=SRHOTH_OTHER,POPSTANLFS_DICT
 FieldLabelType=DictionaryLabel
 UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -2125,6 +2179,7 @@ Position=432,3676,892,3696
 Item=SRHDWY_OTHER,POPSTANLFS_DICT
 FieldLabelType=DictionaryLabel
 UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -2216,6 +2271,7 @@ Position=432,3883,892,3903
 Item=SRHMAC_OTHER,POPSTANLFS_DICT
 FieldLabelType=DictionaryLabel
 UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -2230,6 +2286,7 @@ Item=SRHEND,POPSTANLFS_DICT
 Protected=Yes
 HideInCaseTree=Yes
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=3
   
 [Text]
@@ -2244,6 +2301,7 @@ Item=INDIVEND,POPSTANLFS_DICT
 Protected=Yes
 HideInCaseTree=Yes
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=3
   
 [Text]

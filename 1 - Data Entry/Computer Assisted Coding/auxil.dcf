@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Label=auxil
 Name=AUXIL_DICT
 RecordTypeStart=0
@@ -20,6 +20,7 @@ Label=auxil identification
 Name=AUXIL_ID
 Start=1
 Len=1
+DataType=Numeric
 
 [Record]
 Label=auxil record
@@ -32,6 +33,7 @@ Label=Coding Type
 Name=AUXILTYPE
 Start=2
 Len=1
+DataType=Numeric
 
 [Item]
 Label=Coding Text
@@ -52,4 +54,5 @@ Label=Occupation/Industry Code
 Name=AUXILCODE
 Start=27
 Len=3
+DataType=Numeric
 ZeroFill=Yes

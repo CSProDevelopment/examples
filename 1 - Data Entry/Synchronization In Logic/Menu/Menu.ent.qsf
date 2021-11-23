@@ -1,6 +1,6 @@
 ﻿---
 fileType: Question Text
-version: CSPro 7.6
+version: CSPro 7.7
 languages:
   - name: EN
     label: English
@@ -26,6 +26,14 @@ styles:
     css: |
       font-family: Arial;font-size: 18px;
 questions:
+  - name: MENU_DICT.LOGIN
+    conditions:
+      - questionText:
+          EN: |
+            <p>Choose your role:</p>
+        helpText:
+          EN: |
+            
   - name: MENU_DICT.INTERVIEWER_MENU
     conditions:
       - questionText:
@@ -33,16 +41,6 @@ questions:
             <p>You are logged in as an interviewer.</p>
             <p><br></p>
             <p>Choose an option:</p>
-            
-        helpText:
-          EN: |
-            
-  - name: MENU_DICT.LOGIN
-    conditions:
-      - questionText:
-          EN: |
-            <p>Choose your role:</p>
-            
         helpText:
           EN: |
             
@@ -53,7 +51,6 @@ questions:
             <p>You are logged in as a supervisor.</p>
             <p><br></p>
             <p>Choose an option.</p>
-            
         helpText:
           EN: |
             

@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Label=Occupation
 Name=OCCUPATION_DICT
 RecordTypeStart=0
@@ -20,6 +20,7 @@ Label=Occupation identification
 Name=OCCID
 Start=1
 Len=3
+DataType=Numeric
 ZeroFill=Yes
 
 [Record]

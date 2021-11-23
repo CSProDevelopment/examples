@@ -1,6 +1,6 @@
 ﻿---
 fileType: Question Text
-version: CSPro 7.6
+version: CSPro 7.7
 languages:
   - name: EN
     label: English
@@ -9,39 +9,32 @@ styles:
     className: normal
     css: |
       font-family: Arial;font-size: 16px;color: #000000;
-      
   - name: Instruction
     className: instruction
     css: |
       font-family: Arial;font-style: italic;font-size: 16px;color: #000000;
-      
   - name: Heading 1
     className: heading1
     css: |
       font-family: Arial;font-size: 36px;
-      
   - name: Heading 2
     className: heading2
     css: |
       font-family: Arial;font-size: 24px;
-      
   - name: Heading 3
     className: heading3
     css: |
       font-family: Arial;font-size: 18px;
-      
   - name: Name
     className: name
     css: |
       font-family: Arial;font-weight: bold;font-size: 16px;color: #000080;
-      
 questions:
   - name: SIMPLECAPI_DICT.HOUSEHOLD_ID
     conditions:
       - questionText:
           EN: |
             <p><span class="instruction">Enter the household number.</span></p>
-            
         helpText:
           EN: |
             
@@ -52,7 +45,6 @@ questions:
             <p><i>Enter the name of the next person in the household. Include everyone living or staying in this household.</i></p>
             <p></p>
             <p><i>You are entering person ~~curocc()~~. If all persons have been recorded, <a href="javascript:CSPro.runLogicAsync('EndPersonRoster();')">end the roster (with a household size of ~~curocc() - 1~~)</a>.</i></p>
-            
         helpText:
           EN: |
             
@@ -61,7 +53,6 @@ questions:
       - questionText:
           EN: |
             <p><span class="name">~~PersonName()~~:</span> What is your sex?</p>
-            
         helpText:
           EN: |
             
@@ -72,7 +63,6 @@ questions:
             <p><span class="name">~~PersonName()~~:</span> How old are you?</p>
             <p></p>
             <p><span class="instruction">If ~~PersonName()~~ does not know an exact age, record Don't Know.</span></p>
-            
         helpText:
           EN: |
             
@@ -82,7 +72,6 @@ questions:
         questionText:
           EN: |
             <p><span class="name">~~PersonName()~~:</span> Are you the head of household? If not, what is your relationship to the head?</p>
-            
         helpText:
           EN: |
             
@@ -90,7 +79,6 @@ questions:
         questionText:
           EN: |
             <p><span class="name">~~PersonName()~~:</span> What is your relationship to ~~PersonName(headOcc)~~?</p>
-            
         helpText:
           EN: |
             
@@ -99,7 +87,6 @@ questions:
       - questionText:
           EN: |
             <p><span class="name">~~PersonName()~~:</span> Are you literate, meaning that you can read and write with understanding in at least one language?</p>
-            
         helpText:
           EN: |
             
@@ -110,7 +97,6 @@ questions:
             <p><span class="name">~~PersonName()~~:</span> What languages do you speak?</p>
             <p></p>
             <p><span class="instruction">If ~~PersonName()~~ lists only one language, probe and ask if ~~PersonName()~~ speaks more than one language.</span></p>
-            
         helpText:
           EN: |
             
@@ -119,7 +105,6 @@ questions:
       - questionText:
           EN: |
             <p><span class="instruction">Specify any other language that ~~PersonName()~~ listed that was not in the above list. Enter only one language.</span></p>
-            
         helpText:
           EN: |
             
@@ -128,7 +113,6 @@ questions:
       - questionText:
           EN: |
             <p><span class="name">~~PersonName()~~:</span> What is the language that you speak most frequently?</p>
-            
         helpText:
           EN: |
             

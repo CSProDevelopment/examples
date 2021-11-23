@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Label=Weighted Tables_wrk
 Name=WEIGHTED_TABLES_WRK_DICT
 RecordTypeStart=1
@@ -20,6 +20,7 @@ Label=Weighted Tables_wrk identification
 Name=WEIGHTED_TABLES_WRK_ID
 Start=2
 Len=1
+DataType=Numeric
 
 [Record]
 Label=System Record
@@ -32,3 +33,4 @@ Label=System Total
 Name=SYSTEM_TOTAL
 Start=3
 Len=1
+DataType=Numeric

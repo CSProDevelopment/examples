@@ -1,5 +1,5 @@
 ﻿[Dictionary]
-Version=CSPro 7.6
+Version=CSPro 7.7
 Label=ListingMenu
 Name=LISTINGMENU_DICT
 RecordTypeStart=1
@@ -20,6 +20,7 @@ Label=ListingMenu Identification
 Name=LISTINGMENU_ID
 Start=2
 Len=1
+DataType=Numeric
 ZeroFill=Yes
 
 [Record]
@@ -33,4 +34,5 @@ Label=Show Map
 Name=SHOW_MAP
 Start=3
 Len=1
+DataType=Numeric
 ZeroFill=Yes
