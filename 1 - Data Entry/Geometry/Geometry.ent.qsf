@@ -1,0 +1,34 @@
+﻿---
+fileType: Question Text
+version: CSPro 7.7
+languages:
+  - name: EN
+    label: English
+styles:
+  - name: Normal
+    className: normal
+    css: |
+      font-family: Arial;font-size: 16px;
+  - name: Instruction
+    className: instruction
+    css: |
+      font-family: Arial;font-size: 14px;color: #0000FF;
+  - name: Heading 1
+    className: heading1
+    css: |
+      font-family: Arial;font-size: 36px;
+  - name: Heading 2
+    className: heading2
+    css: |
+      font-family: Arial;font-size: 24px;
+  - name: Heading 3
+    className: heading3
+    css: |
+      font-family: Arial;font-size: 18px;
+questions:
+  - name: GEOMETRY_DICT.MENU
+    conditions:
+      - questionText:
+          EN: |
+            <p><b>Trace boundary:&nbsp;</b>Trace and save the polygon as a GeoJSON file</p><p><b>Load boundary:</b> Select and view a polygon</p><p><b>Calculate:</b> Select and calculate the area and perimeter of a polygon</p><p><b>Quit:</b> Exit the application</p>
+...

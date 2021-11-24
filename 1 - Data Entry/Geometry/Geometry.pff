@@ -1,0 +1,12 @@
+﻿[Run Information]
+Version=CSPro 7.7
+AppType=Entry
+
+[DataEntryInit]
+StartMode=Add;1
+Lock=CaseListing
+
+[Files]
+Application=.\Geometry.ent
+InputData=|type=None
+Paradata=.\Geometry.cslog

@@ -1,0 +1,23 @@
+﻿[CSPro Application]
+Version=CSPro 7.7
+Label=GEOMETRY_123
+Name=GEOMETRY_123
+AppType=DataEntry
+OperatorID=No
+CAPI=Yes
+CreateListing=No
+CreateLog=No
+ShowErrorMessageNumbers=No
+ComboBoxShowOnlyDiscreteValues=Yes
+ParadataCollection=AllEvents
+ParadataDeviceStateMinutes=5
+[AppCode]
+File=.\Geometry.ent.apc
+[Message]
+File=.\Geometry.ent.mgf
+[Help]
+File=.\Geometry.ent.qsf
+[Forms]
+File=.\Geometry.fmf
+[Dictionary Types]
+Dict-Type=.\Geometry.dcf,Input,.\Geometry.fmf

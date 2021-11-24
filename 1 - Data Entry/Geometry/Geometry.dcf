@@ -1,0 +1,46 @@
+﻿[Dictionary]
+Version=CSPro 7.7
+Label=Geometry
+Name=GEOMETRY_DICT
+RecordTypeStart=1
+RecordTypeLen=1
+Positions=Relative
+ZeroFill=Yes
+DecimalChar=Yes
+SecurityOptions=5611969ED6046D65544320D7AE1A6D1C9521A80C1F82A96A601FA795234E2464
+
+[Level]
+Label=Geometry Level
+Name=GEOMETRY_LEVEL
+
+[IdItems]
+
+[Item]
+Label=Geometry Identification
+Name=GEOMETRY_ID
+Start=2
+Len=1
+DataType=Numeric
+ZeroFill=Yes
+
+[Record]
+Label=Geometry Record
+Name=GEOMETRY_REC
+RecordTypeValue='1'
+RecordLen=3
+
+[Item]
+Label=Menu
+Name=MENU
+Start=3
+Len=1
+DataType=Numeric
+ZeroFill=Yes
+
+[ValueSet]
+Label=Menu
+Name=MENU_VS1
+Value=1;Trace boundary
+Value=2;Load boundary
+Value=3;Calculate
+Value=9;Quit
