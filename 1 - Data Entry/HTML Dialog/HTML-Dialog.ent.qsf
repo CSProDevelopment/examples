@@ -1,0 +1,34 @@
+﻿---
+fileType: Question Text
+version: CSPro 7.7
+languages:
+  - name: EN
+    label: English
+styles:
+  - name: Normal
+    className: normal
+    css: |
+      font-family: Arial;font-size: 16px;
+  - name: Instruction
+    className: instruction
+    css: |
+      font-family: Arial;font-size: 14px;color: #0000FF;
+  - name: Heading 1
+    className: heading1
+    css: |
+      font-family: Arial;font-size: 36px;
+  - name: Heading 2
+    className: heading2
+    css: |
+      font-family: Arial;font-size: 24px;
+  - name: Heading 3
+    className: heading3
+    css: |
+      font-family: Arial;font-size: 18px;
+questions:
+  - name: HTML_DIALOG_DICT.MENU
+    conditions:
+      - questionText:
+          EN: |
+            <p>Use the function htmldialog to create custom HTML dialogs.</p><p></p><ul><li><b>Basic input: </b>&nbsp;Display user-entered text from prompt</li><li><b>Basic output: </b>Enter text directly into custom dialog and display text with an error message</li></ul><p></p>
+...

@@ -1,0 +1,47 @@
+﻿[FormFile]
+Version=CSPro 7.7
+Name=HTML_DIALOG_FF
+Label=HTML-Dialog
+DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
+FieldEntryFont=0018 0000 0000 0000 0600 0000 0000 0000 0000 0000 0000 0000 0000 Courier New
+Type=SystemControlled
+  
+[Dictionaries]
+File=.\HTML-Dialog.dcf
+  
+[Form]
+Name=FORM001
+Label=HTML-Dialog Record
+QuestionTextHeight=114
+Level=1
+Size=1213,300
+  
+Item=MENU
+  
+[EndForm]
+  
+[Level]
+Name=HTML_DIALOG_LEVEL
+Label=HTML-Dialog Level
+  
+[Group]
+Required=Yes
+Name=HTML_DIALOG_REC_FORM
+Label=HTML-Dialog Record
+Form=1
+Max=1
+  
+[Field]
+Name=MENU
+Position=109,27,124,47
+Item=MENU,HTML_DIALOG_DICT
+FieldLabelType=DictionaryName
+DataCaptureType=RadioButton
+Form=1
+  
+[Text]
+Position=50,30,87,46
+Text=MENU
+ 
+[EndGroup]
+  

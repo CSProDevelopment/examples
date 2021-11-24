@@ -1,0 +1,23 @@
+﻿[CSPro Application]
+Version=CSPro 7.7
+Label=HTML_DIALOG
+Name=HTML_DIALOG
+AppType=DataEntry
+OperatorID=No
+CAPI=Yes
+CreateListing=No
+CreateLog=No
+ShowErrorMessageNumbers=No
+ComboBoxShowOnlyDiscreteValues=Yes
+ParadataCollection=AllEvents
+ParadataDeviceStateMinutes=5
+[AppCode]
+File=.\HTML-Dialog.ent.apc
+[Message]
+File=.\HTML-Dialog.ent.mgf
+[Help]
+File=.\HTML-Dialog.ent.qsf
+[Forms]
+File=.\HTML-Dialog.fmf
+[Dictionary Types]
+Dict-Type=.\HTML-Dialog.dcf,Input,.\HTML-Dialog.fmf
