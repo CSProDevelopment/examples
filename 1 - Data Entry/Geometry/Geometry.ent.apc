@@ -8,12 +8,12 @@ function hideMap()
 end;
 
 function string pickGeoJson()
-	list string geojsonfiles;
-	dirlist(geojsonfiles, pathname(Application), "*json");
+	list string geoJsonfiles;
+	dirlist(geoJsonfiles, pathname(Application), "*geojson");
 	
 	list string filenames;
-	do numeric i = 1 while i <= geojsonfiles.length()
-		filenames.add(path.getfilename(geojsonfiles(i)));
+	do numeric i = 1 while i <= geoJsonfiles.length()
+		filenames.add(path.getfilename(geoJsonfiles(i)));
 	enddo;
 	
 	if filenames.length() = 0  then
@@ -23,7 +23,7 @@ function string pickGeoJson()
 	
 	numeric pick = filenames.show();
 	if pick > 0 then
-		pickGeoJson = geojsonfiles(pick);
+		pickGeoJson = geoJsonfiles(pick);
 	else
 		pickGeoJson = "";
 	endif;
@@ -51,16 +51,18 @@ if MENU = 1 then
 	myMap.clearGeometry();
 	geometry polygon;
 	if polygon.tracepolygon(myMap) then
-		polygon.save(maketext("%d-%d.geojson", sysdate("mmdd"), systime("hhMMss")));
+		polygon.save(maketext("%d-%d.geojson", sysdate("yyyymmdd"), systime("hhMMss")));
 	endif;
 elseif MENU = 2 then
 	// select and view a polygon
 	string pick = pickGeoJson();
 	if pick <> "" then
 		geometry polygon;
-		polygon.load(pick);
-		myMap.addgeometry(polygon);
-		myMap.show();
+		numeric isLoaded = polygon.load(pick);
+		if isLoaded then
+			myMap.addgeometry(polygon);
+			myMap.show();
+		endif;
 	endif;
 elseif MENU = 3 then
 	// select and calculate the area and perimeter of a polygon
@@ -68,11 +70,8 @@ elseif MENU = 3 then
 	if pick <> "" then
 		geometry polygon;
 		polygon.load(pick);
-		errmsg("Area = %0.1f m^2, Perimeter= %0.1f", polygon.area(), polygon.perimeter());
+		errmsg("Area = %0.1f m^2, Perimeter = %0.1f", polygon.area(), polygon.perimeter());
 	endif;
-else
-	// exit application
-	stop(1);
 endif;
 
 reenter;

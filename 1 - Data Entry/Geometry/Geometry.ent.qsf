@@ -30,5 +30,5 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p><b>Trace boundary:&nbsp;</b>Trace and save the polygon as a GeoJSON file</p><p><b>Load boundary:</b> Select and view a polygon</p><p><b>Calculate:</b> Select and calculate the area and perimeter of a polygon</p><p><b>Quit:</b> Exit the application</p>
+            <p>Use the map and polygon objects to trace, view, and calculate the area and perimter of a polygon.</p><ul><li><b>Trace polygon:&nbsp;</b>Trace and save the polygon as a GeoJSON file</li><li><b>View&nbsp;</b><b>polygon</b><b>:</b> Select and view a polygon</li><li><b>Calculate:</b> Select and calculate the area and perimeter of a polygon</li></ul>
 ...

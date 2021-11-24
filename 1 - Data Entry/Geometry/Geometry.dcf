@@ -40,7 +40,6 @@ ZeroFill=Yes
 [ValueSet]
 Label=Menu
 Name=MENU_VS1
-Value=1;Trace boundary
-Value=2;Load boundary
+Value=1;Trace polygon
+Value=2;View polygon
 Value=3;Calculate
-Value=9;Quit
