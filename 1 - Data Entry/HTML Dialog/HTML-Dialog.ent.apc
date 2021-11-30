@@ -7,8 +7,10 @@ function BasicInputDialog()
 	string display_options = maketext('{ "width": %d, '
 	                                  '  "height": %d, '
 									  '  "resizable": %d }'
-									  , 800, 600, true);
-	htmlDialog("BasicInputDialog.html", dialog_input, displayOptions := display_options);
+									  , int(tonumber(getproperty("MaxDisplayWidth")) * 0.8)
+									  , int(tonumber(getproperty("MaxDisplayHeight")) * 0.8)
+									  , true);
+	htmlDialog("Basic-Input-Dialog.html", dialog_input, displayOptions := display_options);
 
 end;
 
@@ -17,8 +19,10 @@ function BasicOutputDialog()
 	string display_options = maketext('{ "width": %d, '
 	                                  '  "height": %d, '
 									  '  "resizable": %d }'
-									  , 800, 600, true);
-	string dialog_output = htmlDialog("BasicOutputDialog.html", "", displayOptions := display_options);
+									  , int(tonumber(getproperty("MaxDisplayWidth")) * 0.8)
+									  , int(tonumber(getproperty("MaxDisplayHeight")) * 0.8)
+									  , true);
+	string dialog_output = htmlDialog("Basic-Output-Dialog.html", "", displayOptions := display_options);
 	errmsg("Returned text: %s", dialog_output);
 
 end;

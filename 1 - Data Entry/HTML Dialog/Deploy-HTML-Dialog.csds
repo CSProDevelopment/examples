@@ -1,14 +1,14 @@
 {
   "fileType": "Application Deployment Specification",
-  "version": "7.6",
+  "version": "7.7",
   "name": "HTML-Dialog",
   "description": "",
   "files": [
     {
-      "path": ".\\BasicInputDialog.html"
+      "path": ".\\Basic-Input-Dialog.html"
     },
     {
-      "path": ".\\BasicOutputDialog.html"
+      "path": ".\\Basic-Output-Dialog.html"
     },
     {
       "path": ".\\HTML-Dialog.ent"
