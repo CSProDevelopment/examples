@@ -70,7 +70,7 @@ elseif MENU = 3 then
 	if pick <> "" then
 		geometry polygon;
 		polygon.load(pick);
-		errmsg("Area = %0.1f m^2, Perimeter = %0.1f", polygon.area(), polygon.perimeter());
+		errmsg("Area = %0.1f m^2, Perimeter = %0.1f m", polygon.area(), polygon.perimeter());
 	endif;
 endif;
 
