@@ -12,7 +12,7 @@ File=..\Dictionaries\Menu.dcf
 [Form]
 Name=FORM000
 Label=Login Form
-QuestionTextHeight=258
+QuestionTextHeight=126
 Level=1
 Size=757,126
 CapturePos=317,74
@@ -25,7 +25,7 @@ Item=PIN_CODE_CONFIRMATION
 [Form]
 Name=FORM001
 Label=Supervisor Creation Form
-QuestionTextHeight=247
+QuestionTextHeight=107
 Level=1
 Size=978,550
 CapturePos=337,118
@@ -39,7 +39,7 @@ Item=SUPERVISOR_PIN_CODE
 [Form]
 Name=FORM002
 Label=Assignment Selection Form
-QuestionTextHeight=226
+QuestionTextHeight=92
 Level=1
 Size=897,269
 CapturePos=292,74
@@ -53,7 +53,7 @@ Item=SUPERVISOR_DISTRICT
 [Form]
 Name=FORM003
 Label=Main Menu Form
-QuestionTextHeight=307
+QuestionTextHeight=125
 Level=1
 Size=913,207
 CapturePos=435,80
@@ -67,7 +67,7 @@ Item=VIEW_ALL_HOUSEHOLDS
 [Form]
 Name=FORM004
 Label=Staff Management Form
-QuestionTextHeight=165
+QuestionTextHeight=94
 Level=1
 Size=1118,247
 CapturePos=47,135
