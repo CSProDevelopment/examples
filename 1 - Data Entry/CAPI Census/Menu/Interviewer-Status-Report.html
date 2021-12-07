@@ -42,7 +42,7 @@
 			</tr>
 		<? do numeric ctr = 1 while ctr <= count(WS_DICT.INTERVIEWER_STATUS_RECORD) ?>
 			<tr>
-				<td>~~ISR_INTERVIEWER_NAME(ctr)~~</td>
+				<td>~~strip(ISR_INTERVIEWER_NAME(ctr))~~</td>
 				<td>~~ISR_COMPLETE_HOUSEHOLDS(ctr)~~</td>
 				<td>~~ISR_PARTIAL_HOUSEHOLDS(ctr)~~</td>
 				<td>~~timestring("%H:%M - %m/%d/%y", ISR_LAST_INTERVIEW(ctr))~~</td>
