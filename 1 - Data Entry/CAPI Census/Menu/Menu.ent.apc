@@ -251,6 +251,55 @@ function InitAssignments()
 
 end;
 
+function InitInterviewerStatusRecord()
+	
+	numeric ws_counter = 0;
+	
+	// Loop through all interviewers that are supervised by the currently logged in supervisor
+	forcase PSC_STAFF_DICT where SUPERVISOR_STAFF_CODE = LOGIN do
+		
+		inc(ws_counter);
+		
+		if ws_counter > count(INTERVIEWER_STATUS_RECORD) then
+			insert(INTERVIEWER_STATUS_RECORD, ws_counter);
+		endif;
+		
+		// All variables in occurrence of INTERVIEWER_STATUS_RECORD record
+		ISR_INTERVIEWER_NAME(ws_counter) = STAFF_NAME;
+		ISR_COMPLETE_HOUSEHOLDS(ws_counter) = 0;
+		ISR_PARTIAL_HOUSEHOLDS(ws_counter) = 0;
+		ISR_LAST_INTERVIEW(ws_counter) = 0;
+
+		forcase PSC_ASSIGNMENTS_DICT where ASSIGNMENTS_STAFF_CODE = STAFF_CODE do
+		
+			forcase PSC_HOUSEHOLD_DICT where HH_PROVINCE = ASSIGNMENTS_PROVINCE
+				and HH_DISTRICT = ASSIGNMENTS_DISTRICT and HH_EA = ASSIGNMENTS_EA
+				and HH_SEGMENT = ASSIGNMENTS_SEGMENT do
+		
+				if ispartial(PSC_HOUSEHOLD_DICT) then
+					// Sum partial households
+					inc(ISR_PARTIAL_HOUSEHOLDS(ws_counter));
+				else
+					// Sum complete households
+					inc(ISR_COMPLETE_HOUSEHOLDS(ws_counter));
+				endif;
+				
+				if ISR_LAST_INTERVIEW(ws_counter) < HH_END_INTERVIEW_TIME then
+					// Assign the last interview time and date
+					ISR_LAST_INTERVIEW(ws_counter) = HH_END_INTERVIEW_TIME;
+				endif;
+				
+			endfor;
+			
+		endfor;
+		
+	endfor;
+	
+	if ws_counter < count(INTERVIEWER_STATUS_RECORD) then
+		delete(INTERVIEWER_STATUS_RECORD, ws_counter + 1, count(INTERVIEWER_STATUS_RECORD));		
+	endif;
+	
+end;
 
 function ShowInterviewerStatusReport()
 
@@ -1004,7 +1053,8 @@ postproc
 		skip to EA_ASSIGNMENT_FORM;
 
 	elseif SUPERVISOR_MENU = 3 then
-		ShowInterviewerStatusReport();
+		InitInterviewerStatusRecord();
+		INTERVIEWER_STATUS_REPORT.view();
 		reenter;
 
 	elseif SUPERVISOR_MENU = 4 then

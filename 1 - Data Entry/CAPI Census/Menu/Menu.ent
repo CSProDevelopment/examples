@@ -14,10 +14,13 @@ File=..\Dictionaries\Geocodes.dcf
 File=..\Dictionaries\Staff.dcf
 File=..\Dictionaries\Assignments.dcf
 File=..\Dictionaries\Household.dcf
+File=.\Menu.ent.wrk.dcf
 [AppCode]
 File=.\Menu.ent.apc
 [Message]
 File=.\Menu.ent.mgf
+[Reports]
+INTERVIEWER_STATUS_REPORT=.\Interviewer-Status-Report.html
 [Help]
 File=.\Menu.ent.qsf
 [Forms]
@@ -28,3 +31,4 @@ Dict-Type=..\Dictionaries\Staff.dcf,External
 Dict-Type=..\Dictionaries\Assignments.dcf,External
 Dict-Type=..\Dictionaries\Menu.dcf,Input,.\Menu.fmf
 Dict-Type=..\Dictionaries\Household.dcf,External
+Dict-Type=.\Menu.ent.wrk.dcf,Working

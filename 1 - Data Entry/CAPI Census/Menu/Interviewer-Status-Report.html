@@ -1,0 +1,54 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1">
+
+    <link rel="stylesheet" href="/external/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="/external/bootstrap/bootstrap-icons.css" />
+    <link rel="stylesheet" href="/css/reports.css" />
+	<link rel="stylesheet" href="/css/reports.css" />
+
+    <script src="/external/jquery/jquery.min.js"></script>
+    <script src="/external/bootstrap/bootstrap.bundle.min.js"></script>
+		
+<body>
+	
+	<!-- Header -->
+    <div class="jumbotron text-center" style="background-color:#ddd;">
+        <h1 style="letter-spacing:10px;">CAPI Census</h1>
+        <span style="letter-spacing: 5px;">Interviewer Progress Report</span>
+    </div>
+
+	<!-- Report content -->
+	<table class="table table-striped table-bordered">
+		<thead>
+			<tr>
+				<th>Interviewer Name</th>
+				<th>Complete Households</th>
+				<th>Partial Households</th>
+				<th>Last Interview</th>
+			</tr>
+		<? do numeric ctr = 1 while ctr <= count(WS_DICT.INTERVIEWER_STATUS_RECORD) ?>
+			<tr>
+				<td>~~ISR_INTERVIEWER_NAME(ctr)~~</td>
+				<td>~~ISR_COMPLETE_HOUSEHOLDS(ctr)~~</td>
+				<td>~~ISR_PARTIAL_HOUSEHOLDS(ctr)~~</td>
+				<td>~~timestring("%H:%M - %m/%d/%y", ISR_LAST_INTERVIEW(ctr))~~</td>
+			</tr>
+		<? enddo; ?>
+		</thead>
+	</table>
+		
+	<!-- Footer -->
+	<footer class="page-footer font-small bg-dark">
+		<div class="footer-copyright text-center text-light py-3">
+			Report generated at ~~timestring("%H:%M - %m/%d/%y")~~
+		</div>
+	</footer>
+
+</body>
+
+</html>

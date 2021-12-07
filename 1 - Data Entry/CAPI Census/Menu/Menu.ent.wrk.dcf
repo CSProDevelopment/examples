@@ -1,0 +1,58 @@
+﻿[Dictionary]
+Version=CSPro 7.7
+Label=Menu - Working Storage Dictionary
+Name=WS_DICT
+RecordTypeStart=1
+RecordTypeLen=1
+Positions=Relative
+ZeroFill=No
+DecimalChar=Yes
+SecurityOptions=3ECC60F56C442DE7547B22E511BD2CE9BC5C955E888B4943713B141063A4C8CD
+
+[Level]
+Label=Working Storage Level
+Name=WS_LEVEL
+
+[IdItems]
+
+[Item]
+Label=Dummy Id
+Name=DUMMY_ID
+Start=2
+Len=1
+DataType=Numeric
+
+[Record]
+Label=Interviewer Status Record
+Name=INTERVIEWER_STATUS_RECORD
+RecordTypeValue='1'
+MaxRecords=99
+RecordLen=68
+
+[Item]
+Label=Interviewer Name
+Name=ISR_INTERVIEWER_NAME
+Start=3
+Len=50
+DataType=Alpha
+
+[Item]
+Label=Complete Households
+Name=ISR_COMPLETE_HOUSEHOLDS
+Start=53
+Len=3
+DataType=Numeric
+
+[Item]
+Label=Partial Households
+Name=ISR_PARTIAL_HOUSEHOLDS
+Start=56
+Len=3
+DataType=Numeric
+
+[Item]
+Label=Last Interview
+Name=ISR_LAST_INTERVIEW
+Start=59
+Len=10
+DataType=Numeric
