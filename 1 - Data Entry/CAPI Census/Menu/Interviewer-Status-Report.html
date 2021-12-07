@@ -13,13 +13,22 @@
 
     <script src="/external/jquery/jquery.min.js"></script>
     <script src="/external/bootstrap/bootstrap.bundle.min.js"></script>
-		
+	
+    <!-- Report properties-->
+    <?
+    string report_title = "CAPI Census";
+    string report_subtitle = "Interviewer Progress Report";
+    ?>
+	
 <body>
 	
 	<!-- Header -->
     <div class="jumbotron text-center" style="background-color:#ddd;">
-        <h1 style="letter-spacing:10px;">CAPI Census</h1>
-        <span style="letter-spacing: 5px;">Interviewer Progress Report</span>
+	    <div>
+            <a href="https://www.census.gov/data/software/cspro.html"><img src="/images/cspro-logo-medium.png" /></a>
+        </div>
+        <h1 style="letter-spacing:10px;">~~report_title~~</h1>
+        <span style="letter-spacing:5px;">~~report_subtitle~~</span>
     </div>
 
 	<!-- Report content -->
@@ -41,12 +50,15 @@
 		<? enddo; ?>
 		</thead>
 	</table>
+	
+	<p class="text-center">Report generated at ~~timestring("%H:%M - %m/%d/%y")~~</p>
 		
 	<!-- Footer -->
 	<footer class="page-footer font-small bg-dark">
-		<div class="footer-copyright text-center text-light py-3">
-			Report generated at ~~timestring("%H:%M - %m/%d/%y")~~
-		</div>
+		 <div class="footer-copyright text-center text-light py-3">
+            Check out CSPro users forum:
+            <a href="https://www.csprousers.org/"> csprousers.org</a>
+        </div>
 	</footer>
 
 </body>
