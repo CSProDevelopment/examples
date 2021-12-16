@@ -1210,14 +1210,8 @@ onfocus
 
 		string eaAssignedNames;
 
-		string eaUniverse = maketext("%v%v%v", GEOCODES_PROVINCE, GEOCODES_DISTRICT, GEOCODES_EA);
-
-		// Forcase loops can't be nested, so iterate using locate/loadcase.
-		// Set position at smallest case that satifies condition.
-		if locate(PSC_ASSIGNMENTS_DICT, >=, eaUniverse) then
-
-			// Load all cases where eaUniverse is a substring of the key of the case
-			while loadcase(PSC_ASSIGNMENTS_DICT) and pos(eaUniverse, key(PSC_ASSIGNMENTS_DICT)) = 1 do
+		forcase PSC_ASSIGNMENTS_DICT(startswith, maketext("%v%v%v", GEOCODES_PROVINCE, GEOCODES_DISTRICT
+			, GEOCODES_EA)) do
 
 				if ASSIGNMENTS_ROLE = 1 then
 					// Only interviewers
@@ -1229,10 +1223,8 @@ onfocus
 					eaAssignedNames = eaAssignedNames + LookupStaffName(ASSIGNMENTS_STAFF_CODE);
 
 				endif;
-
-			enddo;
-
-		endif;
+		
+		enddo;
 
 		if length(eaAssignedNames) > 0 then
 			eaAssignedNames = " (" + eaAssignedNames + ")";
