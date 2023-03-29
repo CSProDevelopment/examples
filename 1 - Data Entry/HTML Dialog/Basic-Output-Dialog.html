@@ -2,32 +2,26 @@
 <html lang="en">
 <head>
     <!--
-        Root paths that start with '/' point to HTML directory in the CSPro installation folder 
+        Root paths that start with '/' point to the HTML directory in the CSPro installation folder
         All standard HTML dialogs and supporitng third party libraries can be accessed with root paths
         Relative paths are resolved relative to the application folder
 
-        In JavaScript code wherever you see CSPro.--- this is calling CSPro-JS interface
-        In this example only three interface methods are used:
-        CSPro.getInputData() - returns a string passed as a second argument to htmlDialog() function
-        CSPro.returnData(val) - closes the dialog and returns argument 'val' back to CSPro. htmlDialog() function return this value
-        CSPro.setDisplayOptions(JSON) - adjusts some external dialog parameters such as width, height, and title border color in this case
+        In JavaScript code wherever you see CS.--- this is using the Action Invoker
+        In this example only two actions are used:
+            CS.UI.closeDialog - closes the dialog and defines a result that will be returned by the htmlDialog function
+            CS.UI.setDisplayOptions - adjusts some external dialog parameters such as the width and height
     -->
 
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, minimum-scale=1, user-scalable=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="/external/bootstrap/bootstrap.min.css" />
-    <link rel="stylesheet" href="/external/bootstrap/bootstrap-icons.css">
-    <link rel="stylesheet" href="/css/dialogs.css">
-
+    <script src="/action-invoker.js"></script>
     <script src="/external/jquery/jquery.min.js"></script>
-    <script src="/external/bootstrap/bootstrap.bundle.min.js"></script>
 
     <script>
-        
         $(document).ready(function () {
+            const CS = new CSProActionInvoker();
+
             //This is just to set the focus to the output control
             setTimeout(function () {
                 $('#output').focus();
@@ -35,18 +29,14 @@
 
             //Returning entered text on button click
             $('button').click(function () {
-                CSPro.returnData($('#output').val());
+                CS.UI.closeDialog({ result: $('#output').val() });
             });
 
             //Adjusting height / width of the web view window
-            CSPro.setDisplayOptions(
-                JSON.stringify(
-                    {
-                        "width": $('.mainContainer').outerWidth(true),
-                        "height": $('.mainContainer').outerHeight(true),
-                    }
-                )
-            );
+            CS.UI.setDisplayOptions({
+                width: $('.mainContainer').outerWidth(true),
+                height: $('.mainContainer').outerHeight(true)
+            });
         });
     </script>
 

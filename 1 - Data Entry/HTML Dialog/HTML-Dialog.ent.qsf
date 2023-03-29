@@ -30,5 +30,5 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p>Use the function htmldialog to create custom HTML dialogs.</p><p></p><ul><li><b>Basic input: </b>&nbsp;Display user-entered text from prompt</li><li><b>Basic output: </b>Enter text directly into custom dialog and display text with an error message</li></ul><p></p>
+            <p>Use the function htmlDialog to create custom HTML dialogs.</p><p></p><ul><li><b>Basic input: </b>&nbsp;Display user-entered text from prompt</li><li><b>Basic output: </b>Enter text directly into custom dialog and display text with an error message</li></ul><p></p>
 ...

@@ -44,7 +44,14 @@ questions:
           EN: |
             <p><i>Enter the name of the next person in the household. Include everyone living or staying in this household.</i></p>
             <p></p>
-            <p><i>You are entering person ~~curocc()~~. If all persons have been recorded, <a href="javascript:CSPro.runLogicAsync('EndPersonRoster();')">end the roster (with a household size of ~~curocc() - 1~~)</a>.</i></p>
+            <p><i>You are entering person ~~curocc()~~. If all persons have been recorded, <a href="#" onclick="endRoster(); return false;">end the roster (with a household size of ~~curocc() - 1~~)</a>.</i></p>
+            <script src="/action-invoker.js"></script>
+            <script>
+              function endRoster() {
+                let CS = new CSProActionInvoker();
+                CS.Logic.runLogicAsync({ logic: "EndPersonRoster();" });
+              }
+            </script>
         helpText:
           EN: |
             
