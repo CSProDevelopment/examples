@@ -49,7 +49,7 @@ questions:
             <script>
               function endRoster() {
                 let CS = new CSProActionInvoker();
-                CS.Logic.runLogicAsync({ logic: "EndPersonRoster();" });
+                CS.Logic.evalAsync({ logic: "EndPersonRoster();" });
               }
             </script>
         helpText:
