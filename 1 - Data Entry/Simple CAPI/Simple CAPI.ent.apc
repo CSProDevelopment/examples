@@ -40,7 +40,7 @@ function EndPersonRoster()
 	// confirm that this is really the end of household and not an inadvertent blank
 	numeric numHouseholdMembers = curocc() - 1;
 
-	list string endConfirmationOptions;
+	List string endConfirmationOptions;
 
 	do numeric ctr = 1 while ctr <= numHouseholdMembers
 		endConfirmationOptions.add("Edit " + PersonName(ctr));
@@ -106,9 +106,10 @@ onfocus
 
 
 	// customize the value set based on whether the person is a male or female
-	if SEX = 1 then	setvalueset(RELATIONSHIP, RELATIONSHIP_MALE_VS);
-	else			setvalueset(RELATIONSHIP, RELATIONSHIP_FEMALE_VS);
-	endif;
+	when SEX;
+		1 -> setvalueset(RELATIONSHIP, RELATIONSHIP_MALE_VS);
+		2 -> setvalueset(RELATIONSHIP, RELATIONSHIP_FEMALE_VS);
+	endwhen;
 
 postproc
 
@@ -245,7 +246,7 @@ PROC MAIN_LANGUAGE
 onfocus
 
 	// set up the value set using languages that the person speaks; if only one, preselect the language
-	valueset string mainLanguageValueSet;
+	ValueSet string mainLanguageValueSet;
 
 	do numeric ctr = 1 while ctr <= MAIN_LANGUAGE_VS1.length()
 

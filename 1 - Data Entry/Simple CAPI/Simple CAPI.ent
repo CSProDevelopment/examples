@@ -1,21 +1,78 @@
-﻿[CSPro Application]
-Version=CSPro 7.7
-Label=SIMPLECAPI
-Name=SIMPLECAPI
-AppType=DataEntry
-OperatorID=No
-ShowEndCaseDialog=No
-CAPI=Yes
-CreateListing=No
-CreateLog=No
-ShowErrorMessageNumbers=No
-[AppCode]
-File=.\Simple CAPI.ent.apc
-[Message]
-File=.\Simple CAPI.ent.mgf
-[Help]
-File=.\Simple CAPI.ent.qsf
-[Forms]
-File=.\Simple CAPI.fmf
-[Dictionary Types]
-Dict-Type=.\Simple CAPI.dcf,Input,.\Simple CAPI.fmf
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "application", 
+  "type": "entry", 
+  "name": "SIMPLECAPI", 
+  "label": "SIMPLECAPI", 
+  "dictionaries": [
+    {
+      "type": "input", 
+      "filename": "Simple CAPI.dcf", 
+      "parent": "Simple CAPI.fmf"
+    }
+  ], 
+  "forms": [
+    "Simple CAPI.fmf"
+  ], 
+  "questionText": [
+    "Simple CAPI.ent.qsf"
+  ], 
+  "code": [
+    {
+      "type": "main", 
+      "filename": "Simple CAPI.ent.apc"
+    }
+  ], 
+  "messages": [
+    "Simple CAPI.ent.mgf"
+  ], 
+  "logicSettings": {
+    "version": 2.0, 
+    "caseSensitive": {
+      "symbols": true
+    }, 
+    "actionInvoker": {
+      "accessFromWebView": "promptIfNoValidAccessToken", 
+      "accessTokens": [
+        "SimpleCapiAccessToken"
+      ], 
+      "convertResultsForLogic": true
+    }
+  }, 
+  "properties": {
+    "askOperatorId": false, 
+    "autoAdvanceOnSelection": false, 
+    "caseTree": "mobileOnly", 
+    "centerForms": false, 
+    "createListing": false, 
+    "createLog": false, 
+    "decimalMark": "dot", 
+    "displayCodesAlongsideLabels": false, 
+    "notes": {
+      "delete": "all", 
+      "edit": "all"
+    }, 
+    "partialSave": {
+      "operatorEnabled": false
+    }, 
+    "showEndCaseMessage": false, 
+    "showOnlyDiscreteValuesInComboBoxes": false, 
+    "showFieldLabels": true, 
+    "showErrorMessageNumbers": false, 
+    "showQuestionText": true, 
+    "showRefusals": true, 
+    "verify": {
+      "frequency": 1, 
+      "start": 1
+    }, 
+    "htmlDialogs": true, 
+    "paradata": {
+      "collection": "none", 
+      "recordCoordinates": false, 
+      "recordInitialPropertyValues": false, 
+      "recordIteratorLoadCases": false, 
+      "recordValues": false
+    }
+  }
+}
