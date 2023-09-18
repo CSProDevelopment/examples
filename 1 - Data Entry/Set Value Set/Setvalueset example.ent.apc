@@ -31,7 +31,7 @@ PROC PROVINCE
 	  Note that the AREA_REC record repeats (max occurences of 99) so when we
 	  load the case for a given province, we get one occurence of AREA_REC
 	  for each district in the given province.  }
-	valueset districtValueSet;
+	ValueSet districtValueSet;
 	do varying numeric i = 1 until i > count(AREA_DICT.AREA_REC)
 		districtValueSet.add(DISTRICT_NAME(i), DISTRICT_CODE(i));
 	enddo;

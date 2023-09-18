@@ -1,5 +1,5 @@
 ﻿[FormFile]
-Version=CSPro 7.7
+Version=CSPro 8.0
 Name=GEOMETRY_FF
 Label=Geometry
 DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
@@ -12,6 +12,7 @@ File=.\Geometry.dcf
 [Form]
 Name=FORM001
 Label=Geometry Record
+QuestionTextHeight=189
 Level=1
 Size=1213,300
   

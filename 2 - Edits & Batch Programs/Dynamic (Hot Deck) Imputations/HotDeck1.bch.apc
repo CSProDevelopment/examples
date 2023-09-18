@@ -22,7 +22,7 @@ numeric rowRel,
   for the person with the current sex and relationship codes.
 }
 
-array AgeDeck (2,6) =    //  Male   Female
+Array AgeDeck (2,6) =    //  Male   Female
 						 //  (1)     (2)
 							  27      32   // head of HH (1)
 							  30      25   // spouse of head (2)

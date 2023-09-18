@@ -1,7 +1,7 @@
 ﻿{ Purpose:  Demonstrate how to maintain a hot deck using saved arrays.
 			It is an extension of the HotDeck1.bch application.
 
-  Keywords used:  array, save, while, impute
+  Keywords used:  Array, save, while, impute
 
   Comments: This uses a saved array file to initialize the hot deck. This
 			  assumes that you will run the program twice: once to fill the
@@ -21,7 +21,7 @@ PROC GLOBAL
 numeric rowRel,
 		cntPop;
 
-array AgeDeck (2,6) save;
+Array AgeDeck (2,6) save;
 
 { Use the save keyword following the array declaration so that
   array values will be read from the saved array file at program

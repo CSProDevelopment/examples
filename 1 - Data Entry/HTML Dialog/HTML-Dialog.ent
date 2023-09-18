@@ -1,23 +1,79 @@
-﻿[CSPro Application]
-Version=CSPro 7.7
-Label=HTML_DIALOG
-Name=HTML_DIALOG
-AppType=DataEntry
-OperatorID=No
-CAPI=Yes
-CreateListing=No
-CreateLog=No
-ShowErrorMessageNumbers=No
-ComboBoxShowOnlyDiscreteValues=Yes
-ParadataCollection=AllEvents
-ParadataDeviceStateMinutes=5
-[AppCode]
-File=.\HTML-Dialog.ent.apc
-[Message]
-File=.\HTML-Dialog.ent.mgf
-[Help]
-File=.\HTML-Dialog.ent.qsf
-[Forms]
-File=.\HTML-Dialog.fmf
-[Dictionary Types]
-Dict-Type=.\HTML-Dialog.dcf,Input,.\HTML-Dialog.fmf
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "application", 
+  "type": "entry", 
+  "name": "HTML_DIALOG", 
+  "label": "HTML_DIALOG", 
+  "dictionaries": [
+    {
+      "type": "input", 
+      "filename": "HTML-Dialog.dcf", 
+      "parent": "HTML-Dialog.fmf"
+    }
+  ], 
+  "forms": [
+    "HTML-Dialog.fmf"
+  ], 
+  "questionText": [
+    "HTML-Dialog.ent.qsf"
+  ], 
+  "code": [
+    {
+      "type": "main", 
+      "filename": "HTML-Dialog.ent.apc"
+    }
+  ], 
+  "messages": [
+    "HTML-Dialog.ent.mgf"
+  ], 
+  "logicSettings": {
+    "version": 2.0, 
+    "caseSensitive": {
+      "symbols": false
+    }, 
+    "actionInvoker": {
+      "accessFromWebView": "promptIfNoValidAccessToken", 
+      "accessTokens": [
+        "HtmlDialogExample"
+      ], 
+      "convertResultsForLogic": true
+    }
+  }, 
+  "properties": {
+    "askOperatorId": false, 
+    "autoAdvanceOnSelection": false, 
+    "caseTree": "mobileOnly", 
+    "centerForms": false, 
+    "createListing": false, 
+    "createLog": false, 
+    "decimalMark": "dot", 
+    "displayCodesAlongsideLabels": false, 
+    "notes": {
+      "delete": "all", 
+      "edit": "all"
+    }, 
+    "partialSave": {
+      "operatorEnabled": false
+    }, 
+    "showEndCaseMessage": true, 
+    "showOnlyDiscreteValuesInComboBoxes": true, 
+    "showFieldLabels": true, 
+    "showErrorMessageNumbers": false, 
+    "showQuestionText": true, 
+    "showRefusals": true, 
+    "verify": {
+      "frequency": 1, 
+      "start": 1
+    }, 
+    "htmlDialogs": true, 
+    "paradata": {
+      "collection": "all", 
+      "recordCoordinates": false, 
+      "recordInitialPropertyValues": false, 
+      "recordIteratorLoadCases": false, 
+      "recordValues": false, 
+      "deviceStateIntervalMinutes": 5
+    }
+  }
+}

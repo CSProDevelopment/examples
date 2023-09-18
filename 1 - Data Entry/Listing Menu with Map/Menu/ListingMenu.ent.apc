@@ -1,16 +1,16 @@
 ﻿PROC GLOBAL
 
 // Map object that will be used to display markers
-map structuresMap;
+Map structuresMap;
 
 string basemapSettingKey = "Listing with Map basemap";
 
 // Launch the listing application to modify the structure with number structureNumber
 function modifyStructure(numeric structureNumber)
 
-	pff listing_pff;
-	listing_pff.load("..\Listing\Listing.pff");
-	listing_pff.setproperty("Key", maketext("%03d", structureNumber));
+	Pff listing_pff;
+	listing_pff.load("../Listing/Listing.pff");
+	listing_pff.setProperty("Key", maketext("%03d", structureNumber));
 	listing_pff.exec();
 
 end;
@@ -18,9 +18,9 @@ end;
 // Launch the listing application to add a new structure
 function addStructure()
 
-	pff listing_pff;
-	listing_pff.load("..\Listing\Listing.pff");
-	listing_pff.setproperty("StartMode", "Add");
+	Pff listing_pff;
+	listing_pff.load("../Listing/Listing.pff");
+	listing_pff.setProperty("StartMode", "Add");
 	listing_pff.exec();
 
 end;
@@ -97,7 +97,7 @@ end;
 
 // Callback function called when user clicks on filter button
 function filterMarkers()
-	valueset structureTypes;
+	ValueSet structureTypes;
 	structureTypes.add("All", 999);
 	structureTypes.add(ST_TYPE_VS1);
 	numeric filter = structureTypes.show("Choose type of structure to show");
@@ -122,7 +122,7 @@ end;
 
 // Callback function called when user clicks on change basemap button
 function changeBasemap()
-	list string options = "Normal", "Hybrid", "Satellite", "Terrain";
+	List string options = "Normal", "Hybrid", "Satellite", "Terrain";
 	numeric selection = options.show("Choose basemap");
 	if selection > 0 then
 		string basemap = options(selection);

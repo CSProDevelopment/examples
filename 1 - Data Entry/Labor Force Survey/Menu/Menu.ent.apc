@@ -5,18 +5,18 @@ string currentFinalResultCode;
 
 function launchHouseholdDataEntry()
 
-	pff household_pff;
+	Pff household_pff;
 	household_pff.load("../Questionnaire/PopstanLFS.pff");
 
-	household_pff.setproperty("Key", CHOOSE_HOUSEHOLD);
+	household_pff.setProperty("Key", CHOOSE_HOUSEHOLD);
 
-	household_pff.setproperty("TO_PROVINCE", maketext("%d", SAMPROV));
-	household_pff.setproperty("TO_DISTRICT", maketext("%d", SAMDIST));
-	household_pff.setproperty("TO_GHDWNO", maketext("%d", SAMDWNO));
-	household_pff.setproperty("TO_GHHHNO", maketext("%d", SAMHHNO));
-	household_pff.setproperty("TO_GHAREA", maketext("%d", SAMAREA));
-	household_pff.setproperty("TO_GHHRPL", maketext("%d", SAMRPL));
-	household_pff.setproperty("TO_GHINTID", maketext("%d", LOGIN));
+	household_pff.setProperty("TO_PROVINCE", maketext("%d", SAMPROV));
+	household_pff.setProperty("TO_DISTRICT", maketext("%d", SAMDIST));
+	household_pff.setProperty("TO_GHDWNO", maketext("%d", SAMDWNO));
+	household_pff.setProperty("TO_GHHHNO", maketext("%d", SAMHHNO));
+	household_pff.setProperty("TO_GHAREA", maketext("%d", SAMAREA));
+	household_pff.setProperty("TO_GHHRPL", maketext("%d", SAMRPL));
+	household_pff.setProperty("TO_GHINTID", maketext("%d", LOGIN));
 
 	household_pff.exec();
 
@@ -239,7 +239,7 @@ PROC CHOOSE_HOUSEHOLD
 
 onfocus
 // Make value set from assigned households in sample
-valueset string household_vs;
+ValueSet string household_vs;
 forcase SAMPLE_DICT where SAMINT = LOGIN do
 	// Check status of case in status file
 	if not loadcase(STATUS_DICT, SAMPROV, SAMDIST, SAMDWNO, SAMHHNO) then

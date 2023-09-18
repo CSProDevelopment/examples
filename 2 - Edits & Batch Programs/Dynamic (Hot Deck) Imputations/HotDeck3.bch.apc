@@ -12,7 +12,7 @@ PROC GLOBAL
 numeric rowAge,
 		cntAge_ge_5;
 
-array HD10_Grade_Age_Sex (18,2) save =   // Hot deck to impute the highest grade completed (P10_HIGH_GR) based on age group and sex
+Array HD10_Grade_Age_Sex (18,2) save =   // Hot deck to impute the highest grade completed (P10_HIGH_GR) based on age group and sex
 				                         //  <--- Sex --->
 				                         //  Male   Female      Age
 										 //  (1)     (2)
@@ -46,26 +46,26 @@ PROC P10_HIGH_GR  // Highest grade completed
 
 	inc(cntAge_ge_5);
 
-	recode P04_AGE => rowAge;  // recode the age into the appropriate group to match the hot deck array
-	           5   => 1;
-	           6   => 2;
-	           7   => 3;
-	           8   => 4;
-	           9   => 5;
-	          10   => 6;
-	          11   => 7;
-	          12   => 8;
-	          13   => 9;
-	          14   => 10;
-	          15   => 11;
-	          16   => 12;
-	          17   => 13;
-	        18-19  => 14;
-	        20-29  => 15;
-	        30-39  => 16;
-	        40-49  => 17;
-	        50-99  => 18;
-	               => 18;
+	recode P04_AGE -> rowAge;  // recode the age into the appropriate group to match the hot deck array
+	           5   -> 1;
+	           6   -> 2;
+	           7   -> 3;
+	           8   -> 4;
+	           9   -> 5;
+	          10   -> 6;
+	          11   -> 7;
+	          12   -> 8;
+	          13   -> 9;
+	          14   -> 10;
+	          15   -> 11;
+	          16   -> 12;
+	          17   -> 13;
+	        18-19  -> 14;
+	        20-29  -> 15;
+	        30-39  -> 16;
+	        40-49  -> 17;
+	        50-99  -> 18;
+	               -> 18;
 	endrecode;
 
 	// This edit does not include check age against highest grade completed.

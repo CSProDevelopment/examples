@@ -10,7 +10,7 @@ numeric supervisor_password = 1234;
 string login_setting_key = "PSC Login";
 string assignment_setting_key = "PSC Assignment";
 string segment_alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-list string months = "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec";
+List string months = "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec";
 
 
 // ------------------
@@ -133,20 +133,20 @@ end;
 function LaunchHouseholdProgram()
 
 	// Load the default settings from the existing household PFF
-	pff household_pff;
+	Pff household_pff;
 	household_pff.load("../Household/Household.pff");
 
 	// Set the Key to indicate what household to modify/add
-	household_pff.setproperty("Key",
+	household_pff.setProperty("Key",
 		maketext("%v%v%v%v%v", HH_PROVINCE, HH_DISTRICT, HH_EA, HH_SEGMENT, HH_NUMBER));
 
 	// Set some other metadata
-	household_pff.setproperty("ProvinceName", LookupProvinceName(HH_PROVINCE));
-	household_pff.setproperty("DistrictName", LookupDistrictName(HH_PROVINCE,HH_DISTRICT));
-	household_pff.setproperty("EAName", LookupEAName(HH_EA));
-	household_pff.setproperty("InterviewerCode", LOGIN);
-	household_pff.setproperty("SupervisorCode", SUPERVISOR_STAFF_CODE);
-	household_pff.setproperty("StaffName", LookupStaffName(LOGIN));
+	household_pff.setProperty("ProvinceName", LookupProvinceName(HH_PROVINCE));
+	household_pff.setProperty("DistrictName", LookupDistrictName(HH_PROVINCE,HH_DISTRICT));
+	household_pff.setProperty("EAName", LookupEAName(HH_EA));
+	household_pff.setProperty("InterviewerCode", LOGIN);
+	household_pff.setProperty("SupervisorCode", SUPERVISOR_STAFF_CODE);
+	household_pff.setProperty("StaffName", LookupStaffName(LOGIN));
 
 	// Run the household application
 	household_pff.exec();
@@ -308,17 +308,17 @@ function SyncWithInterviewer()
 
 		success = SyncDataWithInterviewer();
 
-		if success and not syncfile(PUT, ".\Menu.pff", ".\Menu.pff") then
+		if success and not syncfile(PUT, "./Menu.pff", "./Menu.pff") then
 			errmsg("Failed to transfer Menu.pff. Transfer aborted.");
 			success = 0;
 		endif;
 
-		if success and not syncfile(PUT, ".\Menu.pen", ".\Menu.pen") then
+		if success and not syncfile(PUT, "./Menu.pen", "./Menu.pen") then
 			errmsg("Failed to transfer Menu.pen. Transfer aborted.");
 			success = 0;
 		endif;
 
-		if success and not syncfile(PUT, "..\Household\Household.pen", "..\Household\Household.pen") then
+		if success and not syncfile(PUT, "../Household/Household.pen", "../Household/Household.pen") then
 			errmsg("Failed to transfer Household.pen. Transfer aborted.");
 			success = 0;
 		endif;
@@ -395,20 +395,20 @@ function SyncWithHQ(syncType)
 		endif;
 
 		// Save the MD5 value before syncing
-		string menuPFF = diagnostics("md5", ".\Menu.pff");
-		string menuPEN = diagnostics("md5", ".\Menu.pen");
+		string menuPFF = diagnostics("md5", "./Menu.pff");
+		string menuPEN = diagnostics("md5", "./Menu.pen");
 
-		if success and not syncfile(GET, "/DeployPSC/Menu/Menu.pff", ".\Menu.pff") then
+		if success and not syncfile(GET, "/DeployPSC/Menu/Menu.pff", "./Menu.pff") then
 			errmsg("Failed to receive Menu.pff. Transfer aborted.");
 			success = 0;
 		endif;
 
-		if success and not syncfile(GET, "/DeployPSC/Menu/Menu.pen", ".\Menu.pen") then
+		if success and not syncfile(GET, "/DeployPSC/Menu/Menu.pen", "./Menu.pen") then
 			errmsg("Failed to receive Menu.pen. Transfer aborted.");
 			success = 0;
 		endif;
 
-		if success and not syncfile(GET, "/DeployPSC/Household/Household.pen", "..\Household\Household.pen") then
+		if success and not syncfile(GET, "/DeployPSC/Household/Household.pen", "../Household/Household.pen") then
 			errmsg("Failed to receive Household.pen. Transfer aborted.");
 			success = 0;
 		endif;
@@ -532,7 +532,7 @@ onfocus
 
 	endif;
 
-	valueset string login_vs;
+	ValueSet string login_vs;
 
 	forcase PSC_STAFF_DICT do
 		login_vs.add(STAFF_NAME, key(PSC_STAFF_DICT));
@@ -700,7 +700,7 @@ onfocus
 
 	numeric numberInterviewerAssignments = 0;
 
-	valueset string assignments_vs;
+	ValueSet string assignments_vs;
 
 	forcase PSC_ASSIGNMENTS_DICT where ASSIGNMENTS_STAFF_CODE = LOGIN do
 
@@ -801,7 +801,7 @@ PROC SUPERVISOR_PROVINCE
 
 preproc
 
-	valueset province_vs;
+	ValueSet province_vs;
 
 	forcase PSC_GEOCODES_DICT where GEOCODES_AREA_LEVEL = 1 do
 		// Prepare value sets for provinces
@@ -819,7 +819,7 @@ preproc
 
 	capi_province_name = LookupProvinceName(SUPERVISOR_PROVINCE);
 
-	valueset district_vs;
+	ValueSet district_vs;
 
 	forcase PSC_GEOCODES_DICT where GEOCODES_AREA_LEVEL = 2 and GEOCODES_PROVINCE = SUPERVISOR_PROVINCE do
 		// Prepare value sets for districts that are within the previously selected province
@@ -913,7 +913,7 @@ PROC INTERVIEWER_MENU
 
 onfocus
 
-	valueset string interviewer_menu_vs;
+	ValueSet string interviewer_menu_vs;
 
 	interviewer_menu_vs.add("Add new household", "1");
 
@@ -1002,7 +1002,7 @@ PROC VIEW_ALL_HOUSEHOLDS
 
 onfocus
 
-	valueset string households_vs;
+	ValueSet string households_vs;
 
 	forcase PSC_HOUSEHOLD_DICT where
 		HH_PROVINCE = ASSIGNMENTS_PROVINCE and
@@ -1028,7 +1028,7 @@ PROC MANAGE_STAFF
 
 onfocus
 
-	valueset string staff_vs;
+	ValueSet string staff_vs;
 
 	// First display the supervisor
 	staff_vs.add(LookupStaffName(LOGIN) + " (Supervisor)", LOGIN);
@@ -1165,7 +1165,7 @@ PROC INTERVIEWER_CODE
 
 onfocus
 
-	valueset string interviewer_code_vs;
+	ValueSet string interviewer_code_vs;
 
 	forcase PSC_STAFF_DICT where LOGIN <> STAFF_CODE do
 		// Not supervisor
@@ -1202,7 +1202,7 @@ PROC INTERVIEWER_EA
 
 onfocus
 
-	valueset interviewer_ea_vs;
+	ValueSet interviewer_ea_vs;
 
 	// Display all enumerations areas that are within the current province and district
 	forcase PSC_GEOCODES_DICT where GEOCODES_AREA_LEVEL = 3 and

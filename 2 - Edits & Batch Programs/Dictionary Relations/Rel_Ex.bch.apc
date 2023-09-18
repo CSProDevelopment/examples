@@ -37,12 +37,12 @@ preproc
 
 PROC FERT_EDT
 
-	recode serial_number => pagenum;
-			0000-0999	=> 1;
-			1000-1999	=> 2;
-			2000-2999	=> 3;
-			3000-3999	=> 4;
-						=> 5;
+	recode serial_number -> pagenum;
+			0000-0999	 -> 1;
+			1000-1999	 -> 2;
+			2000-2999	 -> 3;
+			3000-3999	 -> 4;
+						 -> 5;
 	endrecode;
 
 	{writes heading}

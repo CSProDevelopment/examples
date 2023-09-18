@@ -15,7 +15,7 @@ PROC GLOBAL
 numeric cntPop,
 		cntAge_ge_5;
 
-array HD10_Grade_Age_Sex(P04_AGE_VS5_HIGHESTGRADE,P03_SEX_VS1(+)) save; // the values sets now do the work of the recode.
+Array HD10_Grade_Age_Sex(P04_AGE_VS5_HIGHESTGRADE,P03_SEX_VS1(+)) save; // the values sets now do the work of the recode.
 																		// the "+" allows us to account for invalid sex.
 
 

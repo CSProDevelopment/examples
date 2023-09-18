@@ -79,7 +79,7 @@ function string dateToDayMonthString(yyyymmdd)
 end;
 
 //  Array to display list of household members
-array string householdMembersArray(20, 4);
+Array string householdMembersArray(20, 4);
 
 // Display list of household members from demographic roster
 // and have interviewer pick a member.
@@ -109,7 +109,7 @@ end;
 // List of modules in labor section.
 // Column 1 is module label, column 2 is name of start field.
 numeric numberOfModules = 7;
-array string modules(numberOfModules,2) =
+Array string modules(numberOfModules,2) =
 	"Proxy", 				 	"PXYSTART",
 	"At work", 				 	"EMPSTART",
 	"Temporary Absence", 	 	"ABSSTART",
@@ -119,7 +119,7 @@ array string modules(numberOfModules,2) =
 	"Job Search",			 	"SRHSTART";
 
 // Used to display list of enabled modules in accept.
-array string enabledModules(7);
+Array string enabledModules(7);
 
 // Display list of existing labor record occurrences in nice format (NAME, SEX, REL, AGE).
 // Return row number of member chosen.
@@ -539,7 +539,7 @@ onfocus
 
 	// Build value set from all eligible members of household roster
 	// That have not already been chosen.
-	valueset person_number_vs;
+	ValueSet person_number_vs;
 	do numeric nextPerson = 1 while nextPerson <= totocc(DEM_ROSTER)
 
 		// Check if eligible for labor section and not already chosen
@@ -600,7 +600,7 @@ PROC PXYPPN
 onfocus
 
 	// Build value set from all eligible members of household roster
-	valueset proxy_vs;
+	ValueSet proxy_vs;
 	do numeric nextPerson = 1 while nextPerson <= totocc(DEM_ROSTER)
 		// Don't allow someone to be proxy for themselves
 		if PPNO(nextPerson) <> LBPPNO then
@@ -879,7 +879,7 @@ PROC MJBPLC
 onfocus
 
 	// Customize first entry of value set based on proxy/no proxy
-	valueset workplace_vs;
+	ValueSet workplace_vs;
 
 	do numeric code = minvalue(MJBPLC_VS1) while code <= maxvalue(MJBPLC_VS1)
 		string label = getlabel(MJBPLC_VS1, code);
@@ -934,7 +934,7 @@ preproc
 onfocus
 
 	// Create dynamic value set to put you/NAME as fill in second option
-	valueset responsible_vs;
+	ValueSet responsible_vs;
 	responsible_vs.add(getlabel(MJBDEE_VS1, 1), 1);
 
 	if PXYCHK = 1 then

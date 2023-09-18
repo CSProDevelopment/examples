@@ -12,14 +12,14 @@ numeric imputeVal,
 
 numeric prevHeadSex = 1;
 
-array SexHD_Relationship_HeadSex(RELATIONSHIP_VS1,SEX_VS1) save; // two hotdecks for sex; they will
-array SexHD_HeadSex_Relationship(SEX_VS1,RELATIONSHIP_VS1) save; // be used to store the same values
+Array SexHD_Relationship_HeadSex(RELATIONSHIP_VS1,SEX_VS1) save; // two hotdecks for sex; they will
+Array SexHD_HeadSex_Relationship(SEX_VS1,RELATIONSHIP_VS1) save; // be used to store the same values
 
-array AgeHD_Relationship_Education(RELATIONSHIP_VS1,EDUCATION_VS1(+)) save;  // see below for and explanation of the use of the "+"
+Array AgeHD_Relationship_Education(RELATIONSHIP_VS1,EDUCATION_VS1(+)) save;  // see below for and explanation of the use of the "+"
 
-array EducationHD_Age(AGE_FOR_EDUCATION_VS) save;
+Array EducationHD_Age(AGE_FOR_EDUCATION_VS) save;
 
-array MinimumEducationAges(EDUCATION_VS1) = 0	// None
+Array MinimumEducationAges(EDUCATION_VS1) = 0	// None
 											2	// Preschool
 											5	// Elementary School
 											11	// Middle School

@@ -11,7 +11,7 @@ function BasicInputDialog()
 									  , int(tonumber(getproperty("MaxDisplayWidth")) * 0.8)
 									  , int(tonumber(getproperty("MaxDisplayHeight")) * 0.8)
 									  , true);
-	htmlDialog("Basic-Input-Dialog.html", inputData := input_data, displayOptions := display_options);
+	CS.UI.showDialog(path := "Basic-Input-Dialog.html", inputData := @object input_data, displayOptions := display_options);
 
 end;
 
@@ -24,7 +24,7 @@ function BasicOutputDialog()
 									  , int(tonumber(getproperty("MaxDisplayWidth")) * 0.8)
 									  , int(tonumber(getproperty("MaxDisplayHeight")) * 0.8)
 									  , true);
-	string dialog_output = htmlDialog("Basic-Output-Dialog.html", displayOptions := display_options);
+	string dialog_output = CS.UI.showDialog(path := "Basic-Output-Dialog.html", displayOptions := display_options);
 	errmsg("Returned text: %s", dialog_output);
 
 end;

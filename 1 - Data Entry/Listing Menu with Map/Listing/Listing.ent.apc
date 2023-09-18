@@ -1,7 +1,7 @@
 ﻿PROC GLOBAL
 
 // Callback function called when marker is dragged
-function onDragStructureMarker(map mp, numeric marker)
+function onDragStructureMarker(Map mp, numeric marker)
 	// Save the new location after drag
 	ST_LATITUDE = mp.getMarkerLatitude(marker);
 	ST_LONGITUDE = mp.getMarkerLongitude(marker);
@@ -9,14 +9,14 @@ end;
 
 // Add a marker to map at the location of the structure that the user
 // can drag to update the structure location
-function setUpMapForStructureMarkerDrag(map mp)
+function setUpMapForStructureMarkerDrag(Map mp)
 	numeric structureMarker = mp.addMarker(ST_LATITUDE, ST_LONGITUDE);
 	mp.setMarkerOnDrag(structureMarker, onDragStructureMarker(mp, structureMarker)); 
 	mp.setTitle("Drag the marker to update the location of the structure");
 end;
 
 // Callback function called when user taps map
-function onClickMapToPlaceStructure(map mp)
+function onClickMapToPlaceStructure(Map mp)
 	// Save the clicked location
 	ST_LATITUDE = mp.getLastClickLatitude();
 	ST_LONGITUDE = mp.getLastClickLongitude();
@@ -27,13 +27,13 @@ end;
 
 // Set onClick callback for the map to set structure location to 
 // tapped location 
-function setUpMapForTapToPlaceStructure(map mp)
+function setUpMapForTapToPlaceStructure(Map mp)
 	mp.setOnClick(onClickMapToPlaceStructure(mp));
 	mp.setTitle("Tap the map at the location of the structure");
 end;
 
 // Callback function called when the user taps the done button
-function onClickMapDone(map mp)
+function onClickMapDone(Map mp)
 	// Don't let the user quit until they have chosen the location
 	if ST_LATITUDE = notappl or ST_LONGITUDE = notappl then
 		errmsg("Please tap on the map at the location of the building before contiuing to the next question");
@@ -49,7 +49,7 @@ onfocus
 
 // Show a map to allow user to provide location of the structure
 // Location will be saved in the variables ST_LATITUDE and ST_LONGITUDE
-map placeStructureMap;
+Map placeStructureMap;
 
 // If there user already specified a location show a marker at that location that the user can drag
 // otherwise show the map that the user can tap on to place the structure

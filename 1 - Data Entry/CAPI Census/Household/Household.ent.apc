@@ -62,8 +62,8 @@ end;
 // ------------------
 
 
-list string HeSheStrings = "he", "she";
-list string HisHerStrings = "his", "her";
+List string HeSheStrings = "he", "she";
+List string HisHerStrings = "his", "her";
 
 
 function string CapiPopulationHeShe()

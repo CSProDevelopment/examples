@@ -8,7 +8,7 @@
 
         In JavaScript code wherever you see CS.--- this is using the Action Invoker
         In this example only two actions are used:
-            CS.UI.closeDialog - closes the dialog and defines a result that will be returned by the htmlDialog function
+            CS.UI.closeDialog - closes the dialog and defines a result that will be returned by the CS.UI.showDialog function
             CS.UI.setDisplayOptions - adjusts some external dialog parameters such as the width and height
     -->
 
@@ -20,7 +20,7 @@
 
     <script>
         $(document).ready(function () {
-            const CS = new CSProActionInvoker();
+            const CS = new CSProActionInvoker("HtmlDialogExample");
 
             //This is just to set the focus to the output control
             setTimeout(function () {

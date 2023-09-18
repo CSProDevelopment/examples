@@ -8,7 +8,7 @@
 
         In JavaScript code wherever you see CS.--- this is using the Action Invoker
         In this example only three actions are used:
-            CS.UI.getInputData - returns the input data passed to the htmlDialog function
+            CS.UI.getInputData - returns the input data passed to the CS.UI.showDialog function
             CS.UI.closeDialog - closes the dialog
             CS.UI.setDisplayOptions - adjusts some external dialog parameters such as the width and height
     -->
@@ -21,9 +21,9 @@
 
     <script>
         $(document).ready(function () {
-            const CS = new CSProActionInvoker();
+            const CS = new CSProActionInvoker("HtmlDialogExample");
 
-            //Here we get the input data passed to the htmlDialog call
+            //Here we get the input data passed to the CS.UI.showDialog call
             //In our case the text entered in a prompt
             const input = CS.UI.getInputData();
 
