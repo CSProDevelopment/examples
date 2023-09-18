@@ -1,25 +1,26 @@
 {
-  "fileType": "Application Deployment Specification",
-  "version": "7.7",
-  "name": "Geometry",
-  "description": "",
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "deployment", 
+  "name": "Geometry", 
+  "description": "", 
   "files": [
     {
-      "path": ".\\Geometry.ent"
-    },
+      "path": "Geometry.ent"
+    }, 
     {
-      "path": ".\\Geometry.pff"
+      "path": "Geometry.pff"
     }
-  ],
+  ], 
   "dictionaries": [
     {
-      "path": ".\\Geometry.dcf"
+      "path": "Geometry.dcf"
     }
-  ],
+  ], 
   "deployment": {
-    "type": "LocalFolder",
-    "cswebUrl": "http:\/\/",
-    "ftpUrl": "ftp:\/\/",
-    "localFolderPath": ".\\Deploy-Geometry"
+    "type": "LocalFolder", 
+    "cswebUrl": "http://", 
+    "ftpUrl": "ftp://", 
+    "localFolderPath": "Deploy-Geometry"
   }
 }

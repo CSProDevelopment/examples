@@ -1,71 +1,134 @@
-﻿[Dictionary]
-Version=CSPro 7.7
-Label=Menu
-Name=MENU_DICT
-RecordTypeStart=1
-RecordTypeLen=1
-Positions=Relative
-ZeroFill=No
-DecimalChar=Yes
-SecurityOptions=999D42D7897BED5F009565546D99F7D44DF25E48BCA7DB388B81F5D2D8353AF3
-
-[Level]
-Label=Menu questionnaire
-Name=MENU_QUEST
-
-[IdItems]
-
-[Item]
-Label=Menu identification
-Name=MENU_ID
-Start=2
-Len=1
-DataType=Numeric
-
-[Record]
-Label=Menu record
-Name=MENU_REC
-RecordTypeValue='1'
-RecordLen=5
-
-[Item]
-Label=Login
-Name=LOGIN
-Start=3
-Len=1
-DataType=Numeric
-
-[ValueSet]
-Label=Login
-Name=LOGIN_VS1
-Value=1;Interviewer
-Value=2;Supervisor
-
-[Item]
-Label=Interviewer menu
-Name=INTERVIEWER_MENU
-Start=4
-Len=1
-DataType=Numeric
-
-[ValueSet]
-Label=Interviewer menu
-Name=INTERVIEWER_MENU_VS1
-Value=1;Enter data
-Value=2;Sync with supervisor (Bluetooth)
-Value=9;Exit
-
-[Item]
-Label=Supervisor menu
-Name=SUPERVISOR_MENU
-Start=5
-Len=1
-DataType=Numeric
-
-[ValueSet]
-Label=Supervisor menu
-Name=SUPERVISOR_MENU_VS1
-Value=1;Enter data
-Value=2;Sync with interviewer (Bluetooth)
-Value=3;Sync with headquarters (Internet)
-Value=9;Exit
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "dictionary", 
+  "name": "MENU_DICT", 
+  "labels": [ { "text": "Menu" } ], 
+  "security": {
+    "allowDataViewerModifications": true, 
+    "allowExport": true, 
+    "cachedPasswordMinutes": 0, 
+    "settings": "999d42d7897bed5f009565546d99f7d44df25e48bca7db388b81f5d2d8353af3"
+  }, 
+  "recordType": {
+    "start": 1, 
+    "length": 1
+  }, 
+  "defaults": {
+    "decimalMark": true, 
+    "zeroFill": false
+  }, 
+  "relativePositions": true, 
+  "levels": [
+    {
+      "name": "MENU_QUEST", 
+      "labels": [ { "text": "Menu questionnaire" } ], 
+      "ids": {
+        "items": [
+          {
+            "name": "MENU_ID", 
+            "labels": [ { "text": "Menu identification" } ], 
+            "contentType": "numeric", 
+            "start": 2, 
+            "length": 1, 
+            "zeroFill": false
+          }
+        ]
+      }, 
+      "records": [
+        {
+          "name": "MENU_REC", 
+          "labels": [ { "text": "Menu record" } ], 
+          "recordType": "1", 
+          "occurrences": {
+            "required": true, 
+            "maximum": 1
+          }, 
+          "items": [
+            {
+              "name": "LOGIN", 
+              "labels": [ { "text": "Login" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "LOGIN_VS1", 
+                  "labels": [ { "text": "Login" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Interviewer" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Supervisor" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "INTERVIEWER_MENU", 
+              "labels": [ { "text": "Interviewer menu" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "INTERVIEWER_MENU_VS1", 
+                  "labels": [ { "text": "Interviewer menu" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Enter data" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Sync with supervisor (Bluetooth)" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Exit" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "SUPERVISOR_MENU", 
+              "labels": [ { "text": "Supervisor menu" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "SUPERVISOR_MENU_VS1", 
+                  "labels": [ { "text": "Supervisor menu" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Enter data" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Sync with interviewer (Bluetooth)" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Sync with headquarters (Internet)" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Exit" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

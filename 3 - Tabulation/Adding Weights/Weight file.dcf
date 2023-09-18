@@ -1,70 +1,149 @@
-﻿[Dictionary]
-Version=CSPro 7.7
-Label=Weight file
-Name=WEIGHT_FILE_DICT
-RecordTypeStart=0
-RecordTypeLen=0
-Positions=Relative
-ZeroFill=No
-DecimalChar=Yes
-SecurityOptions=883DB7E54F934375B0C8FDB9FC0AC5D825672D0ADEDF577AA465DEE5850B976C
-
-[Level]
-Label=Weight file questionnaire
-Name=WEIGHT_FILE_QUEST
-
-[IdItems]
-
-[Item]
-Label=Province
-Name=PROV
-Start=1
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Province
-Name=PROV_VS1
-Value=1;Artesia
-Value=2;Copal
-Value=3;Dari
-Value=4;Eris
-Value=5;Girda
-Value=6;Hali
-Value=7;Kerac
-Value=8;Lacuna
-Value=9;Laya
-Value=10;Lira
-Value=11;Matanga
-Value=12;Patan
-Value=13;Rift
-Value=14;Terra
-Value=15;Tumar
-
-[Item]
-Label=District
-Name=DISTRICT
-Start=3
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=District
-Name=DISTRICT_VS1
-Value=1:18
-
-[Record]
-Label=Weight file record
-Name=WEIGHT_FILE_REC
-RecordTypeValue=''
-RecordLen=10
-
-[Item]
-Label=Area weight
-Name=WGT
-Start=5
-Len=6
-DataType=Numeric
-Decimal=4
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "dictionary", 
+  "name": "WEIGHT_FILE_DICT", 
+  "labels": [ { "text": "Weight file" } ], 
+  "security": {
+    "allowDataViewerModifications": true, 
+    "allowExport": true, 
+    "cachedPasswordMinutes": 0, 
+    "settings": "883db7e54f934375b0c8fdb9fc0ac5d825672d0adedf577aa465dee5850b976c"
+  }, 
+  "recordType": {
+    "start": 0, 
+    "length": 0
+  }, 
+  "defaults": {
+    "decimalMark": true, 
+    "zeroFill": false
+  }, 
+  "relativePositions": true, 
+  "levels": [
+    {
+      "name": "WEIGHT_FILE_QUEST", 
+      "labels": [ { "text": "Weight file questionnaire" } ], 
+      "ids": {
+        "items": [
+          {
+            "name": "PROV", 
+            "labels": [ { "text": "Province" } ], 
+            "contentType": "numeric", 
+            "start": 1, 
+            "length": 2, 
+            "zeroFill": true, 
+            "valueSets": [
+              {
+                "name": "PROV_VS1", 
+                "labels": [ { "text": "Province" } ], 
+                "values": [
+                  {
+                    "labels": [ { "text": "Artesia" } ], 
+                    "pairs": [ { "value": "1" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Copal" } ], 
+                    "pairs": [ { "value": "2" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Dari" } ], 
+                    "pairs": [ { "value": "3" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Eris" } ], 
+                    "pairs": [ { "value": "4" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Girda" } ], 
+                    "pairs": [ { "value": "5" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Hali" } ], 
+                    "pairs": [ { "value": "6" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Kerac" } ], 
+                    "pairs": [ { "value": "7" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Lacuna" } ], 
+                    "pairs": [ { "value": "8" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Laya" } ], 
+                    "pairs": [ { "value": "9" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Lira" } ], 
+                    "pairs": [ { "value": "10" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Matanga" } ], 
+                    "pairs": [ { "value": "11" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Patan" } ], 
+                    "pairs": [ { "value": "12" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Rift" } ], 
+                    "pairs": [ { "value": "13" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Terra" } ], 
+                    "pairs": [ { "value": "14" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Tumar" } ], 
+                    "pairs": [ { "value": "15" } ]
+                  }
+                ]
+              }
+            ]
+          }, 
+          {
+            "name": "DISTRICT", 
+            "labels": [ { "text": "District" } ], 
+            "contentType": "numeric", 
+            "start": 3, 
+            "length": 2, 
+            "zeroFill": true, 
+            "valueSets": [
+              {
+                "name": "DISTRICT_VS1", 
+                "labels": [ { "text": "District" } ], 
+                "values": [
+                  {
+                    "labels": [ { "text": "" } ], 
+                    "pairs": [ { "range": [ "1", "18" ] } ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }, 
+      "records": [
+        {
+          "name": "WEIGHT_FILE_REC", 
+          "labels": [ { "text": "Weight file record" } ], 
+          "occurrences": {
+            "required": true, 
+            "maximum": 1
+          }, 
+          "items": [
+            {
+              "name": "WGT", 
+              "labels": [ { "text": "Area weight" } ], 
+              "contentType": "numeric", 
+              "length": 6, 
+              "decimals": 4, 
+              "decimalMark": false, 
+              "zeroFill": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

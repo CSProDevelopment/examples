@@ -1,16 +1,75 @@
-﻿[CSPro Application]
-Version=CSPro 7.7
-Label=LEVEL_123
-Name=LEVEL_123
-AppType=DataEntry
-OperatorID=No
-[AppCode]
-File=.\2-level.ent.apc
-[Message]
-File=.\2-level.ent.mgf
-[Help]
-File=.\2-level.ent.qsf
-[Forms]
-File=.\2-level.fmf
-[Dictionary Types]
-Dict-Type=.\two-level.dcf,Input,.\2-level.fmf
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "application", 
+  "type": "entry", 
+  "name": "LEVEL_123", 
+  "label": "LEVEL_123", 
+  "dictionaries": [
+    {
+      "type": "input", 
+      "filename": "two-level.dcf", 
+      "parent": "2-level.fmf"
+    }
+  ], 
+  "forms": [
+    "2-level.fmf"
+  ], 
+  "questionText": [
+    "2-level.ent.qsf"
+  ], 
+  "code": [
+    {
+      "type": "main", 
+      "filename": "2-level.ent.apc"
+    }
+  ], 
+  "messages": [
+    "2-level.ent.mgf"
+  ], 
+  "logicSettings": {
+    "version": 2.0, 
+    "caseSensitive": {
+      "symbols": false
+    }, 
+    "actionInvoker": {
+      "accessFromWebView": "promptIfNoValidAccessToken", 
+      "convertResultsForLogic": true
+    }
+  }, 
+  "properties": {
+    "askOperatorId": false, 
+    "autoAdvanceOnSelection": false, 
+    "caseTree": "mobileOnly", 
+    "centerForms": false, 
+    "createListing": true, 
+    "createLog": true, 
+    "decimalMark": "dot", 
+    "displayCodesAlongsideLabels": false, 
+    "notes": {
+      "delete": "all", 
+      "edit": "all"
+    }, 
+    "partialSave": {
+      "operatorEnabled": false
+    }, 
+    "showEndCaseMessage": true, 
+    "showOnlyDiscreteValuesInComboBoxes": false, 
+    "showFieldLabels": true, 
+    "showErrorMessageNumbers": true, 
+    "showQuestionText": false, 
+    "showRefusals": true, 
+    "verify": {
+      "frequency": 1, 
+      "start": 1
+    }, 
+    "htmlDialogs": true, 
+    "paradata": {
+      "collection": "none", 
+      "recordCoordinates": false, 
+      "recordInitialPropertyValues": false, 
+      "recordIteratorLoadCases": false, 
+      "recordValues": false
+    }
+  }
+}

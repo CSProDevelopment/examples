@@ -1,72 +1,117 @@
-﻿[Dictionary]
-Version=CSPro 7.7
-Label=PostcalcExample - Working Storage Dictionary
-Name=WS_DICT
-RecordTypeStart=1
-RecordTypeLen=1
-Positions=Relative
-ZeroFill=No
-DecimalChar=Yes
-SecurityOptions=3ECC60F56C442DE7547B22E511BD2CE9BC5C955E888B4943713B141063A4C8CD
-
-[Level]
-Label=Working Storage Level
-Name=WS_LEVEL
-
-[IdItems]
-
-[Item]
-Label=Dummy Id
-Name=DUMMY_ID
-Start=2
-Len=1
-DataType=Numeric
-
-[Record]
-Label=Working Storage Record
-Name=WS_REC
-RecordTypeValue='1'
-RecordLen=6
-
-[Item]
-Label=System Total
-Name=SYSTEM_TOTAL
-Start=3
-Len=1
-DataType=Numeric
-
-[Item]
-Label=Unmarried Men per 100 Women
-Name=UNMARRIED_MEN_PER_100_WOMEN
-Start=4
-Len=1
-DataType=Numeric
-
-[ValueSet]
-Label=Unmarried Men per 100 Women
-Name=UNMARRIED_MEN_PER_100_WOMEN_VS1
-Value=1;Unmarried Men per 100 Women
-
-[Item]
-Label=Dependency Ratio
-Name=DEPENDENCY_RATIO
-Start=5
-Len=1
-DataType=Numeric
-
-[ValueSet]
-Label=Dependency Ratio
-Name=DEPENDENCY_RATIO_VS1
-Value=1;Dependency Ratio
-
-[Item]
-Label=Total Fertility Rate
-Name=TOTAL_FERTILITY_RATE
-Start=6
-Len=1
-DataType=Numeric
-
-[ValueSet]
-Label=Total Fertility Rate
-Name=TOTAL_FERTILITY_RATE_VS1
-Value=1;Total Fertility Rate
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "dictionary", 
+  "name": "WS_DICT", 
+  "labels": [ { "text": "PostcalcExample - Working Storage Dictionary" } ], 
+  "security": {
+    "allowDataViewerModifications": true, 
+    "allowExport": true, 
+    "cachedPasswordMinutes": 0, 
+    "settings": "3ecc60f56c442de7547b22e511bd2ce9bc5c955e888b4943713b141063a4c8cd"
+  }, 
+  "recordType": {
+    "start": 1, 
+    "length": 1
+  }, 
+  "defaults": {
+    "decimalMark": true, 
+    "zeroFill": false
+  }, 
+  "relativePositions": true, 
+  "levels": [
+    {
+      "name": "WS_LEVEL", 
+      "labels": [ { "text": "Working Storage Level" } ], 
+      "ids": {
+        "items": [
+          {
+            "name": "DUMMY_ID", 
+            "labels": [ { "text": "Dummy Id" } ], 
+            "contentType": "numeric", 
+            "start": 2, 
+            "length": 1, 
+            "zeroFill": false
+          }
+        ]
+      }, 
+      "records": [
+        {
+          "name": "WS_REC", 
+          "labels": [ { "text": "Working Storage Record" } ], 
+          "recordType": "1", 
+          "occurrences": {
+            "required": true, 
+            "maximum": 1
+          }, 
+          "items": [
+            {
+              "name": "SYSTEM_TOTAL", 
+              "labels": [ { "text": "System Total" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": false
+            }, 
+            {
+              "name": "UNMARRIED_MEN_PER_100_WOMEN", 
+              "labels": [ { "text": "Unmarried Men per 100 Women" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "UNMARRIED_MEN_PER_100_WOMEN_VS1", 
+                  "labels": [ { "text": "Unmarried Men per 100 Women" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Unmarried Men per 100 Women" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "DEPENDENCY_RATIO", 
+              "labels": [ { "text": "Dependency Ratio" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "DEPENDENCY_RATIO_VS1", 
+                  "labels": [ { "text": "Dependency Ratio" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Dependency Ratio" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "TOTAL_FERTILITY_RATE", 
+              "labels": [ { "text": "Total Fertility Rate" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "TOTAL_FERTILITY_RATE_VS1", 
+                  "labels": [ { "text": "Total Fertility Rate" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Total Fertility Rate" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

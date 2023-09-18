@@ -1,13 +1,47 @@
-﻿[CSPro Application]
-Version=CSPro 7.7
-Label=DECKARRAYS3
-Name=DECKARRAYS3
-AppType=Batch
-[AppCode]
-File=.\PopstanDeckArray.bch.apc
-[Message]
-File=.\PopstanDeckArray.bch.mgf
-[Order]
-File=.\PopstanDeckArray.ord
-[Dictionary Types]
-Dict-Type=.\Popstan.dcf,Input,.\PopstanDeckArray.ord
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "application", 
+  "type": "batch", 
+  "name": "DECKARRAYS3", 
+  "label": "DECKARRAYS3", 
+  "dictionaries": [
+    {
+      "type": "input", 
+      "filename": "Popstan.dcf", 
+      "parent": "PopstanDeckArray.ord"
+    }
+  ], 
+  "order": [
+    "PopstanDeckArray.ord"
+  ], 
+  "code": [
+    {
+      "type": "main", 
+      "filename": "PopstanDeckArray.bch.apc"
+    }
+  ], 
+  "messages": [
+    "PopstanDeckArray.bch.mgf"
+  ], 
+  "logicSettings": {
+    "version": 2.0, 
+    "caseSensitive": {
+      "symbols": false
+    }, 
+    "actionInvoker": {
+      "accessFromWebView": "promptIfNoValidAccessToken", 
+      "convertResultsForLogic": true
+    }
+  }, 
+  "properties": {
+    "htmlDialogs": true, 
+    "paradata": {
+      "collection": "none", 
+      "recordCoordinates": false, 
+      "recordInitialPropertyValues": false, 
+      "recordIteratorLoadCases": false, 
+      "recordValues": false
+    }
+  }
+}

@@ -1,76 +1,97 @@
-﻿[Dictionary]
-Version=CSPro 7.7
-Label=Others
-Name=OTHERS_DICT
-RecordTypeStart=0
-RecordTypeLen=0
-Positions=Relative
-ZeroFill=Yes
-DecimalChar=Yes
-SecurityOptions=03B90E2094F5F338BEC949EA7E03DEC219E4BA71E65707057431CABCCC658C0C
-
-[Level]
-Label=Others questionnaire
-Name=OTHERS_QUEST
-
-[IdItems]
-
-[Item]
-Label=Province
-Name=OPROV
-Start=1
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[Item]
-Label=District
-Name=ODIST
-Start=3
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[Item]
-Label=Village
-Name=OVILL
-Start=5
-Len=3
-DataType=Numeric
-ZeroFill=Yes
-
-[Item]
-Label=EA
-Name=OEA
-Start=8
-Len=3
-DataType=Numeric
-ZeroFill=Yes
-
-[Item]
-Label=Housing Unit
-Name=OHU
-Start=11
-Len=3
-DataType=Numeric
-ZeroFill=Yes
-
-[Item]
-Label=Question Number
-Name=QUESTNUM
-Start=14
-Len=3
-DataType=Alpha
-
-[Record]
-Label=Others record
-Name=OTHERS_REC
-RecordTypeValue=''
-RecordLen=56
-
-[Item]
-Label=Other answer
-Name=OTHER_ANSWER
-Start=17
-Len=40
-DataType=Alpha
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "dictionary", 
+  "name": "OTHERS_DICT", 
+  "labels": [ { "text": "Others" } ], 
+  "security": {
+    "allowDataViewerModifications": true, 
+    "allowExport": true, 
+    "cachedPasswordMinutes": 0, 
+    "settings": "03b90e2094f5f338bec949ea7e03dec219e4ba71e65707057431cabccc658c0c"
+  }, 
+  "recordType": {
+    "start": 0, 
+    "length": 0
+  }, 
+  "defaults": {
+    "decimalMark": true, 
+    "zeroFill": true
+  }, 
+  "relativePositions": true, 
+  "levels": [
+    {
+      "name": "OTHERS_QUEST", 
+      "labels": [ { "text": "Others questionnaire" } ], 
+      "ids": {
+        "items": [
+          {
+            "name": "OPROV", 
+            "labels": [ { "text": "Province" } ], 
+            "contentType": "numeric", 
+            "start": 1, 
+            "length": 2, 
+            "zeroFill": true
+          }, 
+          {
+            "name": "ODIST", 
+            "labels": [ { "text": "District" } ], 
+            "contentType": "numeric", 
+            "start": 3, 
+            "length": 2, 
+            "zeroFill": true
+          }, 
+          {
+            "name": "OVILL", 
+            "labels": [ { "text": "Village" } ], 
+            "contentType": "numeric", 
+            "start": 5, 
+            "length": 3, 
+            "zeroFill": true
+          }, 
+          {
+            "name": "OEA", 
+            "labels": [ { "text": "EA" } ], 
+            "contentType": "numeric", 
+            "start": 8, 
+            "length": 3, 
+            "zeroFill": true
+          }, 
+          {
+            "name": "OHU", 
+            "labels": [ { "text": "Housing Unit" } ], 
+            "contentType": "numeric", 
+            "start": 11, 
+            "length": 3, 
+            "zeroFill": true
+          }, 
+          {
+            "name": "QUESTNUM", 
+            "labels": [ { "text": "Question Number" } ], 
+            "contentType": "alpha", 
+            "start": 14, 
+            "length": 3
+          }
+        ]
+      }, 
+      "records": [
+        {
+          "name": "OTHERS_REC", 
+          "labels": [ { "text": "Others record" } ], 
+          "occurrences": {
+            "required": true, 
+            "maximum": 1
+          }, 
+          "items": [
+            {
+              "name": "OTHER_ANSWER", 
+              "labels": [ { "text": "Other answer" } ], 
+              "contentType": "alpha", 
+              "length": 40
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

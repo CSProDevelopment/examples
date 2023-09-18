@@ -1,127 +1,140 @@
-﻿[Dictionary]
-Version=CSPro 7.7
-Label=SAMPLE Dictionary
-Name=SAMPLE_DICT
-RecordTypeStart=0
-RecordTypeLen=0
-Positions=Relative
-ZeroFill=Yes
-DecimalChar=Yes
-SecurityOptions=6524F4EC205A2B0FFF4718247BA4E6280C83E70463411F72BD6D9CCDD547B219
-
-[Level]
-Label=SAMPLE Level
-Name=SAMPLE_LEVEL
-
-[IdItems]
-
-[Item]
-Label=Province
-Name=SAMPROV
-Start=1
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[Item]
-Label=District
-Name=SAMDIST
-Start=2
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[Item]
-Label=Dwelling unit number
-Name=SAMDWNO
-Start=4
-Len=3
-DataType=Numeric
-ZeroFill=Yes
-
-[Item]
-Label=Household number
-Name=SAMHHNO
-Start=7
-Len=3
-DataType=Numeric
-ZeroFill=Yes
-
-[Record]
-Label=SAMPLE Record
-Name=SAMPLE_REC
-RecordTypeValue=''
-RecordLen=116
-
-[Item]
-Label=Type of area
-Name=SAMAREA
-Start=10
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[Item]
-Label=Household replacement status
-Name=SAMRPL
-Start=11
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[Item]
-Label=Latitude
-Name=SAMGPSLAT
-Start=12
-Len=14
-DataType=Numeric
-Decimal=9
-DecimalChar=Yes
-ZeroFill=Yes
-
-[Item]
-Label=Longitude
-Name=SAMGPSLON
-Start=26
-Len=14
-DataType=Numeric
-Decimal=9
-DecimalChar=Yes
-ZeroFill=Yes
-
-[Item]
-Label=Household address
-Name=SAMHA
-Start=40
-Len=30
-DataType=Alpha
-
-[Item]
-Label=Household head name
-Name=SAMHNA
-Start=70
-Len=30
-DataType=Alpha
-
-[Item]
-Label=Household contact phone
-Name=SAMHCT
-Start=100
-Len=15
-DataType=Alpha
-
-[Item]
-Label=Assigned interviewer
-Name=SAMINT
-Start=115
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[Item]
-Label=Assigned supervisor
-Name=SAMSUP
-Start=116
-Len=1
-DataType=Numeric
-ZeroFill=Yes
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "dictionary", 
+  "name": "SAMPLE_DICT", 
+  "labels": [ { "text": "SAMPLE Dictionary" } ], 
+  "security": {
+    "allowDataViewerModifications": true, 
+    "allowExport": true, 
+    "cachedPasswordMinutes": 0, 
+    "settings": "6524f4ec205a2b0fff4718247ba4e6280c83e70463411f72bd6d9ccdd547b219"
+  }, 
+  "recordType": {
+    "start": 0, 
+    "length": 0
+  }, 
+  "defaults": {
+    "decimalMark": true, 
+    "zeroFill": true
+  }, 
+  "relativePositions": true, 
+  "levels": [
+    {
+      "name": "SAMPLE_LEVEL", 
+      "labels": [ { "text": "SAMPLE Level" } ], 
+      "ids": {
+        "items": [
+          {
+            "name": "SAMPROV", 
+            "labels": [ { "text": "Province" } ], 
+            "contentType": "numeric", 
+            "start": 1, 
+            "length": 1, 
+            "zeroFill": true
+          }, 
+          {
+            "name": "SAMDIST", 
+            "labels": [ { "text": "District" } ], 
+            "contentType": "numeric", 
+            "start": 2, 
+            "length": 2, 
+            "zeroFill": true
+          }, 
+          {
+            "name": "SAMDWNO", 
+            "labels": [ { "text": "Dwelling unit number" } ], 
+            "contentType": "numeric", 
+            "start": 4, 
+            "length": 3, 
+            "zeroFill": true
+          }, 
+          {
+            "name": "SAMHHNO", 
+            "labels": [ { "text": "Household number" } ], 
+            "contentType": "numeric", 
+            "start": 7, 
+            "length": 3, 
+            "zeroFill": true
+          }
+        ]
+      }, 
+      "records": [
+        {
+          "name": "SAMPLE_REC", 
+          "labels": [ { "text": "SAMPLE Record" } ], 
+          "occurrences": {
+            "required": true, 
+            "maximum": 1
+          }, 
+          "items": [
+            {
+              "name": "SAMAREA", 
+              "labels": [ { "text": "Type of area" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "SAMRPL", 
+              "labels": [ { "text": "Household replacement status" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "SAMGPSLAT", 
+              "labels": [ { "text": "Latitude" } ], 
+              "contentType": "numeric", 
+              "length": 14, 
+              "decimals": 9, 
+              "decimalMark": true, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "SAMGPSLON", 
+              "labels": [ { "text": "Longitude" } ], 
+              "contentType": "numeric", 
+              "length": 14, 
+              "decimals": 9, 
+              "decimalMark": true, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "SAMHA", 
+              "labels": [ { "text": "Household address" } ], 
+              "contentType": "alpha", 
+              "length": 30
+            }, 
+            {
+              "name": "SAMHNA", 
+              "labels": [ { "text": "Household head name" } ], 
+              "contentType": "alpha", 
+              "length": 30
+            }, 
+            {
+              "name": "SAMHCT", 
+              "labels": [ { "text": "Household contact phone" } ], 
+              "contentType": "alpha", 
+              "length": 15
+            }, 
+            {
+              "name": "SAMINT", 
+              "labels": [ { "text": "Assigned interviewer" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "SAMSUP", 
+              "labels": [ { "text": "Assigned supervisor" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

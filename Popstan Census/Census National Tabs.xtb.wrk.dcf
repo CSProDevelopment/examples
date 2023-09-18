@@ -1,36 +1,60 @@
-﻿[Dictionary]
-Version=CSPro 7.7
-Label=Census National Tabs_wrk
-Name=CENSUS_NATIONAL_TABS_DICT
-RecordTypeStart=1
-RecordTypeLen=1
-Positions=Relative
-ZeroFill=No
-DecimalChar=Yes
-SecurityOptions=4E9A458B3709933072CC8240A71F06163D06A88740AA8450D69B50CB5430323E495C2E3ECE3A61FCFC88731573B03A98
-
-[Level]
-Label=Census National Tabs_wrk questionnaire
-Name=CENSUS_NATIONAL_TABS_WRK_QUF
-
-[IdItems]
-
-[Item]
-Label=Census National Tabs_wrk identification
-Name=CENSUS_NATIONAL_TABS_WRK_ID
-Start=2
-Len=1
-DataType=Numeric
-
-[Record]
-Label=System Record
-Name=SYSTEM_REC
-RecordTypeValue='1'
-RecordLen=3
-
-[Item]
-Label=System Total
-Name=SYSTEM_TOTAL
-Start=3
-Len=1
-DataType=Numeric
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "dictionary", 
+  "name": "CENSUS_NATIONAL_TABS_DICT", 
+  "labels": [ { "text": "Census National Tabs_wrk" } ], 
+  "security": {
+    "allowDataViewerModifications": true, 
+    "allowExport": true, 
+    "cachedPasswordMinutes": 0, 
+    "settings": "4e9a458b3709933072cc8240a71f06163d06a88740aa8450d69b50cb5430323e495c2e3ece3a61fcfc88731573b03a98"
+  }, 
+  "recordType": {
+    "start": 1, 
+    "length": 1
+  }, 
+  "defaults": {
+    "decimalMark": true, 
+    "zeroFill": false
+  }, 
+  "relativePositions": true, 
+  "levels": [
+    {
+      "name": "CENSUS_NATIONAL_TABS_WRK_QUF", 
+      "labels": [ { "text": "Census National Tabs_wrk questionnaire" } ], 
+      "ids": {
+        "items": [
+          {
+            "name": "CENSUS_NATIONAL_TABS_WRK_ID", 
+            "labels": [ { "text": "Census National Tabs_wrk identification" } ], 
+            "contentType": "numeric", 
+            "start": 2, 
+            "length": 1, 
+            "zeroFill": false
+          }
+        ]
+      }, 
+      "records": [
+        {
+          "name": "SYSTEM_REC", 
+          "labels": [ { "text": "System Record" } ], 
+          "recordType": "1", 
+          "occurrences": {
+            "required": true, 
+            "maximum": 1
+          }, 
+          "items": [
+            {
+              "name": "SYSTEM_TOTAL", 
+              "labels": [ { "text": "System Total" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

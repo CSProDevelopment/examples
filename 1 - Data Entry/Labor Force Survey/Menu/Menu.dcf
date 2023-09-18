@@ -1,129 +1,237 @@
-﻿[Dictionary]
-Version=CSPro 7.7
-Label=Menu
-Name=MENU_DICT
-RecordTypeStart=1
-RecordTypeLen=1
-Positions=Relative
-ZeroFill=Yes
-DecimalChar=Yes
-SecurityOptions=999D42D7897BED5F009565546D99F7D44DF25E48BCA7DB388B81F5D2D8353AF3
-
-[Level]
-Label=Menu questionnaire
-Name=MENU_QUEST
-
-[IdItems]
-
-[Item]
-Label=Menu identification
-Name=MENU_ID
-Start=2
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[Record]
-Label=Menu record
-Name=MENU_REC
-RecordTypeValue='1'
-RecordLen=20
-
-[Item]
-Label=Login
-Name=LOGIN
-Start=3
-Len=3
-DataType=Numeric
-ZeroFill=Yes
-
-[Item]
-Label=Interviewer Menu
-Name=INTERVIEWER_MENU
-Start=6
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Interviewer Menu
-Name=INTERVIEWER_MENU_VS1
-Value=1;Interview Households
-Value=2;Sync with Supervisor
-Value=9;Logout
-
-[Item]
-Label=Supervisor Menu
-Name=SUPERVISOR_MENU
-Start=7
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Supervisor Menu
-Name=SUPERVISOR_MENU_VS1
-Value=1;Reports
-Value=2;Sync HQ
-Value=3;Sync interviewer
-Value=4;Review completed interviews
-Value=9;Logout
-
-[Item]
-Label=Choose Household
-Name=CHOOSE_HOUSEHOLD
-Start=8
-Len=9
-DataType=Alpha
-
-[Item]
-Label=Household Action
-Name=HOUSEHOLD_ACTION
-Start=17
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Household Action
-Name=HOUSEHOLD_ACTION_VS1
-Value=1;Open Questionnaire
-Value=2;Set result
-Value=3;View on map
-
-[Item]
-Label=Household Final Result
-Name=HOUSEHOLD_FINAL_RESULT
-Start=18
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Household Final Result
-Name=HOUSEHOLD_FINAL_RESULT_VS1
-Value=0;Not started
-Value=1;Completed
-Value=2;Partly Completed
-Value=3;Refused
-Value=4;Non-Contact
-Value=5;Temporarily Absent
-Value=6;Inadequate Informant
-Value=7;Seasonal, Temporary Resident
-Value=8;Under Construction, Vacant, Demolished
-Value=9;Not a Housing Unit
-Value=10;Other (specify)
-
-[Item]
-Label=Reports
-Name=SUPERVISOR_REPORTS
-Start=20
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Reports
-Name=SUPERVISOR_REPORTS_VS1
-Value=1;Completion
-Value=2;Population
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "dictionary", 
+  "name": "MENU_DICT", 
+  "labels": [ { "text": "Menu" } ], 
+  "security": {
+    "allowDataViewerModifications": true, 
+    "allowExport": true, 
+    "cachedPasswordMinutes": 0, 
+    "settings": "999d42d7897bed5f009565546d99f7d44df25e48bca7db388b81f5d2d8353af3"
+  }, 
+  "recordType": {
+    "start": 1, 
+    "length": 1
+  }, 
+  "defaults": {
+    "decimalMark": true, 
+    "zeroFill": true
+  }, 
+  "relativePositions": true, 
+  "levels": [
+    {
+      "name": "MENU_QUEST", 
+      "labels": [ { "text": "Menu questionnaire" } ], 
+      "ids": {
+        "items": [
+          {
+            "name": "MENU_ID", 
+            "labels": [ { "text": "Menu identification" } ], 
+            "contentType": "numeric", 
+            "start": 2, 
+            "length": 1, 
+            "zeroFill": true
+          }
+        ]
+      }, 
+      "records": [
+        {
+          "name": "MENU_REC", 
+          "labels": [ { "text": "Menu record" } ], 
+          "recordType": "1", 
+          "occurrences": {
+            "required": true, 
+            "maximum": 1
+          }, 
+          "items": [
+            {
+              "name": "LOGIN", 
+              "labels": [ { "text": "Login" } ], 
+              "contentType": "numeric", 
+              "length": 3, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "INTERVIEWER_MENU", 
+              "labels": [ { "text": "Interviewer Menu" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "INTERVIEWER_MENU_VS1", 
+                  "labels": [ { "text": "Interviewer Menu" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Interview Households" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Sync with Supervisor" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Logout" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "SUPERVISOR_MENU", 
+              "labels": [ { "text": "Supervisor Menu" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "SUPERVISOR_MENU_VS1", 
+                  "labels": [ { "text": "Supervisor Menu" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Reports" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Sync HQ" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Sync interviewer" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Review completed interviews" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Logout" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "CHOOSE_HOUSEHOLD", 
+              "labels": [ { "text": "Choose Household" } ], 
+              "contentType": "alpha", 
+              "length": 9
+            }, 
+            {
+              "name": "HOUSEHOLD_ACTION", 
+              "labels": [ { "text": "Household Action" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "HOUSEHOLD_ACTION_VS1", 
+                  "labels": [ { "text": "Household Action" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Open Questionnaire" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Set result" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "View on map" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "HOUSEHOLD_FINAL_RESULT", 
+              "labels": [ { "text": "Household Final Result" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "HOUSEHOLD_FINAL_RESULT_VS1", 
+                  "labels": [ { "text": "Household Final Result" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Not started" } ], 
+                      "pairs": [ { "value": "0" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Completed" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Partly Completed" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Refused" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Non-Contact" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Temporarily Absent" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Inadequate Informant" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Seasonal, Temporary Resident" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Under Construction, Vacant, Demolished" } ], 
+                      "pairs": [ { "value": "8" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not a Housing Unit" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Other (specify)" } ], 
+                      "pairs": [ { "value": "10" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "SUPERVISOR_REPORTS", 
+              "labels": [ { "text": "Reports" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "SUPERVISOR_REPORTS_VS1", 
+                  "labels": [ { "text": "Reports" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Completion" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Population" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

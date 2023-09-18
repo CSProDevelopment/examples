@@ -1,45 +1,65 @@
-﻿[Dictionary]
-Version=CSPro 7.7
-Label=SelCaseX
-Name=SELCASEX_DICT
-RecordTypeStart=0
-RecordTypeLen=0
-Positions=Relative
-ZeroFill=Yes
-DecimalChar=Yes
-SecurityOptions=4DD967FBFF671646E7696688A3FCA239CDB757DB1D9DDF3C52EED58B72668FB3
-
-[Level]
-Label=SelCaseX Level
-Name=SELCASEX_LEVEL
-
-[IdItems]
-
-[Item]
-Label=Dummy ID
-Name=DUMMY_ID
-Start=1
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[Record]
-Label=Demo SelCase
-Name=DEMO_SELCASE
-RecordTypeValue=''
-RecordLen=22
-
-[Item]
-Label=Option
-Name=OPTION
-Start=2
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[Item]
-Label=Data Search
-Name=DATA_SEARCH
-Start=3
-Len=20
-DataType=Alpha
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "dictionary", 
+  "name": "SELCASEX_DICT", 
+  "labels": [ { "text": "SelCaseX" } ], 
+  "security": {
+    "allowDataViewerModifications": true, 
+    "allowExport": true, 
+    "cachedPasswordMinutes": 0, 
+    "settings": "4dd967fbff671646e7696688a3fca239cdb757db1d9ddf3c52eed58b72668fb3"
+  }, 
+  "recordType": {
+    "start": 0, 
+    "length": 0
+  }, 
+  "defaults": {
+    "decimalMark": true, 
+    "zeroFill": true
+  }, 
+  "relativePositions": true, 
+  "levels": [
+    {
+      "name": "SELCASEX_LEVEL", 
+      "labels": [ { "text": "SelCaseX Level" } ], 
+      "ids": {
+        "items": [
+          {
+            "name": "DUMMY_ID", 
+            "labels": [ { "text": "Dummy ID" } ], 
+            "contentType": "numeric", 
+            "start": 1, 
+            "length": 1, 
+            "zeroFill": true
+          }
+        ]
+      }, 
+      "records": [
+        {
+          "name": "DEMO_SELCASE", 
+          "labels": [ { "text": "Demo SelCase" } ], 
+          "occurrences": {
+            "required": true, 
+            "maximum": 1
+          }, 
+          "items": [
+            {
+              "name": "OPTION", 
+              "labels": [ { "text": "Option" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "DATA_SEARCH", 
+              "labels": [ { "text": "Data Search" } ], 
+              "contentType": "alpha", 
+              "length": 20
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

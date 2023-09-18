@@ -1,767 +1,1661 @@
-﻿[Dictionary]
-Version=CSPro 7.7
-Label=Popstan Census
-Name=POP_DICT
-RecordTypeStart=1
-RecordTypeLen=1
-Positions=Relative
-ZeroFill=No
-DecimalChar=No
-SecurityOptions=6EC5BA7F6345CD0701F50A65B7CD7451BCD041F48F21D8799FBF8AC322AC778D
-
-[Level]
-Label=Questionnaire
-Name=QUEST
-
-[IdItems]
-
-[Item]
-Label=Province
-Name=ID1_PROV
-Start=2
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Province
-Name=ID1_PROV_VS1
-Value=1;Artesia
-Value=2;Copal
-Value=3;Dari
-Value=4;Eris
-Value=5;Girda
-Value=6;Hali
-Value=7;Kerac
-Value=8;Lacuna
-Value=9;Laya
-Value=10;Lira
-Value=11;Matanga
-Value=12;Patan
-Value=13;Rift
-Value=14;Terra
-Value=15;Tumar
-
-[Item]
-Label=District
-Name=ID2_DIST
-Start=4
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=District
-Name=ID2_DIST_VS1
-Value=1:18;Regular districts
-
-[Item]
-Label=Village
-Name=ID3_VILLAGE
-Start=6
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Village
-Name=ID3_VILLAGE_VS1
-Value=1:24
-
-[Item]
-Label=EA Number
-Name=ID4_EA
-Start=8
-Len=3
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=EA Number
-Name=ID4_EA_VS1
-Value=1:999
-
-[Item]
-Label=Housing Unit Number
-Name=ID5_HU_NUM
-Start=11
-Len=3
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Housing Unit Number
-Name=ID5_HU_NUM_VS1
-Value=1:999
-
-[Record]
-Label=Housing Record
-Name=HOUSE_REC
-RecordTypeValue='1'
-RecordLen=38
-
-[Item]
-Label=Total Persons in HH
-Name=TOTP
-Start=14
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Total Persons in HH
-Name=TOTP_VS1
-Value=0;0
-Value=1;1
-Value=2;2
-Value=3;3
-Value=4;4
-Value=5;5
-Value=6;6
-Value=7;7
-Value=8;8
-Value=9;9
-Value=10;10
-Value=11;11
-Value=12;12
-Value=13;13
-Value=14;14
-Value=15:99;15+
-
-[Item]
-Label=Total Females in HH
-Name=TOTF
-Start=16
-Len=2
-DataType=Numeric
-
-[ValueSet]
-Label=Total Females in HH
-Name=TOTF_VS1
-Value=0;0
-Value=1;1
-Value=2;2
-Value=3;3
-Value=4;4
-Value=5;5
-Value=6;6
-Value=7;7
-Value=8;8
-Value=9;9
-Value=10;10
-Value=11;11
-Value=12;12
-Value=13;13
-Value=14;14
-Value=15:99;15+
-
-[Item]
-Label=Total Males in HH
-Name=TOTM
-Start=18
-Len=2
-DataType=Numeric
-
-[ValueSet]
-Label=Total Males in HH
-Name=TOTM_VS1
-Value=0;0
-Value=1;1
-Value=2;2
-Value=3;3
-Value=4;4
-Value=5;5
-Value=6;6
-Value=7;7
-Value=8;8
-Value=9;9
-Value=10;10
-Value=11;11
-Value=12;12
-Value=13;13
-Value=14;14
-Value=15:99;15+
-
-[Item]
-Label=Type of housing unit
-Name=H1_TYPE
-Start=20
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Type of housing unit
-Name=H1_TYPE_VS1
-Value=1;Detached home
-Value=2;Apartment
-Value=3;Other, Conventional
-Value=4;Other, Collective
-
-[Item]
-Label=Occupancy Status
-Name=H2_OCC
-Start=21
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Occupancy Status
-Name=H2_OCC_VS1
-Value=1;Occupied
-Value=2;Vacant
-
-[Item]
-Label=Ownership Status
-Name=H3_OWNER
-Start=22
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Ownership Status
-Name=H3_OWNER_VS1
-Value=1;Owner-occupied
-Value=2;Employer-owned
-Value=3;Govt-owned
-Value=4;Other
-Value=' ';N/A
-Name=NOTAPPL,Special
-
-[Item]
-Label=Number of rooms
-Name=H4_ROOMS
-Start=23
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Number of rooms
-Name=H4_ROOMS_VS1
-Value=1:20
-Value='  ';N/A
-Name=NOTAPPL,Special
-
-[Item]
-Label=Drinking water source
-Name=H5_WATER
-Start=25
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Drinking water source
-Name=H5_WATER_VS1
-Value=1;Piped, inside unit
-Value=2;Piped, outside unit
-Value=3;Well
-Value=4;Other
-Value=' ';N/A
-Name=NOTAPPL,Special
-
-[Item]
-Label=Bathing facilities
-Name=H6_BATH
-Start=26
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Bathing facilities
-Name=H6_BATH_VS1
-Value=1;exclusive bath/shower
-Value=2;shared bath/shower
-Value=3;hand basin, piped water
-Value=4;portable tub or basin
-Value=5;other
-Value=' ';N/A
-Name=NOTAPPL,Special
-
-[Item]
-Label=Toilet facilities
-Name=H7_TOILET
-Start=27
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Toilet facilities
-Name=H7_TOILET_VS1
-Value=1;exclusive flush toilet
-Value=2;shared flush toilet
-Value=3;outhouse
-Value=4;covered pit
-Value=5;open pit
-Value=6;other
-Value=' ';N/A
-Name=NOTAPPL,Special
-
-[Item]
-Label=Lighting source
-Name=H8_LIGHTS
-Start=28
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Lighting source
-Name=H8_LIGHTS_VS1
-Value=1;Electricity
-Value=2;Gas
-Value=3;Candle
-Value=4;Other
-Value=' ';N/A
-Name=NOTAPPL,Special
-
-[Item]
-Label=Heating source
-Name=H9_HEAT
-Start=29
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Heating source
-Name=H9_HEAT_VS1
-Value=1;Electricity
-Value=2;Natural Gas
-Value=3;Coal or wood
-Value=4;Oil or kerosene
-Value=5;Other
-Value=6;None
-Value=' ';N/A
-Name=NOTAPPL,Special
-
-[Item]
-Label=Waste disposal
-Name=H10_WASTE
-Start=30
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Waste disposal
-Name=H10_WASTE_VS1
-Value=1;Collected on regular basis
-Value=2;Collected on irregular basis
-Value=3;Owners->supervised dump
-Value=4;Owners->unsupervised dump
-Value=5;Other
-Value=' ';N/A
-Name=NOTAPPL,Special
-
-[Item]
-Label=Deaths in HH
-Name=H11_DEATHS
-Start=31
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Deaths in HH
-Name=H11_DEATHS_VS1
-Value=0;0
-Value=1;1
-Value=2;2
-Value=3;3
-Value=4;4
-Value=5;5
-Value=6:20;6+
-
-[Item]
-Label=Case Weight
-Name=CASE_WEIGHT
-Start=33
-Len=6
-DataType=Numeric
-Decimal=4
-
-[Record]
-Label=Person Record
-Name=PERSON_REC
-RecordTypeValue='2'
-Required=No
-MaxRecords=35
-RecordLen=50
-
-[Item]
-Label=Person #
-Name=P1_PNUM
-Start=14
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Person #
-Name=P1_PNUM_VS1
-Value=1:99
-
-[Item]
-Label=Relationship
-Name=P3_REL
-Start=16
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Relationship
-Name=P3_REL_VS1
-Value=1;Head
-Value=2;Spouse
-Value=3;Child
-Value=4;Grandchild
-Value=5;Parent
-Value=6;Other relative
-Value=7;Non-relative
-Value=8;Institutional member
-
-[Item]
-Label=Sex
-Name=P4_SEX
-Start=17
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Sex
-Name=P4_SEX_VS1
-Value=1;Male
-Value=2;Female
-
-[Item]
-Label=Age
-Name=P5_AGE
-Start=18
-Len=3
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Age
-Name=P5_AGE_VS1
-Value=0:115
-
-[ValueSet]
-Label=5 year age groups
-Name=P5_AGE_VS2
-Value=0;Under 1
-Value=1:4;1 to 4 years
-Value=5:9;5 to 9 years
-Value=10:14;10 to 14 years
-Value=15:19;15 to 19 years
-Value=20:24;20 to 24 years
-Value=25:29;25 to 29 years
-Value=30:34;30 to 34 years
-Value=35:39;35 to 39 years
-Value=40:44;40 to 44 years
-Value=45:49;45 to 49 years
-Value=50:54;50 to 54 years
-Value=55:59;55 to 59 years
-Value=60:64;60 to 64 years
-Value=65:69;65 to 69 years
-Value=70:74;70 to 74 years
-Value=75:79;75 to 79 years
-Value=80:84;80 to 84 years
-Value=85:89;85 to 89 years
-Value=90:94;90 to 94 years
-Value=95:99;95 to 99 years
-Value=100:115;100 and older
-
-[Item]
-Label=Date of Birth
-Name=P6_DOB
-Start=21
-Len=8
-DataType=Numeric
-ZeroFill=Yes
-
-[Item]
-Label=Day of birth
-Name=DAY
-Start=21
-Len=2
-ItemType=SubItem
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Day of birth
-Name=DAY_VS1
-Value=1:31
-
-[Item]
-Label=Month of birth
-Name=MO
-Start=23
-Len=2
-ItemType=SubItem
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Month of birth
-Name=MO_VS1
-Value=1;January
-Value=2;February
-Value=3;March
-Value=4;April
-Value=5;May
-Value=6;June
-Value=7;July
-Value=8;August
-Value=9;September
-Value=10;October
-Value=11;November
-Value=12;December
-
-[Item]
-Label=Year of birth
-Name=YR
-Start=25
-Len=4
-ItemType=SubItem
-DataType=Numeric
-
-[ValueSet]
-Label=Year of birth
-Name=YR_VS1
-Value=1890:2003
-
-[Item]
-Label=Birthplace
-Name=P7_BP
-Start=29
-Len=3
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Birthplace
-Name=P7_BP_VS1
-Value=1:15;Popstan Provinces
-Value=100:350;Countries
-
-[Item]
-Label=Citizenship
-Name=P8_CIT
-Start=32
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Citizenship
-Name=P8_CIT_VS1
-Value=1;Popstan
-Value=2;Kiribati
-Value=3;Vanuatu
-Value=4;Tuvalu
-Value=5;Other
-
-[Item]
-Label=Location 5 yrs ago
-Name=P9_5YR
-Start=33
-Len=3
-DataType=Numeric
-
-[ValueSet]
-Label=Location 5 yrs ago
-Name=P9_5YR_VS1
-Value=1:15;Popstan Provinces
-Value=100:350;Countries
-Value='   ';Not applicable
-Name=NOTAPPL,Special
-
-[Item]
-Label=Level of education
-Name=P10_ED
-Start=36
-Len=1
-DataType=Numeric
-
-[ValueSet]
-Label=Level of education
-Name=P10_ED_VS1
-Value=1;No education
-Value=2;Primary
-Value=3;Secondary
-Value=4;Univ, 2 yr
-Value=5;Bachelors
-Value=6;Masters
-Value=7;PhD
-Value=' ';Not applicable
-Name=NOTAPPL,Special
-
-[Item]
-Label=Marital Status
-Name=P11_MS
-Start=37
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Marital Status
-Name=P11_MS_VS1
-Value=1;Married
-Value=2;Separated
-Value=3;Divorced
-Value=4;Widowed
-Value=5;Never Married
-Value=' ';Not applicable
-Name=NOTAPPL,Special
-
-[Item]
-Label=Working Y/N
-Name=P12_WKG
-Start=38
-Len=1
-DataType=Numeric
-
-[ValueSet]
-Label=Working Y/N
-Name=P12_WKG_VS1
-Value=1;Yes, worked last week
-Value=2;No, did not work last wk
-Value=' ';Not applicable
-Name=NOTAPPL,Special
-
-[Item]
-Label=Occupation
-Name=P13_OCC
-Start=39
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Occupation
-Name=P13_OCC_VS1
-Value=1:99
-Value='  ';Not applicable
-Name=NOTAPPL,Special
-
-[Item]
-Label=Industry
-Name=P14_IND
-Start=41
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Industry
-Name=P14_IND_VS1
-Value=1:99
-Value='  ';Not applicable
-Name=NOTAPPL,Special
-
-[Item]
-Label=Males ever born
-Name=P15A_MEB
-Start=43
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Males ever born
-Name=P15A_MEB_VS1
-Value=0;0
-Value=1;1
-Value=2;2
-Value=3;3
-Value=4;4
-Value=5;5
-Value=6;6
-Value=7;7
-Value=8;8
-Value=9:20;9-20
-Value='  ';Not applicable
-Name=NOTAPPL,Special
-
-[Item]
-Label=Females ever born
-Name=P15B_FEB
-Start=45
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Females ever born
-Name=P15B_FEB_VS1
-Value=0;0
-Value=1;1
-Value=2;2
-Value=3;3
-Value=4;4
-Value=5;5
-Value=6;6
-Value=7;7
-Value=8;8
-Value=9:20;9-20
-Value='  ';Not applicable
-Name=NOTAPPL,Special
-
-[Item]
-Label=Males still alive
-Name=P16A_MSA
-Start=47
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Males still alive
-Name=P16A_MSA_VS1
-Value=0;0
-Value=1;1
-Value=2;2
-Value=3;3
-Value=4;4
-Value=5;5
-Value=6;6
-Value=7;7
-Value=8;8
-Value=9:20;9-20
-Value='  ';Not applicable
-Name=NOTAPPL,Special
-
-[Item]
-Label=Females still alive
-Name=P16B_FSA
-Start=49
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Females still alive
-Name=P16B_FSA_VS1
-Value=0;0
-Value=1;1
-Value=2;2
-Value=3;3
-Value=4;4
-Value=5;5
-Value=6;6
-Value=7;7
-Value=8;8
-Value=9:20;9-20
-Value='  ';Not applicable
-Name=NOTAPPL,Special
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "dictionary", 
+  "name": "POP_DICT", 
+  "labels": [ { "text": "Popstan Census" } ], 
+  "security": {
+    "allowDataViewerModifications": true, 
+    "allowExport": true, 
+    "cachedPasswordMinutes": 0, 
+    "settings": "6ec5ba7f6345cd0701f50a65b7cd7451bcd041f48f21d8799fbf8ac322ac778d"
+  }, 
+  "recordType": {
+    "start": 1, 
+    "length": 1
+  }, 
+  "defaults": {
+    "decimalMark": false, 
+    "zeroFill": false
+  }, 
+  "relativePositions": true, 
+  "levels": [
+    {
+      "name": "QUEST", 
+      "labels": [ { "text": "Questionnaire" } ], 
+      "ids": {
+        "items": [
+          {
+            "name": "ID1_PROV", 
+            "labels": [ { "text": "Province" } ], 
+            "contentType": "numeric", 
+            "start": 2, 
+            "length": 2, 
+            "zeroFill": true, 
+            "valueSets": [
+              {
+                "name": "ID1_PROV_VS1", 
+                "labels": [ { "text": "Province" } ], 
+                "values": [
+                  {
+                    "labels": [ { "text": "Artesia" } ], 
+                    "pairs": [ { "value": "1" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Copal" } ], 
+                    "pairs": [ { "value": "2" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Dari" } ], 
+                    "pairs": [ { "value": "3" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Eris" } ], 
+                    "pairs": [ { "value": "4" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Girda" } ], 
+                    "pairs": [ { "value": "5" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Hali" } ], 
+                    "pairs": [ { "value": "6" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Kerac" } ], 
+                    "pairs": [ { "value": "7" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Lacuna" } ], 
+                    "pairs": [ { "value": "8" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Laya" } ], 
+                    "pairs": [ { "value": "9" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Lira" } ], 
+                    "pairs": [ { "value": "10" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Matanga" } ], 
+                    "pairs": [ { "value": "11" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Patan" } ], 
+                    "pairs": [ { "value": "12" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Rift" } ], 
+                    "pairs": [ { "value": "13" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Terra" } ], 
+                    "pairs": [ { "value": "14" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Tumar" } ], 
+                    "pairs": [ { "value": "15" } ]
+                  }
+                ]
+              }
+            ]
+          }, 
+          {
+            "name": "ID2_DIST", 
+            "labels": [ { "text": "District" } ], 
+            "contentType": "numeric", 
+            "start": 4, 
+            "length": 2, 
+            "zeroFill": true, 
+            "valueSets": [
+              {
+                "name": "ID2_DIST_VS1", 
+                "labels": [ { "text": "District" } ], 
+                "values": [
+                  {
+                    "labels": [ { "text": "Regular districts" } ], 
+                    "pairs": [ { "range": [ "1", "18" ] } ]
+                  }
+                ]
+              }
+            ]
+          }, 
+          {
+            "name": "ID3_VILLAGE", 
+            "labels": [ { "text": "Village" } ], 
+            "contentType": "numeric", 
+            "start": 6, 
+            "length": 2, 
+            "zeroFill": true, 
+            "valueSets": [
+              {
+                "name": "ID3_VILLAGE_VS1", 
+                "labels": [ { "text": "Village" } ], 
+                "values": [
+                  {
+                    "labels": [ { "text": "" } ], 
+                    "pairs": [ { "range": [ "1", "24" ] } ]
+                  }
+                ]
+              }
+            ]
+          }, 
+          {
+            "name": "ID4_EA", 
+            "labels": [ { "text": "EA Number" } ], 
+            "contentType": "numeric", 
+            "start": 8, 
+            "length": 3, 
+            "zeroFill": true, 
+            "valueSets": [
+              {
+                "name": "ID4_EA_VS1", 
+                "labels": [ { "text": "EA Number" } ], 
+                "values": [
+                  {
+                    "labels": [ { "text": "" } ], 
+                    "pairs": [ { "range": [ "1", "999" ] } ]
+                  }
+                ]
+              }
+            ]
+          }, 
+          {
+            "name": "ID5_HU_NUM", 
+            "labels": [ { "text": "Housing Unit Number" } ], 
+            "contentType": "numeric", 
+            "start": 11, 
+            "length": 3, 
+            "zeroFill": true, 
+            "valueSets": [
+              {
+                "name": "ID5_HU_NUM_VS1", 
+                "labels": [ { "text": "Housing Unit Number" } ], 
+                "values": [
+                  {
+                    "labels": [ { "text": "" } ], 
+                    "pairs": [ { "range": [ "1", "999" ] } ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }, 
+      "records": [
+        {
+          "name": "HOUSE_REC", 
+          "labels": [ { "text": "Housing Record" } ], 
+          "recordType": "1", 
+          "occurrences": {
+            "required": true, 
+            "maximum": 1
+          }, 
+          "items": [
+            {
+              "name": "TOTP", 
+              "labels": [ { "text": "Total Persons in HH" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "TOTP_VS1", 
+                  "labels": [ { "text": "Total Persons in HH" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "0" } ], 
+                      "pairs": [ { "value": "0" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "1" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "2" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "3" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "4" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "5" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "6" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "7" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "8" } ], 
+                      "pairs": [ { "value": "8" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "9" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "10" } ], 
+                      "pairs": [ { "value": "10" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "11" } ], 
+                      "pairs": [ { "value": "11" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "12" } ], 
+                      "pairs": [ { "value": "12" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "13" } ], 
+                      "pairs": [ { "value": "13" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "14" } ], 
+                      "pairs": [ { "value": "14" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "15+" } ], 
+                      "pairs": [ { "range": [ "15", "99" ] } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "TOTF", 
+              "labels": [ { "text": "Total Females in HH" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "TOTF_VS1", 
+                  "labels": [ { "text": "Total Females in HH" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "0" } ], 
+                      "pairs": [ { "value": "0" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "1" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "2" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "3" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "4" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "5" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "6" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "7" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "8" } ], 
+                      "pairs": [ { "value": "8" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "9" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "10" } ], 
+                      "pairs": [ { "value": "10" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "11" } ], 
+                      "pairs": [ { "value": "11" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "12" } ], 
+                      "pairs": [ { "value": "12" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "13" } ], 
+                      "pairs": [ { "value": "13" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "14" } ], 
+                      "pairs": [ { "value": "14" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "15+" } ], 
+                      "pairs": [ { "range": [ "15", "99" ] } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "TOTM", 
+              "labels": [ { "text": "Total Males in HH" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "TOTM_VS1", 
+                  "labels": [ { "text": "Total Males in HH" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "0" } ], 
+                      "pairs": [ { "value": "0" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "1" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "2" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "3" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "4" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "5" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "6" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "7" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "8" } ], 
+                      "pairs": [ { "value": "8" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "9" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "10" } ], 
+                      "pairs": [ { "value": "10" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "11" } ], 
+                      "pairs": [ { "value": "11" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "12" } ], 
+                      "pairs": [ { "value": "12" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "13" } ], 
+                      "pairs": [ { "value": "13" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "14" } ], 
+                      "pairs": [ { "value": "14" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "15+" } ], 
+                      "pairs": [ { "range": [ "15", "99" ] } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H1_TYPE", 
+              "labels": [ { "text": "Type of housing unit" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H1_TYPE_VS1", 
+                  "labels": [ { "text": "Type of housing unit" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Detached home" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Apartment" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Other, Conventional" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Other, Collective" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H2_OCC", 
+              "labels": [ { "text": "Occupancy Status" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H2_OCC_VS1", 
+                  "labels": [ { "text": "Occupancy Status" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Occupied" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Vacant" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H3_OWNER", 
+              "labels": [ { "text": "Ownership Status" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H3_OWNER_VS1", 
+                  "labels": [ { "text": "Ownership Status" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Owner-occupied" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Employer-owned" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Govt-owned" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Other" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "N/A" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H4_ROOMS", 
+              "labels": [ { "text": "Number of rooms" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H4_ROOMS_VS1", 
+                  "labels": [ { "text": "Number of rooms" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "range": [ "1", "20" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "N/A" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H5_WATER", 
+              "labels": [ { "text": "Drinking water source" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H5_WATER_VS1", 
+                  "labels": [ { "text": "Drinking water source" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Piped, inside unit" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Piped, outside unit" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Well" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Other" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "N/A" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H6_BATH", 
+              "labels": [ { "text": "Bathing facilities" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H6_BATH_VS1", 
+                  "labels": [ { "text": "Bathing facilities" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "exclusive bath/shower" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "shared bath/shower" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "hand basin, piped water" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "portable tub or basin" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "other" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "N/A" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H7_TOILET", 
+              "labels": [ { "text": "Toilet facilities" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H7_TOILET_VS1", 
+                  "labels": [ { "text": "Toilet facilities" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "exclusive flush toilet" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "shared flush toilet" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "outhouse" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "covered pit" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "open pit" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "other" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "N/A" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H8_LIGHTS", 
+              "labels": [ { "text": "Lighting source" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H8_LIGHTS_VS1", 
+                  "labels": [ { "text": "Lighting source" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Electricity" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Gas" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Candle" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Other" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "N/A" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H9_HEAT", 
+              "labels": [ { "text": "Heating source" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H9_HEAT_VS1", 
+                  "labels": [ { "text": "Heating source" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Electricity" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Natural Gas" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Coal or wood" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Oil or kerosene" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Other" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "None" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "N/A" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H10_WASTE", 
+              "labels": [ { "text": "Waste disposal" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H10_WASTE_VS1", 
+                  "labels": [ { "text": "Waste disposal" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Collected on regular basis" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Collected on irregular basis" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Owners->supervised dump" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Owners->unsupervised dump" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Other" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "N/A" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H11_DEATHS", 
+              "labels": [ { "text": "Deaths in HH" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H11_DEATHS_VS1", 
+                  "labels": [ { "text": "Deaths in HH" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "0" } ], 
+                      "pairs": [ { "value": "0" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "1" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "2" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "3" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "4" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "5" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "6+" } ], 
+                      "pairs": [ { "range": [ "6", "20" ] } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "CASE_WEIGHT", 
+              "labels": [ { "text": "Case Weight" } ], 
+              "contentType": "numeric", 
+              "length": 6, 
+              "decimals": 4, 
+              "decimalMark": false, 
+              "zeroFill": false
+            }
+          ]
+        }, 
+        {
+          "name": "PERSON_REC", 
+          "labels": [ { "text": "Person Record" } ], 
+          "recordType": "2", 
+          "occurrences": {
+            "required": false, 
+            "maximum": 35
+          }, 
+          "items": [
+            {
+              "name": "P1_PNUM", 
+              "labels": [ { "text": "Person #" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "P1_PNUM_VS1", 
+                  "labels": [ { "text": "Person #" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "range": [ "1", "99" ] } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "P3_REL", 
+              "labels": [ { "text": "Relationship" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "P3_REL_VS1", 
+                  "labels": [ { "text": "Relationship" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Head" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Spouse" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Child" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Grandchild" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Parent" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Other relative" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Non-relative" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Institutional member" } ], 
+                      "pairs": [ { "value": "8" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "P4_SEX", 
+              "labels": [ { "text": "Sex" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "P4_SEX_VS1", 
+                  "labels": [ { "text": "Sex" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Male" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Female" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "P5_AGE", 
+              "labels": [ { "text": "Age" } ], 
+              "contentType": "numeric", 
+              "length": 3, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "P5_AGE_VS1", 
+                  "labels": [ { "text": "Age" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "range": [ "0", "115" ] } ]
+                    }
+                  ]
+                }, 
+                {
+                  "name": "P5_AGE_VS2", 
+                  "labels": [ { "text": "5 year age groups" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Under 1" } ], 
+                      "pairs": [ { "value": "0" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "1 to 4 years" } ], 
+                      "pairs": [ { "range": [ "1", "4" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "5 to 9 years" } ], 
+                      "pairs": [ { "range": [ "5", "9" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "10 to 14 years" } ], 
+                      "pairs": [ { "range": [ "10", "14" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "15 to 19 years" } ], 
+                      "pairs": [ { "range": [ "15", "19" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "20 to 24 years" } ], 
+                      "pairs": [ { "range": [ "20", "24" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "25 to 29 years" } ], 
+                      "pairs": [ { "range": [ "25", "29" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "30 to 34 years" } ], 
+                      "pairs": [ { "range": [ "30", "34" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "35 to 39 years" } ], 
+                      "pairs": [ { "range": [ "35", "39" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "40 to 44 years" } ], 
+                      "pairs": [ { "range": [ "40", "44" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "45 to 49 years" } ], 
+                      "pairs": [ { "range": [ "45", "49" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "50 to 54 years" } ], 
+                      "pairs": [ { "range": [ "50", "54" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "55 to 59 years" } ], 
+                      "pairs": [ { "range": [ "55", "59" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "60 to 64 years" } ], 
+                      "pairs": [ { "range": [ "60", "64" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "65 to 69 years" } ], 
+                      "pairs": [ { "range": [ "65", "69" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "70 to 74 years" } ], 
+                      "pairs": [ { "range": [ "70", "74" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "75 to 79 years" } ], 
+                      "pairs": [ { "range": [ "75", "79" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "80 to 84 years" } ], 
+                      "pairs": [ { "range": [ "80", "84" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "85 to 89 years" } ], 
+                      "pairs": [ { "range": [ "85", "89" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "90 to 94 years" } ], 
+                      "pairs": [ { "range": [ "90", "94" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "95 to 99 years" } ], 
+                      "pairs": [ { "range": [ "95", "99" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "100 and older" } ], 
+                      "pairs": [ { "range": [ "100", "115" ] } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "P6_DOB", 
+              "labels": [ { "text": "Date of Birth" } ], 
+              "contentType": "numeric", 
+              "length": 8, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "DAY", 
+              "labels": [ { "text": "Day of birth" } ], 
+              "contentType": "numeric", 
+              "subitem": true, 
+              "subitemOffset": 0, 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "DAY_VS1", 
+                  "labels": [ { "text": "Day of birth" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "range": [ "1", "31" ] } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "MO", 
+              "labels": [ { "text": "Month of birth" } ], 
+              "contentType": "numeric", 
+              "subitem": true, 
+              "subitemOffset": 2, 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "MO_VS1", 
+                  "labels": [ { "text": "Month of birth" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "January" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "February" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "March" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "April" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "May" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "June" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "July" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "August" } ], 
+                      "pairs": [ { "value": "8" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "September" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "October" } ], 
+                      "pairs": [ { "value": "10" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "November" } ], 
+                      "pairs": [ { "value": "11" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "December" } ], 
+                      "pairs": [ { "value": "12" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "YR", 
+              "labels": [ { "text": "Year of birth" } ], 
+              "contentType": "numeric", 
+              "subitem": true, 
+              "subitemOffset": 4, 
+              "length": 4, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "YR_VS1", 
+                  "labels": [ { "text": "Year of birth" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "range": [ "1890", "2003" ] } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "P7_BP", 
+              "labels": [ { "text": "Birthplace" } ], 
+              "contentType": "numeric", 
+              "length": 3, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "P7_BP_VS1", 
+                  "labels": [ { "text": "Birthplace" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Popstan Provinces" } ], 
+                      "pairs": [ { "range": [ "1", "15" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Countries" } ], 
+                      "pairs": [ { "range": [ "100", "350" ] } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "P8_CIT", 
+              "labels": [ { "text": "Citizenship" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "P8_CIT_VS1", 
+                  "labels": [ { "text": "Citizenship" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Popstan" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Kiribati" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Vanuatu" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Tuvalu" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Other" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "P9_5YR", 
+              "labels": [ { "text": "Location 5 yrs ago" } ], 
+              "contentType": "numeric", 
+              "length": 3, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "P9_5YR_VS1", 
+                  "labels": [ { "text": "Location 5 yrs ago" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Popstan Provinces" } ], 
+                      "pairs": [ { "range": [ "1", "15" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Countries" } ], 
+                      "pairs": [ { "range": [ "100", "350" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not applicable" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "P10_ED", 
+              "labels": [ { "text": "Level of education" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "P10_ED_VS1", 
+                  "labels": [ { "text": "Level of education" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "No education" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Primary" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Secondary" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Univ, 2 yr" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Bachelors" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Masters" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "PhD" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not applicable" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "P11_MS", 
+              "labels": [ { "text": "Marital Status" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "P11_MS_VS1", 
+                  "labels": [ { "text": "Marital Status" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Married" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Separated" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Divorced" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Widowed" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Never Married" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not applicable" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "P12_WKG", 
+              "labels": [ { "text": "Working Y/N" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "P12_WKG_VS1", 
+                  "labels": [ { "text": "Working Y/N" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Yes, worked last week" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No, did not work last wk" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not applicable" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "P13_OCC", 
+              "labels": [ { "text": "Occupation" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "P13_OCC_VS1", 
+                  "labels": [ { "text": "Occupation" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "range": [ "1", "99" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not applicable" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "P14_IND", 
+              "labels": [ { "text": "Industry" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "P14_IND_VS1", 
+                  "labels": [ { "text": "Industry" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "range": [ "1", "99" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not applicable" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "P15A_MEB", 
+              "labels": [ { "text": "Males ever born" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "P15A_MEB_VS1", 
+                  "labels": [ { "text": "Males ever born" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "0" } ], 
+                      "pairs": [ { "value": "0" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "1" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "2" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "3" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "4" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "5" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "6" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "7" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "8" } ], 
+                      "pairs": [ { "value": "8" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "9-20" } ], 
+                      "pairs": [ { "range": [ "9", "20" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not applicable" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "P15B_FEB", 
+              "labels": [ { "text": "Females ever born" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "P15B_FEB_VS1", 
+                  "labels": [ { "text": "Females ever born" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "0" } ], 
+                      "pairs": [ { "value": "0" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "1" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "2" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "3" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "4" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "5" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "6" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "7" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "8" } ], 
+                      "pairs": [ { "value": "8" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "9-20" } ], 
+                      "pairs": [ { "range": [ "9", "20" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not applicable" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "P16A_MSA", 
+              "labels": [ { "text": "Males still alive" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "P16A_MSA_VS1", 
+                  "labels": [ { "text": "Males still alive" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "0" } ], 
+                      "pairs": [ { "value": "0" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "1" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "2" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "3" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "4" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "5" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "6" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "7" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "8" } ], 
+                      "pairs": [ { "value": "8" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "9-20" } ], 
+                      "pairs": [ { "range": [ "9", "20" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not applicable" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "P16B_FSA", 
+              "labels": [ { "text": "Females still alive" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "P16B_FSA_VS1", 
+                  "labels": [ { "text": "Females still alive" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "0" } ], 
+                      "pairs": [ { "value": "0" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "1" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "2" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "3" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "4" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "5" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "6" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "7" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "8" } ], 
+                      "pairs": [ { "value": "8" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "9-20" } ], 
+                      "pairs": [ { "range": [ "9", "20" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not applicable" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

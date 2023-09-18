@@ -1,36 +1,60 @@
-﻿[Dictionary]
-Version=CSPro 7.7
-Label=TableTipsNTricks - Working Storage Dictionary
-Name=WS_DICT
-RecordTypeStart=1
-RecordTypeLen=1
-Positions=Relative
-ZeroFill=No
-DecimalChar=Yes
-SecurityOptions=3ECC60F56C442DE7547B22E511BD2CE9BC5C955E888B4943713B141063A4C8CD
-
-[Level]
-Label=Working Storage Level
-Name=WS_LEVEL
-
-[IdItems]
-
-[Item]
-Label=Dummy Id
-Name=DUMMY_ID
-Start=2
-Len=1
-DataType=Numeric
-
-[Record]
-Label=Working Storage Record
-Name=WS_REC
-RecordTypeValue='1'
-RecordLen=1
-
-[Item]
-Label=System Total
-Name=SYSTEM_TOTAL
-Start=3
-Len=1
-DataType=Numeric
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "dictionary", 
+  "name": "WS_DICT", 
+  "labels": [ { "text": "TableTipsNTricks - Working Storage Dictionary" } ], 
+  "security": {
+    "allowDataViewerModifications": true, 
+    "allowExport": true, 
+    "cachedPasswordMinutes": 0, 
+    "settings": "3ecc60f56c442de7547b22e511bd2ce9bc5c955e888b4943713b141063a4c8cd"
+  }, 
+  "recordType": {
+    "start": 1, 
+    "length": 1
+  }, 
+  "defaults": {
+    "decimalMark": true, 
+    "zeroFill": false
+  }, 
+  "relativePositions": true, 
+  "levels": [
+    {
+      "name": "WS_LEVEL", 
+      "labels": [ { "text": "Working Storage Level" } ], 
+      "ids": {
+        "items": [
+          {
+            "name": "DUMMY_ID", 
+            "labels": [ { "text": "Dummy Id" } ], 
+            "contentType": "numeric", 
+            "start": 2, 
+            "length": 1, 
+            "zeroFill": false
+          }
+        ]
+      }, 
+      "records": [
+        {
+          "name": "WS_REC", 
+          "labels": [ { "text": "Working Storage Record" } ], 
+          "recordType": "1", 
+          "occurrences": {
+            "required": true, 
+            "maximum": 1
+          }, 
+          "items": [
+            {
+              "name": "SYSTEM_TOTAL", 
+              "labels": [ { "text": "System Total" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

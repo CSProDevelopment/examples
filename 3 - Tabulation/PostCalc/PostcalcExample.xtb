@@ -1,15 +1,46 @@
-﻿[CSPro Application]
-Version=CSPro 7.7
-Label=POSTCALCEXAMPLE
-Name=POSTCALCEXAMPLE
-AppType=Tabulation
-[External Dictionaries]
-File=.\PostcalcExample.xtb.wrk.dcf
-[AppCode]
-File=.\PostcalcExample.xtb.apc
-[Message]
-File=.\PostcalcExample.xtb.mgf
-[TabSpecs]
-File=.\PostcalcExample.xts
-[Dictionary Types]
-Dict-Type=.\PostcalcExample.xtb.wrk.dcf,Working
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "application", 
+  "type": "tabulation", 
+  "name": "POSTCALCEXAMPLE", 
+  "label": "POSTCALCEXAMPLE", 
+  "dictionaries": [
+    {
+      "type": "working", 
+      "filename": "PostcalcExample.xtb.wrk.dcf"
+    }
+  ], 
+  "tableSpecs": [
+    "PostcalcExample.xts"
+  ], 
+  "code": [
+    {
+      "type": "main", 
+      "filename": "PostcalcExample.xtb.apc"
+    }
+  ], 
+  "messages": [
+    "PostcalcExample.xtb.mgf"
+  ], 
+  "logicSettings": {
+    "version": 2.0, 
+    "caseSensitive": {
+      "symbols": false
+    }, 
+    "actionInvoker": {
+      "accessFromWebView": "promptIfNoValidAccessToken", 
+      "convertResultsForLogic": true
+    }
+  }, 
+  "properties": {
+    "htmlDialogs": true, 
+    "paradata": {
+      "collection": "none", 
+      "recordCoordinates": false, 
+      "recordInitialPropertyValues": false, 
+      "recordIteratorLoadCases": false, 
+      "recordValues": false
+    }
+  }
+}

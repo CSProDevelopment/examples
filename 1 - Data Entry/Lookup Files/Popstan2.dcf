@@ -1,924 +1,2217 @@
-﻿[Dictionary]
-Version=CSPro 7.7
-Label=Popstan Census
-Name=CENSUS
-RecordTypeStart=1
-RecordTypeLen=1
-Positions=Relative
-ZeroFill=No
-DecimalChar=No
-SecurityOptions=B6846A25E1CC18DC5E030138BF4E37AE
-
-[Level]
-Label=Questionnaire
-Name=QUEST
-
-[IdItems]
-
-[Item]
-Label=Province
-Name=PROVINCE
-Start=2
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Province
-Name=PROV_VS1
-Value=1;Artesia
-Value=2;Copal
-Value=3;Dari
-Value=4;Eris
-Value=5;Girda
-Value=6;Hali
-Value=7;Kerac
-Value=8;Lacuna
-Value=9;Laya
-Value=10;Lira
-Value=11;Matanga
-Value=12;Patan
-Value=13;Rift
-Value=14;Terra
-Value=15;Tumar
-
-[Item]
-Label=District
-Name=DISTRICT
-Start=4
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=District
-Name=DIST_VS1
-Value=1:18
-
-[Item]
-Label=Village
-Name=VILLAGE
-Start=6
-Len=3
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Village
-Name=VILLAGE_VS1
-Value=1:999
-
-[Item]
-Label=Enumeration area
-Name=EA
-Start=9
-Len=3
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Enumeration area
-Name=EA_VS1
-Value=1:999
-
-[Item]
-Label=Urban/Rural
-Name=UR
-Start=12
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Urban/Rural
-Name=UR_VS1
-Value=1;Urban
-Value=2;Rural
-
-[Item]
-Label=Building number
-Name=BUILDING
-Start=13
-Len=3
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Building number
-Name=BUILDING_VS1
-Value=1:998;Building
-Value=999;Homeless
-
-[Item]
-Label=Housing unit
-Name=HU
-Start=16
-Len=3
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Housing unit
-Name=HU_VS1
-Value=1:999
-
-[Item]
-Label=Household number
-Name=HH
-Start=19
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Household number
-Name=HH_VS1
-Value=1:9
-
-[Record]
-Label=Person Record
-Name=PERSON
-RecordTypeValue='1'
-Required=No
-MaxRecords=30
-RecordLen=49
-
-[Item]
-Label=Line number
-Name=LINE
-Start=20
-Len=2
-DataType=Numeric
-
-[ValueSet]
-Label=Line number
-Name=LINE_VS1
-Value=1:30
-
-[Item]
-Label=Relationship
-Name=P02_REL
-Start=22
-Len=1
-DataType=Numeric
-
-[ValueSet]
-Label=Relationship
-Name=P02_REL_VS1
-Value=1;Head
-Value=2;Spouse
-Value=3;Child
-Value=4;Parent
-Value=5;Other relative
-Value=6;Nonrelative
-Value=9;Not Reported
-
-[Item]
-Label=Sex
-Name=P03_SEX
-Start=23
-Len=1
-DataType=Numeric
-
-[ValueSet]
-Label=Sex
-Name=P03_SEX_VS1
-Value=1;Male
-Value=2;Female
-
-[Item]
-Label=Age
-Name=P04_AGE
-Start=24
-Len=2
-DataType=Numeric
-
-[ValueSet]
-Label=Age
-Name=P04_AGE_VS1
-Value=0:98
-
-[ValueSet]
-Label=Age in 5 year groups
-Name=P04_AGE_VS2
-Value=0:4;0 to 4 years
-Value=5:9;5 to 9 years
-Value=10:14;10 to 14 years
-Value=15:19;15 to 19 years
-Value=20:24;20 to 24 years
-Value=25:29;25 to 29 years
-Value=30:34;30 to 34 years
-Value=35:39;35 to 39 years
-Value=40:44;40 to 44 years
-Value=45:49;45 to 49 years
-Value=50:54;50 to 54 years
-Value=55:59;55 to 59 years
-Value=60:64;60 to 64 years
-Value=65:69;65 to 69 years
-Value=70:74;70 to 74 years
-Value=75:79;75 to 79 years
-Value=80:84;80 to 84 years
-Value=85:89;85 to 89 years
-Value=90:94;90 to 94 years
-Value=95:98;95 years and over
-
-[ValueSet]
-Label=Age in 10 year groups
-Name=P04_AGE_VS3
-Value=0:9;0 to 9 years
-Value=10:19;10 to 19 years
-Value=20:29;20 to 29 years
-Value=30:39;30 to 39 years
-Value=40:49;40 to 49 years
-Value=50:59;50 to 59 years
-Value=60:69;60 to 69 years
-Value=70:79;70 to 79 years
-Value=80:89;80 to 89 years
-Value=90:98;90 years and over
-
-[ValueSet]
-Label=Age 10-54 in 5 year groups
-Name=AGG_10_5
-Value=10:14;10 to 14 years
-Value=15:19;15 to 19 years
-Value=20:24;20 to 24 years
-Value=25:29;25 to 29 years
-Value=30:34;30 to 34 years
-Value=35:39;35 to 39 years
-Value=40:44;40 to 44 years
-Value=45:49;45 to 49 years
-Value=50:54;50 to 54 years
-
-[Item]
-Label=Marital status
-Name=P05_MS
-Start=26
-Len=1
-DataType=Numeric
-
-[ValueSet]
-Label=Marital status
-Name=P05_MS_VS1
-Value=1;Married
-Value=2;Divorced
-Value=3;Separated
-Value=4;Widowed
-Value=5;Never Married
-
-[Item]
-Label=Mother living
-Name=P06_MOTHER
-Start=27
-Len=1
-DataType=Numeric
-
-[ValueSet]
-Label=Mother living
-Name=P06_MOTHER_VS1
-Value=1;Yes
-Value=2;No
-Value=3;Don't know
-
-[Item]
-Label=Place of birth
-Name=P07_BIRTH
-Start=28
-Len=2
-DataType=Numeric
-
-[ValueSet]
-Label=Place of birth
-Name=P07_BIRTH_VS1
-Value=1:15;Popstan
-Value=21;Endar
-Value=22;Victoria
-Value=23:27;Africa
-Value=40:44;Middle East
-Value=50:53;Asia
-Value=70:74;Europe
-Value=80:84;Americas
-Value=0;Not Reported
-
-[Item]
-Label=Residence in 1995
-Name=P08_RES95
-Start=30
-Len=2
-DataType=Numeric
-
-[ValueSet]
-Label=Residence in 1995
-Name=P08_RES95_VS1
-Value=1:15;Popstan
-Value=21;Endar
-Value=22;Victoria
-Value=23:27;Africa
-Value=40:44;Middle East
-Value=50:53;Asia
-Value=70:74;Europe
-Value=80:84;Americas
-Value=0;Unknown
-Value='  ';Not Applicable
-Name=NOTAPPL,Special
-
-[Item]
-Label=Attending school
-Name=P09_ATTEND
-Start=32
-Len=1
-DataType=Numeric
-
-[ValueSet]
-Label=Attending school
-Name=P09_ATTEND_VS1
-Value=1;Yes
-Value=2;No
-Value=9;Not Reported
-Value=' ';Not Applicable
-Name=NOTAPPL,Special
-
-[Item]
-Label=Highest grade completed
-Name=P10_HIGH_GR
-Start=33
-Len=2
-DataType=Numeric
-
-[ValueSet]
-Label=Highest grade completed
-Name=P10_HIGH_GR_VS1
-Value=0;None
-Value=1:5;Primary
-Value=6:8;Middle School
-Value=9:12;High School
-Value=13:30;University
-Value=31:36;Technical
-Value=99;Not Reported
-Value='  ';Not Applicable
-Name=NOTAPPL,Special
-
-[Item]
-Label=Literacy
-Name=P11_LITERACY
-Start=35
-Len=1
-DataType=Numeric
-
-[ValueSet]
-Label=Literacy
-Name=P11_LITERACY_VS1
-Value=1;Literate
-Value=2;Illerate
-Value=9;Not Reported
-Value=' ';Not Applicable
-Name=NOTAPPL,Special
-
-[Item]
-Label=Working
-Name=P12_WORKING
-Start=36
-Len=1
-DataType=Numeric
-
-[ValueSet]
-Label=Working
-Name=P12_WORKING_VS1
-Value=1;Yes
-Value=2;No
-Value=9;Not Reported
-Value=' ';Not Applicable
-Name=NOTAPPL,Special
-
-[Item]
-Label=Looking for work
-Name=P13_LOOKING
-Start=37
-Len=1
-DataType=Numeric
-
-[ValueSet]
-Label=Looking for work
-Name=P13_LOOKING_VS1
-Value=1;Yes
-Value=2;No
-Value=9;Not Reported
-Value=' ';Not Applicable
-Name=NOTAPPL,Special
-
-[Item]
-Label=Why not looking for work
-Name=P14_WHY_NOT
-Start=38
-Len=1
-DataType=Numeric
-
-[ValueSet]
-Label=Why not looking for work
-Name=P14_WHY_NOT_VS1
-Value=1;Had job
-Value=2;Believed job not available
-Value=3;Did not want job
-Value=4;Doing own housework
-Value=5;Going to school
-Value=6;Other
-Value=9;Not Reported
-Value=' ';Not Applicable
-Name=NOTAPPL,Special
-
-[Item]
-Label=Occupation
-Name=P15_OCC
-Start=39
-Len=2
-DataType=Numeric
-
-[ValueSet]
-Label=Occupation
-Name=P15_OCC_VS1
-Value=1;Medical
-Value=2;Accountants
-Value=10:13;Artist Technical
-Value=20:21;Admin Managerial
-Value=30:34;Clerical Office
-Value=40:43;Sales Workers
-Value=50:54;Service Workers
-Value=60:65;Farmers, Fishers
-Value=70:79;Production Work
-Value=80:83;Transport Worker
-Value=90:92;Construction Trades
-Value=95;Other
-Value=99;Not Reported
-Value='  ';Not Applicable
-Name=NOTAPPL,Special
-
-[Item]
-Label=Occupation (major groups)
-Name=P15A_OCC
-Start=39
-Len=1
-ItemType=SubItem
-DataType=Numeric
-
-[ValueSet]
-Label=Occupation (major groups)
-Name=P15A_OCC_VS1
-Value=0;Social or personal Services
-Value=1;Professional, Technical
-Value=2;Public Administration
-Value=3;Clerical
-Value=4;Wholesale or Retail Industry
-Value=5;Service
-Value=6;Farming, Forestry, Fishing, Hunting
-Value=7;Tradesmen/Craftsmen
-Value=8;Transportation
-Value=9;Construction, other, not reported
-Value=' ';Not Applicable
-Name=NOTAPPL,Special
-
-[Item]
-Label=Industry
-Name=P16_IND
-Start=41
-Len=2
-DataType=Numeric
-
-[ValueSet]
-Label=Industry
-Name=P16_IND_VS1
-Value=10;Hunting
-Value=11;Agriculture
-Value=12;Forestry
-Value=13;Fishing
-Value=20;Mining Quarrying
-Value=30;Food manufacture
-Value=31;Beverage Tobacco
-Value=32;Machinery Mfg
-Value=33;Wood products
-Value=34;Paper products
-Value=35;Chemical Petrol
-Value=36;Non-metal Manufa
-Value=37;Metal Industries
-Value=39;Jewelry Mfg
-Value=40;Energy supplies
-Value=41;Waterworks
-Value=42;Natural Gas Supply
-Value=43;Sanitation Services
-Value=50;Construction
-Value=60;Wholesale Trade
-Value=61;Retail Trade
-Value=62;Hotels, Restaurants
-Value=70;Transport
-Value=71;Storage
-Value=72;Communication
-Value=80;Financial Banks
-Value=81;Insurance
-Value=82;Real Estate
-Value=83;Business Service
-Value=90;Public Admin
-Value=91;Education
-Value=92;Medical Dental
-Value=93;Social Community
-Value=94;Recrtn Cultural
-Value=95;Personal HHold
-Value=98;Other
-Value=99;Not Reported
-Value='  ';Not Applicable
-Name=NOTAPPL,Special
-
-[Item]
-Label=Industry (major groups)
-Name=P16A_IND
-Start=41
-Len=1
-ItemType=SubItem
-DataType=Numeric
-
-[ValueSet]
-Label=Industry (major groups)
-Name=P16A_IND_VS1
-Value=0;Social or Personal Services
-Value=1;Farming, Forestry, Fishing, Hunting
-Value=2;Mining, Quarrying
-Value=3;Manufacturing
-Value=4;Utilities (Electricity, Gas, Water, Sanitation)
-Value=5;Construction
-Value=6;Commerce
-Value=7;Transport, Storage, Communication
-Value=8;Financing, Business Services
-Value=9;Public Administration and not reported
-Value=' ';Not Applicable
-Name=NOTAPPL,Special
-
-[Item]
-Label=Work Status
-Name=P17_WK_STATUS
-Start=43
-Len=1
-DataType=Numeric
-
-[ValueSet]
-Label=Work Status
-Name=P17_WK_STATUS_VS1
-Value=1;Employer
-Value=2;Paid employee
-Value=3;Self-employed
-Value=4;Unpaid family worker
-Value=5;Other
-Value=9;Not Reported
-Value=' ';Not Applicable
-Name=NOTAPPL,Special
-
-[Item]
-Label=Economically active
-Name=ECON_ACTIVE
-Start=44
-Len=1
-DataType=Numeric
-
-[ValueSet]
-Label=Economically active
-Name=ECON_ACTIVE_VS1
-Value=1;Yes
-Value=2;No
-Value=9;Not Reported
-Value=' ';Not Applicable
-Name=NOTAPPL,Special
-
-[Item]
-Label=Number of children born alive
-Name=P18_BORN
-Start=45
-Len=2
-DataType=Numeric
-
-[ValueSet]
-Label=Number of children born alive
-Name=P18_BORN_VS1
-Value=0;None
-Value=1;1
-Value=2;2
-Value=3;3
-Value=4;4
-Value=5;5
-Value=6;6
-Value=7;7
-Value=8;8
-Value=9;9
-Value=10:20;10+
-Value=99;Not Reported
-Value='  ';Not Applicable
-Name=NOTAPPL,Special
-
-[Item]
-Label=Number of children still living
-Name=P19_LIVING
-Start=47
-Len=2
-DataType=Numeric
-
-[ValueSet]
-Label=Number of children still living
-Name=P19_LIVING_VS1
-Value=0;None
-Value=1;1
-Value=2;2
-Value=3;3
-Value=4;4
-Value=5;5
-Value=6;6
-Value=7;7
-Value=8;8
-Value=9;9
-Value=10:20;10+
-Value=99;Not Reported
-Value='  ';Not Applicable
-Name=NOTAPPL,Special
-
-[Item]
-Label=Number of children born in last 12 months
-Name=P20_BORN12
-Start=49
-Len=1
-DataType=Numeric
-
-[ValueSet]
-Label=Number of children born in last 12 months
-Name=P20_BORN12_VS1
-Value=0:3
-Value=9;Not Reported
-Value=' ';Not Applicable
-Name=NOTAPPL,Special
-
-[Record]
-Label=Housing Record
-Name=HOUSING
-RecordTypeValue='2'
-RecordLen=38
-
-[Item]
-Label=Type of housing
-Name=H01_TYPE
-Start=20
-Len=1
-DataType=Numeric
-
-[ValueSet]
-Label=Type of housing
-Name=H01_TYPE_VS1
-Value=1;Single family
-Value=2;Multi-family
-Value=3;Improvised
-Value=4;Mobile
-Value=5;Collective quarters
-Value=6;Homeless (none)
-Value=9;Not reported
-
-[Item]
-Label=Wall type
-Name=H02_WALL
-Start=21
-Len=1
-DataType=Numeric
-
-[ValueSet]
-Label=Wall type
-Name=H02_WALL_VS1
-Value=1;Stone/Cement
-Value=2;Metal
-Value=3;Wood
-Value=4;Bamboo/Mud/Reed
-Value=5;Other
-Value=6;None
-Value=9;Not Reported
-Value=' ';Not Applicable
-Name=NOTAPPL,Special
-
-[Item]
-Label=Roof type
-Name=H03_ROOF
-Start=22
-Len=1
-DataType=Numeric
-
-[ValueSet]
-Label=Roof type
-Name=H03_ROOF_VS1
-Value=1;Stone/Cement
-Value=2;Metal
-Value=3;Wood
-Value=4;Bamboo/Mud/Reed
-Value=5;Other
-Value=6;None
-Value=9;Not Reported
-Value=' ';Not Applicable
-Name=NOTAPPL,Special
-
-[Item]
-Label=Floor type
-Name=H04_FLOOR
-Start=23
-Len=1
-DataType=Numeric
-
-[ValueSet]
-Label=Floor type
-Name=H04_FLOOR_VS1
-Value=1;Stone/Cement
-Value=2;Tile/Marble
-Value=3;Wood
-Value=4;Leaves/Reed
-Value=5;Other
-Value=6;None
-Value=9;Not Reported
-Value=' ';Not Applicable
-Name=NOTAPPL,Special
-
-[Item]
-Label=Number of rooms
-Name=H05_ROOMS
-Start=24
-Len=2
-DataType=Numeric
-
-[ValueSet]
-Label=Number of rooms
-Name=H05_ROOMS_VS1
-Value=1;01
-Value=2;02
-Value=3;03
-Value=4;04
-Value=5;05
-Value=6;06
-Value=7;07
-Value=8;08
-Value=9;09
-Value=10;10
-Value=11;11
-Value=12;12
-Value=13;13
-Value=14;14
-Value=15;15
-Value=16;16
-Value=17;17
-Value=18;18
-Value=19;19
-Value=20;20
-Value=99;Not reported
-Value='  ';Not applicable
-Name=NOTAPPL,Special
-
-[Item]
-Label=Tenure
-Name=H06_TENURE
-Start=26
-Len=1
-DataType=Numeric
-
-[ValueSet]
-Label=Tenure
-Name=H06_TENURE_VS1
-Value=1;Owned
-Value=2;Paid rent
-Value=3;Rent free
-Value=4;Vacant
-Value=9;Not reported
-Value=' ';Not applicable
-Name=NOTAPPL,Special
-
-[Item]
-Label=Amount of rent paid
-Name=H07_RENT
-Start=27
-Len=3
-DataType=Numeric
-
-[ValueSet]
-Label=Amount of rent paid
-Name=H07_RENT_VS1
-Value=0:998
-Value=999;Not reported
-Value='   ';Not applicable
-Name=NOTAPPL,Special
-
-[Item]
-Label=Type of toilet facilities
-Name=H08_TOILET
-Start=30
-Len=1
-DataType=Numeric
-
-[ValueSet]
-Label=Type of toilet facilities
-Name=H08_TOILET_VS1
-Value=1;Private toilet
-Value=2;Shared toilet
-Value=3;Outhouse
-Value=4;Pit
-Value=5;Other
-Value=6;None
-Value=9;Not reported
-Value=' ';Not applicable
-Name=NOTAPPL,Special
-
-[Item]
-Label=Type of bathing facilities
-Name=H09_BATH
-Start=31
-Len=1
-DataType=Numeric
-
-[ValueSet]
-Label=Type of bathing facilities
-Name=H09_BATH_VS1
-Value=1;Exclusive
-Value=2;Shared
-Value=3;Hand basin
-Value=4;Portable tub or basin
-Value=5;Other
-Value=6;None
-Value=9;Not reported
-Value=' ';Not applicable
-Name=NOTAPPL,Special
-
-[Item]
-Label=Source of water
-Name=H10_WATER
-Start=32
-Len=1
-DataType=Numeric
-
-[ValueSet]
-Label=Source of water
-Name=H10_WATER_VS1
-Value=1;Inside piped
-Value=2;Outside piped
-Value=3;Bottled or canned
-Value=4;Closed well or closed spring
-Value=5;Open well or spring
-Value=6;River/Stream/Other
-Value=9;Not reported
-Value=' ';Not applicable
-Name=NOTAPPL,Special
-
-[Item]
-Label=Fuel for lighting
-Name=H11_LIGHT
-Start=33
-Len=1
-DataType=Numeric
-
-[ValueSet]
-Label=Fuel for lighting
-Name=H11_LIGHT_VS1
-Value=1;Electric
-Value=2;Gas
-Value=3;Kerosene
-Value=4;Candle/Tallow
-Value=5;Other
-Value=6;None
-Value=9;Not reported
-Value=' ';Not applicable
-Name=NOTAPPL,Special
-
-[Item]
-Label=Fuel for cooking
-Name=H12_FUEL
-Start=34
-Len=1
-DataType=Numeric
-
-[ValueSet]
-Label=Fuel for cooking
-Name=H12_FUEL_VS1
-Value=1;Electricity
-Value=2;Gas
-Value=3;Kerosene or oil
-Value=4;Coal or charcoal
-Value=5;Wood
-Value=6;Other
-Value=7;None
-Value=9;Not reported
-Value=' ';Not applicable
-Name=NOTAPPL,Special
-
-[Item]
-Label=Number of persons in the household
-Name=H13_PERSONS
-Start=35
-Len=4
-DataType=Numeric
-
-[ValueSet]
-Label=Number of persons in the household
-Name=H13_PERSONS_VS1
-Value=0;None
-Value=1;1 person
-Value=2;2 persons
-Value=3;3 persons
-Value=4;4 persons
-Value=5;5 persons
-Value=6;6 persons
-Value=7;7 persons
-Value=8;8 persons
-Value=9;9 persons
-Value=10:9999;10+ persons
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "dictionary", 
+  "name": "CENSUS", 
+  "labels": [ { "text": "Popstan Census" } ], 
+  "security": {
+    "allowDataViewerModifications": true, 
+    "allowExport": true, 
+    "cachedPasswordMinutes": 0, 
+    "settings": "b6846a25e1cc18dc5e030138bf4e37ae"
+  }, 
+  "recordType": {
+    "start": 1, 
+    "length": 1
+  }, 
+  "defaults": {
+    "decimalMark": false, 
+    "zeroFill": false
+  }, 
+  "relativePositions": true, 
+  "levels": [
+    {
+      "name": "QUEST", 
+      "labels": [ { "text": "Questionnaire" } ], 
+      "ids": {
+        "items": [
+          {
+            "name": "PROVINCE", 
+            "labels": [ { "text": "Province" } ], 
+            "contentType": "numeric", 
+            "start": 2, 
+            "length": 2, 
+            "zeroFill": true, 
+            "valueSets": [
+              {
+                "name": "PROV_VS1", 
+                "labels": [ { "text": "Province" } ], 
+                "values": [
+                  {
+                    "labels": [ { "text": "Artesia" } ], 
+                    "pairs": [ { "value": "1" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Copal" } ], 
+                    "pairs": [ { "value": "2" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Dari" } ], 
+                    "pairs": [ { "value": "3" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Eris" } ], 
+                    "pairs": [ { "value": "4" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Girda" } ], 
+                    "pairs": [ { "value": "5" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Hali" } ], 
+                    "pairs": [ { "value": "6" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Kerac" } ], 
+                    "pairs": [ { "value": "7" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Lacuna" } ], 
+                    "pairs": [ { "value": "8" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Laya" } ], 
+                    "pairs": [ { "value": "9" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Lira" } ], 
+                    "pairs": [ { "value": "10" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Matanga" } ], 
+                    "pairs": [ { "value": "11" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Patan" } ], 
+                    "pairs": [ { "value": "12" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Rift" } ], 
+                    "pairs": [ { "value": "13" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Terra" } ], 
+                    "pairs": [ { "value": "14" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Tumar" } ], 
+                    "pairs": [ { "value": "15" } ]
+                  }
+                ]
+              }
+            ]
+          }, 
+          {
+            "name": "DISTRICT", 
+            "labels": [ { "text": "District" } ], 
+            "contentType": "numeric", 
+            "start": 4, 
+            "length": 2, 
+            "zeroFill": true, 
+            "valueSets": [
+              {
+                "name": "DIST_VS1", 
+                "labels": [ { "text": "District" } ], 
+                "values": [
+                  {
+                    "labels": [ { "text": "" } ], 
+                    "pairs": [ { "range": [ "1", "18" ] } ]
+                  }
+                ]
+              }
+            ]
+          }, 
+          {
+            "name": "VILLAGE", 
+            "labels": [ { "text": "Village" } ], 
+            "contentType": "numeric", 
+            "start": 6, 
+            "length": 3, 
+            "zeroFill": true, 
+            "valueSets": [
+              {
+                "name": "VILLAGE_VS1", 
+                "labels": [ { "text": "Village" } ], 
+                "values": [
+                  {
+                    "labels": [ { "text": "" } ], 
+                    "pairs": [ { "range": [ "1", "999" ] } ]
+                  }
+                ]
+              }
+            ]
+          }, 
+          {
+            "name": "EA", 
+            "labels": [ { "text": "Enumeration area" } ], 
+            "contentType": "numeric", 
+            "start": 9, 
+            "length": 3, 
+            "zeroFill": true, 
+            "valueSets": [
+              {
+                "name": "EA_VS1", 
+                "labels": [ { "text": "Enumeration area" } ], 
+                "values": [
+                  {
+                    "labels": [ { "text": "" } ], 
+                    "pairs": [ { "range": [ "1", "999" ] } ]
+                  }
+                ]
+              }
+            ]
+          }, 
+          {
+            "name": "UR", 
+            "labels": [ { "text": "Urban/Rural" } ], 
+            "contentType": "numeric", 
+            "start": 12, 
+            "length": 1, 
+            "zeroFill": true, 
+            "valueSets": [
+              {
+                "name": "UR_VS1", 
+                "labels": [ { "text": "Urban/Rural" } ], 
+                "values": [
+                  {
+                    "labels": [ { "text": "Urban" } ], 
+                    "pairs": [ { "value": "1" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Rural" } ], 
+                    "pairs": [ { "value": "2" } ]
+                  }
+                ]
+              }
+            ]
+          }, 
+          {
+            "name": "BUILDING", 
+            "labels": [ { "text": "Building number" } ], 
+            "contentType": "numeric", 
+            "start": 13, 
+            "length": 3, 
+            "zeroFill": true, 
+            "valueSets": [
+              {
+                "name": "BUILDING_VS1", 
+                "labels": [ { "text": "Building number" } ], 
+                "values": [
+                  {
+                    "labels": [ { "text": "Building" } ], 
+                    "pairs": [ { "range": [ "1", "998" ] } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Homeless" } ], 
+                    "pairs": [ { "value": "999" } ]
+                  }
+                ]
+              }
+            ]
+          }, 
+          {
+            "name": "HU", 
+            "labels": [ { "text": "Housing unit" } ], 
+            "contentType": "numeric", 
+            "start": 16, 
+            "length": 3, 
+            "zeroFill": true, 
+            "valueSets": [
+              {
+                "name": "HU_VS1", 
+                "labels": [ { "text": "Housing unit" } ], 
+                "values": [
+                  {
+                    "labels": [ { "text": "" } ], 
+                    "pairs": [ { "range": [ "1", "999" ] } ]
+                  }
+                ]
+              }
+            ]
+          }, 
+          {
+            "name": "HH", 
+            "labels": [ { "text": "Household number" } ], 
+            "contentType": "numeric", 
+            "start": 19, 
+            "length": 1, 
+            "zeroFill": true, 
+            "valueSets": [
+              {
+                "name": "HH_VS1", 
+                "labels": [ { "text": "Household number" } ], 
+                "values": [
+                  {
+                    "labels": [ { "text": "" } ], 
+                    "pairs": [ { "range": [ "1", "9" ] } ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }, 
+      "records": [
+        {
+          "name": "PERSON", 
+          "labels": [ { "text": "Person Record" } ], 
+          "recordType": "1", 
+          "occurrences": {
+            "required": false, 
+            "maximum": 30
+          }, 
+          "items": [
+            {
+              "name": "LINE", 
+              "labels": [ { "text": "Line number" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "LINE_VS1", 
+                  "labels": [ { "text": "Line number" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "range": [ "1", "30" ] } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "P02_REL", 
+              "labels": [ { "text": "Relationship" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "P02_REL_VS1", 
+                  "labels": [ { "text": "Relationship" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Head" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Spouse" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Child" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Parent" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Other relative" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Nonrelative" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not Reported" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "P03_SEX", 
+              "labels": [ { "text": "Sex" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "P03_SEX_VS1", 
+                  "labels": [ { "text": "Sex" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Male" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Female" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "P04_AGE", 
+              "labels": [ { "text": "Age" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "P04_AGE_VS1", 
+                  "labels": [ { "text": "Age" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "range": [ "0", "98" ] } ]
+                    }
+                  ]
+                }, 
+                {
+                  "name": "P04_AGE_VS2", 
+                  "labels": [ { "text": "Age in 5 year groups" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "0 to 4 years" } ], 
+                      "pairs": [ { "range": [ "0", "4" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "5 to 9 years" } ], 
+                      "pairs": [ { "range": [ "5", "9" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "10 to 14 years" } ], 
+                      "pairs": [ { "range": [ "10", "14" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "15 to 19 years" } ], 
+                      "pairs": [ { "range": [ "15", "19" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "20 to 24 years" } ], 
+                      "pairs": [ { "range": [ "20", "24" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "25 to 29 years" } ], 
+                      "pairs": [ { "range": [ "25", "29" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "30 to 34 years" } ], 
+                      "pairs": [ { "range": [ "30", "34" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "35 to 39 years" } ], 
+                      "pairs": [ { "range": [ "35", "39" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "40 to 44 years" } ], 
+                      "pairs": [ { "range": [ "40", "44" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "45 to 49 years" } ], 
+                      "pairs": [ { "range": [ "45", "49" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "50 to 54 years" } ], 
+                      "pairs": [ { "range": [ "50", "54" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "55 to 59 years" } ], 
+                      "pairs": [ { "range": [ "55", "59" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "60 to 64 years" } ], 
+                      "pairs": [ { "range": [ "60", "64" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "65 to 69 years" } ], 
+                      "pairs": [ { "range": [ "65", "69" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "70 to 74 years" } ], 
+                      "pairs": [ { "range": [ "70", "74" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "75 to 79 years" } ], 
+                      "pairs": [ { "range": [ "75", "79" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "80 to 84 years" } ], 
+                      "pairs": [ { "range": [ "80", "84" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "85 to 89 years" } ], 
+                      "pairs": [ { "range": [ "85", "89" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "90 to 94 years" } ], 
+                      "pairs": [ { "range": [ "90", "94" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "95 years and over" } ], 
+                      "pairs": [ { "range": [ "95", "98" ] } ]
+                    }
+                  ]
+                }, 
+                {
+                  "name": "P04_AGE_VS3", 
+                  "labels": [ { "text": "Age in 10 year groups" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "0 to 9 years" } ], 
+                      "pairs": [ { "range": [ "0", "9" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "10 to 19 years" } ], 
+                      "pairs": [ { "range": [ "10", "19" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "20 to 29 years" } ], 
+                      "pairs": [ { "range": [ "20", "29" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "30 to 39 years" } ], 
+                      "pairs": [ { "range": [ "30", "39" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "40 to 49 years" } ], 
+                      "pairs": [ { "range": [ "40", "49" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "50 to 59 years" } ], 
+                      "pairs": [ { "range": [ "50", "59" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "60 to 69 years" } ], 
+                      "pairs": [ { "range": [ "60", "69" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "70 to 79 years" } ], 
+                      "pairs": [ { "range": [ "70", "79" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "80 to 89 years" } ], 
+                      "pairs": [ { "range": [ "80", "89" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "90 years and over" } ], 
+                      "pairs": [ { "range": [ "90", "98" ] } ]
+                    }
+                  ]
+                }, 
+                {
+                  "name": "AGG_10_5", 
+                  "labels": [ { "text": "Age 10-54 in 5 year groups" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "10 to 14 years" } ], 
+                      "pairs": [ { "range": [ "10", "14" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "15 to 19 years" } ], 
+                      "pairs": [ { "range": [ "15", "19" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "20 to 24 years" } ], 
+                      "pairs": [ { "range": [ "20", "24" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "25 to 29 years" } ], 
+                      "pairs": [ { "range": [ "25", "29" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "30 to 34 years" } ], 
+                      "pairs": [ { "range": [ "30", "34" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "35 to 39 years" } ], 
+                      "pairs": [ { "range": [ "35", "39" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "40 to 44 years" } ], 
+                      "pairs": [ { "range": [ "40", "44" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "45 to 49 years" } ], 
+                      "pairs": [ { "range": [ "45", "49" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "50 to 54 years" } ], 
+                      "pairs": [ { "range": [ "50", "54" ] } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "P05_MS", 
+              "labels": [ { "text": "Marital status" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "P05_MS_VS1", 
+                  "labels": [ { "text": "Marital status" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Married" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Divorced" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Separated" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Widowed" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Never Married" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "P06_MOTHER", 
+              "labels": [ { "text": "Mother living" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "P06_MOTHER_VS1", 
+                  "labels": [ { "text": "Mother living" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Yes" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Don't know" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "P07_BIRTH", 
+              "labels": [ { "text": "Place of birth" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "P07_BIRTH_VS1", 
+                  "labels": [ { "text": "Place of birth" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Popstan" } ], 
+                      "pairs": [ { "range": [ "1", "15" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Endar" } ], 
+                      "pairs": [ { "value": "21" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Victoria" } ], 
+                      "pairs": [ { "value": "22" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Africa" } ], 
+                      "pairs": [ { "range": [ "23", "27" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Middle East" } ], 
+                      "pairs": [ { "range": [ "40", "44" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Asia" } ], 
+                      "pairs": [ { "range": [ "50", "53" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Europe" } ], 
+                      "pairs": [ { "range": [ "70", "74" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Americas" } ], 
+                      "pairs": [ { "range": [ "80", "84" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not Reported" } ], 
+                      "pairs": [ { "value": "0" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "P08_RES95", 
+              "labels": [ { "text": "Residence in 1995" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "P08_RES95_VS1", 
+                  "labels": [ { "text": "Residence in 1995" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Popstan" } ], 
+                      "pairs": [ { "range": [ "1", "15" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Endar" } ], 
+                      "pairs": [ { "value": "21" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Victoria" } ], 
+                      "pairs": [ { "value": "22" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Africa" } ], 
+                      "pairs": [ { "range": [ "23", "27" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Middle East" } ], 
+                      "pairs": [ { "range": [ "40", "44" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Asia" } ], 
+                      "pairs": [ { "range": [ "50", "53" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Europe" } ], 
+                      "pairs": [ { "range": [ "70", "74" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Americas" } ], 
+                      "pairs": [ { "range": [ "80", "84" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Unknown" } ], 
+                      "pairs": [ { "value": "0" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not Applicable" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "P09_ATTEND", 
+              "labels": [ { "text": "Attending school" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "P09_ATTEND_VS1", 
+                  "labels": [ { "text": "Attending school" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Yes" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not Reported" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not Applicable" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "P10_HIGH_GR", 
+              "labels": [ { "text": "Highest grade completed" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "P10_HIGH_GR_VS1", 
+                  "labels": [ { "text": "Highest grade completed" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "None" } ], 
+                      "pairs": [ { "value": "0" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Primary" } ], 
+                      "pairs": [ { "range": [ "1", "5" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Middle School" } ], 
+                      "pairs": [ { "range": [ "6", "8" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "High School" } ], 
+                      "pairs": [ { "range": [ "9", "12" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "University" } ], 
+                      "pairs": [ { "range": [ "13", "30" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Technical" } ], 
+                      "pairs": [ { "range": [ "31", "36" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not Reported" } ], 
+                      "pairs": [ { "value": "99" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not Applicable" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "P11_LITERACY", 
+              "labels": [ { "text": "Literacy" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "P11_LITERACY_VS1", 
+                  "labels": [ { "text": "Literacy" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Literate" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Illerate" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not Reported" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not Applicable" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "P12_WORKING", 
+              "labels": [ { "text": "Working" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "P12_WORKING_VS1", 
+                  "labels": [ { "text": "Working" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Yes" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not Reported" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not Applicable" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "P13_LOOKING", 
+              "labels": [ { "text": "Looking for work" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "P13_LOOKING_VS1", 
+                  "labels": [ { "text": "Looking for work" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Yes" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not Reported" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not Applicable" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "P14_WHY_NOT", 
+              "labels": [ { "text": "Why not looking for work" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "P14_WHY_NOT_VS1", 
+                  "labels": [ { "text": "Why not looking for work" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Had job" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Believed job not available" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Did not want job" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Doing own housework" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Going to school" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Other" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not Reported" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not Applicable" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "P15_OCC", 
+              "labels": [ { "text": "Occupation" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "P15_OCC_VS1", 
+                  "labels": [ { "text": "Occupation" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Medical" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Accountants" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Artist Technical" } ], 
+                      "pairs": [ { "range": [ "10", "13" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Admin Managerial" } ], 
+                      "pairs": [ { "range": [ "20", "21" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Clerical Office" } ], 
+                      "pairs": [ { "range": [ "30", "34" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Sales Workers" } ], 
+                      "pairs": [ { "range": [ "40", "43" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Service Workers" } ], 
+                      "pairs": [ { "range": [ "50", "54" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Farmers, Fishers" } ], 
+                      "pairs": [ { "range": [ "60", "65" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Production Work" } ], 
+                      "pairs": [ { "range": [ "70", "79" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Transport Worker" } ], 
+                      "pairs": [ { "range": [ "80", "83" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Construction Trades" } ], 
+                      "pairs": [ { "range": [ "90", "92" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Other" } ], 
+                      "pairs": [ { "value": "95" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not Reported" } ], 
+                      "pairs": [ { "value": "99" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not Applicable" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "P15A_OCC", 
+              "labels": [ { "text": "Occupation (major groups)" } ], 
+              "contentType": "numeric", 
+              "subitem": true, 
+              "subitemOffset": 0, 
+              "length": 1, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "P15A_OCC_VS1", 
+                  "labels": [ { "text": "Occupation (major groups)" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Social or personal Services" } ], 
+                      "pairs": [ { "value": "0" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Professional, Technical" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Public Administration" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Clerical" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Wholesale or Retail Industry" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Service" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Farming, Forestry, Fishing, Hunting" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Tradesmen/Craftsmen" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Transportation" } ], 
+                      "pairs": [ { "value": "8" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Construction, other, not reported" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not Applicable" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "P16_IND", 
+              "labels": [ { "text": "Industry" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "P16_IND_VS1", 
+                  "labels": [ { "text": "Industry" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Hunting" } ], 
+                      "pairs": [ { "value": "10" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Agriculture" } ], 
+                      "pairs": [ { "value": "11" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Forestry" } ], 
+                      "pairs": [ { "value": "12" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Fishing" } ], 
+                      "pairs": [ { "value": "13" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Mining Quarrying" } ], 
+                      "pairs": [ { "value": "20" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Food manufacture" } ], 
+                      "pairs": [ { "value": "30" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Beverage Tobacco" } ], 
+                      "pairs": [ { "value": "31" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Machinery Mfg" } ], 
+                      "pairs": [ { "value": "32" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Wood products" } ], 
+                      "pairs": [ { "value": "33" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Paper products" } ], 
+                      "pairs": [ { "value": "34" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Chemical Petrol" } ], 
+                      "pairs": [ { "value": "35" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Non-metal Manufa" } ], 
+                      "pairs": [ { "value": "36" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Metal Industries" } ], 
+                      "pairs": [ { "value": "37" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Jewelry Mfg" } ], 
+                      "pairs": [ { "value": "39" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Energy supplies" } ], 
+                      "pairs": [ { "value": "40" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Waterworks" } ], 
+                      "pairs": [ { "value": "41" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Natural Gas Supply" } ], 
+                      "pairs": [ { "value": "42" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Sanitation Services" } ], 
+                      "pairs": [ { "value": "43" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Construction" } ], 
+                      "pairs": [ { "value": "50" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Wholesale Trade" } ], 
+                      "pairs": [ { "value": "60" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Retail Trade" } ], 
+                      "pairs": [ { "value": "61" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Hotels, Restaurants" } ], 
+                      "pairs": [ { "value": "62" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Transport" } ], 
+                      "pairs": [ { "value": "70" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Storage" } ], 
+                      "pairs": [ { "value": "71" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Communication" } ], 
+                      "pairs": [ { "value": "72" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Financial Banks" } ], 
+                      "pairs": [ { "value": "80" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Insurance" } ], 
+                      "pairs": [ { "value": "81" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Real Estate" } ], 
+                      "pairs": [ { "value": "82" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Business Service" } ], 
+                      "pairs": [ { "value": "83" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Public Admin" } ], 
+                      "pairs": [ { "value": "90" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Education" } ], 
+                      "pairs": [ { "value": "91" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Medical Dental" } ], 
+                      "pairs": [ { "value": "92" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Social Community" } ], 
+                      "pairs": [ { "value": "93" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Recrtn Cultural" } ], 
+                      "pairs": [ { "value": "94" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Personal HHold" } ], 
+                      "pairs": [ { "value": "95" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Other" } ], 
+                      "pairs": [ { "value": "98" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not Reported" } ], 
+                      "pairs": [ { "value": "99" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not Applicable" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "P16A_IND", 
+              "labels": [ { "text": "Industry (major groups)" } ], 
+              "contentType": "numeric", 
+              "subitem": true, 
+              "subitemOffset": 0, 
+              "length": 1, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "P16A_IND_VS1", 
+                  "labels": [ { "text": "Industry (major groups)" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Social or Personal Services" } ], 
+                      "pairs": [ { "value": "0" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Farming, Forestry, Fishing, Hunting" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Mining, Quarrying" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Manufacturing" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Utilities (Electricity, Gas, Water, Sanitation)" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Construction" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Commerce" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Transport, Storage, Communication" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Financing, Business Services" } ], 
+                      "pairs": [ { "value": "8" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Public Administration and not reported" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not Applicable" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "P17_WK_STATUS", 
+              "labels": [ { "text": "Work Status" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "P17_WK_STATUS_VS1", 
+                  "labels": [ { "text": "Work Status" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Employer" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Paid employee" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Self-employed" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Unpaid family worker" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Other" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not Reported" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not Applicable" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "ECON_ACTIVE", 
+              "labels": [ { "text": "Economically active" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "ECON_ACTIVE_VS1", 
+                  "labels": [ { "text": "Economically active" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Yes" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not Reported" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not Applicable" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "P18_BORN", 
+              "labels": [ { "text": "Number of children born alive" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "P18_BORN_VS1", 
+                  "labels": [ { "text": "Number of children born alive" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "None" } ], 
+                      "pairs": [ { "value": "0" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "1" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "2" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "3" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "4" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "5" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "6" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "7" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "8" } ], 
+                      "pairs": [ { "value": "8" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "9" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "10+" } ], 
+                      "pairs": [ { "range": [ "10", "20" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not Reported" } ], 
+                      "pairs": [ { "value": "99" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not Applicable" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "P19_LIVING", 
+              "labels": [ { "text": "Number of children still living" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "P19_LIVING_VS1", 
+                  "labels": [ { "text": "Number of children still living" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "None" } ], 
+                      "pairs": [ { "value": "0" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "1" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "2" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "3" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "4" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "5" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "6" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "7" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "8" } ], 
+                      "pairs": [ { "value": "8" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "9" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "10+" } ], 
+                      "pairs": [ { "range": [ "10", "20" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not Reported" } ], 
+                      "pairs": [ { "value": "99" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not Applicable" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "P20_BORN12", 
+              "labels": [ { "text": "Number of children born in last 12 months" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "P20_BORN12_VS1", 
+                  "labels": [ { "text": "Number of children born in last 12 months" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "range": [ "0", "3" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not Reported" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not Applicable" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }, 
+        {
+          "name": "HOUSING", 
+          "labels": [ { "text": "Housing Record" } ], 
+          "recordType": "2", 
+          "occurrences": {
+            "required": true, 
+            "maximum": 1
+          }, 
+          "items": [
+            {
+              "name": "H01_TYPE", 
+              "labels": [ { "text": "Type of housing" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "H01_TYPE_VS1", 
+                  "labels": [ { "text": "Type of housing" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Single family" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Multi-family" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Improvised" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Mobile" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Collective quarters" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Homeless (none)" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not reported" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H02_WALL", 
+              "labels": [ { "text": "Wall type" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "H02_WALL_VS1", 
+                  "labels": [ { "text": "Wall type" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Stone/Cement" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Metal" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Wood" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Bamboo/Mud/Reed" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Other" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "None" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not Reported" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not Applicable" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H03_ROOF", 
+              "labels": [ { "text": "Roof type" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "H03_ROOF_VS1", 
+                  "labels": [ { "text": "Roof type" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Stone/Cement" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Metal" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Wood" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Bamboo/Mud/Reed" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Other" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "None" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not Reported" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not Applicable" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H04_FLOOR", 
+              "labels": [ { "text": "Floor type" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "H04_FLOOR_VS1", 
+                  "labels": [ { "text": "Floor type" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Stone/Cement" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Tile/Marble" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Wood" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Leaves/Reed" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Other" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "None" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not Reported" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not Applicable" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H05_ROOMS", 
+              "labels": [ { "text": "Number of rooms" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "H05_ROOMS_VS1", 
+                  "labels": [ { "text": "Number of rooms" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "01" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "02" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "03" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "04" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "05" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "06" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "07" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "08" } ], 
+                      "pairs": [ { "value": "8" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "09" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "10" } ], 
+                      "pairs": [ { "value": "10" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "11" } ], 
+                      "pairs": [ { "value": "11" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "12" } ], 
+                      "pairs": [ { "value": "12" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "13" } ], 
+                      "pairs": [ { "value": "13" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "14" } ], 
+                      "pairs": [ { "value": "14" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "15" } ], 
+                      "pairs": [ { "value": "15" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "16" } ], 
+                      "pairs": [ { "value": "16" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "17" } ], 
+                      "pairs": [ { "value": "17" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "18" } ], 
+                      "pairs": [ { "value": "18" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "19" } ], 
+                      "pairs": [ { "value": "19" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "20" } ], 
+                      "pairs": [ { "value": "20" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not reported" } ], 
+                      "pairs": [ { "value": "99" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not applicable" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H06_TENURE", 
+              "labels": [ { "text": "Tenure" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "H06_TENURE_VS1", 
+                  "labels": [ { "text": "Tenure" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Owned" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Paid rent" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Rent free" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Vacant" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not reported" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not applicable" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H07_RENT", 
+              "labels": [ { "text": "Amount of rent paid" } ], 
+              "contentType": "numeric", 
+              "length": 3, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "H07_RENT_VS1", 
+                  "labels": [ { "text": "Amount of rent paid" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "range": [ "0", "998" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not reported" } ], 
+                      "pairs": [ { "value": "999" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not applicable" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H08_TOILET", 
+              "labels": [ { "text": "Type of toilet facilities" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "H08_TOILET_VS1", 
+                  "labels": [ { "text": "Type of toilet facilities" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Private toilet" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Shared toilet" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Outhouse" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Pit" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Other" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "None" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not reported" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not applicable" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H09_BATH", 
+              "labels": [ { "text": "Type of bathing facilities" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "H09_BATH_VS1", 
+                  "labels": [ { "text": "Type of bathing facilities" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Exclusive" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Shared" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Hand basin" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Portable tub or basin" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Other" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "None" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not reported" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not applicable" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H10_WATER", 
+              "labels": [ { "text": "Source of water" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "H10_WATER_VS1", 
+                  "labels": [ { "text": "Source of water" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Inside piped" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Outside piped" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Bottled or canned" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Closed well or closed spring" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Open well or spring" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "River/Stream/Other" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not reported" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not applicable" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H11_LIGHT", 
+              "labels": [ { "text": "Fuel for lighting" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "H11_LIGHT_VS1", 
+                  "labels": [ { "text": "Fuel for lighting" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Electric" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Gas" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Kerosene" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Candle/Tallow" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Other" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "None" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not reported" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not applicable" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H12_FUEL", 
+              "labels": [ { "text": "Fuel for cooking" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "H12_FUEL_VS1", 
+                  "labels": [ { "text": "Fuel for cooking" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Electricity" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Gas" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Kerosene or oil" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Coal or charcoal" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Wood" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Other" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "None" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not reported" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not applicable" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H13_PERSONS", 
+              "labels": [ { "text": "Number of persons in the household" } ], 
+              "contentType": "numeric", 
+              "length": 4, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "H13_PERSONS_VS1", 
+                  "labels": [ { "text": "Number of persons in the household" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "None" } ], 
+                      "pairs": [ { "value": "0" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "1 person" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "2 persons" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "3 persons" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "4 persons" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "5 persons" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "6 persons" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "7 persons" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "8 persons" } ], 
+                      "pairs": [ { "value": "8" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "9 persons" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "10+ persons" } ], 
+                      "pairs": [ { "range": [ "10", "9999" ] } ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

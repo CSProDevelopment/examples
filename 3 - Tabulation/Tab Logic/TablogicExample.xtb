@@ -1,15 +1,46 @@
-﻿[CSPro Application]
-Version=CSPro 7.7
-Label=TABLOGICEXAMPLE
-Name=TABLOGICEXAMPLE
-AppType=Tabulation
-[External Dictionaries]
-File=.\TablogicExample.xtb.wrk.dcf
-[AppCode]
-File=.\TablogicExample.xtb.apc
-[Message]
-File=.\TablogicExample.xtb.mgf
-[TabSpecs]
-File=.\TablogicExample.xts
-[Dictionary Types]
-Dict-Type=.\TablogicExample.xtb.wrk.dcf,Working
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "application", 
+  "type": "tabulation", 
+  "name": "TABLOGICEXAMPLE", 
+  "label": "TABLOGICEXAMPLE", 
+  "dictionaries": [
+    {
+      "type": "working", 
+      "filename": "TablogicExample.xtb.wrk.dcf"
+    }
+  ], 
+  "tableSpecs": [
+    "TablogicExample.xts"
+  ], 
+  "code": [
+    {
+      "type": "main", 
+      "filename": "TablogicExample.xtb.apc"
+    }
+  ], 
+  "messages": [
+    "TablogicExample.xtb.mgf"
+  ], 
+  "logicSettings": {
+    "version": 2.0, 
+    "caseSensitive": {
+      "symbols": false
+    }, 
+    "actionInvoker": {
+      "accessFromWebView": "promptIfNoValidAccessToken", 
+      "convertResultsForLogic": true
+    }
+  }, 
+  "properties": {
+    "htmlDialogs": true, 
+    "paradata": {
+      "collection": "none", 
+      "recordCoordinates": false, 
+      "recordInitialPropertyValues": false, 
+      "recordIteratorLoadCases": false, 
+      "recordValues": false
+    }
+  }
+}

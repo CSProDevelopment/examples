@@ -1,220 +1,524 @@
-﻿[Dictionary]
-Version=CSPro 7.7
-Label=Simple CAPI Dictionary
-Name=SIMPLECAPI_DICT
-RecordTypeStart=1
-RecordTypeLen=1
-Positions=Relative
-ZeroFill=Yes
-DecimalChar=Yes
-SecurityOptions=1A00824829263FF09EA2030C618CEBD69ED8D98D06815DC548A177EC610CCADC
-
-[Level]
-Label=Simple CAPI Level
-Name=SIMPLECAPI_LEVEL
-
-[IdItems]
-
-[Item]
-Label=Household ID
-Name=HOUSEHOLD_ID
-Start=2
-Len=4
-DataType=Numeric
-ZeroFill=Yes
-
-[Record]
-Label=Person Record
-Name=PERSON_REC
-RecordTypeValue='P'
-Required=No
-MaxRecords=20
-RecordLen=111
-
-[Item]
-Label=First Name
-Name=FIRST_NAME
-Start=6
-Len=25
-DataType=Alpha
-
-[Item]
-Label=Last Name
-Name=LAST_NAME
-Start=31
-Len=25
-DataType=Alpha
-
-[Item]
-Label=Relationship
-Name=RELATIONSHIP
-Start=56
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Relationship
-Name=RELATIONSHIP_VS1
-Value=1;Head of Household
-Value=2;Spouse / Partner
-Value=3;Son / Daughter
-Value=4;Brother / Sister
-Value=5;Father / Mother
-Value=6;Grandfather / Grandmother
-Value=7;Grandson / Granddaughter
-Value=8;Other Relative
-Value=9;Non-Relative
-
-[ValueSet]
-Label=Relationship
-Name=RELATIONSHIP_MALE_VS
-Value=1;Head of Household
-Value=2;Spouse / Partner
-Value=3;Son
-Value=4;Brother
-Value=5;Father
-Value=6;Grandfather
-Value=7;Grandson
-Value=8;Other Relative
-Value=9;Non-Relative
-
-[ValueSet]
-Label=Relationship
-Name=RELATIONSHIP_FEMALE_VS
-Value=1;Head of Household
-Value=2;Spouse / Partner
-Value=3;Daughter
-Value=4;Sister
-Value=5;Mother
-Value=6;Grandmother
-Value=7;Granddaughter
-Value=8;Other Relative
-Value=9;Non-Relative
-
-[Item]
-Label=Sex
-Name=SEX
-Start=57
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Sex
-Name=SEX_VS1
-Value=1;Male
-Value=2;Female
-
-[Item]
-Label=Age
-Name=AGE
-Start=58
-Len=3
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Age
-Name=AGE_VS1
-Value=0:115;0 - 115
-Value=-99;Don't Know
-Name=MISSING,Special
-
-[Item]
-Label=Literate
-Name=LITERATE
-Start=61
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Literate
-Name=LITERATE_VS1
-Value=1;Yes
-Value=2;No
-
-[Item]
-Label=Languages Spoken
-Name=LANGUAGES_SPOKEN
-Start=62
-Len=28
-DataType=Alpha
-
-[ValueSet]
-Label=Languages Spoken
-Name=LANGUAGES_SPOKEN_VS1
-Value='01                          ';Arabic (العربية)
-Value='02                          ';Bengali (বাংলা)
-Value='03                          ';Cantonese (粵語)
-Value='04                          ';English
-Value='05                          ';French (Français)
-Value='06                          ';German (Deutsch)
-Value='07                          ';Gujarati (ગુજરાતી)
-Value='08                          ';Hindi (हिन्दी)
-Value='09                          ';Italian (Italiano)
-Value='10                          ';Japanese (日本語)
-Value='11                          ';Javanese (ꦧꦱꦗꦮ)
-Value='12                          ';Korean (한국어)
-Value='13                          ';Malay (Bahasa Melayu)
-Value='14                          ';Mandarin (官話)
-Value='15                          ';Marathi (मराठी)
-Value='16                          ';Persian (فارسی)
-Value='17                          ';Portuguese (Português)
-Value='18                          ';Punjabi (ਪੰਜਾਬੀ)
-Value='19                          ';Russian (Русский)
-Value='20                          ';Spanish (Español)
-Value='21                          ';Tamil (தமிழ்)
-Value='22                          ';Telugu (తెలుగు)
-Value='23                          ';Thai (ภาษาไทย)
-Value='24                          ';Turkish (Türkçe)
-Value='25                          ';Urdu (اُردُو)
-Value='26                          ';Vietnamese (Tiếng Việt)
-Value='27                          ';Wu (吳語)
-
-[Item]
-Label=Languages Spoken (Other)
-Name=LANGUAGES_SPOKEN_OTHER
-Start=90
-Len=20
-DataType=Alpha
-
-[Item]
-Label=Main Language
-Name=MAIN_LANGUAGE
-Start=110
-Len=2
-DataType=Alpha
-
-[ValueSet]
-Label=Main Language
-Name=MAIN_LANGUAGE_VS1
-Value=01;Arabic (العربية)
-Value=02;Bengali (বাংলা)
-Value=03;Cantonese (粵語)
-Value=04;English
-Value=05;French (Français)
-Value=06;German (Deutsch)
-Value=07;Gujarati (ગુજરાતી)
-Value=08;Hindi (हिन्दी)
-Value=09;Italian (Italiano)
-Value=10;Japanese (日本語)
-Value=11;Javanese (ꦧꦱꦗꦮ)
-Value=12;Korean (한국어)
-Value=13;Malay (Bahasa Melayu)
-Value=14;Mandarin (官話)
-Value=15;Marathi (मराठी)
-Value=16;Persian (فارسی)
-Value=17;Portuguese (Português)
-Value=18;Punjabi (ਪੰਜਾਬੀ)
-Value=19;Russian (Русский)
-Value=20;Spanish (Español)
-Value=21;Tamil (தமிழ்)
-Value=22;Telugu (తెలుగు)
-Value=23;Thai (ภาษาไทย)
-Value=24;Turkish (Türkçe)
-Value=25;Urdu (اُردُو)
-Value=26;Vietnamese (Tiếng Việt)
-Value=27;Wu (吳語)
-Value=99;Other
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "dictionary", 
+  "name": "SIMPLECAPI_DICT", 
+  "labels": [ { "text": "Simple CAPI Dictionary" } ], 
+  "security": {
+    "allowDataViewerModifications": true, 
+    "allowExport": true, 
+    "cachedPasswordMinutes": 0, 
+    "settings": "1a00824829263ff09ea2030c618cebd69ed8d98d06815dc548a177ec610ccadc"
+  }, 
+  "recordType": {
+    "start": 1, 
+    "length": 1
+  }, 
+  "defaults": {
+    "decimalMark": true, 
+    "zeroFill": true
+  }, 
+  "relativePositions": true, 
+  "levels": [
+    {
+      "name": "SIMPLECAPI_LEVEL", 
+      "labels": [ { "text": "Simple CAPI Level" } ], 
+      "ids": {
+        "items": [
+          {
+            "name": "HOUSEHOLD_ID", 
+            "labels": [ { "text": "Household ID" } ], 
+            "contentType": "numeric", 
+            "start": 2, 
+            "length": 4, 
+            "zeroFill": true
+          }
+        ]
+      }, 
+      "records": [
+        {
+          "name": "PERSON_REC", 
+          "labels": [ { "text": "Person Record" } ], 
+          "recordType": "P", 
+          "occurrences": {
+            "required": false, 
+            "maximum": 20
+          }, 
+          "items": [
+            {
+              "name": "FIRST_NAME", 
+              "labels": [ { "text": "First Name" } ], 
+              "contentType": "alpha", 
+              "length": 25
+            }, 
+            {
+              "name": "LAST_NAME", 
+              "labels": [ { "text": "Last Name" } ], 
+              "contentType": "alpha", 
+              "length": 25
+            }, 
+            {
+              "name": "RELATIONSHIP", 
+              "labels": [ { "text": "Relationship" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "RELATIONSHIP_VS1", 
+                  "labels": [ { "text": "Relationship" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Head of Household" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Spouse / Partner" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Son / Daughter" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Brother / Sister" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Father / Mother" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Grandfather / Grandmother" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Grandson / Granddaughter" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Other Relative" } ], 
+                      "pairs": [ { "value": "8" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Non-Relative" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }
+                  ]
+                }, 
+                {
+                  "name": "RELATIONSHIP_MALE_VS", 
+                  "labels": [ { "text": "Relationship" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Head of Household" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Spouse / Partner" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Son" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Brother" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Father" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Grandfather" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Grandson" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Other Relative" } ], 
+                      "pairs": [ { "value": "8" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Non-Relative" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }
+                  ]
+                }, 
+                {
+                  "name": "RELATIONSHIP_FEMALE_VS", 
+                  "labels": [ { "text": "Relationship" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Head of Household" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Spouse / Partner" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Daughter" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Sister" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Mother" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Grandmother" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Granddaughter" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Other Relative" } ], 
+                      "pairs": [ { "value": "8" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Non-Relative" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "SEX", 
+              "labels": [ { "text": "Sex" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "SEX_VS1", 
+                  "labels": [ { "text": "Sex" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Male" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Female" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "AGE", 
+              "labels": [ { "text": "Age" } ], 
+              "contentType": "numeric", 
+              "length": 3, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "AGE_VS1", 
+                  "labels": [ { "text": "Age" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "0 - 115" } ], 
+                      "pairs": [ { "range": [ "0", "115" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Don't Know" } ], 
+                      "special": "MISSING", 
+                      "pairs": [ { "value": "-99" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "LITERATE", 
+              "labels": [ { "text": "Literate" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "LITERATE_VS1", 
+                  "labels": [ { "text": "Literate" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Yes" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "LANGUAGES_SPOKEN", 
+              "labels": [ { "text": "Languages Spoken" } ], 
+              "contentType": "alpha", 
+              "length": 28, 
+              "valueSets": [
+                {
+                  "name": "LANGUAGES_SPOKEN_VS1", 
+                  "labels": [ { "text": "Languages Spoken" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Arabic (العربية)" } ], 
+                      "pairs": [ { "value": "01" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Bengali (বাংলা)" } ], 
+                      "pairs": [ { "value": "02" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Cantonese (粵語)" } ], 
+                      "pairs": [ { "value": "03" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "English" } ], 
+                      "pairs": [ { "value": "04" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "French (Français)" } ], 
+                      "pairs": [ { "value": "05" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "German (Deutsch)" } ], 
+                      "pairs": [ { "value": "06" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Gujarati (ગુજરાતી)" } ], 
+                      "pairs": [ { "value": "07" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Hindi (हिन्दी)" } ], 
+                      "pairs": [ { "value": "08" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Italian (Italiano)" } ], 
+                      "pairs": [ { "value": "09" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Japanese (日本語)" } ], 
+                      "pairs": [ { "value": "10" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Javanese (ꦧꦱꦗꦮ)" } ], 
+                      "pairs": [ { "value": "11" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Korean (한국어)" } ], 
+                      "pairs": [ { "value": "12" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Malay (Bahasa Melayu)" } ], 
+                      "pairs": [ { "value": "13" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Mandarin (官話)" } ], 
+                      "pairs": [ { "value": "14" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Marathi (मराठी)" } ], 
+                      "pairs": [ { "value": "15" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Persian (فارسی)" } ], 
+                      "pairs": [ { "value": "16" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Portuguese (Português)" } ], 
+                      "pairs": [ { "value": "17" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Punjabi (ਪੰਜਾਬੀ)" } ], 
+                      "pairs": [ { "value": "18" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Russian (Русский)" } ], 
+                      "pairs": [ { "value": "19" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Spanish (Español)" } ], 
+                      "pairs": [ { "value": "20" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Tamil (தமிழ்)" } ], 
+                      "pairs": [ { "value": "21" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Telugu (తెలుగు)" } ], 
+                      "pairs": [ { "value": "22" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Thai (ภาษาไทย)" } ], 
+                      "pairs": [ { "value": "23" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Turkish (Türkçe)" } ], 
+                      "pairs": [ { "value": "24" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Urdu (اُردُو)" } ], 
+                      "pairs": [ { "value": "25" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Vietnamese (Tiếng Việt)" } ], 
+                      "pairs": [ { "value": "26" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Wu (吳語)" } ], 
+                      "pairs": [ { "value": "27" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "LANGUAGES_SPOKEN_OTHER", 
+              "labels": [ { "text": "Languages Spoken (Other)" } ], 
+              "contentType": "alpha", 
+              "length": 20
+            }, 
+            {
+              "name": "MAIN_LANGUAGE", 
+              "labels": [ { "text": "Main Language" } ], 
+              "contentType": "alpha", 
+              "length": 2, 
+              "valueSets": [
+                {
+                  "name": "MAIN_LANGUAGE_VS1", 
+                  "labels": [ { "text": "Main Language" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Arabic (العربية)" } ], 
+                      "pairs": [ { "value": "01" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Bengali (বাংলা)" } ], 
+                      "pairs": [ { "value": "02" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Cantonese (粵語)" } ], 
+                      "pairs": [ { "value": "03" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "English" } ], 
+                      "pairs": [ { "value": "04" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "French (Français)" } ], 
+                      "pairs": [ { "value": "05" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "German (Deutsch)" } ], 
+                      "pairs": [ { "value": "06" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Gujarati (ગુજરાતી)" } ], 
+                      "pairs": [ { "value": "07" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Hindi (हिन्दी)" } ], 
+                      "pairs": [ { "value": "08" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Italian (Italiano)" } ], 
+                      "pairs": [ { "value": "09" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Japanese (日本語)" } ], 
+                      "pairs": [ { "value": "10" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Javanese (ꦧꦱꦗꦮ)" } ], 
+                      "pairs": [ { "value": "11" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Korean (한국어)" } ], 
+                      "pairs": [ { "value": "12" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Malay (Bahasa Melayu)" } ], 
+                      "pairs": [ { "value": "13" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Mandarin (官話)" } ], 
+                      "pairs": [ { "value": "14" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Marathi (मराठी)" } ], 
+                      "pairs": [ { "value": "15" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Persian (فارسی)" } ], 
+                      "pairs": [ { "value": "16" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Portuguese (Português)" } ], 
+                      "pairs": [ { "value": "17" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Punjabi (ਪੰਜਾਬੀ)" } ], 
+                      "pairs": [ { "value": "18" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Russian (Русский)" } ], 
+                      "pairs": [ { "value": "19" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Spanish (Español)" } ], 
+                      "pairs": [ { "value": "20" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Tamil (தமிழ்)" } ], 
+                      "pairs": [ { "value": "21" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Telugu (తెలుగు)" } ], 
+                      "pairs": [ { "value": "22" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Thai (ภาษาไทย)" } ], 
+                      "pairs": [ { "value": "23" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Turkish (Türkçe)" } ], 
+                      "pairs": [ { "value": "24" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Urdu (اُردُو)" } ], 
+                      "pairs": [ { "value": "25" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Vietnamese (Tiếng Việt)" } ], 
+                      "pairs": [ { "value": "26" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Wu (吳語)" } ], 
+                      "pairs": [ { "value": "27" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Other" } ], 
+                      "pairs": [ { "value": "99" } ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

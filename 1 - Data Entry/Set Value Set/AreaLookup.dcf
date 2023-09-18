@@ -1,69 +1,147 @@
-﻿[Dictionary]
-Version=CSPro 7.7
-Label=Area
-Name=AREA_DICT
-RecordTypeStart=0
-RecordTypeLen=0
-Positions=Absolute
-ZeroFill=No
-DecimalChar=Yes
-SecurityOptions=024335E5344844FB70B6A81437A5B5028E9F6F8D840C38767F5D2F250572F53A
-
-[Level]
-Label=Area questionnaire
-Name=AREA_QUEST
-
-[IdItems]
-
-[Item]
-Label=Province
-Name=PROVINCE_CODE
-Start=1
-Len=2
-DataType=Numeric
-
-[ValueSet]
-Label=Province
-Name=PROVINCE_CODE_VS1
-Value=1;Artesia
-Value=2;Copal
-Value=3;Dari
-Value=4;Eris
-Value=5;Girda
-Value=6;Hali
-Value=7;Kerac
-Value=8;Lacuna
-Value=9;Laya
-Value=10;Lira
-Value=11;Matanga
-Value=12;Patan
-Value=13;Rift
-Value=14;Terra
-Value=15;Tumar
-
-[Record]
-Label=Area record
-Name=AREA_REC
-RecordTypeValue=''
-MaxRecords=99
-RecordLen=37
-
-[Item]
-Label=District
-Name=DISTRICT_CODE
-Start=4
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=District
-Name=DISTRICT_CODE_VS1
-Value=1:18
-
-[Item]
-Label=Name
-Name=DISTRICT_NAME
-Start=6
-Len=32
-DataType=Alpha
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "dictionary", 
+  "name": "AREA_DICT", 
+  "labels": [ { "text": "Area" } ], 
+  "security": {
+    "allowDataViewerModifications": true, 
+    "allowExport": true, 
+    "cachedPasswordMinutes": 0, 
+    "settings": "024335e5344844fb70b6a81437a5b5028e9f6f8d840c38767f5d2f250572f53a"
+  }, 
+  "recordType": {
+    "start": 0, 
+    "length": 0
+  }, 
+  "defaults": {
+    "decimalMark": true, 
+    "zeroFill": false
+  }, 
+  "relativePositions": false, 
+  "levels": [
+    {
+      "name": "AREA_QUEST", 
+      "labels": [ { "text": "Area questionnaire" } ], 
+      "ids": {
+        "items": [
+          {
+            "name": "PROVINCE_CODE", 
+            "labels": [ { "text": "Province" } ], 
+            "contentType": "numeric", 
+            "start": 1, 
+            "length": 2, 
+            "zeroFill": false, 
+            "valueSets": [
+              {
+                "name": "PROVINCE_CODE_VS1", 
+                "labels": [ { "text": "Province" } ], 
+                "values": [
+                  {
+                    "labels": [ { "text": "Artesia" } ], 
+                    "pairs": [ { "value": "1" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Copal" } ], 
+                    "pairs": [ { "value": "2" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Dari" } ], 
+                    "pairs": [ { "value": "3" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Eris" } ], 
+                    "pairs": [ { "value": "4" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Girda" } ], 
+                    "pairs": [ { "value": "5" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Hali" } ], 
+                    "pairs": [ { "value": "6" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Kerac" } ], 
+                    "pairs": [ { "value": "7" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Lacuna" } ], 
+                    "pairs": [ { "value": "8" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Laya" } ], 
+                    "pairs": [ { "value": "9" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Lira" } ], 
+                    "pairs": [ { "value": "10" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Matanga" } ], 
+                    "pairs": [ { "value": "11" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Patan" } ], 
+                    "pairs": [ { "value": "12" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Rift" } ], 
+                    "pairs": [ { "value": "13" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Terra" } ], 
+                    "pairs": [ { "value": "14" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Tumar" } ], 
+                    "pairs": [ { "value": "15" } ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }, 
+      "records": [
+        {
+          "name": "AREA_REC", 
+          "labels": [ { "text": "Area record" } ], 
+          "occurrences": {
+            "required": true, 
+            "maximum": 99
+          }, 
+          "items": [
+            {
+              "name": "DISTRICT_CODE", 
+              "labels": [ { "text": "District" } ], 
+              "contentType": "numeric", 
+              "start": 4, 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "DISTRICT_CODE_VS1", 
+                  "labels": [ { "text": "District" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "range": [ "1", "18" ] } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "DISTRICT_NAME", 
+              "labels": [ { "text": "Name" } ], 
+              "contentType": "alpha", 
+              "start": 6, 
+              "length": 32
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

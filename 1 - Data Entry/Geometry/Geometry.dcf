@@ -1,45 +1,80 @@
-﻿[Dictionary]
-Version=CSPro 7.7
-Label=Geometry
-Name=GEOMETRY_DICT
-RecordTypeStart=1
-RecordTypeLen=1
-Positions=Relative
-ZeroFill=Yes
-DecimalChar=Yes
-SecurityOptions=5611969ED6046D65544320D7AE1A6D1C9521A80C1F82A96A601FA795234E2464
-
-[Level]
-Label=Geometry Level
-Name=GEOMETRY_LEVEL
-
-[IdItems]
-
-[Item]
-Label=Geometry Identification
-Name=GEOMETRY_ID
-Start=2
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[Record]
-Label=Geometry Record
-Name=GEOMETRY_REC
-RecordTypeValue='1'
-RecordLen=3
-
-[Item]
-Label=Menu
-Name=MENU
-Start=3
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Menu
-Name=MENU_VS1
-Value=1;Trace polygon
-Value=2;View polygon
-Value=3;Calculate
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "dictionary", 
+  "name": "GEOMETRY_DICT", 
+  "labels": [ { "text": "Geometry" } ], 
+  "security": {
+    "allowDataViewerModifications": true, 
+    "allowExport": true, 
+    "cachedPasswordMinutes": 0, 
+    "settings": "5611969ed6046d65544320d7ae1a6d1c9521a80c1f82a96a601fa795234e2464"
+  }, 
+  "recordType": {
+    "start": 1, 
+    "length": 1
+  }, 
+  "defaults": {
+    "decimalMark": true, 
+    "zeroFill": true
+  }, 
+  "relativePositions": true, 
+  "levels": [
+    {
+      "name": "GEOMETRY_LEVEL", 
+      "labels": [ { "text": "Geometry Level" } ], 
+      "ids": {
+        "items": [
+          {
+            "name": "GEOMETRY_ID", 
+            "labels": [ { "text": "Geometry Identification" } ], 
+            "contentType": "numeric", 
+            "start": 2, 
+            "length": 1, 
+            "zeroFill": true
+          }
+        ]
+      }, 
+      "records": [
+        {
+          "name": "GEOMETRY_REC", 
+          "labels": [ { "text": "Geometry Record" } ], 
+          "recordType": "1", 
+          "occurrences": {
+            "required": true, 
+            "maximum": 1
+          }, 
+          "items": [
+            {
+              "name": "MENU", 
+              "labels": [ { "text": "Menu" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "MENU_VS1", 
+                  "labels": [ { "text": "Menu" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Trace polygon" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "View polygon" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Calculate" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

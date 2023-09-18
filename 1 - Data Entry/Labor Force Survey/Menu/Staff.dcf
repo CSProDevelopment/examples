@@ -1,51 +1,81 @@
-﻿[Dictionary]
-Version=CSPro 7.7
-Label=Staff
-Name=STAFF_DICT
-RecordTypeStart=0
-RecordTypeLen=0
-Positions=Relative
-ZeroFill=Yes
-DecimalChar=Yes
-SecurityOptions=F7440D503C385288508B68B099A9A22F9D60CBBA7545E14475CB0A258A7EE639
-
-[Level]
-Label=Staff questionnaire
-Name=STAFF_QUEST
-
-[IdItems]
-
-[Item]
-Label=Staff code
-Name=STAFF_CODE
-Start=1
-Len=3
-DataType=Numeric
-ZeroFill=Yes
-
-[Record]
-Label=Staff record
-Name=STAFF_REC
-RecordTypeValue=''
-RecordLen=34
-
-[Item]
-Label=Staff name
-Name=STAFF_NAME
-Start=4
-Len=30
-DataType=Alpha
-
-[Item]
-Label=Staff role
-Name=STAFF_ROLE
-Start=34
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Staff role
-Name=STAFF_ROLE_VS1
-Value=1;Interviewer
-Value=2;Supervisor
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "dictionary", 
+  "name": "STAFF_DICT", 
+  "labels": [ { "text": "Staff" } ], 
+  "security": {
+    "allowDataViewerModifications": true, 
+    "allowExport": true, 
+    "cachedPasswordMinutes": 0, 
+    "settings": "f7440d503c385288508b68b099a9a22f9d60cbba7545e14475cb0a258a7ee639"
+  }, 
+  "recordType": {
+    "start": 0, 
+    "length": 0
+  }, 
+  "defaults": {
+    "decimalMark": true, 
+    "zeroFill": true
+  }, 
+  "relativePositions": true, 
+  "levels": [
+    {
+      "name": "STAFF_QUEST", 
+      "labels": [ { "text": "Staff questionnaire" } ], 
+      "ids": {
+        "items": [
+          {
+            "name": "STAFF_CODE", 
+            "labels": [ { "text": "Staff code" } ], 
+            "contentType": "numeric", 
+            "start": 1, 
+            "length": 3, 
+            "zeroFill": true
+          }
+        ]
+      }, 
+      "records": [
+        {
+          "name": "STAFF_REC", 
+          "labels": [ { "text": "Staff record" } ], 
+          "occurrences": {
+            "required": true, 
+            "maximum": 1
+          }, 
+          "items": [
+            {
+              "name": "STAFF_NAME", 
+              "labels": [ { "text": "Staff name" } ], 
+              "contentType": "alpha", 
+              "length": 30
+            }, 
+            {
+              "name": "STAFF_ROLE", 
+              "labels": [ { "text": "Staff role" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "STAFF_ROLE_VS1", 
+                  "labels": [ { "text": "Staff role" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Interviewer" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Supervisor" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

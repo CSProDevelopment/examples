@@ -1,66 +1,84 @@
-﻿[Dictionary]
-Version=CSPro 7.7
-Label=Popstan Census Staff Dictionary
-Name=PSC_STAFF_DICT
-RecordTypeStart=1
-RecordTypeLen=1
-Positions=Relative
-ZeroFill=Yes
-DecimalChar=Yes
-SecurityOptions=8F029E977C6DBFE6BC28DCD74FB6109CBB946E478B1789F4ADCC4DEAB160DFE6
-
-[Level]
-Label=Staff Level
-Name=STAFF_LEVEL
-
-[IdItems]
-
-[Item]
-Label=Staff Code
-Name=STAFF_CODE
-Start=2
-Len=36
-DataType=Alpha
-
-[Record]
-Label=Staff Record
-Name=STAFF_REC
-RecordTypeValue='1'
-RecordLen=157
-
-[Item]
-Label=Staff Name
-Name=STAFF_NAME
-Start=38
-Len=50
-DataType=Alpha
-
-[Item]
-Label=Pin Code
-Name=PIN_CODE
-Start=88
-Len=4
-DataType=Numeric
-ZeroFill=Yes
-
-[Item]
-Label=Device ID
-Name=DEVICE_ID
-Start=92
-Len=20
-DataType=Alpha
-
-[Item]
-Label=Supervisor Staff Code
-Name=SUPERVISOR_STAFF_CODE
-Start=112
-Len=36
-DataType=Alpha
-
-[Item]
-Label=Time Created Account
-Name=TIME_CREATED_ACCOUNT
-Start=148
-Len=10
-DataType=Numeric
-ZeroFill=Yes
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "dictionary", 
+  "name": "PSC_STAFF_DICT", 
+  "labels": [ { "text": "Popstan Census Staff Dictionary" } ], 
+  "security": {
+    "allowDataViewerModifications": true, 
+    "allowExport": true, 
+    "cachedPasswordMinutes": 0, 
+    "settings": "8f029e977c6dbfe6bc28dcd74fb6109cbb946e478b1789f4adcc4deab160dfe6"
+  }, 
+  "recordType": {
+    "start": 1, 
+    "length": 1
+  }, 
+  "defaults": {
+    "decimalMark": true, 
+    "zeroFill": true
+  }, 
+  "relativePositions": true, 
+  "levels": [
+    {
+      "name": "STAFF_LEVEL", 
+      "labels": [ { "text": "Staff Level" } ], 
+      "ids": {
+        "items": [
+          {
+            "name": "STAFF_CODE", 
+            "labels": [ { "text": "Staff Code" } ], 
+            "contentType": "alpha", 
+            "start": 2, 
+            "length": 36
+          }
+        ]
+      }, 
+      "records": [
+        {
+          "name": "STAFF_REC", 
+          "labels": [ { "text": "Staff Record" } ], 
+          "recordType": "1", 
+          "occurrences": {
+            "required": true, 
+            "maximum": 1
+          }, 
+          "items": [
+            {
+              "name": "STAFF_NAME", 
+              "labels": [ { "text": "Staff Name" } ], 
+              "contentType": "alpha", 
+              "length": 50
+            }, 
+            {
+              "name": "PIN_CODE", 
+              "labels": [ { "text": "Pin Code" } ], 
+              "contentType": "numeric", 
+              "length": 4, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "DEVICE_ID", 
+              "labels": [ { "text": "Device ID" } ], 
+              "contentType": "alpha", 
+              "length": 20
+            }, 
+            {
+              "name": "SUPERVISOR_STAFF_CODE", 
+              "labels": [ { "text": "Supervisor Staff Code" } ], 
+              "contentType": "alpha", 
+              "length": 36
+            }, 
+            {
+              "name": "TIME_CREATED_ACCOUNT", 
+              "labels": [ { "text": "Time Created Account" } ], 
+              "contentType": "numeric", 
+              "length": 10, 
+              "zeroFill": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

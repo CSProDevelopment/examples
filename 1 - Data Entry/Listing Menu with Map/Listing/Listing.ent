@@ -1,18 +1,75 @@
-﻿[CSPro Application]
-Version=CSPro 7.7
-Label=LISTING
-Name=LISTING
-AppType=DataEntry
-OperatorID=No
-CAPI=Yes
-ShowErrorMessageNumbers=No
-[AppCode]
-File=.\Listing.ent.apc
-[Message]
-File=.\Listing.ent.mgf
-[Help]
-File=.\Listing.ent.qsf
-[Forms]
-File=.\Listing.fmf
-[Dictionary Types]
-Dict-Type=..\Dictionaries\Structures.dcf,Input,.\Listing.fmf
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "application", 
+  "type": "entry", 
+  "name": "LISTING", 
+  "label": "LISTING", 
+  "dictionaries": [
+    {
+      "type": "input", 
+      "filename": "../Dictionaries/Structures.dcf", 
+      "parent": "Listing.fmf"
+    }
+  ], 
+  "forms": [
+    "Listing.fmf"
+  ], 
+  "questionText": [
+    "Listing.ent.qsf"
+  ], 
+  "code": [
+    {
+      "type": "main", 
+      "filename": "Listing.ent.apc"
+    }
+  ], 
+  "messages": [
+    "Listing.ent.mgf"
+  ], 
+  "logicSettings": {
+    "version": 2.0, 
+    "caseSensitive": {
+      "symbols": false
+    }, 
+    "actionInvoker": {
+      "accessFromWebView": "promptIfNoValidAccessToken", 
+      "convertResultsForLogic": true
+    }
+  }, 
+  "properties": {
+    "askOperatorId": false, 
+    "autoAdvanceOnSelection": false, 
+    "caseTree": "mobileOnly", 
+    "centerForms": false, 
+    "createListing": true, 
+    "createLog": true, 
+    "decimalMark": "dot", 
+    "displayCodesAlongsideLabels": false, 
+    "notes": {
+      "delete": "all", 
+      "edit": "all"
+    }, 
+    "partialSave": {
+      "operatorEnabled": false
+    }, 
+    "showEndCaseMessage": true, 
+    "showOnlyDiscreteValuesInComboBoxes": false, 
+    "showFieldLabels": true, 
+    "showErrorMessageNumbers": false, 
+    "showQuestionText": true, 
+    "showRefusals": true, 
+    "verify": {
+      "frequency": 1, 
+      "start": 1
+    }, 
+    "htmlDialogs": true, 
+    "paradata": {
+      "collection": "none", 
+      "recordCoordinates": false, 
+      "recordInitialPropertyValues": false, 
+      "recordIteratorLoadCases": false, 
+      "recordValues": false
+    }
+  }
+}

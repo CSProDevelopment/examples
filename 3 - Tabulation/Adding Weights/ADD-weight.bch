@@ -1,16 +1,51 @@
-﻿[CSPro Application]
-Version=CSPro 7.7
-Label=ADD_WEIGHT
-Name=ADD_WEIGHT
-AppType=Batch
-[External Dictionaries]
-File=.\Weight file.dcf
-[AppCode]
-File=.\ADD-weight.bch.apc
-[Message]
-File=.\ADD-weight.bch.mgf
-[Order]
-File=.\ADD-weight.ord
-[Dictionary Types]
-Dict-Type=.\Weight file.dcf,External
-Dict-Type=.\popstan2.dcf,Input,.\ADD-weight.ord
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "application", 
+  "type": "batch", 
+  "name": "ADD_WEIGHT", 
+  "label": "ADD_WEIGHT", 
+  "dictionaries": [
+    {
+      "type": "input", 
+      "filename": "popstan2.dcf", 
+      "parent": "ADD-weight.ord"
+    }, 
+    {
+      "type": "external", 
+      "filename": "Weight file.dcf"
+    }
+  ], 
+  "order": [
+    "ADD-weight.ord"
+  ], 
+  "code": [
+    {
+      "type": "main", 
+      "filename": "ADD-weight.bch.apc"
+    }
+  ], 
+  "messages": [
+    "ADD-weight.bch.mgf"
+  ], 
+  "logicSettings": {
+    "version": 2.0, 
+    "caseSensitive": {
+      "symbols": false
+    }, 
+    "actionInvoker": {
+      "accessFromWebView": "promptIfNoValidAccessToken", 
+      "convertResultsForLogic": true
+    }
+  }, 
+  "properties": {
+    "htmlDialogs": true, 
+    "paradata": {
+      "collection": "none", 
+      "recordCoordinates": false, 
+      "recordInitialPropertyValues": false, 
+      "recordIteratorLoadCases": false, 
+      "recordValues": false
+    }
+  }
+}

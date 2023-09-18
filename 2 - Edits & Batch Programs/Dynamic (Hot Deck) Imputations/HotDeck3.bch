@@ -1,13 +1,47 @@
-﻿[CSPro Application]
-Version=CSPro 7.7
-Label=Hotdeck with save
-Name=HOTDECK
-AppType=Batch
-[AppCode]
-File=.\HotDeck3.bch.apc
-[Message]
-File=.\HotDeck3.bch.mgf
-[Order]
-File=.\HotDeck3.ord
-[Dictionary Types]
-Dict-Type=.\Popstan.dcf,Input,.\HotDeck3.ord
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "application", 
+  "type": "batch", 
+  "name": "HOTDECK", 
+  "label": "Hotdeck with save", 
+  "dictionaries": [
+    {
+      "type": "input", 
+      "filename": "Popstan.dcf", 
+      "parent": "HotDeck3.ord"
+    }
+  ], 
+  "order": [
+    "HotDeck3.ord"
+  ], 
+  "code": [
+    {
+      "type": "main", 
+      "filename": "HotDeck3.bch.apc"
+    }
+  ], 
+  "messages": [
+    "HotDeck3.bch.mgf"
+  ], 
+  "logicSettings": {
+    "version": 2.0, 
+    "caseSensitive": {
+      "symbols": false
+    }, 
+    "actionInvoker": {
+      "accessFromWebView": "promptIfNoValidAccessToken", 
+      "convertResultsForLogic": true
+    }
+  }, 
+  "properties": {
+    "htmlDialogs": true, 
+    "paradata": {
+      "collection": "none", 
+      "recordCoordinates": false, 
+      "recordInitialPropertyValues": false, 
+      "recordIteratorLoadCases": false, 
+      "recordValues": false
+    }
+  }
+}

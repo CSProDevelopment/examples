@@ -1,58 +1,80 @@
-﻿[Dictionary]
-Version=CSPro 7.7
-Label=Menu - Working Storage Dictionary
-Name=WS_DICT
-RecordTypeStart=1
-RecordTypeLen=1
-Positions=Relative
-ZeroFill=No
-DecimalChar=Yes
-SecurityOptions=3ECC60F56C442DE7547B22E511BD2CE9BC5C955E888B4943713B141063A4C8CD
-
-[Level]
-Label=Working Storage Level
-Name=WS_LEVEL
-
-[IdItems]
-
-[Item]
-Label=Dummy Id
-Name=DUMMY_ID
-Start=2
-Len=1
-DataType=Numeric
-
-[Record]
-Label=Interviewer Status Record
-Name=INTERVIEWER_STATUS_RECORD
-RecordTypeValue='1'
-MaxRecords=99
-RecordLen=68
-
-[Item]
-Label=Interviewer Name
-Name=ISR_INTERVIEWER_NAME
-Start=3
-Len=50
-DataType=Alpha
-
-[Item]
-Label=Complete Households
-Name=ISR_COMPLETE_HOUSEHOLDS
-Start=53
-Len=3
-DataType=Numeric
-
-[Item]
-Label=Partial Households
-Name=ISR_PARTIAL_HOUSEHOLDS
-Start=56
-Len=3
-DataType=Numeric
-
-[Item]
-Label=Last Interview
-Name=ISR_LAST_INTERVIEW
-Start=59
-Len=10
-DataType=Numeric
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "dictionary", 
+  "name": "WS_DICT", 
+  "labels": [ { "text": "Menu - Working Storage Dictionary" } ], 
+  "security": {
+    "allowDataViewerModifications": true, 
+    "allowExport": true, 
+    "cachedPasswordMinutes": 0, 
+    "settings": "3ecc60f56c442de7547b22e511bd2ce9bc5c955e888b4943713b141063a4c8cd"
+  }, 
+  "recordType": {
+    "start": 1, 
+    "length": 1
+  }, 
+  "defaults": {
+    "decimalMark": true, 
+    "zeroFill": false
+  }, 
+  "relativePositions": true, 
+  "levels": [
+    {
+      "name": "WS_LEVEL", 
+      "labels": [ { "text": "Working Storage Level" } ], 
+      "ids": {
+        "items": [
+          {
+            "name": "DUMMY_ID", 
+            "labels": [ { "text": "Dummy Id" } ], 
+            "contentType": "numeric", 
+            "start": 2, 
+            "length": 1, 
+            "zeroFill": false
+          }
+        ]
+      }, 
+      "records": [
+        {
+          "name": "INTERVIEWER_STATUS_RECORD", 
+          "labels": [ { "text": "Interviewer Status Record" } ], 
+          "recordType": "1", 
+          "occurrences": {
+            "required": true, 
+            "maximum": 99
+          }, 
+          "items": [
+            {
+              "name": "ISR_INTERVIEWER_NAME", 
+              "labels": [ { "text": "Interviewer Name" } ], 
+              "contentType": "alpha", 
+              "length": 50
+            }, 
+            {
+              "name": "ISR_COMPLETE_HOUSEHOLDS", 
+              "labels": [ { "text": "Complete Households" } ], 
+              "contentType": "numeric", 
+              "length": 3, 
+              "zeroFill": false
+            }, 
+            {
+              "name": "ISR_PARTIAL_HOUSEHOLDS", 
+              "labels": [ { "text": "Partial Households" } ], 
+              "contentType": "numeric", 
+              "length": 3, 
+              "zeroFill": false
+            }, 
+            {
+              "name": "ISR_LAST_INTERVIEW", 
+              "labels": [ { "text": "Last Interview" } ], 
+              "contentType": "numeric", 
+              "length": 10, 
+              "zeroFill": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,15 +1,46 @@
-﻿[CSPro Application]
-Version=CSPro 7.7
-Label=CENSUS_NATIONAL_TABS
-Name=CENSUS_NATIONAL_TABS
-AppType=Tabulation
-[External Dictionaries]
-File=.\Census National Tabs.xtb.wrk.dcf
-[AppCode]
-File=.\Census National Tabs.xtb.apc
-[Message]
-File=.\Census National Tabs.xtb.mgf
-[TabSpecs]
-File=.\Census National Tabs.xts
-[Dictionary Types]
-Dict-Type=.\Census National Tabs.xtb.wrk.dcf,Working
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "application", 
+  "type": "tabulation", 
+  "name": "CENSUS_NATIONAL_TABS", 
+  "label": "CENSUS_NATIONAL_TABS", 
+  "dictionaries": [
+    {
+      "type": "working", 
+      "filename": "Census National Tabs.xtb.wrk.dcf"
+    }
+  ], 
+  "tableSpecs": [
+    "Census National Tabs.xts"
+  ], 
+  "code": [
+    {
+      "type": "main", 
+      "filename": "Census National Tabs.xtb.apc"
+    }
+  ], 
+  "messages": [
+    "Census National Tabs.xtb.mgf"
+  ], 
+  "logicSettings": {
+    "version": 2.0, 
+    "caseSensitive": {
+      "symbols": false
+    }, 
+    "actionInvoker": {
+      "accessFromWebView": "promptIfNoValidAccessToken", 
+      "convertResultsForLogic": true
+    }
+  }, 
+  "properties": {
+    "htmlDialogs": true, 
+    "paradata": {
+      "collection": "none", 
+      "recordCoordinates": false, 
+      "recordInitialPropertyValues": false, 
+      "recordIteratorLoadCases": false, 
+      "recordValues": false
+    }
+  }
+}

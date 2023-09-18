@@ -1,25 +1,79 @@
-﻿[CSPro Application]
-Version=CSPro 7.7
-Label=POPSTANLFS
-Name=POPSTANLFS
-AppType=DataEntry
-OperatorID=No
-PartialSave=Yes
-CAPI=Yes
-CaseTree=Desktop
-CreateListing=No
-CreateLog=No
-ShowErrorMessageNumbers=No
-[AppCode]
-File=.\PopstanLFS.ent.apc
-[Message]
-File=.\PopstanLFS.ent.mgf
-[Help]
-File=.\PopstanLFS.ent.qsf
-[Forms]
-File=.\PopstanLFS.fmf
-[Dictionary Types]
-Dict-Type=.\PopstanLFS.dcf,Input,.\PopstanLFS.fmf
-[Sync]
-Server=http://csweb.teleyah.com/api
-Direction=Put
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "application", 
+  "type": "entry", 
+  "name": "POPSTANLFS", 
+  "label": "POPSTANLFS", 
+  "dictionaries": [
+    {
+      "type": "input", 
+      "filename": "PopstanLFS.dcf", 
+      "parent": "PopstanLFS.fmf"
+    }
+  ], 
+  "forms": [
+    "PopstanLFS.fmf"
+  ], 
+  "questionText": [
+    "PopstanLFS.ent.qsf"
+  ], 
+  "code": [
+    {
+      "type": "main", 
+      "filename": "PopstanLFS.ent.apc"
+    }
+  ], 
+  "messages": [
+    "PopstanLFS.ent.mgf"
+  ], 
+  "logicSettings": {
+    "version": 2.0, 
+    "caseSensitive": {
+      "symbols": false
+    }, 
+    "actionInvoker": {
+      "accessFromWebView": "promptIfNoValidAccessToken", 
+      "convertResultsForLogic": true
+    }
+  }, 
+  "properties": {
+    "askOperatorId": false, 
+    "autoAdvanceOnSelection": false, 
+    "caseTree": "desktopOnly", 
+    "centerForms": false, 
+    "createListing": false, 
+    "createLog": false, 
+    "decimalMark": "dot", 
+    "displayCodesAlongsideLabels": false, 
+    "notes": {
+      "delete": "all", 
+      "edit": "all"
+    }, 
+    "partialSave": {
+      "operatorEnabled": true
+    }, 
+    "showEndCaseMessage": true, 
+    "showOnlyDiscreteValuesInComboBoxes": false, 
+    "showFieldLabels": true, 
+    "showErrorMessageNumbers": false, 
+    "showQuestionText": true, 
+    "showRefusals": true, 
+    "sync": {
+      "server": "http://csweb.teleyah.com/api", 
+      "direction": "put"
+    }, 
+    "verify": {
+      "frequency": 1, 
+      "start": 1
+    }, 
+    "htmlDialogs": true, 
+    "paradata": {
+      "collection": "none", 
+      "recordCoordinates": false, 
+      "recordInitialPropertyValues": false, 
+      "recordIteratorLoadCases": false, 
+      "recordValues": false
+    }
+  }
+}

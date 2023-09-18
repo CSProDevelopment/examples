@@ -1,5 +1,5 @@
 ﻿[TabSpecs]
-Version=CSPro 7.7
+Version=CSPro 8.0
 Label=TableTipsNTricks
 Name=TABLETIPSNTRICKS
 GenerateLogic=Yes
@@ -1020,7 +1020,7 @@ IndentLeft=0.00
 IndentRight=0.00
 Hidden=No
 SpanCells=NotApplicable
-Custom="Hide" of Male subgrouping by modifying value set for sex
+Custom=\"Hide\" of Male subgrouping by modifying value set for sex
 
 [Format]
 Name=SubTitleFmt, 4
@@ -1028,7 +1028,7 @@ IndentLeft=0.00
 IndentRight=0.00
 Hidden=No
 SpanCells=NotApplicable
-Custom="Hide" of subgrouping as in Table 3 but this time using multiple subtables with universes.
+Custom=\"Hide\" of subgrouping as in Table 3 but this time using multiple subtables with universes.
 
 [Format]
 Name=TitleFmt, 4

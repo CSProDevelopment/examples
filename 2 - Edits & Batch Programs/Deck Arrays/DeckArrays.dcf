@@ -1,168 +1,383 @@
-﻿[Dictionary]
-Version=CSPro 7.7
-Label=DeckArrays
-Name=DECKARRAYS_DICT
-RecordTypeStart=1
-RecordTypeLen=1
-Positions=Relative
-ZeroFill=Yes
-DecimalChar=Yes
-SecurityOptions=C609A2A748CABD32D8D00EDAE4186E85B5BB02E155B83C474DEDE6355C22C298
-
-[Level]
-Label=DeckArrays Example
-Name=DECKARRAYS_QUEST
-
-[IdItems]
-
-[Item]
-Label=Province
-Name=PROVINCE
-Start=2
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[Item]
-Label=District
-Name=DISTRICT
-Start=4
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[Item]
-Label=Enumeration Area
-Name=EA
-Start=6
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[Item]
-Label=Household ID
-Name=HHID
-Start=8
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[Record]
-Label=Population
-Name=POPULATION
-RecordTypeValue='1'
-Required=No
-MaxRecords=10
-RecordLen=14
-
-[Item]
-Label=Relationship
-Name=RELATIONSHIP
-Start=10
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Relationship
-Name=RELATIONSHIP_VS1
-Value=1;Head
-Value=2;Spouse
-Value=3;Child
-Value=4;Other Relative
-Value=5;Non-Relative
-
-[Item]
-Label=Sex
-Name=SEX
-Start=11
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Sex
-Name=SEX_VS1
-Value=1;Male
-Value=2;Female
-
-[Item]
-Label=Age
-Name=AGE
-Start=12
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Age
-Name=AGE_VS1
-Value=0:4;0 - 4
-Value=5:9;5 - 9
-Value=10:14;10 - 14
-Value=15:19;15 - 19
-Value=20:24;20 - 24
-Value=25:29;25 - 29
-Value=30:34;30 - 34
-Value=35:39;35 - 39
-Value=40:44;40 - 44
-Value=45:49;45 - 49
-Value=50:54;50 - 54
-Value=55:59;55 - 59
-Value=60:64;60 - 64
-Value=65:69;65 - 69
-Value=70:74;70 - 74
-Value=75:79;75 - 79
-Value=80:84;80 - 84
-Value=85:89;85 - 89
-Value=90:94;90 - 94
-Value=95:99;95 - 99
-
-[ValueSet]
-Label=Age for Education Hotdeck
-Name=AGE_FOR_EDUCATION_VS
-Value=0;0
-Value=1;1
-Value=2;2
-Value=3;3
-Value=4;4
-Value=5;5
-Value=6;6
-Value=7;7
-Value=8;8
-Value=9;9
-Value=10;10
-Value=11;11
-Value=12;12
-Value=13;13
-Value=14;14
-Value=15;15
-Value=16;16
-Value=17;17
-Value=18;18
-Value=19;19
-Value=20;20
-Value=21;21
-Value=22;22
-Value=23;23
-Value=24;24
-Value=25:99;25+
-
-[Item]
-Label=Education
-Name=EDUCATION
-Start=14
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Education
-Name=EDUCATION_VS1
-Value=0;None
-Value=1;Preschool
-Value=2;Elementary School
-Value=3;Middle School
-Value=4;High School
-Value=5;College/University
-Value=6;Graduate School
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "dictionary", 
+  "name": "DECKARRAYS_DICT", 
+  "labels": [ { "text": "DeckArrays" } ], 
+  "security": {
+    "allowDataViewerModifications": true, 
+    "allowExport": true, 
+    "cachedPasswordMinutes": 0, 
+    "settings": "c609a2a748cabd32d8d00edae4186e85b5bb02e155b83c474dede6355c22c298"
+  }, 
+  "recordType": {
+    "start": 1, 
+    "length": 1
+  }, 
+  "defaults": {
+    "decimalMark": true, 
+    "zeroFill": true
+  }, 
+  "relativePositions": true, 
+  "levels": [
+    {
+      "name": "DECKARRAYS_QUEST", 
+      "labels": [ { "text": "DeckArrays Example" } ], 
+      "ids": {
+        "items": [
+          {
+            "name": "PROVINCE", 
+            "labels": [ { "text": "Province" } ], 
+            "contentType": "numeric", 
+            "start": 2, 
+            "length": 2, 
+            "zeroFill": true
+          }, 
+          {
+            "name": "DISTRICT", 
+            "labels": [ { "text": "District" } ], 
+            "contentType": "numeric", 
+            "start": 4, 
+            "length": 2, 
+            "zeroFill": true
+          }, 
+          {
+            "name": "EA", 
+            "labels": [ { "text": "Enumeration Area" } ], 
+            "contentType": "numeric", 
+            "start": 6, 
+            "length": 2, 
+            "zeroFill": true
+          }, 
+          {
+            "name": "HHID", 
+            "labels": [ { "text": "Household ID" } ], 
+            "contentType": "numeric", 
+            "start": 8, 
+            "length": 2, 
+            "zeroFill": true
+          }
+        ]
+      }, 
+      "records": [
+        {
+          "name": "POPULATION", 
+          "labels": [ { "text": "Population" } ], 
+          "recordType": "1", 
+          "occurrences": {
+            "required": false, 
+            "maximum": 10
+          }, 
+          "items": [
+            {
+              "name": "RELATIONSHIP", 
+              "labels": [ { "text": "Relationship" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "RELATIONSHIP_VS1", 
+                  "labels": [ { "text": "Relationship" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Head" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Spouse" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Child" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Other Relative" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Non-Relative" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "SEX", 
+              "labels": [ { "text": "Sex" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "SEX_VS1", 
+                  "labels": [ { "text": "Sex" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Male" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Female" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "AGE", 
+              "labels": [ { "text": "Age" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "AGE_VS1", 
+                  "labels": [ { "text": "Age" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "0 - 4" } ], 
+                      "pairs": [ { "range": [ "0", "4" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "5 - 9" } ], 
+                      "pairs": [ { "range": [ "5", "9" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "10 - 14" } ], 
+                      "pairs": [ { "range": [ "10", "14" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "15 - 19" } ], 
+                      "pairs": [ { "range": [ "15", "19" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "20 - 24" } ], 
+                      "pairs": [ { "range": [ "20", "24" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "25 - 29" } ], 
+                      "pairs": [ { "range": [ "25", "29" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "30 - 34" } ], 
+                      "pairs": [ { "range": [ "30", "34" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "35 - 39" } ], 
+                      "pairs": [ { "range": [ "35", "39" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "40 - 44" } ], 
+                      "pairs": [ { "range": [ "40", "44" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "45 - 49" } ], 
+                      "pairs": [ { "range": [ "45", "49" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "50 - 54" } ], 
+                      "pairs": [ { "range": [ "50", "54" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "55 - 59" } ], 
+                      "pairs": [ { "range": [ "55", "59" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "60 - 64" } ], 
+                      "pairs": [ { "range": [ "60", "64" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "65 - 69" } ], 
+                      "pairs": [ { "range": [ "65", "69" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "70 - 74" } ], 
+                      "pairs": [ { "range": [ "70", "74" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "75 - 79" } ], 
+                      "pairs": [ { "range": [ "75", "79" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "80 - 84" } ], 
+                      "pairs": [ { "range": [ "80", "84" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "85 - 89" } ], 
+                      "pairs": [ { "range": [ "85", "89" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "90 - 94" } ], 
+                      "pairs": [ { "range": [ "90", "94" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "95 - 99" } ], 
+                      "pairs": [ { "range": [ "95", "99" ] } ]
+                    }
+                  ]
+                }, 
+                {
+                  "name": "AGE_FOR_EDUCATION_VS", 
+                  "labels": [ { "text": "Age for Education Hotdeck" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "0" } ], 
+                      "pairs": [ { "value": "0" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "1" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "2" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "3" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "4" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "5" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "6" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "7" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "8" } ], 
+                      "pairs": [ { "value": "8" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "9" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "10" } ], 
+                      "pairs": [ { "value": "10" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "11" } ], 
+                      "pairs": [ { "value": "11" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "12" } ], 
+                      "pairs": [ { "value": "12" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "13" } ], 
+                      "pairs": [ { "value": "13" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "14" } ], 
+                      "pairs": [ { "value": "14" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "15" } ], 
+                      "pairs": [ { "value": "15" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "16" } ], 
+                      "pairs": [ { "value": "16" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "17" } ], 
+                      "pairs": [ { "value": "17" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "18" } ], 
+                      "pairs": [ { "value": "18" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "19" } ], 
+                      "pairs": [ { "value": "19" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "20" } ], 
+                      "pairs": [ { "value": "20" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "21" } ], 
+                      "pairs": [ { "value": "21" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "22" } ], 
+                      "pairs": [ { "value": "22" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "23" } ], 
+                      "pairs": [ { "value": "23" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "24" } ], 
+                      "pairs": [ { "value": "24" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "25+" } ], 
+                      "pairs": [ { "range": [ "25", "99" ] } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "EDUCATION", 
+              "labels": [ { "text": "Education" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "EDUCATION_VS1", 
+                  "labels": [ { "text": "Education" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "None" } ], 
+                      "pairs": [ { "value": "0" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Preschool" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Elementary School" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Middle School" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "High School" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "College/University" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Graduate School" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

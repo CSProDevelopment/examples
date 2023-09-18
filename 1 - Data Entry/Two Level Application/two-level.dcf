@@ -1,171 +1,195 @@
-﻿[Dictionary]
-Version=CSPro 7.7
-Label=two-level
-Name=TWO_LEVEL_DICT
-RecordTypeStart=1
-RecordTypeLen=1
-Positions=Relative
-ZeroFill=Yes
-DecimalChar=Yes
-SecurityOptions=6167418ED326C2A650476C6428535348AF6F4ECF416B694B531FFBD230686352
-
-[Level]
-Label=two-level questionnaire
-Name=TWO_LEVEL_QUEST
-
-[IdItems]
-
-[Item]
-Label=province
-Name=PROV
-Start=2
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[Item]
-Label=district
-Name=DIST
-Start=4
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[Item]
-Label=village
-Name=VILLAGE
-Start=6
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[Item]
-Label=enumeration area
-Name=EA
-Start=8
-Len=3
-DataType=Numeric
-ZeroFill=Yes
-
-[Item]
-Label=building number
-Name=BUILD
-Start=11
-Len=3
-DataType=Numeric
-ZeroFill=Yes
-
-[Record]
-Label=Building record
-Name=BUILD_REC
-RecordTypeValue='1'
-RecordLen=21
-
-[Item]
-Label=Type of roof
-Name=ROOF
-Start=17
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[Item]
-Label=Type of water source
-Name=WATER
-Start=18
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[Item]
-Label=Number of HUs
-Name=NUMBER_OF_HUS
-Start=19
-Len=3
-DataType=Numeric
-ZeroFill=Yes
-
-[Level]
-Label=Household
-Name=HOUSEHOLD
-
-[IdItems]
-
-[Item]
-Label=House number
-Name=HOUSE_NUMBER
-Start=14
-Len=3
-DataType=Numeric
-ZeroFill=Yes
-
-[Record]
-Label=Housing record
-Name=HOUSE_REC
-RecordTypeValue='2'
-Required=No
-RecordLen=19
-
-[Item]
-Label=Telephone
-Name=TELEPHONE
-Start=17
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[Item]
-Label=Type of heat
-Name=HEAT
-Start=18
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[Item]
-Label=Personal computer
-Name=PC
-Start=19
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[Record]
-Label=Person record
-Name=POP_RECC
-RecordTypeValue='3'
-Required=No
-MaxRecords=35
-RecordLen=23
-
-[Item]
-Label=Line number
-Name=LINE
-Start=17
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[Item]
-Label=Sex
-Name=SEX
-Start=19
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[Item]
-Label=Age
-Name=AGE
-Start=20
-Len=3
-DataType=Numeric
-ZeroFill=Yes
-
-[Item]
-Label=Marital status
-Name=M_STATUS
-Start=23
-Len=1
-DataType=Numeric
-ZeroFill=Yes
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "dictionary", 
+  "name": "TWO_LEVEL_DICT", 
+  "labels": [ { "text": "two-level" } ], 
+  "security": {
+    "allowDataViewerModifications": true, 
+    "allowExport": true, 
+    "cachedPasswordMinutes": 0, 
+    "settings": "6167418ed326c2a650476c6428535348af6f4ecf416b694b531ffbd230686352"
+  }, 
+  "recordType": {
+    "start": 1, 
+    "length": 1
+  }, 
+  "defaults": {
+    "decimalMark": true, 
+    "zeroFill": true
+  }, 
+  "relativePositions": true, 
+  "levels": [
+    {
+      "name": "TWO_LEVEL_QUEST", 
+      "labels": [ { "text": "two-level questionnaire" } ], 
+      "ids": {
+        "items": [
+          {
+            "name": "PROV", 
+            "labels": [ { "text": "province" } ], 
+            "contentType": "numeric", 
+            "start": 2, 
+            "length": 2, 
+            "zeroFill": true
+          }, 
+          {
+            "name": "DIST", 
+            "labels": [ { "text": "district" } ], 
+            "contentType": "numeric", 
+            "start": 4, 
+            "length": 2, 
+            "zeroFill": true
+          }, 
+          {
+            "name": "VILLAGE", 
+            "labels": [ { "text": "village" } ], 
+            "contentType": "numeric", 
+            "start": 6, 
+            "length": 2, 
+            "zeroFill": true
+          }, 
+          {
+            "name": "EA", 
+            "labels": [ { "text": "enumeration area" } ], 
+            "contentType": "numeric", 
+            "start": 8, 
+            "length": 3, 
+            "zeroFill": true
+          }, 
+          {
+            "name": "BUILD", 
+            "labels": [ { "text": "building number" } ], 
+            "contentType": "numeric", 
+            "start": 11, 
+            "length": 3, 
+            "zeroFill": true
+          }
+        ]
+      }, 
+      "records": [
+        {
+          "name": "BUILD_REC", 
+          "labels": [ { "text": "Building record" } ], 
+          "recordType": "1", 
+          "occurrences": {
+            "required": true, 
+            "maximum": 1
+          }, 
+          "items": [
+            {
+              "name": "ROOF", 
+              "labels": [ { "text": "Type of roof" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "WATER", 
+              "labels": [ { "text": "Type of water source" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "NUMBER_OF_HUS", 
+              "labels": [ { "text": "Number of HUs" } ], 
+              "contentType": "numeric", 
+              "length": 3, 
+              "zeroFill": true
+            }
+          ]
+        }
+      ]
+    }, 
+    {
+      "name": "HOUSEHOLD", 
+      "labels": [ { "text": "Household" } ], 
+      "ids": {
+        "items": [
+          {
+            "name": "HOUSE_NUMBER", 
+            "labels": [ { "text": "House number" } ], 
+            "contentType": "numeric", 
+            "start": 14, 
+            "length": 3, 
+            "zeroFill": true
+          }
+        ]
+      }, 
+      "records": [
+        {
+          "name": "HOUSE_REC", 
+          "labels": [ { "text": "Housing record" } ], 
+          "recordType": "2", 
+          "occurrences": {
+            "required": false, 
+            "maximum": 1
+          }, 
+          "items": [
+            {
+              "name": "TELEPHONE", 
+              "labels": [ { "text": "Telephone" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "HEAT", 
+              "labels": [ { "text": "Type of heat" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "PC", 
+              "labels": [ { "text": "Personal computer" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true
+            }
+          ]
+        }, 
+        {
+          "name": "POP_RECC", 
+          "labels": [ { "text": "Person record" } ], 
+          "recordType": "3", 
+          "occurrences": {
+            "required": false, 
+            "maximum": 35
+          }, 
+          "items": [
+            {
+              "name": "LINE", 
+              "labels": [ { "text": "Line number" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "SEX", 
+              "labels": [ { "text": "Sex" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "AGE", 
+              "labels": [ { "text": "Age" } ], 
+              "contentType": "numeric", 
+              "length": 3, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "M_STATUS", 
+              "labels": [ { "text": "Marital status" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

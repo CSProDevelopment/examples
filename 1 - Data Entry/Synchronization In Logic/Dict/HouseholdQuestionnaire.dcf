@@ -1,96 +1,179 @@
-﻿[Dictionary]
-Version=CSPro 7.7
-Label=HouseholdQuestionnaire
-Name=HOUSEHOLDQUESTIONNAIRE_DICT
-RecordTypeStart=1
-RecordTypeLen=1
-Positions=Relative
-ZeroFill=No
-DecimalChar=Yes
-SecurityOptions=4EE521943AD34196F084F3BB4962A56B9D1E199FCA2A4D490221CC69431AF8AB63FF6A70F5B15500B155B4156B0DDBF7
-
-[Level]
-Label=HouseholdQuestionnaire questionnaire
-Name=HOUSEHOLDQUESTIONNAIRE_QUEST
-
-[IdItems]
-
-[Item]
-Label=Household number
-Name=HOUSEHOLD_NUMBER
-Start=2
-Len=3
-DataType=Numeric
-
-[Record]
-Label=Population
-Name=POPULATION
-RecordTypeValue='P'
-MaxRecords=30
-RecordLen=60
-
-[Item]
-Label=Names
-Name=NAMES
-Start=5
-Len=50
-DataType=Alpha
-
-[Item]
-Label=Relationship
-Name=RELATIONSHIP
-Start=55
-Len=2
-DataType=Numeric
-
-[ValueSet]
-Label=Relationship
-Name=RELATIONSHIP_VS1
-Value=1;Head
-Value=2;Spouse
-Value=3;Son/daugher
-Value=4;Parent/in-law
-Value=5;Brother/sister
-Value=6;Niece/nephew
-Value=7;Grandchild
-Value=8;Other relative
-Value=9;Non-relative
-
-[Item]
-Label=Sex
-Name=SEX
-Start=57
-Len=1
-DataType=Numeric
-
-[ValueSet]
-Label=Sex
-Name=SEX_VS1
-Value=1;Male
-Value=2;Female
-
-[Item]
-Label=Age
-Name=AGE
-Start=58
-Len=2
-DataType=Numeric
-
-[ValueSet]
-Label=Age
-Name=AGE_VS1
-Value=0:98;0-98
-Value=99;99+
-
-[Item]
-Label=More people
-Name=MORE_PEOPLE
-Start=60
-Len=1
-DataType=Numeric
-
-[ValueSet]
-Label=More people
-Name=MORE_PEOPLE_VS1
-Value=1;Yes
-Value=2;No
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "dictionary", 
+  "name": "HOUSEHOLDQUESTIONNAIRE_DICT", 
+  "labels": [ { "text": "HouseholdQuestionnaire" } ], 
+  "security": {
+    "allowDataViewerModifications": true, 
+    "allowExport": true, 
+    "cachedPasswordMinutes": 0, 
+    "settings": "4ee521943ad34196f084f3bb4962a56b9d1e199fca2a4d490221cc69431af8ab63ff6a70f5b15500b155b4156b0ddbf7"
+  }, 
+  "recordType": {
+    "start": 1, 
+    "length": 1
+  }, 
+  "defaults": {
+    "decimalMark": true, 
+    "zeroFill": false
+  }, 
+  "relativePositions": true, 
+  "levels": [
+    {
+      "name": "HOUSEHOLDQUESTIONNAIRE_QUEST", 
+      "labels": [ { "text": "HouseholdQuestionnaire questionnaire" } ], 
+      "ids": {
+        "items": [
+          {
+            "name": "HOUSEHOLD_NUMBER", 
+            "labels": [ { "text": "Household number" } ], 
+            "contentType": "numeric", 
+            "start": 2, 
+            "length": 3, 
+            "zeroFill": false
+          }
+        ]
+      }, 
+      "records": [
+        {
+          "name": "POPULATION", 
+          "labels": [ { "text": "Population" } ], 
+          "recordType": "P", 
+          "occurrences": {
+            "required": true, 
+            "maximum": 30
+          }, 
+          "items": [
+            {
+              "name": "NAMES", 
+              "labels": [ { "text": "Names" } ], 
+              "contentType": "alpha", 
+              "length": 50
+            }, 
+            {
+              "name": "RELATIONSHIP", 
+              "labels": [ { "text": "Relationship" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "RELATIONSHIP_VS1", 
+                  "labels": [ { "text": "Relationship" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Head" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Spouse" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Son/daugher" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Parent/in-law" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Brother/sister" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Niece/nephew" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Grandchild" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Other relative" } ], 
+                      "pairs": [ { "value": "8" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Non-relative" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "SEX", 
+              "labels": [ { "text": "Sex" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "SEX_VS1", 
+                  "labels": [ { "text": "Sex" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Male" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Female" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "AGE", 
+              "labels": [ { "text": "Age" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "AGE_VS1", 
+                  "labels": [ { "text": "Age" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "0-98" } ], 
+                      "pairs": [ { "range": [ "0", "98" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "99+" } ], 
+                      "pairs": [ { "value": "99" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "MORE_PEOPLE", 
+              "labels": [ { "text": "More people" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "MORE_PEOPLE_VS1", 
+                  "labels": [ { "text": "More people" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Yes" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

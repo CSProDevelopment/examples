@@ -1,18 +1,79 @@
-﻿[CSPro Application]
-Version=CSPro 7.7
-Label=LOOKUP
-Name=LOOKUP
-AppType=DataEntry
-[External Dictionaries]
-File=.\Lookup.dcf
-[AppCode]
-File=.\Lookup.ENT.apc
-[Message]
-File=.\Lookup.ENT.mgf
-[Help]
-File=.\Lookup.ENT.qsf
-[Forms]
-File=.\Lookup.fmf
-[Dictionary Types]
-Dict-Type=.\Lookup.dcf,External
-Dict-Type=.\Popstan2.dcf,Input,.\Lookup.fmf
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "application", 
+  "type": "entry", 
+  "name": "LOOKUP", 
+  "label": "LOOKUP", 
+  "dictionaries": [
+    {
+      "type": "input", 
+      "filename": "Popstan2.dcf", 
+      "parent": "Lookup.fmf"
+    }, 
+    {
+      "type": "external", 
+      "filename": "Lookup.dcf"
+    }
+  ], 
+  "forms": [
+    "Lookup.fmf"
+  ], 
+  "questionText": [
+    "Lookup.ENT.qsf"
+  ], 
+  "code": [
+    {
+      "type": "main", 
+      "filename": "Lookup.ENT.apc"
+    }
+  ], 
+  "messages": [
+    "Lookup.ENT.mgf"
+  ], 
+  "logicSettings": {
+    "version": 2.0, 
+    "caseSensitive": {
+      "symbols": false
+    }, 
+    "actionInvoker": {
+      "accessFromWebView": "promptIfNoValidAccessToken", 
+      "convertResultsForLogic": true
+    }
+  }, 
+  "properties": {
+    "askOperatorId": true, 
+    "autoAdvanceOnSelection": false, 
+    "caseTree": "mobileOnly", 
+    "centerForms": false, 
+    "createListing": true, 
+    "createLog": true, 
+    "decimalMark": "dot", 
+    "displayCodesAlongsideLabels": false, 
+    "notes": {
+      "delete": "all", 
+      "edit": "all"
+    }, 
+    "partialSave": {
+      "operatorEnabled": false
+    }, 
+    "showEndCaseMessage": true, 
+    "showOnlyDiscreteValuesInComboBoxes": false, 
+    "showFieldLabels": true, 
+    "showErrorMessageNumbers": true, 
+    "showQuestionText": false, 
+    "showRefusals": true, 
+    "verify": {
+      "frequency": 1, 
+      "start": 1
+    }, 
+    "htmlDialogs": true, 
+    "paradata": {
+      "collection": "none", 
+      "recordCoordinates": false, 
+      "recordInitialPropertyValues": false, 
+      "recordIteratorLoadCases": false, 
+      "recordValues": false
+    }
+  }
+}

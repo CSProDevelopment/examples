@@ -1,36 +1,60 @@
-﻿[Dictionary]
-Version=CSPro 7.7
-Label=Weighted Tables_wrk
-Name=WEIGHTED_TABLES_WRK_DICT
-RecordTypeStart=1
-RecordTypeLen=1
-Positions=Relative
-ZeroFill=No
-DecimalChar=Yes
-SecurityOptions=1B9801CA33C30E6021F1E9DD3769D36C1391E68D823FEA3F7BE004C03DCBC10460001072E8B077C6C9A41E5FF442A6FD
-
-[Level]
-Label=Weighted Tables_wrk questionnaire
-Name=WEIGHTED_TABLES_WRK_QUEST
-
-[IdItems]
-
-[Item]
-Label=Weighted Tables_wrk identification
-Name=WEIGHTED_TABLES_WRK_ID
-Start=2
-Len=1
-DataType=Numeric
-
-[Record]
-Label=System Record
-Name=SYSTEM_REC
-RecordTypeValue='1'
-RecordLen=3
-
-[Item]
-Label=System Total
-Name=SYSTEM_TOTAL
-Start=3
-Len=1
-DataType=Numeric
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "dictionary", 
+  "name": "WEIGHTED_TABLES_WRK_DICT", 
+  "labels": [ { "text": "Weighted Tables_wrk" } ], 
+  "security": {
+    "allowDataViewerModifications": true, 
+    "allowExport": true, 
+    "cachedPasswordMinutes": 0, 
+    "settings": "1b9801ca33c30e6021f1e9dd3769d36c1391e68d823fea3f7be004c03dcbc10460001072e8b077c6c9a41e5ff442a6fd"
+  }, 
+  "recordType": {
+    "start": 1, 
+    "length": 1
+  }, 
+  "defaults": {
+    "decimalMark": true, 
+    "zeroFill": false
+  }, 
+  "relativePositions": true, 
+  "levels": [
+    {
+      "name": "WEIGHTED_TABLES_WRK_QUEST", 
+      "labels": [ { "text": "Weighted Tables_wrk questionnaire" } ], 
+      "ids": {
+        "items": [
+          {
+            "name": "WEIGHTED_TABLES_WRK_ID", 
+            "labels": [ { "text": "Weighted Tables_wrk identification" } ], 
+            "contentType": "numeric", 
+            "start": 2, 
+            "length": 1, 
+            "zeroFill": false
+          }
+        ]
+      }, 
+      "records": [
+        {
+          "name": "SYSTEM_REC", 
+          "labels": [ { "text": "System Record" } ], 
+          "recordType": "1", 
+          "occurrences": {
+            "required": true, 
+            "maximum": 1
+          }, 
+          "items": [
+            {
+              "name": "SYSTEM_TOTAL", 
+              "labels": [ { "text": "System Total" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

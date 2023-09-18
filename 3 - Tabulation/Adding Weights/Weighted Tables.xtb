@@ -1,15 +1,46 @@
-﻿[CSPro Application]
-Version=CSPro 7.7
-Label=WEIGHTED_TABLES
-Name=WEIGHTED_TABLES
-AppType=Tabulation
-[External Dictionaries]
-File=.\Weighted Tables.xtb.wrk.dcf
-[AppCode]
-File=.\Weighted Tables.xtb.apc
-[Message]
-File=.\Weighted Tables.xtb.mgf
-[TabSpecs]
-File=.\Weighted Tables.xts
-[Dictionary Types]
-Dict-Type=.\Weighted Tables.xtb.wrk.dcf,Working
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "application", 
+  "type": "tabulation", 
+  "name": "WEIGHTED_TABLES", 
+  "label": "WEIGHTED_TABLES", 
+  "dictionaries": [
+    {
+      "type": "working", 
+      "filename": "Weighted Tables.xtb.wrk.dcf"
+    }
+  ], 
+  "tableSpecs": [
+    "Weighted Tables.xts"
+  ], 
+  "code": [
+    {
+      "type": "main", 
+      "filename": "Weighted Tables.xtb.apc"
+    }
+  ], 
+  "messages": [
+    "Weighted Tables.xtb.mgf"
+  ], 
+  "logicSettings": {
+    "version": 2.0, 
+    "caseSensitive": {
+      "symbols": false
+    }, 
+    "actionInvoker": {
+      "accessFromWebView": "promptIfNoValidAccessToken", 
+      "convertResultsForLogic": true
+    }
+  }, 
+  "properties": {
+    "htmlDialogs": true, 
+    "paradata": {
+      "collection": "none", 
+      "recordCoordinates": false, 
+      "recordInitialPropertyValues": false, 
+      "recordIteratorLoadCases": false, 
+      "recordValues": false
+    }
+  }
+}

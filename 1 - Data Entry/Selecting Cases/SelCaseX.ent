@@ -1,21 +1,79 @@
-﻿[CSPro Application]
-Version=CSPro 7.7
-Label=SELCASEX
-Name=SELCASEX
-AppType=DataEntry
-OperatorID=No
-CreateListing=No
-CreateLog=No
-[External Dictionaries]
-File=.\Enumerator Information.dcf
-[AppCode]
-File=.\SelCaseX.ent.apc
-[Message]
-File=.\SelCaseX.ent.mgf
-[Help]
-File=.\SelCaseX.ent.qsf
-[Forms]
-File=.\SelCaseX.fmf
-[Dictionary Types]
-Dict-Type=.\Enumerator Information.dcf,External
-Dict-Type=.\SelCaseX.dcf,Input,.\SelCaseX.fmf
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "application", 
+  "type": "entry", 
+  "name": "SELCASEX", 
+  "label": "SELCASEX", 
+  "dictionaries": [
+    {
+      "type": "input", 
+      "filename": "SelCaseX.dcf", 
+      "parent": "SelCaseX.fmf"
+    }, 
+    {
+      "type": "external", 
+      "filename": "Enumerator Information.dcf"
+    }
+  ], 
+  "forms": [
+    "SelCaseX.fmf"
+  ], 
+  "questionText": [
+    "SelCaseX.ent.qsf"
+  ], 
+  "code": [
+    {
+      "type": "main", 
+      "filename": "SelCaseX.ent.apc"
+    }
+  ], 
+  "messages": [
+    "SelCaseX.ent.mgf"
+  ], 
+  "logicSettings": {
+    "version": 2.0, 
+    "caseSensitive": {
+      "symbols": false
+    }, 
+    "actionInvoker": {
+      "accessFromWebView": "promptIfNoValidAccessToken", 
+      "convertResultsForLogic": true
+    }
+  }, 
+  "properties": {
+    "askOperatorId": false, 
+    "autoAdvanceOnSelection": false, 
+    "caseTree": "mobileOnly", 
+    "centerForms": false, 
+    "createListing": false, 
+    "createLog": false, 
+    "decimalMark": "dot", 
+    "displayCodesAlongsideLabels": false, 
+    "notes": {
+      "delete": "all", 
+      "edit": "all"
+    }, 
+    "partialSave": {
+      "operatorEnabled": false
+    }, 
+    "showEndCaseMessage": true, 
+    "showOnlyDiscreteValuesInComboBoxes": false, 
+    "showFieldLabels": true, 
+    "showErrorMessageNumbers": true, 
+    "showQuestionText": false, 
+    "showRefusals": true, 
+    "verify": {
+      "frequency": 1, 
+      "start": 1
+    }, 
+    "htmlDialogs": true, 
+    "paradata": {
+      "collection": "none", 
+      "recordCoordinates": false, 
+      "recordInitialPropertyValues": false, 
+      "recordIteratorLoadCases": false, 
+      "recordValues": false
+    }
+  }
+}

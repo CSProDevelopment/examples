@@ -1,58 +1,78 @@
-﻿[Dictionary]
-Version=CSPro 7.7
-Label=auxil
-Name=AUXIL_DICT
-RecordTypeStart=0
-RecordTypeLen=0
-Positions=Relative
-ZeroFill=No
-DecimalChar=Yes
-SecurityOptions=C3ED33B4F8FA28756AB52ACA356939CFC23E6C33D154B72BA423B18BBE5528B1
-
-[Level]
-Label=auxil questionnaire
-Name=AUXIL_QUEST
-
-[IdItems]
-
-[Item]
-Label=auxil identification
-Name=AUXIL_ID
-Start=1
-Len=1
-DataType=Numeric
-
-[Record]
-Label=auxil record
-Name=AUXIL_REC
-RecordTypeValue=''
-RecordLen=29
-
-[Item]
-Label=Coding Type
-Name=AUXILTYPE
-Start=2
-Len=1
-DataType=Numeric
-
-[Item]
-Label=Coding Text
-Name=AUXILTXT
-Start=3
-Len=10
-DataType=Alpha
-
-[Item]
-Label=Occupation or Industry Text
-Name=AUXILKEY
-Start=13
-Len=14
-DataType=Alpha
-
-[Item]
-Label=Occupation/Industry Code
-Name=AUXILCODE
-Start=27
-Len=3
-DataType=Numeric
-ZeroFill=Yes
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "dictionary", 
+  "name": "AUXIL_DICT", 
+  "labels": [ { "text": "auxil" } ], 
+  "security": {
+    "allowDataViewerModifications": true, 
+    "allowExport": true, 
+    "cachedPasswordMinutes": 0, 
+    "settings": "c3ed33b4f8fa28756ab52aca356939cfc23e6c33d154b72ba423b18bbe5528b1"
+  }, 
+  "recordType": {
+    "start": 0, 
+    "length": 0
+  }, 
+  "defaults": {
+    "decimalMark": true, 
+    "zeroFill": false
+  }, 
+  "relativePositions": true, 
+  "levels": [
+    {
+      "name": "AUXIL_QUEST", 
+      "labels": [ { "text": "auxil questionnaire" } ], 
+      "ids": {
+        "items": [
+          {
+            "name": "AUXIL_ID", 
+            "labels": [ { "text": "auxil identification" } ], 
+            "contentType": "numeric", 
+            "start": 1, 
+            "length": 1, 
+            "zeroFill": false
+          }
+        ]
+      }, 
+      "records": [
+        {
+          "name": "AUXIL_REC", 
+          "labels": [ { "text": "auxil record" } ], 
+          "occurrences": {
+            "required": true, 
+            "maximum": 1
+          }, 
+          "items": [
+            {
+              "name": "AUXILTYPE", 
+              "labels": [ { "text": "Coding Type" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": false
+            }, 
+            {
+              "name": "AUXILTXT", 
+              "labels": [ { "text": "Coding Text" } ], 
+              "contentType": "alpha", 
+              "length": 10
+            }, 
+            {
+              "name": "AUXILKEY", 
+              "labels": [ { "text": "Occupation or Industry Text" } ], 
+              "contentType": "alpha", 
+              "length": 14
+            }, 
+            {
+              "name": "AUXILCODE", 
+              "labels": [ { "text": "Occupation/Industry Code" } ], 
+              "contentType": "numeric", 
+              "length": 3, 
+              "zeroFill": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

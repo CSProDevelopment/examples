@@ -1,29 +1,91 @@
-﻿[CSPro Application]
-Version=CSPro 7.7
-Label=MENU
-Name=MENU
-AppType=DataEntry
-OperatorID=No
-CAPI=Yes
-CreateListing=No
-CreateLog=No
-ShowErrorMessageNumbers=No
-[External Dictionaries]
-File=..\Questionnaire\PopstanLFS.dcf
-File=.\Staff.dcf
-File=.\Sample.dcf
-File=.\Status.dcf
-[AppCode]
-File=.\Menu.ent.apc
-[Message]
-File=.\Menu.ent.mgf
-[Help]
-File=.\Menu.ent.qsf
-[Forms]
-File=.\Menu.fmf
-[Dictionary Types]
-Dict-Type=.\Menu.dcf,Input,.\Menu.fmf
-Dict-Type=..\Questionnaire\PopstanLFS.dcf,External
-Dict-Type=.\Staff.dcf,External
-Dict-Type=.\Sample.dcf,External
-Dict-Type=.\Status.dcf,External
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "application", 
+  "type": "entry", 
+  "name": "MENU", 
+  "label": "MENU", 
+  "dictionaries": [
+    {
+      "type": "input", 
+      "filename": "Menu.dcf", 
+      "parent": "Menu.fmf"
+    }, 
+    {
+      "type": "external", 
+      "filename": "../Questionnaire/PopstanLFS.dcf"
+    }, 
+    {
+      "type": "external", 
+      "filename": "Staff.dcf"
+    }, 
+    {
+      "type": "external", 
+      "filename": "Sample.dcf"
+    }, 
+    {
+      "type": "external", 
+      "filename": "Status.dcf"
+    }
+  ], 
+  "forms": [
+    "Menu.fmf"
+  ], 
+  "questionText": [
+    "Menu.ent.qsf"
+  ], 
+  "code": [
+    {
+      "type": "main", 
+      "filename": "Menu.ent.apc"
+    }
+  ], 
+  "messages": [
+    "Menu.ent.mgf"
+  ], 
+  "logicSettings": {
+    "version": 2.0, 
+    "caseSensitive": {
+      "symbols": false
+    }, 
+    "actionInvoker": {
+      "accessFromWebView": "promptIfNoValidAccessToken", 
+      "convertResultsForLogic": true
+    }
+  }, 
+  "properties": {
+    "askOperatorId": false, 
+    "autoAdvanceOnSelection": false, 
+    "caseTree": "mobileOnly", 
+    "centerForms": false, 
+    "createListing": false, 
+    "createLog": false, 
+    "decimalMark": "dot", 
+    "displayCodesAlongsideLabels": false, 
+    "notes": {
+      "delete": "all", 
+      "edit": "all"
+    }, 
+    "partialSave": {
+      "operatorEnabled": false
+    }, 
+    "showEndCaseMessage": true, 
+    "showOnlyDiscreteValuesInComboBoxes": false, 
+    "showFieldLabels": true, 
+    "showErrorMessageNumbers": false, 
+    "showQuestionText": true, 
+    "showRefusals": true, 
+    "verify": {
+      "frequency": 1, 
+      "start": 1
+    }, 
+    "htmlDialogs": true, 
+    "paradata": {
+      "collection": "none", 
+      "recordCoordinates": false, 
+      "recordInitialPropertyValues": false, 
+      "recordIteratorLoadCases": false, 
+      "recordValues": false
+    }
+  }
+}

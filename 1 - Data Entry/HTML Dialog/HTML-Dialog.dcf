@@ -1,42 +1,76 @@
-﻿[Dictionary]
-Version=CSPro 7.7
-Label=HTML-Dialog
-Name=HTML_DIALOG_DICT
-RecordTypeStart=1
-RecordTypeLen=1
-Positions=Relative
-ZeroFill=No
-DecimalChar=Yes
-SecurityOptions=25E61089BE3F0B73860719513C175DC4C2DBA57383EA13E85861E9131CB9683E
-
-[Level]
-Label=HTML-Dialog Level
-Name=HTML_DIALOG_LEVEL
-
-[IdItems]
-
-[Item]
-Label=HTML-Dialog Identification
-Name=HTML_DIALOG_ID
-Start=2
-Len=1
-DataType=Numeric
-
-[Record]
-Label=HTML-Dialog Record
-Name=HTML_DIALOG_REC
-RecordTypeValue='1'
-RecordLen=3
-
-[Item]
-Label=Menu
-Name=MENU
-Start=3
-Len=1
-DataType=Numeric
-
-[ValueSet]
-Label=Menu
-Name=MENU_VS1
-Value=1;Basic input
-Value=2;Basic output
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "dictionary", 
+  "name": "HTML_DIALOG_DICT", 
+  "labels": [ { "text": "HTML-Dialog" } ], 
+  "security": {
+    "allowDataViewerModifications": true, 
+    "allowExport": true, 
+    "cachedPasswordMinutes": 0, 
+    "settings": "25e61089be3f0b73860719513c175dc4c2dba57383ea13e85861e9131cb9683e"
+  }, 
+  "recordType": {
+    "start": 1, 
+    "length": 1
+  }, 
+  "defaults": {
+    "decimalMark": true, 
+    "zeroFill": false
+  }, 
+  "relativePositions": true, 
+  "levels": [
+    {
+      "name": "HTML_DIALOG_LEVEL", 
+      "labels": [ { "text": "HTML-Dialog Level" } ], 
+      "ids": {
+        "items": [
+          {
+            "name": "HTML_DIALOG_ID", 
+            "labels": [ { "text": "HTML-Dialog Identification" } ], 
+            "contentType": "numeric", 
+            "start": 2, 
+            "length": 1, 
+            "zeroFill": false
+          }
+        ]
+      }, 
+      "records": [
+        {
+          "name": "HTML_DIALOG_REC", 
+          "labels": [ { "text": "HTML-Dialog Record" } ], 
+          "recordType": "1", 
+          "occurrences": {
+            "required": true, 
+            "maximum": 1
+          }, 
+          "items": [
+            {
+              "name": "MENU", 
+              "labels": [ { "text": "Menu" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "MENU_VS1", 
+                  "labels": [ { "text": "Menu" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Basic input" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Basic output" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

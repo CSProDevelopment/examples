@@ -1,77 +1,135 @@
-﻿[Dictionary]
-Version=CSPro 7.7
-Label=Status
-Name=STATUS_DICT
-RecordTypeStart=0
-RecordTypeLen=0
-Positions=Relative
-ZeroFill=No
-DecimalChar=Yes
-SecurityOptions=ECEE78D7A06EA8B42F044264C529397202FCDB2E3C6A6155E7BBAEE3408D583D
-
-[Level]
-Label=Status questionnaire
-Name=STATUS_QUEST
-
-[IdItems]
-
-[Item]
-Label=Province
-Name=STATPROV
-Start=1
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[Item]
-Label=District
-Name=STATDIST
-Start=2
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[Item]
-Label=Dwelling unit number
-Name=STATDWNO
-Start=4
-Len=3
-DataType=Numeric
-ZeroFill=Yes
-
-[Item]
-Label=Household number
-Name=STATHHNO
-Start=7
-Len=3
-DataType=Numeric
-ZeroFill=Yes
-
-[Record]
-Label=Status record
-Name=STATUS_REC
-RecordTypeValue=''
-RecordLen=11
-
-[Item]
-Label=Household final result
-Name=STATFIR
-Start=10
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Household final result
-Name=STATFIR_VS1
-Value=0;Not started
-Value=1;Completed
-Value=2;Partly Completed
-Value=3;Refused
-Value=4;Non-Contact
-Value=5;Temporarily Absent
-Value=6;Inadequate Informant
-Value=7;Seasonal, Temporary Resident
-Value=8;Under Construction, Vacant, Demolished
-Value=9;Not a Housing Unit
-Value=10;Other (specify)
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "dictionary", 
+  "name": "STATUS_DICT", 
+  "labels": [ { "text": "Status" } ], 
+  "security": {
+    "allowDataViewerModifications": true, 
+    "allowExport": true, 
+    "cachedPasswordMinutes": 0, 
+    "settings": "ecee78d7a06ea8b42f044264c529397202fcdb2e3c6a6155e7bbaee3408d583d"
+  }, 
+  "recordType": {
+    "start": 0, 
+    "length": 0
+  }, 
+  "defaults": {
+    "decimalMark": true, 
+    "zeroFill": false
+  }, 
+  "relativePositions": true, 
+  "levels": [
+    {
+      "name": "STATUS_QUEST", 
+      "labels": [ { "text": "Status questionnaire" } ], 
+      "ids": {
+        "items": [
+          {
+            "name": "STATPROV", 
+            "labels": [ { "text": "Province" } ], 
+            "contentType": "numeric", 
+            "start": 1, 
+            "length": 1, 
+            "zeroFill": true
+          }, 
+          {
+            "name": "STATDIST", 
+            "labels": [ { "text": "District" } ], 
+            "contentType": "numeric", 
+            "start": 2, 
+            "length": 2, 
+            "zeroFill": true
+          }, 
+          {
+            "name": "STATDWNO", 
+            "labels": [ { "text": "Dwelling unit number" } ], 
+            "contentType": "numeric", 
+            "start": 4, 
+            "length": 3, 
+            "zeroFill": true
+          }, 
+          {
+            "name": "STATHHNO", 
+            "labels": [ { "text": "Household number" } ], 
+            "contentType": "numeric", 
+            "start": 7, 
+            "length": 3, 
+            "zeroFill": true
+          }
+        ]
+      }, 
+      "records": [
+        {
+          "name": "STATUS_REC", 
+          "labels": [ { "text": "Status record" } ], 
+          "occurrences": {
+            "required": true, 
+            "maximum": 1
+          }, 
+          "items": [
+            {
+              "name": "STATFIR", 
+              "labels": [ { "text": "Household final result" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "STATFIR_VS1", 
+                  "labels": [ { "text": "Household final result" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Not started" } ], 
+                      "pairs": [ { "value": "0" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Completed" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Partly Completed" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Refused" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Non-Contact" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Temporarily Absent" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Inadequate Informant" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Seasonal, Temporary Resident" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Under Construction, Vacant, Demolished" } ], 
+                      "pairs": [ { "value": "8" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not a Housing Unit" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Other (specify)" } ], 
+                      "pairs": [ { "value": "10" } ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

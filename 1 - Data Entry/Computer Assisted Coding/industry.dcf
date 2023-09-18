@@ -1,37 +1,58 @@
-﻿[Dictionary]
-Version=CSPro 7.7
-Label=Industry
-Name=INDUSTRY_DICT
-RecordTypeStart=0
-RecordTypeLen=0
-Positions=Relative
-ZeroFill=No
-DecimalChar=Yes
-SecurityOptions=59923825320A0EAF170101346D10DDDCDD2793C5CB8580363C8E0CB851FB6A7E
-
-[Level]
-Label=Industry questionnaire
-Name=INDUSTRY_QUEST
-
-[IdItems]
-
-[Item]
-Label=Industry identification
-Name=INDID
-Start=1
-Len=3
-DataType=Numeric
-ZeroFill=Yes
-
-[Record]
-Label=Industry record
-Name=INDUSTRY_REC
-RecordTypeValue=''
-RecordLen=78
-
-[Item]
-Label=List of industries
-Name=INDTXT
-Start=4
-Len=75
-DataType=Alpha
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "dictionary", 
+  "name": "INDUSTRY_DICT", 
+  "labels": [ { "text": "Industry" } ], 
+  "security": {
+    "allowDataViewerModifications": true, 
+    "allowExport": true, 
+    "cachedPasswordMinutes": 0, 
+    "settings": "59923825320a0eaf170101346d10dddcdd2793c5cb8580363c8e0cb851fb6a7e"
+  }, 
+  "recordType": {
+    "start": 0, 
+    "length": 0
+  }, 
+  "defaults": {
+    "decimalMark": true, 
+    "zeroFill": false
+  }, 
+  "relativePositions": true, 
+  "levels": [
+    {
+      "name": "INDUSTRY_QUEST", 
+      "labels": [ { "text": "Industry questionnaire" } ], 
+      "ids": {
+        "items": [
+          {
+            "name": "INDID", 
+            "labels": [ { "text": "Industry identification" } ], 
+            "contentType": "numeric", 
+            "start": 1, 
+            "length": 3, 
+            "zeroFill": true
+          }
+        ]
+      }, 
+      "records": [
+        {
+          "name": "INDUSTRY_REC", 
+          "labels": [ { "text": "Industry record" } ], 
+          "occurrences": {
+            "required": true, 
+            "maximum": 1
+          }, 
+          "items": [
+            {
+              "name": "INDTXT", 
+              "labels": [ { "text": "List of industries" } ], 
+              "contentType": "alpha", 
+              "length": 75
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

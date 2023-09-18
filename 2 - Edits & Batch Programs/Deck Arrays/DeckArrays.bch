@@ -1,13 +1,47 @@
-﻿[CSPro Application]
-Version=CSPro 7.7
-Label=DECKARRAYS
-Name=DECKARRAYS
-AppType=Batch
-[AppCode]
-File=.\DeckArrays.bch.apc
-[Message]
-File=.\DeckArrays.bch.mgf
-[Order]
-File=.\DeckArrays.ord
-[Dictionary Types]
-Dict-Type=.\DeckArrays.dcf,Input,.\DeckArrays.ord
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "application", 
+  "type": "batch", 
+  "name": "DECKARRAYS", 
+  "label": "DECKARRAYS", 
+  "dictionaries": [
+    {
+      "type": "input", 
+      "filename": "DeckArrays.dcf", 
+      "parent": "DeckArrays.ord"
+    }
+  ], 
+  "order": [
+    "DeckArrays.ord"
+  ], 
+  "code": [
+    {
+      "type": "main", 
+      "filename": "DeckArrays.bch.apc"
+    }
+  ], 
+  "messages": [
+    "DeckArrays.bch.mgf"
+  ], 
+  "logicSettings": {
+    "version": 2.0, 
+    "caseSensitive": {
+      "symbols": false
+    }, 
+    "actionInvoker": {
+      "accessFromWebView": "promptIfNoValidAccessToken", 
+      "convertResultsForLogic": true
+    }
+  }, 
+  "properties": {
+    "htmlDialogs": true, 
+    "paradata": {
+      "collection": "none", 
+      "recordCoordinates": false, 
+      "recordInitialPropertyValues": false, 
+      "recordIteratorLoadCases": false, 
+      "recordValues": false
+    }
+  }
+}

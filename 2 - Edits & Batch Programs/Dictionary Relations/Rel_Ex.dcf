@@ -1,383 +1,653 @@
-﻿[Dictionary]
-Version=CSPro 7.7
-Label=REL
-Name=REL
-RecordTypeStart=1
-RecordTypeLen=1
-Positions=Relative
-ZeroFill=Yes
-DecimalChar=No
-SecurityOptions=1025A136EE70A12875D9E348D8D61FA0
-
-[Level]
-Label=Questionnaire
-Name=QUEST
-
-[IdItems]
-
-[Item]
-Label=Serial Number
-Name=SERIAL_NUMBER
-Start=2
-Len=4
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Serial Number
-Name=SERIAL_NUMBER_VS1
-Value=1:4400
-
-[Record]
-Label=Housing
-Name=HOUSING
-RecordTypeValue='1'
-RecordLen=8
-
-[Item]
-Label=Total Persons
-Name=TOTAL_PERSONS
-Start=6
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Total Persons
-Name=TOTAL_PERSONS_VS1
-Value=0:99
-
-[Item]
-Label=Eligible Women
-Name=ELIG_WOMEN
-Start=8
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Eligible Women
-Name=ELIG_WOMEN_VS1
-Value=0:5
-
-[Record]
-Label=Pop
-Name=POP
-RecordTypeValue='2'
-Required=No
-MaxRecords=10
-RecordLen=12
-
-[Item]
-Label=Line Number
-Name=LINE_NUMBER
-Start=6
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Line Number
-Name=LINE_NUMBER_VS1
-Value=1:50
-
-[Item]
-Label=Relationship
-Name=RELATIONSHIP
-Start=8
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Relationship
-Name=RELATIONSHIP_VS1
-Value=0;Head
-Value=1;Spouse
-Value=2;Child
-Value=3;Parent
-Value=4;Grandchild
-Value=5;Sibling
-Value=6;Other Relative
-Value=7;Maid
-Value=8;Other
-
-[Item]
-Label=Sex
-Name=SEX
-Start=9
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Sex
-Name=SEX_VS1
-Value=1;Male
-Value=2;Female
-Value=9;NR
-Name=MISSING,Special
-
-[Item]
-Label=Age
-Name=AGE
-Start=10
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Age
-Name=AGE_VS1
-Value=0 1:14 15:19 20:24 25:29 30:34 35:39 40:44 45:49 50:98
-Value=99;NR
-Name=MISSING,Special
-
-[Item]
-Label=Marital Status
-Name=MS
-Start=12
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Marital Status
-Name=MS_VS1
-Value=1;Never Married
-Value=2;Married
-Value=3;Divorced
-Value=4;Widowed
-Value=5;Separated
-Value=9;NR
-Name=MISSING,Special
-Value=' ';NA
-Name=NOTAPPL,Special
-
-[Record]
-Label=Fert
-Name=FERT
-RecordTypeValue='3'
-Required=No
-MaxRecords=10
-RecordLen=36
-
-[Item]
-Label=Woman Number
-Name=WOMAN_NUMBER
-Start=6
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Woman Number
-Name=WOMAN_NUMBER_VS1
-Value=1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21:35
-Value=99;NR
-Name=MISSING,Special
-
-[Item]
-Label=Woman MS
-Name=WOMAN_MS
-Start=8
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Woman MS
-Name=WOMAN_MS_VS1
-Value=2;Married
-Value=3;Divorced
-Value=4;Widowed
-Value=5;Separated
-Value=9;NR
-Name=MISSING,Special
-
-[Item]
-Label=Males Born
-Name=MALES_BORN
-Start=9
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Males Born
-Name=MALES_BORN_VS1
-Value=0 1 2 3 4 5 6 7 8 9 10
-Value='  ';NA
-Name=NOTAPPL,Special
-
-[Item]
-Label=Females Born
-Name=FEMALES_BORN
-Start=11
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Females Born
-Name=FEMALES_BORN_VS1
-Value=0 1 2 3 4 5 6 7 8 9 10
-Value='  ';NA
-Name=NOTAPPL,Special
-
-[Item]
-Label=Males Dead
-Name=MALES_DEAD
-Start=13
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Males Dead
-Name=MALES_DEAD_VS1
-Value=0 1 2 3 4 5 6 7 8 9 10
-Value='  ';NA
-Name=NOTAPPL,Special
-
-[Item]
-Label=Females Dead
-Name=FEMALES_DEAD
-Start=15
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Females Dead
-Name=FEMALES_DEAD_VS1
-Value=0 1 2 3 4 5 6 7 8 9 10
-Value='  ';NA
-Name=NOTAPPL,Special
-
-[Item]
-Label=Child 1
-Name=CHILD1
-Start=17
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Child 1
-Name=CHILD1_VS1
-Value=0:9
-Value=' ';NA
-Name=NOTAPPL,Special
-
-[Item]
-Label=Child YOB1
-Name=CHILD_YOB1
-Start=18
-Len=4
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Child YOB1
-Name=CHILD_YOB1_VS1
-Value=1900:2005
-Value='    ';NA
-Name=NOTAPPL,Special
-
-[Item]
-Label=Child2
-Name=CHILD2
-Start=22
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Child2
-Name=CHILD2_VS1
-Value=0:9
-Value=' ';NA
-Name=NOTAPPL,Special
-
-[Item]
-Label=Child YOB2
-Name=CHILD_YOB2
-Start=23
-Len=4
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Child YOB2
-Name=CHILD_YOB2_VS1
-Value=1900:2005
-Value='    ';NA
-Name=NOTAPPL,Special
-
-[Item]
-Label=Child3
-Name=CHILD3
-Start=27
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Child3
-Name=CHILD3_VS1
-Value=0:9
-Value=' ';NA
-Name=NOTAPPL,Special
-
-[Item]
-Label=Child YOB3
-Name=CHILD_YOB3
-Start=28
-Len=4
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Child YOB3
-Name=CHILD_YOB3_VS1
-Value=1900:2005
-Value='    ';NA
-Name=NOTAPPL,Special
-
-[Item]
-Label=Child4
-Name=CHILD4
-Start=32
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Child4
-Name=CHILD4_VS1
-Value=0:9
-Value=' ';NA
-Name=NOTAPPL,Special
-
-[Item]
-Label=Child YOB4
-Name=CHILD_YOB4
-Start=33
-Len=4
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Child YOB4
-Name=CHILD_YOB4_VS1
-Value=1900:2005
-Value='    ';NA
-Name=NOTAPPL,Special
-
-[Relation]
-Name=MOTHER_CHILD
-Primary=FERT
-PrimaryLink=WOMAN_NUMBER
-Secondary=POP
-SecondaryLink=LINE_NUMBER
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "dictionary", 
+  "name": "REL", 
+  "labels": [ { "text": "REL" } ], 
+  "security": {
+    "allowDataViewerModifications": true, 
+    "allowExport": true, 
+    "cachedPasswordMinutes": 0, 
+    "settings": "1025a136ee70a12875d9e348d8d61fa0"
+  }, 
+  "recordType": {
+    "start": 1, 
+    "length": 1
+  }, 
+  "defaults": {
+    "decimalMark": false, 
+    "zeroFill": true
+  }, 
+  "relativePositions": true, 
+  "levels": [
+    {
+      "name": "QUEST", 
+      "labels": [ { "text": "Questionnaire" } ], 
+      "ids": {
+        "items": [
+          {
+            "name": "SERIAL_NUMBER", 
+            "labels": [ { "text": "Serial Number" } ], 
+            "contentType": "numeric", 
+            "start": 2, 
+            "length": 4, 
+            "zeroFill": true, 
+            "valueSets": [
+              {
+                "name": "SERIAL_NUMBER_VS1", 
+                "labels": [ { "text": "Serial Number" } ], 
+                "values": [
+                  {
+                    "labels": [ { "text": "" } ], 
+                    "pairs": [ { "range": [ "1", "4400" ] } ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }, 
+      "records": [
+        {
+          "name": "HOUSING", 
+          "labels": [ { "text": "Housing" } ], 
+          "recordType": "1", 
+          "occurrences": {
+            "required": true, 
+            "maximum": 1
+          }, 
+          "items": [
+            {
+              "name": "TOTAL_PERSONS", 
+              "labels": [ { "text": "Total Persons" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "TOTAL_PERSONS_VS1", 
+                  "labels": [ { "text": "Total Persons" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "range": [ "0", "99" ] } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "ELIG_WOMEN", 
+              "labels": [ { "text": "Eligible Women" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "ELIG_WOMEN_VS1", 
+                  "labels": [ { "text": "Eligible Women" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "range": [ "0", "5" ] } ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }, 
+        {
+          "name": "POP", 
+          "labels": [ { "text": "Pop" } ], 
+          "recordType": "2", 
+          "occurrences": {
+            "required": false, 
+            "maximum": 10
+          }, 
+          "items": [
+            {
+              "name": "LINE_NUMBER", 
+              "labels": [ { "text": "Line Number" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "LINE_NUMBER_VS1", 
+                  "labels": [ { "text": "Line Number" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "range": [ "1", "50" ] } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "RELATIONSHIP", 
+              "labels": [ { "text": "Relationship" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "RELATIONSHIP_VS1", 
+                  "labels": [ { "text": "Relationship" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Head" } ], 
+                      "pairs": [ { "value": "0" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Spouse" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Child" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Parent" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Grandchild" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Sibling" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Other Relative" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Maid" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Other" } ], 
+                      "pairs": [ { "value": "8" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "SEX", 
+              "labels": [ { "text": "Sex" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "SEX_VS1", 
+                  "labels": [ { "text": "Sex" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Male" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Female" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "NR" } ], 
+                      "special": "MISSING", 
+                      "pairs": [ { "value": "9" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "AGE", 
+              "labels": [ { "text": "Age" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "AGE_VS1", 
+                  "labels": [ { "text": "Age" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "value": "0" }, { "range": [ "1", "14" ] }, { "range": [ "15", "19" ] }, { "range": [ "20", "24" ] }, { "range": [ "25", "29" ] }, { "range": [ "30", "34" ] }, { "range": [ "35", "39" ] }, { "range": [ "40", "44" ] }, { "range": [ "45", "49" ] }, { "range": [ "50", "98" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "NR" } ], 
+                      "special": "MISSING", 
+                      "pairs": [ { "value": "99" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "MS", 
+              "labels": [ { "text": "Marital Status" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "MS_VS1", 
+                  "labels": [ { "text": "Marital Status" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Never Married" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Married" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Divorced" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Widowed" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Separated" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "NR" } ], 
+                      "special": "MISSING", 
+                      "pairs": [ { "value": "9" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "NA" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }, 
+        {
+          "name": "FERT", 
+          "labels": [ { "text": "Fert" } ], 
+          "recordType": "3", 
+          "occurrences": {
+            "required": false, 
+            "maximum": 10
+          }, 
+          "items": [
+            {
+              "name": "WOMAN_NUMBER", 
+              "labels": [ { "text": "Woman Number" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "WOMAN_NUMBER_VS1", 
+                  "labels": [ { "text": "Woman Number" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "value": "1" }, { "value": "2" }, { "value": "3" }, { "value": "4" }, { "value": "5" }, { "value": "6" }, { "value": "7" }, { "value": "8" }, { "value": "9" }, { "value": "10" }, { "value": "11" }, { "value": "12" }, { "value": "13" }, { "value": "14" }, { "value": "15" }, { "value": "16" }, { "value": "17" }, { "value": "18" }, { "value": "19" }, { "value": "20" }, { "range": [ "21", "35" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "NR" } ], 
+                      "special": "MISSING", 
+                      "pairs": [ { "value": "99" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "WOMAN_MS", 
+              "labels": [ { "text": "Woman MS" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "WOMAN_MS_VS1", 
+                  "labels": [ { "text": "Woman MS" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Married" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Divorced" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Widowed" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Separated" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "NR" } ], 
+                      "special": "MISSING", 
+                      "pairs": [ { "value": "9" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "MALES_BORN", 
+              "labels": [ { "text": "Males Born" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "MALES_BORN_VS1", 
+                  "labels": [ { "text": "Males Born" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "value": "0" }, { "value": "1" }, { "value": "2" }, { "value": "3" }, { "value": "4" }, { "value": "5" }, { "value": "6" }, { "value": "7" }, { "value": "8" }, { "value": "9" }, { "value": "10" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "NA" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "FEMALES_BORN", 
+              "labels": [ { "text": "Females Born" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "FEMALES_BORN_VS1", 
+                  "labels": [ { "text": "Females Born" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "value": "0" }, { "value": "1" }, { "value": "2" }, { "value": "3" }, { "value": "4" }, { "value": "5" }, { "value": "6" }, { "value": "7" }, { "value": "8" }, { "value": "9" }, { "value": "10" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "NA" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "MALES_DEAD", 
+              "labels": [ { "text": "Males Dead" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "MALES_DEAD_VS1", 
+                  "labels": [ { "text": "Males Dead" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "value": "0" }, { "value": "1" }, { "value": "2" }, { "value": "3" }, { "value": "4" }, { "value": "5" }, { "value": "6" }, { "value": "7" }, { "value": "8" }, { "value": "9" }, { "value": "10" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "NA" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "FEMALES_DEAD", 
+              "labels": [ { "text": "Females Dead" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "FEMALES_DEAD_VS1", 
+                  "labels": [ { "text": "Females Dead" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "value": "0" }, { "value": "1" }, { "value": "2" }, { "value": "3" }, { "value": "4" }, { "value": "5" }, { "value": "6" }, { "value": "7" }, { "value": "8" }, { "value": "9" }, { "value": "10" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "NA" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "CHILD1", 
+              "labels": [ { "text": "Child 1" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "CHILD1_VS1", 
+                  "labels": [ { "text": "Child 1" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "range": [ "0", "9" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "NA" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "CHILD_YOB1", 
+              "labels": [ { "text": "Child YOB1" } ], 
+              "contentType": "numeric", 
+              "length": 4, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "CHILD_YOB1_VS1", 
+                  "labels": [ { "text": "Child YOB1" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "range": [ "1900", "2005" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "NA" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "CHILD2", 
+              "labels": [ { "text": "Child2" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "CHILD2_VS1", 
+                  "labels": [ { "text": "Child2" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "range": [ "0", "9" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "NA" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "CHILD_YOB2", 
+              "labels": [ { "text": "Child YOB2" } ], 
+              "contentType": "numeric", 
+              "length": 4, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "CHILD_YOB2_VS1", 
+                  "labels": [ { "text": "Child YOB2" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "range": [ "1900", "2005" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "NA" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "CHILD3", 
+              "labels": [ { "text": "Child3" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "CHILD3_VS1", 
+                  "labels": [ { "text": "Child3" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "range": [ "0", "9" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "NA" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "CHILD_YOB3", 
+              "labels": [ { "text": "Child YOB3" } ], 
+              "contentType": "numeric", 
+              "length": 4, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "CHILD_YOB3_VS1", 
+                  "labels": [ { "text": "Child YOB3" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "range": [ "1900", "2005" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "NA" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "CHILD4", 
+              "labels": [ { "text": "Child4" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "CHILD4_VS1", 
+                  "labels": [ { "text": "Child4" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "range": [ "0", "9" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "NA" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "CHILD_YOB4", 
+              "labels": [ { "text": "Child YOB4" } ], 
+              "contentType": "numeric", 
+              "length": 4, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "CHILD_YOB4_VS1", 
+                  "labels": [ { "text": "Child YOB4" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "range": [ "1900", "2005" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "NA" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ], 
+  "relations": [
+    {
+      "name": "MOTHER_CHILD", 
+      "primary": "FERT", 
+      "links": [
+        {
+          "primaryLink": "WOMAN_NUMBER", 
+          "secondary": "POP", 
+          "secondaryLink": "LINE_NUMBER"
+        }
+      ]
+    }
+  ]
+}

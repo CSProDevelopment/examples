@@ -1,23 +1,79 @@
-﻿[CSPro Application]
-Version=CSPro 7.7
-Label=MENU
-Name=MENU
-AppType=DataEntry
-OperatorID=No
-CAPI=Yes
-CaseTree=Never
-CreateListing=No
-CreateLog=No
-[External Dictionaries]
-File=..\Dict\HouseholdQuestionnaire.dcf
-[AppCode]
-File=.\Menu.ent.apc
-[Message]
-File=.\Menu.ent.mgf
-[Help]
-File=.\Menu.ent.qsf
-[Forms]
-File=.\Menu.fmf
-[Dictionary Types]
-Dict-Type=.\Menu.dcf,Input,.\Menu.fmf
-Dict-Type=..\Dict\HouseholdQuestionnaire.dcf,External
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "application", 
+  "type": "entry", 
+  "name": "MENU", 
+  "label": "MENU", 
+  "dictionaries": [
+    {
+      "type": "input", 
+      "filename": "Menu.dcf", 
+      "parent": "Menu.fmf"
+    }, 
+    {
+      "type": "external", 
+      "filename": "../Dict/HouseholdQuestionnaire.dcf"
+    }
+  ], 
+  "forms": [
+    "Menu.fmf"
+  ], 
+  "questionText": [
+    "Menu.ent.qsf"
+  ], 
+  "code": [
+    {
+      "type": "main", 
+      "filename": "Menu.ent.apc"
+    }
+  ], 
+  "messages": [
+    "Menu.ent.mgf"
+  ], 
+  "logicSettings": {
+    "version": 2.0, 
+    "caseSensitive": {
+      "symbols": false
+    }, 
+    "actionInvoker": {
+      "accessFromWebView": "promptIfNoValidAccessToken", 
+      "convertResultsForLogic": true
+    }
+  }, 
+  "properties": {
+    "askOperatorId": false, 
+    "autoAdvanceOnSelection": false, 
+    "caseTree": "off", 
+    "centerForms": false, 
+    "createListing": false, 
+    "createLog": false, 
+    "decimalMark": "dot", 
+    "displayCodesAlongsideLabels": false, 
+    "notes": {
+      "delete": "all", 
+      "edit": "all"
+    }, 
+    "partialSave": {
+      "operatorEnabled": false
+    }, 
+    "showEndCaseMessage": true, 
+    "showOnlyDiscreteValuesInComboBoxes": false, 
+    "showFieldLabels": true, 
+    "showErrorMessageNumbers": true, 
+    "showQuestionText": true, 
+    "showRefusals": true, 
+    "verify": {
+      "frequency": 1, 
+      "start": 1
+    }, 
+    "htmlDialogs": true, 
+    "paradata": {
+      "collection": "none", 
+      "recordCoordinates": false, 
+      "recordInitialPropertyValues": false, 
+      "recordIteratorLoadCases": false, 
+      "recordValues": false
+    }
+  }
+}

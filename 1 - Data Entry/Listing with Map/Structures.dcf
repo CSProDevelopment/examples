@@ -1,105 +1,166 @@
-﻿[Dictionary]
-Version=CSPro 7.7
-Label=Structures
-Name=STRUCTURES_DICT
-RecordTypeStart=1
-RecordTypeLen=1
-Positions=Relative
-ZeroFill=Yes
-DecimalChar=Yes
-SecurityOptions=A0488702868D20670A47F94D1A8DDD265748571F84F77573CB95992DE4B73198
-
-[Level]
-Label=Structures Level
-Name=STRUCTURES_LEVEL
-
-[IdItems]
-
-[Item]
-Label=Structure Number
-Name=ST_NUMBER
-Start=2
-Len=3
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Structure Number
-Name=ST_NUMBER_VS1
-Value=1:999;1-999
-
-[Record]
-Label=Structures Record
-Name=STRUCTURES_REC
-RecordTypeValue='1'
-RecordLen=80
-
-[Item]
-Label=Type
-Name=ST_TYPE
-Start=5
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Type
-Name=ST_TYPE_VS1
-Value=1;Ordinary Household
-Value=2;Enterprise
-Value=3;School
-Value=4;Health Facility
-Value=5;Hotel
-Value=6;Other Government Facility
-
-[Item]
-Label=Location
-Name=ST_LOCATION_PLACEHOLDER
-Start=6
-Len=1
-DataType=Numeric
-
-[ValueSet]
-Label=Location
-Name=ST_LOCATION_PLACEHOLDER_VS1
-Value=1;Capture GPS
-
-[Item]
-Label=Latitude
-Name=ST_LATITUDE
-Start=7
-Len=10
-DataType=Numeric
-Decimal=6
-DecimalChar=Yes
-ZeroFill=Yes
-
-[Item]
-Label=Longitude
-Name=ST_LONGITUDE
-Start=17
-Len=11
-DataType=Numeric
-Decimal=6
-DecimalChar=Yes
-ZeroFill=Yes
-
-[Item]
-Label=Name of enterprise, facility or head of household
-Name=ST_NAME
-Start=28
-Len=50
-DataType=Alpha
-
-[Item]
-Label=Number of Usual Members
-Name=ST_NUM_MEMBERS
-Start=78
-Len=3
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Number of Usual Members
-Name=ST_NUM_MEMBERS_VS1
-Value=1:999;1-999
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "dictionary", 
+  "name": "STRUCTURES_DICT", 
+  "labels": [ { "text": "Structures" } ], 
+  "security": {
+    "allowDataViewerModifications": true, 
+    "allowExport": true, 
+    "cachedPasswordMinutes": 0, 
+    "settings": "a0488702868d20670a47f94d1a8ddd265748571f84f77573cb95992de4b73198"
+  }, 
+  "recordType": {
+    "start": 1, 
+    "length": 1
+  }, 
+  "defaults": {
+    "decimalMark": true, 
+    "zeroFill": true
+  }, 
+  "relativePositions": true, 
+  "levels": [
+    {
+      "name": "STRUCTURES_LEVEL", 
+      "labels": [ { "text": "Structures Level" } ], 
+      "ids": {
+        "items": [
+          {
+            "name": "ST_NUMBER", 
+            "labels": [ { "text": "Structure Number" } ], 
+            "contentType": "numeric", 
+            "start": 2, 
+            "length": 3, 
+            "zeroFill": true, 
+            "valueSets": [
+              {
+                "name": "ST_NUMBER_VS1", 
+                "labels": [ { "text": "Structure Number" } ], 
+                "values": [
+                  {
+                    "labels": [ { "text": "1-999" } ], 
+                    "pairs": [ { "range": [ "1", "999" ] } ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }, 
+      "records": [
+        {
+          "name": "STRUCTURES_REC", 
+          "labels": [ { "text": "Structures Record" } ], 
+          "recordType": "1", 
+          "occurrences": {
+            "required": true, 
+            "maximum": 1
+          }, 
+          "items": [
+            {
+              "name": "ST_TYPE", 
+              "labels": [ { "text": "Type" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "ST_TYPE_VS1", 
+                  "labels": [ { "text": "Type" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Ordinary Household" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Enterprise" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "School" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Health Facility" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Hotel" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Other Government Facility" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "ST_LOCATION_PLACEHOLDER", 
+              "labels": [ { "text": "Location" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "ST_LOCATION_PLACEHOLDER_VS1", 
+                  "labels": [ { "text": "Location" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Capture GPS" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "ST_LATITUDE", 
+              "labels": [ { "text": "Latitude" } ], 
+              "contentType": "numeric", 
+              "length": 10, 
+              "decimals": 6, 
+              "decimalMark": true, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "ST_LONGITUDE", 
+              "labels": [ { "text": "Longitude" } ], 
+              "contentType": "numeric", 
+              "length": 11, 
+              "decimals": 6, 
+              "decimalMark": true, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "ST_NAME", 
+              "labels": [ { "text": "Name of enterprise, facility or head of household" } ], 
+              "contentType": "alpha", 
+              "length": 50
+            }, 
+            {
+              "name": "ST_NUM_MEMBERS", 
+              "labels": [ { "text": "Number of Usual Members" } ], 
+              "contentType": "numeric", 
+              "length": 3, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "ST_NUM_MEMBERS_VS1", 
+                  "labels": [ { "text": "Number of Usual Members" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "1-999" } ], 
+                      "pairs": [ { "range": [ "1", "999" ] } ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

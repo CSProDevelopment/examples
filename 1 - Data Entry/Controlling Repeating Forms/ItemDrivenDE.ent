@@ -1,15 +1,75 @@
-﻿[CSPro Application]
-Version=CSPro 7.7
-Label=ITEMDRIVENDE
-Name=ITEMDRIVENDE
-AppType=DataEntry
-[AppCode]
-File=.\ItemDrivenDE.ent.apc
-[Message]
-File=.\ItemDrivenDE.ent.mgf
-[Help]
-File=.\ItemDrivenDE.ent.qsf
-[Forms]
-File=.\ItemDrivenDE.fmf
-[Dictionary Types]
-Dict-Type=.\popstan.dcf,Input,.\ItemDrivenDE.fmf
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "application", 
+  "type": "entry", 
+  "name": "ITEMDRIVENDE", 
+  "label": "ITEMDRIVENDE", 
+  "dictionaries": [
+    {
+      "type": "input", 
+      "filename": "popstan.dcf", 
+      "parent": "ItemDrivenDE.fmf"
+    }
+  ], 
+  "forms": [
+    "ItemDrivenDE.fmf"
+  ], 
+  "questionText": [
+    "ItemDrivenDE.ent.qsf"
+  ], 
+  "code": [
+    {
+      "type": "main", 
+      "filename": "ItemDrivenDE.ent.apc"
+    }
+  ], 
+  "messages": [
+    "ItemDrivenDE.ent.mgf"
+  ], 
+  "logicSettings": {
+    "version": 2.0, 
+    "caseSensitive": {
+      "symbols": false
+    }, 
+    "actionInvoker": {
+      "accessFromWebView": "promptIfNoValidAccessToken", 
+      "convertResultsForLogic": true
+    }
+  }, 
+  "properties": {
+    "askOperatorId": true, 
+    "autoAdvanceOnSelection": false, 
+    "caseTree": "mobileOnly", 
+    "centerForms": false, 
+    "createListing": true, 
+    "createLog": true, 
+    "decimalMark": "dot", 
+    "displayCodesAlongsideLabels": false, 
+    "notes": {
+      "delete": "all", 
+      "edit": "all"
+    }, 
+    "partialSave": {
+      "operatorEnabled": false
+    }, 
+    "showEndCaseMessage": true, 
+    "showOnlyDiscreteValuesInComboBoxes": false, 
+    "showFieldLabels": true, 
+    "showErrorMessageNumbers": true, 
+    "showQuestionText": false, 
+    "showRefusals": true, 
+    "verify": {
+      "frequency": 1, 
+      "start": 1
+    }, 
+    "htmlDialogs": true, 
+    "paradata": {
+      "collection": "none", 
+      "recordCoordinates": false, 
+      "recordInitialPropertyValues": false, 
+      "recordIteratorLoadCases": false, 
+      "recordValues": false
+    }
+  }
+}

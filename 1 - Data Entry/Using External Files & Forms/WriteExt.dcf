@@ -1,177 +1,364 @@
-﻿[Dictionary]
-Version=CSPro 7.7
-Label=Write External File
-Name=CENSUS
-RecordTypeStart=1
-RecordTypeLen=1
-Positions=Relative
-ZeroFill=Yes
-DecimalChar=No
-SecurityOptions=B6846A25E1CC18DC5E030138BF4E37AE
-
-[Level]
-Label=Questionnaire
-Name=QUEST
-
-[IdItems]
-
-[Item]
-Label=Province
-Name=PROVINCE
-Start=2
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Province
-Name=PROV_VS1
-Value=1;Artesia
-Value=2;Copal
-Value=3;Dari
-Value=4;Eris
-Value=5;Girda
-Value=6;Hali
-Value=7;Kerac
-Value=8;Lacuna
-Value=9;Laya
-Value=10;Lira
-Value=11;Matanga
-Value=12;Patan
-Value=13;Rift
-Value=14;Terra
-Value=15;Tumar
-
-[Item]
-Label=District
-Name=DISTRICT
-Start=4
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=District
-Name=DIST_VS1
-Value=1:18
-
-[Item]
-Label=Village
-Name=VILLAGE
-Start=6
-Len=3
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Village
-Name=VILLAGE_VS1
-Value=1:999
-
-[Item]
-Label=Enumeration area
-Name=EA
-Start=9
-Len=3
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Enumeration area
-Name=EA_VS1
-Value=1:999
-
-[Item]
-Label=Housing unit
-Name=HU
-Start=12
-Len=3
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Housing unit
-Name=HU_VS1
-Value=1:999
-
-[Record]
-Label=Housing Record
-Name=HOUSING
-RecordTypeValue='2'
-RecordLen=18
-
-[Item]
-Label=Type of housing
-Name=HOUSING_TYPE
-Start=15
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Type of housing
-Name=HOUSING_TYPE_VS1
-Value=1;Single family
-Value=2;Multi-family
-Value=3;Improvised
-Value=4;Mobile
-Value=5;Collective quarters
-Value=6;Homeless (none)
-Value=9;Not reported
-
-[Item]
-Label=Wall type
-Name=WALL_TYPE
-Start=16
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Wall type
-Name=WALL_TYPE_VS1
-Value=1;Stone/Cement
-Value=2;Metal
-Value=3;Wood
-Value=4;Bamboo/Mud/Reed
-Value=5;Other
-Value=' ';Missing
-Name=NOTAPPL,Special
-
-[Item]
-Label=Roof type
-Name=ROOF_TYPE
-Start=17
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Roof type
-Name=ROOF_TYPE_VS1
-Value=1;Stone/Cement
-Value=2;Metal
-Value=3;Wood
-Value=4;Other
-Value=' ';Missing
-Name=NOTAPPL,Special
-
-[Item]
-Label=Floor type
-Name=FLOOR_TYPE
-Start=18
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Floor type
-Name=FLOOR_TYPE_VS1
-Value=1;Stone/Cement
-Value=2;Tile/Marble
-Value=3;Wood
-Value=4;Leaves/Reed
-Value=5;Vinyl
-Value=6;Other
-Value=' ';Missing
-Name=NOTAPPL,Special
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "dictionary", 
+  "name": "CENSUS", 
+  "labels": [ { "text": "Write External File" } ], 
+  "security": {
+    "allowDataViewerModifications": true, 
+    "allowExport": true, 
+    "cachedPasswordMinutes": 0, 
+    "settings": "b6846a25e1cc18dc5e030138bf4e37ae"
+  }, 
+  "recordType": {
+    "start": 1, 
+    "length": 1
+  }, 
+  "defaults": {
+    "decimalMark": false, 
+    "zeroFill": true
+  }, 
+  "relativePositions": true, 
+  "levels": [
+    {
+      "name": "QUEST", 
+      "labels": [ { "text": "Questionnaire" } ], 
+      "ids": {
+        "items": [
+          {
+            "name": "PROVINCE", 
+            "labels": [ { "text": "Province" } ], 
+            "contentType": "numeric", 
+            "start": 2, 
+            "length": 2, 
+            "zeroFill": true, 
+            "valueSets": [
+              {
+                "name": "PROV_VS1", 
+                "labels": [ { "text": "Province" } ], 
+                "values": [
+                  {
+                    "labels": [ { "text": "Artesia" } ], 
+                    "pairs": [ { "value": "1" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Copal" } ], 
+                    "pairs": [ { "value": "2" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Dari" } ], 
+                    "pairs": [ { "value": "3" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Eris" } ], 
+                    "pairs": [ { "value": "4" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Girda" } ], 
+                    "pairs": [ { "value": "5" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Hali" } ], 
+                    "pairs": [ { "value": "6" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Kerac" } ], 
+                    "pairs": [ { "value": "7" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Lacuna" } ], 
+                    "pairs": [ { "value": "8" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Laya" } ], 
+                    "pairs": [ { "value": "9" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Lira" } ], 
+                    "pairs": [ { "value": "10" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Matanga" } ], 
+                    "pairs": [ { "value": "11" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Patan" } ], 
+                    "pairs": [ { "value": "12" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Rift" } ], 
+                    "pairs": [ { "value": "13" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Terra" } ], 
+                    "pairs": [ { "value": "14" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Tumar" } ], 
+                    "pairs": [ { "value": "15" } ]
+                  }
+                ]
+              }
+            ]
+          }, 
+          {
+            "name": "DISTRICT", 
+            "labels": [ { "text": "District" } ], 
+            "contentType": "numeric", 
+            "start": 4, 
+            "length": 2, 
+            "zeroFill": true, 
+            "valueSets": [
+              {
+                "name": "DIST_VS1", 
+                "labels": [ { "text": "District" } ], 
+                "values": [
+                  {
+                    "labels": [ { "text": "" } ], 
+                    "pairs": [ { "range": [ "1", "18" ] } ]
+                  }
+                ]
+              }
+            ]
+          }, 
+          {
+            "name": "VILLAGE", 
+            "labels": [ { "text": "Village" } ], 
+            "contentType": "numeric", 
+            "start": 6, 
+            "length": 3, 
+            "zeroFill": true, 
+            "valueSets": [
+              {
+                "name": "VILLAGE_VS1", 
+                "labels": [ { "text": "Village" } ], 
+                "values": [
+                  {
+                    "labels": [ { "text": "" } ], 
+                    "pairs": [ { "range": [ "1", "999" ] } ]
+                  }
+                ]
+              }
+            ]
+          }, 
+          {
+            "name": "EA", 
+            "labels": [ { "text": "Enumeration area" } ], 
+            "contentType": "numeric", 
+            "start": 9, 
+            "length": 3, 
+            "zeroFill": true, 
+            "valueSets": [
+              {
+                "name": "EA_VS1", 
+                "labels": [ { "text": "Enumeration area" } ], 
+                "values": [
+                  {
+                    "labels": [ { "text": "" } ], 
+                    "pairs": [ { "range": [ "1", "999" ] } ]
+                  }
+                ]
+              }
+            ]
+          }, 
+          {
+            "name": "HU", 
+            "labels": [ { "text": "Housing unit" } ], 
+            "contentType": "numeric", 
+            "start": 12, 
+            "length": 3, 
+            "zeroFill": true, 
+            "valueSets": [
+              {
+                "name": "HU_VS1", 
+                "labels": [ { "text": "Housing unit" } ], 
+                "values": [
+                  {
+                    "labels": [ { "text": "" } ], 
+                    "pairs": [ { "range": [ "1", "999" ] } ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }, 
+      "records": [
+        {
+          "name": "HOUSING", 
+          "labels": [ { "text": "Housing Record" } ], 
+          "recordType": "2", 
+          "occurrences": {
+            "required": true, 
+            "maximum": 1
+          }, 
+          "items": [
+            {
+              "name": "HOUSING_TYPE", 
+              "labels": [ { "text": "Type of housing" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "HOUSING_TYPE_VS1", 
+                  "labels": [ { "text": "Type of housing" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Single family" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Multi-family" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Improvised" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Mobile" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Collective quarters" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Homeless (none)" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not reported" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "WALL_TYPE", 
+              "labels": [ { "text": "Wall type" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "WALL_TYPE_VS1", 
+                  "labels": [ { "text": "Wall type" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Stone/Cement" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Metal" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Wood" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Bamboo/Mud/Reed" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Other" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Missing" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "ROOF_TYPE", 
+              "labels": [ { "text": "Roof type" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "ROOF_TYPE_VS1", 
+                  "labels": [ { "text": "Roof type" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Stone/Cement" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Metal" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Wood" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Other" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Missing" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "FLOOR_TYPE", 
+              "labels": [ { "text": "Floor type" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "FLOOR_TYPE_VS1", 
+                  "labels": [ { "text": "Floor type" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Stone/Cement" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Tile/Marble" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Wood" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Leaves/Reed" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Vinyl" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Other" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Missing" } ], 
+                      "special": "NOTAPPL", 
+                      "pairs": [ { "value": "" } ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

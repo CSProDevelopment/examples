@@ -1,19 +1,79 @@
-﻿[CSPro Application]
-Version=CSPro 7.7
-Label=CENSUS_DATA_ENTRY
-Name=CENSUS_DATA_ENTRY
-AppType=DataEntry
-OperatorID=No
-[External Dictionaries]
-File=.\AreaLookup.dcf
-[AppCode]
-File=.\Setvalueset example.ent.apc
-[Message]
-File=.\Setvalueset example.ent.mgf
-[Help]
-File=.\Setvalueset example.ent.qsf
-[Forms]
-File=.\Setvalueset example.fmf
-[Dictionary Types]
-Dict-Type=.\AreaLookup.dcf,External
-Dict-Type=.\Census Dictionary.dcf,Input,.\Setvalueset example.fmf
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "application", 
+  "type": "entry", 
+  "name": "CENSUS_DATA_ENTRY", 
+  "label": "CENSUS_DATA_ENTRY", 
+  "dictionaries": [
+    {
+      "type": "input", 
+      "filename": "Census Dictionary.dcf", 
+      "parent": "Setvalueset example.fmf"
+    }, 
+    {
+      "type": "external", 
+      "filename": "AreaLookup.dcf"
+    }
+  ], 
+  "forms": [
+    "Setvalueset example.fmf"
+  ], 
+  "questionText": [
+    "Setvalueset example.ent.qsf"
+  ], 
+  "code": [
+    {
+      "type": "main", 
+      "filename": "Setvalueset example.ent.apc"
+    }
+  ], 
+  "messages": [
+    "Setvalueset example.ent.mgf"
+  ], 
+  "logicSettings": {
+    "version": 2.0, 
+    "caseSensitive": {
+      "symbols": false
+    }, 
+    "actionInvoker": {
+      "accessFromWebView": "promptIfNoValidAccessToken", 
+      "convertResultsForLogic": true
+    }
+  }, 
+  "properties": {
+    "askOperatorId": false, 
+    "autoAdvanceOnSelection": false, 
+    "caseTree": "mobileOnly", 
+    "centerForms": false, 
+    "createListing": true, 
+    "createLog": true, 
+    "decimalMark": "dot", 
+    "displayCodesAlongsideLabels": false, 
+    "notes": {
+      "delete": "all", 
+      "edit": "all"
+    }, 
+    "partialSave": {
+      "operatorEnabled": false
+    }, 
+    "showEndCaseMessage": true, 
+    "showOnlyDiscreteValuesInComboBoxes": false, 
+    "showFieldLabels": true, 
+    "showErrorMessageNumbers": true, 
+    "showQuestionText": false, 
+    "showRefusals": true, 
+    "verify": {
+      "frequency": 1, 
+      "start": 1
+    }, 
+    "htmlDialogs": true, 
+    "paradata": {
+      "collection": "none", 
+      "recordCoordinates": false, 
+      "recordInitialPropertyValues": false, 
+      "recordIteratorLoadCases": false, 
+      "recordValues": false
+    }
+  }
+}

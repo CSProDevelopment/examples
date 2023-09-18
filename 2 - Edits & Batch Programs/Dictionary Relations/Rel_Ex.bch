@@ -1,13 +1,47 @@
-﻿[CSPro Application]
-Version=CSPro 7.7
-Label=REL_EX
-Name=REL_EX
-AppType=Batch
-[AppCode]
-File=.\Rel_Ex.bch.apc
-[Message]
-File=.\Rel_Ex.bch.mgf
-[Order]
-File=.\Rel_Ex.ord
-[Dictionary Types]
-Dict-Type=.\Rel_Ex.dcf,Input,.\Rel_Ex.ord
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "application", 
+  "type": "batch", 
+  "name": "REL_EX", 
+  "label": "REL_EX", 
+  "dictionaries": [
+    {
+      "type": "input", 
+      "filename": "Rel_Ex.dcf", 
+      "parent": "Rel_Ex.ord"
+    }
+  ], 
+  "order": [
+    "Rel_Ex.ord"
+  ], 
+  "code": [
+    {
+      "type": "main", 
+      "filename": "Rel_Ex.bch.apc"
+    }
+  ], 
+  "messages": [
+    "Rel_Ex.bch.mgf"
+  ], 
+  "logicSettings": {
+    "version": 2.0, 
+    "caseSensitive": {
+      "symbols": false
+    }, 
+    "actionInvoker": {
+      "accessFromWebView": "promptIfNoValidAccessToken", 
+      "convertResultsForLogic": true
+    }
+  }, 
+  "properties": {
+    "htmlDialogs": true, 
+    "paradata": {
+      "collection": "none", 
+      "recordCoordinates": false, 
+      "recordInitialPropertyValues": false, 
+      "recordIteratorLoadCases": false, 
+      "recordValues": false
+    }
+  }
+}

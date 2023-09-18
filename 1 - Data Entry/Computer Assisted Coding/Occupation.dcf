@@ -1,37 +1,58 @@
-﻿[Dictionary]
-Version=CSPro 7.7
-Label=Occupation
-Name=OCCUPATION_DICT
-RecordTypeStart=0
-RecordTypeLen=0
-Positions=Relative
-ZeroFill=No
-DecimalChar=Yes
-SecurityOptions=D5F22ACF9EAD4C05EEEEE7B012DCBC7D30577C16801B5BD7B3DEB52E6236777C
-
-[Level]
-Label=Occupation questionnaire
-Name=OCCUPATION_QUEST
-
-[IdItems]
-
-[Item]
-Label=Occupation identification
-Name=OCCID
-Start=1
-Len=3
-DataType=Numeric
-ZeroFill=Yes
-
-[Record]
-Label=Occupation record
-Name=OCCUPATION_REC
-RecordTypeValue=''
-RecordLen=78
-
-[Item]
-Label=Occupations
-Name=OCCTXT
-Start=4
-Len=75
-DataType=Alpha
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "dictionary", 
+  "name": "OCCUPATION_DICT", 
+  "labels": [ { "text": "Occupation" } ], 
+  "security": {
+    "allowDataViewerModifications": true, 
+    "allowExport": true, 
+    "cachedPasswordMinutes": 0, 
+    "settings": "d5f22acf9ead4c05eeeee7b012dcbc7d30577c16801b5bd7b3deb52e6236777c"
+  }, 
+  "recordType": {
+    "start": 0, 
+    "length": 0
+  }, 
+  "defaults": {
+    "decimalMark": true, 
+    "zeroFill": false
+  }, 
+  "relativePositions": true, 
+  "levels": [
+    {
+      "name": "OCCUPATION_QUEST", 
+      "labels": [ { "text": "Occupation questionnaire" } ], 
+      "ids": {
+        "items": [
+          {
+            "name": "OCCID", 
+            "labels": [ { "text": "Occupation identification" } ], 
+            "contentType": "numeric", 
+            "start": 1, 
+            "length": 3, 
+            "zeroFill": true
+          }
+        ]
+      }, 
+      "records": [
+        {
+          "name": "OCCUPATION_REC", 
+          "labels": [ { "text": "Occupation record" } ], 
+          "occurrences": {
+            "required": true, 
+            "maximum": 1
+          }, 
+          "items": [
+            {
+              "name": "OCCTXT", 
+              "labels": [ { "text": "Occupations" } ], 
+              "contentType": "alpha", 
+              "length": 75
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

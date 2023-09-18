@@ -1,15 +1,46 @@
-﻿[CSPro Application]
-Version=CSPro 7.7
-Label=TABLETIPSNTRICKS
-Name=TABLETIPSNTRICKS
-AppType=Tabulation
-[External Dictionaries]
-File=.\TableTipsNTricks.xtb.wrk.dcf
-[AppCode]
-File=.\TableTipsNTricks.xtb.apc
-[Message]
-File=.\TableTipsNTricks.xtb.mgf
-[TabSpecs]
-File=.\TableTipsNTricks.xts
-[Dictionary Types]
-Dict-Type=.\TableTipsNTricks.xtb.wrk.dcf,Working
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "application", 
+  "type": "tabulation", 
+  "name": "TABLETIPSNTRICKS", 
+  "label": "TABLETIPSNTRICKS", 
+  "dictionaries": [
+    {
+      "type": "working", 
+      "filename": "TableTipsNTricks.xtb.wrk.dcf"
+    }
+  ], 
+  "tableSpecs": [
+    "TableTipsNTricks.xts"
+  ], 
+  "code": [
+    {
+      "type": "main", 
+      "filename": "TableTipsNTricks.xtb.apc"
+    }
+  ], 
+  "messages": [
+    "TableTipsNTricks.xtb.mgf"
+  ], 
+  "logicSettings": {
+    "version": 2.0, 
+    "caseSensitive": {
+      "symbols": false
+    }, 
+    "actionInvoker": {
+      "accessFromWebView": "promptIfNoValidAccessToken", 
+      "convertResultsForLogic": true
+    }
+  }, 
+  "properties": {
+    "htmlDialogs": true, 
+    "paradata": {
+      "collection": "none", 
+      "recordCoordinates": false, 
+      "recordInitialPropertyValues": false, 
+      "recordIteratorLoadCases": false, 
+      "recordValues": false
+    }
+  }
+}

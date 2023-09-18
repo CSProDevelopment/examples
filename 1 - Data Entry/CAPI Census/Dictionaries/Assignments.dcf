@@ -1,82 +1,113 @@
-﻿[Dictionary]
-Version=CSPro 7.7
-Label=Popstan Census Assignments Dictionary
-Name=PSC_ASSIGNMENTS_DICT
-RecordTypeStart=1
-RecordTypeLen=1
-Positions=Relative
-ZeroFill=Yes
-DecimalChar=Yes
-SecurityOptions=355063393FC89406FFD3773DF8F6C6A8C9E732B93962BF0A15A54B3B60FDD5C2
-
-[Level]
-Label=Assignments Level
-Name=ASSIGNMENTS_LEVEL
-
-[IdItems]
-
-[Item]
-Label=Province
-Name=ASSIGNMENTS_PROVINCE
-Start=2
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[Item]
-Label=District
-Name=ASSIGNMENTS_DISTRICT
-Start=4
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[Item]
-Label=EA
-Name=ASSIGNMENTS_EA
-Start=6
-Len=3
-DataType=Numeric
-ZeroFill=Yes
-
-[Item]
-Label=Staff Code
-Name=ASSIGNMENTS_STAFF_CODE
-Start=9
-Len=36
-DataType=Alpha
-
-[Item]
-Label=Role
-Name=ASSIGNMENTS_ROLE
-Start=45
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Role
-Name=ASSIGNMENTS_ROLE_VS1
-Value=1;INTERVIEWER
-Value=2;SUPERVISOR
-
-[Record]
-Label=Assignments Record
-Name=ASSIGNMENTS_REC
-RecordTypeValue='1'
-RecordLen=56
-
-[Item]
-Label=Segment
-Name=ASSIGNMENTS_SEGMENT
-Start=46
-Len=1
-DataType=Alpha
-
-[Item]
-Label=Date Assigned EA
-Name=ASSIGNMENTS_DATE_ASSIGNED
-Start=47
-Len=10
-DataType=Numeric
-ZeroFill=Yes
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "dictionary", 
+  "name": "PSC_ASSIGNMENTS_DICT", 
+  "labels": [ { "text": "Popstan Census Assignments Dictionary" } ], 
+  "security": {
+    "allowDataViewerModifications": true, 
+    "allowExport": true, 
+    "cachedPasswordMinutes": 0, 
+    "settings": "355063393fc89406ffd3773df8f6c6a8c9e732b93962bf0a15a54b3b60fdd5c2"
+  }, 
+  "recordType": {
+    "start": 1, 
+    "length": 1
+  }, 
+  "defaults": {
+    "decimalMark": true, 
+    "zeroFill": true
+  }, 
+  "relativePositions": true, 
+  "levels": [
+    {
+      "name": "ASSIGNMENTS_LEVEL", 
+      "labels": [ { "text": "Assignments Level" } ], 
+      "ids": {
+        "items": [
+          {
+            "name": "ASSIGNMENTS_PROVINCE", 
+            "labels": [ { "text": "Province" } ], 
+            "contentType": "numeric", 
+            "start": 2, 
+            "length": 2, 
+            "zeroFill": true
+          }, 
+          {
+            "name": "ASSIGNMENTS_DISTRICT", 
+            "labels": [ { "text": "District" } ], 
+            "contentType": "numeric", 
+            "start": 4, 
+            "length": 2, 
+            "zeroFill": true
+          }, 
+          {
+            "name": "ASSIGNMENTS_EA", 
+            "labels": [ { "text": "EA" } ], 
+            "contentType": "numeric", 
+            "start": 6, 
+            "length": 3, 
+            "zeroFill": true
+          }, 
+          {
+            "name": "ASSIGNMENTS_STAFF_CODE", 
+            "labels": [ { "text": "Staff Code" } ], 
+            "contentType": "alpha", 
+            "start": 9, 
+            "length": 36
+          }, 
+          {
+            "name": "ASSIGNMENTS_ROLE", 
+            "labels": [ { "text": "Role" } ], 
+            "contentType": "numeric", 
+            "start": 45, 
+            "length": 1, 
+            "zeroFill": true, 
+            "valueSets": [
+              {
+                "name": "ASSIGNMENTS_ROLE_VS1", 
+                "labels": [ { "text": "Role" } ], 
+                "values": [
+                  {
+                    "labels": [ { "text": "INTERVIEWER" } ], 
+                    "pairs": [ { "value": "1" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "SUPERVISOR" } ], 
+                    "pairs": [ { "value": "2" } ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }, 
+      "records": [
+        {
+          "name": "ASSIGNMENTS_REC", 
+          "labels": [ { "text": "Assignments Record" } ], 
+          "recordType": "1", 
+          "occurrences": {
+            "required": true, 
+            "maximum": 1
+          }, 
+          "items": [
+            {
+              "name": "ASSIGNMENTS_SEGMENT", 
+              "labels": [ { "text": "Segment" } ], 
+              "contentType": "alpha", 
+              "length": 1
+            }, 
+            {
+              "name": "ASSIGNMENTS_DATE_ASSIGNED", 
+              "labels": [ { "text": "Date Assigned EA" } ], 
+              "contentType": "numeric", 
+              "length": 10, 
+              "zeroFill": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

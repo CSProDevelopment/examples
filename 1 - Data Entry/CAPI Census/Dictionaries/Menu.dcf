@@ -1,184 +1,227 @@
-﻿[Dictionary]
-Version=CSPro 7.7
-Label=Popstan Census Menu Dictionary
-Name=PSC_MENU_DICT
-RecordTypeStart=1
-RecordTypeLen=1
-Positions=Relative
-ZeroFill=Yes
-DecimalChar=Yes
-SecurityOptions=3612C11AF3D8F375AE4F943A823C79E7F85C568FEE4AC0745DA8947D0A0BF2EC
-
-[Level]
-Label=Menu Level
-Name=MENU_LEVEL
-
-[IdItems]
-
-[Item]
-Label=Menu identification
-Name=MENU_ID
-Start=2
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[Record]
-Label=Menu Record
-Name=MENU_REC
-RecordTypeValue='1'
-RecordLen=304
-
-[Item]
-Label=Login
-Name=LOGIN
-Start=3
-Len=36
-DataType=Alpha
-
-[Item]
-Label=PIN Code Confirmation
-Name=PIN_CODE_CONFIRMATION
-Start=39
-Len=4
-DataType=Numeric
-ZeroFill=Yes
-
-[Item]
-Label=Supervisor Access Password
-Name=SUPERVISOR_ACCESS_PASSWORD
-Start=43
-Len=4
-DataType=Numeric
-ZeroFill=Yes
-
-[Item]
-Label=Supervisor Name
-Name=SUPERVISOR_NAME
-Start=47
-Len=50
-DataType=Alpha
-
-[Item]
-Label=Supervisor PIN Code
-Name=SUPERVISOR_PIN_CODE
-Start=97
-Len=4
-DataType=Numeric
-ZeroFill=Yes
-
-[Item]
-Label=Assignment Selection
-Name=ASSIGNMENT_SELECTION
-Start=101
-Len=44
-DataType=Alpha
-
-[Item]
-Label=Supervisor Province
-Name=SUPERVISOR_PROVINCE
-Start=145
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[Item]
-Label=Supervisor District
-Name=SUPERVISOR_DISTRICT
-Start=147
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[Item]
-Label=Supervisor Menu
-Name=SUPERVISOR_MENU
-Start=149
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Supervisor Menu
-Name=SUPERVISOR_MENU_VS1
-Value=1;Manage staff
-Value=2;Assign EA to interviewer
-Value=3;View interviewer status report
-Value=4;Transfer data with interviewer
-Value=5;Transfer data with headquarters
-Value=8;Change my assignment
-Value=9;Switch users
-
-[Item]
-Label=Interviewer Menu
-Name=INTERVIEWER_MENU
-Start=151
-Len=12
-DataType=Alpha
-
-[Item]
-Label=View All Households
-Name=VIEW_ALL_HOUSEHOLDS
-Start=163
-Len=12
-DataType=Alpha
-
-[Item]
-Label=Manage Staff
-Name=MANAGE_STAFF
-Start=175
-Len=36
-DataType=Alpha
-
-[Item]
-Label=Manage Staff Member
-Name=MANAGE_STAFF_MEMBER
-Start=211
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Manage Staff Member
-Name=MANAGE_STAFF_MEMBER_VS1
-Value=1;Rename staff
-Value=2;See staff PIN code
-Value=3;Reset staff PIN code
-
-[Item]
-Label=Manage Staff Name
-Name=MANAGE_STAFF_NAME
-Start=212
-Len=50
-DataType=Alpha
-
-[Item]
-Label=Interviewer EA
-Name=INTERVIEWER_EA
-Start=262
-Len=3
-DataType=Numeric
-ZeroFill=Yes
-
-[Item]
-Label=Interviewer Code
-Name=INTERVIEWER_CODE
-Start=265
-Len=36
-DataType=Alpha
-
-[Item]
-Label=Current Province
-Name=CURRENT_PROVINCE
-Start=301
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[Item]
-Label=Current District
-Name=CURRENT_DISTRICT
-Start=303
-Len=2
-DataType=Numeric
-ZeroFill=Yes
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "dictionary", 
+  "name": "PSC_MENU_DICT", 
+  "labels": [ { "text": "Popstan Census Menu Dictionary" } ], 
+  "security": {
+    "allowDataViewerModifications": true, 
+    "allowExport": true, 
+    "cachedPasswordMinutes": 0, 
+    "settings": "3612c11af3d8f375ae4f943a823c79e7f85c568fee4ac0745da8947d0a0bf2ec"
+  }, 
+  "recordType": {
+    "start": 1, 
+    "length": 1
+  }, 
+  "defaults": {
+    "decimalMark": true, 
+    "zeroFill": true
+  }, 
+  "relativePositions": true, 
+  "levels": [
+    {
+      "name": "MENU_LEVEL", 
+      "labels": [ { "text": "Menu Level" } ], 
+      "ids": {
+        "items": [
+          {
+            "name": "MENU_ID", 
+            "labels": [ { "text": "Menu identification" } ], 
+            "contentType": "numeric", 
+            "start": 2, 
+            "length": 1, 
+            "zeroFill": true
+          }
+        ]
+      }, 
+      "records": [
+        {
+          "name": "MENU_REC", 
+          "labels": [ { "text": "Menu Record" } ], 
+          "recordType": "1", 
+          "occurrences": {
+            "required": true, 
+            "maximum": 1
+          }, 
+          "items": [
+            {
+              "name": "LOGIN", 
+              "labels": [ { "text": "Login" } ], 
+              "contentType": "alpha", 
+              "length": 36
+            }, 
+            {
+              "name": "PIN_CODE_CONFIRMATION", 
+              "labels": [ { "text": "PIN Code Confirmation" } ], 
+              "contentType": "numeric", 
+              "length": 4, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "SUPERVISOR_ACCESS_PASSWORD", 
+              "labels": [ { "text": "Supervisor Access Password" } ], 
+              "contentType": "numeric", 
+              "length": 4, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "SUPERVISOR_NAME", 
+              "labels": [ { "text": "Supervisor Name" } ], 
+              "contentType": "alpha", 
+              "length": 50
+            }, 
+            {
+              "name": "SUPERVISOR_PIN_CODE", 
+              "labels": [ { "text": "Supervisor PIN Code" } ], 
+              "contentType": "numeric", 
+              "length": 4, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "ASSIGNMENT_SELECTION", 
+              "labels": [ { "text": "Assignment Selection" } ], 
+              "contentType": "alpha", 
+              "length": 44
+            }, 
+            {
+              "name": "SUPERVISOR_PROVINCE", 
+              "labels": [ { "text": "Supervisor Province" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "SUPERVISOR_DISTRICT", 
+              "labels": [ { "text": "Supervisor District" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "SUPERVISOR_MENU", 
+              "labels": [ { "text": "Supervisor Menu" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "SUPERVISOR_MENU_VS1", 
+                  "labels": [ { "text": "Supervisor Menu" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Manage staff" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Assign EA to interviewer" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "View interviewer status report" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Transfer data with interviewer" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Transfer data with headquarters" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Change my assignment" } ], 
+                      "pairs": [ { "value": "8" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Switch users" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "INTERVIEWER_MENU", 
+              "labels": [ { "text": "Interviewer Menu" } ], 
+              "contentType": "alpha", 
+              "length": 12
+            }, 
+            {
+              "name": "VIEW_ALL_HOUSEHOLDS", 
+              "labels": [ { "text": "View All Households" } ], 
+              "contentType": "alpha", 
+              "length": 12
+            }, 
+            {
+              "name": "MANAGE_STAFF", 
+              "labels": [ { "text": "Manage Staff" } ], 
+              "contentType": "alpha", 
+              "length": 36
+            }, 
+            {
+              "name": "MANAGE_STAFF_MEMBER", 
+              "labels": [ { "text": "Manage Staff Member" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "MANAGE_STAFF_MEMBER_VS1", 
+                  "labels": [ { "text": "Manage Staff Member" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Rename staff" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "See staff PIN code" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Reset staff PIN code" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "MANAGE_STAFF_NAME", 
+              "labels": [ { "text": "Manage Staff Name" } ], 
+              "contentType": "alpha", 
+              "length": 50
+            }, 
+            {
+              "name": "INTERVIEWER_EA", 
+              "labels": [ { "text": "Interviewer EA" } ], 
+              "contentType": "numeric", 
+              "length": 3, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "INTERVIEWER_CODE", 
+              "labels": [ { "text": "Interviewer Code" } ], 
+              "contentType": "alpha", 
+              "length": 36
+            }, 
+            {
+              "name": "CURRENT_PROVINCE", 
+              "labels": [ { "text": "Current Province" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "CURRENT_DISTRICT", 
+              "labels": [ { "text": "Current District" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,34 +1,101 @@
-﻿[CSPro Application]
-Version=CSPro 7.7
-Label=MENU
-Name=MENU
-AppType=DataEntry
-OperatorID=No
-CAPI=Yes
-CaseTree=Never
-CreateListing=No
-CreateLog=No
-ShowErrorMessageNumbers=No
-[External Dictionaries]
-File=..\Dictionaries\Geocodes.dcf
-File=..\Dictionaries\Staff.dcf
-File=..\Dictionaries\Assignments.dcf
-File=..\Dictionaries\Household.dcf
-File=.\Menu.ent.wrk.dcf
-[AppCode]
-File=.\Menu.ent.apc
-[Message]
-File=.\Menu.ent.mgf
-[Reports]
-INTERVIEWER_STATUS_REPORT=.\Interviewer-Status-Report.html
-[Help]
-File=.\Menu.ent.qsf
-[Forms]
-File=.\Menu.fmf
-[Dictionary Types]
-Dict-Type=..\Dictionaries\Geocodes.dcf,External
-Dict-Type=..\Dictionaries\Staff.dcf,External
-Dict-Type=..\Dictionaries\Assignments.dcf,External
-Dict-Type=..\Dictionaries\Menu.dcf,Input,.\Menu.fmf
-Dict-Type=..\Dictionaries\Household.dcf,External
-Dict-Type=.\Menu.ent.wrk.dcf,Working
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "application", 
+  "type": "entry", 
+  "name": "MENU", 
+  "label": "MENU", 
+  "dictionaries": [
+    {
+      "type": "input", 
+      "filename": "../Dictionaries/Menu.dcf", 
+      "parent": "Menu.fmf"
+    }, 
+    {
+      "type": "external", 
+      "filename": "../Dictionaries/Geocodes.dcf"
+    }, 
+    {
+      "type": "external", 
+      "filename": "../Dictionaries/Staff.dcf"
+    }, 
+    {
+      "type": "external", 
+      "filename": "../Dictionaries/Assignments.dcf"
+    }, 
+    {
+      "type": "external", 
+      "filename": "../Dictionaries/Household.dcf"
+    }, 
+    {
+      "type": "working", 
+      "filename": "Menu.ent.wrk.dcf"
+    }
+  ], 
+  "forms": [
+    "Menu.fmf"
+  ], 
+  "questionText": [
+    "Menu.ent.qsf"
+  ], 
+  "code": [
+    {
+      "type": "main", 
+      "filename": "Menu.ent.apc"
+    }
+  ], 
+  "messages": [
+    "Menu.ent.mgf"
+  ], 
+  "reports": [
+    {
+      "name": "INTERVIEWER_STATUS_REPORT", 
+      "filename": "Interviewer-Status-Report.html"
+    }
+  ], 
+  "logicSettings": {
+    "version": 2.0, 
+    "caseSensitive": {
+      "symbols": false
+    }, 
+    "actionInvoker": {
+      "accessFromWebView": "promptIfNoValidAccessToken", 
+      "convertResultsForLogic": true
+    }
+  }, 
+  "properties": {
+    "askOperatorId": false, 
+    "autoAdvanceOnSelection": false, 
+    "caseTree": "off", 
+    "centerForms": false, 
+    "createListing": false, 
+    "createLog": false, 
+    "decimalMark": "dot", 
+    "displayCodesAlongsideLabels": false, 
+    "notes": {
+      "delete": "all", 
+      "edit": "all"
+    }, 
+    "partialSave": {
+      "operatorEnabled": false
+    }, 
+    "showEndCaseMessage": true, 
+    "showOnlyDiscreteValuesInComboBoxes": false, 
+    "showFieldLabels": true, 
+    "showErrorMessageNumbers": false, 
+    "showQuestionText": true, 
+    "showRefusals": true, 
+    "verify": {
+      "frequency": 1, 
+      "start": 1
+    }, 
+    "htmlDialogs": true, 
+    "paradata": {
+      "collection": "none", 
+      "recordCoordinates": false, 
+      "recordInitialPropertyValues": false, 
+      "recordIteratorLoadCases": false, 
+      "recordValues": false
+    }
+  }
+}

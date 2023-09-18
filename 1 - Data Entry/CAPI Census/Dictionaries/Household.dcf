@@ -1,739 +1,1214 @@
-﻿[Dictionary]
-Version=CSPro 7.7
-Label=Popstan Census Household Dictionary
-Name=PSC_HOUSEHOLD_DICT
-RecordTypeStart=1
-RecordTypeLen=1
-Positions=Relative
-ZeroFill=Yes
-DecimalChar=Yes
-SecurityOptions=1BDC092E86AA0E9ECD4778FEE48A5532A3C6EA0EEB1401F47165726C81FC88CB
-
-[Level]
-Label=Household Questionnaire
-Name=HOUSEHOLD_QUEST
-
-[IdItems]
-
-[Item]
-Label=Province
-Name=HH_PROVINCE
-Start=2
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[Item]
-Label=District
-Name=HH_DISTRICT
-Start=4
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[Item]
-Label=Enumeration Area
-Name=HH_EA
-Start=6
-Len=3
-DataType=Numeric
-ZeroFill=Yes
-
-[Item]
-Label=Segment
-Name=HH_SEGMENT
-Start=9
-Len=1
-DataType=Alpha
-
-[Item]
-Label=Household Number
-Name=HH_NUMBER
-Start=10
-Len=4
-DataType=Numeric
-ZeroFill=Yes
-
-[Record]
-Label=Population Record
-Name=POPULATION_RECORD
-RecordTypeValue='P'
-MaxRecords=35
-RecordLen=96
-
-[Item]
-Label=Population Section: Keep Row?
-Name=HH_KEEP_ROW
-Start=14
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Population Section: Keep Row?
-Name=HH_KEEP_ROW_VS1
-Value=1;Yes, keep population row
-Value=2;No, delete population row
-
-[Item]
-Label=Name
-Name=HH_NAME
-Note=While person's name will not be used for analysis it will be used in CAPI questions.
-Start=15
-Len=50
-DataType=Alpha
-
-[Item]
-Label=Relationship to Head of Houshold
-Name=HH_RELATIONSHIP
-Start=65
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Relationship to Head of Household
-Name=HH_RELATIONSHIP_WITH_HEAD_VS
-Value=1;Head
-Value=2;Spouse
-Value=3;Son/Daughter
-Value=4;Grandchild
-Value=5;Brother/Sister
-Value=6;Father/Mother
-Value=7;Nephew/Niece
-Value=8;In-law
-Value=9;Other relative
-Value=10;Not related
-
-[ValueSet]
-Label=Relationship to Head of Household
-Name=HH_RELATIONSHIP_WITHOUT_HEAD_VS
-Value=2;Spouse
-Value=3;Son/Daughter
-Value=4;Grandchild
-Value=5;Brother/Sister
-Value=6;Father/Mother
-Value=7;Nephew/Niece
-Value=8;In-law
-Value=9;Other relative
-Value=10;Not related
-
-[Item]
-Label=Sex
-Name=HH_SEX
-Start=67
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Sex
-Name=HH_SEX_VS1
-Value=1;Male
-Value=2;Female
-
-[Item]
-Label=Date of Birth
-Name=HH_DATE_OF_BIRTH
-Start=68
-Len=6
-DataType=Alpha
-
-[Item]
-Label=Month Born
-Name=HH_MONTH_BORN
-Start=68
-Len=2
-ItemType=SubItem
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Month Born
-Name=HH_MONTH_BORN_VS1
-Value=1;January
-Value=2;February
-Value=3;March
-Value=4;April
-Value=5;May
-Value=6;June
-Value=7;July
-Value=8;August
-Value=9;September
-Value=10;October
-Value=11;November
-Value=12;December
-Value=99;Don't know
-
-[Item]
-Label=Year Born
-Name=HH_YEAR_BORN
-Start=70
-Len=4
-ItemType=SubItem
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Year Born
-Name=HH_YEAR_BORN_VS1
-Value=1898:2018;Year
-Value=9999;Don't know
-
-[Item]
-Label=Age
-Name=HH_AGE
-Start=74
-Len=3
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Age
-Name=HH_AGE_VS1
-Value=0:120;Age
-Value=999;Don't know
-Name=MISSING,Special
-
-[Item]
-Label=Citizenship
-Name=HH_CITIZENSHIP
-Start=77
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Citizenship
-Name=HH_CITIZENSHIP_VS1
-Link=153437400
-Value=1;Yes
-Value=2;No
-
-[Item]
-Label=Residence Situation
-Name=HH_RESIDENCE_SITUATION
-Start=78
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Residence Situation
-Name=HH_RESIDENCE_SITUATION_VS1
-Value=1;Present resident
-Value=2;Absent resident
-Value=3;Visitor
-
-[Item]
-Label=Literacy
-Name=HH_LITERACY
-Start=79
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Literacy
-Name=HH_LITERACY_VS1
-Link=153437400
-
-[Item]
-Label=Education
-Name=HH_EDUCATION
-Start=80
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Education
-Name=HH_EDUCATION_VS1
-Value=1;None
-Value=2;Preschool
-Value=3;Primary
-Value=4;Secondary
-Value=5;University
-Value=6;Other tertiary
-
-[Item]
-Label=Work Status
-Name=HH_WORK_STATUS
-Start=81
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Work Status
-Name=HH_WORK_STATUS_VS1
-Link=153437400
-
-[Item]
-Label=Marital Status
-Name=HH_MARITAL_STATUS
-Start=82
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Marital Status
-Name=HH_MARITAL_STATUS_VS1
-Value=1;Never married
-Value=2;Married
-Value=3;Divorced/Seperated
-Value=4;Widowed
-
-[Item]
-Label=Age at first marriage
-Name=HH_MARITAL_AGE
-Start=83
-Len=3
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Age at first marriage
-Name=HH_MARITAL_AGE_VS1
-Value=0:120;Marital age
-Value=999;Don't know
-Name=MISSING,Special
-
-[Item]
-Label=Children Ever Born
-Name=HH_CHILDREN_EVER_BORN
-Start=86
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Children Ever Born
-Name=HH_CHILDREN_EVER_BORN_VS1
-Link=98930856
-Value=0:20;Children
-
-[Item]
-Label=Boys Ever Born
-Name=HH_BOYS_EVER_BORN
-Start=88
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Boys Ever Born
-Name=HH_BOYS_EVER_BORN_VS1
-Link=98930856
-
-[Item]
-Label=Boys Still Alive
-Name=HH_BOYS_STILL_ALIVE
-Start=90
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Boys Still Alive
-Name=HH_BOYS_STILL_ALIVE_VS1
-Link=98930856
-
-[Item]
-Label=Girls Ever Born
-Name=HH_GIRLS_EVER_BORN
-Start=92
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Girls Ever Born
-Name=HH_GIRLS_EVER_BORN_VS1
-Link=98930856
-
-[Item]
-Label=Girls Still Alive
-Name=HH_GIRLS_STILL_ALIVE
-Start=94
-Len=2
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Girls Still Alive
-Name=HH_GIRLS_STILL_ALIVE_VS1
-Link=98930856
-
-[Item]
-Label=Population Section: Roster Confirmation
-Name=HH_MORE_ROWS
-Start=96
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Population Section: Roster Confirmation
-Name=HH_MORE_ROWS_VS1
-Value=1;Yes, there are additional persons
-Value=2;No, list of persons is complete
-
-[Record]
-Label=Dwelling Unit Record
-Name=DWELLING_UNIT_RECORD
-RecordTypeValue='D'
-Required=No
-RecordLen=22
-
-[Item]
-Label=Tenure
-Name=HH_TENURE
-Start=14
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Tenure
-Name=HH_TENURE_VS1
-Value=1;Owner/Family occupied
-Value=2;Rented
-Value=3;Other
-
-[Item]
-Label=Roof
-Name=HH_ROOF
-Start=15
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Roof
-Name=HH_ROOF_VS1
-Value=1;Corrugated iron sheet
-Value=2;Tile
-Value=3;Concrete
-Value=4;Grass
-Value=5;Other
-
-[Item]
-Label=Wall
-Name=HH_WALL
-Start=16
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Wall
-Name=HH_WALL_VS1
-Value=1;Stone
-Value=2;Brick
-Value=3;Wood
-Value=4;Grass
-Value=5;Other
-
-[Item]
-Label=Floor
-Name=HH_FLOOR
-Start=17
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Floor
-Name=HH_FLOOR_VS1
-Value=1;Concrete
-Value=2;Tile
-Value=3;Wood
-Value=4;Bamboo
-Value=5;Other
-
-[Item]
-Label=Water Source
-Name=HH_WATER_SOURCE
-Start=18
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Water Source
-Name=HH_WATER_SOURCE_VS1
-Value=1;Piped into dwelling
-Value=2;Piped into yard
-Value=3;Protected well
-Value=4;Unprotected well
-Value=5;Rain water
-Value=6;Stream/River
-Value=7;Pond/Lake
-Value=8;Dam
-Value=9;Other
-
-[Item]
-Label=Toilet
-Name=HH_TOILET
-Start=19
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Toilet
-Name=HH_TOILET_VS1
-Value=1;Flush toilet
-Value=2;Ventilated improved pit (VIP) latrine
-Value=3;Pit latrine
-Value=4;Bush
-Value=5;Other
-
-[Item]
-Label=Lighting Source
-Name=HH_LIGHTING_SOURCE
-Start=20
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Lighting Source
-Name=HH_LIGHTING_SOURCE_VS1
-Value=1;Electricity
-Value=5;Firewood
-Value=2;Solar
-Value=4;Candles
-Value=3;Battery
-Value=6;Other
-
-[Item]
-Label=Cooking Source
-Name=HH_COOKING_SOURCE
-Start=21
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Cooking Source
-Name=HH_COOKING_SOURCE_VS1
-Value=1;Electricity
-Value=5;Firewood
-Value=2;Solar
-Value=4;Charcoal
-Value=6;Gas
-Value=7;Other
-
-[Item]
-Label=Internet Access
-Name=HH_INTERNET
-Start=22
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Internet Access
-Name=HH_INTERNET_VS1
-Link=153437400
-
-[Record]
-Label=Metadata Record
-Name=METADATA_RECORD
-RecordTypeValue='X'
-RecordLen=167
-
-[Item]
-Label=Interviewer Code
-Name=HH_INTERVIEWER_CODE
-Start=14
-Len=36
-DataType=Alpha
-
-[Item]
-Label=Supervisor Code
-Name=HH_SUPERVISOR_CODE
-Start=50
-Len=36
-DataType=Alpha
-
-[Item]
-Label=Start Interview Time
-Name=HH_START_INTERVIEW_TIME
-Start=86
-Len=10
-DataType=Numeric
-ZeroFill=Yes
-
-[Item]
-Label=End Interview Time
-Name=HH_END_INTERVIEW_TIME
-Start=96
-Len=10
-DataType=Numeric
-ZeroFill=Yes
-
-[Item]
-Label=Program Publish Date
-Name=HH_PROGRAM_PUBLISH_DATE
-Start=106
-Len=14
-DataType=Numeric
-ZeroFill=Yes
-
-[Item]
-Label=GPS Reading
-Name=HH_GPS_READING
-Start=120
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=GPS Reading
-Name=HH_GPS_MOBILE_NO_DATA_VS
-Value=1;Yes
-Value=3;No
-
-[ValueSet]
-Label=GPS Reading
-Name=HH_GPS_MOBILE_EXISTING_DATA_VS
-Value=1;Yes
-Value=2;No, but keep previously collected GPS data
-Value=3;No, but delete previously collected GPS data
-
-[ValueSet]
-Label=GPS Reading
-Name=HH_GPS_WINDOWS_NO_DATA_VS
-Value=3;No
-
-[ValueSet]
-Label=GPS Reading
-Name=HH_GPS_WINDOWS_EXISTING_DATA_VS
-Value=2;No, but keep previously collected GPS data
-Value=3;No, but delete previously collected GPS data
-
-[Item]
-Label=GPS Latitude
-Name=HH_GPS_LATITUDE
-Start=121
-Len=10
-DataType=Numeric
-Decimal=6
-DecimalChar=Yes
-ZeroFill=Yes
-
-[Item]
-Label=GPS Longitude
-Name=HH_GPS_LONGITUDE
-Start=131
-Len=11
-DataType=Numeric
-Decimal=6
-DecimalChar=Yes
-ZeroFill=Yes
-
-[Item]
-Label=GPS Altitude
-Name=HH_GPS_ALTITUDE
-Start=142
-Len=7
-DataType=Numeric
-Decimal=1
-DecimalChar=Yes
-ZeroFill=Yes
-
-[Item]
-Label=GPS Accuracy
-Name=HH_GPS_ACCURACY
-Start=149
-Len=6
-DataType=Numeric
-Decimal=1
-DecimalChar=Yes
-ZeroFill=Yes
-
-[Item]
-Label=GPS Satellites
-Name=HH_GPS_SATELLITES
-Start=155
-Len=3
-DataType=Numeric
-ZeroFill=Yes
-
-[Item]
-Label=GPS Readtime
-Name=HH_GPS_READTIME
-Start=158
-Len=6
-DataType=Numeric
-ZeroFill=Yes
-
-[Item]
-Label=Interview Introduction
-Name=HH_INTRODUCTION
-Start=164
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Interview Introduction
-Name=HH_INTRODUCTION_BEGIN_VS
-Value=1;Begin interview
-
-[ValueSet]
-Label=Interview Introduction
-Name=HH_INTRODUCTION_PARTIAL_VS
-Value=2;Continue interview where previously left off
-Value=1;Continue interview from first question
-
-[ValueSet]
-Label=Interview Introduction
-Name=HH_INTRODUCTION_MODIFY_VS
-Value=1;Modify questionnaire
-
-[Item]
-Label=Population Section
-Name=HH_POPULATION_SECTION
-Start=165
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Population Section
-Name=HH_POPULATION_SECTION_VS1
-Link=108924368
-Value=1;Continue
-
-[Item]
-Label=Dwelling Characteristics Section
-Name=HH_DWELLING_SECTION
-Start=166
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Dwelling Characteristics Section
-Name=HH_DWELLING_SECTION_VS1
-Link=108924368
-
-[Item]
-Label=Interview Conclusion
-Name=HH_CONCLUSION
-Start=167
-Len=1
-DataType=Numeric
-ZeroFill=Yes
-
-[ValueSet]
-Label=Interview Conclusion
-Name=HH_CONCLUSION_VS1
-Value=1;Conclude interview
-Value=2;Review population section
-Value=3;Review dwelling characteristics section
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "dictionary", 
+  "name": "PSC_HOUSEHOLD_DICT", 
+  "labels": [ { "text": "Popstan Census Household Dictionary" } ], 
+  "security": {
+    "allowDataViewerModifications": true, 
+    "allowExport": true, 
+    "cachedPasswordMinutes": 0, 
+    "settings": "1bdc092e86aa0e9ecd4778fee48a5532a3c6ea0eeb1401f47165726c81fc88cb"
+  }, 
+  "recordType": {
+    "start": 1, 
+    "length": 1
+  }, 
+  "defaults": {
+    "decimalMark": true, 
+    "zeroFill": true
+  }, 
+  "relativePositions": true, 
+  "levels": [
+    {
+      "name": "HOUSEHOLD_QUEST", 
+      "labels": [ { "text": "Household Questionnaire" } ], 
+      "ids": {
+        "items": [
+          {
+            "name": "HH_PROVINCE", 
+            "labels": [ { "text": "Province" } ], 
+            "contentType": "numeric", 
+            "start": 2, 
+            "length": 2, 
+            "zeroFill": true
+          }, 
+          {
+            "name": "HH_DISTRICT", 
+            "labels": [ { "text": "District" } ], 
+            "contentType": "numeric", 
+            "start": 4, 
+            "length": 2, 
+            "zeroFill": true
+          }, 
+          {
+            "name": "HH_EA", 
+            "labels": [ { "text": "Enumeration Area" } ], 
+            "contentType": "numeric", 
+            "start": 6, 
+            "length": 3, 
+            "zeroFill": true
+          }, 
+          {
+            "name": "HH_SEGMENT", 
+            "labels": [ { "text": "Segment" } ], 
+            "contentType": "alpha", 
+            "start": 9, 
+            "length": 1
+          }, 
+          {
+            "name": "HH_NUMBER", 
+            "labels": [ { "text": "Household Number" } ], 
+            "contentType": "numeric", 
+            "start": 10, 
+            "length": 4, 
+            "zeroFill": true
+          }
+        ]
+      }, 
+      "records": [
+        {
+          "name": "POPULATION_RECORD", 
+          "labels": [ { "text": "Population Record" } ], 
+          "recordType": "P", 
+          "occurrences": {
+            "required": true, 
+            "maximum": 35
+          }, 
+          "items": [
+            {
+              "name": "HH_KEEP_ROW", 
+              "labels": [ { "text": "Population Section: Keep Row?" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "HH_KEEP_ROW_VS1", 
+                  "labels": [ { "text": "Population Section: Keep Row?" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Yes, keep population row" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No, delete population row" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "HH_NAME", 
+              "labels": [ { "text": "Name" } ], 
+              "note": "While person's name will not be used for analysis it will be used in CAPI questions.", 
+              "contentType": "alpha", 
+              "length": 50
+            }, 
+            {
+              "name": "HH_RELATIONSHIP", 
+              "labels": [ { "text": "Relationship to Head of Houshold" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "HH_RELATIONSHIP_WITH_HEAD_VS", 
+                  "labels": [ { "text": "Relationship to Head of Household" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Head" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Spouse" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Son/Daughter" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Grandchild" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Brother/Sister" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Father/Mother" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Nephew/Niece" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "In-law" } ], 
+                      "pairs": [ { "value": "8" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Other relative" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not related" } ], 
+                      "pairs": [ { "value": "10" } ]
+                    }
+                  ]
+                }, 
+                {
+                  "name": "HH_RELATIONSHIP_WITHOUT_HEAD_VS", 
+                  "labels": [ { "text": "Relationship to Head of Household" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Spouse" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Son/Daughter" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Grandchild" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Brother/Sister" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Father/Mother" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Nephew/Niece" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "In-law" } ], 
+                      "pairs": [ { "value": "8" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Other relative" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Not related" } ], 
+                      "pairs": [ { "value": "10" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "HH_SEX", 
+              "labels": [ { "text": "Sex" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "HH_SEX_VS1", 
+                  "labels": [ { "text": "Sex" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Male" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Female" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "HH_DATE_OF_BIRTH", 
+              "labels": [ { "text": "Date of Birth" } ], 
+              "contentType": "alpha", 
+              "length": 6
+            }, 
+            {
+              "name": "HH_MONTH_BORN", 
+              "labels": [ { "text": "Month Born" } ], 
+              "contentType": "numeric", 
+              "subitem": true, 
+              "subitemOffset": 0, 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "HH_MONTH_BORN_VS1", 
+                  "labels": [ { "text": "Month Born" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "January" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "February" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "March" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "April" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "May" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "June" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "July" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "August" } ], 
+                      "pairs": [ { "value": "8" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "September" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "October" } ], 
+                      "pairs": [ { "value": "10" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "November" } ], 
+                      "pairs": [ { "value": "11" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "December" } ], 
+                      "pairs": [ { "value": "12" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Don't know" } ], 
+                      "pairs": [ { "value": "99" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "HH_YEAR_BORN", 
+              "labels": [ { "text": "Year Born" } ], 
+              "contentType": "numeric", 
+              "subitem": true, 
+              "subitemOffset": 2, 
+              "length": 4, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "HH_YEAR_BORN_VS1", 
+                  "labels": [ { "text": "Year Born" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Year" } ], 
+                      "pairs": [ { "range": [ "1898", "2018" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Don't know" } ], 
+                      "pairs": [ { "value": "9999" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "HH_AGE", 
+              "labels": [ { "text": "Age" } ], 
+              "contentType": "numeric", 
+              "length": 3, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "HH_AGE_VS1", 
+                  "labels": [ { "text": "Age" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Age" } ], 
+                      "pairs": [ { "range": [ "0", "120" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Don't know" } ], 
+                      "special": "MISSING", 
+                      "pairs": [ { "value": "999" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "HH_CITIZENSHIP", 
+              "labels": [ { "text": "Citizenship" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "HH_CITIZENSHIP_VS1", 
+                  "labels": [ { "text": "Citizenship" } ], 
+                  "link": "153437400", 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Yes" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "HH_RESIDENCE_SITUATION", 
+              "labels": [ { "text": "Residence Situation" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "HH_RESIDENCE_SITUATION_VS1", 
+                  "labels": [ { "text": "Residence Situation" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Present resident" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Absent resident" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Visitor" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "HH_LITERACY", 
+              "labels": [ { "text": "Literacy" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "HH_LITERACY_VS1", 
+                  "labels": [ { "text": "Literacy" } ], 
+                  "link": "153437400"
+                }
+              ]
+            }, 
+            {
+              "name": "HH_EDUCATION", 
+              "labels": [ { "text": "Education" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "HH_EDUCATION_VS1", 
+                  "labels": [ { "text": "Education" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "None" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Preschool" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Primary" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Secondary" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "University" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Other tertiary" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "HH_WORK_STATUS", 
+              "labels": [ { "text": "Work Status" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "HH_WORK_STATUS_VS1", 
+                  "labels": [ { "text": "Work Status" } ], 
+                  "link": "153437400"
+                }
+              ]
+            }, 
+            {
+              "name": "HH_MARITAL_STATUS", 
+              "labels": [ { "text": "Marital Status" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "HH_MARITAL_STATUS_VS1", 
+                  "labels": [ { "text": "Marital Status" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Never married" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Married" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Divorced/Seperated" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Widowed" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "HH_MARITAL_AGE", 
+              "labels": [ { "text": "Age at first marriage" } ], 
+              "contentType": "numeric", 
+              "length": 3, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "HH_MARITAL_AGE_VS1", 
+                  "labels": [ { "text": "Age at first marriage" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Marital age" } ], 
+                      "pairs": [ { "range": [ "0", "120" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Don't know" } ], 
+                      "special": "MISSING", 
+                      "pairs": [ { "value": "999" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "HH_CHILDREN_EVER_BORN", 
+              "labels": [ { "text": "Children Ever Born" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "HH_CHILDREN_EVER_BORN_VS1", 
+                  "labels": [ { "text": "Children Ever Born" } ], 
+                  "link": "98930856", 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Children" } ], 
+                      "pairs": [ { "range": [ "0", "20" ] } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "HH_BOYS_EVER_BORN", 
+              "labels": [ { "text": "Boys Ever Born" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "HH_BOYS_EVER_BORN_VS1", 
+                  "labels": [ { "text": "Boys Ever Born" } ], 
+                  "link": "98930856"
+                }
+              ]
+            }, 
+            {
+              "name": "HH_BOYS_STILL_ALIVE", 
+              "labels": [ { "text": "Boys Still Alive" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "HH_BOYS_STILL_ALIVE_VS1", 
+                  "labels": [ { "text": "Boys Still Alive" } ], 
+                  "link": "98930856"
+                }
+              ]
+            }, 
+            {
+              "name": "HH_GIRLS_EVER_BORN", 
+              "labels": [ { "text": "Girls Ever Born" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "HH_GIRLS_EVER_BORN_VS1", 
+                  "labels": [ { "text": "Girls Ever Born" } ], 
+                  "link": "98930856"
+                }
+              ]
+            }, 
+            {
+              "name": "HH_GIRLS_STILL_ALIVE", 
+              "labels": [ { "text": "Girls Still Alive" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "HH_GIRLS_STILL_ALIVE_VS1", 
+                  "labels": [ { "text": "Girls Still Alive" } ], 
+                  "link": "98930856"
+                }
+              ]
+            }, 
+            {
+              "name": "HH_MORE_ROWS", 
+              "labels": [ { "text": "Population Section: Roster Confirmation" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "HH_MORE_ROWS_VS1", 
+                  "labels": [ { "text": "Population Section: Roster Confirmation" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Yes, there are additional persons" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No, list of persons is complete" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }, 
+        {
+          "name": "DWELLING_UNIT_RECORD", 
+          "labels": [ { "text": "Dwelling Unit Record" } ], 
+          "recordType": "D", 
+          "occurrences": {
+            "required": false, 
+            "maximum": 1
+          }, 
+          "items": [
+            {
+              "name": "HH_TENURE", 
+              "labels": [ { "text": "Tenure" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "HH_TENURE_VS1", 
+                  "labels": [ { "text": "Tenure" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Owner/Family occupied" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Rented" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Other" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "HH_ROOF", 
+              "labels": [ { "text": "Roof" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "HH_ROOF_VS1", 
+                  "labels": [ { "text": "Roof" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Corrugated iron sheet" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Tile" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Concrete" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Grass" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Other" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "HH_WALL", 
+              "labels": [ { "text": "Wall" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "HH_WALL_VS1", 
+                  "labels": [ { "text": "Wall" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Stone" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Brick" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Wood" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Grass" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Other" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "HH_FLOOR", 
+              "labels": [ { "text": "Floor" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "HH_FLOOR_VS1", 
+                  "labels": [ { "text": "Floor" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Concrete" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Tile" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Wood" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Bamboo" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Other" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "HH_WATER_SOURCE", 
+              "labels": [ { "text": "Water Source" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "HH_WATER_SOURCE_VS1", 
+                  "labels": [ { "text": "Water Source" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Piped into dwelling" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Piped into yard" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Protected well" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Unprotected well" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Rain water" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Stream/River" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Pond/Lake" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Dam" } ], 
+                      "pairs": [ { "value": "8" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Other" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "HH_TOILET", 
+              "labels": [ { "text": "Toilet" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "HH_TOILET_VS1", 
+                  "labels": [ { "text": "Toilet" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Flush toilet" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Ventilated improved pit (VIP) latrine" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Pit latrine" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Bush" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Other" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "HH_LIGHTING_SOURCE", 
+              "labels": [ { "text": "Lighting Source" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "HH_LIGHTING_SOURCE_VS1", 
+                  "labels": [ { "text": "Lighting Source" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Electricity" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Firewood" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Solar" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Candles" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Battery" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Other" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "HH_COOKING_SOURCE", 
+              "labels": [ { "text": "Cooking Source" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "HH_COOKING_SOURCE_VS1", 
+                  "labels": [ { "text": "Cooking Source" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Electricity" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Firewood" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Solar" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Charcoal" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Gas" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Other" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "HH_INTERNET", 
+              "labels": [ { "text": "Internet Access" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "HH_INTERNET_VS1", 
+                  "labels": [ { "text": "Internet Access" } ], 
+                  "link": "153437400"
+                }
+              ]
+            }
+          ]
+        }, 
+        {
+          "name": "METADATA_RECORD", 
+          "labels": [ { "text": "Metadata Record" } ], 
+          "recordType": "X", 
+          "occurrences": {
+            "required": true, 
+            "maximum": 1
+          }, 
+          "items": [
+            {
+              "name": "HH_INTERVIEWER_CODE", 
+              "labels": [ { "text": "Interviewer Code" } ], 
+              "contentType": "alpha", 
+              "length": 36
+            }, 
+            {
+              "name": "HH_SUPERVISOR_CODE", 
+              "labels": [ { "text": "Supervisor Code" } ], 
+              "contentType": "alpha", 
+              "length": 36
+            }, 
+            {
+              "name": "HH_START_INTERVIEW_TIME", 
+              "labels": [ { "text": "Start Interview Time" } ], 
+              "contentType": "numeric", 
+              "length": 10, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "HH_END_INTERVIEW_TIME", 
+              "labels": [ { "text": "End Interview Time" } ], 
+              "contentType": "numeric", 
+              "length": 10, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "HH_PROGRAM_PUBLISH_DATE", 
+              "labels": [ { "text": "Program Publish Date" } ], 
+              "contentType": "numeric", 
+              "length": 14, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "HH_GPS_READING", 
+              "labels": [ { "text": "GPS Reading" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "HH_GPS_MOBILE_NO_DATA_VS", 
+                  "labels": [ { "text": "GPS Reading" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Yes" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }
+                  ]
+                }, 
+                {
+                  "name": "HH_GPS_MOBILE_EXISTING_DATA_VS", 
+                  "labels": [ { "text": "GPS Reading" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Yes" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No, but keep previously collected GPS data" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No, but delete previously collected GPS data" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }
+                  ]
+                }, 
+                {
+                  "name": "HH_GPS_WINDOWS_NO_DATA_VS", 
+                  "labels": [ { "text": "GPS Reading" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "No" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }
+                  ]
+                }, 
+                {
+                  "name": "HH_GPS_WINDOWS_EXISTING_DATA_VS", 
+                  "labels": [ { "text": "GPS Reading" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "No, but keep previously collected GPS data" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No, but delete previously collected GPS data" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "HH_GPS_LATITUDE", 
+              "labels": [ { "text": "GPS Latitude" } ], 
+              "contentType": "numeric", 
+              "length": 10, 
+              "decimals": 6, 
+              "decimalMark": true, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "HH_GPS_LONGITUDE", 
+              "labels": [ { "text": "GPS Longitude" } ], 
+              "contentType": "numeric", 
+              "length": 11, 
+              "decimals": 6, 
+              "decimalMark": true, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "HH_GPS_ALTITUDE", 
+              "labels": [ { "text": "GPS Altitude" } ], 
+              "contentType": "numeric", 
+              "length": 7, 
+              "decimals": 1, 
+              "decimalMark": true, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "HH_GPS_ACCURACY", 
+              "labels": [ { "text": "GPS Accuracy" } ], 
+              "contentType": "numeric", 
+              "length": 6, 
+              "decimals": 1, 
+              "decimalMark": true, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "HH_GPS_SATELLITES", 
+              "labels": [ { "text": "GPS Satellites" } ], 
+              "contentType": "numeric", 
+              "length": 3, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "HH_GPS_READTIME", 
+              "labels": [ { "text": "GPS Readtime" } ], 
+              "contentType": "numeric", 
+              "length": 6, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "HH_INTRODUCTION", 
+              "labels": [ { "text": "Interview Introduction" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "HH_INTRODUCTION_BEGIN_VS", 
+                  "labels": [ { "text": "Interview Introduction" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Begin interview" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }
+                  ]
+                }, 
+                {
+                  "name": "HH_INTRODUCTION_PARTIAL_VS", 
+                  "labels": [ { "text": "Interview Introduction" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Continue interview where previously left off" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Continue interview from first question" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }
+                  ]
+                }, 
+                {
+                  "name": "HH_INTRODUCTION_MODIFY_VS", 
+                  "labels": [ { "text": "Interview Introduction" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Modify questionnaire" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "HH_POPULATION_SECTION", 
+              "labels": [ { "text": "Population Section" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "HH_POPULATION_SECTION_VS1", 
+                  "labels": [ { "text": "Population Section" } ], 
+                  "link": "108924368", 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Continue" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "HH_DWELLING_SECTION", 
+              "labels": [ { "text": "Dwelling Characteristics Section" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "HH_DWELLING_SECTION_VS1", 
+                  "labels": [ { "text": "Dwelling Characteristics Section" } ], 
+                  "link": "108924368"
+                }
+              ]
+            }, 
+            {
+              "name": "HH_CONCLUSION", 
+              "labels": [ { "text": "Interview Conclusion" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "HH_CONCLUSION_VS1", 
+                  "labels": [ { "text": "Interview Conclusion" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Conclude interview" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Review population section" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Review dwelling characteristics section" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

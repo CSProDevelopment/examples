@@ -1,13 +1,47 @@
-﻿[CSPro Application]
-Version=CSPro 7.7
-Label=WRITING_CSV_FILE
-Name=WRITING_CSV_FILE
-AppType=Batch
-[AppCode]
-File=.\Writing CSV file.bch.apc
-[Message]
-File=.\Writing CSV file.bch.mgf
-[Order]
-File=.\Writing CSV file.ord
-[Dictionary Types]
-Dict-Type=.\Popstan2.dcf,Input,.\Writing CSV file.ord
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "application", 
+  "type": "batch", 
+  "name": "WRITING_CSV_FILE", 
+  "label": "WRITING_CSV_FILE", 
+  "dictionaries": [
+    {
+      "type": "input", 
+      "filename": "Popstan2.dcf", 
+      "parent": "Writing CSV file.ord"
+    }
+  ], 
+  "order": [
+    "Writing CSV file.ord"
+  ], 
+  "code": [
+    {
+      "type": "main", 
+      "filename": "Writing CSV file.bch.apc"
+    }
+  ], 
+  "messages": [
+    "Writing CSV file.bch.mgf"
+  ], 
+  "logicSettings": {
+    "version": 2.0, 
+    "caseSensitive": {
+      "symbols": false
+    }, 
+    "actionInvoker": {
+      "accessFromWebView": "promptIfNoValidAccessToken", 
+      "convertResultsForLogic": true
+    }
+  }, 
+  "properties": {
+    "htmlDialogs": true, 
+    "paradata": {
+      "collection": "none", 
+      "recordCoordinates": false, 
+      "recordInitialPropertyValues": false, 
+      "recordIteratorLoadCases": false, 
+      "recordValues": false
+    }
+  }
+}

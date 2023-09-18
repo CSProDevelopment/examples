@@ -1,18 +1,81 @@
-﻿[CSPro Application]
-Version=CSPro 7.7
-Label=Write External File
-Name=WRT_EXT
-AppType=DataEntry
-OperatorID=No
-[AppCode]
-File=.\WriteExt.ent.apc
-[Message]
-File=.\WriteExt.ent.mgf
-[Help]
-File=.\WriteExt.ent.qsf
-[Forms]
-File=.\WriteExt.fmf
-File=.\Others.fmf
-[Dictionary Types]
-Dict-Type=.\WriteExt.dcf,Input,.\WriteExt.fmf
-Dict-Type=.\Others.dcf,External,.\Others.fmf
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "application", 
+  "type": "entry", 
+  "name": "WRT_EXT", 
+  "label": "Write External File", 
+  "dictionaries": [
+    {
+      "type": "input", 
+      "filename": "WriteExt.dcf", 
+      "parent": "WriteExt.fmf"
+    }, 
+    {
+      "type": "external", 
+      "filename": "Others.dcf", 
+      "parent": "Others.fmf"
+    }
+  ], 
+  "forms": [
+    "WriteExt.fmf", 
+    "Others.fmf"
+  ], 
+  "questionText": [
+    "WriteExt.ent.qsf"
+  ], 
+  "code": [
+    {
+      "type": "main", 
+      "filename": "WriteExt.ent.apc"
+    }
+  ], 
+  "messages": [
+    "WriteExt.ent.mgf"
+  ], 
+  "logicSettings": {
+    "version": 2.0, 
+    "caseSensitive": {
+      "symbols": false
+    }, 
+    "actionInvoker": {
+      "accessFromWebView": "promptIfNoValidAccessToken", 
+      "convertResultsForLogic": true
+    }
+  }, 
+  "properties": {
+    "askOperatorId": false, 
+    "autoAdvanceOnSelection": false, 
+    "caseTree": "mobileOnly", 
+    "centerForms": false, 
+    "createListing": true, 
+    "createLog": true, 
+    "decimalMark": "dot", 
+    "displayCodesAlongsideLabels": false, 
+    "notes": {
+      "delete": "all", 
+      "edit": "all"
+    }, 
+    "partialSave": {
+      "operatorEnabled": false
+    }, 
+    "showEndCaseMessage": true, 
+    "showOnlyDiscreteValuesInComboBoxes": false, 
+    "showFieldLabels": true, 
+    "showErrorMessageNumbers": true, 
+    "showQuestionText": false, 
+    "showRefusals": true, 
+    "verify": {
+      "frequency": 1, 
+      "start": 1
+    }, 
+    "htmlDialogs": true, 
+    "paradata": {
+      "collection": "none", 
+      "recordCoordinates": false, 
+      "recordInitialPropertyValues": false, 
+      "recordIteratorLoadCases": false, 
+      "recordValues": false
+    }
+  }
+}
