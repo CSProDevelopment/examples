@@ -8,7 +8,7 @@
   "dictionaries": [
     {
       "type": "input", 
-      "filename": "Geometry.dcf", 
+      "path": "Geometry.dcf", 
       "parent": "Geometry.fmf"
     }
   ], 
@@ -21,7 +21,7 @@
   "code": [
     {
       "type": "main", 
-      "filename": "Geometry.ent.apc"
+      "path": "Geometry.ent.apc"
     }
   ], 
   "messages": [

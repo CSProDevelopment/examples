@@ -8,12 +8,12 @@
   "dictionaries": [
     {
       "type": "input", 
-      "filename": "popstan2.dcf", 
+      "path": "popstan2.dcf", 
       "parent": "ADD-weight.ord"
     }, 
     {
       "type": "external", 
-      "filename": "Weight file.dcf"
+      "path": "Weight file.dcf"
     }
   ], 
   "order": [
@@ -22,7 +22,7 @@
   "code": [
     {
       "type": "main", 
-      "filename": "ADD-weight.bch.apc"
+      "path": "ADD-weight.bch.apc"
     }
   ], 
   "messages": [

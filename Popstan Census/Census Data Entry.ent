@@ -8,7 +8,7 @@
   "dictionaries": [
     {
       "type": "input", 
-      "filename": "Census Dictionary.dcf", 
+      "path": "Census Dictionary.dcf", 
       "parent": "Census Data Entry.fmf"
     }
   ], 
@@ -21,7 +21,7 @@
   "code": [
     {
       "type": "main", 
-      "filename": "Census Data Entry.ent.apc"
+      "path": "Census Data Entry.ent.apc"
     }
   ], 
   "messages": [

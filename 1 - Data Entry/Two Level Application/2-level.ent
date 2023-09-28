@@ -8,7 +8,7 @@
   "dictionaries": [
     {
       "type": "input", 
-      "filename": "two-level.dcf", 
+      "path": "two-level.dcf", 
       "parent": "2-level.fmf"
     }
   ], 
@@ -21,7 +21,7 @@
   "code": [
     {
       "type": "main", 
-      "filename": "2-level.ent.apc"
+      "path": "2-level.ent.apc"
     }
   ], 
   "messages": [

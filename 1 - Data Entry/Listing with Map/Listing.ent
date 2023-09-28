@@ -8,7 +8,7 @@
   "dictionaries": [
     {
       "type": "input", 
-      "filename": "Structures.dcf", 
+      "path": "Structures.dcf", 
       "parent": "Listing.fmf"
     }
   ], 
@@ -21,7 +21,7 @@
   "code": [
     {
       "type": "main", 
-      "filename": "Listing.ent.apc"
+      "path": "Listing.ent.apc"
     }
   ], 
   "messages": [

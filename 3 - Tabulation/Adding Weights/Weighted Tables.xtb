@@ -8,7 +8,7 @@
   "dictionaries": [
     {
       "type": "working", 
-      "filename": "Weighted Tables.xtb.wrk.dcf"
+      "path": "Weighted Tables.xtb.wrk.dcf"
     }
   ], 
   "tableSpecs": [
@@ -17,7 +17,7 @@
   "code": [
     {
       "type": "main", 
-      "filename": "Weighted Tables.xtb.apc"
+      "path": "Weighted Tables.xtb.apc"
     }
   ], 
   "messages": [

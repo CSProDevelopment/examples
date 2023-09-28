@@ -8,7 +8,7 @@
   "dictionaries": [
     {
       "type": "input", 
-      "filename": "Weight file.dcf", 
+      "path": "Weight file.dcf", 
       "parent": "Create Weights.fmf"
     }
   ], 
@@ -21,7 +21,7 @@
   "code": [
     {
       "type": "main", 
-      "filename": "Create Weights.ent.apc"
+      "path": "Create Weights.ent.apc"
     }
   ], 
   "messages": [

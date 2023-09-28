@@ -8,21 +8,21 @@
   "dictionaries": [
     {
       "type": "input", 
-      "filename": "CheckCode.dcf", 
+      "path": "CheckCode.dcf", 
       "parent": "CheckCode.fmf"
     }, 
     {
       "type": "external", 
-      "filename": "auxil.dcf", 
+      "path": "auxil.dcf", 
       "parent": "auxil.fmf"
     }, 
     {
       "type": "external", 
-      "filename": "Occupation.dcf"
+      "path": "Occupation.dcf"
     }, 
     {
       "type": "external", 
-      "filename": "industry.dcf"
+      "path": "industry.dcf"
     }
   ], 
   "forms": [
@@ -35,7 +35,7 @@
   "code": [
     {
       "type": "main", 
-      "filename": "CheckCode.ent.apc"
+      "path": "CheckCode.ent.apc"
     }
   ], 
   "messages": [

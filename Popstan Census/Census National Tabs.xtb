@@ -8,7 +8,7 @@
   "dictionaries": [
     {
       "type": "working", 
-      "filename": "Census National Tabs.xtb.wrk.dcf"
+      "path": "Census National Tabs.xtb.wrk.dcf"
     }
   ], 
   "tableSpecs": [
@@ -17,7 +17,7 @@
   "code": [
     {
       "type": "main", 
-      "filename": "Census National Tabs.xtb.apc"
+      "path": "Census National Tabs.xtb.apc"
     }
   ], 
   "messages": [

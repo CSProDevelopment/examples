@@ -8,28 +8,28 @@
   "dictionaries": [
     {
       "type": "input", 
-      "filename": "../Dictionaries/Menu.dcf", 
+      "path": "../Dictionaries/Menu.dcf", 
       "parent": "Menu.fmf"
     }, 
     {
       "type": "external", 
-      "filename": "../Dictionaries/Geocodes.dcf"
+      "path": "../Dictionaries/Geocodes.dcf"
     }, 
     {
       "type": "external", 
-      "filename": "../Dictionaries/Staff.dcf"
+      "path": "../Dictionaries/Staff.dcf"
     }, 
     {
       "type": "external", 
-      "filename": "../Dictionaries/Assignments.dcf"
+      "path": "../Dictionaries/Assignments.dcf"
     }, 
     {
       "type": "external", 
-      "filename": "../Dictionaries/Household.dcf"
+      "path": "../Dictionaries/Household.dcf"
     }, 
     {
       "type": "working", 
-      "filename": "Menu.ent.wrk.dcf"
+      "path": "Menu.ent.wrk.dcf"
     }
   ], 
   "forms": [
@@ -41,7 +41,7 @@
   "code": [
     {
       "type": "main", 
-      "filename": "Menu.ent.apc"
+      "path": "Menu.ent.apc"
     }
   ], 
   "messages": [
@@ -50,7 +50,7 @@
   "reports": [
     {
       "name": "INTERVIEWER_STATUS_REPORT", 
-      "filename": "Interviewer-Status-Report.html"
+      "path": "Interviewer-Status-Report.html"
     }
   ], 
   "logicSettings": {

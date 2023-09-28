@@ -8,7 +8,7 @@
   "dictionaries": [
     {
       "type": "input", 
-      "filename": "DeckArrays.dcf", 
+      "path": "DeckArrays.dcf", 
       "parent": "DeckArrays.ord"
     }
   ], 
@@ -18,7 +18,7 @@
   "code": [
     {
       "type": "main", 
-      "filename": "DeckArrays.bch.apc"
+      "path": "DeckArrays.bch.apc"
     }
   ], 
   "messages": [

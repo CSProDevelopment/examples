@@ -8,7 +8,7 @@
   "dictionaries": [
     {
       "type": "input", 
-      "filename": "Simple CAPI.dcf", 
+      "path": "Simple CAPI.dcf", 
       "parent": "Simple CAPI.fmf"
     }
   ], 
@@ -21,7 +21,7 @@
   "code": [
     {
       "type": "main", 
-      "filename": "Simple CAPI.ent.apc"
+      "path": "Simple CAPI.ent.apc"
     }
   ], 
   "messages": [

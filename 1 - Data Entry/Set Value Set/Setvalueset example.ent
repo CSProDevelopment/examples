@@ -8,12 +8,12 @@
   "dictionaries": [
     {
       "type": "input", 
-      "filename": "Census Dictionary.dcf", 
+      "path": "Census Dictionary.dcf", 
       "parent": "Setvalueset example.fmf"
     }, 
     {
       "type": "external", 
-      "filename": "AreaLookup.dcf"
+      "path": "AreaLookup.dcf"
     }
   ], 
   "forms": [
@@ -25,7 +25,7 @@
   "code": [
     {
       "type": "main", 
-      "filename": "Setvalueset example.ent.apc"
+      "path": "Setvalueset example.ent.apc"
     }
   ], 
   "messages": [

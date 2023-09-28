@@ -8,7 +8,7 @@
   "dictionaries": [
     {
       "type": "input", 
-      "filename": "PopstanLFS.dcf", 
+      "path": "PopstanLFS.dcf", 
       "parent": "PopstanLFS.fmf"
     }
   ], 
@@ -21,7 +21,7 @@
   "code": [
     {
       "type": "main", 
-      "filename": "PopstanLFS.ent.apc"
+      "path": "PopstanLFS.ent.apc"
     }
   ], 
   "messages": [

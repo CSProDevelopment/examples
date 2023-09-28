@@ -8,24 +8,24 @@
   "dictionaries": [
     {
       "type": "input", 
-      "filename": "Menu.dcf", 
+      "path": "Menu.dcf", 
       "parent": "Menu.fmf"
     }, 
     {
       "type": "external", 
-      "filename": "../Questionnaire/PopstanLFS.dcf"
+      "path": "../Questionnaire/PopstanLFS.dcf"
     }, 
     {
       "type": "external", 
-      "filename": "Staff.dcf"
+      "path": "Staff.dcf"
     }, 
     {
       "type": "external", 
-      "filename": "Sample.dcf"
+      "path": "Sample.dcf"
     }, 
     {
       "type": "external", 
-      "filename": "Status.dcf"
+      "path": "Status.dcf"
     }
   ], 
   "forms": [
@@ -37,7 +37,7 @@
   "code": [
     {
       "type": "main", 
-      "filename": "Menu.ent.apc"
+      "path": "Menu.ent.apc"
     }
   ], 
   "messages": [

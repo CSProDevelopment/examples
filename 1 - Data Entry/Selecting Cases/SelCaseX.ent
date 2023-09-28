@@ -8,12 +8,12 @@
   "dictionaries": [
     {
       "type": "input", 
-      "filename": "SelCaseX.dcf", 
+      "path": "SelCaseX.dcf", 
       "parent": "SelCaseX.fmf"
     }, 
     {
       "type": "external", 
-      "filename": "Enumerator Information.dcf"
+      "path": "Enumerator Information.dcf"
     }
   ], 
   "forms": [
@@ -25,7 +25,7 @@
   "code": [
     {
       "type": "main", 
-      "filename": "SelCaseX.ent.apc"
+      "path": "SelCaseX.ent.apc"
     }
   ], 
   "messages": [

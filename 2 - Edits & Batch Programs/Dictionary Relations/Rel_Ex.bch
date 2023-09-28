@@ -8,7 +8,7 @@
   "dictionaries": [
     {
       "type": "input", 
-      "filename": "Rel_Ex.dcf", 
+      "path": "Rel_Ex.dcf", 
       "parent": "Rel_Ex.ord"
     }
   ], 
@@ -18,7 +18,7 @@
   "code": [
     {
       "type": "main", 
-      "filename": "Rel_Ex.bch.apc"
+      "path": "Rel_Ex.bch.apc"
     }
   ], 
   "messages": [

@@ -8,12 +8,12 @@
   "dictionaries": [
     {
       "type": "input", 
-      "filename": "WriteExt.dcf", 
+      "path": "WriteExt.dcf", 
       "parent": "WriteExt.fmf"
     }, 
     {
       "type": "external", 
-      "filename": "Others.dcf", 
+      "path": "Others.dcf", 
       "parent": "Others.fmf"
     }
   ], 
@@ -27,7 +27,7 @@
   "code": [
     {
       "type": "main", 
-      "filename": "WriteExt.ent.apc"
+      "path": "WriteExt.ent.apc"
     }
   ], 
   "messages": [

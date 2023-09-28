@@ -8,7 +8,7 @@
   "dictionaries": [
     {
       "type": "input", 
-      "filename": "popstan.dcf", 
+      "path": "popstan.dcf", 
       "parent": "HotDeck1.ord"
     }
   ], 
@@ -18,7 +18,7 @@
   "code": [
     {
       "type": "main", 
-      "filename": "HotDeck1.bch.apc"
+      "path": "HotDeck1.bch.apc"
     }
   ], 
   "messages": [

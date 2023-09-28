@@ -8,7 +8,7 @@
   "dictionaries": [
     {
       "type": "working", 
-      "filename": "TablogicExample.xtb.wrk.dcf"
+      "path": "TablogicExample.xtb.wrk.dcf"
     }
   ], 
   "tableSpecs": [
@@ -17,7 +17,7 @@
   "code": [
     {
       "type": "main", 
-      "filename": "TablogicExample.xtb.apc"
+      "path": "TablogicExample.xtb.apc"
     }
   ], 
   "messages": [

@@ -8,7 +8,7 @@
   "dictionaries": [
     {
       "type": "input", 
-      "filename": "Popstan.dcf", 
+      "path": "Popstan.dcf", 
       "parent": "PopstanDeckArray.ord"
     }
   ], 
@@ -18,7 +18,7 @@
   "code": [
     {
       "type": "main", 
-      "filename": "PopstanDeckArray.bch.apc"
+      "path": "PopstanDeckArray.bch.apc"
     }
   ], 
   "messages": [

@@ -8,7 +8,7 @@
   "dictionaries": [
     {
       "type": "input", 
-      "filename": "Popstan2.dcf", 
+      "path": "Popstan2.dcf", 
       "parent": "Writing CSV file.ord"
     }
   ], 
@@ -18,7 +18,7 @@
   "code": [
     {
       "type": "main", 
-      "filename": "Writing CSV file.bch.apc"
+      "path": "Writing CSV file.bch.apc"
     }
   ], 
   "messages": [

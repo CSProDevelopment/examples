@@ -8,7 +8,7 @@
   "dictionaries": [
     {
       "type": "input", 
-      "filename": "HTML-Dialog.dcf", 
+      "path": "HTML-Dialog.dcf", 
       "parent": "HTML-Dialog.fmf"
     }
   ], 
@@ -21,7 +21,7 @@
   "code": [
     {
       "type": "main", 
-      "filename": "HTML-Dialog.ent.apc"
+      "path": "HTML-Dialog.ent.apc"
     }
   ], 
   "messages": [

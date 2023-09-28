@@ -8,7 +8,7 @@
   "dictionaries": [
     {
       "type": "working", 
-      "filename": "Census Prov-Dist Tabs.xtb.wrk.dcf"
+      "path": "Census Prov-Dist Tabs.xtb.wrk.dcf"
     }
   ], 
   "tableSpecs": [
@@ -17,7 +17,7 @@
   "code": [
     {
       "type": "main", 
-      "filename": "Census Prov-Dist Tabs.xtb.apc"
+      "path": "Census Prov-Dist Tabs.xtb.apc"
     }
   ], 
   "messages": [

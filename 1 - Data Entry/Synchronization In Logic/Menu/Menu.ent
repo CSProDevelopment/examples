@@ -8,12 +8,12 @@
   "dictionaries": [
     {
       "type": "input", 
-      "filename": "Menu.dcf", 
+      "path": "Menu.dcf", 
       "parent": "Menu.fmf"
     }, 
     {
       "type": "external", 
-      "filename": "../Dict/HouseholdQuestionnaire.dcf"
+      "path": "../Dict/HouseholdQuestionnaire.dcf"
     }
   ], 
   "forms": [
@@ -25,7 +25,7 @@
   "code": [
     {
       "type": "main", 
-      "filename": "Menu.ent.apc"
+      "path": "Menu.ent.apc"
     }
   ], 
   "messages": [

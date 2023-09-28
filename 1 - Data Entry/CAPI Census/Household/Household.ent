@@ -8,7 +8,7 @@
   "dictionaries": [
     {
       "type": "input", 
-      "filename": "../Dictionaries/Household.dcf", 
+      "path": "../Dictionaries/Household.dcf", 
       "parent": "Household.fmf"
     }
   ], 
@@ -21,7 +21,7 @@
   "code": [
     {
       "type": "main", 
-      "filename": "Household.ent.apc"
+      "path": "Household.ent.apc"
     }
   ], 
   "messages": [
