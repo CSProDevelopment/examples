@@ -1,0 +1,113 @@
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "dictionary", 
+  "name": "PSC_LOGIN_DICT", 
+  "labels": [ { "text": "Popstan Census Login Dictionary" } ], 
+  "security": {
+    "allowDataViewerModifications": true, 
+    "allowExport": true, 
+    "cachedPasswordMinutes": 0, 
+    "settings": "77915f833b6fd57240c1f7ae0b87ce1729fc387badbb15ef268f31ebb349f7a0"
+  }, 
+  "recordType": {
+    "start": 1, 
+    "length": 1
+  }, 
+  "defaults": {
+    "decimalMark": true, 
+    "zeroFill": true
+  }, 
+  "relativePositions": true, 
+  "levels": [
+    {
+      "name": "LOGIN_LEVEL", 
+      "labels": [ { "text": "Login Level" } ], 
+      "ids": {
+        "items": [
+          {
+            "name": "LOGIN_ID", 
+            "labels": [ { "text": "Login Identification" } ], 
+            "contentType": "numeric", 
+            "start": 2, 
+            "length": 1, 
+            "zeroFill": true
+          }
+        ]
+      }, 
+      "records": [
+        {
+          "name": "LOGIN_REC", 
+          "labels": [ { "text": "Login Record" } ], 
+          "recordType": "1", 
+          "occurrences": {
+            "required": true, 
+            "maximum": 1
+          }, 
+          "items": [
+            {
+              "name": "L_LOGIN", 
+              "labels": [ { "text": "Login" } ], 
+              "contentType": "alpha", 
+              "length": 36
+            }, 
+            {
+              "name": "L_PIN_CODE_CONFIRMATION", 
+              "labels": [ { "text": "PIN Code Confirmation" } ], 
+              "contentType": "numeric", 
+              "length": 4, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "L_SUPERVISOR_ACCESS_PASSWORD", 
+              "labels": [ { "text": "Supervisor Access Password" } ], 
+              "contentType": "numeric", 
+              "length": 4, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "L_SUPERVISOR_NAME", 
+              "labels": [ { "text": "Supervisor Name" } ], 
+              "contentType": "alpha", 
+              "length": 50
+            }, 
+            {
+              "name": "L_SUPERVISOR_PIN_CODE", 
+              "labels": [ { "text": "Supervisor PIN Code" } ], 
+              "contentType": "numeric", 
+              "length": 4, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "L_ASSIGNMENT_SELECTION", 
+              "labels": [ { "text": "Assignment Selection" } ], 
+              "contentType": "alpha", 
+              "length": 44
+            }, 
+            {
+              "name": "L_SUPERVISOR_PROVINCE", 
+              "labels": [ { "text": "Supervisor Province" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "L_SUPERVISOR_DISTRICT", 
+              "labels": [ { "text": "Supervisor District" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "L_LOGIN_COMPLETE", 
+              "labels": [ { "text": "Login Complete" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

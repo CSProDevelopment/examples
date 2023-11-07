@@ -1,0 +1,209 @@
+﻿[FormFile]
+Version=CSPro 8.0
+Name=LOGIN_FF
+Label=Login
+DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
+FieldEntryFont=0018 0000 0000 0000 0600 0000 0000 0000 0000 0000 0000 0000 0000 Courier New
+Type=SystemControlled
+  
+[Dictionaries]
+File=..\Dictionaries\Login.dcf
+  
+[Form]
+Name=FORM001
+Label=Login Form
+Level=1
+Size=2237,300
+  
+Item=L_LOGIN
+Item=L_PIN_CODE_CONFIRMATION
+  
+[EndForm]
+  
+[Form]
+Name=FORM002
+Label=Supervisor Creation Form
+Level=1
+Size=1003,258
+  
+Item=L_SUPERVISOR_ACCESS_PASSWORD
+Item=L_SUPERVISOR_NAME
+Item=L_SUPERVISOR_PIN_CODE
+  
+[EndForm]
+  
+[Form]
+Name=FORM003
+Label=Assignment Selection Form
+Level=1
+Size=617,157
+  
+Item=L_ASSIGNMENT_SELECTION
+Item=L_SUPERVISOR_PROVINCE
+Item=L_SUPERVISOR_DISTRICT
+  
+[EndForm]
+  
+[Form]
+Name=FORM000
+Label=Login Complete Form
+Level=1
+Size=279,86
+  
+Item=L_LOGIN_COMPLETE
+  
+[EndForm]
+  
+[Level]
+Name=LOGIN_LEVEL
+Label=Login Level
+  
+[Group]
+Required=Yes
+Name=LOGIN_FORM
+Label=Login Form
+Form=1
+Max=1
+  
+[Field]
+Name=L_LOGIN
+Position=244,27,749,47
+Item=L_LOGIN,PSC_LOGIN_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=RadioButton
+Form=1
+  
+[Text]
+Position=50,30,86,46
+Text=Login
+ 
+  
+[Field]
+Name=L_PIN_CODE_CONFIRMATION
+Position=244,57,301,77
+Item=L_PIN_CODE_CONFIRMATION,PSC_LOGIN_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
+Form=1
+  
+[Text]
+Position=50,60,195,76
+Text=PIN Code Confirmation
+ 
+[EndGroup]
+  
+[Group]
+Required=Yes
+Name=SUPERVISOR_CREATION_FORM
+Label=Supervisor Creation Form
+Form=2
+Max=1
+  
+[Field]
+Name=L_SUPERVISOR_ACCESS_PASSWORD
+Position=252,26,309,46
+Item=L_SUPERVISOR_ACCESS_PASSWORD,PSC_LOGIN_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
+Form=2
+  
+[Text]
+Position=50,29,230,45
+Text=Supervisor Access Password
+ 
+  
+[Field]
+Name=L_SUPERVISOR_NAME
+Position=252,57,953,77
+Item=L_SUPERVISOR_NAME,PSC_LOGIN_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
+Form=2
+  
+[Text]
+Position=50,60,159,76
+Text=Supervisor Name
+ 
+  
+[Field]
+Name=L_SUPERVISOR_PIN_CODE
+Position=252,89,309,109
+Item=L_SUPERVISOR_PIN_CODE,PSC_LOGIN_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
+Form=2
+  
+[Text]
+Position=50,92,181,108
+Text=Supervisor PIN Code
+ 
+[EndGroup]
+  
+[Group]
+Required=Yes
+Name=ASSIGNMENT_SELECTION_FORM
+Label=Assignment Selection Form
+Form=3
+Max=1
+  
+[Field]
+Name=L_ASSIGNMENT_SELECTION
+Position=217,27,834,47
+Item=L_ASSIGNMENT_SELECTION,PSC_LOGIN_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=RadioButton
+Form=3
+  
+[Text]
+Position=52,30,189,46
+Text=Assignment Selection
+ 
+  
+[Field]
+Name=L_SUPERVISOR_PROVINCE
+Position=217,59,246,79
+Item=L_SUPERVISOR_PROVINCE,PSC_LOGIN_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=RadioButton
+Form=3
+  
+[Text]
+Position=52,62,180,78
+Text=Supervisor Province
+ 
+  
+[Field]
+Name=L_SUPERVISOR_DISTRICT
+Position=217,92,246,112
+Item=L_SUPERVISOR_DISTRICT,PSC_LOGIN_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=RadioButton
+Form=3
+  
+[Text]
+Position=52,95,167,111
+Text=Supervisor District
+ 
+[EndGroup]
+  
+[Group]
+Required=Yes
+Name=LOGIN_COMPLETE_FORM
+Label=Login Complete Form
+Form=4
+Max=1
+  
+[Field]
+Name=L_LOGIN_COMPLETE
+Position=234,26,249,46
+Item=L_LOGIN_COMPLETE,PSC_LOGIN_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
+Form=4
+  
+[Text]
+Position=52,29,153,45
+Text=Login Complete
+ 
+[EndGroup]
+  

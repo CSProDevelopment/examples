@@ -1,0 +1,68 @@
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "application", 
+  "type": "entry", 
+  "name": "LOGIN", 
+  "label": "Login", 
+  "dictionaries": [
+    {
+      "type": "input", 
+      "path": "../Dictionaries/Login.dcf", 
+      "parent": "Login.fmf"
+    }
+  ], 
+  "forms": [
+    "Login.fmf"
+  ], 
+  "questionText": [
+    "Login.ent.qsf"
+  ], 
+  "code": [
+    {
+      "type": "main", 
+      "path": "Login.ent.apc"
+    }
+  ], 
+  "messages": [
+    "Login.ent.mgf"
+  ], 
+  "logicSettings": {
+    "version": 2.0, 
+    "caseSensitive": {
+      "symbols": false
+    }, 
+    "actionInvoker": {
+      "accessFromWebView": "promptIfNoValidAccessToken", 
+      "convertResultsForLogic": true
+    }
+  }, 
+  "properties": {
+    "askOperatorId": false, 
+    "autoAdvanceOnSelection": true, 
+    "caseTree": "off", 
+    "centerForms": false, 
+    "createListing": false, 
+    "createLog": false, 
+    "decimalMark": "dot", 
+    "displayCodesAlongsideLabels": false, 
+    "notes": {
+      "delete": "all", 
+      "edit": "all"
+    }, 
+    "partialSave": {
+      "operatorEnabled": false
+    }, 
+    "showEndCaseMessage": true, 
+    "showOnlyDiscreteValuesInComboBoxes": true, 
+    "showFieldLabels": true, 
+    "showErrorMessageNumbers": false, 
+    "showQuestionText": true, 
+    "showRefusals": true, 
+    "verify": {
+      "frequency": 1, 
+      "start": 1
+    }, 
+    "htmlDialogs": true
+  }
+}
