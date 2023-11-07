@@ -26,7 +26,7 @@
       "ids": {
         "items": [
           {
-            "name": "ASSIGNMENTS_PROVINCE", 
+            "name": "A_PROVINCE", 
             "labels": [ { "text": "Province" } ], 
             "contentType": "numeric", 
             "start": 2, 
@@ -34,7 +34,7 @@
             "zeroFill": true
           }, 
           {
-            "name": "ASSIGNMENTS_DISTRICT", 
+            "name": "A_DISTRICT", 
             "labels": [ { "text": "District" } ], 
             "contentType": "numeric", 
             "start": 4, 
@@ -42,7 +42,7 @@
             "zeroFill": true
           }, 
           {
-            "name": "ASSIGNMENTS_EA", 
+            "name": "A_EA", 
             "labels": [ { "text": "EA" } ], 
             "contentType": "numeric", 
             "start": 6, 
@@ -50,14 +50,14 @@
             "zeroFill": true
           }, 
           {
-            "name": "ASSIGNMENTS_STAFF_CODE", 
+            "name": "A_STAFF_CODE", 
             "labels": [ { "text": "Staff Code" } ], 
             "contentType": "alpha", 
             "start": 9, 
             "length": 36
           }, 
           {
-            "name": "ASSIGNMENTS_ROLE", 
+            "name": "A_ROLE", 
             "labels": [ { "text": "Role" } ], 
             "contentType": "numeric", 
             "start": 45, 
@@ -65,7 +65,7 @@
             "zeroFill": true, 
             "valueSets": [
               {
-                "name": "ASSIGNMENTS_ROLE_VS1", 
+                "name": "A_ROLE_VS1", 
                 "labels": [ { "text": "Role" } ], 
                 "values": [
                   {
@@ -93,13 +93,13 @@
           }, 
           "items": [
             {
-              "name": "ASSIGNMENTS_SEGMENT", 
+              "name": "A_SEGMENT", 
               "labels": [ { "text": "Segment" } ], 
               "contentType": "alpha", 
               "length": 1
             }, 
             {
-              "name": "ASSIGNMENTS_DATE_ASSIGNED", 
+              "name": "A_DATE_ASSIGNED", 
               "labels": [ { "text": "Date Assigned EA" } ], 
               "contentType": "numeric", 
               "length": 10, 

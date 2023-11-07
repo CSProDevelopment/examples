@@ -178,11 +178,11 @@ function InitInterviewerStatusRecord()
 		ISR_PARTIAL_HOUSEHOLDS(ws_counter) = 0;
 		ISR_LAST_INTERVIEW(ws_counter) = 0;
 
-		forcase PSC_ASSIGNMENTS_DICT where ASSIGNMENTS_STAFF_CODE = STAFF_CODE do
+		forcase PSC_ASSIGNMENTS_DICT where A_STAFF_CODE = STAFF_CODE do
 		
-			forcase PSC_HOUSEHOLD_DICT where HH_PROVINCE = ASSIGNMENTS_PROVINCE
-				and HH_DISTRICT = ASSIGNMENTS_DISTRICT and HH_EA = ASSIGNMENTS_EA
-				and HH_SEGMENT = ASSIGNMENTS_SEGMENT do
+			forcase PSC_HOUSEHOLD_DICT where HH_PROVINCE = A_PROVINCE
+				and HH_DISTRICT = A_DISTRICT and HH_EA = A_EA
+				and HH_SEGMENT = A_SEGMENT do
 		
 				if ispartial(PSC_HOUSEHOLD_DICT) then
 					// Sum partial households
@@ -689,7 +689,7 @@ onfocus
 		if loadcase(PSC_ASSIGNMENTS_DICT, previousAssignment) then
 
 			// Previous assignment was found, so automatically select assignment for convenience
-			if ASSIGNMENTS_STAFF_CODE = LOGIN then
+			if A_STAFF_CODE = LOGIN then
 				ASSIGNMENT_SELECTION = key(PSC_ASSIGNMENTS_DICT);
 				advance to MAIN_MENU_FORM;
 			endif;
@@ -702,23 +702,23 @@ onfocus
 
 	ValueSet string assignments_vs;
 
-	forcase PSC_ASSIGNMENTS_DICT where ASSIGNMENTS_STAFF_CODE = LOGIN do
+	forcase PSC_ASSIGNMENTS_DICT where A_STAFF_CODE = LOGIN do
 
 		string label = maketext("%s (%v) / %s (%v)",
-			LookupProvinceName(ASSIGNMENTS_PROVINCE), ASSIGNMENTS_PROVINCE,
-			LookupDistrictName(ASSIGNMENTS_PROVINCE, ASSIGNMENTS_DISTRICT), ASSIGNMENTS_DISTRICT);
+			LookupProvinceName(A_PROVINCE), A_PROVINCE,
+			LookupDistrictName(A_PROVINCE, A_DISTRICT), A_DISTRICT);
 
-		if ASSIGNMENTS_EA = notappl then
+		if A_EA = notappl then
 			label = maketext("Supervise: %s", label);
 
 		else
-			label = maketext("Interview: %s / %s", label, LookupEAName(ASSIGNMENTS_EA));
+			label = maketext("Interview: %s / %s", label, LookupEAName(A_EA));
 
 		endif;
 
 		assignments_vs.add(label, key(PSC_ASSIGNMENTS_DICT));
 
-		if ASSIGNMENTS_ROLE = 1 then
+		if A_ROLE = 1 then
 			inc(numberInterviewerAssignments);
 		endif;
 
@@ -779,14 +779,14 @@ postproc
 		// Save the assignment for the next time the menu application is loaded
 		savesetting(assignment_setting_key, ASSIGNMENT_SELECTION);
 
-		CURRENT_PROVINCE = ASSIGNMENTS_PROVINCE;
-		CURRENT_DISTRICT = ASSIGNMENTS_DISTRICT;
+		CURRENT_PROVINCE = A_PROVINCE;
+		CURRENT_DISTRICT = A_DISTRICT;
 
 		capi_province_name = LookupProvinceName(CURRENT_PROVINCE);
 		capi_district_name = LookupDistrictName(CURRENT_PROVINCE, CURRENT_DISTRICT);
-		capi_ea_name = LookupEAName(ASSIGNMENTS_EA);
+		capi_ea_name = LookupEAName(A_EA);
 
-		if ASSIGNMENTS_ROLE = 1 then
+		if A_ROLE = 1 then
 			skip to INTERVIEWER_MENU;
 
 		else
@@ -833,10 +833,10 @@ preproc
 postproc
 
 	if countcases(PSC_ASSIGNMENTS_DICT where
-		ASSIGNMENTS_PROVINCE = SUPERVISOR_PROVINCE and
-		ASSIGNMENTS_DISTRICT = SUPERVISOR_DISTRICT and
-		ASSIGNMENTS_STAFF_CODE = LOGIN and
-		ASSIGNMENTS_ROLE = 2) <> 0 then
+		A_PROVINCE = SUPERVISOR_PROVINCE and
+		A_DISTRICT = SUPERVISOR_DISTRICT and
+		A_STAFF_CODE = LOGIN and
+		A_ROLE = 2) <> 0 then
 
 		errmsg("You are already assigned to this district.");
 		reenter;
@@ -846,11 +846,11 @@ postproc
 	// Update the assignments file
 	clear(PSC_ASSIGNMENTS_DICT);
 
-	ASSIGNMENTS_PROVINCE = SUPERVISOR_PROVINCE;
-	ASSIGNMENTS_DISTRICT = SUPERVISOR_DISTRICT;
-	ASSIGNMENTS_STAFF_CODE = LOGIN;
-	ASSIGNMENTS_ROLE = 2;
-	ASSIGNMENTS_DATE_ASSIGNED = timestamp();
+	A_PROVINCE = SUPERVISOR_PROVINCE;
+	A_DISTRICT = SUPERVISOR_DISTRICT;
+	A_STAFF_CODE = LOGIN;
+	A_ROLE = 2;
+	A_DATE_ASSIGNED = timestamp();
 
 	writecase(PSC_ASSIGNMENTS_DICT);
 
@@ -866,13 +866,13 @@ onfocus
 	numeric previousEA = notappl;
 
 	forcase PSC_ASSIGNMENTS_DICT where
-		ASSIGNMENTS_PROVINCE = CURRENT_PROVINCE and
-		ASSIGNMENTS_DISTRICT = CURRENT_DISTRICT do
+		A_PROVINCE = CURRENT_PROVINCE and
+		A_DISTRICT = CURRENT_DISTRICT do
 
 		// Only count assigned EAs once
-		if previousEA <> ASSIGNMENTS_EA then
+		if previousEA <> A_EA then
 			inc(capi_ea_assigned_count);
-			previousEA = ASSIGNMENTS_EA;
+			previousEA = A_EA;
 		endif;
 
 	endfor;
@@ -924,10 +924,10 @@ onfocus
 	numeric autoIncrementHouseholdNumber = 0;
 
 	forcase PSC_HOUSEHOLD_DICT where
-		HH_PROVINCE = ASSIGNMENTS_PROVINCE and
-		HH_DISTRICT = ASSIGNMENTS_DISTRICT and
-		HH_EA = ASSIGNMENTS_EA and
-		HH_SEGMENT = ASSIGNMENTS_SEGMENT do
+		HH_PROVINCE = A_PROVINCE and
+		HH_DISTRICT = A_DISTRICT and
+		HH_EA = A_EA and
+		HH_SEGMENT = A_SEGMENT do
 
 		inc(totalHouseholds);
 
@@ -959,10 +959,10 @@ postproc
 
 	if INTERVIEWER_MENU = "1" then
 		// Initialize the case IDs
-		HH_PROVINCE = ASSIGNMENTS_PROVINCE;
-		HH_DISTRICT = ASSIGNMENTS_DISTRICT;
-		HH_EA = ASSIGNMENTS_EA;
-		HH_SEGMENT = ASSIGNMENTS_SEGMENT;
+		HH_PROVINCE = A_PROVINCE;
+		HH_DISTRICT = A_DISTRICT;
+		HH_EA = A_EA;
+		HH_SEGMENT = A_SEGMENT;
 		HH_NUMBER = autoIncrementHouseholdNumber + 1;
 
 		errmsg("Are you sure that you want to add a household numbered %v%v?", HH_SEGMENT, HH_NUMBER)
@@ -1005,10 +1005,10 @@ onfocus
 	ValueSet string households_vs;
 
 	forcase PSC_HOUSEHOLD_DICT where
-		HH_PROVINCE = ASSIGNMENTS_PROVINCE and
-		HH_DISTRICT = ASSIGNMENTS_DISTRICT and
-		HH_EA = ASSIGNMENTS_EA and
-		HH_SEGMENT = ASSIGNMENTS_SEGMENT do
+		HH_PROVINCE = A_PROVINCE and
+		HH_DISTRICT = A_DISTRICT and
+		HH_EA = A_EA and
+		HH_SEGMENT = A_SEGMENT do
 
 		households_vs.add("Continue working on household " + LookupDetailedHouseholdName(), key(PSC_HOUSEHOLD_DICT));
 
@@ -1189,7 +1189,7 @@ postproc
 
 	// Check if the interviewer already has an assignment
 	numeric numberAssignmentsForInterviewer = countcases(PSC_ASSIGNMENTS_DICT
-		where ASSIGNMENTS_STAFF_CODE = INTERVIEWER_CODE and ASSIGNMENTS_ROLE = 1);
+		where A_STAFF_CODE = INTERVIEWER_CODE and A_ROLE = 1);
 
 	if numberAssignmentsForInterviewer > 0 then
 		errmsg("%s already has %d assignment. Are you sure you want to add another?",
@@ -1213,14 +1213,14 @@ onfocus
 		forcase PSC_ASSIGNMENTS_DICT(startswith, maketext("%v%v%v", GEOCODES_PROVINCE, GEOCODES_DISTRICT
 			, GEOCODES_EA)) do
 
-				if ASSIGNMENTS_ROLE = 1 then
+				if A_ROLE = 1 then
 					// Only interviewers
 					if length(eaAssignedNames) > 0 then
 						// Use a comma to separate multiple names
 						eaAssignedNames = eaAssignedNames + ", ";
 					endif;
 
-					eaAssignedNames = eaAssignedNames + LookupStaffName(ASSIGNMENTS_STAFF_CODE);
+					eaAssignedNames = eaAssignedNames + LookupStaffName(A_STAFF_CODE);
 
 				endif;
 		
@@ -1245,14 +1245,14 @@ postproc
 	numeric numberExistingAssignments = 0;
 
 	forcase PSC_ASSIGNMENTS_DICT where
-		ASSIGNMENTS_PROVINCE = CURRENT_PROVINCE and
-		ASSIGNMENTS_DISTRICT = CURRENT_DISTRICT and
-		ASSIGNMENTS_EA = INTERVIEWER_EA and
-		ASSIGNMENTS_ROLE = 1 do
+		A_PROVINCE = CURRENT_PROVINCE and
+		A_DISTRICT = CURRENT_DISTRICT and
+		A_EA = INTERVIEWER_EA and
+		A_ROLE = 1 do
 
 		inc(numberExistingAssignments);
 
-		if ASSIGNMENTS_STAFF_CODE = INTERVIEWER_CODE then
+		if A_STAFF_CODE = INTERVIEWER_CODE then
 			errmsg("%s has already been assigned to %s", LookupEAName(INTERVIEWER_EA), LookupStaffName(INTERVIEWER_CODE));
 			reenter;
 		endif;
@@ -1269,17 +1269,17 @@ postproc
 
 	clear(PSC_ASSIGNMENTS_DICT);
 
-	ASSIGNMENTS_PROVINCE = CURRENT_PROVINCE;
-	ASSIGNMENTS_DISTRICT = CURRENT_DISTRICT;
-	ASSIGNMENTS_EA = INTERVIEWER_EA;
-	ASSIGNMENTS_STAFF_CODE = INTERVIEWER_CODE;
-	ASSIGNMENTS_ROLE = 1;
-	ASSIGNMENTS_SEGMENT = segment_alphabet[( numberExistingAssignments + 1 ):1];
+	A_PROVINCE = CURRENT_PROVINCE;
+	A_DISTRICT = CURRENT_DISTRICT;
+	A_EA = INTERVIEWER_EA;
+	A_STAFF_CODE = INTERVIEWER_CODE;
+	A_ROLE = 1;
+	A_SEGMENT = segment_alphabet[( numberExistingAssignments + 1 ):1];
 
-	ASSIGNMENTS_DATE_ASSIGNED = timestamp();
+	A_DATE_ASSIGNED = timestamp();
 
 	writecase(PSC_ASSIGNMENTS_DICT);
 
-	errmsg("%s successfully assigned to %s", LookupEAName(ASSIGNMENTS_EA), LookupStaffName(INTERVIEWER_CODE));
+	errmsg("%s successfully assigned to %s", LookupEAName(A_EA), LookupStaffName(INTERVIEWER_CODE));
 
 	reenter SUPERVISOR_MENU;
