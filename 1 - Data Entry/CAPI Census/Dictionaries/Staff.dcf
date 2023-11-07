@@ -26,7 +26,7 @@
       "ids": {
         "items": [
           {
-            "name": "STAFF_CODE", 
+            "name": "S_STAFF_CODE", 
             "labels": [ { "text": "Staff Code" } ], 
             "contentType": "alpha", 
             "start": 2, 
@@ -45,32 +45,32 @@
           }, 
           "items": [
             {
-              "name": "STAFF_NAME", 
+              "name": "S_STAFF_NAME", 
               "labels": [ { "text": "Staff Name" } ], 
               "contentType": "alpha", 
               "length": 50
             }, 
             {
-              "name": "PIN_CODE", 
+              "name": "S_PIN_CODE", 
               "labels": [ { "text": "Pin Code" } ], 
               "contentType": "numeric", 
               "length": 4, 
               "zeroFill": true
             }, 
             {
-              "name": "DEVICE_ID", 
+              "name": "S_DEVICE_ID", 
               "labels": [ { "text": "Device ID" } ], 
               "contentType": "alpha", 
               "length": 20
             }, 
             {
-              "name": "SUPERVISOR_STAFF_CODE", 
+              "name": "S_SUPERVISOR_STAFF_CODE", 
               "labels": [ { "text": "Supervisor Staff Code" } ], 
               "contentType": "alpha", 
               "length": 36
             }, 
             {
-              "name": "TIME_CREATED_ACCOUNT", 
+              "name": "S_TIME_CREATED_ACCOUNT", 
               "labels": [ { "text": "Time Created Account" } ], 
               "contentType": "numeric", 
               "length": 10, 

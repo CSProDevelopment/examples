@@ -36,7 +36,7 @@ questions:
             
   - name: PSC_MENU_DICT.PIN_CODE_CONFIRMATION
     conditions:
-      - logic: PIN_CODE <> notappl
+      - logic: S_PIN_CODE <> notappl
         questionText:
           EN: |
             <p>You are logged in as <b>~~capi_staff_name~~</b>.</p>
@@ -44,7 +44,7 @@ questions:
         helpText:
           EN: |
             
-      - logic: PIN_CODE = notappl
+      - logic: S_PIN_CODE = notappl
         questionText:
           EN: |
             <p>You are logged in as <b>~~capi_staff_name~~</b>.</p>

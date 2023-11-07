@@ -114,8 +114,8 @@ end;
 function string LookupStaffName(string code)
 
 	// If staff member's information is already loaded, don't load again
-	if STAFF_CODE = code or loadcase(PSC_STAFF_DICT, code) then
-		LookupStaffName = strip(STAFF_NAME);
+	if S_STAFF_CODE = code or loadcase(PSC_STAFF_DICT, code) then
+		LookupStaffName = strip(S_STAFF_NAME);
 
 	else
 		LookupStaffName = "<Invalid Staff>";
@@ -145,7 +145,7 @@ function LaunchHouseholdProgram()
 	household_pff.setProperty("DistrictName", LookupDistrictName(HH_PROVINCE,HH_DISTRICT));
 	household_pff.setProperty("EAName", LookupEAName(HH_EA));
 	household_pff.setProperty("InterviewerCode", LOGIN);
-	household_pff.setProperty("SupervisorCode", SUPERVISOR_STAFF_CODE);
+	household_pff.setProperty("SupervisorCode", S_SUPERVISOR_STAFF_CODE);
 	household_pff.setProperty("StaffName", LookupStaffName(LOGIN));
 
 	// Run the household application
@@ -164,7 +164,7 @@ function InitInterviewerStatusRecord()
 	numeric ws_counter = 0;
 	
 	// Loop through all interviewers that are supervised by the currently logged in supervisor
-	forcase PSC_STAFF_DICT where SUPERVISOR_STAFF_CODE = LOGIN do
+	forcase PSC_STAFF_DICT where S_SUPERVISOR_STAFF_CODE = LOGIN do
 		
 		inc(ws_counter);
 		
@@ -173,12 +173,12 @@ function InitInterviewerStatusRecord()
 		endif;
 		
 		// All variables in occurrence of INTERVIEWER_STATUS_RECORD record
-		ISR_INTERVIEWER_NAME(ws_counter) = STAFF_NAME;
+		ISR_INTERVIEWER_NAME(ws_counter) = S_STAFF_NAME;
 		ISR_COMPLETE_HOUSEHOLDS(ws_counter) = 0;
 		ISR_PARTIAL_HOUSEHOLDS(ws_counter) = 0;
 		ISR_LAST_INTERVIEW(ws_counter) = 0;
 
-		forcase PSC_ASSIGNMENTS_DICT where A_STAFF_CODE = STAFF_CODE do
+		forcase PSC_ASSIGNMENTS_DICT where A_STAFF_CODE = S_STAFF_CODE do
 		
 			forcase PSC_HOUSEHOLD_DICT where HH_PROVINCE = A_PROVINCE
 				and HH_DISTRICT = A_DISTRICT and HH_EA = A_EA
@@ -256,7 +256,7 @@ function SyncDataWithInterviewer()
 
 	numeric success = 1;
 
-	forcase PSC_STAFF_DICT where STAFF_CODE = LOGIN or SUPERVISOR_STAFF_CODE = LOGIN do
+	forcase PSC_STAFF_DICT where S_STAFF_CODE = LOGIN or S_SUPERVISOR_STAFF_CODE = LOGIN do
 
 		// Synchronize staff code for supervisor and their interviewers. Supervisor's staff code is sent, so supervisor
 		// is able to log onto their account using interviewer's device.
@@ -344,7 +344,7 @@ function SyncDataWithHQ()
 
 	numeric success = 1;
 
-	forcase PSC_STAFF_DICT where STAFF_CODE = LOGIN or SUPERVISOR_STAFF_CODE = LOGIN do
+	forcase PSC_STAFF_DICT where S_STAFF_CODE = LOGIN or S_SUPERVISOR_STAFF_CODE = LOGIN do
 
 		// Synchronize staff code for supervisor and their interviewers.
 		// Sync PUT is used, because HQ will only read the staff data.
@@ -465,7 +465,7 @@ end;
 // Check that no person, other than someone with code ignoreStaffCode, has the name in staffName
 function VerifyStaffNameIsUnique(string staffName, string ignoreStaffCode)
 
-	numeric nameIsUsed = countcases(PSC_STAFF_DICT where STAFF_CODE <> ignoreStaffCode and STAFF_NAME = staffName);
+	numeric nameIsUsed = countcases(PSC_STAFF_DICT where S_STAFF_CODE <> ignoreStaffCode and S_STAFF_NAME = staffName);
 
 	if ignoreStaffCode <> "" then
 		// Load the staff entry that was in memory
@@ -521,12 +521,12 @@ onfocus
 	if automaticLoginOnStartup then
 
 		// The application was just started. Retreive previous user.
-		STAFF_CODE = loadsetting(login_setting_key);
+		S_STAFF_CODE = loadsetting(login_setting_key);
 
-		if loadcase(PSC_STAFF_DICT, STAFF_CODE) and PIN_CODE <> notappl then
+		if loadcase(PSC_STAFF_DICT, S_STAFF_CODE) and S_PIN_CODE <> notappl then
 			// Previous user was found and PIN is defined, so login automatically for convenience
-			LOGIN = STAFF_CODE;
-			PIN_CODE_CONFIRMATION = PIN_CODE;
+			LOGIN = S_STAFF_CODE;
+			PIN_CODE_CONFIRMATION = S_PIN_CODE;
 			advance to ASSIGNMENT_SELECTION_FORM;
 		endif;
 
@@ -535,7 +535,7 @@ onfocus
 	ValueSet string login_vs;
 
 	forcase PSC_STAFF_DICT do
-		login_vs.add(STAFF_NAME, key(PSC_STAFF_DICT));
+		login_vs.add(S_STAFF_NAME, key(PSC_STAFF_DICT));
 	endfor;
 
 	login_vs.add("Update programs from headquarters", "1");
@@ -586,22 +586,22 @@ preproc
 
 postproc
 
-	if PIN_CODE = notappl then
+	if S_PIN_CODE = notappl then
 		// Creating a new PIN code
 		ValidatePINCode(PIN_CODE_CONFIRMATION);
 
-		PIN_CODE = PIN_CODE_CONFIRMATION;
-		DEVICE_ID = getdeviceid();
+		S_PIN_CODE = PIN_CODE_CONFIRMATION;
+		S_DEVICE_ID = getdeviceid();
 		writecase(PSC_STAFF_DICT);
 
-	elseif PIN_CODE_CONFIRMATION <> PIN_CODE then
+	elseif PIN_CODE_CONFIRMATION <> S_PIN_CODE then
 		// Validating an existing PIN code
 		errmsg("Invalid PIN code");
 		reenter;
 
 	endif;
 
-	savesetting(login_setting_key, STAFF_CODE);
+	savesetting(login_setting_key, S_STAFF_CODE);
 
 	setproperty(PIN_CODE_CONFIRMATION, "Protected", "Yes");
 
@@ -654,18 +654,18 @@ postproc
 
 	// Update the staff file (save the data about this supervisor)
 	clear(PSC_STAFF_DICT);
-	STAFF_CODE = uuid(); // Create unique identifier for supervisor
-	STAFF_NAME = SUPERVISOR_NAME;
-	PIN_CODE = SUPERVISOR_PIN_CODE;;
-	DEVICE_ID = getdeviceid();
-	SUPERVISOR_STAFF_CODE = "";
-	TIME_CREATED_ACCOUNT = timestamp();
-	setcaselabel(PSC_STAFF_DICT, strip(STAFF_NAME));
+	S_STAFF_CODE = uuid(); // Create unique identifier for supervisor
+	S_STAFF_NAME = SUPERVISOR_NAME;
+	S_PIN_CODE = SUPERVISOR_PIN_CODE;;
+	S_DEVICE_ID = getdeviceid();
+	S_SUPERVISOR_STAFF_CODE = "";
+	S_TIME_CREATED_ACCOUNT = timestamp();
+	setcaselabel(PSC_STAFF_DICT, strip(S_STAFF_NAME));
 
 	writecase(PSC_STAFF_DICT);
 
 	// Set the login to the supervisor
-	LOGIN = STAFF_CODE;
+	LOGIN = S_STAFF_CODE;
 	savesetting(login_setting_key, LOGIN);
 
 	capi_staff_name = LookupStaffName(LOGIN);
@@ -724,7 +724,7 @@ onfocus
 
 	endfor;
 
-	if SUPERVISOR_STAFF_CODE = "" then
+	if S_SUPERVISOR_STAFF_CODE = "" then
 		assignments_vs.add("Select census area to supervise", "1");
 		capi_staff_role = "Supervisor";
 
@@ -1037,7 +1037,7 @@ onfocus
 	forcase PSC_STAFF_DICT do
 
 		if key(PSC_STAFF_DICT) <> LOGIN then
-			staff_vs.add(STAFF_NAME, key(PSC_STAFF_DICT));
+			staff_vs.add(S_STAFF_NAME, key(PSC_STAFF_DICT));
 		endif;
 
 	endfor;
@@ -1072,16 +1072,16 @@ postproc
 	if MANAGE_STAFF_MEMBER = 1 then
 
 		// Prefill in the staff member's name
-		MANAGE_STAFF_NAME = STAFF_NAME;
+		MANAGE_STAFF_NAME = S_STAFF_NAME;
 		skip to MANAGE_STAFF_NAME;
 
 	elseif MANAGE_STAFF_MEMBER = 2 then
 
-		if PIN_CODE = notappl then
+		if S_PIN_CODE = notappl then
 			errmsg("Staff PIN code of %s is not yet set", capi_manage_staff_name);
 
 		else
-			errmsg("Staff PIN code of %s is %v", capi_manage_staff_name, PIN_CODE);
+			errmsg("Staff PIN code of %s is %v", capi_manage_staff_name, S_PIN_CODE);
 
 		endif;
 
@@ -1089,12 +1089,12 @@ postproc
 
 	elseif MANAGE_STAFF_MEMBER = 3 then
 
-		PIN_CODE = notappl;
+		S_PIN_CODE = notappl;
 		writecase(PSC_STAFF_DICT);
 
 		errmsg("Staff PIN code of %s has been reset", capi_manage_staff_name);
 
-		if STAFF_CODE = LOGIN then
+		if S_STAFF_CODE = LOGIN then
 			// Supervisor changed their code, log out so that they can log in and reset it
 			SwitchUsers();
 
@@ -1126,21 +1126,21 @@ postproc
 		// Add a new interviewer
 		clear(PSC_STAFF_DICT);
 
-		STAFF_CODE = uuid(); // Create unique identifier for interviewer
-		STAFF_NAME = MANAGE_STAFF_NAME;
-		SUPERVISOR_STAFF_CODE = LOGIN;
-		TIME_CREATED_ACCOUNT = timestamp();
-		setcaselabel(PSC_STAFF_DICT, strip(STAFF_NAME));
+		S_STAFF_CODE = uuid(); // Create unique identifier for interviewer
+		S_STAFF_NAME = MANAGE_STAFF_NAME;
+		S_SUPERVISOR_STAFF_CODE = LOGIN;
+		S_TIME_CREATED_ACCOUNT = timestamp();
+		setcaselabel(PSC_STAFF_DICT, strip(S_STAFF_NAME));
 
 		writecase(PSC_STAFF_DICT);
 
-		errmsg("%s successfully added as an interviewer", LookupStaffName(STAFF_CODE));
+		errmsg("%s successfully added as an interviewer", LookupStaffName(S_STAFF_CODE));
 
 		reenter MANAGE_STAFF;
 
 	else
 		// Modify the name
-		string oldName = LookupStaffName(STAFF_CODE);
+		string oldName = LookupStaffName(S_STAFF_CODE);
 
 		if MANAGE_STAFF_NAME = oldName then
 			errmsg("The name is the same as before and has not been changed");
@@ -1148,11 +1148,11 @@ postproc
 		else
 			VerifyStaffNameIsUnique(MANAGE_STAFF_NAME, MANAGE_STAFF);
 
-			STAFF_NAME = MANAGE_STAFF_NAME;
-			setcaselabel(PSC_STAFF_DICT, strip(STAFF_NAME));
+			S_STAFF_NAME = MANAGE_STAFF_NAME;
+			setcaselabel(PSC_STAFF_DICT, strip(S_STAFF_NAME));
 			writecase(PSC_STAFF_DICT);
 
-			errmsg("%s successfully renamed to %s", oldName, LookupStaffName(STAFF_CODE));
+			errmsg("%s successfully renamed to %s", oldName, LookupStaffName(S_STAFF_CODE));
 
 		endif;
 
@@ -1167,9 +1167,9 @@ onfocus
 
 	ValueSet string interviewer_code_vs;
 
-	forcase PSC_STAFF_DICT where LOGIN <> STAFF_CODE do
+	forcase PSC_STAFF_DICT where LOGIN <> S_STAFF_CODE do
 		// Not supervisor
-		interviewer_code_vs.add(STAFF_NAME, key(PSC_STAFF_DICT));
+		interviewer_code_vs.add(S_STAFF_NAME, key(PSC_STAFF_DICT));
 	endfor;
 
 	if interviewer_code_vs.length() = 0 then
