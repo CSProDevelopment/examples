@@ -26,7 +26,7 @@
       "ids": {
         "items": [
           {
-            "name": "GEOCODES_PROVINCE", 
+            "name": "G_PROVINCE", 
             "labels": [ { "text": "Province" } ], 
             "contentType": "numeric", 
             "start": 1, 
@@ -34,7 +34,7 @@
             "zeroFill": true
           }, 
           {
-            "name": "GEOCODES_DISTRICT", 
+            "name": "G_DISTRICT", 
             "labels": [ { "text": "District" } ], 
             "contentType": "numeric", 
             "start": 3, 
@@ -42,7 +42,7 @@
             "zeroFill": true
           }, 
           {
-            "name": "GEOCODES_EA", 
+            "name": "G_EA", 
             "labels": [ { "text": "Enumeration Area" } ], 
             "contentType": "numeric", 
             "start": 5, 
@@ -61,14 +61,14 @@
           }, 
           "items": [
             {
-              "name": "GEOCODES_AREA_LEVEL", 
+              "name": "G_AREA_LEVEL", 
               "labels": [ { "text": "Area Level" } ], 
               "contentType": "numeric", 
               "length": 1, 
               "zeroFill": false
             }, 
             {
-              "name": "GEOCODES_AREA_NAME", 
+              "name": "G_AREA_NAME", 
               "labels": [ { "text": "Area Name" } ], 
               "contentType": "alpha", 
               "length": 50

@@ -62,12 +62,12 @@ end;
 
 function string LookupGeographyName(province, district)
 
-	GEOCODES_PROVINCE = province;
-	GEOCODES_DISTRICT = district;
-	GEOCODES_EA = notappl;
+	G_PROVINCE = province;
+	G_DISTRICT = district;
+	G_EA = notappl;
 
-	if loadcase(PSC_GEOCODES_DICT, GEOCODES_PROVINCE, GEOCODES_DISTRICT, GEOCODES_EA) then
-		LookupGeographyName = strip(GEOCODES_AREA_NAME);
+	if loadcase(PSC_GEOCODES_DICT, G_PROVINCE, G_DISTRICT, G_EA) then
+		LookupGeographyName = strip(G_AREA_NAME);
 
 	else
 		LookupGeographyName = "<Invalid Geocode>";
@@ -803,9 +803,9 @@ preproc
 
 	ValueSet province_vs;
 
-	forcase PSC_GEOCODES_DICT where GEOCODES_AREA_LEVEL = 1 do
+	forcase PSC_GEOCODES_DICT where G_AREA_LEVEL = 1 do
 		// Prepare value sets for provinces
-		province_vs.add(GEOCODES_AREA_NAME, GEOCODES_PROVINCE);
+		province_vs.add(G_AREA_NAME, G_PROVINCE);
 	endfor;
 
 	setvalueset(SUPERVISOR_PROVINCE, province_vs);
@@ -821,9 +821,9 @@ preproc
 
 	ValueSet district_vs;
 
-	forcase PSC_GEOCODES_DICT where GEOCODES_AREA_LEVEL = 2 and GEOCODES_PROVINCE = SUPERVISOR_PROVINCE do
+	forcase PSC_GEOCODES_DICT where G_AREA_LEVEL = 2 and G_PROVINCE = SUPERVISOR_PROVINCE do
 		// Prepare value sets for districts that are within the previously selected province
-		district_vs.add(GEOCODES_AREA_NAME, GEOCODES_DISTRICT);
+		district_vs.add(G_AREA_NAME, G_DISTRICT);
 	endfor;
 
 	setvalueset(SUPERVISOR_DISTRICT, district_vs);
@@ -1205,13 +1205,13 @@ onfocus
 	ValueSet interviewer_ea_vs;
 
 	// Display all enumerations areas that are within the current province and district
-	forcase PSC_GEOCODES_DICT where GEOCODES_AREA_LEVEL = 3 and
-		GEOCODES_PROVINCE = CURRENT_PROVINCE and GEOCODES_DISTRICT = CURRENT_DISTRICT do
+	forcase PSC_GEOCODES_DICT where G_AREA_LEVEL = 3 and
+		G_PROVINCE = CURRENT_PROVINCE and G_DISTRICT = CURRENT_DISTRICT do
 
 		string eaAssignedNames;
 
-		forcase PSC_ASSIGNMENTS_DICT(startswith, maketext("%v%v%v", GEOCODES_PROVINCE, GEOCODES_DISTRICT
-			, GEOCODES_EA)) do
+		forcase PSC_ASSIGNMENTS_DICT(startswith, maketext("%v%v%v", G_PROVINCE, G_DISTRICT
+			, G_EA)) do
 
 				if A_ROLE = 1 then
 					// Only interviewers
@@ -1231,7 +1231,7 @@ onfocus
 		endif;
 
 		// Display EA codes
-		interviewer_ea_vs.add(LookupEAName(GEOCODES_EA) + eaAssignedNames, GEOCODES_EA);
+		interviewer_ea_vs.add(LookupEAName(G_EA) + eaAssignedNames, G_EA);
 
 	endfor;
 
