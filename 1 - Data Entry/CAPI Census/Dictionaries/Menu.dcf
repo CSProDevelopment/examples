@@ -46,67 +46,67 @@
           }, 
           "items": [
             {
-              "name": "LOGIN", 
+              "name": "M_LOGIN", 
               "labels": [ { "text": "Login" } ], 
               "contentType": "alpha", 
               "length": 36
             }, 
             {
-              "name": "PIN_CODE_CONFIRMATION", 
+              "name": "M_PIN_CODE_CONFIRMATION", 
               "labels": [ { "text": "PIN Code Confirmation" } ], 
               "contentType": "numeric", 
               "length": 4, 
               "zeroFill": true
             }, 
             {
-              "name": "SUPERVISOR_ACCESS_PASSWORD", 
+              "name": "M_SUPERVISOR_ACCESS_PASSWORD", 
               "labels": [ { "text": "Supervisor Access Password" } ], 
               "contentType": "numeric", 
               "length": 4, 
               "zeroFill": true
             }, 
             {
-              "name": "SUPERVISOR_NAME", 
+              "name": "M_SUPERVISOR_NAME", 
               "labels": [ { "text": "Supervisor Name" } ], 
               "contentType": "alpha", 
               "length": 50
             }, 
             {
-              "name": "SUPERVISOR_PIN_CODE", 
+              "name": "M_SUPERVISOR_PIN_CODE", 
               "labels": [ { "text": "Supervisor PIN Code" } ], 
               "contentType": "numeric", 
               "length": 4, 
               "zeroFill": true
             }, 
             {
-              "name": "ASSIGNMENT_SELECTION", 
+              "name": "M_ASSIGNMENT_SELECTION", 
               "labels": [ { "text": "Assignment Selection" } ], 
               "contentType": "alpha", 
               "length": 44
             }, 
             {
-              "name": "SUPERVISOR_PROVINCE", 
+              "name": "M_SUPERVISOR_PROVINCE", 
               "labels": [ { "text": "Supervisor Province" } ], 
               "contentType": "numeric", 
               "length": 2, 
               "zeroFill": true
             }, 
             {
-              "name": "SUPERVISOR_DISTRICT", 
+              "name": "M_SUPERVISOR_DISTRICT", 
               "labels": [ { "text": "Supervisor District" } ], 
               "contentType": "numeric", 
               "length": 2, 
               "zeroFill": true
             }, 
             {
-              "name": "SUPERVISOR_MENU", 
+              "name": "M_SUPERVISOR_MENU", 
               "labels": [ { "text": "Supervisor Menu" } ], 
               "contentType": "numeric", 
               "length": 2, 
               "zeroFill": true, 
               "valueSets": [
                 {
-                  "name": "SUPERVISOR_MENU_VS1", 
+                  "name": "M_SUPERVISOR_MENU_VS1", 
                   "labels": [ { "text": "Supervisor Menu" } ], 
                   "values": [
                     {
@@ -142,32 +142,32 @@
               ]
             }, 
             {
-              "name": "INTERVIEWER_MENU", 
+              "name": "M_INTERVIEWER_MENU", 
               "labels": [ { "text": "Interviewer Menu" } ], 
               "contentType": "alpha", 
               "length": 12
             }, 
             {
-              "name": "VIEW_ALL_HOUSEHOLDS", 
+              "name": "M_VIEW_ALL_HOUSEHOLDS", 
               "labels": [ { "text": "View All Households" } ], 
               "contentType": "alpha", 
               "length": 12
             }, 
             {
-              "name": "MANAGE_STAFF", 
+              "name": "M_MANAGE_STAFF", 
               "labels": [ { "text": "Manage Staff" } ], 
               "contentType": "alpha", 
               "length": 36
             }, 
             {
-              "name": "MANAGE_STAFF_MEMBER", 
+              "name": "M_MANAGE_STAFF_MEMBER", 
               "labels": [ { "text": "Manage Staff Member" } ], 
               "contentType": "numeric", 
               "length": 1, 
               "zeroFill": true, 
               "valueSets": [
                 {
-                  "name": "MANAGE_STAFF_MEMBER_VS1", 
+                  "name": "M_MANAGE_STAFF_MEMBER_VS1", 
                   "labels": [ { "text": "Manage Staff Member" } ], 
                   "values": [
                     {
@@ -187,33 +187,33 @@
               ]
             }, 
             {
-              "name": "MANAGE_STAFF_NAME", 
+              "name": "M_MANAGE_STAFF_NAME", 
               "labels": [ { "text": "Manage Staff Name" } ], 
               "contentType": "alpha", 
               "length": 50
             }, 
             {
-              "name": "INTERVIEWER_EA", 
+              "name": "M_INTERVIEWER_EA", 
               "labels": [ { "text": "Interviewer EA" } ], 
               "contentType": "numeric", 
               "length": 3, 
               "zeroFill": true
             }, 
             {
-              "name": "INTERVIEWER_CODE", 
+              "name": "M_INTERVIEWER_CODE", 
               "labels": [ { "text": "Interviewer Code" } ], 
               "contentType": "alpha", 
               "length": 36
             }, 
             {
-              "name": "CURRENT_PROVINCE", 
+              "name": "M_CURRENT_PROVINCE", 
               "labels": [ { "text": "Current Province" } ], 
               "contentType": "numeric", 
               "length": 2, 
               "zeroFill": true
             }, 
             {
-              "name": "CURRENT_DISTRICT", 
+              "name": "M_CURRENT_DISTRICT", 
               "labels": [ { "text": "Current District" } ], 
               "contentType": "numeric", 
               "length": 2, 

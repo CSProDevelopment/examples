@@ -17,8 +17,8 @@ Level=1
 Size=757,126
 CapturePos=317,74
   
-Item=LOGIN
-Item=PIN_CODE_CONFIRMATION
+Item=M_LOGIN
+Item=M_PIN_CODE_CONFIRMATION
   
 [EndForm]
   
@@ -30,9 +30,9 @@ Level=1
 Size=978,550
 CapturePos=337,118
   
-Item=SUPERVISOR_ACCESS_PASSWORD
-Item=SUPERVISOR_NAME
-Item=SUPERVISOR_PIN_CODE
+Item=M_SUPERVISOR_ACCESS_PASSWORD
+Item=M_SUPERVISOR_NAME
+Item=M_SUPERVISOR_PIN_CODE
   
 [EndForm]
   
@@ -44,9 +44,9 @@ Level=1
 Size=897,269
 CapturePos=292,74
   
-Item=ASSIGNMENT_SELECTION
-Item=SUPERVISOR_PROVINCE
-Item=SUPERVISOR_DISTRICT
+Item=M_ASSIGNMENT_SELECTION
+Item=M_SUPERVISOR_PROVINCE
+Item=M_SUPERVISOR_DISTRICT
   
 [EndForm]
   
@@ -58,9 +58,9 @@ Level=1
 Size=913,207
 CapturePos=435,80
   
-Item=SUPERVISOR_MENU
-Item=INTERVIEWER_MENU
-Item=VIEW_ALL_HOUSEHOLDS
+Item=M_SUPERVISOR_MENU
+Item=M_INTERVIEWER_MENU
+Item=M_VIEW_ALL_HOUSEHOLDS
   
 [EndForm]
   
@@ -72,9 +72,9 @@ Level=1
 Size=1118,247
 CapturePos=47,135
   
-Item=MANAGE_STAFF
-Item=MANAGE_STAFF_MEMBER
-Item=MANAGE_STAFF_NAME
+Item=M_MANAGE_STAFF
+Item=M_MANAGE_STAFF_MEMBER
+Item=M_MANAGE_STAFF_NAME
   
 [EndForm]
   
@@ -86,8 +86,8 @@ Level=1
 Size=1044,274
 CapturePos=59,109
   
-Item=INTERVIEWER_EA
-Item=INTERVIEWER_CODE
+Item=M_INTERVIEWER_EA
+Item=M_INTERVIEWER_CODE
   
 [EndForm]
   
@@ -103,9 +103,9 @@ Form=1
 Max=1
   
 [Field]
-Name=LOGIN
+Name=M_LOGIN
 Position=218,20,723,40
-Item=LOGIN,PSC_MENU_DICT
+Item=M_LOGIN,PSC_MENU_DICT
 FieldLabelType=DictionaryLabel
 DataCaptureType=DropDown
 Form=1
@@ -116,9 +116,9 @@ Text=Login
  
   
 [Field]
-Name=PIN_CODE_CONFIRMATION
+Name=M_PIN_CODE_CONFIRMATION
 Position=218,72,275,92
-Item=PIN_CODE_CONFIRMATION,PSC_MENU_DICT
+Item=M_PIN_CODE_CONFIRMATION,PSC_MENU_DICT
 HideInCaseTree=Yes
 FieldLabelType=DictionaryLabel
 DataCaptureType=TextBox
@@ -138,9 +138,9 @@ Form=2
 Max=1
   
 [Field]
-Name=SUPERVISOR_ACCESS_PASSWORD
+Name=M_SUPERVISOR_ACCESS_PASSWORD
 Position=218,20,275,40
-Item=SUPERVISOR_ACCESS_PASSWORD,PSC_MENU_DICT
+Item=M_SUPERVISOR_ACCESS_PASSWORD,PSC_MENU_DICT
 HideInCaseTree=Yes
 FieldLabelType=DictionaryLabel
 DataCaptureType=TextBox
@@ -153,9 +153,9 @@ Form=2
  
   
 [Field]
-Name=SUPERVISOR_NAME
+Name=M_SUPERVISOR_NAME
 Position=218,63,919,83
-Item=SUPERVISOR_NAME,PSC_MENU_DICT
+Item=M_SUPERVISOR_NAME,PSC_MENU_DICT
 UpperCase=Yes
 FieldLabelType=DictionaryLabel
 DataCaptureType=TextBox
@@ -168,9 +168,9 @@ Form=2
  
   
 [Field]
-Name=SUPERVISOR_PIN_CODE
+Name=M_SUPERVISOR_PIN_CODE
 Position=218,108,275,128
-Item=SUPERVISOR_PIN_CODE,PSC_MENU_DICT
+Item=M_SUPERVISOR_PIN_CODE,PSC_MENU_DICT
 HideInCaseTree=Yes
 FieldLabelType=DictionaryLabel
 DataCaptureType=TextBox
@@ -191,9 +191,9 @@ Form=3
 Max=1
   
 [Field]
-Name=ASSIGNMENT_SELECTION
+Name=M_ASSIGNMENT_SELECTION
 Position=202,20,819,40
-Item=ASSIGNMENT_SELECTION,PSC_MENU_DICT
+Item=M_ASSIGNMENT_SELECTION,PSC_MENU_DICT
 FieldLabelType=DictionaryLabel
 DataCaptureType=DropDown
 Form=3
@@ -204,9 +204,9 @@ Text=Assignment Selection
  
   
 [Field]
-Name=SUPERVISOR_PROVINCE
+Name=M_SUPERVISOR_PROVINCE
 Position=202,64,231,84
-Item=SUPERVISOR_PROVINCE,PSC_MENU_DICT
+Item=M_SUPERVISOR_PROVINCE,PSC_MENU_DICT
 FieldLabelType=DictionaryLabel
 DataCaptureType=DropDown
 Form=3
@@ -217,9 +217,9 @@ Text=Supervisor Province
  
   
 [Field]
-Name=SUPERVISOR_DISTRICT
+Name=M_SUPERVISOR_DISTRICT
 Position=202,108,231,128
-Item=SUPERVISOR_DISTRICT,PSC_MENU_DICT
+Item=M_SUPERVISOR_DISTRICT,PSC_MENU_DICT
 FieldLabelType=DictionaryLabel
 DataCaptureType=DropDown
 Form=3
@@ -238,9 +238,9 @@ Form=4
 Max=1
   
 [Field]
-Name=SUPERVISOR_MENU
+Name=M_SUPERVISOR_MENU
 Position=199,20,228,40
-Item=SUPERVISOR_MENU,PSC_MENU_DICT
+Item=M_SUPERVISOR_MENU,PSC_MENU_DICT
 FieldLabelType=DictionaryLabel
 DataCaptureType=DropDown
 Form=4
@@ -251,9 +251,9 @@ Text=Supervisor Menu
  
   
 [Field]
-Name=INTERVIEWER_MENU
+Name=M_INTERVIEWER_MENU
 Position=622,20,791,40
-Item=INTERVIEWER_MENU,PSC_MENU_DICT
+Item=M_INTERVIEWER_MENU,PSC_MENU_DICT
 FieldLabelType=DictionaryLabel
 DataCaptureType=DropDown
 Form=4
@@ -264,9 +264,9 @@ Text=Interviewer Menu
  
   
 [Field]
-Name=VIEW_ALL_HOUSEHOLDS
+Name=M_VIEW_ALL_HOUSEHOLDS
 Position=199,115,368,135
-Item=VIEW_ALL_HOUSEHOLDS,PSC_MENU_DICT
+Item=M_VIEW_ALL_HOUSEHOLDS,PSC_MENU_DICT
 FieldLabelType=DictionaryLabel
 DataCaptureType=DropDown
 Form=4
@@ -285,9 +285,9 @@ Form=5
 Max=1
   
 [Field]
-Name=MANAGE_STAFF
+Name=M_MANAGE_STAFF
 Position=200,20,705,40
-Item=MANAGE_STAFF,PSC_MENU_DICT
+Item=M_MANAGE_STAFF,PSC_MENU_DICT
 HideInCaseTree=Yes
 FieldLabelType=DictionaryLabel
 DataCaptureType=DropDown
@@ -299,9 +299,9 @@ Text=Manage Staff
  
   
 [Field]
-Name=MANAGE_STAFF_MEMBER
+Name=M_MANAGE_STAFF_MEMBER
 Position=200,57,215,77
-Item=MANAGE_STAFF_MEMBER,PSC_MENU_DICT
+Item=M_MANAGE_STAFF_MEMBER,PSC_MENU_DICT
 HideInCaseTree=Yes
 FieldLabelType=DictionaryLabel
 DataCaptureType=DropDown
@@ -313,9 +313,9 @@ Text=Manage Staff Member
  
   
 [Field]
-Name=MANAGE_STAFF_NAME
+Name=M_MANAGE_STAFF_NAME
 Position=200,93,901,113
-Item=MANAGE_STAFF_NAME,PSC_MENU_DICT
+Item=M_MANAGE_STAFF_NAME,PSC_MENU_DICT
 HideInCaseTree=Yes
 UpperCase=Yes
 FieldLabelType=DictionaryLabel
@@ -336,9 +336,9 @@ Form=6
 Max=1
   
 [Field]
-Name=INTERVIEWER_CODE
+Name=M_INTERVIEWER_CODE
 Position=203,21,708,41
-Item=INTERVIEWER_CODE,PSC_MENU_DICT
+Item=M_INTERVIEWER_CODE,PSC_MENU_DICT
 FieldLabelType=DictionaryLabel
 DataCaptureType=DropDown
 Form=6
@@ -349,9 +349,9 @@ Text=Interviewer Code
  
   
 [Field]
-Name=INTERVIEWER_EA
+Name=M_INTERVIEWER_EA
 Position=203,66,246,86
-Item=INTERVIEWER_EA,PSC_MENU_DICT
+Item=M_INTERVIEWER_EA,PSC_MENU_DICT
 FieldLabelType=DictionaryLabel
 DataCaptureType=DropDown
 Form=6

@@ -40,11 +40,11 @@ numeric capi_household_partial_count;
 // the menu when pressed. Otherwise, the button will exit the application.
 function OnStop()
 
-	if highlighted(SUPERVISOR_MENU) then
-		reenter SUPERVISOR_MENU;
+	if highlighted(M_SUPERVISOR_MENU) then
+		reenter M_SUPERVISOR_MENU;
 
-	elseif highlighted(INTERVIEWER_MENU) then
-		reenter INTERVIEWER_MENU;
+	elseif highlighted(M_INTERVIEWER_MENU) then
+		reenter M_INTERVIEWER_MENU;
 
 	else
 		// Quit the application. Main menu has not been entered
@@ -144,9 +144,9 @@ function LaunchHouseholdProgram()
 	household_pff.setProperty("ProvinceName", LookupProvinceName(HH_PROVINCE));
 	household_pff.setProperty("DistrictName", LookupDistrictName(HH_PROVINCE,HH_DISTRICT));
 	household_pff.setProperty("EAName", LookupEAName(HH_EA));
-	household_pff.setProperty("InterviewerCode", LOGIN);
+	household_pff.setProperty("InterviewerCode", M_LOGIN);
 	household_pff.setProperty("SupervisorCode", S_SUPERVISOR_STAFF_CODE);
-	household_pff.setProperty("StaffName", LookupStaffName(LOGIN));
+	household_pff.setProperty("StaffName", LookupStaffName(M_LOGIN));
 
 	// Run the household application
 	household_pff.exec();
@@ -164,7 +164,7 @@ function InitInterviewerStatusRecord()
 	numeric ws_counter = 0;
 	
 	// Loop through all interviewers that are supervised by the currently logged in supervisor
-	forcase PSC_STAFF_DICT where S_SUPERVISOR_STAFF_CODE = LOGIN do
+	forcase PSC_STAFF_DICT where S_SUPERVISOR_STAFF_CODE = M_LOGIN do
 		
 		inc(ws_counter);
 		
@@ -256,7 +256,7 @@ function SyncDataWithInterviewer()
 
 	numeric success = 1;
 
-	forcase PSC_STAFF_DICT where S_STAFF_CODE = LOGIN or S_SUPERVISOR_STAFF_CODE = LOGIN do
+	forcase PSC_STAFF_DICT where S_STAFF_CODE = M_LOGIN or S_SUPERVISOR_STAFF_CODE = M_LOGIN do
 
 		// Synchronize staff code for supervisor and their interviewers. Supervisor's staff code is sent, so supervisor
 		// is able to log onto their account using interviewer's device.
@@ -270,7 +270,7 @@ function SyncDataWithInterviewer()
 	endfor;
 
 	// Create universe for supervisory area.
-	string universeStr = maketext("%v%v", CURRENT_PROVINCE, CURRENT_DISTRICT);
+	string universeStr = maketext("%v%v", M_CURRENT_PROVINCE, M_CURRENT_DISTRICT);
 
 	// Synchronize assignments in supervisory area.
 	// Sync BOTH is used, because the supervisor and interview write to the assignments data.
@@ -344,7 +344,7 @@ function SyncDataWithHQ()
 
 	numeric success = 1;
 
-	forcase PSC_STAFF_DICT where S_STAFF_CODE = LOGIN or S_SUPERVISOR_STAFF_CODE = LOGIN do
+	forcase PSC_STAFF_DICT where S_STAFF_CODE = M_LOGIN or S_SUPERVISOR_STAFF_CODE = M_LOGIN do
 
 		// Synchronize staff code for supervisor and their interviewers.
 		// Sync PUT is used, because HQ will only read the staff data.
@@ -357,7 +357,7 @@ function SyncDataWithHQ()
 	endfor;
 
 	// Create universe for supervisory area.
-	string universeStr = maketext("%v%v", CURRENT_PROVINCE, CURRENT_DISTRICT);
+	string universeStr = maketext("%v%v", M_CURRENT_PROVINCE, M_CURRENT_DISTRICT);
 
 	// Synchronize assignments in supervisory area.
 	// Sync PUT is used, because HQ will only read the assignments data.
@@ -508,7 +508,7 @@ preproc
 	setfont(valuesets, "Calibri", 20);
 
 
-PROC LOGIN
+PROC M_LOGIN
 
 preproc
 
@@ -525,8 +525,8 @@ onfocus
 
 		if loadcase(PSC_STAFF_DICT, S_STAFF_CODE) and S_PIN_CODE <> notappl then
 			// Previous user was found and PIN is defined, so login automatically for convenience
-			LOGIN = S_STAFF_CODE;
-			PIN_CODE_CONFIRMATION = S_PIN_CODE;
+			M_LOGIN = S_STAFF_CODE;
+			M_PIN_CODE_CONFIRMATION = S_PIN_CODE;
 			advance to ASSIGNMENT_SELECTION_FORM;
 		endif;
 
@@ -542,11 +542,11 @@ onfocus
 	login_vs.add("Update programs from supervisor", "2");
 	login_vs.add("Begin work as a supervisor", "3");
 
-	setvalueset(LOGIN, login_vs);
+	setvalueset(M_LOGIN, login_vs);
 
 	// Clear the login
-	LOGIN = "";
-	PIN_CODE_CONFIRMATION = notappl;
+	M_LOGIN = "";
+	M_PIN_CODE_CONFIRMATION = notappl;
 
 	// Useful to see if the current application is being used
 	numeric publishYYYYMMDD = int(publishdate() / 1000000);
@@ -561,40 +561,40 @@ postproc
 	// switch users, so allow them to select their staff name.
 	automaticLoginOnStartup = 0;
 
-	if LOGIN = "1" then
+	if M_LOGIN = "1" then
 		SyncWithHQ(app_sync);
 		reenter;
 
-	elseif LOGIN = "2" then
+	elseif M_LOGIN = "2" then
 		StartServer();
 		reenter;
 
-	elseif LOGIN = "3" then
+	elseif M_LOGIN = "3" then
 		skip to SUPERVISOR_CREATION_FORM;
 
-	elseif loadcase(PSC_STAFF_DICT,LOGIN) then
-		capi_staff_name = LookupStaffName(LOGIN);
+	elseif loadcase(PSC_STAFF_DICT,M_LOGIN) then
+		capi_staff_name = LookupStaffName(M_LOGIN);
 
 	endif;
 
 
-PROC PIN_CODE_CONFIRMATION
+PROC M_PIN_CODE_CONFIRMATION
 
 preproc
 
-	setproperty(PIN_CODE_CONFIRMATION, "Protected", "No");
+	setproperty(M_PIN_CODE_CONFIRMATION, "Protected", "No");
 
 postproc
 
 	if S_PIN_CODE = notappl then
 		// Creating a new PIN code
-		ValidatePINCode(PIN_CODE_CONFIRMATION);
+		ValidatePINCode(M_PIN_CODE_CONFIRMATION);
 
-		S_PIN_CODE = PIN_CODE_CONFIRMATION;
+		S_PIN_CODE = M_PIN_CODE_CONFIRMATION;
 		S_DEVICE_ID = getdeviceid();
 		writecase(PSC_STAFF_DICT);
 
-	elseif PIN_CODE_CONFIRMATION <> S_PIN_CODE then
+	elseif M_PIN_CODE_CONFIRMATION <> S_PIN_CODE then
 		// Validating an existing PIN code
 		errmsg("Invalid PIN code");
 		reenter;
@@ -603,7 +603,7 @@ postproc
 
 	savesetting(login_setting_key, S_STAFF_CODE);
 
-	setproperty(PIN_CODE_CONFIRMATION, "Protected", "Yes");
+	setproperty(M_PIN_CODE_CONFIRMATION, "Protected", "Yes");
 
 	skip to ASSIGNMENT_SELECTION_FORM;
 
@@ -619,44 +619,44 @@ postproc
 	setproperty(SUPERVISOR_CREATION_FORM, "Protected", "Yes");
 
 
-PROC SUPERVISOR_ACCESS_PASSWORD
+PROC M_SUPERVISOR_ACCESS_PASSWORD
 
 preproc
 
 	// Clear the values in case multiple supervisors setup accounts
-	SUPERVISOR_ACCESS_PASSWORD = notappl;
-	SUPERVISOR_NAME = "";
-	SUPERVISOR_PIN_CODE = notappl;
+	M_SUPERVISOR_ACCESS_PASSWORD = notappl;
+	M_SUPERVISOR_NAME = "";
+	M_SUPERVISOR_PIN_CODE = notappl;
 
 postproc
 
-	if SUPERVISOR_ACCESS_PASSWORD <> supervisor_password then
+	if M_SUPERVISOR_ACCESS_PASSWORD <> supervisor_password then
 		errmsg("Invalid password. You cannot proceed as a supervisor.");
 		reenter;
 	endif;
 
 
-PROC SUPERVISOR_NAME
+PROC M_SUPERVISOR_NAME
 
-	if SUPERVISOR_NAME = "" then
+	if M_SUPERVISOR_NAME = "" then
 		errmsg("You cannot enter a blank name.");
 		reenter;
 	endif;
 
-	VerifyStaffNameIsUnique(SUPERVISOR_NAME, "");
+	VerifyStaffNameIsUnique(M_SUPERVISOR_NAME, "");
 
 
-PROC SUPERVISOR_PIN_CODE
+PROC M_SUPERVISOR_PIN_CODE
 
 postproc
 
-	ValidatePINCode(SUPERVISOR_PIN_CODE);
+	ValidatePINCode(M_SUPERVISOR_PIN_CODE);
 
 	// Update the staff file (save the data about this supervisor)
 	clear(PSC_STAFF_DICT);
 	S_STAFF_CODE = uuid(); // Create unique identifier for supervisor
-	S_STAFF_NAME = SUPERVISOR_NAME;
-	S_PIN_CODE = SUPERVISOR_PIN_CODE;;
+	S_STAFF_NAME = M_SUPERVISOR_NAME;
+	S_PIN_CODE = M_SUPERVISOR_PIN_CODE;;
 	S_DEVICE_ID = getdeviceid();
 	S_SUPERVISOR_STAFF_CODE = "";
 	S_TIME_CREATED_ACCOUNT = timestamp();
@@ -665,13 +665,13 @@ postproc
 	writecase(PSC_STAFF_DICT);
 
 	// Set the login to the supervisor
-	LOGIN = S_STAFF_CODE;
-	savesetting(login_setting_key, LOGIN);
+	M_LOGIN = S_STAFF_CODE;
+	savesetting(login_setting_key, M_LOGIN);
 
-	capi_staff_name = LookupStaffName(LOGIN);
+	capi_staff_name = LookupStaffName(M_LOGIN);
 
 
-PROC ASSIGNMENT_SELECTION
+PROC M_ASSIGNMENT_SELECTION
 
 preproc
 
@@ -689,8 +689,8 @@ onfocus
 		if loadcase(PSC_ASSIGNMENTS_DICT, previousAssignment) then
 
 			// Previous assignment was found, so automatically select assignment for convenience
-			if A_STAFF_CODE = LOGIN then
-				ASSIGNMENT_SELECTION = key(PSC_ASSIGNMENTS_DICT);
+			if A_STAFF_CODE = M_LOGIN then
+				M_ASSIGNMENT_SELECTION = key(PSC_ASSIGNMENTS_DICT);
 				advance to MAIN_MENU_FORM;
 			endif;
 
@@ -702,7 +702,7 @@ onfocus
 
 	ValueSet string assignments_vs;
 
-	forcase PSC_ASSIGNMENTS_DICT where A_STAFF_CODE = LOGIN do
+	forcase PSC_ASSIGNMENTS_DICT where A_STAFF_CODE = M_LOGIN do
 
 		string label = maketext("%s (%v) / %s (%v)",
 			LookupProvinceName(A_PROVINCE), A_PROVINCE,
@@ -743,9 +743,9 @@ onfocus
 
 	assignments_vs.add("Switch users", "4");
 
-	setvalueset(ASSIGNMENT_SELECTION, assignments_vs);
+	setvalueset(M_ASSIGNMENT_SELECTION, assignments_vs);
 
-	ASSIGNMENT_SELECTION = "";
+	M_ASSIGNMENT_SELECTION = "";
 
 postproc
 
@@ -753,7 +753,7 @@ postproc
 	// switch users, so allow them to select their assignment.
 	automaticAssignmentSelectionOnStartup = 0;
 
-	if ASSIGNMENT_SELECTION = "1" then
+	if M_ASSIGNMENT_SELECTION = "1" then
 
 		// Select census area to supervise
 		if countcases(PSC_GEOCODES_DICT) = 0 then
@@ -761,43 +761,43 @@ postproc
 			reenter;
 		endif;
 
-		skip to SUPERVISOR_PROVINCE;
+		skip to M_SUPERVISOR_PROVINCE;
 
-	elseif ASSIGNMENT_SELECTION = "2" then
+	elseif M_ASSIGNMENT_SELECTION = "2" then
 		SyncWithHQ(app_sync);
 		reenter;
 
-	elseif ASSIGNMENT_SELECTION = "3" then
+	elseif M_ASSIGNMENT_SELECTION = "3" then
 		StartServer();
 		reenter;
 
-	elseif ASSIGNMENT_SELECTION = "4" then
+	elseif M_ASSIGNMENT_SELECTION = "4" then
 		SwitchUsers();
 
-	elseif loadcase(PSC_ASSIGNMENTS_DICT, ASSIGNMENT_SELECTION) then
+	elseif loadcase(PSC_ASSIGNMENTS_DICT, M_ASSIGNMENT_SELECTION) then
 
 		// Save the assignment for the next time the menu application is loaded
-		savesetting(assignment_setting_key, ASSIGNMENT_SELECTION);
+		savesetting(assignment_setting_key, M_ASSIGNMENT_SELECTION);
 
-		CURRENT_PROVINCE = A_PROVINCE;
-		CURRENT_DISTRICT = A_DISTRICT;
+		M_CURRENT_PROVINCE = A_PROVINCE;
+		M_CURRENT_DISTRICT = A_DISTRICT;
 
-		capi_province_name = LookupProvinceName(CURRENT_PROVINCE);
-		capi_district_name = LookupDistrictName(CURRENT_PROVINCE, CURRENT_DISTRICT);
+		capi_province_name = LookupProvinceName(M_CURRENT_PROVINCE);
+		capi_district_name = LookupDistrictName(M_CURRENT_PROVINCE, M_CURRENT_DISTRICT);
 		capi_ea_name = LookupEAName(A_EA);
 
 		if A_ROLE = 1 then
-			skip to INTERVIEWER_MENU;
+			skip to M_INTERVIEWER_MENU;
 
 		else
-			skip to SUPERVISOR_MENU;
+			skip to M_SUPERVISOR_MENU;
 
 		endif;
 
 	endif;
 
 
-PROC SUPERVISOR_PROVINCE
+PROC M_SUPERVISOR_PROVINCE
 
 preproc
 
@@ -808,34 +808,34 @@ preproc
 		province_vs.add(G_AREA_NAME, G_PROVINCE);
 	endfor;
 
-	setvalueset(SUPERVISOR_PROVINCE, province_vs);
+	setvalueset(M_SUPERVISOR_PROVINCE, province_vs);
 
-	SUPERVISOR_PROVINCE = notappl;
+	M_SUPERVISOR_PROVINCE = notappl;
 
 
-PROC SUPERVISOR_DISTRICT
+PROC M_SUPERVISOR_DISTRICT
 
 preproc
 
-	capi_province_name = LookupProvinceName(SUPERVISOR_PROVINCE);
+	capi_province_name = LookupProvinceName(M_SUPERVISOR_PROVINCE);
 
 	ValueSet district_vs;
 
-	forcase PSC_GEOCODES_DICT where G_AREA_LEVEL = 2 and G_PROVINCE = SUPERVISOR_PROVINCE do
+	forcase PSC_GEOCODES_DICT where G_AREA_LEVEL = 2 and G_PROVINCE = M_SUPERVISOR_PROVINCE do
 		// Prepare value sets for districts that are within the previously selected province
 		district_vs.add(G_AREA_NAME, G_DISTRICT);
 	endfor;
 
-	setvalueset(SUPERVISOR_DISTRICT, district_vs);
+	setvalueset(M_SUPERVISOR_DISTRICT, district_vs);
 
-	SUPERVISOR_DISTRICT = notappl;
+	M_SUPERVISOR_DISTRICT = notappl;
 
 postproc
 
 	if countcases(PSC_ASSIGNMENTS_DICT where
-		A_PROVINCE = SUPERVISOR_PROVINCE and
-		A_DISTRICT = SUPERVISOR_DISTRICT and
-		A_STAFF_CODE = LOGIN and
+		A_PROVINCE = M_SUPERVISOR_PROVINCE and
+		A_DISTRICT = M_SUPERVISOR_DISTRICT and
+		A_STAFF_CODE = M_LOGIN and
 		A_ROLE = 2) <> 0 then
 
 		errmsg("You are already assigned to this district.");
@@ -846,19 +846,19 @@ postproc
 	// Update the assignments file
 	clear(PSC_ASSIGNMENTS_DICT);
 
-	A_PROVINCE = SUPERVISOR_PROVINCE;
-	A_DISTRICT = SUPERVISOR_DISTRICT;
-	A_STAFF_CODE = LOGIN;
+	A_PROVINCE = M_SUPERVISOR_PROVINCE;
+	A_DISTRICT = M_SUPERVISOR_DISTRICT;
+	A_STAFF_CODE = M_LOGIN;
 	A_ROLE = 2;
 	A_DATE_ASSIGNED = timestamp();
 
 	writecase(PSC_ASSIGNMENTS_DICT);
 
 	// Show the newly saved assignment along with any other assignments the user might have
-	reenter ASSIGNMENT_SELECTION;
+	reenter M_ASSIGNMENT_SELECTION;
 
 
-PROC SUPERVISOR_MENU
+PROC M_SUPERVISOR_MENU
 
 onfocus
 
@@ -866,8 +866,8 @@ onfocus
 	numeric previousEA = notappl;
 
 	forcase PSC_ASSIGNMENTS_DICT where
-		A_PROVINCE = CURRENT_PROVINCE and
-		A_DISTRICT = CURRENT_DISTRICT do
+		A_PROVINCE = M_CURRENT_PROVINCE and
+		A_DISTRICT = M_CURRENT_DISTRICT do
 
 		// Only count assigned EAs once
 		if previousEA <> A_EA then
@@ -877,39 +877,39 @@ onfocus
 
 	endfor;
 
-	SUPERVISOR_MENU = notappl;
+	M_SUPERVISOR_MENU = notappl;
 
 postproc
 
-	if SUPERVISOR_MENU = 1 then
-		skip to MANAGE_STAFF;
+	if M_SUPERVISOR_MENU = 1 then
+		skip to M_MANAGE_STAFF;
 
-	elseif SUPERVISOR_MENU = 2 then
+	elseif M_SUPERVISOR_MENU = 2 then
 		skip to EA_ASSIGNMENT_FORM;
 
-	elseif SUPERVISOR_MENU = 3 then
+	elseif M_SUPERVISOR_MENU = 3 then
 		InitInterviewerStatusRecord();
 		INTERVIEWER_STATUS_REPORT.view();
 		reenter;
 
-	elseif SUPERVISOR_MENU = 4 then
+	elseif M_SUPERVISOR_MENU = 4 then
 		SyncWithInterviewer();
 		reenter;
 
-	elseif SUPERVISOR_MENU = 5 then
+	elseif M_SUPERVISOR_MENU = 5 then
 		SyncWithHQ(full_sync);
 		reenter;
 
-	elseif SUPERVISOR_MENU = 8 then
+	elseif M_SUPERVISOR_MENU = 8 then
 		SwitchAssignments();
 
-	elseif SUPERVISOR_MENU = 9 then
+	elseif M_SUPERVISOR_MENU = 9 then
 		SwitchUsers();
 
 	endif;
 
 
-PROC INTERVIEWER_MENU
+PROC M_INTERVIEWER_MENU
 
 onfocus
 
@@ -951,13 +951,13 @@ onfocus
 	interviewer_menu_vs.add("Change my assignment", "8");
 	interviewer_menu_vs.add("Switch users", "9");
 
-	setvalueset(INTERVIEWER_MENU, interviewer_menu_vs);
+	setvalueset(M_INTERVIEWER_MENU, interviewer_menu_vs);
 
-	INTERVIEWER_MENU = "";
+	M_INTERVIEWER_MENU = "";
 
 postproc
 
-	if INTERVIEWER_MENU = "1" then
+	if M_INTERVIEWER_MENU = "1" then
 		// Initialize the case IDs
 		HH_PROVINCE = A_PROVINCE;
 		HH_DISTRICT = A_DISTRICT;
@@ -966,39 +966,39 @@ postproc
 		HH_NUMBER = autoIncrementHouseholdNumber + 1;
 
 		errmsg("Are you sure that you want to add a household numbered %v%v?", HH_SEGMENT, HH_NUMBER)
-		select("Yes", continue, "No", INTERVIEWER_MENU);
+		select("Yes", continue, "No", M_INTERVIEWER_MENU);
 
 		LaunchHouseholdProgram();
 
-	elseif INTERVIEWER_MENU = "2" then
+	elseif M_INTERVIEWER_MENU = "2" then
 
 		if totalHouseholds = 0 then
 			errmsg("There are no households to view");
 			reenter;
 
 		else
-			skip to VIEW_ALL_HOUSEHOLDS;
+			skip to M_VIEW_ALL_HOUSEHOLDS;
 
 		endif;
 
-	elseif INTERVIEWER_MENU = "7" then
+	elseif M_INTERVIEWER_MENU = "7" then
 		StartServer();
 		reenter;
 
-	elseif INTERVIEWER_MENU = "8" then
+	elseif M_INTERVIEWER_MENU = "8" then
 		SwitchAssignments();
 
-	elseif INTERVIEWER_MENU = "9" then
+	elseif M_INTERVIEWER_MENU = "9" then
 		SwitchUsers();
 
 	else
-		loadcase(PSC_HOUSEHOLD_DICT, INTERVIEWER_MENU);
+		loadcase(PSC_HOUSEHOLD_DICT, M_INTERVIEWER_MENU);
 		LaunchHouseholdProgram();
 
 	endif;
 
 
-PROC VIEW_ALL_HOUSEHOLDS
+PROC M_VIEW_ALL_HOUSEHOLDS
 
 onfocus
 
@@ -1014,29 +1014,29 @@ onfocus
 
 	endfor;
 
-	setvalueset(VIEW_ALL_HOUSEHOLDS, households_vs);
-	VIEW_ALL_HOUSEHOLDS = "";
+	setvalueset(M_VIEW_ALL_HOUSEHOLDS, households_vs);
+	M_VIEW_ALL_HOUSEHOLDS = "";
 
 postproc
 
-	if loadcase(PSC_HOUSEHOLD_DICT, VIEW_ALL_HOUSEHOLDS) then
+	if loadcase(PSC_HOUSEHOLD_DICT, M_VIEW_ALL_HOUSEHOLDS) then
 		LaunchHouseholdProgram();
 	endif;
 
 
-PROC MANAGE_STAFF
+PROC M_MANAGE_STAFF
 
 onfocus
 
 	ValueSet string staff_vs;
 
 	// First display the supervisor
-	staff_vs.add(LookupStaffName(LOGIN) + " (Supervisor)", LOGIN);
+	staff_vs.add(LookupStaffName(M_LOGIN) + " (Supervisor)", M_LOGIN);
 
 	// and then the interviewers
 	forcase PSC_STAFF_DICT do
 
-		if key(PSC_STAFF_DICT) <> LOGIN then
+		if key(PSC_STAFF_DICT) <> M_LOGIN then
 			staff_vs.add(S_STAFF_NAME, key(PSC_STAFF_DICT));
 		endif;
 
@@ -1044,38 +1044,38 @@ onfocus
 
 	staff_vs.add("Add new interviewer", "1");
 
-	setvalueset(MANAGE_STAFF, staff_vs);
+	setvalueset(M_MANAGE_STAFF, staff_vs);
 
-	MANAGE_STAFF = "";
+	M_MANAGE_STAFF = "";
 
 postproc
 
-	if MANAGE_STAFF = "1" then
-		skip to MANAGE_STAFF_NAME;
+	if M_MANAGE_STAFF = "1" then
+		skip to M_MANAGE_STAFF_NAME;
 
-	elseif loadcase(PSC_STAFF_DICT, MANAGE_STAFF) then
-		skip to MANAGE_STAFF_MEMBER;
+	elseif loadcase(PSC_STAFF_DICT, M_MANAGE_STAFF) then
+		skip to M_MANAGE_STAFF_MEMBER;
 
 	endif;
 
 
-PROC MANAGE_STAFF_MEMBER
+PROC M_MANAGE_STAFF_MEMBER
 
 onfocus
 
-	capi_manage_staff_name = LookupStaffName(MANAGE_STAFF);
+	capi_manage_staff_name = LookupStaffName(M_MANAGE_STAFF);
 
-	MANAGE_STAFF_MEMBER = notappl;
+	M_MANAGE_STAFF_MEMBER = notappl;
 
 postproc
 
-	if MANAGE_STAFF_MEMBER = 1 then
+	if M_MANAGE_STAFF_MEMBER = 1 then
 
 		// Prefill in the staff member's name
-		MANAGE_STAFF_NAME = S_STAFF_NAME;
-		skip to MANAGE_STAFF_NAME;
+		M_MANAGE_STAFF_NAME = S_STAFF_NAME;
+		skip to M_MANAGE_STAFF_NAME;
 
-	elseif MANAGE_STAFF_MEMBER = 2 then
+	elseif M_MANAGE_STAFF_MEMBER = 2 then
 
 		if S_PIN_CODE = notappl then
 			errmsg("Staff PIN code of %s is not yet set", capi_manage_staff_name);
@@ -1087,14 +1087,14 @@ postproc
 
 		reenter;
 
-	elseif MANAGE_STAFF_MEMBER = 3 then
+	elseif M_MANAGE_STAFF_MEMBER = 3 then
 
 		S_PIN_CODE = notappl;
 		writecase(PSC_STAFF_DICT);
 
 		errmsg("Staff PIN code of %s has been reset", capi_manage_staff_name);
 
-		if S_STAFF_CODE = LOGIN then
+		if S_STAFF_CODE = M_LOGIN then
 			// Supervisor changed their code, log out so that they can log in and reset it
 			SwitchUsers();
 
@@ -1106,29 +1106,29 @@ postproc
 	endif;
 
 
-PROC MANAGE_STAFF_NAME
+PROC M_MANAGE_STAFF_NAME
 
 onfocus
 
-	if MANAGE_STAFF = "1" then
-		MANAGE_STAFF_NAME = "";
+	if M_MANAGE_STAFF = "1" then
+		M_MANAGE_STAFF_NAME = "";
 	endif;
 
 postproc
 
-	if MANAGE_STAFF_NAME = "" then
+	if M_MANAGE_STAFF_NAME = "" then
 		errmsg("You cannot enter a blank name.");
 		reenter;
 
-	elseif MANAGE_STAFF = "1" then
-		VerifyStaffNameIsUnique(MANAGE_STAFF_NAME, "");
+	elseif M_MANAGE_STAFF = "1" then
+		VerifyStaffNameIsUnique(M_MANAGE_STAFF_NAME, "");
 
 		// Add a new interviewer
 		clear(PSC_STAFF_DICT);
 
 		S_STAFF_CODE = uuid(); // Create unique identifier for interviewer
-		S_STAFF_NAME = MANAGE_STAFF_NAME;
-		S_SUPERVISOR_STAFF_CODE = LOGIN;
+		S_STAFF_NAME = M_MANAGE_STAFF_NAME;
+		S_SUPERVISOR_STAFF_CODE = M_LOGIN;
 		S_TIME_CREATED_ACCOUNT = timestamp();
 		setcaselabel(PSC_STAFF_DICT, strip(S_STAFF_NAME));
 
@@ -1136,19 +1136,19 @@ postproc
 
 		errmsg("%s successfully added as an interviewer", LookupStaffName(S_STAFF_CODE));
 
-		reenter MANAGE_STAFF;
+		reenter M_MANAGE_STAFF;
 
 	else
 		// Modify the name
 		string oldName = LookupStaffName(S_STAFF_CODE);
 
-		if MANAGE_STAFF_NAME = oldName then
+		if M_MANAGE_STAFF_NAME = oldName then
 			errmsg("The name is the same as before and has not been changed");
 
 		else
-			VerifyStaffNameIsUnique(MANAGE_STAFF_NAME, MANAGE_STAFF);
+			VerifyStaffNameIsUnique(M_MANAGE_STAFF_NAME, M_MANAGE_STAFF);
 
-			S_STAFF_NAME = MANAGE_STAFF_NAME;
+			S_STAFF_NAME = M_MANAGE_STAFF_NAME;
 			setcaselabel(PSC_STAFF_DICT, strip(S_STAFF_NAME));
 			writecase(PSC_STAFF_DICT);
 
@@ -1156,49 +1156,49 @@ postproc
 
 		endif;
 
-		reenter MANAGE_STAFF_MEMBER;
+		reenter M_MANAGE_STAFF_MEMBER;
 
 	endif;
 
 
-PROC INTERVIEWER_CODE
+PROC M_INTERVIEWER_CODE
 
 onfocus
 
 	ValueSet string interviewer_code_vs;
 
-	forcase PSC_STAFF_DICT where LOGIN <> S_STAFF_CODE do
+	forcase PSC_STAFF_DICT where M_LOGIN <> S_STAFF_CODE do
 		// Not supervisor
 		interviewer_code_vs.add(S_STAFF_NAME, key(PSC_STAFF_DICT));
 	endfor;
 
 	if interviewer_code_vs.length() = 0 then
 		errmsg("You must add interviewers before you can make any assignments");
-		reenter SUPERVISOR_MENU;
+		reenter M_SUPERVISOR_MENU;
 	endif;
 
-	setvalueset(INTERVIEWER_CODE, interviewer_code_vs);
+	setvalueset(M_INTERVIEWER_CODE, interviewer_code_vs);
 
-	INTERVIEWER_CODE = "";
+	M_INTERVIEWER_CODE = "";
 
 postproc
 
-	loadcase(PSC_STAFF_DICT, INTERVIEWER_CODE);
+	loadcase(PSC_STAFF_DICT, M_INTERVIEWER_CODE);
 
-	capi_manage_staff_name = LookupStaffName(INTERVIEWER_CODE);
+	capi_manage_staff_name = LookupStaffName(M_INTERVIEWER_CODE);
 
 	// Check if the interviewer already has an assignment
 	numeric numberAssignmentsForInterviewer = countcases(PSC_ASSIGNMENTS_DICT
-		where A_STAFF_CODE = INTERVIEWER_CODE and A_ROLE = 1);
+		where A_STAFF_CODE = M_INTERVIEWER_CODE and A_ROLE = 1);
 
 	if numberAssignmentsForInterviewer > 0 then
 		errmsg("%s already has %d assignment. Are you sure you want to add another?",
-			LookupStaffName(INTERVIEWER_CODE), numberAssignmentsForInterviewer)
-			select("Yes", continue, "No", INTERVIEWER_CODE);
+			LookupStaffName(M_INTERVIEWER_CODE), numberAssignmentsForInterviewer)
+			select("Yes", continue, "No", M_INTERVIEWER_CODE);
 	endif;
 
 
-PROC INTERVIEWER_EA
+PROC M_INTERVIEWER_EA
 
 onfocus
 
@@ -1206,7 +1206,7 @@ onfocus
 
 	// Display all enumerations areas that are within the current province and district
 	forcase PSC_GEOCODES_DICT where G_AREA_LEVEL = 3 and
-		G_PROVINCE = CURRENT_PROVINCE and G_DISTRICT = CURRENT_DISTRICT do
+		G_PROVINCE = M_CURRENT_PROVINCE and G_DISTRICT = M_CURRENT_DISTRICT do
 
 		string eaAssignedNames;
 
@@ -1235,44 +1235,44 @@ onfocus
 
 	endfor;
 
-	setvalueset(INTERVIEWER_EA, interviewer_ea_vs);
+	setvalueset(M_INTERVIEWER_EA, interviewer_ea_vs);
 
 	// Clear EA assignment
-	INTERVIEWER_EA = notappl;
+	M_INTERVIEWER_EA = notappl;
 
 postproc
 
 	numeric numberExistingAssignments = 0;
 
 	forcase PSC_ASSIGNMENTS_DICT where
-		A_PROVINCE = CURRENT_PROVINCE and
-		A_DISTRICT = CURRENT_DISTRICT and
-		A_EA = INTERVIEWER_EA and
+		A_PROVINCE = M_CURRENT_PROVINCE and
+		A_DISTRICT = M_CURRENT_DISTRICT and
+		A_EA = M_INTERVIEWER_EA and
 		A_ROLE = 1 do
 
 		inc(numberExistingAssignments);
 
-		if A_STAFF_CODE = INTERVIEWER_CODE then
-			errmsg("%s has already been assigned to %s", LookupEAName(INTERVIEWER_EA), LookupStaffName(INTERVIEWER_CODE));
+		if A_STAFF_CODE = M_INTERVIEWER_CODE then
+			errmsg("%s has already been assigned to %s", LookupEAName(M_INTERVIEWER_EA), LookupStaffName(M_INTERVIEWER_CODE));
 			reenter;
 		endif;
 
 	endfor;
 
 	if numberExistingAssignments >= 1 then
-		errmsg("Are you sure you want to assign %s to more than one interviewer?", LookupEAName(INTERVIEWER_EA))
-		select("Yes", continue, "No", INTERVIEWER_EA);
+		errmsg("Are you sure you want to assign %s to more than one interviewer?", LookupEAName(M_INTERVIEWER_EA))
+		select("Yes", continue, "No", M_INTERVIEWER_EA);
 	endif;
 
-	errmsg("Are you sure you want to assign %s to %s?", LookupEAName(INTERVIEWER_EA), LookupStaffName(INTERVIEWER_CODE))
-	select("Yes", continue, "No", INTERVIEWER_EA);
+	errmsg("Are you sure you want to assign %s to %s?", LookupEAName(M_INTERVIEWER_EA), LookupStaffName(M_INTERVIEWER_CODE))
+	select("Yes", continue, "No", M_INTERVIEWER_EA);
 
 	clear(PSC_ASSIGNMENTS_DICT);
 
-	A_PROVINCE = CURRENT_PROVINCE;
-	A_DISTRICT = CURRENT_DISTRICT;
-	A_EA = INTERVIEWER_EA;
-	A_STAFF_CODE = INTERVIEWER_CODE;
+	A_PROVINCE = M_CURRENT_PROVINCE;
+	A_DISTRICT = M_CURRENT_DISTRICT;
+	A_EA = M_INTERVIEWER_EA;
+	A_STAFF_CODE = M_INTERVIEWER_CODE;
 	A_ROLE = 1;
 	A_SEGMENT = segment_alphabet[( numberExistingAssignments + 1 ):1];
 
@@ -1280,6 +1280,6 @@ postproc
 
 	writecase(PSC_ASSIGNMENTS_DICT);
 
-	errmsg("%s successfully assigned to %s", LookupEAName(A_EA), LookupStaffName(INTERVIEWER_CODE));
+	errmsg("%s successfully assigned to %s", LookupEAName(A_EA), LookupStaffName(M_INTERVIEWER_CODE));
 
-	reenter SUPERVISOR_MENU;
+	reenter M_SUPERVISOR_MENU;
