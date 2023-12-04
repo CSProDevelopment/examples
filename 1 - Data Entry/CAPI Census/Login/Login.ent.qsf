@@ -26,5 +26,55 @@ styles:
     css: |
       font-family: Arial;font-size: 18px;
 questions:
-  []
+  - name: PSC_LOGIN_DICT.L_LOGIN
+    conditions:
+      - questionText:
+          EN: |
+            <p>Welcome to Popstan Census data collection application (version ~~capi_publish_date~~).</p>
+  - name: PSC_LOGIN_DICT.L_PIN_CODE_CONFIRMATION
+    conditions:
+      - logic: S_PIN_CODE <> notappl
+        questionText:
+          EN: |
+            <p>You are logged in as <b>~~capi_staff_name~~</b>.</p>
+            <p>Please enter your pin code.</p><p><font color="#0000ff">For demonstration purposes use pin code 1234.</font></p>
+      - logic: S_PIN_CODE = notappl
+        questionText:
+          EN: |
+            <p>You are logged in as <b>~~capi_staff_name~~</b>.</p>
+            <p>Please create your pin code.</p>
+            <p>A pin code is a four digit number that enables you to log into the Popstan Census data collection application. It is recommended to choose a number which you can easily remember and the code should be kept secret.</p>
+  - name: PSC_LOGIN_DICT.L_SUPERVISOR_ACCESS_PASSWORD
+    conditions:
+      - questionText:
+          EN: |
+            <p>Please enter supervisor password you received from headquarters.</p>
+            <p><span class="instruction" style="font-size: 16px;">For demonstration purposes use password 1234.</span></p>
+  - name: PSC_LOGIN_DICT.L_SUPERVISOR_NAME
+    conditions:
+      - questionText:
+          EN: |
+            <p>Please enter your full name.</p>
+  - name: PSC_LOGIN_DICT.L_SUPERVISOR_PIN_CODE
+    conditions:
+      - questionText:
+          EN: |
+            <p>Please create your pin code.</p>
+            <p>A pin code is a four digit number that enables you to log into the Popstan Census data collection application. It is recommended to choose a number which you can easily remember and the code should be kept secret.</p>
+  - name: PSC_LOGIN_DICT.L_ASSIGNMENT_SELECTION
+    conditions:
+      - questionText:
+          EN: |
+            <p>You are logged in as ~~capi_staff_role~~ <span style="font-weight:bold;">~~capi_staff_name~~</span>.</p>
+            <p>Select the area you want to work in now.</p>
+  - name: PSC_LOGIN_DICT.L_SUPERVISOR_PROVINCE
+    conditions:
+      - questionText:
+          EN: |
+            <p>Select province of your assignment.</p>
+  - name: PSC_LOGIN_DICT.L_SUPERVISOR_DISTRICT
+    conditions:
+      - questionText:
+          EN: |
+            <p>Select district of your assignment in <span style="font-weight:bold;">~~capi_province_name~~</span> province.</p>
 ...

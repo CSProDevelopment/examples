@@ -10,6 +10,14 @@
       "type": "input", 
       "path": "../Dictionaries/Login.dcf", 
       "parent": "Login.fmf"
+    }, 
+    {
+      "type": "external", 
+      "path": "../Dictionaries/Staff.dcf"
+    }, 
+    {
+      "type": "external", 
+      "path": "../Dictionaries/Geocodes.dcf"
     }
   ], 
   "forms": [

@@ -10,3 +10,7 @@ FullScreen=Yes
 [Files]
 Application=.\Login.ent
 InputData=|type=None
+
+[ExternalFiles]
+PSC_GEOCODES_DICT=..\Data\Geocodes.csdb
+PSC_STAFF_DICT=..\Data\Staff.csdb
