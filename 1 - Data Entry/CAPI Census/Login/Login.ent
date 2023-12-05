@@ -13,12 +13,16 @@
     }, 
     {
       "type": "external", 
-      "path": "../Dictionaries/Staff.dcf"
+      "path": "../Dictionaries/Assignments.dcf"
     }, 
     {
       "type": "external", 
       "path": "../Dictionaries/Geocodes.dcf"
-    }
+    }, 
+    {
+      "type": "external", 
+      "path": "../Dictionaries/Staff.dcf"
+    } 
   ], 
   "forms": [
     "Login.fmf"
@@ -30,6 +34,10 @@
     {
       "type": "main", 
       "path": "Login.ent.apc"
+    }, 
+    {
+      "type": "external", 
+      "path": "../External-Logic/Lookups.apc"
     }
   ], 
   "messages": [
@@ -41,7 +49,7 @@
       "symbols": false
     }, 
     "actionInvoker": {
-      "accessFromWebView": "promptIfNoValidAccessToken", 
+      "accessFromExternalCaller": "promptIfNoValidAccessToken", 
       "convertResultsForLogic": true
     }
   }, 

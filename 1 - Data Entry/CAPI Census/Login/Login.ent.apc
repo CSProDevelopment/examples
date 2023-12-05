@@ -8,6 +8,9 @@ PROC GLOBAL
 
 
 numeric supervisor_password = 1234;
+string login_interview_setting_key = "PSC Interview Login";
+string login_supervisor_setting_key = "PSC Supervisor Login";
+string assignment_setting_key = "SVC Assignment";
 List string months = "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec";
 
 
@@ -19,77 +22,6 @@ string capi_publish_date;
 string capi_staff_name;	// Name of the person who logged into the system
 string capi_staff_role;
 string capi_province_name;
-
-
-// ------------------
-// ------------------ Functions to simplify looking up geographic names
-// ------------------
-
-
-function string LookupGeographyName(province, district)
-
-	G_PROVINCE = province;
-	G_DISTRICT = district;
-	G_EA = notappl;
-
-	if loadcase(PSC_GEOCODES_DICT, G_PROVINCE, G_DISTRICT, G_EA) then
-		LookupGeographyName = strip(G_AREA_NAME);
-
-	else
-		LookupGeographyName = "<Invalid Geocode>";
-
-	endif;
-
-end;
-
-
-function string LookupProvinceName(province)
-
-	LookupProvinceName = LookupGeographyName(province, notappl);
-
-end;
-
-
-function string LookupDistrictName(province, district)
-
-	LookupDistrictName = LookupGeographyName(province, district);
-
-end;
-
-
-function string LookupEAName(ea)
-
-	LookupEAName = maketext("EA%03d", ea);
-
-end;
-
-
-// todo
-// function string LookupDetailedHouseholdName()
-
-	// string detailedName = maketext("%v%v", HH_SEGMENT, HH_NUMBER);
-
-	// if count(HH_NAME) >= 1 and HH_NAME(1) <> "" then
-		// detailedName = detailedName + maketext(" - %v", strip(HH_NAME(1)));
-	// endif;
-
-	// LookupDetailedHouseholdName = detailedName;
-
-// end;
-
-
-function string LookupStaffName(string code)
-
-	// If staff member's information is already loaded, don't load again
-	if S_STAFF_CODE = code or loadcase(PSC_STAFF_DICT, code) then
-		LookupStaffName = strip(S_STAFF_NAME);
-
-	else
-		LookupStaffName = "<Invalid Staff>";
-
-	endif;
-
-end;
 
 
 // ------------------
@@ -268,7 +200,100 @@ postproc
 	capi_staff_name = LookupStaffName(L_LOGIN);
 PROC L_ASSIGNMENT_SELECTION
 
-// todo
+onfocus
+
+	numeric numberInterviewerAssignments = 0;
+
+	ValueSet string assignments_vs;
+
+	forcase PSC_ASSIGNMENTS_DICT where A_STAFF_CODE = L_LOGIN do
+
+		string label = maketext("%s (%v) / %s (%v)",
+			LookupProvinceName(A_PROVINCE), A_PROVINCE,
+			LookupDistrictName(A_PROVINCE, A_DISTRICT), A_DISTRICT);
+
+		if A_ROLE = 2 then
+			label = maketext("Supervise: %s", label);
+
+		else
+			label = maketext("Interview: %s / %s", label, LookupEAName(A_EA));
+
+		endif;
+
+		assignments_vs.add(label, key(PSC_ASSIGNMENTS_DICT));
+
+		if A_ROLE = 1 then
+			inc(numberInterviewerAssignments);
+		endif;
+
+	endfor;
+
+	if S_SUPERVISOR_STAFF_CODE = "" then
+		assignments_vs.add("Select census area to supervise", "1");
+		capi_staff_role = "Supervisor";
+
+		assignments_vs.add("Update programs from headquarters", "2");
+
+	else
+		capi_staff_role = "Interviewer";
+
+		if numberInterviewerAssignments = 0 then
+			errmsg("Your supervisor has not yet assigned you any EAs. Transfer data with the supervisor once they have made an assignment");
+		endif;
+
+		assignments_vs.add("Update programs from supervisor", "3");
+
+	endif;
+
+	assignments_vs.add("Switch users", "4");
+
+	setvalueset(L_ASSIGNMENT_SELECTION, assignments_vs);
+
+	L_ASSIGNMENT_SELECTION = "";
+
+postproc
+
+	if L_ASSIGNMENT_SELECTION = "1" then
+
+		// Select census area to supervise
+		if countcases(PSC_GEOCODES_DICT) = 0 then
+			errmsg("You do not have a valid list of geocodes. Transfer data with headquarters to get this list.");
+			reenter;
+		endif;
+
+		skip to L_SUPERVISOR_PROVINCE;
+
+	elseif L_ASSIGNMENT_SELECTION = "2" then
+		//todo
+		//SyncWithHQ(app_sync);
+		reenter;
+
+	elseif L_ASSIGNMENT_SELECTION = "3" then
+		//todo
+		//StartServer();
+		reenter;
+
+	elseif L_ASSIGNMENT_SELECTION = "4" then
+		//todo
+		//SwitchUsers();
+
+	elseif loadcase(PSC_ASSIGNMENTS_DICT, L_ASSIGNMENT_SELECTION) then
+
+		// Save the assignment for the next time the menu application is loaded
+		if A_ROLE = 1 then
+			savesetting(login_interview_setting_key, S_STAFF_CODE);
+			savesetting(login_supervisor_setting_key, "");
+
+		else
+			savesetting(login_interview_setting_key, "");
+			savesetting(login_supervisor_setting_key, S_STAFF_CODE);
+
+		endif;
+		
+		savesetting(assignment_setting_key, L_ASSIGNMENT_SELECTION);
+		skip to LOGIN_COMPLETE_FORM;
+
+	endif;
 
 
 PROC L_SUPERVISOR_PROVINCE
@@ -287,7 +312,47 @@ preproc
 	L_SUPERVISOR_PROVINCE = notappl;
 PROC L_SUPERVISOR_DISTRICT
 
-// todo
+preproc
+
+	capi_province_name = LookupProvinceName(L_SUPERVISOR_PROVINCE);
+
+	ValueSet district_vs;
+
+	forcase PSC_GEOCODES_DICT where G_AREA_LEVEL = 2 and G_PROVINCE = L_SUPERVISOR_PROVINCE do
+		// Prepare value sets for districts that are within the previously selected province
+		district_vs.add(G_AREA_NAME, G_DISTRICT);
+	endfor;
+
+	setvalueset(L_SUPERVISOR_DISTRICT, district_vs);
+
+	L_SUPERVISOR_DISTRICT = notappl;
+
+postproc
+
+	if countcases(PSC_ASSIGNMENTS_DICT where
+		A_PROVINCE = L_SUPERVISOR_PROVINCE and
+		A_DISTRICT = L_SUPERVISOR_DISTRICT and
+		A_STAFF_CODE = L_LOGIN and
+		A_ROLE = 2) <> 0 then
+
+		errmsg("You are already assigned to this district.");
+		reenter;
+
+	endif;
+
+	// Update the assignments file
+	clear(PSC_ASSIGNMENTS_DICT);
+
+	A_PROVINCE = L_SUPERVISOR_PROVINCE;
+	A_DISTRICT = L_SUPERVISOR_DISTRICT;
+	A_STAFF_CODE = L_LOGIN;
+	A_ROLE = 2;
+	A_DATE_ASSIGNED = timestamp();
+
+	writecase(PSC_ASSIGNMENTS_DICT);
+
+	// Show the newly saved assignment along with any other assignments the user might have
+	reenter L_ASSIGNMENT_SELECTION;
 
 
 PROC L_LOGIN_COMPLETE

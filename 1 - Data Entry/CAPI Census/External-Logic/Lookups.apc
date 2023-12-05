@@ -1,0 +1,68 @@
+﻿// ------------------
+// ------------------ Functions to simplify looking up geographic names
+// ------------------
+
+
+function string LookupGeographyName(province, district)
+
+	G_PROVINCE = province;
+	G_DISTRICT = district;
+	G_EA = notappl;
+
+	if loadcase(PSC_GEOCODES_DICT, G_PROVINCE, G_DISTRICT, G_EA) then
+		LookupGeographyName = strip(G_AREA_NAME);
+
+	else
+		LookupGeographyName = "<Invalid Geocode>";
+
+	endif;
+
+end;
+
+
+function string LookupProvinceName(province)
+
+	LookupProvinceName = LookupGeographyName(province, notappl);
+
+end;
+
+
+function string LookupDistrictName(province, district)
+
+	LookupDistrictName = LookupGeographyName(province, district);
+
+end;
+
+
+function string LookupEAName(ea)
+
+	LookupEAName = maketext("EA%03d", ea);
+
+end;
+
+
+// function string LookupDetailedHouseholdName()
+
+	// string detailedName = maketext("%v%v", HH_SEGMENT, HH_NUMBER);
+
+	// if count(HH_NAME) >= 1 and HH_NAME(1) <> "" then
+		// detailedName = detailedName + maketext(" - %v", strip(HH_NAME(1)));
+	// endif;
+
+	// LookupDetailedHouseholdName = detailedName;
+
+// end;
+
+
+function string LookupStaffName(string code)
+
+	// If staff member's information is already loaded, don't load again
+	if S_STAFF_CODE = code or loadcase(PSC_STAFF_DICT, code) then
+		LookupStaffName = strip(S_STAFF_NAME);
+
+	else
+		LookupStaffName = "<Invalid Staff>";
+
+	endif;
+
+end;
