@@ -8,6 +8,8 @@
 
 numeric supervisor_password = 1234;
 string login_setting_key = "PSC Login";
+string login_interview_setting_key = "PSC Interview Login";
+string login_supervisor_setting_key = "PSC Supervisor Login";
 string assignment_setting_key = "PSC Assignment";
 string segment_alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 List string months = "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec";
@@ -60,44 +62,6 @@ end;
 // ------------------
 
 
-function string LookupGeographyName(province, district)
-
-	G_PROVINCE = province;
-	G_DISTRICT = district;
-	G_EA = notappl;
-
-	if loadcase(PSC_GEOCODES_DICT, G_PROVINCE, G_DISTRICT, G_EA) then
-		LookupGeographyName = strip(G_AREA_NAME);
-
-	else
-		LookupGeographyName = "<Invalid Geocode>";
-
-	endif;
-
-end;
-
-
-function string LookupProvinceName(province)
-
-	LookupProvinceName = LookupGeographyName(province, notappl);
-
-end;
-
-
-function string LookupDistrictName(province, district)
-
-	LookupDistrictName = LookupGeographyName(province, district);
-
-end;
-
-
-function string LookupEAName(ea)
-
-	LookupEAName = maketext("EA%03d", ea);
-
-end;
-
-
 function string LookupDetailedHouseholdName()
 
 	string detailedName = maketext("%v%v", HH_SEGMENT, HH_NUMBER);
@@ -107,20 +71,6 @@ function string LookupDetailedHouseholdName()
 	endif;
 
 	LookupDetailedHouseholdName = detailedName;
-
-end;
-
-
-function string LookupStaffName(string code)
-
-	// If staff member's information is already loaded, don't load again
-	if S_STAFF_CODE = code or loadcase(PSC_STAFF_DICT, code) then
-		LookupStaffName = strip(S_STAFF_NAME);
-
-	else
-		LookupStaffName = "<Invalid Staff>";
-
-	endif;
 
 end;
 
@@ -443,13 +393,11 @@ end;
 // ------------------
 
 
-function SwitchUsers()
-
-	// Clear the saved login and assignment
-	savesetting(login_setting_key, "");
-	savesetting(assignment_setting_key, "");
-	reenter LOGIN_FORM;
-
+function Logout()
+	savesetting(login_interview_setting_key,"");
+	savesetting(login_supervisor_setting_key,"");
+	savesetting(assignment_setting_key,"");
+	stop(1);
 end;
 
 
@@ -772,7 +720,7 @@ postproc
 		reenter;
 
 	elseif M_ASSIGNMENT_SELECTION = "4" then
-		SwitchUsers();
+		Logout();
 
 	elseif loadcase(PSC_ASSIGNMENTS_DICT, M_ASSIGNMENT_SELECTION) then
 
@@ -900,11 +848,8 @@ postproc
 		SyncWithHQ(full_sync);
 		reenter;
 
-	elseif M_SUPERVISOR_MENU = 8 then
-		SwitchAssignments();
-
 	elseif M_SUPERVISOR_MENU = 9 then
-		SwitchUsers();
+		Logout();
 
 	endif;
 
@@ -948,8 +893,7 @@ onfocus
 
 	interviewer_menu_vs.add(maketext("View all %d households", totalHouseholds), "2");
 	interviewer_menu_vs.add("Transfer data with supervisor", "7");
-	interviewer_menu_vs.add("Change my assignment", "8");
-	interviewer_menu_vs.add("Switch users", "9");
+	interviewer_menu_vs.add("Logout", "9");
 
 	setvalueset(M_INTERVIEWER_MENU, interviewer_menu_vs);
 
@@ -985,11 +929,8 @@ postproc
 		StartServer();
 		reenter;
 
-	elseif M_INTERVIEWER_MENU = "8" then
-		SwitchAssignments();
-
 	elseif M_INTERVIEWER_MENU = "9" then
-		SwitchUsers();
+		Logout();
 
 	else
 		loadcase(PSC_HOUSEHOLD_DICT, M_INTERVIEWER_MENU);
@@ -1096,7 +1037,7 @@ postproc
 
 		if S_STAFF_CODE = M_LOGIN then
 			// Supervisor changed their code, log out so that they can log in and reset it
-			SwitchUsers();
+			Logout();
 
 		else
 			reenter;

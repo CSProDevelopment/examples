@@ -22,7 +22,7 @@
     {
       "type": "external", 
       "path": "../Dictionaries/Staff.dcf"
-    } 
+    }
   ], 
   "forms": [
     "Login.fmf"

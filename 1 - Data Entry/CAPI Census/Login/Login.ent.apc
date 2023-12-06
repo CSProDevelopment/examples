@@ -10,7 +10,7 @@ PROC GLOBAL
 numeric supervisor_password = 1234;
 string login_interview_setting_key = "PSC Interview Login";
 string login_supervisor_setting_key = "PSC Supervisor Login";
-string assignment_setting_key = "SVC Assignment";
+string assignment_setting_key = "PSC Assignment";
 List string months = "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec";
 
 
@@ -59,6 +59,32 @@ function ValidatePINCode(code)
 		reenter;
 	endif;
 
+end;
+
+
+function LaunchMenuApp()
+
+	// Load the default settings from the existing menu PFF
+	Pff menu_pff;
+	menu_pff.load("../menu/menu.pff");
+
+	// Must set Key to launch Menu. Default Key to case 1.
+	menu_pff.setProperty("Key", maketext("%d", 1));
+
+	// Run the household application
+	menu_pff.exec();
+
+end;
+
+
+function Logout()
+
+	// Clear the saved login and assignment
+	savesetting(login_interview_setting_key, "");
+	savesetting(login_supervisor_setting_key, "");
+	savesetting(assignment_setting_key, "");
+	reenter LOGIN_FORM;
+	
 end;
 
 
@@ -140,9 +166,6 @@ postproc
 
 	endif;
 
-	// todo
-	//savesetting(login_setting_key, S_STAFF_CODE);
-
 	setproperty(L_PIN_CODE_CONFIRMATION, "Protected", "Yes");
 
 	skip to ASSIGNMENT_SELECTION_FORM;
@@ -194,8 +217,6 @@ postproc
 
 	// Set the login to the supervisor
 	L_LOGIN = S_STAFF_CODE;
-	// todo
-	//savesetting(login_setting_key, L_LOGIN);
 
 	capi_staff_name = LookupStaffName(L_LOGIN);
 PROC L_ASSIGNMENT_SELECTION
@@ -274,8 +295,8 @@ postproc
 		reenter;
 
 	elseif L_ASSIGNMENT_SELECTION = "4" then
-		//todo
-		//SwitchUsers();
+		Logout();
+		// todo - let's hook up menu, so that the "login loop" works
 
 	elseif loadcase(PSC_ASSIGNMENTS_DICT, L_ASSIGNMENT_SELECTION) then
 
@@ -359,5 +380,4 @@ PROC L_LOGIN_COMPLETE
 
 preproc
 	
-	// todo
-	//LaunchMenuApp();
+	LaunchMenuApp();

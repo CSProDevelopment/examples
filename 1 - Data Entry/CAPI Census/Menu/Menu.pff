@@ -1,7 +1,7 @@
 ﻿[Run Information]
 Version=CSPro 8.0
 AppType=Entry
-Description=Popstan Census
+ShowInApplicationListing=Never
 
 [DataEntryInit]
 StartMode=Add
@@ -18,7 +18,5 @@ PSC_GEOCODES_DICT=..\Data\Geocodes.csdb
 PSC_HOUSEHOLD_DICT=..\Data\Household.csdb
 PSC_STAFF_DICT=..\Data\Staff.csdb
 
-[UserFiles]
-PFFFILE=
-REPORTFILE=
-REPORT_FILE=
+[Parameters]
+OnExit=..\Login\Login.pff

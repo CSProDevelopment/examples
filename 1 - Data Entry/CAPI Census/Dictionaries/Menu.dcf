@@ -10,6 +10,7 @@
     "cachedPasswordMinutes": 0, 
     "settings": "3612c11af3d8f375ae4f943a823c79e7f85c568fee4ac0745da8947d0a0bf2ec"
   }, 
+  "readOptimization": true, 
   "recordType": {
     "start": 1, 
     "length": 1
@@ -130,11 +131,7 @@
                       "pairs": [ { "value": "5" } ]
                     }, 
                     {
-                      "labels": [ { "text": "Change my assignment" } ], 
-                      "pairs": [ { "value": "8" } ]
-                    }, 
-                    {
-                      "labels": [ { "text": "Switch users" } ], 
+                      "labels": [ { "text": "Logout" } ], 
                       "pairs": [ { "value": "9" } ]
                     }
                   ]

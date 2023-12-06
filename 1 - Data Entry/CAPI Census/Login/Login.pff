@@ -1,6 +1,7 @@
 ﻿[Run Information]
 Version=CSPro 8.0
 AppType=Entry
+Description=Popstan Census
 
 [DataEntryInit]
 StartMode=Add

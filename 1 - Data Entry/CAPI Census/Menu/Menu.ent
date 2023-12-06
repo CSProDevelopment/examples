@@ -42,6 +42,10 @@
     {
       "type": "main", 
       "path": "Menu.ent.apc"
+    }, 
+    {
+      "type": "external", 
+      "path": "../External-Logic/Lookups.apc"
     }
   ], 
   "messages": [
@@ -59,7 +63,7 @@
       "symbols": false
     }, 
     "actionInvoker": {
-      "accessFromWebView": "promptIfNoValidAccessToken", 
+      "accessFromExternalCaller": "promptIfNoValidAccessToken", 
       "convertResultsForLogic": true
     }
   }, 
