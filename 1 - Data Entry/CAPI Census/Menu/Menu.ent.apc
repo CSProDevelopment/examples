@@ -30,6 +30,75 @@ numeric capi_household_partial_count;
 
 
 // ------------------
+// ------------------ Function to log in and log out
+// ------------------
+
+
+function Logout()
+	savesetting(login_interview_setting_key,"");
+	savesetting(login_supervisor_setting_key,"");
+	savesetting(assignment_setting_key,"");
+	stop(1);
+end;
+
+
+function GetLoginCredentials()
+
+	// Is the staff member logged in (could be supervisor or interviewer)?
+	string saved_interviewer_staff_code = loadsetting(login_interview_setting_key);
+	string saved_supervisor_staff_code = loadsetting(login_supervisor_setting_key);
+	string saved_staff_code;
+	numeric isInterviewer;
+	if saved_interviewer_staff_code <> "" then
+		saved_staff_code = saved_interviewer_staff_code;
+		isInterviewer = true;
+	elseif saved_supervisor_staff_code <> "" then
+		saved_staff_code = saved_supervisor_staff_code;
+		isInterviewer = false;
+	else
+		errmsg("Error login credential for staff code is invalid.");
+		stop(1);
+	endif;	
+	
+	string saved_assignment_code = loadsetting(assignment_setting_key);
+	if saved_assignment_code = "" then
+		errmsg("Error login credential for assignment is invalid.");
+		stop(1);
+	endif;
+	
+	M_CURRENT_STAFF_CODE = saved_staff_code;
+	M_CURRENT_PROVINCE = tonumber(saved_assignment_code[1:2]);
+	M_CURRENT_DISTRICT = tonumber(saved_assignment_code[3:2]);
+	if isInterviewer then
+		M_CURRENT_EA = tonumber(saved_assignment_code[5:3]);
+	else
+		M_CURRENT_EA = notappl;
+	endif;
+	
+	// verify staff code
+	if not loadcase(PSC_STAFF_DICT, saved_staff_code) then
+		errmsg("Error could not load staff.");
+		stop(1);
+	endif;
+	
+	A_ROLE = 2;
+	if S_SUPERVISOR_STAFF_CODE <> "" then
+		// This staff member has a supervisor, so this staff member is an interviewer.
+		A_ROLE = 1;
+	endif;
+	
+	// verify staff is assigned this assignment
+	if not loadcase(PSC_ASSIGNMENTS_DICT, M_CURRENT_PROVINCE, M_CURRENT_DISTRICT, M_CURRENT_EA,
+		M_CURRENT_STAFF_CODE, A_ROLE) then
+		
+		errmsg("Error could not load assignment.");
+		stop(1);
+	endif;
+		
+end;
+
+
+// ------------------
 // ------------------ Function to override the back button on Android (and the stop button on Windows)
 // ------------------
 
@@ -389,15 +458,6 @@ end;
 // ------------------ Miscellaneous functions
 // ------------------
 
-
-function Logout()
-	savesetting(login_interview_setting_key,"");
-	savesetting(login_supervisor_setting_key,"");
-	savesetting(assignment_setting_key,"");
-	stop(1);
-end;
-
-
 // Check that no person, other than someone with code ignoreStaffCode, has the name in staffName
 function VerifyStaffNameIsUnique(string staffName, string ignoreStaffCode)
 
@@ -427,6 +487,29 @@ preproc
 
 	// For testing on Windows, make the value sets bigger
 	setfont(valuesets, "Calibri", 20);
+
+PROC M_VERIFY_CREDENTIALS
+
+onfocus
+
+	M_VERIFY_CREDENTIALS = 1;
+	protect(M_VERIFY_CREDENTIALS, true);
+	GetLoginCredentials();
+	
+	capi_staff_name = LookupStaffName(M_CURRENT_STAFF_CODE);
+	capi_province_name = LookupProvinceName(M_CURRENT_PROVINCE);
+	capi_district_name = LookupDistrictName(M_CURRENT_PROVINCE, M_CURRENT_DISTRICT);
+	capi_ea_name = LookupEAName(M_CURRENT_EA);
+
+	if A_ROLE = 1 then
+		skip to M_INTERVIEWER_MENU;
+	elseif A_ROLE = 2 then
+		skip to M_SUPERVISOR_MENU;
+	else
+		errmsg("Error invalid role in assignment.");
+		stop(1);
+	endif;
+
 
 PROC M_SUPERVISOR_MENU
 

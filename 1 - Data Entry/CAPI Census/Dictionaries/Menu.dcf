@@ -47,6 +47,25 @@
           }, 
           "items": [
             {
+              "name": "M_VERIFY_CREDENTIALS", 
+              "labels": [ { "text": "Verify Credentials" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "M_VERIFY_CREDENTIALS_VS1", 
+                  "labels": [ { "text": "Verify Credentials" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Continue" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
               "name": "M_SUPERVISOR_MENU", 
               "labels": [ { "text": "Supervisor Menu" } ], 
               "contentType": "numeric", 
@@ -161,6 +180,13 @@
               "labels": [ { "text": "Current District" } ], 
               "contentType": "numeric", 
               "length": 2, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "M_CURRENT_EA", 
+              "labels": [ { "text": "Current EA" } ], 
+              "contentType": "numeric", 
+              "length": 3, 
               "zeroFill": true
             }, 
             {

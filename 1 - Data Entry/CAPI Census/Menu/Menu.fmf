@@ -14,12 +14,13 @@ Name=FORM003
 Label=Main Menu Form
 QuestionTextHeight=125
 Level=1
-Size=913,207
+Size=816,196
 CapturePos=435,80
   
 Item=M_SUPERVISOR_MENU
 Item=M_INTERVIEWER_MENU
 Item=M_VIEW_ALL_HOUSEHOLDS
+Item=M_VERIFY_CREDENTIALS
   
 [EndForm]
   
@@ -62,41 +63,54 @@ Form=1
 Max=1
   
 [Field]
+Name=M_VERIFY_CREDENTIALS
+Position=201,27,216,47
+Item=M_VERIFY_CREDENTIALS,PSC_MENU_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=RadioButton
+Form=1
+  
+[Text]
+Position=21,30,134,46
+Text=Verify Credentials
+ 
+  
+[Field]
 Name=M_SUPERVISOR_MENU
-Position=199,20,228,40
+Position=201,59,230,79
 Item=M_SUPERVISOR_MENU,PSC_MENU_DICT
 FieldLabelType=DictionaryLabel
 DataCaptureType=DropDown
 Form=1
   
 [Text]
-Position=20,23,127,39
+Position=21,62,128,78
 Text=Supervisor Menu
  
   
 [Field]
 Name=M_INTERVIEWER_MENU
-Position=622,20,791,40
+Position=201,91,370,111
 Item=M_INTERVIEWER_MENU,PSC_MENU_DICT
 FieldLabelType=DictionaryLabel
 DataCaptureType=DropDown
 Form=1
   
 [Text]
-Position=440,23,551,39
+Position=21,94,132,110
 Text=Interviewer Menu
  
   
 [Field]
 Name=M_VIEW_ALL_HOUSEHOLDS
-Position=199,115,368,135
+Position=201,124,370,144
 Item=M_VIEW_ALL_HOUSEHOLDS,PSC_MENU_DICT
 FieldLabelType=DictionaryLabel
 DataCaptureType=DropDown
 Form=1
   
 [Text]
-Position=20,118,150,134
+Position=21,127,151,143
 Text=View All Households
  
 [EndGroup]
@@ -124,7 +138,7 @@ Text=Manage Staff
   
 [Field]
 Name=M_MANAGE_STAFF_MEMBER
-Position=200,57,215,77
+Position=200,52,215,72
 Item=M_MANAGE_STAFF_MEMBER,PSC_MENU_DICT
 HideInCaseTree=Yes
 FieldLabelType=DictionaryLabel
@@ -132,13 +146,13 @@ DataCaptureType=DropDown
 Form=2
   
 [Text]
-Position=20,60,160,76
+Position=20,55,160,71
 Text=Manage Staff Member
  
   
 [Field]
 Name=M_MANAGE_STAFF_NAME
-Position=200,93,901,113
+Position=200,84,901,104
 Item=M_MANAGE_STAFF_NAME,PSC_MENU_DICT
 HideInCaseTree=Yes
 UpperCase=Yes
@@ -147,7 +161,7 @@ DataCaptureType=TextBox
 Form=2
   
 [Text]
-Position=20,96,145,112
+Position=20,87,145,103
 Text=Manage Staff Name
  
 [EndGroup]
@@ -174,14 +188,14 @@ Text=Interviewer Code
   
 [Field]
 Name=M_INTERVIEWER_EA
-Position=203,66,246,86
+Position=203,54,246,74
 Item=M_INTERVIEWER_EA,PSC_MENU_DICT
 FieldLabelType=DictionaryLabel
 DataCaptureType=DropDown
 Form=3
   
 [Text]
-Position=20,71,113,87
+Position=20,59,113,75
 Text=Interviewer EA
  
 [EndGroup]
