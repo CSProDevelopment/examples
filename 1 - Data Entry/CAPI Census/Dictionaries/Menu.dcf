@@ -47,59 +47,6 @@
           }, 
           "items": [
             {
-              "name": "M_LOGIN", 
-              "labels": [ { "text": "Login" } ], 
-              "contentType": "alpha", 
-              "length": 36
-            }, 
-            {
-              "name": "M_PIN_CODE_CONFIRMATION", 
-              "labels": [ { "text": "PIN Code Confirmation" } ], 
-              "contentType": "numeric", 
-              "length": 4, 
-              "zeroFill": true
-            }, 
-            {
-              "name": "M_SUPERVISOR_ACCESS_PASSWORD", 
-              "labels": [ { "text": "Supervisor Access Password" } ], 
-              "contentType": "numeric", 
-              "length": 4, 
-              "zeroFill": true
-            }, 
-            {
-              "name": "M_SUPERVISOR_NAME", 
-              "labels": [ { "text": "Supervisor Name" } ], 
-              "contentType": "alpha", 
-              "length": 50
-            }, 
-            {
-              "name": "M_SUPERVISOR_PIN_CODE", 
-              "labels": [ { "text": "Supervisor PIN Code" } ], 
-              "contentType": "numeric", 
-              "length": 4, 
-              "zeroFill": true
-            }, 
-            {
-              "name": "M_ASSIGNMENT_SELECTION", 
-              "labels": [ { "text": "Assignment Selection" } ], 
-              "contentType": "alpha", 
-              "length": 44
-            }, 
-            {
-              "name": "M_SUPERVISOR_PROVINCE", 
-              "labels": [ { "text": "Supervisor Province" } ], 
-              "contentType": "numeric", 
-              "length": 2, 
-              "zeroFill": true
-            }, 
-            {
-              "name": "M_SUPERVISOR_DISTRICT", 
-              "labels": [ { "text": "Supervisor District" } ], 
-              "contentType": "numeric", 
-              "length": 2, 
-              "zeroFill": true
-            }, 
-            {
               "name": "M_SUPERVISOR_MENU", 
               "labels": [ { "text": "Supervisor Menu" } ], 
               "contentType": "numeric", 
@@ -215,6 +162,12 @@
               "contentType": "numeric", 
               "length": 2, 
               "zeroFill": true
+            }, 
+            {
+              "name": "M_CURRENT_STAFF_CODE", 
+              "labels": [ { "text": "Current Staff Code" } ], 
+              "contentType": "alpha", 
+              "length": 36
             }
           ]
         }

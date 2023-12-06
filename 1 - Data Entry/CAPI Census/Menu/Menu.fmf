@@ -10,47 +10,6 @@ Type=SystemControlled
 File=..\Dictionaries\Menu.dcf
   
 [Form]
-Name=FORM000
-Label=Login Form
-QuestionTextHeight=126
-Level=1
-Size=757,126
-CapturePos=317,74
-  
-Item=M_LOGIN
-Item=M_PIN_CODE_CONFIRMATION
-  
-[EndForm]
-  
-[Form]
-Name=FORM001
-Label=Supervisor Creation Form
-QuestionTextHeight=107
-Level=1
-Size=978,550
-CapturePos=337,118
-  
-Item=M_SUPERVISOR_ACCESS_PASSWORD
-Item=M_SUPERVISOR_NAME
-Item=M_SUPERVISOR_PIN_CODE
-  
-[EndForm]
-  
-[Form]
-Name=FORM002
-Label=Assignment Selection Form
-QuestionTextHeight=92
-Level=1
-Size=897,269
-CapturePos=292,74
-  
-Item=M_ASSIGNMENT_SELECTION
-Item=M_SUPERVISOR_PROVINCE
-Item=M_SUPERVISOR_DISTRICT
-  
-[EndForm]
-  
-[Form]
 Name=FORM003
 Label=Main Menu Form
 QuestionTextHeight=125
@@ -97,144 +56,9 @@ Label=Menu Program
   
 [Group]
 Required=Yes
-Name=LOGIN_FORM
-Label=Login Form
-Form=1
-Max=1
-  
-[Field]
-Name=M_LOGIN
-Position=218,20,723,40
-Item=M_LOGIN,PSC_MENU_DICT
-FieldLabelType=DictionaryLabel
-DataCaptureType=DropDown
-Form=1
-  
-[Text]
-Position=20,26,56,42
-Text=Login
- 
-  
-[Field]
-Name=M_PIN_CODE_CONFIRMATION
-Position=218,72,275,92
-Item=M_PIN_CODE_CONFIRMATION,PSC_MENU_DICT
-HideInCaseTree=Yes
-FieldLabelType=DictionaryLabel
-DataCaptureType=TextBox
-Form=1
-  
-[Text]
-Position=20,70,165,86
-Text=PIN Code Confirmation
- 
-[EndGroup]
-  
-[Group]
-Required=Yes
-Name=SUPERVISOR_CREATION_FORM
-Label=Supervisor Creation Form
-Form=2
-Max=1
-  
-[Field]
-Name=M_SUPERVISOR_ACCESS_PASSWORD
-Position=218,20,275,40
-Item=M_SUPERVISOR_ACCESS_PASSWORD,PSC_MENU_DICT
-HideInCaseTree=Yes
-FieldLabelType=DictionaryLabel
-DataCaptureType=TextBox
-Form=2
-  
-[Text]
-Position=20,23,200,39
-Text=Supervisor Access Password
-Form=2
- 
-  
-[Field]
-Name=M_SUPERVISOR_NAME
-Position=218,63,919,83
-Item=M_SUPERVISOR_NAME,PSC_MENU_DICT
-UpperCase=Yes
-FieldLabelType=DictionaryLabel
-DataCaptureType=TextBox
-Form=2
-  
-[Text]
-Position=20,66,129,82
-Text=Supervisor Name
-Form=2
- 
-  
-[Field]
-Name=M_SUPERVISOR_PIN_CODE
-Position=218,108,275,128
-Item=M_SUPERVISOR_PIN_CODE,PSC_MENU_DICT
-HideInCaseTree=Yes
-FieldLabelType=DictionaryLabel
-DataCaptureType=TextBox
-Form=2
-  
-[Text]
-Position=20,111,151,127
-Text=Supervisor PIN Code
-Form=2
- 
-[EndGroup]
-  
-[Group]
-Required=Yes
-Name=ASSIGNMENT_SELECTION_FORM
-Label=Assignment Selection Form
-Form=3
-Max=1
-  
-[Field]
-Name=M_ASSIGNMENT_SELECTION
-Position=202,20,819,40
-Item=M_ASSIGNMENT_SELECTION,PSC_MENU_DICT
-FieldLabelType=DictionaryLabel
-DataCaptureType=DropDown
-Form=3
-  
-[Text]
-Position=20,23,157,39
-Text=Assignment Selection
- 
-  
-[Field]
-Name=M_SUPERVISOR_PROVINCE
-Position=202,64,231,84
-Item=M_SUPERVISOR_PROVINCE,PSC_MENU_DICT
-FieldLabelType=DictionaryLabel
-DataCaptureType=DropDown
-Form=3
-  
-[Text]
-Position=20,67,148,83
-Text=Supervisor Province
- 
-  
-[Field]
-Name=M_SUPERVISOR_DISTRICT
-Position=202,108,231,128
-Item=M_SUPERVISOR_DISTRICT,PSC_MENU_DICT
-FieldLabelType=DictionaryLabel
-DataCaptureType=DropDown
-Form=3
-  
-[Text]
-Position=20,111,135,127
-Text=Supervisor District
- 
-[EndGroup]
-  
-[Group]
-Required=Yes
 Name=MAIN_MENU_FORM
 Label=Main Menu Form
-Form=4
+Form=1
 Max=1
   
 [Field]
@@ -243,7 +67,7 @@ Position=199,20,228,40
 Item=M_SUPERVISOR_MENU,PSC_MENU_DICT
 FieldLabelType=DictionaryLabel
 DataCaptureType=DropDown
-Form=4
+Form=1
   
 [Text]
 Position=20,23,127,39
@@ -256,7 +80,7 @@ Position=622,20,791,40
 Item=M_INTERVIEWER_MENU,PSC_MENU_DICT
 FieldLabelType=DictionaryLabel
 DataCaptureType=DropDown
-Form=4
+Form=1
   
 [Text]
 Position=440,23,551,39
@@ -269,7 +93,7 @@ Position=199,115,368,135
 Item=M_VIEW_ALL_HOUSEHOLDS,PSC_MENU_DICT
 FieldLabelType=DictionaryLabel
 DataCaptureType=DropDown
-Form=4
+Form=1
   
 [Text]
 Position=20,118,150,134
@@ -281,7 +105,7 @@ Text=View All Households
 Required=Yes
 Name=STAFF_MANAGEMENT_FORM
 Label=Staff Management Form
-Form=5
+Form=2
 Max=1
   
 [Field]
@@ -291,7 +115,7 @@ Item=M_MANAGE_STAFF,PSC_MENU_DICT
 HideInCaseTree=Yes
 FieldLabelType=DictionaryLabel
 DataCaptureType=DropDown
-Form=5
+Form=2
   
 [Text]
 Position=20,21,104,37
@@ -305,7 +129,7 @@ Item=M_MANAGE_STAFF_MEMBER,PSC_MENU_DICT
 HideInCaseTree=Yes
 FieldLabelType=DictionaryLabel
 DataCaptureType=DropDown
-Form=5
+Form=2
   
 [Text]
 Position=20,60,160,76
@@ -320,7 +144,7 @@ HideInCaseTree=Yes
 UpperCase=Yes
 FieldLabelType=DictionaryLabel
 DataCaptureType=TextBox
-Form=5
+Form=2
   
 [Text]
 Position=20,96,145,112
@@ -332,7 +156,7 @@ Text=Manage Staff Name
 Required=Yes
 Name=EA_ASSIGNMENT_FORM
 Label=EA Assignment Form
-Form=6
+Form=3
 Max=1
   
 [Field]
@@ -341,7 +165,7 @@ Position=203,21,708,41
 Item=M_INTERVIEWER_CODE,PSC_MENU_DICT
 FieldLabelType=DictionaryLabel
 DataCaptureType=DropDown
-Form=6
+Form=3
   
 [Text]
 Position=20,20,129,36
@@ -354,7 +178,7 @@ Position=203,66,246,86
 Item=M_INTERVIEWER_EA,PSC_MENU_DICT
 FieldLabelType=DictionaryLabel
 DataCaptureType=DropDown
-Form=6
+Form=3
   
 [Text]
 Position=20,71,113,87

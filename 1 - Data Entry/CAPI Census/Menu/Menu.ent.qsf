@@ -26,28 +26,13 @@ styles:
     css: |
       font-family: Arial;font-size: 18px;
 questions:
-  - name: PSC_MENU_DICT.M_ASSIGNMENT_SELECTION
+  - name: PSC_MENU_DICT.M_SUPERVISOR_MENU
     conditions:
       - questionText:
           EN: |
-            <p>You are logged in as ~~capi_staff_role~~ <span style="font-weight:bold;">~~capi_staff_name~~</span>.</p>
-            <p>Select the area you want to work in now.</p>
-        helpText:
-          EN: |
-            
-  - name: PSC_MENU_DICT.M_INTERVIEWER_CODE
-    conditions:
-      - questionText:
-          EN: |
-            <p>Select the interviewer to assign an EA to.</p>
-        helpText:
-          EN: |
-            
-  - name: PSC_MENU_DICT.M_INTERVIEWER_EA
-    conditions:
-      - questionText:
-          EN: |
-            <p>Select EA to assign to <b>~~capi_manage_staff_name~~</b>.</p>
+            <p>You are logged in as Supervisor <b>~~capi_staff_name~~</b>. You are working in <b>~~capi_province_name~~</b> province / <b>~~capi_district_name~~</b> district.</p>
+            <p><b>EA Status: ~~capi_ea_assigned_count~~</b> assigned EAs.</p>
+            <p>Select applicable option.</p>
         helpText:
           EN: |
             
@@ -61,11 +46,11 @@ questions:
         helpText:
           EN: |
             
-  - name: PSC_MENU_DICT.M_LOGIN
+  - name: PSC_MENU_DICT.M_VIEW_ALL_HOUSEHOLDS
     conditions:
       - questionText:
           EN: |
-            <p>Welcome to Popstan Census data collection application (version ~~capi_publish_date~~).</p>
+            <p>Select the household you want to work on.</p>
         helpText:
           EN: |
             
@@ -102,84 +87,19 @@ questions:
         helpText:
           EN: |
             
-  - name: PSC_MENU_DICT.M_PIN_CODE_CONFIRMATION
-    conditions:
-      - logic: S_PIN_CODE <> notappl
-        questionText:
-          EN: |
-            <p>You are logged in as <b>~~capi_staff_name~~</b>.</p>
-            <p>Please enter your pin code.</p><p><font color="#0000ff">For demonstration purposes use pin code 1234.</font></p>
-        helpText:
-          EN: |
-            
-      - logic: S_PIN_CODE = notappl
-        questionText:
-          EN: |
-            <p>You are logged in as <b>~~capi_staff_name~~</b>.</p>
-            <p><br></p>
-            <p>Please create your pin code.</p>
-            <p><br></p>
-            <p>A pin code is a four digit number that enables you to log into the Popstan Census data collection application. It is recommended to choose a number which you can easily remember and the code should be kept secret.</p>
-        helpText:
-          EN: |
-            
-  - name: PSC_MENU_DICT.M_SUPERVISOR_ACCESS_PASSWORD
+  - name: PSC_MENU_DICT.M_INTERVIEWER_CODE
     conditions:
       - questionText:
           EN: |
-            <p>Please enter supervisor password you received from headquarters.</p>
-            <p><span class="instruction">For demonstration purposes use password 1234.</span></p>
+            <p>Select the interviewer to assign an EA to.</p>
         helpText:
           EN: |
             
-  - name: PSC_MENU_DICT.M_SUPERVISOR_DISTRICT
+  - name: PSC_MENU_DICT.M_INTERVIEWER_EA
     conditions:
       - questionText:
           EN: |
-            <p>Select district of your assignment in <span style="font-weight:bold;">~~capi_province_name~~</span> province.</p>
-        helpText:
-          EN: |
-            
-  - name: PSC_MENU_DICT.M_SUPERVISOR_MENU
-    conditions:
-      - questionText:
-          EN: |
-            <p>You are logged in as Supervisor <b>~~capi_staff_name~~</b>. You are working in <b>~~capi_province_name~~</b> province / <b>~~capi_district_name~~</b> district.</p>
-            <p><b>EA Status: ~~capi_ea_assigned_count~~</b> assigned EAs.</p>
-            <p>Select applicable option.</p>
-        helpText:
-          EN: |
-            
-  - name: PSC_MENU_DICT.M_SUPERVISOR_NAME
-    conditions:
-      - questionText:
-          EN: |
-            <p>Please enter your full name.</p>
-        helpText:
-          EN: |
-            
-  - name: PSC_MENU_DICT.M_SUPERVISOR_PIN_CODE
-    conditions:
-      - questionText:
-          EN: |
-            <p>Please create your pin code.</p>
-            <p>A pin code is a four digit number that enables you to log into the Popstan Census data collection application. It is recommended to choose a number which you can easily remember and the code should be kept secret.</p>
-        helpText:
-          EN: |
-            
-  - name: PSC_MENU_DICT.M_SUPERVISOR_PROVINCE
-    conditions:
-      - questionText:
-          EN: |
-            <p>Select province of your assignment.</p>
-        helpText:
-          EN: |
-            
-  - name: PSC_MENU_DICT.M_VIEW_ALL_HOUSEHOLDS
-    conditions:
-      - questionText:
-          EN: |
-            <p>Select the household you want to work on.</p>
+            <p>Select EA to assign to <b>~~capi_manage_staff_name~~</b>.</p>
         helpText:
           EN: |
             
