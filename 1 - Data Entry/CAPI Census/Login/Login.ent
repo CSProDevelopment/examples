@@ -38,6 +38,10 @@
     {
       "type": "external", 
       "path": "../External-Logic/Lookups.apc"
+    }, 
+    {
+      "type": "external", 
+      "path": "../External-Logic/Sync.apc"
     }
   ], 
   "messages": [

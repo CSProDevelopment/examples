@@ -1,0 +1,230 @@
+﻿// ------------------
+// ------------------ Sync functions
+// ------------------
+
+
+string MenuPenMd5;
+string MenuPffMd5;
+
+
+function SaveApplicationSnapshot()
+
+	MenuPenMd5 = diagnostics("md5", "Menu.pen");
+	MenuPffMd5 = diagnostics("md5", "Menu.pff");
+
+end;
+
+
+function RestartApplicationIfModified()
+
+	// Compare the saved MD5s against the new MD5s to see if the files have changed
+	if MenuPenMd5 <> diagnostics("md5", "Menu.pen") or MenuPffMd5 <> diagnostics("md5", "Menu.pff") then
+		errmsg("The application has been updated and will be restarted.");
+		execpff("Menu.pff", stop);
+	endif;
+
+end;
+
+
+function StartServer()
+
+	SaveApplicationSnapshot();
+
+	if not syncserver(Bluetooth) then
+		errmsg("Failed to start Bluetooth server.");
+	endif;
+
+	RestartApplicationIfModified();
+
+end;
+
+
+#if exists(PSC_MENU_DICT)
+// Not a standalone sync function. Does not call syncconnect or syncdisconnect.
+function SyncDataWithInterviewer()
+
+	numeric success = 1;
+
+	forcase PSC_STAFF_DICT where S_STAFF_CODE = M_CURRENT_STAFF_CODE or S_SUPERVISOR_STAFF_CODE = M_CURRENT_STAFF_CODE do
+
+		// Synchronize staff code for supervisor and their interviewers. Supervisor's staff code is sent, so supervisor
+		// is able to log onto their account using interviewer's device.
+		// Sync BOTH is used, because the supervisor and interview write to the staff data.
+		if success and not syncdata(BOTH, PSC_STAFF_DICT) then
+			errmsg("Failed to transfer interviewer's staff data. Transfer aborted.");
+			success = 0;
+			break;
+		endif;
+
+	endfor;
+
+	// Create universe for supervisory area.
+	string universeStr = maketext("%v%v", M_CURRENT_PROVINCE, M_CURRENT_DISTRICT);
+
+	// Synchronize assignments in supervisory area.
+	// Sync BOTH is used, because the supervisor and interview write to the assignments data.
+	if success and not syncdata(BOTH, PSC_ASSIGNMENTS_DICT, universeStr) then
+		errmsg("Failed to transfer assignment data. Transfer aborted.");
+		success = 0;
+	endif;
+
+	// Synchronize households in supervisory area.
+	// Sync BOTH is used to distribute household data to all interviewers. This increases redundancy in case the
+	// supervisor's device is lost. Alternatively, a GET can be used, because only the interviewer writes to the
+	// household data.
+	if success and not syncdata(BOTH, PSC_HOUSEHOLD_DICT, universeStr) then
+		errmsg("Failed to transfer household data. Transfer aborted.");
+		success = 0;
+	endif;
+
+	// Send all geocodes.
+	// Sync PUT is used, because the interviewer only reads the geocodes data.
+	if success and not syncdata(PUT, PSC_GEOCODES_DICT) then
+		errmsg("Failed to transfer geocode data.");
+		success = 0;
+	endif;
+
+	SyncDataWithInterviewer = success;
+
+end;
+
+
+function SyncWithInterviewer()
+
+	numeric success = 1;
+
+	if syncconnect(Bluetooth) then
+
+		success = SyncDataWithInterviewer();
+
+		if success and not syncfile(PUT, "./Menu.pff", "./Menu.pff") then
+			errmsg("Failed to transfer Menu.pff. Transfer aborted.");
+			success = 0;
+		endif;
+
+		if success and not syncfile(PUT, "./Menu.pen", "./Menu.pen") then
+			errmsg("Failed to transfer Menu.pen. Transfer aborted.");
+			success = 0;
+		endif;
+
+		if success and not syncfile(PUT, "../Household/Household.pen", "../Household/Household.pen") then
+			errmsg("Failed to transfer Household.pen. Transfer aborted.");
+			success = 0;
+		endif;
+
+		if not syncdisconnect() then
+			errmsg("Failed to disconnect from Bluetooth server.");
+			success = 0;
+		endif;
+
+	else
+		errmsg("Failed to connect to Bluetooth server.");
+		success = 0;
+
+	endif;
+
+	SyncWithInterviewer = success;
+
+end;
+
+
+// Not a standalone sync function. Does not call syncconnect or syncdisconnect.
+function SyncDataWithHQ()
+
+	numeric success = 1;
+
+	forcase PSC_STAFF_DICT where S_STAFF_CODE = M_CURRENT_STAFF_CODE or S_SUPERVISOR_STAFF_CODE = M_CURRENT_STAFF_CODE do
+
+		// Synchronize staff code for supervisor and their interviewers.
+		// Sync PUT is used, because HQ will only read the staff data.
+		if success and not syncdata(PUT, PSC_STAFF_DICT) then
+			errmsg("Failed to transfer interviewer's staff data. Transfer aborted.");
+			success = 0;
+			break;
+		endif;
+
+	endfor;
+
+	// Create universe for supervisory area.
+	string universeStr = maketext("%v%v", M_CURRENT_PROVINCE, M_CURRENT_DISTRICT);
+
+	// Synchronize assignments in supervisory area.
+	// Sync PUT is used, because HQ will only read the assignments data.
+	if success and not syncdata(PUT, PSC_ASSIGNMENTS_DICT, universeStr) then
+		errmsg("Failed to transfer assignment data. Transfer aborted.");
+		success = 0;
+	endif;
+
+	// Synchronize households in supervisory area.
+	// Sync PUT is used, because HQ will only read the household data.
+	if success and not syncdata(PUT, PSC_HOUSEHOLD_DICT, universeStr) then
+		errmsg("Failed to transfer household data. Transfer aborted.");
+		success = 0;
+	endif;
+
+	SyncDataWithHQ = success;
+
+end;
+#endif
+
+
+numeric full_sync = 1;
+numeric app_sync = 2;
+
+
+function SyncWithHQ(syncType)
+
+	numeric success = 1;
+
+	SaveApplicationSnapshot();
+
+	if syncconnect(Dropbox) then
+
+		if syncType = full_sync then
+#if exists(PSC_MENU_DICT)
+			success = SyncDataWithHQ();
+#endif
+		endif;
+
+		// Save the MD5 value before syncing
+		string menuPFF = diagnostics("md5", "./Menu.pff");
+		string menuPEN = diagnostics("md5", "./Menu.pen");
+
+		if success and not syncfile(GET, "/DeployPSC/Menu/Menu.pff", "./Menu.pff") then
+			errmsg("Failed to receive Menu.pff. Transfer aborted.");
+			success = 0;
+		endif;
+
+		if success and not syncfile(GET, "/DeployPSC/Menu/Menu.pen", "./Menu.pen") then
+			errmsg("Failed to receive Menu.pen. Transfer aborted.");
+			success = 0;
+		endif;
+
+		if success and not syncfile(GET, "/DeployPSC/Household/Household.pen", "../Household/Household.pen") then
+			errmsg("Failed to receive Household.pen. Transfer aborted.");
+			success = 0;
+		endif;
+
+		// Receive all geocodes. This is a lookup file, so update with applications.
+		// Sync GET is used, because only HQ writes to the geocodes data.
+		if success and not syncdata(GET, PSC_GEOCODES_DICT) then
+			errmsg("Failed to transfer geocode data.");
+			success = 0;
+		endif;
+
+		if not syncdisconnect() then
+			errmsg("Failed to disconnect from Dropbox.");
+			success = 0;
+		endif;
+
+	else
+		errmsg("Failed to connect to Dropbox.");
+		success = 0;
+
+	endif;
+
+	RestartApplicationIfModified();
+
+	SyncWithHQ = success;
+
+end;
