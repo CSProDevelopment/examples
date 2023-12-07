@@ -124,24 +124,6 @@ end;
 
 
 // ------------------
-// ------------------ Functions to simplify looking up geographic names
-// ------------------
-
-
-function string LookupDetailedHouseholdName()
-
-	string detailedName = maketext("%v%v", HH_SEGMENT, HH_NUMBER);
-
-	if count(HH_NAME) >= 1 and HH_NAME(1) <> "" then
-		detailedName = detailedName + maketext(" - %v", strip(HH_NAME(1)));
-	endif;
-
-	LookupDetailedHouseholdName = detailedName;
-
-end;
-
-
-// ------------------
 // ------------------ PFF functions
 // ------------------
 

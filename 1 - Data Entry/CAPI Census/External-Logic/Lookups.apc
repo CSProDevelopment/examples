@@ -41,19 +41,6 @@ function string LookupEAName(ea)
 end;
 
 
-// function string LookupDetailedHouseholdName()
-
-	// string detailedName = maketext("%v%v", HH_SEGMENT, HH_NUMBER);
-
-	// if count(HH_NAME) >= 1 and HH_NAME(1) <> "" then
-		// detailedName = detailedName + maketext(" - %v", strip(HH_NAME(1)));
-	// endif;
-
-	// LookupDetailedHouseholdName = detailedName;
-
-// end;
-
-
 function string LookupStaffName(string code)
 
 	// If staff member's information is already loaded, don't load again
@@ -66,3 +53,18 @@ function string LookupStaffName(string code)
 	endif;
 
 end;
+
+
+#if exists(PSC_MENU_DICT)
+function string LookupDetailedHouseholdName()
+
+	string detailedName = maketext("%v%v", HH_SEGMENT, HH_NUMBER);
+
+	if count(HH_NAME) >= 1 and HH_NAME(1) <> "" then
+		detailedName = detailedName + maketext(" - %v", strip(HH_NAME(1)));
+	endif;
+
+	LookupDetailedHouseholdName = detailedName;
+
+end;
+#endif
