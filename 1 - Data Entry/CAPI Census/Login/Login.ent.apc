@@ -8,9 +8,9 @@ PROC GLOBAL
 
 
 numeric supervisor_password = 1234;
-string login_interview_setting_key = "PSC Interview Login";
-string login_supervisor_setting_key = "PSC Supervisor Login";
-string assignment_setting_key = "PSC Assignment";
+persistent string login_interviewer;
+persistent string login_supervisor;
+persistent string login_assignment;
 List string months = "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec";
 
 
@@ -81,9 +81,9 @@ end;
 function Logout()
 
 	// Clear the saved login and assignment
-	savesetting(login_interview_setting_key, "");
-	savesetting(login_supervisor_setting_key, "");
-	savesetting(assignment_setting_key, "");
+	login_interviewer = "";
+	login_supervisor = "";
+	login_assignment = "";
 	reenter LOGIN_FORM;
 	
 end;
@@ -306,16 +306,16 @@ postproc
 
 		// Save the assignment for the next time the menu application is loaded
 		if A_ROLE = 1 then
-			savesetting(login_interview_setting_key, S_STAFF_CODE);
-			savesetting(login_supervisor_setting_key, "");
+			login_interviewer = S_STAFF_CODE;
+			login_supervisor = "";
 
 		else
-			savesetting(login_interview_setting_key, "");
-			savesetting(login_supervisor_setting_key, S_STAFF_CODE);
+			login_interviewer = "";
+			login_supervisor = S_STAFF_CODE;
 
 		endif;
 		
-		savesetting(assignment_setting_key, L_ASSIGNMENT_SELECTION);
+		login_assignment = L_ASSIGNMENT_SELECTION;
 		skip to LOGIN_COMPLETE_FORM;
 
 	endif;

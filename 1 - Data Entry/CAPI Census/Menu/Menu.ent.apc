@@ -7,9 +7,9 @@
 
 
 numeric supervisor_password = 1234;
-string login_interview_setting_key = "PSC Interview Login";
-string login_supervisor_setting_key = "PSC Supervisor Login";
-string assignment_setting_key = "PSC Assignment";
+persistent string login_interviewer;
+persistent string login_supervisor;
+persistent string login_assignment;
 string segment_alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 List string months = "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec";
 
@@ -35,9 +35,9 @@ numeric capi_household_partial_count;
 
 
 function Logout()
-	savesetting(login_interview_setting_key,"");
-	savesetting(login_supervisor_setting_key,"");
-	savesetting(assignment_setting_key,"");
+	login_interviewer = "";
+	login_supervisor = "";
+	login_assignment = "";
 	stop(1);
 end;
 
@@ -45,32 +45,29 @@ end;
 function GetLoginCredentials()
 
 	// Is the staff member logged in (could be supervisor or interviewer)?
-	string saved_interviewer_staff_code = loadsetting(login_interview_setting_key);
-	string saved_supervisor_staff_code = loadsetting(login_supervisor_setting_key);
 	string saved_staff_code;
 	numeric isInterviewer;
-	if saved_interviewer_staff_code <> "" then
-		saved_staff_code = saved_interviewer_staff_code;
+	if login_interviewer <> "" then
+		saved_staff_code = login_interviewer;
 		isInterviewer = true;
-	elseif saved_supervisor_staff_code <> "" then
-		saved_staff_code = saved_supervisor_staff_code;
+	elseif login_supervisor <> "" then
+		saved_staff_code = login_supervisor;
 		isInterviewer = false;
 	else
 		errmsg("Error login credential for staff code is invalid.");
 		stop(1);
 	endif;	
 	
-	string saved_assignment_code = loadsetting(assignment_setting_key);
-	if saved_assignment_code = "" then
+	if login_assignment = "" then
 		errmsg("Error login credential for assignment is invalid.");
 		stop(1);
 	endif;
 	
 	M_CURRENT_STAFF_CODE = saved_staff_code;
-	M_CURRENT_PROVINCE = tonumber(saved_assignment_code[1:2]);
-	M_CURRENT_DISTRICT = tonumber(saved_assignment_code[3:2]);
+	M_CURRENT_PROVINCE = tonumber(login_assignment[1:2]);
+	M_CURRENT_DISTRICT = tonumber(login_assignment[3:2]);
 	if isInterviewer then
-		M_CURRENT_EA = tonumber(saved_assignment_code[5:3]);
+		M_CURRENT_EA = tonumber(login_assignment[5:3]);
 	else
 		M_CURRENT_EA = notappl;
 	endif;
