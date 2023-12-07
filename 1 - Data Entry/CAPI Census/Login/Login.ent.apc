@@ -96,6 +96,11 @@ end;
 
 PROC LOGIN_FF
 
+preproc
+
+	// For testing on Windows, make the value sets bigger
+	setfont(valuesets, "Calibri", 20);
+	
 PROC L_LOGIN
 
 onfocus
@@ -168,6 +173,8 @@ postproc
 	setproperty(L_PIN_CODE_CONFIRMATION, "Protected", "Yes");
 
 	skip to ASSIGNMENT_SELECTION_FORM;
+
+
 PROC L_SUPERVISOR_ACCESS_PASSWORD
 
 preproc
@@ -183,9 +190,8 @@ postproc
 		errmsg("Invalid password. You cannot proceed as a supervisor.");
 		reenter;
 	endif;
-	
-	
-	
+
+
 PROC L_SUPERVISOR_NAME
 
 	if L_SUPERVISOR_NAME = "" then
@@ -218,6 +224,8 @@ postproc
 	L_LOGIN = S_STAFF_CODE;
 
 	capi_staff_name = LookupStaffName(L_LOGIN);
+
+
 PROC L_ASSIGNMENT_SELECTION
 
 onfocus
@@ -327,6 +335,8 @@ preproc
 	setvalueset(L_SUPERVISOR_PROVINCE, province_vs);
 
 	L_SUPERVISOR_PROVINCE = notappl;
+
+
 PROC L_SUPERVISOR_DISTRICT
 
 preproc
