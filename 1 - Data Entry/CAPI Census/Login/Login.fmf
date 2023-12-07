@@ -12,8 +12,10 @@ File=..\Dictionaries\Login.dcf
 [Form]
 Name=FORM001
 Label=Login Form
+QuestionTextHeight=125
 Level=1
 Size=2237,300
+CapturePos=300,25
   
 Item=L_LOGIN
 Item=L_PIN_CODE_CONFIRMATION
@@ -23,8 +25,10 @@ Item=L_PIN_CODE_CONFIRMATION
 [Form]
 Name=FORM002
 Label=Supervisor Creation Form
+QuestionTextHeight=125
 Level=1
 Size=1003,258
+CapturePos=300,25
   
 Item=L_SUPERVISOR_ACCESS_PASSWORD
 Item=L_SUPERVISOR_NAME
@@ -35,8 +39,10 @@ Item=L_SUPERVISOR_PIN_CODE
 [Form]
 Name=FORM003
 Label=Assignment Selection Form
+QuestionTextHeight=125
 Level=1
 Size=617,157
+CapturePos=300,25
   
 Item=L_ASSIGNMENT_SELECTION
 Item=L_SUPERVISOR_PROVINCE
@@ -45,10 +51,12 @@ Item=L_SUPERVISOR_DISTRICT
 [EndForm]
   
 [Form]
-Name=FORM000
+Name=FORM004
 Label=Login Complete Form
+QuestionTextHeight=125
 Level=1
 Size=279,86
+CapturePos=300,25
   
 Item=L_LOGIN_COMPLETE
   
@@ -67,27 +75,27 @@ Max=1
   
 [Field]
 Name=L_LOGIN
-Position=244,27,749,47
+Position=210,25,745,45
 Item=L_LOGIN,PSC_LOGIN_DICT
 FieldLabelType=DictionaryLabel
 DataCaptureType=RadioButton
 Form=1
   
 [Text]
-Position=50,30,86,46
+Position=20,28,86,44
 Text=Login
  
   
 [Field]
 Name=L_PIN_CODE_CONFIRMATION
-Position=244,57,301,77
+Position=210,55,297,75
 Item=L_PIN_CODE_CONFIRMATION,PSC_LOGIN_DICT
 FieldLabelType=DictionaryLabel
 DataCaptureType=TextBox
 Form=1
   
 [Text]
-Position=50,60,195,76
+Position=20,58,195,74
 Text=PIN Code Confirmation
  
 [EndGroup]
@@ -101,40 +109,40 @@ Max=1
   
 [Field]
 Name=L_SUPERVISOR_ACCESS_PASSWORD
-Position=252,26,309,46
+Position=210,25,297,45
 Item=L_SUPERVISOR_ACCESS_PASSWORD,PSC_LOGIN_DICT
 FieldLabelType=DictionaryLabel
 DataCaptureType=TextBox
 Form=2
   
 [Text]
-Position=50,29,230,45
+Position=20,28,230,44
 Text=Supervisor Access Password
  
   
 [Field]
 Name=L_SUPERVISOR_NAME
-Position=252,57,953,77
+Position=210,55,941,75
 Item=L_SUPERVISOR_NAME,PSC_LOGIN_DICT
 FieldLabelType=DictionaryLabel
 DataCaptureType=TextBox
 Form=2
   
 [Text]
-Position=50,60,159,76
+Position=20,58,159,74
 Text=Supervisor Name
  
   
 [Field]
 Name=L_SUPERVISOR_PIN_CODE
-Position=252,89,309,109
+Position=210,85,297,105
 Item=L_SUPERVISOR_PIN_CODE,PSC_LOGIN_DICT
 FieldLabelType=DictionaryLabel
 DataCaptureType=TextBox
 Form=2
   
 [Text]
-Position=50,92,181,108
+Position=20,88,181,104
 Text=Supervisor PIN Code
  
 [EndGroup]
@@ -148,40 +156,40 @@ Max=1
   
 [Field]
 Name=L_ASSIGNMENT_SELECTION
-Position=217,27,834,47
+Position=210,25,857,45
 Item=L_ASSIGNMENT_SELECTION,PSC_LOGIN_DICT
 FieldLabelType=DictionaryLabel
 DataCaptureType=RadioButton
 Form=3
   
 [Text]
-Position=52,30,189,46
+Position=20,28,187,44
 Text=Assignment Selection
  
   
 [Field]
 Name=L_SUPERVISOR_PROVINCE
-Position=217,59,246,79
+Position=210,55,269,75
 Item=L_SUPERVISOR_PROVINCE,PSC_LOGIN_DICT
 FieldLabelType=DictionaryLabel
 DataCaptureType=RadioButton
 Form=3
   
 [Text]
-Position=52,62,180,78
+Position=20,58,178,74
 Text=Supervisor Province
  
   
 [Field]
 Name=L_SUPERVISOR_DISTRICT
-Position=217,92,246,112
+Position=210,85,269,105
 Item=L_SUPERVISOR_DISTRICT,PSC_LOGIN_DICT
 FieldLabelType=DictionaryLabel
 DataCaptureType=RadioButton
 Form=3
   
 [Text]
-Position=52,95,167,111
+Position=20,88,165,104
 Text=Supervisor District
  
 [EndGroup]
@@ -195,14 +203,14 @@ Max=1
   
 [Field]
 Name=L_LOGIN_COMPLETE
-Position=234,26,249,46
+Position=210,25,255,45
 Item=L_LOGIN_COMPLETE,PSC_LOGIN_DICT
 FieldLabelType=DictionaryLabel
 DataCaptureType=TextBox
 Form=4
   
 [Text]
-Position=52,29,153,45
+Position=20,28,153,45
 Text=Login Complete
  
 [EndGroup]
