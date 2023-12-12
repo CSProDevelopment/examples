@@ -28,12 +28,12 @@
     "Household.ent.mgf"
   ], 
   "logicSettings": {
-    "version": 2.0, 
+    "version": 8.0, 
     "caseSensitive": {
       "symbols": false
     }, 
     "actionInvoker": {
-      "accessFromWebView": "promptIfNoValidAccessToken", 
+      "accessFromExternalCaller": "promptIfNoValidAccessToken", 
       "convertResultsForLogic": true
     }
   }, 

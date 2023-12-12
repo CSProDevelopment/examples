@@ -79,7 +79,7 @@ function GetLoginCredentials()
 	endif;
 	
 	A_ROLE = 2;
-	if S_SUPERVISOR_STAFF_CODE <> "" then
+	if strip(S_SUPERVISOR_STAFF_CODE) <> "" then
 		// This staff member has a supervisor, so this staff member is an interviewer.
 		A_ROLE = 1;
 	endif;
@@ -159,7 +159,7 @@ function InitInterviewerStatusRecord()
 	numeric ws_counter = 0;
 	
 	// Loop through all interviewers that are supervised by the currently logged in supervisor
-	forcase PSC_STAFF_DICT where S_SUPERVISOR_STAFF_CODE = M_CURRENT_STAFF_CODE do
+	forcase PSC_STAFF_DICT where strip(S_SUPERVISOR_STAFF_CODE) = strip(M_CURRENT_STAFF_CODE) do
 		
 		inc(ws_counter);
 		
@@ -173,7 +173,7 @@ function InitInterviewerStatusRecord()
 		ISR_PARTIAL_HOUSEHOLDS(ws_counter) = 0;
 		ISR_LAST_INTERVIEW(ws_counter) = 0;
 
-		forcase PSC_ASSIGNMENTS_DICT where A_STAFF_CODE = S_STAFF_CODE do
+		forcase PSC_ASSIGNMENTS_DICT where strip(A_STAFF_CODE) = strip(S_STAFF_CODE) do
 		
 			forcase PSC_HOUSEHOLD_DICT where HH_PROVINCE = A_PROVINCE
 				and HH_DISTRICT = A_DISTRICT and HH_EA = A_EA
@@ -212,7 +212,9 @@ end;
 // Check that no person, other than someone with code ignoreStaffCode, has the name in staffName
 function VerifyStaffNameIsUnique(string staffName, string ignoreStaffCode)
 
-	numeric nameIsUsed = countcases(PSC_STAFF_DICT where S_STAFF_CODE <> ignoreStaffCode and S_STAFF_NAME = staffName);
+	staffName = strip(staffName);
+	ignoreStaffCode = strip(ignoreStaffCode);
+	numeric nameIsUsed = countcases(PSC_STAFF_DICT where strip(S_STAFF_CODE) <> ignoreStaffCode and strip(S_STAFF_NAME) = staffName);
 
 	if ignoreStaffCode <> "" then
 		// Load the staff entry that was in memory
@@ -220,7 +222,7 @@ function VerifyStaffNameIsUnique(string staffName, string ignoreStaffCode)
 	endif;
 
 	if nameIsUsed then
-		errmsg("The name %s is used by another staff member", strip(staffName));
+		errmsg("The name %s is used by another staff member", staffName);
 		reenter;
 	endif;
 
@@ -357,7 +359,7 @@ onfocus
 
 postproc
 
-	if M_INTERVIEWER_MENU = "1" then
+	if strip(M_INTERVIEWER_MENU) = "1" then
 		// Initialize the case IDs
 		HH_PROVINCE = A_PROVINCE;
 		HH_DISTRICT = A_DISTRICT;
@@ -370,7 +372,7 @@ postproc
 
 		LaunchHouseholdProgram();
 
-	elseif M_INTERVIEWER_MENU = "2" then
+	elseif strip(M_INTERVIEWER_MENU) = "2" then
 
 		if totalHouseholds = 0 then
 			errmsg("There are no households to view");
@@ -381,11 +383,11 @@ postproc
 
 		endif;
 
-	elseif M_INTERVIEWER_MENU = "7" then
+	elseif strip(M_INTERVIEWER_MENU) = "7" then
 		StartServer();
 		reenter;
 
-	elseif M_INTERVIEWER_MENU = "9" then
+	elseif strip(M_INTERVIEWER_MENU) = "9" then
 		Logout();
 
 	else
@@ -433,7 +435,7 @@ onfocus
 	// and then the interviewers
 	forcase PSC_STAFF_DICT do
 
-		if key(PSC_STAFF_DICT) <> M_CURRENT_STAFF_CODE then
+		if key(PSC_STAFF_DICT) <> strip(M_CURRENT_STAFF_CODE) then
 			staff_vs.add(S_STAFF_NAME, key(PSC_STAFF_DICT));
 		endif;
 
@@ -447,7 +449,7 @@ onfocus
 
 postproc
 
-	if M_MANAGE_STAFF = "1" then
+	if strip(M_MANAGE_STAFF) = "1" then
 		skip to M_MANAGE_STAFF_NAME;
 
 	elseif loadcase(PSC_STAFF_DICT, M_MANAGE_STAFF) then
@@ -491,7 +493,7 @@ postproc
 
 		errmsg("Staff PIN code of %s has been reset", capi_manage_staff_name);
 
-		if S_STAFF_CODE = M_CURRENT_STAFF_CODE then
+		if strip(S_STAFF_CODE) = strip(M_CURRENT_STAFF_CODE) then
 			// Supervisor changed their code, log out so that they can log in and reset it
 			Logout();
 
@@ -507,17 +509,17 @@ PROC M_MANAGE_STAFF_NAME
 
 onfocus
 
-	if M_MANAGE_STAFF = "1" then
+	if strip(M_MANAGE_STAFF) = "1" then
 		M_MANAGE_STAFF_NAME = "";
 	endif;
 
 postproc
 
-	if M_MANAGE_STAFF_NAME = "" then
+	if strip(M_MANAGE_STAFF_NAME) = "" then
 		errmsg("You cannot enter a blank name.");
 		reenter;
 
-	elseif M_MANAGE_STAFF = "1" then
+	elseif strip(M_MANAGE_STAFF) = "1" then
 		VerifyStaffNameIsUnique(M_MANAGE_STAFF_NAME, "");
 
 		// Add a new interviewer
@@ -539,7 +541,7 @@ postproc
 		// Modify the name
 		string oldName = LookupStaffName(S_STAFF_CODE);
 
-		if M_MANAGE_STAFF_NAME = oldName then
+		if strip(M_MANAGE_STAFF_NAME) = oldName then
 			errmsg("The name is the same as before and has not been changed");
 
 		else
@@ -564,7 +566,7 @@ onfocus
 
 	ValueSet string interviewer_code_vs;
 
-	forcase PSC_STAFF_DICT where M_CURRENT_STAFF_CODE <> S_STAFF_CODE do
+	forcase PSC_STAFF_DICT where strip(M_CURRENT_STAFF_CODE) <> strip(S_STAFF_CODE) do
 		// Not supervisor
 		interviewer_code_vs.add(S_STAFF_NAME, key(PSC_STAFF_DICT));
 	endfor;
@@ -586,7 +588,7 @@ postproc
 
 	// Check if the interviewer already has an assignment
 	numeric numberAssignmentsForInterviewer = countcases(PSC_ASSIGNMENTS_DICT
-		where A_STAFF_CODE = M_INTERVIEWER_CODE and A_ROLE = 1);
+		where strip(A_STAFF_CODE) = strip(M_INTERVIEWER_CODE) and A_ROLE = 1);
 
 	if numberAssignmentsForInterviewer > 0 then
 		errmsg("%s already has %d assignment. Are you sure you want to add another?",
@@ -649,7 +651,7 @@ postproc
 
 		inc(numberExistingAssignments);
 
-		if A_STAFF_CODE = M_INTERVIEWER_CODE then
+		if strip(A_STAFF_CODE) = strip(M_INTERVIEWER_CODE) then
 			errmsg("%s has already been assigned to %s", LookupEAName(M_INTERVIEWER_EA), LookupStaffName(M_INTERVIEWER_CODE));
 			reenter;
 		endif;

@@ -446,14 +446,13 @@ PROC HH_NAME
 
 postproc
 
-	if HH_NAME = "" then
+	if strip(HH_NAME) = "" then
 		errmsg("Name cannot be blank");
 		reenter;
 
 	elseif curocc() = 1 then
 		warning("Confirm that %s is the head of household?", strip(HH_NAME))
-		select("Reenter name", HH_NAME,
-			   "Continue", continue);
+			select("Reenter name", HH_NAME, "Continue", continue);
 
 	endif;
 
@@ -483,7 +482,7 @@ preproc
 	savepartial();
 
 	// If there are already more rows defined, this value has to be 1
-	if curocc() < maxocc(POPULATION_BASICS_ROSTER) and HH_NAME(curocc() + 1) <> "" then
+	if curocc() < maxocc(POPULATION_BASICS_ROSTER) and strip(HH_NAME(curocc() + 1)) <> "" then
 		HH_MORE_ROWS = 1;
 		noinput;
 	endif;
@@ -491,7 +490,7 @@ preproc
 onfocus
 
 	// and then cannot be modified
-	if curocc() < maxocc(POPULATION_BASICS_ROSTER) and HH_NAME(curocc() + 1) <> "" then
+	if curocc() < maxocc(POPULATION_BASICS_ROSTER) and strip(HH_NAME(curocc() + 1)) <> "" then
 		setproperty(HH_MORE_ROWS, "Protected", "Yes");
 
 	else

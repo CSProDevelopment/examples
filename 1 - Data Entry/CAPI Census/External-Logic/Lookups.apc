@@ -60,7 +60,7 @@ function string LookupDetailedHouseholdName()
 
 	string detailedName = maketext("%v%v", HH_SEGMENT, HH_NUMBER);
 
-	if count(HH_NAME) >= 1 and HH_NAME(1) <> "" then
+	if count(HH_NAME) >= 1 and strip(HH_NAME(1)) <> "" then
 		detailedName = detailedName + maketext(" - %v", strip(HH_NAME(1)));
 	endif;
 

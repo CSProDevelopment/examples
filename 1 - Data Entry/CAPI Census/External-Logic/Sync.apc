@@ -45,7 +45,7 @@ function SyncDataWithInterviewer()
 
 	numeric success = 1;
 
-	forcase PSC_STAFF_DICT where S_STAFF_CODE = M_CURRENT_STAFF_CODE or S_SUPERVISOR_STAFF_CODE = M_CURRENT_STAFF_CODE do
+	forcase PSC_STAFF_DICT where strip(S_STAFF_CODE) = strip(M_CURRENT_STAFF_CODE) or strip(S_SUPERVISOR_STAFF_CODE) = strip(M_CURRENT_STAFF_CODE) do
 
 		// Synchronize staff code for supervisor and their interviewers. Supervisor's staff code is sent, so supervisor
 		// is able to log onto their account using interviewer's device.
@@ -133,7 +133,7 @@ function SyncDataWithHQ()
 
 	numeric success = 1;
 
-	forcase PSC_STAFF_DICT where S_STAFF_CODE = M_CURRENT_STAFF_CODE or S_SUPERVISOR_STAFF_CODE = M_CURRENT_STAFF_CODE do
+	forcase PSC_STAFF_DICT where strip(S_STAFF_CODE) = strip(M_CURRENT_STAFF_CODE) or strip(S_SUPERVISOR_STAFF_CODE) = strip(M_CURRENT_STAFF_CODE) do
 
 		// Synchronize staff code for supervisor and their interviewers.
 		// Sync PUT is used, because HQ will only read the staff data.
