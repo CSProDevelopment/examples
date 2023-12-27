@@ -28,6 +28,12 @@
       "path": "Household\\Household.pff"
     }, 
     {
+      "path": "Login\\Login.ent"
+    }, 
+    {
+      "path": "Login\\Login.pff"
+    }, 
+    {
       "path": "Menu\\Menu.ent"
     }, 
     {
@@ -43,6 +49,10 @@
     }, 
     {
       "path": "Dictionaries\\Household.dcf"
+    }, 
+    {
+      "path": "Dictionaries\\Login.dcf", 
+      "uploadForSync": true
     }, 
     {
       "path": "Dictionaries\\Menu.dcf"
