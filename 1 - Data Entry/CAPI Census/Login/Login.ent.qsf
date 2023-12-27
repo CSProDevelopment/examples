@@ -36,7 +36,7 @@ questions:
       - logic: S_PIN_CODE <> notappl
         questionText:
           EN: |
-            <p>You are logged in as <b>~~capi_staff_name~~</b>.</p>
+            <p>You are logging in as <b>~~capi_staff_name~~</b>.</p>
             <p>Please enter your pin code.</p><p><font color="#0000ff">For demonstration purposes use pin code 1234.</font></p>
       - logic: S_PIN_CODE = notappl
         questionText:
