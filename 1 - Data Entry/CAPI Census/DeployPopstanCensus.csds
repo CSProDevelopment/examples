@@ -51,8 +51,7 @@
       "path": "Dictionaries\\Household.dcf"
     }, 
     {
-      "path": "Dictionaries\\Login.dcf", 
-      "uploadForSync": true
+      "path": "Dictionaries\\Login.dcf"
     }, 
     {
       "path": "Dictionaries\\Menu.dcf"
