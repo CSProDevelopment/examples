@@ -190,6 +190,12 @@
               "zeroFill": true
             }, 
             {
+              "name": "M_CURRENT_SEGMENT", 
+              "labels": [ { "text": "Current Segment" } ], 
+              "contentType": "alpha", 
+              "length": 1
+            }, 
+            {
               "name": "M_CURRENT_STAFF_CODE", 
               "labels": [ { "text": "Current Staff Code" } ], 
               "contentType": "alpha", 

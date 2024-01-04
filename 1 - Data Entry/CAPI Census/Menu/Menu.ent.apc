@@ -85,9 +85,11 @@ function GetLoginCredentials()
 	endif;
 	
 	// verify staff is assigned this assignment
-	if not loadcase(PSC_ASSIGNMENTS_DICT, M_CURRENT_PROVINCE, M_CURRENT_DISTRICT, M_CURRENT_EA,
+	if loadcase(PSC_ASSIGNMENTS_DICT, M_CURRENT_PROVINCE, M_CURRENT_DISTRICT, M_CURRENT_EA,
 		M_CURRENT_STAFF_CODE, A_ROLE) then
 		
+		M_CURRENT_SEGMENT = A_SEGMENT;
+	else	
 		errmsg("Error could not load assignment.");
 		stop(1);
 	endif;
@@ -327,10 +329,10 @@ onfocus
 	numeric autoIncrementHouseholdNumber = 0;
 
 	forcase PSC_HOUSEHOLD_DICT where
-		HH_PROVINCE = A_PROVINCE and
-		HH_DISTRICT = A_DISTRICT and
-		HH_EA = A_EA and
-		HH_SEGMENT = A_SEGMENT do
+		HH_PROVINCE = M_CURRENT_PROVINCE and
+		HH_DISTRICT = M_CURRENT_DISTRICT and
+		HH_EA = M_CURRENT_EA and
+		HH_SEGMENT = M_CURRENT_SEGMENT do
 
 		inc(totalHouseholds);
 
@@ -361,10 +363,10 @@ postproc
 
 	if strip(M_INTERVIEWER_MENU) = "1" then
 		// Initialize the case IDs
-		HH_PROVINCE = A_PROVINCE;
-		HH_DISTRICT = A_DISTRICT;
-		HH_EA = A_EA;
-		HH_SEGMENT = A_SEGMENT;
+		HH_PROVINCE = M_CURRENT_PROVINCE;
+		HH_DISTRICT = M_CURRENT_DISTRICT;
+		HH_EA = M_CURRENT_EA;
+		HH_SEGMENT = M_CURRENT_SEGMENT;
 		HH_NUMBER = autoIncrementHouseholdNumber + 1;
 
 		errmsg("Are you sure that you want to add a household numbered %v%v?", HH_SEGMENT, HH_NUMBER)
@@ -404,10 +406,10 @@ onfocus
 	ValueSet string households_vs;
 
 	forcase PSC_HOUSEHOLD_DICT where
-		HH_PROVINCE = A_PROVINCE and
-		HH_DISTRICT = A_DISTRICT and
-		HH_EA = A_EA and
-		HH_SEGMENT = A_SEGMENT do
+		HH_PROVINCE = M_CURRENT_PROVINCE and
+		HH_DISTRICT = M_CURRENT_DISTRICT and
+		HH_EA = M_CURRENT_EA and
+		HH_SEGMENT = M_CURRENT_SEGMENT do
 
 		households_vs.add("Continue working on household " + LookupDetailedHouseholdName(), key(PSC_HOUSEHOLD_DICT));
 
