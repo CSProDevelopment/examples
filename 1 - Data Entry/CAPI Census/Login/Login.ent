@@ -83,6 +83,7 @@
       "frequency": 1, 
       "start": 1
     }, 
-    "htmlDialogs": true
+    "htmlDialogs": true, 
+    "useHtmlComponentsInsteadOfNativeVersions": false
   }
 }

@@ -104,6 +104,7 @@
       "recordInitialPropertyValues": false, 
       "recordIteratorLoadCases": false, 
       "recordValues": false
-    }
+    }, 
+    "useHtmlComponentsInsteadOfNativeVersions": false
   }
 }

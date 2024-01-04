@@ -71,6 +71,7 @@
       "recordIteratorLoadCases": false, 
       "recordValues": false, 
       "deviceStateIntervalMinutes": 10
-    }
+    }, 
+    "useHtmlComponentsInsteadOfNativeVersions": false
   }
 }
