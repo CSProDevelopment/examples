@@ -10,6 +10,7 @@
     "cachedPasswordMinutes": 0, 
     "settings": "4e9a458b3709933072cc8240a71f06163d06a88740aa8450d69b50cb5430323e495c2e3ece3a61fcfc88731573b03a98"
   }, 
+  "readOptimization": true, 
   "recordType": {
     "start": 1, 
     "length": 1

@@ -33,7 +33,7 @@
       "symbols": true
     }, 
     "actionInvoker": {
-      "accessFromWebView": "promptIfNoValidAccessToken", 
+      "accessFromExternalCaller": "promptIfNoValidAccessToken", 
       "accessTokens": [
         "SimpleCapiAccessToken"
       ], 
@@ -73,6 +73,7 @@
       "recordInitialPropertyValues": false, 
       "recordIteratorLoadCases": false, 
       "recordValues": false
-    }
+    }, 
+    "useHtmlComponentsInsteadOfNativeVersions": false
   }
 }

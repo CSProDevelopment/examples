@@ -1,115 +1,490 @@
-﻿[Saved Arrays]
-Version=CSPro 8.0
- 
-[Arrays]
- 
-[Array]
-Name=SexHD_Relationship_HeadSex
-Size=6, 3
-Type=numeric
-Runs=0
-Cases=0
-Cell=2, 1; 0, 0; 2
-Cell=2, 2; 0, 0; 1
-Cell=3, 1; 0, 0; 1
-Cell=3, 2; 0, 0; 2
-Cell=4, 1; 0, 0; 1
-Cell=4, 2; 0, 0; 1
-Cell=5, 1; 0, 0; 2
-Cell=5, 2; 0, 0; 2
- 
-[Array]
-Name=SexHD_HeadSex_Relationship
-Size=3, 6
-Type=numeric
-Runs=0
-Cases=0
-Cell=1, 2; 0, 0; 2
-Cell=1, 3; 0, 0; 1
-Cell=1, 4; 0, 0; 1
-Cell=1, 5; 0, 0; 2
-Cell=2, 2; 0, 0; 1
-Cell=2, 3; 0, 0; 2
-Cell=2, 4; 0, 0; 1
-Cell=2, 5; 0, 0; 2
- 
-[Array]
-Name=AgeHD_Relationship_Education
-Size=6, 9
-Type=numeric
-Runs=0
-Cases=0
-Cell=1, 1; 0, 0; 82
-Cell=1, 2; 0, 0; 93
-Cell=1, 3; 0, 0; 26
-Cell=1, 4; 0, 0; 80
-Cell=1, 5; 0, 0; 32
-Cell=1, 6; 0, 0; 90
-Cell=1, 7; 0, 0; 58
-Cell=1, 8; 0, 0; 83
-Cell=2, 1; 0, 0; 77
-Cell=2, 2; 0, 0; 75
-Cell=2, 3; 0, 0; 22
-Cell=2, 4; 0, 0; 42
-Cell=2, 5; 0, 0; 99
-Cell=2, 6; 0, 0; 33
-Cell=2, 7; 0, 0; 22
-Cell=2, 8; 0, 0; 37
-Cell=3, 1; 0, 0; 4
-Cell=3, 2; 0, 0; 59
-Cell=3, 3; 0, 0; 51
-Cell=3, 4; 0, 0; 17
-Cell=3, 5; 0, 0; 34
-Cell=3, 6; 0, 0; 3
-Cell=3, 7; 0, 0; 6
-Cell=3, 8; 0, 0; 16
-Cell=4, 1; 0, 0; 0
-Cell=4, 2; 0, 0; 76
-Cell=4, 3; 0, 0; 66
-Cell=4, 4; 0, 0; 51
-Cell=4, 5; 0, 0; 79
-Cell=4, 6; 0, 0; 16
-Cell=4, 7; 0, 0; 77
-Cell=4, 8; 0, 0; 51
-Cell=5, 1; 0, 0; 12
-Cell=5, 2; 0, 0; 91
-Cell=5, 3; 0, 0; 31
-Cell=5, 4; 0, 0; 87
-Cell=5, 5; 0, 0; 51
-Cell=5, 6; 0, 0; 52
-Cell=5, 7; 0, 0; 58
-Cell=5, 8; 0, 0; 67
- 
-[Array]
-Name=EducationHD_Age
-Size=27
-Type=numeric
-Runs=0
-Cases=0
-Cell=1; 0, 0; 0
-Cell=2; 0, 0; 0
-Cell=3; 0, 0; 1
-Cell=4; 0, 0; 1
-Cell=5; 0, 0; 0
-Cell=6; 0, 0; 1
-Cell=7; 0, 0; 1
-Cell=8; 0, 0; 1
-Cell=9; 0, 0; 0
-Cell=10; 0, 0; 2
-Cell=11; 0, 0; 2
-Cell=12; 0, 0; 1
-Cell=13; 0, 0; 0
-Cell=14; 0, 0; 0
-Cell=15; 0, 0; 3
-Cell=16; 0, 0; 3
-Cell=17; 0, 0; 3
-Cell=18; 0, 0; 3
-Cell=19; 0, 0; 5
-Cell=20; 0, 0; 3
-Cell=21; 0, 0; 2
-Cell=22; 0, 0; 4
-Cell=23; 0, 0; 6
-Cell=24; 0, 0; 0
-Cell=25; 0, 0; 5
-Cell=26; 0, 0; 5
- 
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "savedArrays", 
+  "arrays": [
+    {
+      "name": "SexHD_Relationship_HeadSex", 
+      "contentType": "numeric", 
+      "saveArray": true, 
+      "dimensions": [
+        5, 
+        2
+      ], 
+      "runs": 0, 
+      "cases": 0, 
+      "value": {
+        "1": {
+          "0": {
+            "value": 2.0, 
+            "gets": 0, 
+            "puts": 0
+          }, 
+          "1": {
+            "value": 1.0, 
+            "gets": 0, 
+            "puts": 0
+          }
+        }, 
+        "2": {
+          "0": {
+            "value": 1.0, 
+            "gets": 0, 
+            "puts": 0
+          }, 
+          "1": {
+            "value": 2.0, 
+            "gets": 0, 
+            "puts": 0
+          }
+        }, 
+        "3": {
+          "0": {
+            "value": 1.0, 
+            "gets": 0, 
+            "puts": 0
+          }, 
+          "1": {
+            "value": 1.0, 
+            "gets": 0, 
+            "puts": 0
+          }
+        }, 
+        "4": {
+          "0": {
+            "value": 2.0, 
+            "gets": 0, 
+            "puts": 0
+          }, 
+          "1": {
+            "value": 2.0, 
+            "gets": 0, 
+            "puts": 0
+          }
+        }
+      }
+    }, 
+    {
+      "name": "SexHD_HeadSex_Relationship", 
+      "contentType": "numeric", 
+      "saveArray": true, 
+      "dimensions": [
+        2, 
+        5
+      ], 
+      "runs": 0, 
+      "cases": 0, 
+      "value": {
+        "0": {
+          "1": {
+            "value": 2.0, 
+            "gets": 0, 
+            "puts": 0
+          }, 
+          "2": {
+            "value": 1.0, 
+            "gets": 0, 
+            "puts": 0
+          }, 
+          "3": {
+            "value": 1.0, 
+            "gets": 0, 
+            "puts": 0
+          }, 
+          "4": {
+            "value": 2.0, 
+            "gets": 0, 
+            "puts": 0
+          }
+        }, 
+        "1": {
+          "1": {
+            "value": 1.0, 
+            "gets": 0, 
+            "puts": 0
+          }, 
+          "2": {
+            "value": 2.0, 
+            "gets": 0, 
+            "puts": 0
+          }, 
+          "3": {
+            "value": 1.0, 
+            "gets": 0, 
+            "puts": 0
+          }, 
+          "4": {
+            "value": 2.0, 
+            "gets": 0, 
+            "puts": 0
+          }
+        }
+      }
+    }, 
+    {
+      "name": "AgeHD_Relationship_Education", 
+      "contentType": "numeric", 
+      "saveArray": true, 
+      "dimensions": [
+        5, 
+        8
+      ], 
+      "runs": 0, 
+      "cases": 0, 
+      "value": {
+        "0": {
+          "0": {
+            "value": 82.0, 
+            "gets": 0, 
+            "puts": 0
+          }, 
+          "1": {
+            "value": 93.0, 
+            "gets": 0, 
+            "puts": 0
+          }, 
+          "2": {
+            "value": 26.0, 
+            "gets": 0, 
+            "puts": 0
+          }, 
+          "3": {
+            "value": 80.0, 
+            "gets": 0, 
+            "puts": 0
+          }, 
+          "4": {
+            "value": 32.0, 
+            "gets": 0, 
+            "puts": 0
+          }, 
+          "5": {
+            "value": 90.0, 
+            "gets": 0, 
+            "puts": 0
+          }, 
+          "6": {
+            "value": 58.0, 
+            "gets": 0, 
+            "puts": 0
+          }, 
+          "7": {
+            "value": 83.0, 
+            "gets": 0, 
+            "puts": 0
+          }
+        }, 
+        "1": {
+          "0": {
+            "value": 77.0, 
+            "gets": 0, 
+            "puts": 0
+          }, 
+          "1": {
+            "value": 75.0, 
+            "gets": 0, 
+            "puts": 0
+          }, 
+          "2": {
+            "value": 22.0, 
+            "gets": 0, 
+            "puts": 0
+          }, 
+          "3": {
+            "value": 42.0, 
+            "gets": 0, 
+            "puts": 0
+          }, 
+          "4": {
+            "value": 99.0, 
+            "gets": 0, 
+            "puts": 0
+          }, 
+          "5": {
+            "value": 33.0, 
+            "gets": 0, 
+            "puts": 0
+          }, 
+          "6": {
+            "value": 22.0, 
+            "gets": 0, 
+            "puts": 0
+          }, 
+          "7": {
+            "value": 37.0, 
+            "gets": 0, 
+            "puts": 0
+          }
+        }, 
+        "2": {
+          "0": {
+            "value": 4.0, 
+            "gets": 0, 
+            "puts": 0
+          }, 
+          "1": {
+            "value": 59.0, 
+            "gets": 0, 
+            "puts": 0
+          }, 
+          "2": {
+            "value": 51.0, 
+            "gets": 0, 
+            "puts": 0
+          }, 
+          "3": {
+            "value": 17.0, 
+            "gets": 0, 
+            "puts": 0
+          }, 
+          "4": {
+            "value": 34.0, 
+            "gets": 0, 
+            "puts": 0
+          }, 
+          "5": {
+            "value": 3.0, 
+            "gets": 0, 
+            "puts": 0
+          }, 
+          "6": {
+            "value": 6.0, 
+            "gets": 0, 
+            "puts": 0
+          }, 
+          "7": {
+            "value": 16.0, 
+            "gets": 0, 
+            "puts": 0
+          }
+        }, 
+        "3": {
+          "0": {
+            "value": 0.0, 
+            "gets": 0, 
+            "puts": 0
+          }, 
+          "1": {
+            "value": 76.0, 
+            "gets": 0, 
+            "puts": 0
+          }, 
+          "2": {
+            "value": 66.0, 
+            "gets": 0, 
+            "puts": 0
+          }, 
+          "3": {
+            "value": 51.0, 
+            "gets": 0, 
+            "puts": 0
+          }, 
+          "4": {
+            "value": 79.0, 
+            "gets": 0, 
+            "puts": 0
+          }, 
+          "5": {
+            "value": 16.0, 
+            "gets": 0, 
+            "puts": 0
+          }, 
+          "6": {
+            "value": 77.0, 
+            "gets": 0, 
+            "puts": 0
+          }, 
+          "7": {
+            "value": 51.0, 
+            "gets": 0, 
+            "puts": 0
+          }
+        }, 
+        "4": {
+          "0": {
+            "value": 12.0, 
+            "gets": 0, 
+            "puts": 0
+          }, 
+          "1": {
+            "value": 91.0, 
+            "gets": 0, 
+            "puts": 0
+          }, 
+          "2": {
+            "value": 31.0, 
+            "gets": 0, 
+            "puts": 0
+          }, 
+          "3": {
+            "value": 87.0, 
+            "gets": 0, 
+            "puts": 0
+          }, 
+          "4": {
+            "value": 51.0, 
+            "gets": 0, 
+            "puts": 0
+          }, 
+          "5": {
+            "value": 52.0, 
+            "gets": 0, 
+            "puts": 0
+          }, 
+          "6": {
+            "value": 58.0, 
+            "gets": 0, 
+            "puts": 0
+          }, 
+          "7": {
+            "value": 67.0, 
+            "gets": 0, 
+            "puts": 0
+          }
+        }
+      }
+    }, 
+    {
+      "name": "EducationHD_Age", 
+      "contentType": "numeric", 
+      "saveArray": true, 
+      "dimensions": [
+        26
+      ], 
+      "runs": 0, 
+      "cases": 0, 
+      "value": {
+        "0": {
+          "value": 0.0, 
+          "gets": 0, 
+          "puts": 0
+        }, 
+        "1": {
+          "value": 0.0, 
+          "gets": 0, 
+          "puts": 0
+        }, 
+        "2": {
+          "value": 1.0, 
+          "gets": 0, 
+          "puts": 0
+        }, 
+        "3": {
+          "value": 1.0, 
+          "gets": 0, 
+          "puts": 0
+        }, 
+        "4": {
+          "value": 0.0, 
+          "gets": 0, 
+          "puts": 0
+        }, 
+        "5": {
+          "value": 1.0, 
+          "gets": 0, 
+          "puts": 0
+        }, 
+        "6": {
+          "value": 1.0, 
+          "gets": 0, 
+          "puts": 0
+        }, 
+        "7": {
+          "value": 1.0, 
+          "gets": 0, 
+          "puts": 0
+        }, 
+        "8": {
+          "value": 0.0, 
+          "gets": 0, 
+          "puts": 0
+        }, 
+        "9": {
+          "value": 2.0, 
+          "gets": 0, 
+          "puts": 0
+        }, 
+        "10": {
+          "value": 2.0, 
+          "gets": 0, 
+          "puts": 0
+        }, 
+        "11": {
+          "value": 1.0, 
+          "gets": 0, 
+          "puts": 0
+        }, 
+        "12": {
+          "value": 0.0, 
+          "gets": 0, 
+          "puts": 0
+        }, 
+        "13": {
+          "value": 0.0, 
+          "gets": 0, 
+          "puts": 0
+        }, 
+        "14": {
+          "value": 3.0, 
+          "gets": 0, 
+          "puts": 0
+        }, 
+        "15": {
+          "value": 3.0, 
+          "gets": 0, 
+          "puts": 0
+        }, 
+        "16": {
+          "value": 3.0, 
+          "gets": 0, 
+          "puts": 0
+        }, 
+        "17": {
+          "value": 3.0, 
+          "gets": 0, 
+          "puts": 0
+        }, 
+        "18": {
+          "value": 5.0, 
+          "gets": 0, 
+          "puts": 0
+        }, 
+        "19": {
+          "value": 3.0, 
+          "gets": 0, 
+          "puts": 0
+        }, 
+        "20": {
+          "value": 2.0, 
+          "gets": 0, 
+          "puts": 0
+        }, 
+        "21": {
+          "value": 4.0, 
+          "gets": 0, 
+          "puts": 0
+        }, 
+        "22": {
+          "value": 6.0, 
+          "gets": 0, 
+          "puts": 0
+        }, 
+        "23": {
+          "value": 0.0, 
+          "gets": 0, 
+          "puts": 0
+        }, 
+        "24": {
+          "value": 5.0, 
+          "gets": 0, 
+          "puts": 0
+        }, 
+        "25": {
+          "value": 5.0, 
+          "gets": 0, 
+          "puts": 0
+        }
+      }
+    }
+  ]
+}

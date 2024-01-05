@@ -33,7 +33,7 @@
       "symbols": false
     }, 
     "actionInvoker": {
-      "accessFromWebView": "promptIfNoValidAccessToken", 
+      "accessFromExternalCaller": "promptIfNoValidAccessToken", 
       "convertResultsForLogic": true
     }
   }, 
@@ -71,6 +71,7 @@
       "recordIteratorLoadCases": false, 
       "recordValues": false, 
       "deviceStateIntervalMinutes": 5
-    }
+    }, 
+    "useHtmlComponentsInsteadOfNativeVersions": false
   }
 }

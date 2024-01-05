@@ -47,7 +47,7 @@
       "symbols": false
     }, 
     "actionInvoker": {
-      "accessFromWebView": "promptIfNoValidAccessToken", 
+      "accessFromExternalCaller": "promptIfNoValidAccessToken", 
       "convertResultsForLogic": true
     }
   }, 
@@ -84,6 +84,7 @@
       "recordInitialPropertyValues": false, 
       "recordIteratorLoadCases": false, 
       "recordValues": false
-    }
+    }, 
+    "useHtmlComponentsInsteadOfNativeVersions": false
   }
 }

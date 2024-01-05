@@ -453,6 +453,7 @@ DataCaptureType=TextBox
 [Text]
 Position=0,0,81,16
 Text=Line number
+Font=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
  
 [EndColumn]
   
@@ -471,6 +472,7 @@ DataCaptureType=TextBox
   
 [Text]
 Text=Relationship
+Font=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
  
 [EndColumn]
   
@@ -489,6 +491,7 @@ DataCaptureType=TextBox
   
 [Text]
 Text=Sex
+Font=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
  
 [EndColumn]
   
@@ -507,6 +510,7 @@ DataCaptureType=TextBox
   
 [Text]
 Text=Age
+Font=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
  
 [EndColumn]
   
@@ -525,6 +529,7 @@ DataCaptureType=TextBox
   
 [Text]
 Text=Marital status
+Font=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
  
 [EndColumn]
   
@@ -543,6 +548,7 @@ DataCaptureType=TextBox
   
 [Text]
 Text=Mother living
+Font=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
  
 [EndColumn]
   
@@ -561,6 +567,7 @@ DataCaptureType=TextBox
   
 [Text]
 Text=Place of birth
+Font=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
  
 [EndColumn]
   
@@ -579,6 +586,7 @@ DataCaptureType=TextBox
   
 [Text]
 Text=Residence in 1995
+Font=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
  
 [EndColumn]
   
@@ -597,6 +605,7 @@ DataCaptureType=TextBox
   
 [Text]
 Text=Attending school
+Font=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
  
 [EndColumn]
   
@@ -615,6 +624,7 @@ DataCaptureType=TextBox
   
 [Text]
 Text=Highest grade completed
+Font=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
  
 [EndColumn]
   
@@ -633,6 +643,7 @@ DataCaptureType=TextBox
   
 [Text]
 Text=Literacy
+Font=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
  
 [EndColumn]
   
@@ -651,6 +662,7 @@ DataCaptureType=TextBox
   
 [Text]
 Text=Working
+Font=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
  
 [EndColumn]
   
@@ -669,6 +681,7 @@ DataCaptureType=TextBox
   
 [Text]
 Text=Looking for work
+Font=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
  
 [EndColumn]
   
@@ -687,6 +700,7 @@ DataCaptureType=TextBox
   
 [Text]
 Text=Why not looking for work
+Font=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
  
 [EndColumn]
   
@@ -705,6 +719,7 @@ DataCaptureType=TextBox
   
 [Text]
 Text=Occupation
+Font=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
  
 [EndColumn]
   
@@ -723,6 +738,7 @@ DataCaptureType=TextBox
   
 [Text]
 Text=Industry
+Font=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
  
 [EndColumn]
   
@@ -741,6 +757,7 @@ DataCaptureType=TextBox
   
 [Text]
 Text=Work Status
+Font=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
  
 [EndColumn]
   
@@ -759,6 +776,7 @@ DataCaptureType=TextBox
   
 [Text]
 Text=Number of children born alive
+Font=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
  
 [EndColumn]
   
@@ -777,6 +795,7 @@ DataCaptureType=TextBox
   
 [Text]
 Text=Number of children still living
+Font=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
  
 [EndColumn]
   
@@ -795,6 +814,7 @@ DataCaptureType=TextBox
   
 [Text]
 Text=Number of children born in last 12 months
+Font=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
  
 [EndColumn]
   
