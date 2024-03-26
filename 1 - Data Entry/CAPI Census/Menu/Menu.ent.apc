@@ -24,6 +24,9 @@ string capi_manage_staff_name; // Various names of interviewers used throughout 
 string capi_province_name;
 string capi_district_name;
 string capi_ea_name;
+string capi_review_ea_name;
+string capi_review_staff_name;
+string capi_review_status;
 numeric capi_ea_assigned_count;
 numeric capi_household_complete_count;
 numeric capi_household_partial_count;
@@ -148,6 +151,45 @@ function LaunchHouseholdProgram()
 	// Run the household application
 	household_pff.exec();
 
+end;
+
+
+// ------------------
+// ------------------ Household review functions
+// ------------------
+
+
+function onApprove()
+
+	// This function is called when the Approve button is pressed in Questionnaire-Review.html. This
+	// is done by specifying an asynchronous action using the action invoker to call this function from
+	// the onApprove function in JavaScript.
+	HR_PROVINCE = M_CURRENT_PROVINCE;
+	HR_DISTRICT = M_CURRENT_DISTRICT;
+	HR_EA = M_REVIEW_EA;
+	HR_SEGMENT = M_REVIEW_SEGMENT;
+	HR_NUMBER = M_REVIEW_HOUSEHOLD;
+	HR_STATUS = 1;
+	writecase(PSC_HOUSEHOLD_REVIEW_DICT);
+	errmsg("Approved household interview.");
+	
+end;
+
+
+function onReject()
+
+	// This function is called when the Reject button is pressed in Questionnaire-Review.html. This
+	// is done by specifying an asynchronous action using the action invoker to call this function from
+	// the onReject function in JavaScript.
+	HR_PROVINCE = M_CURRENT_PROVINCE;
+	HR_DISTRICT = M_CURRENT_DISTRICT;
+	HR_EA = M_REVIEW_EA;
+	HR_SEGMENT = M_REVIEW_SEGMENT;
+	HR_NUMBER = M_REVIEW_HOUSEHOLD;
+	HR_STATUS = 2;
+	writecase(PSC_HOUSEHOLD_REVIEW_DICT);
+	errmsg("Rejected household interview.");
+	
 end;
 
 
@@ -301,10 +343,13 @@ postproc
 		reenter;
 
 	elseif M_SUPERVISOR_MENU = 4 then
+		skip to M_REVIEW_EA;
+
+	elseif M_SUPERVISOR_MENU = 5 then
 		SyncWithInterviewer();
 		reenter;
 
-	elseif M_SUPERVISOR_MENU = 5 then
+	elseif M_SUPERVISOR_MENU = 6 then
 		SyncWithHQ(full_sync);
 		reenter;
 
@@ -352,6 +397,7 @@ onfocus
 	endfor;
 
 	interviewer_menu_vs.add(maketext("View all %d households", totalHouseholds), "2");
+	interviewer_menu_vs.add("View rejected households", "3");
 	interviewer_menu_vs.add("Transfer data with supervisor", "7");
 	interviewer_menu_vs.add("Logout", "9");
 
@@ -384,6 +430,9 @@ postproc
 			skip to M_VIEW_ALL_HOUSEHOLDS;
 
 		endif;
+		
+	elseif strip(M_INTERVIEWER_MENU) = "3" then
+		skip to M_VIEW_REJECTED_HOUSEHOLDS;
 
 	elseif strip(M_INTERVIEWER_MENU) = "7" then
 		StartServer();
@@ -425,6 +474,33 @@ postproc
 	endif;
 
 
+PROC M_VIEW_REJECTED_HOUSEHOLDS
+
+onfocus
+
+	ValueSet string rejected_households_vs;
+
+	forcase PSC_HOUSEHOLD_REVIEW_DICT(startswith, maketext("%v%v%v%v", M_CURRENT_PROVINCE, M_CURRENT_DISTRICT, M_CURRENT_EA, M_CURRENT_SEGMENT)) where HR_STATUS = 2 do
+		if loadcase(PSC_HOUSEHOLD_DICT, HR_PROVINCE, HR_DISTRICT, HR_EA, HR_SEGMENT, HR_NUMBER) then
+			rejected_households_vs.add(LookupDetailedHouseholdName(), key(PSC_HOUSEHOLD_DICT));
+		endif;
+	endfor;
+
+	if rejected_households_vs.length() = 0 then
+		errmsg("The are no rejected households to view");
+		reenter M_INTERVIEWER_MENU;
+	endif;
+	
+	setvalueset(M_VIEW_REJECTED_HOUSEHOLDS, rejected_households_vs);
+	M_VIEW_ALL_HOUSEHOLDS = "";
+
+postproc
+
+	if loadcase(PSC_HOUSEHOLD_DICT, M_VIEW_REJECTED_HOUSEHOLDS) then
+		LaunchHouseholdProgram();
+	endif;
+
+	
 PROC M_MANAGE_STAFF
 
 onfocus
@@ -684,3 +760,124 @@ postproc
 	errmsg("%s successfully assigned to %s", LookupEAName(A_EA), LookupStaffName(M_INTERVIEWER_CODE));
 
 	reenter M_SUPERVISOR_MENU;
+
+
+PROC M_REVIEW_EA
+
+onfocus
+
+	list eas;
+	forcase PSC_HOUSEHOLD_DICT(startswith, maketext("%v%v", M_CURRENT_PROVINCE, M_CURRENT_DISTRICT)) do
+		eas.add(HH_EA);
+	endfor;
+	eas.removeDuplicates();
+	
+	valueset ea_vs;
+	do numeric i = 1 while i <= eas.length()
+		HH_EA = eas(i);
+		ea_vs.add(maketext("EA %v", HH_EA), HH_EA);
+	enddo;
+
+	if ea_vs.length() = 0 then
+		errmsg("The are no EAs in this district");
+		reenter M_SUPERVISOR_MENU;
+	endif;
+	
+	setvalueset(M_REVIEW_EA, ea_vs);
+	M_REVIEW_EA = notappl;
+	
+postproc
+
+	capi_review_ea_name = LookupEAName(M_REVIEW_EA);
+
+
+PROC M_REVIEW_SEGMENT
+
+onfocus
+	
+	valueset string segment_vs;	
+	forcase PSC_ASSIGNMENTS_DICT(startswith, maketext("%v%v%v", M_CURRENT_PROVINCE, M_CURRENT_DISTRICT, M_REVIEW_EA)) where A_ROLE = 1 do
+		string interviewer_name = "<unknown>";
+		if loadcase(PSC_STAFF_DICT, A_STAFF_CODE) then
+			interviewer_name = strip(S_STAFF_NAME);
+		endif;
+		segment_vs.add(interviewer_name, A_SEGMENT);	
+	endfor;
+
+	if segment_vs.length() = 0 then
+		errmsg("The are no inteviewers in this EA");
+		reenter M_REVIEW_EA;
+	endif;
+	
+	setvalueset(M_REVIEW_SEGMENT, segment_vs);
+	M_REVIEW_SEGMENT = "";
+	
+postproc
+
+	capi_review_staff_name = getvaluelabel(M_REVIEW_SEGMENT);
+
+
+PROC M_REVIEW_FILTER
+
+onfocus
+
+	M_REVIEW_FILTER = notappl;
+	
+postproc
+
+	capi_review_status = getvaluelabel(M_REVIEW_FILTER);
+
+PROC M_REVIEW_HOUSEHOLD
+
+onfocus
+	
+	valueset household_vs;
+	if M_REVIEW_FILTER = 0 then
+		forcase PSC_HOUSEHOLD_DICT(startswith, maketext("%v%v%v%v", M_CURRENT_PROVINCE, M_CURRENT_DISTRICT, M_REVIEW_EA, M_REVIEW_SEGMENT)) do
+			if not loadcase(PSC_HOUSEHOLD_REVIEW_DICT, key(PSC_HOUSEHOLD_DICT)) then
+				household_vs.add(maketext("%v", LookupDetailedHouseholdName()), HH_NUMBER);
+			endif;
+		endfor;	
+	elseif M_REVIEW_FILTER in 1:2 then
+		forcase PSC_HOUSEHOLD_REVIEW_DICT(startswith, maketext("%v%v%v%v", M_CURRENT_PROVINCE, M_CURRENT_DISTRICT, M_REVIEW_EA, M_REVIEW_SEGMENT)) where HR_STATUS = M_REVIEW_FILTER do
+			if loadcase(PSC_HOUSEHOLD_DICT, HR_PROVINCE, HR_DISTRICT, HR_EA, HR_SEGMENT, HR_NUMBER) then
+				household_vs.add(maketext("%v", LookupDetailedHouseholdName()), HH_NUMBER);
+			endif;
+		endfor;
+	endif;
+	
+	if household_vs.length() = 0 then
+		string filter;
+		if M_REVIEW_FILTER = 0 then
+			filter = "unreviewed"
+		elseif M_REVIEW_FILTER = 1 then
+			filter = "approved";
+		elseif M_REVIEW_FILTER = 2 then
+			filter = "rejected";
+		endif;
+	
+		errmsg("The are no %v households to review", filter);
+		reenter M_REVIEW_FILTER;
+	endif;
+	
+	setvalueset(M_REVIEW_HOUSEHOLD, household_vs);
+	M_REVIEW_HOUSEHOLD = notappl;
+	
+postproc
+
+	if loadcase(PSC_HOUSEHOLD_DICT, M_CURRENT_PROVINCE, M_CURRENT_DISTRICT, M_REVIEW_EA, M_REVIEW_SEGMENT, M_REVIEW_HOUSEHOLD) then
+		// Enable all variables in PSC_HOUSEHOLD_DICT to be available to be read
+		#setProperty(PSC_HOUSEHOLD_DICT, @"readOptimization", false);
+				
+		// Construct the input needed for the household review
+		string householdReviewInput =
+			maketext("{ \"dictionary\": %s, \"forms\": %s, \"case\": %s }",
+					 CS.Dictionary.getDictionary(name := "PSC_HOUSEHOLD_DICT"),
+					 CS.Application.getFormFile(path := @"..\Household\Household.fmf"),
+					 CS.Data.getCase(name := "PSC_HOUSEHOLD_DICT"));
+					 
+		// Populate the Household-Review.html with the input data
+		CS.UI.view(path := "Household-Review.html", inputData := @object householdReviewInput);
+	endif;
+	
+	reenter;

@@ -54,6 +54,11 @@ questions:
         helpText:
           EN: |
             
+  - name: PSC_MENU_DICT.M_VIEW_REJECTED_HOUSEHOLDS
+    conditions:
+      - questionText:
+          EN: |
+            Select the rejected household to correct.<p></p>
   - name: PSC_MENU_DICT.M_MANAGE_STAFF
     conditions:
       - questionText:
@@ -103,4 +108,26 @@ questions:
         helpText:
           EN: |
             
+  - name: PSC_MENU_DICT.M_REVIEW_EA
+    conditions:
+      - questionText:
+          EN: |
+            <p>Select the EA.</p>
+  - name: PSC_MENU_DICT.M_REVIEW_SEGMENT
+    conditions:
+      - questionText:
+          EN: |
+            <p>You are reviewing in <b>~~capi_review_ea_name~~</b>.</p>
+            <p>Select the interviewer.</p>
+  - name: PSC_MENU_DICT.M_REVIEW_FILTER
+    conditions:
+      - questionText:
+          EN: |
+            <p>You are reviewing in&nbsp;<b>~~capi_review_ea_name~~</b>.
+            </p><p>Select a filter.</p>
+  - name: PSC_MENU_DICT.M_REVIEW_HOUSEHOLD
+    conditions:
+      - questionText:
+          EN: |
+            <p>You are filtering for <b>~~capi_review_status~~</b> households by <b>~~capi_review_staff_name~~</b> in <b>~~capi_review_ea_name~~</b>.</p><p>Select the household to review.</p>
 ...

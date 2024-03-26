@@ -13,9 +13,11 @@ Application=.\Menu.ent
 InputData=|type=None
 
 [ExternalFiles]
+HOUSEHOLD_REVIEW_DICT=..\Data\Household-Review.csdb
 PSC_ASSIGNMENTS_DICT=..\Data\Assignments.csdb
 PSC_GEOCODES_DICT=..\Data\Geocodes.csdb
 PSC_HOUSEHOLD_DICT=..\Data\Household.csdb
+PSC_HOUSEHOLD_REVIEW_DICT=..\Data\Household-Review.csdb
 PSC_STAFF_DICT=..\Data\Staff.csdb
 
 [Parameters]

@@ -89,12 +89,16 @@
                       "pairs": [ { "value": "3" } ]
                     }, 
                     {
-                      "labels": [ { "text": "Transfer data with interviewer" } ], 
+                      "labels": [ { "text": "Review households" } ], 
                       "pairs": [ { "value": "4" } ]
                     }, 
                     {
-                      "labels": [ { "text": "Transfer data with headquarters" } ], 
+                      "labels": [ { "text": "Transfer data with interviewer" } ], 
                       "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Transfer data with headquarters" } ], 
+                      "pairs": [ { "value": "6" } ]
                     }, 
                     {
                       "labels": [ { "text": "Logout" } ], 
@@ -113,6 +117,12 @@
             {
               "name": "M_VIEW_ALL_HOUSEHOLDS", 
               "labels": [ { "text": "View All Households" } ], 
+              "contentType": "alpha", 
+              "length": 12
+            }, 
+            {
+              "name": "M_VIEW_REJECTED_HOUSEHOLDS", 
+              "labels": [ { "text": "View Rejected Households" } ], 
               "contentType": "alpha", 
               "length": 12
             }, 
@@ -167,6 +177,53 @@
               "labels": [ { "text": "Interviewer Code" } ], 
               "contentType": "alpha", 
               "length": 36
+            }, 
+            {
+              "name": "M_REVIEW_EA", 
+              "labels": [ { "text": "Select EA for Review" } ], 
+              "contentType": "numeric", 
+              "length": 3, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "M_REVIEW_SEGMENT", 
+              "labels": [ { "text": "Select Interviewer for Review" } ], 
+              "contentType": "alpha", 
+              "length": 1
+            }, 
+            {
+              "name": "M_REVIEW_FILTER", 
+              "labels": [ { "text": "Select Filter for Review" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "M_REVIEW_FILTER_VS1", 
+                  "labels": [ { "text": "Select Filter for Review" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Unreviewed" } ], 
+                      "pairs": [ { "value": "0" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Approved" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Rejected" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "M_REVIEW_HOUSEHOLD", 
+              "labels": [ { "text": "Select Household for Review" } ], 
+              "contentType": "numeric", 
+              "length": 4, 
+              "zeroFill": true
             }, 
             {
               "name": "M_CURRENT_PROVINCE", 

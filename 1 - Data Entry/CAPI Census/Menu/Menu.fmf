@@ -14,13 +14,14 @@ Name=FORM001
 Label=Main Menu Form
 QuestionTextHeight=125
 Level=1
-Size=816,196
+Size=446,245
 CapturePos=435,25
   
 Item=M_SUPERVISOR_MENU
 Item=M_INTERVIEWER_MENU
 Item=M_VIEW_ALL_HOUSEHOLDS
 Item=M_VERIFY_CREDENTIALS
+Item=M_VIEW_REJECTED_HOUSEHOLDS
   
 [EndForm]
   
@@ -51,6 +52,20 @@ Item=M_INTERVIEWER_CODE
   
 [EndForm]
   
+[Form]
+Name=FORM000
+Label=Household Review Form
+QuestionTextHeight=125
+Level=1
+Size=322,165
+  
+Item=M_REVIEW_EA
+Item=M_REVIEW_SEGMENT
+Item=M_REVIEW_HOUSEHOLD
+Item=M_REVIEW_FILTER
+  
+[EndForm]
+  
 [Level]
 Name=MENU_LEVEL
 Label=Menu Program
@@ -64,7 +79,7 @@ Max=1
   
 [Field]
 Name=M_VERIFY_CREDENTIALS
-Position=200,25,215,45
+Position=228,25,243,45
 Item=M_VERIFY_CREDENTIALS,PSC_MENU_DICT
 FieldLabelType=DictionaryLabel
 DataCaptureType=RadioButton
@@ -77,41 +92,54 @@ Text=Verify Credentials
   
 [Field]
 Name=M_SUPERVISOR_MENU
-Position=200,55,229,75
+Position=228,54,257,74
 Item=M_SUPERVISOR_MENU,PSC_MENU_DICT
 FieldLabelType=DictionaryLabel
 DataCaptureType=DropDown
 Form=1
   
 [Text]
-Position=20,58,127,74
+Position=20,57,127,73
 Text=Supervisor Menu
  
   
 [Field]
 Name=M_INTERVIEWER_MENU
-Position=200,85,369,105
+Position=228,84,397,104
 Item=M_INTERVIEWER_MENU,PSC_MENU_DICT
 FieldLabelType=DictionaryLabel
 DataCaptureType=DropDown
 Form=1
   
 [Text]
-Position=20,88,131,104
+Position=20,87,131,103
 Text=Interviewer Menu
  
   
 [Field]
 Name=M_VIEW_ALL_HOUSEHOLDS
-Position=200,115,369,135
+Position=228,114,397,134
 Item=M_VIEW_ALL_HOUSEHOLDS,PSC_MENU_DICT
 FieldLabelType=DictionaryLabel
 DataCaptureType=DropDown
 Form=1
   
 [Text]
-Position=20,118,150,134
+Position=20,117,150,133
 Text=View All Households
+ 
+  
+[Field]
+Name=M_VIEW_REJECTED_HOUSEHOLDS
+Position=228,144,397,164
+Item=M_VIEW_REJECTED_HOUSEHOLDS,PSC_MENU_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=RadioButton
+Form=1
+  
+[Text]
+Position=20,147,189,163
+Text=View Rejected Households
  
 [EndGroup]
   
@@ -197,6 +225,66 @@ Form=3
 [Text]
 Position=20,58,113,74
 Text=Interviewer EA
+ 
+[EndGroup]
+  
+[Group]
+Required=Yes
+Name=HOUSEHOLD_REVIEW_FORM
+Label=Household Review Form
+Form=4
+Max=1
+  
+[Field]
+Name=M_REVIEW_EA
+Position=239,26,282,46
+Item=M_REVIEW_EA,PSC_MENU_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=RadioButton
+Form=4
+  
+[Text]
+Position=20,29,153,45
+Text=Select EA for Review
+ 
+  
+[Field]
+Name=M_REVIEW_SEGMENT
+Position=239,57,254,77
+Item=M_REVIEW_SEGMENT,PSC_MENU_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=RadioButton
+Form=4
+  
+[Text]
+Position=20,60,208,76
+Text=Select Interviewer for Review
+ 
+  
+[Field]
+Name=M_REVIEW_FILTER
+Position=239,88,254,108
+Item=M_REVIEW_FILTER,PSC_MENU_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=RadioButton
+Form=4
+  
+[Text]
+Position=20,91,169,107
+Text=Select Filter for Review
+ 
+  
+[Field]
+Name=M_REVIEW_HOUSEHOLD
+Position=239,120,296,140
+Item=M_REVIEW_HOUSEHOLD,PSC_MENU_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=RadioButton
+Form=4
+  
+[Text]
+Position=20,123,203,139
+Text=Select Household for Review
  
 [EndGroup]
   

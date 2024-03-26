@@ -77,10 +77,17 @@ function SyncDataWithInterviewer()
 		success = 0;
 	endif;
 
+	// Synchronize household reviews in supervisory area.
+	// Sync PUT is used, because the interviewer only reads the household review data.
+	if success and not syncdata(PUT, PSC_HOUSEHOLD_REVIEW_DICT, universeStr) then
+		errmsg("Failed to transfer household review data. Transfer aborted.");
+		success = 0;
+	endif;
+	
 	// Send all geocodes.
 	// Sync PUT is used, because the interviewer only reads the geocodes data.
 	if success and not syncdata(PUT, PSC_GEOCODES_DICT) then
-		errmsg("Failed to transfer geocode data.");
+		errmsg("Failed to transfer geocode data. Transfer aborted.");
 		success = 0;
 	endif;
 
@@ -159,6 +166,13 @@ function SyncDataWithHQ()
 	// Sync PUT is used, because HQ will only read the household data.
 	if success and not syncdata(PUT, PSC_HOUSEHOLD_DICT, universeStr) then
 		errmsg("Failed to transfer household data. Transfer aborted.");
+		success = 0;
+	endif;
+	
+	// Synchronize household reviews in supervisory area.
+	// Sync PUT is used, because HQ will only read the household data.
+	if success and not syncdata(PUT, PSC_HOUSEHOLD_REVIEW_DICT, universeStr) then
+		errmsg("Failed to transfer household review data. Transfer aborted.");
 		success = 0;
 	endif;
 

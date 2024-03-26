@@ -1,0 +1,108 @@
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "dictionary", 
+  "name": "PSC_HOUSEHOLD_REVIEW_DICT", 
+  "labels": [ { "text": "Popstan Census Household Review Dictionary" } ], 
+  "security": {
+    "allowDataViewerModifications": true, 
+    "allowExport": true, 
+    "cachedPasswordMinutes": 0, 
+    "settings": "0a4785457cbb1ee13999a2201e67c11ea85a04216e21ab23ccfbc50c47131a7ae2fdd50eb86d57394fc67fa588a5fee4"
+  }, 
+  "readOptimization": true, 
+  "recordType": {
+    "start": 1, 
+    "length": 1
+  }, 
+  "defaults": {
+    "decimalMark": true, 
+    "zeroFill": true
+  }, 
+  "relativePositions": true, 
+  "levels": [
+    {
+      "name": "HOUSEHOLD_REVIEW_LEVEL", 
+      "labels": [ { "text": "Household Review Level" } ], 
+      "ids": {
+        "items": [
+          {
+            "name": "HR_PROVINCE", 
+            "labels": [ { "text": "Province" } ], 
+            "contentType": "numeric", 
+            "start": 2, 
+            "length": 2, 
+            "zeroFill": true
+          }, 
+          {
+            "name": "HR_DISTRICT", 
+            "labels": [ { "text": "District" } ], 
+            "contentType": "numeric", 
+            "start": 4, 
+            "length": 2, 
+            "zeroFill": true
+          }, 
+          {
+            "name": "HR_EA", 
+            "labels": [ { "text": "Enumeration Area" } ], 
+            "contentType": "numeric", 
+            "start": 6, 
+            "length": 3, 
+            "zeroFill": true
+          }, 
+          {
+            "name": "HR_SEGMENT", 
+            "labels": [ { "text": "Segment" } ], 
+            "contentType": "alpha", 
+            "start": 9, 
+            "length": 1
+          }, 
+          {
+            "name": "HR_NUMBER", 
+            "labels": [ { "text": "Household Number" } ], 
+            "contentType": "numeric", 
+            "start": 10, 
+            "length": 4, 
+            "zeroFill": true
+          }
+        ]
+      }, 
+      "records": [
+        {
+          "name": "HOUSEHOLD_REVIEW_REC", 
+          "labels": [ { "text": "Household-Review Record" } ], 
+          "recordType": "1", 
+          "occurrences": {
+            "required": true, 
+            "maximum": 1
+          }, 
+          "items": [
+            {
+              "name": "HR_STATUS", 
+              "labels": [ { "text": "Status" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "HR_STATUS_VS1", 
+                  "labels": [ { "text": "Status" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Accepted" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Rejected" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

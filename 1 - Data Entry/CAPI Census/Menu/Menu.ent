@@ -13,19 +13,23 @@
     }, 
     {
       "type": "external", 
-      "path": "../Dictionaries/Geocodes.dcf"
-    }, 
-    {
-      "type": "external", 
-      "path": "../Dictionaries/Staff.dcf"
-    }, 
-    {
-      "type": "external", 
       "path": "../Dictionaries/Assignments.dcf"
     }, 
     {
       "type": "external", 
+      "path": "../Dictionaries/Geocodes.dcf"
+    }, 
+    {
+      "type": "external", 
       "path": "../Dictionaries/Household.dcf"
+    }, 
+    {
+      "type": "external", 
+      "path": "../Dictionaries/Household-Review.dcf"
+    }, 
+    {
+      "type": "external", 
+      "path": "../Dictionaries/Staff.dcf"
     }, 
     {
       "type": "working", 
