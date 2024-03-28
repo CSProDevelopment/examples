@@ -284,6 +284,8 @@ preproc
 	HH_INTERVIEWER_CODE = sysparm("InterviewerCode");
 	HH_SUPERVISOR_CODE = sysparm("SupervisorCode");
 
+	putnote(sysparm("ReviewNote"), PSC_HOUSEHOLD_DICT);
+	
 	if HH_START_INTERVIEW_TIME = notappl then
 		HH_START_INTERVIEW_TIME = timestamp();
 	endif;

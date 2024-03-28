@@ -54,11 +54,14 @@
                 //adding approve and reject buttons to the navbar
                 const approveButtonMarkup = '<button type="button" class="btn btn-success me-2 mt-1" onclick="onApprove()">Approve</button>';
                 const rejectButtonMarkup = '<button type="button" class="btn btn-danger me-2 mt-1" onclick="onReject()">Reject</button>';
+                const notesButtonMarkup = '<button type="button" class="btn btn-light me-2 mt-1" onclick="toggleNotes()">Notes</button>';
                 const languageBarDiv = document.getElementById("languageBar");
                 if(languageBarDiv){
                     // Append the button elements to the selected div
                     languageBarDiv.innerHTML += approveButtonMarkup;
                     languageBarDiv.innerHTML += rejectButtonMarkup;
+                    languageBarDiv.innerHTML += notesButtonMarkup;
+                    initNotes();
                     clearInterval(pollInterval);
                 }
 
@@ -156,8 +159,9 @@
         function onApprove() {
             //Use action invoker to invoke a cspro logic function to process approval of questionnaire
             CS.Logic.invokeAsync({
-                function: "onApprove",
+                function: "OnApprove",
                 arguments: {
+                    message: getNote()
                 }
             })
             .then(result => {
@@ -171,10 +175,11 @@
         }
 
         function onReject() {
-            //Use action invoker to invoke a cspro logic function to process reject of questionnaire
+            //Use action invoker to invoke a cspro logic function to process reject of questionnaire 
             CS.Logic.invokeAsync({
-                function: "onReject",
+                function: "OnReject",
                 arguments: {
+                    message: getNote()
                 }
             })
             .then(result => {
@@ -186,6 +191,43 @@
                 });
             });
         }
+
+        function getNote() {
+            const textBox = document.getElementById('text-box');
+            return textBox.value;
+        }
+
+        function initNotes() {
+            const textBoxMarkup = '<div id="text-box-container" class="text-box-container"><input type="text" id="text-box" class="form-control" placeholder="Enter your text here"></div>';
+            const languageBarDiv = document.getElementById("languageBar");
+            languageBarDiv.innerHTML += textBoxMarkup;
+
+            const notesContainerDiv = document.getElementById("text-box-container");
+            notesContainerDiv.style.display = 'none';
+            notesContainerDiv.style.marginTop = '20';
+
+            const notesTextBoxDiv = document.getElementById("text-box");
+            notesTextBoxDiv.style.width = '300px';
+            notesTextBoxDiv.style.padding = '10px';
+            //notesTextBoxDiv.style.border = '1px solid #ccc';
+            notesTextBoxDiv.style.borderRadius = '5px';
+            notesTextBoxDiv.style.fontSize = '16px';
+            notesTextBoxDiv.style.boxSizing = 'border-box';
+
+            const note = CS.UI.getInputData().note;
+            notesTextBoxDiv.value = note.value;
+        }
+
+        // JavaScript function to show the text box
+        function toggleNotes() {
+            const div = document.getElementById("text-box-container");
+            if (div.style.display === 'none') {
+                div.style.display = 'block';
+            } else {
+                div.style.display = 'none';
+            }
+        }
+        
     </script>
 
 </head>
